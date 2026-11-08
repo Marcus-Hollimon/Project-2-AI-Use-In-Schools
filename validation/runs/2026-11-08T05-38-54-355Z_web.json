@@ -1,0 +1,278 @@
+{
+  "suite": "web",
+  "runner": "vitest",
+  "command": "npm run test:record",
+  "startedAt": "2026-11-08T05:38:54.355Z",
+  "finishedAt": "2026-11-08T05:38:56.432Z",
+  "phase": 0,
+  "gitCommit": null,
+  "uncommittedChanges": true,
+  "exitCode": 0,
+  "summary": {
+    "total": 17,
+    "passed": 17,
+    "failed": 0,
+    "skipped": 0
+  },
+  "report": {
+    "numTotalTestSuites": 3,
+    "numPassedTestSuites": 3,
+    "numFailedTestSuites": 0,
+    "numPendingTestSuites": 0,
+    "numTotalTests": 17,
+    "numPassedTests": 17,
+    "numFailedTests": 0,
+    "numPendingTests": 0,
+    "numTodoTests": 0,
+    "snapshot": {
+      "added": 0,
+      "failure": false,
+      "filesAdded": 0,
+      "filesRemoved": 0,
+      "filesRemovedList": [],
+      "filesUnmatched": 0,
+      "filesUpdated": 0,
+      "matched": 0,
+      "total": 0,
+      "unchecked": 0,
+      "uncheckedKeysByFile": [],
+      "unmatched": 0,
+      "updated": 0,
+      "didUpdate": false
+    },
+    "startTime": 1794116335369,
+    "success": true,
+    "testResults": [
+      {
+        "assertionResults": [
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address an empty address shows the overview",
+            "status": "passed",
+            "title": "an empty address shows the overview",
+            "duration": 2.2069999999999936,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address address #/ opens page overview",
+            "status": "passed",
+            "title": "address #/ opens page overview",
+            "duration": 0.21439999999995507,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address address #/research opens page research",
+            "status": "passed",
+            "title": "address #/research opens page research",
+            "duration": 0.17669999999998254,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address address #/validation opens page validation",
+            "status": "passed",
+            "title": "address #/validation opens page validation",
+            "duration": 0.1692000000000462,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address address #/contributions opens page contributions",
+            "status": "passed",
+            "title": "address #/contributions opens page contributions",
+            "duration": 0.1593000000000302,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address address #/tokens opens page tokens",
+            "status": "passed",
+            "title": "address #/tokens opens page tokens",
+            "duration": 0.14199999999993906,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address an unknown page falls back to the overview instead of breaking",
+            "status": "passed",
+            "title": "an unknown page falls back to the overview instead of breaking",
+            "duration": 0.15579999999999927,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address a missing slash still works (#tokens)",
+            "status": "passed",
+            "title": "a missing slash still works (#tokens)",
+            "duration": 0.16579999999999018,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees the overview is shown when no page is chosen",
+            "status": "passed",
+            "title": "the overview is shown when no page is chosen",
+            "duration": 72.05430000000001,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees opening #/research directly, as a hard refresh does, shows \"Research findings\"",
+            "status": "passed",
+            "title": "opening #/research directly, as a hard refresh does, shows \"Research findings\"",
+            "duration": 4.3537000000000035,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees opening #/validation directly, as a hard refresh does, shows \"Validation evidence\"",
+            "status": "passed",
+            "title": "opening #/validation directly, as a hard refresh does, shows \"Validation evidence\"",
+            "duration": 3.2110000000000127,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees opening #/contributions directly, as a hard refresh does, shows \"Timeline and contributions\"",
+            "status": "passed",
+            "title": "opening #/contributions directly, as a hard refresh does, shows \"Timeline and contributions\"",
+            "duration": 3.338300000000004,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees opening #/tokens directly, as a hard refresh does, shows \"Token usage\"",
+            "status": "passed",
+            "title": "opening #/tokens directly, as a hard refresh does, shows \"Token usage\"",
+            "duration": 3.1813999999999396,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees clicking a menu tab switches the page and marks that tab as current",
+            "status": "passed",
+            "title": "clicking a menu tab switches the page and marks that tab as current",
+            "duration": 28.207899999999995,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees the menu lists deliverables 1 to 4 in assignment order",
+            "status": "passed",
+            "title": "the menu lists deliverables 1 to 4 in assignment order",
+            "duration": 5.184200000000033,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees the overview links to each deliverable exactly once",
+            "status": "passed",
+            "title": "the overview links to each deliverable exactly once",
+            "duration": 10.47199999999998,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees the footer names the commit the page was built from",
+            "status": "passed",
+            "title": "the footer names the commit the page was built from",
+            "duration": 3.666500000000042,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          }
+        ],
+        "startTime": 1794116336245,
+        "endTime": 1794116336382.6665,
+        "status": "passed",
+        "message": "",
+        "name": "web/src/App.test.jsx"
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+TEST 1: is usage repeated across rows of the same API response?
+sess      usage_rows unique_resp   out_naive   out_dedup  cacheread_naive  cacheread_dedup
+0cf9c9ad          96          21      846595      132676         13159745          2651662
+1cbcd1a0         450         175      780181      285146        134654154         50921977
+540db48c       12131        5733    13906348     5514253       4504003024       2177396715
+69d5f5a4        3754        1602     5783129     2171147       1172564885        513042628
+73227346         395         169      695844      268515         97894303         43805832
+82e84688         142          59      228692       82945         14591759          5894600
+84e63a2d         838         354     1463840      532893        284371011        127655692
+95e2d404         847         344     1460795      523926        236034057        102991200
+9d379a29          20          19        7617        7217           545240           528271
+c37bc23b          10           4        9800        3903           435034           178497
+c677b01e         978         419     3482117     1434810        381842949        158498548
+dd7e16ba         468         184      847922      296823        127091868         54548684
+ddc7d76a         241          82      411258      141549         56585817         20306943
+e4804405         243         114      350641      120931         38408097         20316377
+TOTAL          20613        9279    30274779    11516734       7062181943       3278737626
+
+TEST 2: API responses that appear in MORE THAN ONE session file: 316 of 8451
+
+TEST 3: was 69d5f5a4 -> dd7e16ba really a /clear?
+  dd7e16ba rows whose uuid also exists in 69d5f5a4: 1362 of 1364
+  84e63a2d rows whose uuid also exists in dd7e16ba: 1362 of 2080
+  69d5f5a4: true time span 2026-07-14T08:20 -> 2026-07-23T04:51, rows in time order: False, first record types: ['custom-title', 'ai-title', 'mode', 'custom-title']
+  dd7e16ba: true time span 2026-07-21T12:29 -> 2026-07-23T04:52, rows in time order: False, first record types: ['custom-title', 'ai-title', 'mode', 'queue-operation']
+  84e63a2d: true time span 2026-07-21T12:29 -> 2026-07-24T19:16, rows in time order: False, first record types: ['custom-title', 'ai-title', 'mode', 'queue-operation']
+
+TEST 4: compaction flag, key present vs actually true:
+  key present: 25  value true: 25

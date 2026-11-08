@@ -1,0 +1,281 @@
+{
+  "suite": "web",
+  "runner": "vitest",
+  "command": "npm run test:record",
+  "label": "mutation 1: hashchange listener removed, expect click test to fail",
+  "startedAt": "2026-11-08T05:39:22.898Z",
+  "finishedAt": "2026-11-08T05:39:25.719Z",
+  "phase": 0,
+  "gitCommit": null,
+  "uncommittedChanges": true,
+  "exitCode": 1,
+  "summary": {
+    "total": 17,
+    "passed": 16,
+    "failed": 1,
+    "skipped": 0
+  },
+  "report": {
+    "numTotalTestSuites": 3,
+    "numPassedTestSuites": 1,
+    "numFailedTestSuites": 2,
+    "numPendingTestSuites": 0,
+    "numTotalTests": 17,
+    "numPassedTests": 16,
+    "numFailedTests": 1,
+    "numPendingTests": 0,
+    "numTodoTests": 0,
+    "snapshot": {
+      "added": 0,
+      "failure": false,
+      "filesAdded": 0,
+      "filesRemoved": 0,
+      "filesRemovedList": [],
+      "filesUnmatched": 0,
+      "filesUpdated": 0,
+      "matched": 0,
+      "total": 0,
+      "unchecked": 0,
+      "uncheckedKeysByFile": [],
+      "unmatched": 0,
+      "updated": 0,
+      "didUpdate": false
+    },
+    "startTime": 1794116363707,
+    "success": false,
+    "testResults": [
+      {
+        "assertionResults": [
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address an empty address shows the overview",
+            "status": "passed",
+            "title": "an empty address shows the overview",
+            "duration": 2.3473000000000184,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address address #/ opens page overview",
+            "status": "passed",
+            "title": "address #/ opens page overview",
+            "duration": 0.24890000000004875,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address address #/research opens page research",
+            "status": "passed",
+            "title": "address #/research opens page research",
+            "duration": 0.18419999999991887,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address address #/validation opens page validation",
+            "status": "passed",
+            "title": "address #/validation opens page validation",
+            "duration": 0.18610000000001037,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address address #/contributions opens page contributions",
+            "status": "passed",
+            "title": "address #/contributions opens page contributions",
+            "duration": 0.17219999999997526,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address address #/tokens opens page tokens",
+            "status": "passed",
+            "title": "address #/tokens opens page tokens",
+            "duration": 0.14610000000004675,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address an unknown page falls back to the overview instead of breaking",
+            "status": "passed",
+            "title": "an unknown page falls back to the overview instead of breaking",
+            "duration": 0.1694999999999709,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address a missing slash still works (#tokens)",
+            "status": "passed",
+            "title": "a missing slash still works (#tokens)",
+            "duration": 0.16989999999998417,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees the overview is shown when no page is chosen",
+            "status": "passed",
+            "title": "the overview is shown when no page is chosen",
+            "duration": 71.75610000000006,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees opening #/research directly, as a hard refresh does, shows \"Research findings\"",
+            "status": "passed",
+            "title": "opening #/research directly, as a hard refresh does, shows \"Research findings\"",
+            "duration": 4.974000000000046,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees opening #/validation directly, as a hard refresh does, shows \"Validation evidence\"",
+            "status": "passed",
+            "title": "opening #/validation directly, as a hard refresh does, shows \"Validation evidence\"",
+            "duration": 3.744699999999966,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees opening #/contributions directly, as a hard refresh does, shows \"Timeline and contributions\"",
+            "status": "passed",
+            "title": "opening #/contributions directly, as a hard refresh does, shows \"Timeline and contributions\"",
+            "duration": 3.4361000000000104,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees opening #/tokens directly, as a hard refresh does, shows \"Token usage\"",
+            "status": "passed",
+            "title": "opening #/tokens directly, as a hard refresh does, shows \"Token usage\"",
+            "duration": 3.3243999999999687,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees clicking a menu tab switches the page and marks that tab as current",
+            "status": "failed",
+            "title": "clicking a menu tab switches the page and marks that tab as current",
+            "duration": 1022.9975000000001,
+            "failureMessages": [
+              "Error: Unable to find role=\"heading\" and name \"Token usage\"\n\nIgnored nodes: comments, script, style\n\u001b[36m<body>\u001b[39m\n  \u001b[36m<div>\u001b[39m\n    \u001b[36m<div\u001b[39m\n      \u001b[33mclass\u001b[39m=\u001b[32m\"shell\"\u001b[39m\n    \u001b[36m>\u001b[39m\n      \u001b[36m<header\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"top\"\u001b[39m\n      \u001b[36m>\u001b[39m\n        \u001b[36m<a\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"brand\"\u001b[39m\n          \u001b[33mhref\u001b[39m=\u001b[32m\"#/\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mAI in CS Departments\u001b[0m\n        \u001b[36m</a>\u001b[39m\n        \u001b[36m<nav\u001b[39m\n          \u001b[33maria-label\u001b[39m=\u001b[32m\"Deliverables\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[36m<a\u001b[39m\n            \u001b[33maria-current\u001b[39m=\u001b[32m\"page\"\u001b[39m\n            \u001b[33mhref\u001b[39m=\u001b[32m\"#/\"\u001b[39m\n          \u001b[36m>\u001b[39m\n            \u001b[0mOverview\u001b[0m\n          \u001b[36m</a>\u001b[39m\n          \u001b[36m<a\u001b[39m\n            \u001b[33mhref\u001b[39m=\u001b[32m\"#/research\"\u001b[39m\n          \u001b[36m>\u001b[39m\n            \u001b[0m1. \u001b[0m\n            \u001b[0mResearch findings\u001b[0m\n          \u001b[36m</a>\u001b[39m\n          \u001b[36m<a\u001b[39m\n            \u001b[33mhref\u001b[39m=\u001b[32m\"#/validation\"\u001b[39m\n          \u001b[36m>\u001b[39m\n            \u001b[0m2. \u001b[0m\n            \u001b[0mValidation\u001b[0m\n          \u001b[36m</a>\u001b[39m\n          \u001b[36m<a\u001b[39m\n            \u001b[33mhref\u001b[39m=\u001b[32m\"#/contributions\"\u001b[39m\n          \u001b[36m>\u001b[39m\n            \u001b[0m3. \u001b[0m\n            \u001b[0mContributions\u001b[0m\n          \u001b[36m</a>\u001b[39m\n          \u001b[36m<a\u001b[39m\n            \u001b[33mhref\u001b[39m=\u001b[32m\"#/tokens\"\u001b[39m\n          \u001b[36m>\u001b[39m\n            \u001b[0m4. \u001b[0m\n            \u001b[0mToken usage\u001b[0m\n          \u001b[36m</a>\u001b[39m\n        \u001b[36m</nav>\u001b[39m\n      \u001b[36m</header>\u001b[39m\n      \u001b[36m<main>\u001b[39m\n        \u001b[36m<p\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"eyebrow\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mProject 2 · Agentic development with Claude Code\u001b[0m\n        \u001b[36m</p>\u001b[39m\n        \u001b[36m<h1>\u001b[39m\n          \u001b[0mHow US computer science departments talk about generative AI\u001b[0m\n        \u001b[36m</h1>\u001b[39m\n        \u001b[36m<p\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"lede\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mA small study of how CS departments permit, encourage, or restrict generative AI, built with agentic development: Claude Code wrote the code, and Marcus supervised through specs, tests, and reviews.\u001b[0m\n        \u001b[36m</p>\u001b[39m\n        \u001b[36m<ol\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"cards\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[36m<li>\u001b[39m\n            \u001b[36m<a\u001b[39m\n              \u001b[33mclass\u001b[39m=\u001b[32m\"card\"\u001b[39m\n              \u001b[33mhref\u001b[39m=\u001b[32m\"#/research\"\u001b[39m\n            \u001b[36m>\u001b[39m\n              \u001b[36m<span\u001b[39m\n                \u001b[33mclass\u001b[39m=\u001b[32m\"card-num\"\u001b[39m\n              \u001b[36m>\u001b[39m\n                \u001b[0mDeliverable \u001b[0m\n                \u001b[0m1\u001b[0m\n              \u001b[36m</span>\u001b[39m\n              \u001b[36m<span\u001b[39m\n                \u001b[33mclass\u001b[39m=\u001b[32m\"card-title\"\u001b[39m\n              \u001b[36m>\u001b[39m\n                \u001b[0mResearch findings\u001b[0m\n              \u001b[36m</span>\u001b[39m\n              \u001b[36m<span\u001b[39m\n                \u001b[33mclass\u001b[39m=\u001b[32m\"card-body\"\u001b[39m\n              \u001b[36m>\u001b[39m\n                \u001b[0mHow departments permit or restrict generative AI, whether their official publications view it positively or discuss collaborating with it, and how software engineering courses handle it.\u001b[0m\n              \u001b[36m</span>\u001b[39m\n              \u001b[36m<span\u001b[39m\n                \u001b[33mclass\u001b[39m=\u001b[32m\"status\"\u001b[39m\n              \u001b[36m>\u001b[39m\n                \u001b[0mPlanned for Phase \u001b[0m\n                \u001b[0m2\u001b[0m\n              \u001b[36m</span>\u001b[39m\n            \u001b[36m</a>\u001b[39m\n          \u001b[36m</li>\u001b[39m\n          \u001b[36m<li>\u001b[39m\n            \u001b[36m<a\u001b[39m\n              \u001b[33mclass\u001b[39m=\u001b[32m\"card\"\u001b[39m\n              \u001b[33mhref\u001b[39m=\u001b[32m\"#/validation\"\u001b[39m\n            \u001b[36m>\u001b[39m\n              \u001b[36m<span\u001b[39m\n                \u001b[33mclass\u001b[39m=\u001b[32m\"card-num\"\u001b[39m\n              \u001b[36m>\u001b[39m\n                \u001b[0mDeliverable \u001b[0m\n                \u001b[0m2\u001b[0m\n              \u001b[36m</span>\u001b[39m\n              \u001b[36m<span\u001b[39m\n                \u001b[33mclass\u001b[39m=\u001b[32m\"card-title\"\u001b[39m\n              \u001b[36m>\u001b[39m\n                \u001b[0mValidation evidence\u001b[0m\n              \u001b[36m</span>\u001b[39m\n              \u001b[36m<span\u001b[39m\n                \u001b[33mclass\u001b[39m=\u001b[32m\"card-body\"\u001b[39m\n              \u001b[36m>\u001b[39m\n                \u001b[0mEvery recorded test run, searchable and filterable, with the review steps Marcus took and the errors that checks caught.\u001b[0m\n              \u001b[36m</span>\u001b[39m\n              \u001b[36m<span\u001b[39m\n                \u001b[33mclass\u001b[39m=\u001b[32m\"status\"\u001b[39m\n              \u001b[36m>\u001b[39m\n                \u001b[0mPlanned for Phase \u001b[0m\n                \u001b[0m4\u001b[0m\n              \u001b[36m</span>\u001b[39m\n            \u001b[36m</a>\u001b[39m\n          \u001b[36m</li>\u001b[39m\n          \u001b[36m<li>\u001b[39m\n            \u001b[36m<a\u001b[39m\n              \u001b[33mclass\u001b[39m=\u001b[32m\"card\"\u001b[39m\n              \u001b[33mhref\u001b[39m=\u001b[32m\"#/contributions\"\u001b[39m\n            \u001b[36m>\u001b[39m\n              \u001b[36m<span\u001b[39m\n                \u001b[33mclass\u001b[39m=\u001b[32m\"card-num\"\u001b[39m\n              \u001b[36m>\u001b[39m\n                \u001b[0mDeliverable \u001b[0m\n                \u001b[0m3\u001b[0m\n              \u001b[36m</span>\u001b[39m\n              \u001b[36m<span\u001b[39m\n                \u001b[33mclass\u001b[39m=\u001b[32m\"card-title\"\u001b[39m\n              \u001b[36m>\u001b[39m\n                \u001b[0mTimeline and contributions\u001b[0m\n              \u001b[36m</span>\u001b[39m\n              \u001b[36m<span\u001b[39m\n                \u001b[33mclass\u001b[39m=\u001b[32m\"card-body\"\u001b[39m\n              \u001b[36m>\u001b[39m\n                \u001b[0mWho did what and when: Marcus's questions and decisions, Claude's responses and work, all timestamped.\u001b[0m\n              \u001b[36m</span>\u001b[39m\n              \u001b[36m<span\u001b[39m\n                \u001b[33mclass\u001b[39m=\u001b[32m\"status\"\u001b[39m\n              \u001b[36m>\u001b[39m\n                \u001b[0mPlanned for Phase \u001b[0m\n                \u001b[0m3\u001b[0m\n              \u001b[36m</span>\u001b[39m\n            \u001b[36m</a>\u001b[39m\n          \u001b[36m</li>\u001b[39m\n          \u001b[36m<li>\u001b[39m\n            \u001b[36m<a\u001b[39m\n              \u001b[33mclass\u001b[39m=\u001b[32m\"card\"\u001b[39m\n              \u001b[33mhref\u001b[39m=\u001b[32m\"#/tokens\"\u001b[39m\n            \u001b[36m>\u001b[39m\n              \u001b[36m<span\u001b[39m\n                \u001b[33mclass\u001b[39m=\u001b[32m\"card-num\"\u001b[39m\n              \u001b[36m>\u001b[39m\n                \u001b[0mDeliverable \u001b[0m\n                \u001b[0m4\u001b[0m\n              \u001b[36m</span>\u001b[39m\n              \u001b[36m<span\u001b[39m\n                \u001b[33mclass\u001b[39m=\u001b[32m\"card-title\"\u001b[39m\n              \u001b[36m>\u001b[39m\n                \u001b[0mToken usage\u001b[0m\n              \u001b[36m</span>\u001b[39m\n              \u001b[36m<span\u001b[39m\n                \u001b[33mclass\u001b[39m=\u001b[32m\"card-body\"\u001b[39m\n              \u001b[36m>\u001b[39m\n                \u001b[0mTokens by project phase and by practice (/clear, /compact, new session), deduplicated and split into their four classes.\u001b[0m\n              \u001b[36m</span>\u001b[39m\n              \u001b[36m<span\u001b[39m\n                \u001b[33mclass\u001b[39m=\u001b[32m\"status\"\u001b[39m\n              \u001b[36m>\u001b[39m\n                \u001b[0mPlanned for Phase \u001b[0m\n                \u001b[0m3\u001b[0m\n              \u001b[36m</span>\u001b[39m\n            \u001b[36m</a>\u001b[39m\n          \u001b[36m</li>\u001b[39m\n        \u001b[36m</ol>\u001b[39m\n        \u001b[36m<p\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"note\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mSpecs, progress logs, and every recorded test run are in the\u001b[0m\n          \u001b[0m \u001b[0m\n          \u001b[36m<a\u001b[39m\n            \u001b[33mhref\u001b[39m=\u001b[32m\"https://github.com/Marcus-Hollimon/Project-2-AI-Use-In-Schools\"\u001b[39m\n          \u001b[36m>\u001b[39m\n            \u001b[0mGitHub repository\u001b[0m\n          \u001b[36m</a>\u001b[39m\n          \u001b[0m.\u001b[0m\n        \u001b[36m</p>\u001b[39m\n      \u001b[36m</main>\u001b[39m\n      \u001b[36m<footer>\u001b[39m\n        \u001b[0mWork in progress. Built from commit\u001b[0m\n        \u001b[0m \u001b[0m\n        \u001b[36m<a\u001b[39m\n          \u001b[33mhref\u001b[39m=\u001b[32m\"https://github.com/Marcus-Hollimon/Project-2-AI-Use-In-Schools\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[36m<code>\u001b[39m\n            \u001b[0muncommitted\u001b[0m\n          \u001b[36m</code>\u001b[39m\n        \u001b[36m</a>\u001b[39m\n        \u001b[0m \u001b[0m\n        \u001b[0mon \u001b[0m\n        \u001b[0m11/8/2026, 12:39:23 AM\u001b[0m\n        \u001b[0m.\u001b[0m\n      \u001b[36m</footer>\u001b[39m\n    \u001b[36m</div>\u001b[39m\n  \u001b[36m</div>\u001b[39m\n\u001b[36m</body>\u001b[39m\n    at waitForWrapper (C:\\Claude Folder\\Project-2-AI-Use-In-Schools\\web\\node_modules\\@testing-library\\dom\\dist\\wait-for.js:163:27)\n    at C:\\Claude Folder\\Project-2-AI-Use-In-Schools\\web\\node_modules\\@testing-library\\dom\\dist\\query-helpers.js:86:33\n    at C:/Claude Folder/Project-2-AI-Use-In-Schools/web/src/App.test.jsx:52:25\n    at file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)"
+            ],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees the menu lists deliverables 1 to 4 in assignment order",
+            "status": "passed",
+            "title": "the menu lists deliverables 1 to 4 in assignment order",
+            "duration": 5.088700000000017,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees the overview links to each deliverable exactly once",
+            "status": "passed",
+            "title": "the overview links to each deliverable exactly once",
+            "duration": 10.396600000000035,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees the footer names the commit the page was built from",
+            "status": "passed",
+            "title": "the footer names the commit the page was built from",
+            "duration": 3.798599999999851,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          }
+        ],
+        "startTime": 1794116364532,
+        "endTime": 1794116365664.7986,
+        "status": "failed",
+        "message": "",
+        "name": "web/src/App.test.jsx"
+      }
+    ]
+  }
+}

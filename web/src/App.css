@@ -1,0 +1,114 @@
+:root {
+  --bg: #f7f7f5;
+  --surface: #ffffff;
+  --text: #1c1d1f;
+  --muted: #5d6066;
+  --border: #e2e2de;
+  --accent: #2f4b7c;
+  --accent-soft: #e8edf6;
+  --radius: 10px;
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141517;
+    --surface: #1d1f22;
+    --text: #ececea;
+    --muted: #a2a5ab;
+    --border: #2e3135;
+    --accent: #8fb0ea;
+    --accent-soft: #23304a;
+  }
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); }
+a { color: var(--accent); }
+code { font-family: ui-monospace, 'Cascadia Code', Consolas, monospace; }
+
+.shell {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+.brand { font-weight: 700; text-decoration: none; color: var(--text); }
+nav { display: flex; flex-wrap: wrap; gap: 4px; }
+nav a {
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+nav a:hover { background: var(--accent-soft); color: var(--text); }
+nav a[aria-current='page'] { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+
+main { flex: 1; padding: 40px 0; }
+.eyebrow {
+  margin: 0 0 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+h1 { margin: 0 0 12px; font-size: clamp(1.6rem, 4vw, 2.3rem); line-height: 1.2; }
+.lede { max-width: 68ch; font-size: 1.08rem; color: var(--muted); margin: 0 0 28px; }
+
+.cards {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 100%;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--text);
+}
+.card:hover { border-color: var(--accent); }
+.card-num { font-size: 0.8rem; font-weight: 600; color: var(--accent); }
+.card-title { font-weight: 650; font-size: 1.05rem; }
+.card-body { font-size: 0.92rem; color: var(--muted); flex: 1; }
+.status {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.82rem;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.note { color: var(--muted); font-size: 0.92rem; max-width: 68ch; }
+
+footer {
+  padding: 16px 0 24px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+}

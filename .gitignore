@@ -1,0 +1,10 @@
+# Pinned third-party sources we read but do not redistribute
+reference/
+
+node_modules/
+web/dist/
+web/test-results/
+*.log
+.DS_Store
+.vscode/*
+.idea
