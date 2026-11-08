@@ -4,7 +4,7 @@ Goal: turn this project's Claude Code transcripts into two small, publishable da
 the Contributions tab (deliverable 3) and one for the Token usage tab (deliverable 4). Every figure
 in them is checked against a number our code did not produce.
 
-Status: written 2026-11-08 by Claude, waiting for Marcus's approval. No pipeline code before that.
+Status: approved by Marcus 2026-11-08T01:21-05:00, with the publishing rule as described. He chose "publish all".
 
 ## Known before any code (measured 2026-11-08 after the first /compact)
 Script and output: `evidence/phase1-recon/`. Transcript timestamps are UTC; EST is UTC minus 5.
@@ -86,6 +86,11 @@ Script and output: `evidence/phase1-recon/`. Transcript timestamps are UTC; EST 
   correction is visible rather than asserted.
 - Plan readings are whole percents. They are shown beside the token figures with no claim of
   precision, and are the only measure of what a compaction costs.
+- **Amendment to C2 (2026-11-08T01:40-05:00, Claude, reported to Marcus)**: the first real run
+  failed C2 because one request at 00:13:13 EST had no response; another request followed 0.6 s
+  later with no error record, most likely a retry. C2 now also accepts requests that are followed
+  by another request with no response in between, but only by listing each one by time in
+  `checks.json` and as a known gap in `tokens.json`. Nothing is dropped silently.
 
 ## Acceptance checks
 Claude runs these and records the results:

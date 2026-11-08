@@ -8,3 +8,11 @@ web/test-results/
 .DS_Store
 .vscode/*
 .idea
+
+# Private previews (question and answer text before publishing)
+private/
+
+# Python pipeline
+pipeline/.venv/
+__pycache__/
+.pytest_cache/

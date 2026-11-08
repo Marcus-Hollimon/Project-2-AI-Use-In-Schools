@@ -1,0 +1,197 @@
+{
+ "C1_context": [
+  {
+   "reading": "2026-11-08T05:20:00Z",
+   "app": 127976,
+   "transcript": 127879,
+   "responseTime": "2026-11-08T05:20:10.017Z",
+   "difference": 97,
+   "pass": true
+  },
+  {
+   "reading": "2026-11-08T05:28:00Z",
+   "app": 157199,
+   "transcript": 156918,
+   "responseTime": "2026-11-08T05:29:17.773Z",
+   "difference": 281,
+   "pass": true
+  },
+  {
+   "reading": "2026-11-08T05:43:25Z",
+   "app": 268883,
+   "transcript": 268747,
+   "responseTime": "2026-11-08T05:43:22.325Z",
+   "difference": 136,
+   "pass": true
+  },
+  {
+   "reading": "2026-11-08T05:51:29Z",
+   "app": 293955,
+   "transcript": 293827,
+   "responseTime": "2026-11-08T05:51:25.716Z",
+   "difference": 128,
+   "pass": true
+  },
+  {
+   "reading": "2026-11-08T05:57:55Z",
+   "app": 81551,
+   "transcript": 81551,
+   "responseTime": "2026-11-08T05:57:55.742Z",
+   "difference": 0,
+   "pass": true
+  },
+  {
+   "reading": "2026-11-08T06:13:00Z",
+   "app": 137955,
+   "transcript": 137815,
+   "responseTime": "2026-11-08T06:13:32.816Z",
+   "difference": 140,
+   "pass": true
+  },
+  {
+   "reading": "2026-11-08T06:21:00Z",
+   "app": 146790,
+   "transcript": 146571,
+   "responseTime": "2026-11-08T06:21:44.931Z",
+   "difference": 219,
+   "pass": true
+  }
+ ],
+ "C2_completeness": [
+  {
+   "session": "0cf9c9ad-b66c-4406-998d-e6e34b8c2e47",
+   "subagent": false,
+   "apiRequests": 112,
+   "uniqueResponses": 111,
+   "unansweredRequests": [
+    "2026-11-08T05:13:13.165Z"
+   ],
+   "newestRecordIsUnansweredRequest": false,
+   "extra": 0,
+   "pass": true
+  }
+ ],
+ "C3_compact": [
+  {
+   "time": "2026-11-08T05:57:16.198Z",
+   "preTokens": 305065,
+   "computed": 305065,
+   "pass": true
+  }
+ ],
+ "C4_inflation": {
+  "usageRows": 339,
+  "uniqueResponses": 111,
+  "naive": {
+   "input": 698,
+   "cacheWrite": 1866801,
+   "cacheRead": 58850851,
+   "output": 1305508
+  },
+  "deduplicated": {
+   "input": 228,
+   "cacheWrite": 464732,
+   "cacheRead": 19168625,
+   "output": 260966
+  }
+ },
+ "privacy": [
+  {
+   "file": "tokens.json",
+   "pattern": "(hidden)",
+   "hits": 0,
+   "pass": true
+  },
+  {
+   "file": "tokens.json",
+   "pattern": "(hidden)",
+   "hits": 0,
+   "pass": true
+  },
+  {
+   "file": "tokens.json",
+   "pattern": "(hidden)",
+   "hits": 0,
+   "pass": true
+  },
+  {
+   "file": "tokens.json",
+   "pattern": "(hidden)",
+   "hits": 0,
+   "pass": true
+  },
+  {
+   "file": "tokens.json",
+   "pattern": "(hidden)",
+   "hits": 0,
+   "pass": true
+  },
+  {
+   "file": "tokens.json",
+   "pattern": "tool_use_id",
+   "hits": 0,
+   "pass": true
+  },
+  {
+   "file": "tokens.json",
+   "pattern": "tool_result",
+   "hits": 0,
+   "pass": true
+  },
+  {
+   "file": "tokens.json",
+   "pattern": "api-request-blob",
+   "hits": 0,
+   "pass": true
+  },
+  {
+   "file": "contributions.json",
+   "pattern": "(hidden)",
+   "hits": 0,
+   "pass": true
+  },
+  {
+   "file": "contributions.json",
+   "pattern": "(hidden)",
+   "hits": 0,
+   "pass": true
+  },
+  {
+   "file": "contributions.json",
+   "pattern": "(hidden)",
+   "hits": 0,
+   "pass": true
+  },
+  {
+   "file": "contributions.json",
+   "pattern": "(hidden)",
+   "hits": 0,
+   "pass": true
+  },
+  {
+   "file": "contributions.json",
+   "pattern": "(hidden)",
+   "hits": 0,
+   "pass": true
+  },
+  {
+   "file": "contributions.json",
+   "pattern": "tool_use_id",
+   "hits": 0,
+   "pass": true
+  },
+  {
+   "file": "contributions.json",
+   "pattern": "tool_result",
+   "hits": 0,
+   "pass": true
+  },
+  {
+   "file": "contributions.json",
+   "pattern": "api-request-blob",
+   "hits": 0,
+   "pass": true
+  }
+ ],
+ "allPass": true
+}

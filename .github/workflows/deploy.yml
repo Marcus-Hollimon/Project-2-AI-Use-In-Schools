@@ -3,6 +3,7 @@
 #   - the app lives in web/, so npm steps run there and the uploaded folder is web/dist
 #   - lint and tests run before the build, so a failing test blocks deployment
 #   - Node pinned to 24 to match Marcus's machine (lts/* gave CI Node 26.13 on 2026-11-08)
+#   - pipeline tests (Python, run with uv) also run before the build (added in Phase 1)
 name: Deploy site to GitHub Pages
 
 on:
@@ -43,6 +44,13 @@ jobs:
         run: npm run lint
       - name: Test
         run: npm test
+      # Pipeline tests (Phase 1). CI has no transcripts, so only the tests run, not build.py.
+      # uv comes from pipx, which GitHub's Ubuntu runners ship with; version matches Marcus's machine.
+      - name: Pipeline tests
+        working-directory: pipeline
+        run: |
+          pipx install uv==0.11.13
+          uv run --locked pytest -q
       - name: Build
         run: npm run build
       - name: Setup Pages

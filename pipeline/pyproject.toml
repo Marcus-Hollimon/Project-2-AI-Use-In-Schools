@@ -1,0 +1,14 @@
+[project]
+name = "pipeline"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest]
+testpaths = ["tests"]
+junit_suite_name = "pipeline"

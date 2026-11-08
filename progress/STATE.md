@@ -1,6 +1,6 @@
 # State: read this first
 
-Current phase: 1 Instrumentation (spec written, waiting for Marcus's approval; no code yet)
+Current phase: 1 Instrumentation (spec approved 01:21; tasks in progress)
 
 Last updated: 2026-11-08T01:03-05:00 by Claude, after the first `/compact` (00:57:16).
 

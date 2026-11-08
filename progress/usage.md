@@ -12,6 +12,8 @@ percentages as the app reports them, so a change of "1 point" means anywhere fro
 | 2026-11-08T00:43:25-05:00 | 0 | phase end | 25 | 52 | 268,883 | none |
 | 2026-11-08T00:51:29-05:00 | 0 | just before first /compact | 28 | 53 | 293,955 | none (next row is after /compact) |
 | 2026-11-08T00:57:55-05:00 | 1 | after first /compact (phase start) | 31 | 53 | 81,551 | /compact by Marcus at 00:57:16 (manual; 305,065 tokens before, 14,969 after, 56.5 s) |
+| 2026-11-08T01:13-05:00 | 1 | before turning off Claude Docs connector | 36 | 54 | 137,955 | none (MCP tools 20,442; MCP instructions 2,339) |
+| 2026-11-08T01:21-05:00 | 1 | after turning off Claude Docs connector | 37 | 54 | 146,790 | none (MCP tools 20,906; MCP instructions 1,700) |
 
 ## Cost per phase
 | Phase | 5-hour points | Weekly points | Context growth (tokens) |
@@ -22,3 +24,5 @@ percentages as the app reports them, so a change of "1 point" means anywhere fro
 The first 20 minutes of planning were not measured: no reading was taken at session start.
 
 Between 00:51:29 and 00:57:55 the 5-hour window moved 3 points. That covers one short turn (recording a decision) plus the compaction itself, and they cannot be separated: the transcript keeps no record of the compaction's own model call (`evidence/phase1-recon/`). The context the next turn re-reads fell from 293,955 to 81,551 tokens, of which about 78,000 is fixed overhead (tool definitions, system prompt, skills) sent on every turn.
+
+Connector test (01:13 to 01:21): turning off the Claude Docs connector saved about 175 tokens per turn, not the thousands Claude predicted. MCP tool descriptions went up 464 (a Workflow tool appeared at the same time) and MCP instructions went down 639. The 20,000 tokens of MCP tools are almost all built into the app (browser, computer control, app controls), which cannot be switched off from a session.

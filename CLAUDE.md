@@ -27,6 +27,9 @@ the current phase spec in `specs/`, and write a phase's spec before starting tha
   tokens) and note how context was reset (new session, `/clear`, `/compact`).
 - Run web tests with `npm run test:record` in `web/`, which saves the run to `validation/runs/`.
   Never report a test result that was not recorded.
+- Pipeline (Phase 1): from the repo root, `uv run --project pipeline python pipeline/build.py` rebuilds
+  `data/derived/` from the sessions in `pipeline/sessions.json` (add each new session id there), and
+  `uv run --project pipeline python pipeline/record_tests.py "label"` records a pipeline test run.
 - Token accounting: transcripts repeat the same usage on every row of one API response, and
   resumed sessions copy history into new files. Deduplicate by response id, within and across
   files. Never sum rows. Evidence: `evidence/session1-audit/`.
