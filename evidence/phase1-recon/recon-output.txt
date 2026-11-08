@@ -1,0 +1,15 @@
+FACT 1: records in transcript: 852 | unique responses: 65 | api-request records: 66
+        (one api-request more than responses = the request in flight while this script runs)
+FACT 2: compact boundaries: 1
+  at 2026-11-08T05:57:16.198Z trigger manual preTokens 305065 postTokens 14969 durationMs 56517
+  last response before: context 304338 + output 727 = 305065 | equals preTokens: True
+  first response after: input 2 cache write 34474 cache read 45722
+  api-request or assistant records in the 12 records before the boundary: ['api-request@05:53:55', 'assistant@05:54:04']
+FACT 3: app context readings vs the transcript response with the nearest context size (the 00:20 and 00:28 times were written down to the minute only)
+  00:20     app  127976 | response at 05:20:10 context  127879 | difference   97 (0.08%)
+  00:28     app  157199 | response at 05:29:17 context  156918 | difference  281 (0.18%)
+  00:43:25  app  268883 | response at 05:43:22 context  268747 | difference  136 (0.05%)
+  00:51:29  app  293955 | response at 05:51:25 context  293827 | difference  128 (0.04%)
+  00:57:55  app   81551 | response at 05:57:55 context   81551 | difference    0 (0.00%)
+FACT 4: usage fields: ['cache_creation', 'cache_creation_input_tokens', 'cache_read_input_tokens', 'fallback_credit', 'inference_geo', 'input_tokens', 'iterations', 'output_tokens', 'output_tokens_details', 'server_tool_use', 'service_tier', 'speed']
+        output_tokens_details: {'thinking_tokens': 2934} | cache_creation: {'ephemeral_1h_input_tokens': 28700, 'ephemeral_5m_input_tokens': 0}

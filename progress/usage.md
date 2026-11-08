@@ -11,6 +11,7 @@ percentages as the app reports them, so a change of "1 point" means anywhere fro
 | 2026-11-08T00:28-05:00 | 0 | phase start | 15 | 51 | 157,199 | none |
 | 2026-11-08T00:43:25-05:00 | 0 | phase end | 25 | 52 | 268,883 | none |
 | 2026-11-08T00:51:29-05:00 | 0 | just before first /compact | 28 | 53 | 293,955 | none (next row is after /compact) |
+| 2026-11-08T00:57:55-05:00 | 1 | after first /compact (phase start) | 31 | 53 | 81,551 | /compact by Marcus at 00:57:16 (manual; 305,065 tokens before, 14,969 after, 56.5 s) |
 
 ## Cost per phase
 | Phase | 5-hour points | Weekly points | Context growth (tokens) |
@@ -19,3 +20,5 @@ percentages as the app reports them, so a change of "1 point" means anywhere fro
 | 0 Foundation | 10 | 1 | 111,684 |
 
 The first 20 minutes of planning were not measured: no reading was taken at session start.
+
+Between 00:51:29 and 00:57:55 the 5-hour window moved 3 points. That covers one short turn (recording a decision) plus the compaction itself, and they cannot be separated: the transcript keeps no record of the compaction's own model call (`evidence/phase1-recon/`). The context the next turn re-reads fell from 293,955 to 81,551 tokens, of which about 78,000 is fixed overhead (tool definitions, system prompt, skills) sent on every turn.

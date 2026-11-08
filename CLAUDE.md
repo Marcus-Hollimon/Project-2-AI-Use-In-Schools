@@ -38,7 +38,8 @@ the current phase spec in `specs/`, and write a phase's spec before starting tha
 - Commands handed to Marcus must work in Windows PowerShell 5.1.
 - Bash tool quirk seen 2026-11-08: several heredocs in one command failed to parse. Write one
   file per command. Double backslashes also collapse to one: keep backslash escapes out of code,
-  and run lint after writing.
+  and run lint after writing. A single long prose heredoc also failed (01:00): write Markdown and
+  prose files with the file-writing tool.
 
 ## Context resets (decided 2026-11-08)
 - Marcus prefers `/compact` over `/clear`. Claude has no tool to run `/compact`; only Marcus can
