@@ -39,3 +39,10 @@ the current phase spec in `specs/`, and write a phase's spec before starting tha
 - Bash tool quirk seen 2026-11-08: several heredocs in one command failed to parse. Write one
   file per command. Double backslashes also collapse to one: keep backslash escapes out of code,
   and run lint after writing.
+
+## Context resets (decided 2026-11-08)
+- Marcus prefers `/compact` over `/clear`. Claude has no tool to run `/compact`; only Marcus can
+  type it (auto-compact fires only at 97% of a 1M window, far too late for the budget).
+- At each good boundary (phase end, or a big chunk done): update `STATE.md`, commit, record a usage
+  reading marked "just before /compact", then give Marcus the exact `/compact <focus text>` line.
+- First thing after a compact: take a usage reading marked "after /compact".

@@ -44,6 +44,10 @@ Console errors across all loads: none. Overview footer: "Built from commit b945d
 
 ## Marcus's checks
 
-### M1. Phase 0 checklist (to do)
+### M1. Phase 0 checklist (passed)
 Steps: `specs/phase-0-foundation.md`, "Marcus's checklist". Record here the date and time, what
 you saw, and anything that looked wrong.
+
+Result, reported by Marcus at 2026-11-08T00:51-05:00 in his own browser: **all 5 checks passed**,
+including Ctrl+F5 on the Token usage tab (the reload keystroke Claude's pane could not press) and
+the footer commit matching the repository.

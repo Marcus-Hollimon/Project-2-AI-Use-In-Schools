@@ -26,11 +26,11 @@ Claude runs these and records the results:
       console errors.
 
 Marcus's checklist (do it yourself, then tick and date each line):
-- [ ] Open the live site. It loads.
-- [ ] Click each of the four numbered tabs. Each shows its own title.
-- [ ] On the Token usage tab, press Ctrl+F5. You are still on Token usage.
-- [ ] The commit code in the page footer matches the latest commit on the GitHub repo page.
-- [ ] On GitHub, you can find `specs/`, `progress/`, and `validation/`.
+- [x] Open the live site. It loads.
+- [x] Click each of the four numbered tabs. Each shows its own title.
+- [x] On the Token usage tab, press Ctrl+F5. You are still on Token usage.
+- [x] The commit code in the page footer matches the latest commit on the GitHub repo page.
+- [x] On GitHub, you can find `specs/`, `progress/`, and `validation/`.
 
 ## Results (Claude, 2026-11-08)
 - Lint clean, build clean, 17/17 tests recorded. Two deliberate mutation runs show the tests fail

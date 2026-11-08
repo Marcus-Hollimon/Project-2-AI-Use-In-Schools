@@ -10,6 +10,7 @@ percentages as the app reports them, so a change of "1 point" means anywhere fro
 | 2026-11-08T00:20-05:00 | planning | during review turn | 12 | 50 | 127,976 | none |
 | 2026-11-08T00:28-05:00 | 0 | phase start | 15 | 51 | 157,199 | none |
 | 2026-11-08T00:43:25-05:00 | 0 | phase end | 25 | 52 | 268,883 | none |
+| 2026-11-08T00:51:29-05:00 | 0 | just before first /compact | 28 | 53 | 293,955 | none (next row is after /compact) |
 
 ## Cost per phase
 | Phase | 5-hour points | Weekly points | Context growth (tokens) |

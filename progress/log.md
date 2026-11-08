@@ -26,3 +26,5 @@ curated summary.
 | 2026-11-08T00:41:47-05:00 | 0 | Claude | Deploy run succeeded in 27 s: lint, tests, build, deploy. | Actions run 42451739541 |
 | 2026-11-08T00:43-05:00 | 0 | Claude | Live site verified: all files HTTP 200, each page correct on a proven fresh load, no console errors, footer commit matches `main`. Reload keys cannot be pressed in Claude's browser pane. | `validation/manual-checks.md` |
 | 2026-11-08T00:43:25-05:00 | 0 | Claude | Pinned CI to Node 24 (`lts/*` had given CI Node 26.13 against 24.18 locally). Phase 0 usage: 5-hour 15% to 25%, weekly 51% to 52%. | `progress/usage.md` |
+| 2026-11-08T00:51-05:00 | 0 | Marcus | Completed the Phase 0 checklist in his own browser: all 5 passed, including Ctrl+F5. Chose `/compact` over `/clear` for context resets. | `validation/manual-checks.md` |
+| 2026-11-08T00:53-05:00 | 0 | Claude | Confirmed it has no tool to run `/compact` itself (only auto-compact at 97% of context). Switched project rules: Claude prepares each phase boundary and hands Marcus the exact `/compact` line. | `CLAUDE.md` |

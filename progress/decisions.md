@@ -12,3 +12,4 @@ Decisions Marcus made, with what was on the table. Times Eastern (EST). Source: 
 | 2026-11-08T00:14:38-05:00 | Use Opus 5.5, as the teacher suggested | | Marcus | Transcripts record the model per response, so the switch is visible in the token data. |
 | 2026-11-08T00:15:56-05:00 | Remove canon-keeper from the global CLAUDE.md | | Marcus | Backup kept. |
 | 2026-11-08T00:27:41-05:00 | Start Phase 0, including removing the canon-keeper test hook | Start Phase 0 · keep the hook | Marcus | |
+| 2026-11-08T00:51-05:00 | Context resets use `/compact`, not `/clear` | `/clear` (Claude's suggestion) · `/compact` | Marcus | Claude cannot trigger `/compact`; Marcus types it at boundaries Claude prepares. Deliverable 4 compares the two, so one deliberate `/clear` is still proposed (open). |
