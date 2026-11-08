@@ -13,6 +13,8 @@ Last updated: 2026-11-08T00:53-05:00 by Claude, at the end of Phase 0.
 ## How context is reset
 `/compact`, typed by Marcus at boundaries Claude prepares (see CLAUDE.md). After any compact, take
 a usage reading first and add it to `progress/usage.md` as "after /compact".
+Planned exception (decided by Marcus 2026-11-08): one deliberate `/clear` at the end of Phase 1, so
+deliverable 4 can compare clear with compact. Before it: commit, update STATE.md, usage reading.
 
 ## Next: Phase 1 Instrumentation
 1. Write `specs/phase-1-instrumentation.md` before any code.
@@ -28,7 +30,6 @@ a usage reading first and add it to `progress/usage.md` as "after /compact".
 | 0cf9c9ad-b66c-4406-998d-e6e34b8c2e47 | `C:\Claude Folder` (transcript under `~/.claude/projects/C--Claude-Folder/`) | claude-opus-5 until 00:14:38, then claude-opus-5-5 | planning, audit, Phase 0, continues after compaction |
 
 ## Open decisions (Marcus)
-- One deliberate `/clear` for deliverable 4's clear-vs-compact comparison, or compact only.
 - Final sample size: after the Phase 2 pilot measures cost per school.
 - Whether bulk research may use a cheaper model: measure it in the pilot first.
 
