@@ -96,7 +96,9 @@ Claude runs these and records the results:
 - [ ] CI runs the pipeline tests, and the deploy still succeeds.
 - [ ] Web tests still pass, recorded.
 
-Marcus's checklist (do it yourself, then tick and date each line):
+Marcus's checklist, for the END of Phase 1 (do it yourself, then tick and date each line). None of
+these files or commands exist until Claude has finished the tasks above; Claude will say when the
+checklist is ready and hand over the exact PowerShell commands then.
 - [ ] Run the commands Claude gives you in PowerShell. Compare the "context now" number it prints
       with the context number the app shows. They are within about 1%.
 - [ ] Read `private/qa-preview.md`. Tell Claude which turns to hide, or "publish all".
