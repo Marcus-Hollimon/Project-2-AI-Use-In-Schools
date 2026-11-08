@@ -94,12 +94,12 @@ Script and output: `evidence/phase1-recon/`. Transcript timestamps are UTC; EST 
 
 ## Acceptance checks
 Claude runs these and records the results:
-- [ ] A recorded pipeline test run passes; a recorded mutation run fails.
-- [ ] C1, C2 and C3 pass on the real transcripts; results saved in `data/derived/checks.json`.
-- [ ] Searching `data/derived/` for the home folder path, the email address, and tool output finds
+- [x] A recorded pipeline test run passes; a recorded mutation run fails.
+- [x] C1, C2 and C3 pass on the real transcripts; results saved in `data/derived/checks.json`.
+- [x] Searching `data/derived/` for the home folder path, the email address, and tool output finds
       nothing.
-- [ ] CI runs the pipeline tests, and the deploy still succeeds.
-- [ ] Web tests still pass, recorded.
+- [x] CI runs the pipeline tests, and the deploy still succeeds.
+- [x] Web tests still pass, recorded.
 
 Marcus's checklist, for the END of Phase 1 (do it yourself, then tick and date each line). None of
 these files or commands exist until Claude has finished the tasks above; Claude will say when the

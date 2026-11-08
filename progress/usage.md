@@ -14,6 +14,7 @@ percentages as the app reports them, so a change of "1 point" means anywhere fro
 | 2026-11-08T00:57:55-05:00 | 1 | after first /compact (phase start) | 31 | 53 | 81,551 | /compact by Marcus at 00:57:16 (manual; 305,065 tokens before, 14,969 after, 56.5 s) |
 | 2026-11-08T01:13-05:00 | 1 | before turning off Claude Docs connector | 36 | 54 | 137,955 | none (MCP tools 20,442; MCP instructions 2,339) |
 | 2026-11-08T01:21-05:00 | 1 | after turning off Claude Docs connector | 37 | 54 | 146,790 | none (MCP tools 20,906; MCP instructions 1,700) |
+| 2026-11-08T01:30-05:00 | 1 | Claude checks done, waiting for Marcus checklist | 42 | 54 | 198,396 | none |
 
 ## Cost per phase
 | Phase | 5-hour points | Weekly points | Context growth (tokens) |

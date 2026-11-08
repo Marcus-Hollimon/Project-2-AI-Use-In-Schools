@@ -1,16 +1,18 @@
 # State: read this first
 
-Current phase: 1 Instrumentation (spec approved 01:21; tasks in progress)
+Current phase: 1 Instrumentation (Claude's checks all done; waiting for Marcus's checklist)
 
-Last updated: 2026-11-08T01:03-05:00 by Claude, after the first `/compact` (00:57:16).
+Last updated: 2026-11-08T01:30-05:00 by Claude.
 
 ## Where things stand
 - Phase 0 Foundation: done. Marcus's checklist passed 5/5 at 00:51.
-- Phase 1: spec at `specs/phase-1-instrumentation.md`; recon behind it in `evidence/phase1-recon/`.
+- Phase 1: tasks 1 to 8 done (commit be9164a, CI run 42454962332 green incl. 12 pipeline tests).
+  Pipeline in `pipeline/`, output in `data/derived/`, all cross-checks pass. Marcus chose
+  "publish all" for Q&A. C2 was amended once (unanswered retry request); see the spec.
 - Live site (skeleton only): https://marcus-hollimon.github.io/Project-2-AI-Use-In-Schools/
-- Tests: 17, all passing. Recorded runs in `validation/runs/`, including 2 deliberate mutation runs.
-- Budget after the first `/compact`: weekly 53% (resets Tue Nov 10 01:00 EST), 5-hour 31%
-  (resets 04:30 EST). Context 81,551 tokens, of which about 78k is fixed overhead.
+- Tests: web 17/17, pipeline 12/12, all recorded in `validation/runs/` with 4 mutation runs total.
+- Budget at 01:30: weekly 54% (resets Tue Nov 10 01:00 EST), 5-hour 42% (resets 04:30 EST).
+  Phase 1 so far: 11 five-hour points, 1 weekly.
 
 ## How context is reset
 `/compact`, typed by Marcus at boundaries Claude prepares (see CLAUDE.md). After any compact, take
@@ -19,9 +21,8 @@ Planned exception (decided by Marcus 2026-11-08): one deliberate `/clear` at the
 deliverable 4 can compare clear with compact. Before it: commit, update STATE.md, usage reading.
 
 ## Next: Phase 1 Instrumentation
-1. Marcus approves (or changes) `specs/phase-1-instrumentation.md`. No pipeline code before that.
-2. Then work through the spec's Tasks 1 to 8 in order, and its acceptance checks.
-3. End of phase: the deliberate `/clear`, steps listed at the end of the spec.
+1. Marcus does the 4-item checklist in `specs/phase-1-instrumentation.md`; Claude records it.
+2. End of phase: the deliberate `/clear`, steps listed at the end of the spec.
 
 ## Sessions in this project
 | Session | Started in | Model | Covers |
