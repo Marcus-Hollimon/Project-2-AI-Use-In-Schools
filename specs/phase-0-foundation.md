@@ -18,11 +18,11 @@ real content exists.
 
 ## Acceptance checks
 Claude runs these and records the results:
-- [ ] Lint passes. Build passes. Tests pass, and the run is saved in `validation/runs/`.
-- [ ] Built `index.html` loads its files from `/Project-2-AI-Use-In-Schools/`.
-- [ ] The GitHub Actions deploy run succeeds.
-- [ ] The live address and its JavaScript file both answer HTTP 200.
-- [ ] In a real browser, each of the five pages shows the right heading after a reload, with no
+- [x] Lint passes. Build passes. Tests pass, and the run is saved in `validation/runs/`.
+- [x] Built `index.html` loads its files from `/Project-2-AI-Use-In-Schools/`.
+- [x] The GitHub Actions deploy run succeeds.
+- [x] The live address and its JavaScript file both answer HTTP 200.
+- [x] In a real browser, each of the five pages shows the right heading after a reload, with no
       console errors.
 
 Marcus's checklist (do it yourself, then tick and date each line):
@@ -31,3 +31,13 @@ Marcus's checklist (do it yourself, then tick and date each line):
 - [ ] On the Token usage tab, press Ctrl+F5. You are still on Token usage.
 - [ ] The commit code in the page footer matches the latest commit on the GitHub repo page.
 - [ ] On GitHub, you can find `specs/`, `progress/`, and `validation/`.
+
+## Results (Claude, 2026-11-08)
+- Lint clean, build clean, 17/17 tests recorded. Two deliberate mutation runs show the tests fail
+  when the app is broken.
+- Built and live `index.html` load every file from `/Project-2-AI-Use-In-Schools/`; each answers 200.
+- Deploy run 42451739541 succeeded in 27 s.
+- Each deliverable page renders correctly on a proven fresh page load, with no console errors.
+  Limit: reload keys cannot be pressed in Claude's browser pane, so the keystroke itself is in
+  Marcus's checklist. Details: `validation/manual-checks.md`.
+- Phase 0 cost: 5-hour window 15% to 25%, weekly limit 51% to 52%.

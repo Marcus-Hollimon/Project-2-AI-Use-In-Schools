@@ -1,0 +1,14 @@
+# Decisions
+
+Decisions Marcus made, with what was on the table. Times Eastern (EST). Source: session transcript
+0cf9c9ad, where the answers are recorded verbatim.
+
+| Time | Decision | Options considered | Chosen by | Notes |
+|---|---|---|---|---|
+| 2026-11-08T00:13:13-05:00 | Study design: stratified sample of about 40 schools | Stratified ~40 (Claude's recommendation) · narrow and deep, 20 to 30 · broad and shallow, 100+ | Marcus | At 00:22 Claude advised piloting 5 schools first and setting the final number from measured cost per school. Final number open until Phase 2. |
+| 2026-11-08T00:13:13-05:00 | UI authorship: Claude writes the UI, Marcus reviews | Claude writes, Marcus reviews (recommendation) · Marcus designs, Claude wires up · split | Marcus | Recorded in the project CLAUDE.md. |
+| 2026-11-08T00:13:13-05:00 | Web technology: React with a build step | Static site (recommendation) · React with a build step · Python server | Marcus, against Claude's recommendation | At 00:22 Claude agreed React is reasonable. The deployment risk was retired first, in Phase 0. |
+| 2026-11-08T00:13:13-05:00 | Priority if time runs short: the study and its findings dashboard | Study (recommendation) · all four evenly · validation | Marcus | |
+| 2026-11-08T00:14:38-05:00 | Use Opus 5.5, as the teacher suggested | | Marcus | Transcripts record the model per response, so the switch is visible in the token data. |
+| 2026-11-08T00:15:56-05:00 | Remove canon-keeper from the global CLAUDE.md | | Marcus | Backup kept. |
+| 2026-11-08T00:27:41-05:00 | Start Phase 0, including removing the canon-keeper test hook | Start Phase 0 · keep the hook | Marcus | |

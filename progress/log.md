@@ -1,0 +1,28 @@
+# Progress log
+
+Milestones, oldest first. Times are Eastern (EST, UTC-5); minute-only times are approximate.
+Who: **Marcus** (decisions, questions, reviews) or **Claude** (analysis, code, checks). The full
+question-and-response record is built from the session transcripts in Phase 1; this is the
+curated summary.
+
+| Time | Phase | Who | Entry | Evidence |
+|---|---|---|---|---|
+| 2026-11-08T00:00:55-05:00 | planning | Marcus | Shared the Project 2 assignment. Asked for options and tradeoffs at a high level, proof behind every claim, and to be told when he is misusing Claude. | transcript 0cf9c9ad |
+| 2026-11-08T00:05:22-05:00 | planning | Claude | Inspected local Claude Code data: transcripts record tokens, timestamps, prompts, and tool calls; `/compact` is recorded. Found GitHub CLI logged out and git identity unset. Asked four design questions. | transcript 0cf9c9ad |
+| 2026-11-08T00:13:13-05:00 | planning | Marcus | Answered the four design questions. | `decisions.md` |
+| 2026-11-08T00:14:14-05:00 | planning | Claude | Proposed six phases; recommended a pilot before fixing the sample size, and a hand-coded ground truth for validation. | transcript 0cf9c9ad |
+| 2026-11-08T00:14:38-05:00 | planning | Marcus | Switched the model to Opus 5.5. | transcript 0cf9c9ad |
+| 2026-11-08T00:15:56-05:00 | planning | Marcus | Logged in to GitHub and created the repository. Asked Claude to remove canon-keeper from the global CLAUDE.md and to review all work so far. | transcript 0cf9c9ad |
+| 2026-11-08T00:19:21-05:00 | planning | Claude | Audited its own first analysis: token totals about 2x too high (usage repeated per row), session files not addable, the claimed `/clear` was a resumed session. | `evidence/session1-audit/` |
+| 2026-11-08T00:20:26-05:00 | planning | Claude | Rewrote the global CLAUDE.md (backup kept), set git identity, read plan usage (Pro, weekly 50%). | `~/.claude/backups/` (local) |
+| 2026-11-08T00:27:41-05:00 | 0 | Marcus | Approved Phase 0, including removal of the canon-keeper test hook. | transcript 0cf9c9ad |
+| 2026-11-08T00:29:33-05:00 | 0 | Claude | Removed the canon-keeper hook (backup kept). Cloned the repository. | `~/.claude/backups/` (local) |
+| 2026-11-08T00:30:10-05:00 | 0 | Claude | Cloned pinned sources: Vite 8.3.6 docs, create-vite 9.3.4 template, Vitest 5.1.0 docs. Found the current template uses oxlint, not ESLint. | `reference/` (local, gitignored) |
+| 2026-11-08T00:37-05:00 | 0 | Claude | Wrote CLAUDE.md, specs, React skeleton, tests, deploy workflow. | commit b945d66 |
+| 2026-11-08T00:38-05:00 | 0 | Claude | Lint caught three lines damaged by the shell tool (double backslashes collapsed to one). Rewrote them without backslashes. | `CLAUDE.md` rule |
+| 2026-11-08T00:38:54-05:00 | 0 | Claude | 17/17 tests passed, recorded. | `validation/runs/` |
+| 2026-11-08T00:39:26-05:00 | 0 | Claude | Mutation checks: breaking click navigation failed exactly the click test; breaking address routing failed 10 tests. Restored byte-identical; 17/17 again. | `validation/runs/` |
+| 2026-11-08T00:40:20-05:00 | 0 | Claude | Committed and pushed. Enabled GitHub Pages with GitHub Actions as the source. | commit b945d66 |
+| 2026-11-08T00:41:47-05:00 | 0 | Claude | Deploy run succeeded in 27 s: lint, tests, build, deploy. | Actions run 42451739541 |
+| 2026-11-08T00:43-05:00 | 0 | Claude | Live site verified: all files HTTP 200, each page correct on a proven fresh load, no console errors, footer commit matches `main`. Reload keys cannot be pressed in Claude's browser pane. | `validation/manual-checks.md` |
+| 2026-11-08T00:43:25-05:00 | 0 | Claude | Pinned CI to Node 24 (`lts/*` had given CI Node 26.13 against 24.18 locally). Phase 0 usage: 5-hour 15% to 25%, weekly 51% to 52%. | `progress/usage.md` |

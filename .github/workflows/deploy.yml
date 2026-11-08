@@ -2,6 +2,7 @@
 # Action versions and pinned commit SHAs are copied unchanged from that file. Changes from it:
 #   - the app lives in web/, so npm steps run there and the uploaded folder is web/dist
 #   - lint and tests run before the build, so a failing test blocks deployment
+#   - Node pinned to 24 to match Marcus's machine (lts/* gave CI Node 26.13 on 2026-11-08)
 name: Deploy site to GitHub Pages
 
 on:
@@ -33,7 +34,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
         with:
-          node-version: lts/*
+          node-version: 24
           cache: 'npm'
           cache-dependency-path: web/package-lock.json
       - name: Install dependencies

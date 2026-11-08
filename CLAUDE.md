@@ -37,4 +37,5 @@ the current phase spec in `specs/`, and write a phase's spec before starting tha
 - Third-party APIs: read `reference/` at the installed version before writing code against them.
 - Commands handed to Marcus must work in Windows PowerShell 5.1.
 - Bash tool quirk seen 2026-11-08: several heredocs in one command failed to parse. Write one
-  file per command.
+  file per command. Double backslashes also collapse to one: keep backslash escapes out of code,
+  and run lint after writing.
