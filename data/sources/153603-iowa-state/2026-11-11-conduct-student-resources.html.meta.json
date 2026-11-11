@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://studentconduct.dso.iastate.edu/know-code-resources/students",
+ "final_url": "https://studentconduct.dso.iastate.edu/know-code-resources/students",
+ "http_status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T15:20:32-05:00",
+ "sha256": "bd7416f970115a280bbcce814df2a79647fde12a8eeca40786bbfb190952ddf2",
+ "bytes": 43000
+}

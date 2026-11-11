@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://celt.iastate.edu/prepare-and-teach/design-your-course/ai-in-teaching/",
+ "final_url": "https://celt.iastate.edu/prepare-and-teach/design-your-course/ai-in-teaching/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:20:12-05:00",
+ "sha256": "12f24d8e35da06a4a3524794e1c5c1bdba2c21e9942fafab53c62376bd90ebc5",
+ "bytes": 50010
+}

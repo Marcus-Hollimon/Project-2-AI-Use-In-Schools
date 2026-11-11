@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://communitystandards.stanford.edu/generative-ai-policy-guidance",
+ "final_url": "https://communitystandards.stanford.edu/policies-guidance%23policies-guidance-links/bca-guidance-recommendations#generative-ai-policy-guidance",
+ "http_status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T15:22:23-05:00",
+ "sha256": "fe9032c404beb96577d9c8be2074c8ca1d224b2ed192f29770f0f2f027639668",
+ "bytes": 99091
+}

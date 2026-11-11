@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://celt.iastate.edu/resources/ai-teach-learn",
+ "final_url": "https://celt.iastate.edu/resources/ai-teach-learn",
+ "http_status": 404,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:19:54-05:00",
+ "sha256": "a970634459b9cb9d0f45a10564d1980a769bf7d2474920189f01267b1b4c74e9",
+ "bytes": 40874
+}

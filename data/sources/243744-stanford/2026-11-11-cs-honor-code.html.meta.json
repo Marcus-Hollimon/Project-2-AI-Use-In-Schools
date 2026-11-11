@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.cs.stanford.edu/academics/honor-code",
+ "final_url": "https://www.cs.stanford.edu/academics/honor-code",
+ "http_status": 404,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T15:22:25-05:00",
+ "sha256": "53c6d035cf7bb4706e48ecab4589baeb1fe643906bccbd9ee8b0c7f6ebb963d8",
+ "bytes": 54501
+}

@@ -75,3 +75,6 @@ Recode (spec R2): one value changed, Johns Hopkins `se_courses` "not addressed" 
 ## Phase 5 (21 more schools, codebook v2)
 | School | Start (reading before) | End (school passes checks) | 5-hour % | Weekly % | Context tokens | Searches | Pages saved |
 |---|---|---|---|---|---|---|---|
+| (Phase 5 start, before school 1) | | 2026-11-11T15:19:12-05:00 (commit 4fd94dc; reading taken right after) | 16 | 23 | 158,057 | | |
+| Iowa State 153603 | 15:19:12 | 2026-11-11T15:22:00-05:00 | 18 | 23 | 186,989 | 6 | 11 (3 are HTTP 404 records) |
+| Stanford 243744 | 15:22:00 | 2026-11-11T15:24:00-05:00 | 19 | 23 | 211,489 | 6 | 4 (1 is an HTTP 404 record) |

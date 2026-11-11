@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://ai.iastate.edu/policies-and-compliance",
+ "final_url": "https://ai.iastate.edu/policies-and-compliance",
+ "http_status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T15:19:53-05:00",
+ "sha256": "534631b46f00e2dedc4cd4a1240926b6453d31061ba96986d0bd96302ad735a5",
+ "bytes": 19395
+}

@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.cs.iastate.edu/",
+ "final_url": "https://www.cs.iastate.edu/",
+ "http_status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T15:19:55-05:00",
+ "sha256": "9a66790fa7754dacd96d4fcb2c945e90e78c871faa70f434cc92f5c1cda7b62e",
+ "bytes": 66586
+}

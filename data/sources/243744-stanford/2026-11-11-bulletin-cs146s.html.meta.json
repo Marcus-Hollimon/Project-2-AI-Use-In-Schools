@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://bulletin.stanford.edu/courses/2274401",
+ "final_url": "https://bulletin.stanford.edu/courses/2274401",
+ "http_status": 200,
+ "content_type": "text/html;charset=utf-8",
+ "fetched_at": "2026-11-11T15:22:25-05:00",
+ "sha256": "0327d0d5d521d6b87b608b4da9db8b3fcaa7d51b310b24c7f1918ae83c065dc7",
+ "bytes": 2271091
+}

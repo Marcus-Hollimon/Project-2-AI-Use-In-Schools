@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://ai.iastate.edu/teaching-and-instruction",
+ "final_url": "https://ai.iastate.edu/teaching-and-instruction",
+ "http_status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T15:20:12-05:00",
+ "sha256": "4cd2e37f14aa0184b13b8c9673ddc09cf64f15116c51bcb37a8b352c28140404",
+ "bytes": 18440
+}

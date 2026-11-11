@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.cs.iastate.edu/academic-integrity",
+ "final_url": "https://www.cs.iastate.edu/academic-integrity",
+ "http_status": 404,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T15:20:17-05:00",
+ "sha256": "14261551195e709f9853b20872ec97aabf3438adcdcff843e5bbcd06cb966087",
+ "bytes": 39244
+}

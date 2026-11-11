@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T11:32:25-05:00",
+ "generatedAt": "2026-11-11T15:24:00-05:00",
  "codebookVersion": 2,
  "schools": [
   {
@@ -4017,7 +4017,943 @@
      "message": "dept_stance='none found' and dept_tone='none found' agree on none found"
     }
    ]
+  },
+  {
+   "unitid": "153603",
+   "name": "Iowa State University",
+   "pass": true,
+   "checks": {
+    "S1": true,
+    "S2": true,
+    "S3": true,
+    "S4": true,
+    "S5": true,
+    "C1": true,
+    "C2": true,
+    "C3": true,
+    "C4": true,
+    "N1": true
+   },
+   "findings": [
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: iastate.edu generative AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: iastate.edu computer science AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: iastate.edu software engineering syllabus AI"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: iastate.edu ChatGPT academic integrity"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "value 'restrict' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote has 28 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote found in data/sources/153603-iowa-state/2026-11-11-conduct-student-resources.html"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "studentconduct.dso.iastate.edu is on iastate.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "absence backed by 2 reviewed pages"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "value 'cautionary' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote has 12 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote found in data/sources/153603-iowa-state/2026-11-11-conduct-student-resources.html"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "studentconduct.dso.iastate.edu is on iastate.edu"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "value 'not discussed' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "absence backed by 5 reviewed pages"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "value 'encouraged' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote has 6 words"
+    },
+    {
+     "check": "S1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote found in data/sources/153603-iowa-state/2026-11-11-ai-policies.html"
+    },
+    {
+     "check": "S2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "ai.iastate.edu is on iastate.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "cue words absent; reason: 'cite' is the disclosure cue; the sentence is advice on the university AI site's responsible-use list ('Use generative AI responsibly'), not a rule, so it is coded encouraged even though it has no 'should' word."
+    },
+    {
+     "check": "C1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "value 'no public syllabus found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "absence backed by 1 reviewed pages"
+    },
+    {
+     "check": "N1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "univ_stance='restrict' and univ_tone='cautionary' agree on none found"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "dept_stance='none found' and dept_tone='none found' agree on none found"
+    }
+   ]
+  },
+  {
+   "unitid": "104151",
+   "name": "Arizona State University Campus Immersion",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "178402",
+   "name": "University of Missouri-Kansas City",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "216339",
+   "name": "Temple University",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "243744",
+   "name": "Stanford University",
+   "pass": true,
+   "checks": {
+    "S1": true,
+    "S2": true,
+    "S3": true,
+    "S4": true,
+    "S5": true,
+    "C1": true,
+    "C2": true,
+    "C3": true,
+    "C4": true,
+    "N1": true
+   },
+   "findings": [
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: stanford.edu generative AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: stanford.edu computer science AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: stanford.edu software engineering syllabus AI"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: stanford.edu ChatGPT academic integrity"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "value 'permit with conditions' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote has 22 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote found in data/sources/243744-stanford/2026-11-11-genai-policy-guidance.html"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "communitystandards.stanford.edu is on stanford.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "absence backed by 1 reviewed pages"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "value 'neutral' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote has 31 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote found in data/sources/243744-stanford/2026-11-11-genai-policy-guidance.html"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "communitystandards.stanford.edu is on stanford.edu"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "value 'in passing' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote has 32 words"
+    },
+    {
+     "check": "S1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote found in data/sources/243744-stanford/2026-11-11-genai-policy-guidance.html"
+    },
+    {
+     "check": "S2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "communitystandards.stanford.edu is on stanford.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "value 'required' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote has 13 words"
+    },
+    {
+     "check": "S1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote found in data/sources/243744-stanford/2026-11-11-genai-policy-guidance.html"
+    },
+    {
+     "check": "S2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "communitystandards.stanford.edu is on stanford.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "value 'AI built into the course' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "source_type 'syllabus' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "quote has 19 words"
+    },
+    {
+     "check": "S1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "quote found in data/sources/243744-stanford/2026-11-11-bulletin-cs146s.html"
+    },
+    {
+     "check": "S2",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "bulletin.stanford.edu is on stanford.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "univ_stance='permit with conditions' and univ_tone='neutral' agree on none found"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "dept_stance='none found' and dept_tone='none found' agree on none found"
+    }
+   ]
+  },
+  {
+   "unitid": "227757",
+   "name": "Rice University",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "215062",
+   "name": "University of Pennsylvania",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "136215",
+   "name": "Nova Southeastern University",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "194091",
+   "name": "New York Institute of Technology",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "156620",
+   "name": "Eastern Kentucky University",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "217819",
+   "name": "College of Charleston",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "161235",
+   "name": "University of Maine at Fort Kent",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "237969",
+   "name": "West Virginia Wesleyan College",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "441900",
+   "name": "Nevada State University",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "216807",
+   "name": "Westminster College",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "139144",
+   "name": "Berry College",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "104708",
+   "name": "Glendale Community College",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "131399",
+   "name": "University of the District of Columbia",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "193946",
+   "name": "Niagara County Community College",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "233772",
+   "name": "Tidewater Community College",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "201645",
+   "name": "Case Western Reserve University",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
   }
  ],
- "pass": true
+ "pass": false
 }

@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://celt.iastate.edu/prepare-and-teach/design-your-course/syllabus-statements/",
+ "final_url": "https://celt.iastate.edu/prepare-and-teach/design-your-course/syllabus-statements/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:20:30-05:00",
+ "sha256": "ff04e29172d6815af845500e0ee2a4eb728b3cbd4f5f05ddb397abd4d7883d5e",
+ "bytes": 46036
+}

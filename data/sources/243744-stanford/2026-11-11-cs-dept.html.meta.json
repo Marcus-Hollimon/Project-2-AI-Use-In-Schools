@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.cs.stanford.edu/",
+ "final_url": "https://www.cs.stanford.edu/",
+ "http_status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T15:22:24-05:00",
+ "sha256": "9328c914c2344973e73ceeef41a2d1b812ffaca517c76d096693dad09b834eeb",
+ "bytes": 118807
+}

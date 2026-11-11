@@ -857,6 +857,128 @@
      "note": "CSCI 2221 Agile Software Development and Testing is the nearest equivalent of a software engineering course; CSCI 1275 Business Analysis with Agile Development Frameworks (Spring 2026 syllabus also in the index) is a business analysis course and was not coded."
     }
    }
+  },
+  {
+   "unitid": "153603",
+   "slug": "153603-iowa-state",
+   "name": "Iowa State University",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "restrict",
+     "quote": "Use of Artificial Intelligence (AI) tools like ChatGPT, Grammarly, Google Gemini, and other AI platforms are prohibited in most courses, except where instructors provide explicit permission for use",
+     "url": "https://studentconduct.dso.iastate.edu/know-code-resources/students",
+     "archive": "data/sources/153603-iowa-state/2026-11-11-conduct-student-resources.html",
+     "source_type": "guidance page",
+     "note": "Office of Student Conduct guidance for students. The same office's faculty page says AI use 'is not inherently academic misconduct' and leaves expectations to instructors, but the student page states a default (prohibited unless permitted), so the default is coded."
+    },
+    "univ_tone": {
+     "value": "cautionary",
+     "quote": "AI-generated coursework will be treated like any other form of academic misconduct.",
+     "url": "https://studentconduct.dso.iastate.edu/know-code-resources/students",
+     "archive": "data/sources/153603-iowa-state/2026-11-11-conduct-student-resources.html",
+     "source_type": "guidance page"
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/153603-iowa-state/search-log.md",
+     "reviewed": [
+      "data/sources/153603-iowa-state/2026-11-11-cs-dept.html",
+      "data/sources/153603-iowa-state/2026-11-11-se-program.html"
+     ],
+     "note": "The department site treats AI as a field of study (an AI degree track, an AI minor, the Cy AI Scholar program), not as a rule on student use."
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/153603-iowa-state/search-log.md"
+    },
+    "collaboration": {
+     "value": "not discussed",
+     "reviewed": [
+      "data/sources/153603-iowa-state/2026-11-11-ai-policies.html",
+      "data/sources/153603-iowa-state/2026-11-11-conduct-student-resources.html",
+      "data/sources/153603-iowa-state/2026-11-11-conduct-faculty-resources.html",
+      "data/sources/153603-iowa-state/2026-11-11-celt-ai-in-teaching.html",
+      "data/sources/153603-iowa-state/2026-11-11-cs-dept.html"
+     ]
+    },
+    "disclosure": {
+     "value": "encouraged",
+     "quote": "cite use of generative AI appropriately",
+     "url": "https://ai.iastate.edu/policies-and-compliance",
+     "archive": "data/sources/153603-iowa-state/2026-11-11-ai-policies.html",
+     "source_type": "guidance page",
+     "cue_reason": "'cite' is the disclosure cue; the sentence is advice on the university AI site's responsible-use list ('Use generative AI responsibly'), not a rule, so it is coded encouraged even though it has no 'should' word."
+    },
+    "se_courses": {
+     "value": "no public syllabus found",
+     "search_log": "data/sources/153603-iowa-state/search-log.md",
+     "reviewed": [
+      "data/sources/153603-iowa-state/2026-11-11-se-program.html"
+     ],
+     "note": "Software engineering course pages are in Canvas behind a login; the catalog lists course descriptions only."
+    }
+   }
+  },
+  {
+   "unitid": "243744",
+   "slug": "243744-stanford",
+   "name": "Stanford University",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "permit with conditions",
+     "quote": "students may use generative AI tools to practice and prepare for coursework, to support learning, improve comprehension, and practice skills and concepts",
+     "url": "https://communitystandards.stanford.edu/generative-ai-policy-guidance",
+     "archive": "data/sources/243744-stanford/2026-11-11-genai-policy-guidance.html",
+     "source_type": "policy page",
+     "note": "The default Honor Code policy (adopted October 15, 2026) applies when an instructor sets no AI policy: learning support and surface editing are permitted; creating deliverables with AI is not. Instructors may set their own policy, but a default exists, so the default is coded."
+    },
+    "univ_tone": {
+     "value": "neutral",
+     "quote": "The purpose of this guidance is not to prohibit the use of generative AI, but to provide a framework for its responsible use in support of meaningful human learning and interaction.",
+     "url": "https://communitystandards.stanford.edu/generative-ai-policy-guidance",
+     "archive": "data/sources/243744-stanford/2026-11-11-genai-policy-guidance.html",
+     "source_type": "policy page",
+     "note": "Mixed: it opens by saying Stanford 'supports the exploration of new frontiers and tools, including generative AI', but most of the text is procedural rules (permitted and unpermitted uses, disclosure, data handling)."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/243744-stanford/search-log.md",
+     "reviewed": [
+      "data/sources/243744-stanford/2026-11-11-cs-dept.html"
+     ],
+     "note": "Individual CS course sites state their own AI rules (CS221, CS106EA, CS193V); no department-level statement was found."
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/243744-stanford/search-log.md"
+    },
+    "collaboration": {
+     "value": "in passing",
+     "quote": "if the use of a human tutor is permitted for a given task, then it is likely that the use of generative AI as described in the examples above is similarly permitted",
+     "url": "https://communitystandards.stanford.edu/generative-ai-policy-guidance",
+     "archive": "data/sources/243744-stanford/2026-11-11-genai-policy-guidance.html",
+     "source_type": "policy page",
+     "note": "AI as a tutor appears in the permitted-uses examples (self-quizzing, Socratic dialogue) and this guideline; it is permitted, not recommended as a way to learn, so it is coded in passing."
+    },
+    "disclosure": {
+     "value": "required",
+     "quote": "students must document and disclose any other uses of AI related to coursework.",
+     "url": "https://communitystandards.stanford.edu/generative-ai-policy-guidance",
+     "archive": "data/sources/243744-stanford/2026-11-11-genai-policy-guidance.html",
+     "source_type": "policy page",
+     "note": "Under the default policy, the permitted learning-support uses need no disclosure; every other use must be disclosed."
+    },
+    "se_courses": {
+     "value": "AI built into the course",
+     "quote": "you'll learn not just how to use the latest AI-powered workflows, but also when and why to trust them.",
+     "url": "https://bulletin.stanford.edu/courses/2274401",
+     "archive": "data/sources/243744-stanford/2026-11-11-bulletin-cs146s.html",
+     "source_type": "syllabus",
+     "note": "CS146S The Modern Software Developer (Stanford Bulletin 2026-27; counts toward the CS BS) is the department's course on how software is built and maintained; it is the first such course in catalog order (CS190 Software Design Studio and CS194 Software Project come later). The official course description is the course page coded here; no autumn sections were listed when saved."
+    }
+   }
   }
  ]
 }

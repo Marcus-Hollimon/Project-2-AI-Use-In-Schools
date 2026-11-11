@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://ai.iastate.edu/current-students",
+ "final_url": "https://ai.iastate.edu/current-students",
+ "http_status": 404,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T15:20:16-05:00",
+ "sha256": "a7c1e343e5dfa6348f347ebd5236acc276b7ea702d4461e1dddd440c205771c7",
+ "bytes": 16030
+}
