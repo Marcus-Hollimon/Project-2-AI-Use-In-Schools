@@ -5,7 +5,14 @@ Current phase: 5 More schools (15 to 36; spec `specs/phase-5-more-schools.md`, a
 Last updated: 2026-11-11T16:59:31-05:00 by Claude (session a9056776). ALL 21 new schools coded; full checker
 36 PASS, 0 FAIL; study tests 40/40 recorded (validation/runs/2026-11-11T21-59-21-021Z_study.json). Marcus chose
 to push past the 85% stop line at 16:53 (progress/decisions.md); the 5-hour window was 90% at 16:59 (resets
-7:40 PM EST). /compact prepared. Coding is DONE; the site update is next.
+7:40 PM EST). Coding is DONE.
+Update 2026-11-11T17:18:05-05:00: site update mostly done (commit 0e9db80): Research tab has a "What the data
+shows" list (4 sentences, web/src/data.js findings(), claims research-finding-*); web tests 49/49 recorded
+(22-17-33Z) after a recorded mutation run that failed as it should (22-17-20Z); stale "15" fixed. build.py
+rebuilt data/derived and exits 1 ONLY on C3_compact (C5 now passes). STOPPED at 95% of the 5-hour window.
+LEFT: (a) look at the Research tab in the browser (no .claude/launch.json yet; Vite dev server in web/);
+(b) R1 re-fetch rerun (`study/refetch.py`); (c) pipeline tests recorded; (d) C3_compact decision with Marcus;
+(e) push and deploy check; (f) spec checkboxes; (g) Marcus's checklist and every judgment call below.
 
 ## FIRST, right after the /compact
 1. Take a usage reading marked "after /compact" (full 7-column row in `progress/usage.md`, phase 5).
