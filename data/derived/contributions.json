@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T20:55:54.805649Z",
+ "generatedAt": "2026-11-11T21:07:01.978378Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -1660,12 +1660,45 @@
    "phase": "5"
   },
   {
-   "time": "2026-11-11T20:55:43.860000Z",
+   "time": "2026-11-11T20:56:21Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 5: code Eastern Kentucky and Nevada State (9 of 21 new schools)",
+   "commit": "e34da53",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-11T20:56:35.531000Z",
    "actor": "Claude",
    "kind": "reply",
    "turn": 36,
-   "text": "Nevada State passes. Next: its cost row, the full checker and the build, then the compact.",
-   "toolCalls": 57,
+   "text": "Eastern Kentucky and Nevada State are coded and pass every automated check, so 9 of the 21 new schools are done.\n\n**What the two new schools say:**\n- **Eastern Kentucky:**\n  - Every syllabus must use a required statement, and it says unapproved AI use breaks the integrity rules. That makes \"not allowed unless approved\" the default, so the university is coded as restrict.\n  - The university's integrity regulation counts using AI content without a disclosure statement as plagiarism, so disclosure is coded as required.\n  - The CS department has no AI rule of its own, and the software engineering courses have no public syllabus.\n- **Nevada State:**\n  - The student code of conduct leaves AI rules to each instructor and sets no default, so the university is coded as \"instructor decides\".\n  - The university's AI page leans positive and walks through ways to use AI as a tutor.\n\n**Judgment calls for your list:**\n- **Nevada State has no CS department.** It's in the sample because of its Data Science degree, which belongs to the School of Liberal Arts, Sciences, and Business. I coded that school's page as the department. The page sends students to each syllabus, so it comes out as \"instructor decides\".\n- **Nevada State has no software engineering course,** so that value is \"no public syllabus found\".\n- **Eastern Kentucky's restrict reading:** instructors can still choose among prohibited, conditional, and minimally restricted. I coded restrict because the required statement treats any unapproved use as a violation. That follows the codebook rule we already use for \"unauthorized\".\n- **A date oddity:** Eastern Kentucky's page labels its current statements \"Fall 2027\", which looks like a typo on their side. The value's note records it.\n\n**One slip of mine:** I saved Eastern Kentucky's pages with the date in the file name twice, because the save tool adds the date itself. I deleted those copies and saved the pages again before any value used them. STATE.md now carries a warning about it.\n\n**Where things stand:**\n- The full checker shows 24 schools passing and 12 marked \"not coded yet\".\n- The data build fails only the expected check (C5), which clears once Case Western is coded.\n- Committed locally as e34da53, not pushed.\n- These two smaller schools were cheaper: about 2 points of the 5-hour limit each, which is now at 46%.\n\nType this:\n\n```\n/compact Phase 5 coding: 9 of 21 new schools done (Iowa State, Stanford, NYIT, West Virginia Wesleyan, Glendale CC, Arizona State, Rice, Eastern Kentucky, Nevada State), committed locally as e34da53, not pushed. Next: take an \"after /compact\" usage reading, then code school 10 (UDC 131399) onward in the order in progress/STATE.md, using the scratchpad helpers it names. Read progress/STATE.md first; its \"FIRST\" section lists the expected failures and the judgment calls to report. Deadline 2 PM EST Thu Nov 12.\n```",
+   "toolCalls": 63,
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-11T20:58:40.966000Z",
+   "actor": "Marcus",
+   "kind": "command",
+   "text": "/compact Phase 5 coding: 9 of 21 new schools done (Iowa State, Stanford, NYIT, West Virginia Wesleyan, Glendale CC, Arizona State, Rice, Eastern Kentucky, Nevada State), committed locally as e34da53, not pushed. Next: take an \"after /compact\" usage reading, then code school 10 (UDC 131399) onward in the order in progress/STATE.md, using the scratchpad helpers it names. Read progress/STATE.md first; its \"FIRST\" section lists the expected failures and the judgment calls to report. Deadline 2 PM EST Thu Nov 12. Also keep in mind these judgement calls you left for me. I will circle back them each eventually after we have finished with all the schools.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-11T20:59:49.110000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 37,
+   "text": "continue",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-11T21:06:53.401000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 37,
+   "text": "UMKC passes too. Next I'm recording its cost row, running the full checker and the build, then committing and preparing the compact.",
+   "toolCalls": 56,
    "phase": "5"
   }
  ]

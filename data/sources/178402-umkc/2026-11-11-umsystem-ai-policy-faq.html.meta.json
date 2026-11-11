@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://at.umsystem.edu/resources/artificial-intelligence-ai/generative-ai-faculty/how-do-i-set-and-communicate-ai-policy",
+ "final_url": "https://at.umsystem.edu/resources/artificial-intelligence-ai/generative-ai-faculty/how-do-i-set-and-communicate-ai-policy",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:04:55-05:00",
+ "sha256": "b8930be8d134151b4184f8b3b02893792d1a3784eba89a29a1ef2e759a6d7847",
+ "bytes": 42344
+}

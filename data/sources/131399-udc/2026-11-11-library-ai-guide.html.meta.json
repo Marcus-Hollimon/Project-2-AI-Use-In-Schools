@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://udc.libguides.com/ai/home",
+ "final_url": "https://udc.libguides.com/ai/home",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:01:39-05:00",
+ "sha256": "936518cd5262afaf1dc8d21e32b80e82024b5d543f42ca23c5b85f952f90b413",
+ "bytes": 53797
+}

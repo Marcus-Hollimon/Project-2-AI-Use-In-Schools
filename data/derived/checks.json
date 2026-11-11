@@ -439,6 +439,28 @@
    "responseTime": "2026-11-11T20:49:47.371Z",
    "nearestDifference": 0,
    "pass": true
+  },
+  {
+   "reading": "2026-11-11T20:56:15Z",
+   "app": 167067,
+   "between": [
+    167056,
+    167785
+   ],
+   "responseTime": "2026-11-11T20:55:43.860Z",
+   "nearestDifference": 11,
+   "pass": true
+  },
+  {
+   "reading": "2026-11-11T21:00:35Z",
+   "app": 98504,
+   "between": [
+    85435,
+    98504
+   ],
+   "responseTime": "2026-11-11T20:59:58.083Z",
+   "nearestDifference": 0,
+   "pass": true
   }
  ],
  "C2_completeness": [
@@ -457,8 +479,8 @@
   {
    "session": "a9056776-4951-4636-a9ad-acb1dbccb955",
    "subagent": false,
-   "apiRequests": 827,
-   "uniqueResponses": 825,
+   "apiRequests": 869,
+   "uniqueResponses": 867,
    "unansweredRequests": [
     "2026-11-11T16:53:13.167Z",
     "2026-11-11T17:22:15.570Z"
@@ -557,6 +579,12 @@
    "preTokens": 195250,
    "computed": 195250,
    "pass": true
+  },
+  {
+   "time": "2026-11-11T20:59:34.032Z",
+   "preTokens": 174696,
+   "computed": 173975,
+   "pass": false
   }
  ],
  "C5_claims": [
@@ -1114,19 +1142,19 @@
   "rule": "shell commands Claude ran whose program is uv, python, pytest, npx, npm or vitest and that name pytest, vitest, npm test or a recorder; recorded = through record_tests.py or test:record"
  },
  "C4_inflation": {
-  "usageRows": 2501,
-  "uniqueResponses": 983,
+  "usageRows": 2598,
+  "uniqueResponses": 1025,
   "naive": {
-   "input": 5098,
-   "cacheWrite": 8201199,
-   "cacheRead": 371873599,
-   "output": 3107928
+   "input": 5292,
+   "cacheWrite": 8557639,
+   "cacheRead": 384640333,
+   "output": 3183053
   },
   "deduplicated": {
-   "input": 2002,
-   "cacheWrite": 2579982,
-   "cacheRead": 146676183,
-   "output": 918886
+   "input": 2086,
+   "cacheWrite": 2703122,
+   "cacheRead": 152352275,
+   "output": 946726
   }
  },
  "privacy": [

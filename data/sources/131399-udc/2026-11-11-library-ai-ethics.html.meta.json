@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://udc.libguides.com/ai/ethics",
+ "final_url": "https://udc.libguides.com/ai/ethics",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:02:57-05:00",
+ "sha256": "c48aad382c57a750372a8b58f886c9b9763f32859275cc980eb34925546c9f8b",
+ "bytes": 41872
+}

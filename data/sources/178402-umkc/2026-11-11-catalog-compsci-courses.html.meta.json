@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://catalog.umkc.edu/course-offerings/undergraduate/comp-sci/",
+ "final_url": "https://catalog.umkc.edu/course-offerings/undergraduate/comp-sci/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:06:02-05:00",
+ "sha256": "4a34c3d81be1b1e3834a83d14c435be04722d01c5d0831bbbb1f15012e3d5f47",
+ "bytes": 220343
+}

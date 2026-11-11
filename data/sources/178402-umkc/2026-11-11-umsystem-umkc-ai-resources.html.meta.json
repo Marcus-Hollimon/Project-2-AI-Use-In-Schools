@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://at.umsystem.edu/resources/artificial-intelligence-ai/campus-specific-ai-resources/umkc",
+ "final_url": "https://at.umsystem.edu/resources/artificial-intelligence-ai/campus-specific-ai-resources/umkc",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:04:56-05:00",
+ "sha256": "03fb374086dd68c75af6b864ec4cb084ddcb88875b3fc5c119bc03126fbd8bd8",
+ "bytes": 32681
+}

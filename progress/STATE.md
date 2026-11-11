@@ -2,13 +2,13 @@
 
 Current phase: 5 More schools (15 to 36; spec `specs/phase-5-more-schools.md`, approved by Marcus 15:15:40 with one extra Ohio school, so 21 new, 36 in all). Evaluation moves to Phase 6. Phase 4 Validation is done.
 
-Last updated: 2026-11-11T15:56:15-05:00 by Claude (session a9056776), 9 of 21 schools coded, /compact prepared.
+Last updated: 2026-11-11T16:08:05-05:00 by Claude (session a9056776), 11 of 21 schools coded, /compact prepared.
 
 ## FIRST, right after the /compact
 1. Take a usage reading marked "after /compact" (full 7-column row in `progress/usage.md`, phase 5).
-2. Continue coding with school 10, UDC 131399 (order below). Done and passing: Iowa State,
-   Stanford, NYIT, West Virginia Wesleyan, Glendale CC, Arizona State, Rice, Eastern Kentucky, Nevada State
-   (rows in `progress/pilot-cost.md`): about 2 to 4 five-hour points and 30k to 50k context per school.
+2. Continue coding with school 12, Penn 215062 (order below). Done and passing: Iowa State,
+   Stanford, NYIT, West Virginia Wesleyan, Glendale CC, Arizona State, Rice, Eastern Kentucky, Nevada State,
+   UDC, UMKC (rows in `progress/pilot-cost.md`): about 2 to 4 five-hour points and 30k to 50k context per school.
    Only 2 schools fit between compacts at that rate (context starts near 100k after a compact). Cost rows: scratchpad `costrow.py "<School unitid>" <start> <5h> <weekly>
    <context> <searches> "<pages>"` (takes the time from `date -Iseconds` itself).
 3. Prepare the next /compact after about 3 to 4 more schools (context near 190k).
@@ -28,7 +28,24 @@ Last updated: 2026-11-11T15:56:15-05:00 by Claude (session a9056776), 9 of 21 sc
    the computing degree is Data Science in the School of Liberal Arts, Sciences, & Business, so that school's
    course policies page is coded as the department ("instructor decides", neutral); se_courses "no public
    syllabus found" because the program has no software engineering course; collaboration "explicit" from the
-   AI page's table of uses (cue_reason).
+   AI page's table of uses (cue_reason). UDC: no AI policy at all; every value but tone comes from the
+   library's AI Help Guide on udc.libguides.com (domain_reason): stance "instructor decides" ("Always check
+   with your instructor..."), collaboration "explicit" (list of study uses, cue_reason), disclosure
+   **required** (unacknowledged AI content "is plagiarism", same reading as Defiance and EKU, cue_reason);
+   tone positive from the president's AI Initiative page; se_courses "AI built into the course" from the
+   official CSCI 341 course description. UMKC: university **restrict** from the UM System rule on
+   at.umsystem.edu (instructor silent means forbidden; domain_reason); disclosure "encouraged" from the
+   Conservatory's sample statement ("must properly cite", but it is example language); an October 2026
+   university news story on an NSF project putting LLMs into core CS courses was NOT used for the
+   department because it is university news, not department text.
+   **Inconsistency to raise with Marcus:** Stanford and UDC code an official catalog course description
+   that mentions AI as the course page ("AI built into the course"), while EKU, UMKC and an earlier school
+   (values.json "CSC 310") treat a description with no AI text as "no public syllabus found", not "not
+   addressed". The two readings do not match; one rule should be chosen and applied to all.
+- **Build C3_compact now FAILS** for Marcus's 15:59 EST /compact (20:59:34Z): preTokens 174,696 vs last
+  response 173,975 (721 more). The four compacts before it have the same records after the last response
+  (stop hook summary, queue enqueue/dequeue) and match exactly; no cause found in the transcript. Not
+  loosened. Decide with Marcus before push (build must exit 0).
 - `save_page.py` adds the date prefix itself: name pages `ai-guidance`, not `2026-11-11-ai-guidance` (15:52 slip,
   copies deleted and saved again). grab.py and showtext.py need `python -I -X utf8` (`-I` ignores PYTHONIOENCODING).
 - Rice: news.rice.edu and tss.rice.edu answer curl with HTTP 406; esther.rice.edu syllabi need a login.

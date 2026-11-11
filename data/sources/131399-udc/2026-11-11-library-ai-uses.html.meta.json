@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://udc.libguides.com/ai/uses-limitations",
+ "final_url": "https://udc.libguides.com/ai/uses-limitations",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:02:57-05:00",
+ "sha256": "6e8089db6e3c2c84aa60836d1cb70201a526a5b65e39c715672e8a9dbf2705c4",
+ "bytes": 38351
+}

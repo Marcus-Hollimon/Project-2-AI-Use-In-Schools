@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.umkc.edu/news/posts/2026/october/heres-how-umkc-is-embracing-artificial-intelligence.html",
+ "final_url": "https://www.umkc.edu/news/posts/2026/october/heres-how-umkc-is-embracing-artificial-intelligence.html",
+ "http_status": 200,
+ "content_type": "text/html",
+ "fetched_at": "2026-11-11T16:06:02-05:00",
+ "sha256": "9b63a261c1d3fd65e68565fbf8a59ad746bc7d3d245a3b6540e4a7ebcf01f0c6",
+ "bytes": 46165
+}

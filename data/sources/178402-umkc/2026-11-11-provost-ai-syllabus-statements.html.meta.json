@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.umkc.edu/provost/academics/ai-tools-sample-syllabus-policy-statements.html",
+ "final_url": "https://www.umkc.edu/provost/academics/ai-tools-sample-syllabus-policy-statements.php",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:04:54-05:00",
+ "sha256": "2bb21e811580c5d22b2a48c65b6913f4e7ada9fad7baeda74e1b182030b8217e",
+ "bytes": 78895
+}
