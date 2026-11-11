@@ -71,14 +71,22 @@
    "responseTime": "2026-11-11T14:46:52.685Z",
    "difference": 648,
    "pass": true
+  },
+  {
+   "reading": "2026-11-11T14:55:00Z",
+   "app": 224386,
+   "transcript": null,
+   "responseTime": null,
+   "difference": null,
+   "pass": false
   }
  ],
  "C2_completeness": [
   {
    "session": "0cf9c9ad-b66c-4406-998d-e6e34b8c2e47",
    "subagent": false,
-   "apiRequests": 124,
-   "uniqueResponses": 123,
+   "apiRequests": 135,
+   "uniqueResponses": 134,
    "unansweredRequests": [
     "2026-11-08T05:13:13.165Z"
    ],
@@ -96,19 +104,19 @@
   }
  ],
  "C4_inflation": {
-  "usageRows": 369,
-  "uniqueResponses": 123,
+  "usageRows": 397,
+  "uniqueResponses": 134,
   "naive": {
-   "input": 758,
-   "cacheWrite": 2702270,
-   "cacheRead": 64099994,
-   "output": 1327784
+   "input": 818,
+   "cacheWrite": 2739994,
+   "cacheRead": 70175214,
+   "output": 1352574
   },
   "deduplicated": {
-   "input": 252,
-   "cacheWrite": 638493,
-   "cacheRead": 21421648,
-   "output": 268869
+   "input": 276,
+   "cacheWrite": 653471,
+   "cacheRead": 23810437,
+   "output": 278002
   }
  },
  "privacy": [
@@ -209,5 +217,5 @@
    "pass": true
   }
  ],
- "allPass": true
+ "allPass": false
 }

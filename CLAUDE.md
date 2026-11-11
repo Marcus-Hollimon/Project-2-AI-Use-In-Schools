@@ -50,3 +50,5 @@ the current phase spec in `specs/`, and write a phase's spec before starting tha
 - At each good boundary (phase end, or a big chunk done): update `STATE.md`, commit, record a usage
   reading marked "just before /compact", then give Marcus the exact `/compact <focus text>` line.
 - First thing after a compact: take a usage reading marked "after /compact".
+- Frequency (Marcus, 2026-11-11): prepare a `/compact` at every phase end and after each big chunk
+  of work (roughly every 100k to 150k tokens of context growth), not only at phase ends.

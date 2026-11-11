@@ -16,6 +16,7 @@ percentages as the app reports them, so a change of "1 point" means anywhere fro
 | 2026-11-08T01:21-05:00 | 1 | after turning off Claude Docs connector | 37 | 54 | 146,790 | none (MCP tools 20,906; MCP instructions 1,700) |
 | 2026-11-08T01:30-05:00 | 1 | Claude checks done, waiting for Marcus checklist | 42 | 54 | 198,396 | none |
 | 2026-11-11T09:46:57-05:00 | 1 | after a 3-day pause (weekly limit reset Nov 10) | 4 | 8 | 207,766 | none (same session resumed) |
+| 2026-11-11T09:55-05:00 | 1 | just before /clear (Phase 1 end) | 5 | 8 | 224,386 | none (next row is after /clear) |
 
 ## Cost per phase
 | Phase | 5-hour points | Weekly points | Context growth (tokens) |
