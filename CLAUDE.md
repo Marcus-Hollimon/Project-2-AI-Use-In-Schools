@@ -23,6 +23,8 @@ the current phase spec in `specs/`, and write a phase's spec before starting tha
 ## Rules
 - Update `progress/log.md` at every milestone and `progress/STATE.md` before any context reset.
   Timestamps: ISO 8601 with offset, Eastern time (`date -Iseconds` in Git Bash).
+  Never type a time from memory: take it from `date -Iseconds` in the same command that writes it
+  (Claude typed guessed times three times on 2026-11-11; one broke check C1).
 - Every phase start and end: record a reading in `progress/usage.md` (5-hour %, weekly %, context
   tokens) and note how context was reset (new session, `/clear`, `/compact`).
 - Run web tests with `npm run test:record` in `web/`, which saves the run to `validation/runs/`.
