@@ -351,6 +351,17 @@
    "responseTime": "2026-11-11T19:53:38.520Z",
    "nearestDifference": 39,
    "pass": true
+  },
+  {
+   "reading": "2026-11-11T20:02:53Z",
+   "app": 157588,
+   "between": [
+    157541,
+    158584
+   ],
+   "responseTime": "2026-11-11T20:02:51.943Z",
+   "nearestDifference": 47,
+   "pass": true
   }
  ],
  "C2_completeness": [
@@ -369,8 +380,8 @@
   {
    "session": "a9056776-4951-4636-a9ad-acb1dbccb955",
    "subagent": false,
-   "apiRequests": 589,
-   "uniqueResponses": 587,
+   "apiRequests": 597,
+   "uniqueResponses": 595,
    "unansweredRequests": [
     "2026-11-11T16:53:13.167Z",
     "2026-11-11T17:22:15.570Z"
@@ -994,19 +1005,19 @@
   "rule": "shell commands Claude ran whose program is uv, python, pytest, npx, npm or vitest and that name pytest, vitest, npm test or a recorder; recorded = through record_tests.py or test:record"
  },
  "C4_inflation": {
-  "usageRows": 1942,
-  "uniqueResponses": 745,
+  "usageRows": 1957,
+  "uniqueResponses": 753,
   "naive": {
-   "input": 3972,
-   "cacheWrite": 6669289,
-   "cacheRead": 291919884,
-   "output": 2693753
+   "input": 4002,
+   "cacheWrite": 6676918,
+   "cacheRead": 294258906,
+   "output": 2702940
   },
   "deduplicated": {
-   "input": 1522,
-   "cacheWrite": 2024229,
-   "cacheRead": 112500537,
-   "output": 754931
+   "input": 1538,
+   "cacheWrite": 2028318,
+   "cacheRead": 113743638,
+   "output": 759812
   }
  },
  "privacy": [

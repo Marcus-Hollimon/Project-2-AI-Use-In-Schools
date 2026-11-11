@@ -1,8 +1,8 @@
 # State: read this first
 
-Current phase: 4 Validation (built; Marcus's checklist pending; spec: specs/phase-4-validation.md). Phase 3 Interfaces is done.
+Current phase: 5 Evaluation (Marcus's phase: his evaluation, reflection and presentation; no spec yet). Phase 4 Validation is done.
 
-Last updated: 2026-11-11T14:50:44-05:00 by Claude (session a9056776), Phase 4 built; live check and Marcus's checklist next.
+Last updated: 2026-11-11T15:03:10-05:00 by Claude (session a9056776), Phase 4 closed; /compact prepared.
 
 ## Phase 3 done: Marcus's checklist ticked 2026-11-11T12:22:58-05:00 from his screenshots
 
@@ -86,20 +86,25 @@ Last updated: 2026-11-11T14:50:44-05:00 by Claude (session a9056776), Phase 4 bu
   rule and the per-turn hook; and no plan mode. "Let's just try and get this done properly."
 
 ## FIRST, right after the /compact
-Phase 4 build is done (2026-11-11T14:50:44-05:00). Recorded: web 48/48 (`validation/runs/2026-11-11T19-49-22-555Z_web.json`),
-pipeline 17/17 (`2026-11-11T19-47-59-829Z_pipeline.json`); mutations `2026-11-11T17-42-18-324Z_web.json`
-and `2026-11-11T17-42-41-129Z_web.json`. build.py: C1, C2, C3, C5, C6, privacy all PASS. Spec acceptance
-boxes all ticked (live site checked after 5ae32ee); Review results written (22 claims, none removed).
-New in Phase 4: `validation/claims.json` (register), `validation/caught.json` (errors caught outside
-test runs), `web/src/claims.test.jsx`, pipeline checks C5 (claims) and C6 (mutations), the test-command
-counter, and the C3 rule for a /compact after a stopped turn.
-1. If a compact happened, take a usage reading marked "after /compact" FIRST (the 12:45 one was missed
-   and the web tests caught it).
-2. Live site checked in the browser pane (done).
-3. Hand Marcus the 4-step checklist in the spec. Phase 4 ends when he confirms it; then the phase-end
-   usage reading and a /compact.
-4. Never `git checkout` a file holding uncommitted work (it wiped the Token page marks once); undo a
-   mutation by copying a saved file back.
+Phase 4 is done: Marcus confirmed all four checklist steps at 2026-11-11T15:03:10-05:00. Phase-end reading at 2026-11-11T15:02:53-05:00
+(5-hour 8%, weekly 22%, context 157,588), marked "just before /compact".
+1. Take a usage reading marked "after /compact" (full 7-column row in the main table of
+   `progress/usage.md`, phase 5) and run build.py, checking its exit code (a crash once went
+   unnoticed behind a pipe to tail). Every row in `progress/log.md` needs 5 columns, evidence last.
+2. Phase 5 Evaluation belongs to Marcus (`specs/00-project.md`: "Marcus's evaluation, reflection,
+   presentation"; exit check "Marcus"). Ask him what he wants from Claude for it before doing
+   anything; per CLAUDE.md, a phase spec is written before the phase starts.
+3. Deadline 2 PM EST Thu Nov 12 2026. Never `git checkout` a file holding uncommitted work.
+
+## Phase 4 done (12:27 to 15:03 Nov 11; details in `specs/phase-4-validation.md`)
+- 22 claims in `validation/claims.json`, each backed by a test, file or dated outside source;
+  `web/src/claims.test.jsx` fails on any unregistered sentence. Pipeline checks C5 (claims' tests
+  passed in the newest run) and C6 (each mutation followed by a passing run); counter of test
+  commands run without the recorder; C3 rule for a /compact after a stopped turn.
+- `validation/caught.json`: 15 errors caught outside test runs, shown on the Validation tab.
+- Recorded: web 48/48 (`validation/runs/2026-11-11T19-54-19-977Z_web.json`), pipeline 17/17
+  (`2026-11-11T19-47-59-829Z_pipeline.json`); mutations `2026-11-11T17-42-18-324Z_web.json` and
+  `2026-11-11T17-42-41-129Z_web.json`. Twelve findings written up in the spec.
 
 ## Pilot result (details and costs in `progress/pilot-cost.md`)
 - Minnesota 174066, Johns Hopkins 162928, Valparaiso 152600, Coppin State 162283, Snow 230597:

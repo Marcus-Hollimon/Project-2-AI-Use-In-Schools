@@ -167,12 +167,14 @@ recorded run that proves the tests pass.
 
 ## Marcus's checklist (no code needed)
 Open the live site: https://marcus-hollimon.github.io/Project-2-AI-Use-In-Schools/
-1. [ ] **Validation, Claims and their evidence.** Pick any three claims and click their evidence:
+1. [x] **Validation, Claims and their evidence.** Pick any three claims and click their evidence:
    each opens a test result, a repository file, or an outside page that says what the claim says.
-2. [ ] **Validation, Errors caught outside test runs.** The list includes the MIT quote you could
+2. [x] **Validation, Errors caught outside test runs.** The list includes the MIT quote you could
    not find with Ctrl+F, credited to you.
-3. [ ] **Validation, run list.** The opening sentence says which runs are not in the list.
-4. [ ] **Research findings.** The "Descriptive only" note says two Ohio schools were chosen by you.
+3. [x] **Validation, run list.** The opening sentence says which runs are not in the list.
+4. [x] **Research findings.** The "Descriptive only" note says two Ohio schools were chosen by you.
+
+Marcus confirmed in chat that all four checks pass (2026-11-11T15:03:10-05:00). Phase 4 is done.
 
 ## Review results
 Claude went through the register (`validation/claims.json`, 22 claims) on 2026-11-11 after the

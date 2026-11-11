@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T19:54:24.127871Z",
+ "generatedAt": "2026-11-11T20:03:11.182666Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -1365,13 +1365,64 @@
    "phase": "4"
   },
   {
-   "time": "2026-11-11T19:54:15.684000Z",
+   "time": "2026-11-11T19:54:24Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 4: log row given its evidence column (build.py stopped on it); data rebuilt",
+   "commit": "0bf408d",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "4"
+  },
+  {
+   "time": "2026-11-11T19:55:22.891000Z",
    "actor": "Claude",
    "kind": "reply",
    "turn": 27,
-   "text": "Build exits 0 with all checks passing. The derived data changed (new reading, new milestone), so I'll record a web run against it before pushing. This time each step checks its exit code.",
-   "toolCalls": 64,
+   "text": "Phase 4 is built and live. Every sentence on the site that states a fact is now listed with its evidence: a test, a file in the repository, or an outside web page with the date it was checked. A test fails if anyone adds a sentence without evidence. The Validation tab shows all of this.\n\n**Results on the live site (checked in the browser pane after the last push, 0bf408d):**\n- Claims table: 22 claims. At the last build, every test the claims rely on passed in the newest recorded run of its test group (59 of 59).\n- Planted bugs: each of the 8 bugs I planted on purpose was caught, then followed by a passing run once removed (8 of 8).\n- A new list of the 15 errors caught outside test runs. It includes your Ctrl+F report on the MIT quote, credited to you.\n- The run list now says plainly what it leaves out: the test runs GitHub makes before every deploy, and 17 test commands I ran without saving the result.\n- Recorded test runs: web 48 of 48, pipeline 17 of 17. All six pipeline checks pass, and the last deploy passed.\n\n**Things you should know, including my mistakes:**\n1. **Your 12:45 /compact had no usage reading just before it**, because the 5-hour window had run out. I also forgot the \"after /compact\" reading when I resumed, until two tests failed on it. I took that reading late (14:47). The Token usage page now names that /compact as the one exception, worked out from the readings file rather than written by hand.\n2. **That /compact also broke one pipeline check.** It came right after the command you stopped. The stopped command's leftover messages sat in the context unanswered, so the token count was 508 higher than the check expects, and an exact match failed. I narrowed the rule to allow a higher count only when unanswered messages are present, and added a test for it. Every other /compact must still match exactly.\n3. **Earlier, I wiped my own unsaved edits** to the Token usage page by undoing a planted bug the wrong way. I restored them from a backup I had made beforehand.\n4. **One of my test designs could never pass.** A test can't see the run it belongs to, so it always saw the newest planted bug as unfixed. The failed run is kept with a note explaining why, and the check now runs after the test runs are saved.\n5. **I put two wrong numbers into the docs.** I wrote \"23 claims\" in the spec, STATE and log; the real count is 22, and I copied the wrong number from my notes. I also wrote \"14\" for the errors list, which has 15. Both are fixed.\n6. **One push happened when it shouldn't have.** A log row I wrote was missing a column, so the data build crashed, and my command committed and pushed anyway. That push changed only the usage file, not the site. The row is fixed, the data is rebuilt, and a fresh test run is recorded.\n\nThe spec (`specs/phase-4-validation.md`) has all 12 findings, every acceptance box ticked with its test run, and a verdict for each claim. None were removed; 7 were reworded. Context is at 150k tokens and the 5-hour window at 7%, so no /compact is needed until Phase 4 ends with your checklist.",
+   "toolCalls": 66,
    "phase": "4"
+  },
+  {
+   "time": "2026-11-11T19:55:55.897000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 28,
+   "text": "Show me the checklist",
+   "phase": "4"
+  },
+  {
+   "time": "2026-11-11T19:56:01.374000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 28,
+   "text": "Open the live site: https://marcus-hollimon.github.io/Project-2-AI-Use-In-Schools/\n\nThen go through four checks. You don't need any code.\n\n1. **Validation tab, \"Claims and their evidence.\"** Pick any three claims in the table and click their evidence. Each link should open one of these:\n   - a test result,\n   - a file in the repository,\n   - an outside web page that says what the claim says.\n\n2. **Validation tab, \"Errors caught outside test runs.\"** The list should include the MIT quote you couldn't find with Ctrl+F (Nov 11, 11:54 AM), credited to you.\n\n3. **Validation tab, \"Every recorded test run.\"** The first sentence should say which runs are not in the list: the ones GitHub makes before each deploy, and the test commands I ran without the recorder.\n\n4. **Research findings tab.** The \"Descriptive only\" note should say that 2 of the 5 Ohio schools were chosen by you and 3 were picked at random.\n\nWhen you're done, tell me which checks passed. A screenshot of anything that looks wrong is enough. Once you confirm, I'll close Phase 4: I'll tick your boxes in the spec, take the phase-end usage reading and hand you the /compact line.",
+   "toolCalls": 0,
+   "phase": "4"
+  },
+  {
+   "time": "2026-11-11T20:02:38.232000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 29,
+   "text": "All four checks pass close phase 4.",
+   "phase": "4"
+  },
+  {
+   "time": "2026-11-11T20:02:51.945000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 29,
+   "text": "Phase 5 (Evaluation) belongs to you: your evaluation, reflection and presentation. Now the phase-end reading:",
+   "toolCalls": 6,
+   "phase": "4"
+  },
+  {
+   "time": "2026-11-11T20:03:10Z",
+   "actor": "Marcus",
+   "kind": "milestone",
+   "phase": "4",
+   "text": "Phase 4 done: Marcus confirmed all four checklist steps pass (claims evidence, errors caught outside test runs with his Ctrl+F report, run list scope, Ohio note).",
+   "evidence": "specs/phase-4-validation.md"
   }
  ]
 }
