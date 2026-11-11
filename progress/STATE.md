@@ -1,39 +1,65 @@
 # State: read this first
 
-Current phase: 2 Study (spec written, frame built, 15 schools drawn; WAITING for Marcus's approval)
+Current phase: 2 Study (spec approved; checks built and tested; pilot of 5 schools is next)
 
-Last updated: 2026-11-11T10:08:06-05:00 by Claude (session a9056776).
+Last updated: 2026-11-11T10:22:14-05:00 by Claude (session a9056776), just before a `/compact`.
 
 ## Deadline and pace
 - Everything is due **2 PM EST, Thu Nov 12 2026** (Marcus, 2026-11-11).
-- Budget is not the constraint: weekly 8% at 09:46 Nov 11 (resets Tue Nov 17 01:00 EST).
+- Weekly limit 10% (resets Tue Nov 17 01:00 EST). **The 5-hour window is the real constraint**:
+  it went 10% to 22% from 10:00 to 10:21 Nov 11 while context grew 78k to 198k. It resets 14:40 EST.
 - Marcus wants a `/compact` prepared at every phase end and after each big chunk (CLAUDE.md).
+- Marcus asked (10:15 Nov 11): **no Coaching sections** any more, despite the global CLAUDE.md
+  rule and the per-turn hook; and no plan mode. "Let's just try and get this done properly."
+
+## FIRST, right after the /compact
+1. Take a usage reading marked "after /compact" in `progress/usage.md` (tool: get_usage), with the
+   time from `date -Iseconds`. Run `uv run --project pipeline python pipeline/build.py`; C1 to C3 must pass.
+2. Start the pilot (spec task 4).
 
 ## Where things stand
-- Phase 0 Foundation: done (Marcus 5/5, Nov 8 00:51).
-- Phase 1 Instrumentation: done. Claude's 5 checks and Marcus's 4 passed (Nov 11 09:50; one
-  item replaced, see the spec). Pipeline in `pipeline/`, output in `data/derived/`. Q&A: Marcus
-  chose "publish all" and found the preview fine.
-- Live site is still a skeleton: https://marcus-hollimon.github.io/Project-2-AI-Use-In-Schools/
-- Tests: web 17/17, pipeline 12/12, all recorded in `validation/runs/` (4 mutation runs total).
-- Work paused Nov 8 01:30 to Nov 11 09:46 (Marcus away). Not a context reset: same session.
+- Phases 0 and 1: done. Live site still a skeleton:
+  https://marcus-hollimon.github.io/Project-2-AI-Use-In-Schools/
+- Phase 2 spec `specs/phase-2-study.md`: approved 10:15 Nov 11. **No hand-coding by Marcus**;
+  quality is shown by the 10 automated checks in the spec (S1 to S5, C1 to C4, N1, plus R1 and R2).
+- Done in Phase 2: IPEDS 2024 frame (`data/frame/`, 1,509 schools, 5 strata, 2025 Carnegie), 15
+  schools drawn (`data/frame/sample.csv`, seed 20261111). The pre-clear plan (CIP 11.07 only)
+  would have excluded Ohio State and Cincinnati; fixed with 11.0701 or 11.0101.
+- Codebook v1 frozen: `study/codebook.json` (allowed values, cue words, required searches) and
+  `study/codebook.md` (rules). Variables: univ_stance, univ_tone, dept_stance, dept_tone,
+  collaboration, disclosure, se_courses.
+- Tools: `study/save_page.py` (curl archive plus `.meta.json` with status, final URL, SHA-256;
+  `--rendered` for JavaScript pages, needs a raw curl copy of the same URL too),
+  `study/check_study.py` (writes `data/coded/checks.json`). Commands in the project CLAUDE.md.
+- Tests: study 31/31 (mutation run with S2 disabled failed exactly the S2 test; restored), pipeline
+  12/12, web 17/17; all recorded. CI runs all three suites before deploy (pushed 5ccc209).
 
-## After the /clear (done 2026-11-11 10:02, session a9056776)
-- Reading "after /clear" taken (78,618 tokens; C1 passes, 15 apart).
-- The `/clear` started a new session and file; neither file records the clear (spec 1, item 8).
-- `a9056776` added to `pipeline/sessions.json`; build all PASS; tests 12/12 recorded.
-- Still open: `ddc7d76a-46ca-4bba-a89a-f901ccc7b9a7.jsonl` (same folder, last written Nov 8 18:00,
-  while Marcus was away). Not opened (privacy). Asked Marcus whether it belongs to this project.
-- Phase 2 spec written: `specs/phase-2-study.md`. Frame built and 15 schools drawn
-  (`data/frame/`, seed 20261111 committed in `405f8dd` before the run).
+## Pilot: how to code one school (spec task 4)
+Schools, one per stratum: Minnesota 174066 (umn.edu), Johns Hopkins 162928 (jhu.edu), Valparaiso
+152600 (valpo.edu), Coppin State 162283 (coppin.edu), Snow 230597 (snow.edu).
+For each school, slug `<unitid>-<short name>` (e.g. `174066-minnesota`):
+1. Run the 4 required searches from `codebook.json` with WebSearch, `{domain}` = the domain above.
+   Write `data/sources/<slug>/search-log.md`: one `## Search: <exact query>` heading per search, then
+   one `- <url> (what it was; opened or not; saved as ...)` line per relevant result, or
+   `- no relevant results`. The checker needs every heading and at least one line under each.
+2. Find the university AI guidance page and the CS department pages (spec "Fixed search").
+3. Save each page behind a value with `save_page.py`. Open the saved file's text to copy quotes
+   exactly (quotes at most 40 words). If curl gets a 403 or an empty JavaScript shell, save the
+   browser pane's text with `--rendered` (the raw curl copy must also exist with HTTP 200).
+4. Add the school to `data/coded/values.json`:
+   `{"codebook_version": 1, "schools": [{"unitid", "slug", "name", "values": {var: entry}}]}`.
+   Entry with evidence: value, quote, url, archive (repo-relative path), source_type, optional
+   cue_reason, optional domain_reason. Absence entry: value plus `reviewed` (list of archive paths)
+   or `search_log` (path). For every "none found" or "no public syllabus found", also run and log
+   the 2 `second_searches`.
+5. Run `check_study.py --only <unitid>`; fix until it passes. Note time and a get_usage reading per
+   school in `progress/pilot-cost.md` (time taken, 5-hour points, context growth).
+After the 5: report cost per school and the projection for 15 against the deadline and the
+5-hour window; change the codebook only as version 2 with reasons (spec R2); prepare a /compact.
 
-## Next: Phase 2 Study (waiting for Marcus's approval of `specs/phase-2-study.md`)
-- The spec is the plan. Its "Questions for Marcus" are the open items (design and list, blind
-  check on 3 schools, cheaper model).
-- The pre-clear design here said CIP 11.07 only; that would have excluded Ohio State and
-  Cincinnati. Replaced by 11.0701 or 11.0101 (spec, "Known before any coding" item 3).
-- On approval: change the project spec's "10 hand-coded schools" to 3 (if he agrees), write
-  `study/codebook.md`, then the 5-school pilot.
+## Still open
+- `ddc7d76a-46ca-4bba-a89a-f901ccc7b9a7.jsonl` (same transcript folder, last written Nov 8 18:00,
+  while Marcus was away). Not opened (privacy). Asked Marcus once; no answer yet. Do not open.
 
 ## Sessions in this project
 | Session | Started in | Model | Covers |
@@ -41,13 +67,10 @@ Last updated: 2026-11-11T10:08:06-05:00 by Claude (session a9056776).
 | 0cf9c9ad-b66c-4406-998d-e6e34b8c2e47 | `C:\Claude Folder` (transcript under `~/.claude/projects/C--Claude-Folder/`) | claude-opus-5 until 00:14:38 Nov 8, then claude-opus-5-5 | planning, audit, Phase 0, first /compact (Nov 8 00:57), Phase 1, ends with the /clear |
 | a9056776-4951-4636-a9ad-acb1dbccb955 | `C:\Claude Folder` (same folder) | claude-opus-5-5 | starts after the /clear (Nov 11 10:00:07); Phase 2 |
 
-## Open decisions (Marcus)
-- Approve the sampling design and the drawn list (in the Phase 2 spec).
-- Whether bulk research may use a cheaper model.
-
 ## Known quirks
 - Shell tool: several heredocs in one command failed to parse, and double backslashes collapse to
-  one. A single long prose heredoc also failed. Write prose and Markdown with the file-writing
-  tool; keep backslash escapes out of code.
+  one. Write prose and Markdown with the file-writing tool; keep backslash escapes out of code
+  (build them with `chr(92)` in Python if needed).
+- The session's working directory is `C:\Claude Folder`, one level above the repo; use absolute paths.
 - Claude's browser pane ignores reload keys. Prove fresh loads with a marker instead.
 - The Claude app shows Marcus no context-token number. Never write a checklist step that needs one.

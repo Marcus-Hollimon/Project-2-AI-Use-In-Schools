@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T15:08:26.089439Z",
+ "generatedAt": "2026-11-11T15:22:14.936742Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -680,12 +680,98 @@
    "evidence": "`specs/phase-2-study.md`, `data/frame/`"
   },
   {
-   "time": "2026-11-11T15:08:21.835000Z",
+   "time": "2026-11-11T15:08:26Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 2 spec draft: frame (1,509 schools, 5 strata), 15 drawn, sources recorded; awaiting approval",
+   "commit": "6cfc04c",
+   "note": "written by Claude, pushed from Marcus's account"
+  },
+  {
+   "time": "2026-11-11T15:08:48Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 2 spec: state the limit of the seed-first evidence",
+   "commit": "63cc469",
+   "note": "written by Claude, pushed from Marcus's account"
+  },
+  {
+   "time": "2026-11-11T15:09:19.883000Z",
    "actor": "Claude",
    "kind": "reply",
    "turn": 12,
-   "text": "Rebuilding derived data (it reads the log), then committing and pushing.",
-   "toolCalls": 58
+   "text": "I finished the steps that come after the /clear, wrote the Phase 2 plan (the \"spec\") and drew the 15 schools. Nothing gets researched or coded until you approve the plan.\n\n**What the /clear looks like in the records.** It doesn't leave any mark. The old session's record just stops at 09:59:41, and a brand-new session starts at 10:00:07 with a new id. From the records alone, a /clear looks exactly like opening a fresh session, so our usage log is what says which one it was. I added the new session to the token pipeline and all four checks still pass. The app said 78,618 tokens right after the clear, and the records agree to within 15.\n\n**A mistake in my own earlier plan.** The sample design I wrote before the /clear would have left out **both Ohio State and Cincinnati**, the two schools you required. It looked only for schools that report degrees as \"Computer Science\" in the federal college data (IPEDS). Ohio State files its CS degrees as \"Computer Engineering\" and \"Computer and Information Sciences, General\", and Cincinnati also uses the general category. I widened the rule to include the general category, so both schools now qualify the same way every other school does, without being added by hand.\n\n**The draw.** 1,509 eligible schools, sorted into 5 groups using the current (2025) Carnegie classification. The random draw is repeatable: a second run gave the exact same list.\n\n| National, drawn at random | Ohio |\n|---|---|\n| Public research universities: Minnesota, Virginia | Ohio State, Cincinnati (your picks) |\n| Private research universities: MIT, Johns Hopkins | Baldwin Wallace (random) |\n| Other universities with graduate programs: Valparaiso, Presbyterian | Defiance (random) |\n| Mostly-bachelor's colleges: Coppin State, Le Moyne-Owen | Columbus State Community College (random) |\n| Community colleges: Snow, Luzerne County | |\n\nThings to know before you approve:\n- **Harvard wasn't drawn.** Adding it by hand would turn the private-research group back into a hand-picked one.\n- **Four schools give fewer than 10 CS degrees a year.** They may publish nothing about AI. That still counts as a finding, because every school gets the same fixed search.\n- **Two schools per group shows examples, not national rates.** The site will say that plainly.\n- **One overclaim, corrected.** I said the git history proves I fixed the random seed before the draw. It was only a local commit, six seconds before the run, and GitHub didn't see it until later. The spec now says so.\n\nBesides approving the plan, three questions for you:\n1. **Blind check:** you code **3** schools yourself, not the 10 the project spec says. That 10 was written when the study had 40 schools.\n2. **Cheaper model:** I recommend **no**, because the quality of the coding is the whole study and the weekly limit is only at 9%.\n3. **A record file I didn't open** (`ddc7d76a…`, last written Nov 8 at 6:00 PM while you were away) sits in this project's folder. Is it a session of yours from another project? I'm leaving it unopened for privacy until you say.\n\nThe plan is at [specs/phase-2-study.md](specs/phase-2-study.md), and the 15 schools are listed in [data/frame/sample.csv](data/frame/sample.csv).\n\n**Coaching**\n- \"Read STATE.md and continue\" worked because that file was precise. Next time, add a stopping point, like \"continue until you need my approval.\" This turn happened to stop at the right place because the plan requires your approval, but saying it yourself keeps you in control of how much gets done without you.\n- **Plan mode** would suit the pilot that comes next. In plan mode, Claude can only read and propose; nothing changes until you approve, so you see exactly how the first 5 schools will be searched before any work starts. You can switch it on from the mode picker in the app, or ask me to enter it.",
+   "toolCalls": 62
+  },
+  {
+   "time": "2026-11-11T15:11:34.931000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 13,
+   "text": "Change something"
+  },
+  {
+   "time": "2026-11-11T15:11:34.931000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 13,
+   "text": "",
+   "toolCalls": 0
+  },
+  {
+   "time": "2026-11-11T15:14:40.804000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 14,
+   "text": "I don't think I will have time to hand code these things... let's just leave that as is. That was just one way of proving that I know what you've done is good, that will be done through forcing you to prove yourself at each step through extensive testing, not by me hand-coding. Other than that we can continue. No need for an explicit plan mode. Also no need for coaching tips from this point on to be honest. Lets just try and get this done properly."
+  },
+  {
+   "time": "2026-11-11T15:15:10Z",
+   "actor": "Marcus",
+   "kind": "decision",
+   "text": "Phase 2 spec approved, except the blind check: Marcus will not hand-code any schools",
+   "options": "blind check on 3 schools (Claude's proposal) · on 10 (project spec) · none",
+   "notes": "Quality is to be shown by extensive testing at each step instead. Claude's recommendation of no cheaper model stands (Marcus: \"Other than that we can continue\")."
+  },
+  {
+   "time": "2026-11-11T15:15:10Z",
+   "actor": "Marcus",
+   "kind": "decision",
+   "text": "No more Coaching sections",
+   "options": "(instruction from Marcus)",
+   "notes": "Overrides the global CLAUDE.md rule and the per-turn hook for this work; the hook and global file were not changed."
+  },
+  {
+   "time": "2026-11-11T15:21:08Z",
+   "actor": "Claude",
+   "kind": "milestone",
+   "phase": "2",
+   "text": "Marcus approved the Phase 2 spec without hand-coding; replaced the blind check with 10 automated checks (S1 to S5, C1 to C4, N1). Codebook v1 frozen (study/codebook.json and .md). Checker and save script written before any school was coded; 31 tests, each breaking one rule, all pass; mutation run (S2 disabled) failed exactly the S2 test; restored byte-identical. CI now runs the study tests.",
+   "evidence": "`validation/runs/`, `study/`"
+  },
+  {
+   "time": "2026-11-11T15:21:08Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 2: codebook v1, archive script, study checker with 31 tests and a mutation run; CI runs them",
+   "commit": "5ccc209",
+   "note": "written by Claude, pushed from Marcus's account"
+  },
+  {
+   "time": "2026-11-11T15:21:18.143000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 14,
+   "text": "Pushed. Before starting the pilot, I need the web search tool loaded and a starting usage reading, since the pilot's job is to measure cost per school. Also checking that CI passed with the new step.",
+   "toolCalls": 40
+  },
+  {
+   "time": "2026-11-11T15:22:14Z",
+   "actor": "Claude",
+   "kind": "milestone",
+   "phase": "2",
+   "text": "5-hour window went 10% to 22% in 21 minutes (context 78k to 198k). Prepared a /compact before the pilot: STATE.md rewritten with the exact pilot procedure; reading just before /compact recorded.",
+   "evidence": "`progress/STATE.md`"
   }
  ]
 }
