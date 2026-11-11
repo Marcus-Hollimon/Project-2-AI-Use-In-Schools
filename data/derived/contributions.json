@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T17:10:21.100404Z",
+ "generatedAt": "2026-11-11T17:11:54.107771Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -1180,12 +1180,29 @@
    "phase": "2"
   },
   {
-   "time": "2026-11-11T17:09:48.540000Z",
+   "time": "2026-11-11T17:10:21Z",
+   "actor": "Claude",
+   "kind": "milestone",
+   "phase": "3",
+   "text": "Phase 3 tabs built: Research findings, Validation, Contributions, Token usage now read the repository's data files. Fixed on the way: 7 malformed usage.md rows (build.py now rejects them), text-fragment links that highlighted the wrong passage (now whole-quote), FAIL shown for checks that do not apply (now n/a). Web 37/37, pipeline 13/13 recorded; Ohio-pooling mutation caught by 2 tests.",
+   "evidence": "specs/phase-3-interfaces.md; web/src/tabs/; validation/runs/"
+  },
+  {
+   "time": "2026-11-11T17:10:30Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 3: four tabs filled with real data",
+   "commit": "862b16f",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "3"
+  },
+  {
+   "time": "2026-11-11T17:11:49.251000Z",
    "actor": "Claude",
    "kind": "reply",
    "turn": 23,
-   "text": "Tests pass 37 of 37. Now proving the fix on the live MIT page:",
-   "toolCalls": 84,
+   "text": "The usage reading has to go inside the main table, not at the end of the file where my earlier rows went wrong:",
+   "toolCalls": 99,
    "phase": "3"
   }
  ]

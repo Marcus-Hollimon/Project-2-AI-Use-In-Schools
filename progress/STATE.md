@@ -2,7 +2,21 @@
 
 Current phase: 3 Interfaces (in progress; spec: specs/phase-3-interfaces.md). Phase 2 Study is done.
 
-Last updated: 2026-11-11T11:33:07-05:00 by Claude (session a9056776), just before the seventh `/compact` (Phase 2 end).
+Last updated: 2026-11-11T12:11:20-05:00 by Claude (session a9056776), just before the eighth `/compact` (Phase 3 tabs built).
+
+## Phase 3 tabs built (11:58 to 2026-11-11T12:11:20-05:00 Nov 11; 5-hour 74% to 85%)
+- Spec: `specs/phase-3-interfaces.md`. All four tabs read repository files at build time through
+  `web/src/data.js`; pages in `web/src/tabs/`; tests in `web/src/tabs.test.jsx` (20 tests, real data).
+- Pushed as 862b16f. Recorded: web 37/37 (`validation/runs/2026-11-11T17-10-16-827Z_web.json`),
+  pipeline 13/13 (`2026-11-11T17-07-57-189Z_pipeline.json`), mutation "Ohio added into national
+  counts" failed 2 tests (`2026-11-11T17-07-38-873Z_web.json`).
+- Fixed on the way (each written up in the spec): 7 malformed `usage.md` rows (build.py now rejects
+  them); text-fragment links now carry the whole quote (first,last words highlighted the wrong MIT
+  passage; checked in the browser pane); study cells that do not apply show n/a, not FAIL; three
+  runs recorded while STATE.md still said Phase 2 had their phase corrected to 3 with a
+  `correction` field saying so.
+- Dev server: `C:\Claude Folder\.claude\launch.json` entry `project2-web` (outside the repo; the
+  preview tool reads only that folder), then open `http://localhost:5173/Project-2-AI-Use-In-Schools/`.
 
 ## Phase 2 done (wrap-up 11:28 to 2026-11-11T11:33:07-05:00 Nov 11; 5-hour 69% to 71%)
 - R1 re-fetch: `study/refetch.py` fetches every archived URL again with save_page.py's exact curl
@@ -70,20 +84,20 @@ Last updated: 2026-11-11T11:33:07-05:00 by Claude (session a9056776), just befor
   rule and the per-turn hook; and no plan mode. "Let's just try and get this done properly."
 
 ## FIRST, right after the /compact
-1. Take a usage reading marked "after /compact" in `progress/usage.md` (tool: get_usage), with the
-   time from `date -Iseconds`. Run `uv run --project pipeline python pipeline/build.py`; C1 to C3 must pass.
-2. Start **Phase 3 Interfaces** (`specs/00-project.md`: "The four tabs filled with real data"; exit
-   check: Marcus's checklist per tab). Write `specs/phase-3-interfaces.md` FIRST: per tab (Research
-   findings from `data/coded/values.json` and `checks.json`; Validation from `validation/runs/` and
-   the study checks; Contributions from `progress/` and `data/derived/`; Token usage from
-   `progress/usage.md` and `data/derived/`), what it shows, the data file it reads, its tests, and a
-   non-programmer checklist. Marcus could not find an MIT quote with Ctrl+F (the checklist sent him to
-   search-log.md; checklist step now fixed): in the Research findings tab, show each quote next to
-   its value with a one-click link to the live page (consider a text-fragment link that highlights
-   the quote; verify browser support before relying on it). Findings must be labeled descriptive (2 schools per stratum; Ohio 5
-   separate, never pooled). Then build, test (`npm run test:record` in `web/`), push (Pages deploys).
-3. Budget: 5-hour was 71% at Phase 2 end and resets 14:40 EST. Keep chunks small; prepare a
-   `/compact` after each tab or each ~100k tokens.
+1. Take a usage reading marked "after /compact" in `progress/usage.md` (tool: get_usage) as a full
+   7-column row in the main table (Phase 3), with the time from `date -Iseconds`. build.py now stops
+   on a malformed row. Run `uv run --project pipeline python pipeline/build.py`.
+2. Check the live site in the browser pane (https://marcus-hollimon.github.io/Project-2-AI-Use-In-Schools/):
+   DONE 12:13 (commit 862b16f live; acceptance boxes ticked). If a later deploy fails, read
+   the run log with `gh run view --log-failed`. Then tick the first three acceptance boxes in
+   `specs/phase-3-interfaces.md` with the run file names above.
+3. Hand Marcus the Phase 3 checklist (4 steps, in the spec). When he confirms: Phase 3 end (usage
+   reading, STATE.md, log, commit, `/compact`).
+4. Then Phase 4 Validation (`specs/00-project.md`: "Any claim on the site traces to a test or a
+   source"): spec first. Idea: a list of every claim the site makes, each with the test or file that
+   backs it, checked by a test.
+5. Budget: 5-hour was 85% at 12:12 and resets 14:40 EST. A chunk like Phase 3's build costs about
+   11 points, so Phase 4's build likely has to wait for the reset; the Phase 3 wrap-up fits before it.
 
 ## Pilot result (details and costs in `progress/pilot-cost.md`)
 - Minnesota 174066, Johns Hopkins 162928, Valparaiso 152600, Coppin State 162283, Snow 230597:

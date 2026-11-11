@@ -125,9 +125,14 @@ by-phase rows add up to the totals; there is at least one /clear and one /compac
 reading in the file is in the readings table.
 
 ## Acceptance checks (Claude)
-- [ ] Each tab shows real data, and its tests (above) pass in a recorded web run.
-- [ ] Pipeline tests pass in a recorded run after the build.py changes.
-- [ ] The live site (GitHub Pages) shows all four tabs after the push, checked in the browser pane.
+- [x] Each tab shows real data, and its tests (above) pass in a recorded web run
+  (`validation/runs/2026-11-11T17-10-16-827Z_web.json`, 37/37; mutation run
+  `2026-11-11T17-07-38-873Z_web.json`: Ohio added into national counts, 2 tests failed).
+- [x] Pipeline tests pass in a recorded run after the build.py changes
+  (`2026-11-11T17-07-57-189Z_pipeline.json`, 13/13).
+- [x] The live site (GitHub Pages) shows all four tabs after the push, checked in the browser pane
+  (2026-11-11 12:13, footer commit 862b16f: 7 tables on Research, 28 runs on Validation, 118
+  entries on Contributions, 4 tables on Token usage).
 - [x] One text-fragment link opened in the browser pane lands on and highlights its quote (MIT
   6.102, 2026-11-11, after the whole-quote fix above).
 
