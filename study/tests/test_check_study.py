@@ -130,6 +130,15 @@ def test_s1_pdf_without_extracted_text_fails(world):
     assert "no text to search" in failed(findings(world, school), "S1")[0]["message"]
 
 
+def test_s1_word_file_reads_extracted_text_beside_it(world):
+    archive = write_archive(world["root"], "2026-11-11-policy.docx", "PK binary zip")
+    school = mutate(world, "univ_stance", archive=archive)
+    assert "no text to search" in failed(findings(world, school), "S1")[0]["message"]
+    (world["root"] / (archive + ".txt")).write_text(
+        "Students may use generative AI tools when the instructor allows it.", encoding="utf-8")
+    assert only_failures(findings(world, school)) == []
+
+
 # S2 hash
 def test_s2_archive_edited_after_saving_fails(world):
     path = world["root"] / world["archive"]

@@ -39,3 +39,5 @@ The first 20 minutes of planning were not measured: no reading was taken at sess
 Between 00:51:29 and 00:57:55 the 5-hour window moved 3 points. That covers one short turn (recording a decision) plus the compaction itself, and they cannot be separated: the transcript keeps no record of the compaction's own model call (`evidence/phase1-recon/`). The context the next turn re-reads fell from 293,955 to 81,551 tokens, of which about 78,000 is fixed overhead (tool definitions, system prompt, skills) sent on every turn.
 
 Connector test (01:13 to 01:21): turning off the Claude Docs connector saved about 175 tokens per turn, not the thousands Claude predicted. MCP tool descriptions went up 464 (a Workflow tool appeared at the same time) and MCP instructions went down 639. The 20,000 tokens of MCP tools are almost all built into the app (browser, computer control, app controls), which cannot be switched off from a session.
+| 2026-11-11T11:08:58-05:00 | after /compact (main coding, 7 schools next) | 52 | 14 | 89,371 |
+| 2026-11-11T11:14:27-05:00 | main coding 6 of 10 (11 of 15 coded), just before /compact | 57 | 15 | 170,108 |

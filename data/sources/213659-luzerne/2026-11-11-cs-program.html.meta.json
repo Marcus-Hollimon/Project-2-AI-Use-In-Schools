@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.luzerne.edu/academics/catalog/pos.jsp?a=Computer+Science&c=COS&dept=Mathematics++Computer+Science+&+Pre+Engineering=&sel=1&m=10&t=AS&s=1",
+ "final_url": "https://www.luzerne.edu/academics/catalog/pos.jsp?a=Computer+Science&c=COS&dept=Mathematics++Computer+Science+&+Pre+Engineering=&sel=1&m=10&t=AS&s=1",
+ "http_status": 200,
+ "content_type": "text/html;charset=ISO-8859-1",
+ "fetched_at": "2026-11-11T11:10:34-05:00",
+ "sha256": "a0c0aed0a577fc6e52237dbfbe3402efc027b6853b7efd9ff28bb01fbf1836a3",
+ "bytes": 327607
+}

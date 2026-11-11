@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://ai.uc.edu/about/rftl",
+ "final_url": "https://ai.uc.edu/about/rftl",
+ "http_status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T11:13:02-05:00",
+ "sha256": "047b999a5dab4be6893b5ea2a0bd3ad205be0e55658a514713f5bd09cc5a276b",
+ "bytes": 71238
+}

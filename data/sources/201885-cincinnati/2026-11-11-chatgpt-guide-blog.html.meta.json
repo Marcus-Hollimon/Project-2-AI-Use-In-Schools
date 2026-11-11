@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.uc.edu/blog/2026/06/n21412748.html",
+ "final_url": "https://www.uc.edu/blog/using-ai-in-college-rules.html",
+ "http_status": 200,
+ "content_type": "text/html;charset=utf-8",
+ "fetched_at": "2026-11-11T11:13:01-05:00",
+ "sha256": "e57065e21e5387d6a84fdbfa3404ca5bb101b1bddfb3eae61716ce8b24e50310",
+ "bytes": 84310
+}

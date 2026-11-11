@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://ai.uc.edu/students",
+ "final_url": "https://ai.uc.edu/students",
+ "http_status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T11:13:00-05:00",
+ "sha256": "e18597ec315bf7e0f6547955b179e09679a399cf66231c03d08d82b55d779ea0",
+ "bytes": 35781
+}

@@ -57,7 +57,8 @@ def fetch(slug, name, url):
     if proc.returncode != 0 or not tmp.exists():
         sys.exit("curl failed (%d): %s" % (proc.returncode, proc.stderr.strip()))
     status, final_url, content_type = (proc.stdout.split("\n") + ["", "", ""])[:3]
-    ext = "pdf" if "pdf" in content_type.lower() else "html"
+    ctype = content_type.lower()
+    ext = "pdf" if "pdf" in ctype else "docx" if "wordprocessingml" in ctype else "html"
     path = target(slug, name, ext)
     shutil.move(str(tmp), path)
     write_meta(path, {"kind": "raw bytes from curl", "url": url, "final_url": final_url,

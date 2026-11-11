@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T11:05:53-05:00",
+ "generatedAt": "2026-11-11T11:14:12-05:00",
  "codebookVersion": 2,
  "schools": [
   {
@@ -2045,16 +2045,163 @@
   {
    "unitid": "220604",
    "name": "Le Moyne-Owen College",
-   "pass": false,
+   "pass": true,
    "checks": {
-    "C1": false
+    "C1": true,
+    "C2": true,
+    "C4": true,
+    "N1": true
    },
    "findings": [
     {
-     "check": "C1",
+     "check": "C4",
      "variable": null,
-     "ok": false,
-     "message": "school not coded yet"
+     "ok": true,
+     "message": "search logged with results: loc.edu generative AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: loc.edu computer science AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: loc.edu software engineering syllabus AI"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: loc.edu ChatGPT academic integrity"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "absence backed by 2 reviewed pages"
+    },
+    {
+     "check": "N1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "absence backed by 1 reviewed pages"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "value 'not discussed' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "absence backed by 3 reviewed pages"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "value 'not stated' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "absence backed by 3 reviewed pages"
+    },
+    {
+     "check": "C1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "value 'no public syllabus found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "absence backed by 1 reviewed pages"
+    },
+    {
+     "check": "N1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "univ_stance='none found' and univ_tone='none found' agree on none found"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "dept_stance='none found' and dept_tone='none found' agree on none found"
     }
    ]
   },
@@ -2374,32 +2521,512 @@
   {
    "unitid": "213659",
    "name": "Luzerne County Community College",
-   "pass": false,
+   "pass": true,
    "checks": {
-    "C1": false
+    "S1": true,
+    "S2": true,
+    "S3": true,
+    "S4": true,
+    "S5": true,
+    "C1": true,
+    "C2": true,
+    "C3": true,
+    "C4": true,
+    "N1": true
    },
    "findings": [
     {
-     "check": "C1",
+     "check": "C4",
      "variable": null,
-     "ok": false,
-     "message": "school not coded yet"
+     "ok": true,
+     "message": "search logged with results: luzerne.edu generative AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: luzerne.edu computer science AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: luzerne.edu software engineering syllabus AI"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: luzerne.edu ChatGPT academic integrity"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "value 'restrict' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote has 15 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote found in data/sources/213659-luzerne/2026-11-11-academic-honesty-policy.docx"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "www.luzerne.edu is on luzerne.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "cue words absent; reason: Listed under 'Violations of the Academic Honesty Policy'; AI use without instructor authorization is unauthorized use, which codebook v2 codes 'restrict'. Instructors may set class policies, but this policy is in force when they do not."
+    },
+    {
+     "check": "C1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "absence backed by 1 reviewed pages"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "value 'cautionary' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote has 20 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote found in data/sources/213659-luzerne/2026-11-11-academic-honesty-policy.docx"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "www.luzerne.edu is on luzerne.edu"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "value 'not discussed' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "absence backed by 2 reviewed pages"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "value 'not stated' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "absence backed by 2 reviewed pages"
+    },
+    {
+     "check": "C1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "value 'no public syllabus found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "absence backed by 1 reviewed pages"
+    },
+    {
+     "check": "N1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "univ_stance='restrict' and univ_tone='cautionary' agree on none found"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "dept_stance='none found' and dept_tone='none found' agree on none found"
     }
    ]
   },
   {
    "unitid": "201885",
    "name": "University of Cincinnati-Main Campus",
-   "pass": false,
+   "pass": true,
    "checks": {
-    "C1": false
+    "S1": true,
+    "S2": true,
+    "S3": true,
+    "S4": true,
+    "S5": true,
+    "C1": true,
+    "C2": true,
+    "C3": true,
+    "C4": true,
+    "N1": true
    },
    "findings": [
     {
-     "check": "C1",
+     "check": "C4",
      "variable": null,
-     "ok": false,
-     "message": "school not coded yet"
+     "ok": true,
+     "message": "search logged with results: uc.edu generative AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: uc.edu computer science AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: uc.edu software engineering syllabus AI"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: uc.edu ChatGPT academic integrity"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "value 'instructor decides' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote has 19 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote found in data/sources/201885-cincinnati/2026-11-11-ai-guidelines.html"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "ai.uc.edu is on uc.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "absence backed by 1 reviewed pages"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "value 'positive' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote has 5 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote found in data/sources/201885-cincinnati/2026-11-11-ai-guidelines.html"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "ai.uc.edu is on uc.edu"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "value 'explicit' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote has 8 words"
+    },
+    {
+     "check": "S1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote found in data/sources/201885-cincinnati/2026-11-11-chatgpt-guide-blog.html"
+    },
+    {
+     "check": "S2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "www.uc.edu is on uc.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "value 'not stated' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "absence backed by 4 reviewed pages"
+    },
+    {
+     "check": "C1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "value 'no public syllabus found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "univ_stance='instructor decides' and univ_tone='positive' agree on none found"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "dept_stance='none found' and dept_tone='none found' agree on none found"
     }
    ]
   },

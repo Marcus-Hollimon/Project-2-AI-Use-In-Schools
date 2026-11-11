@@ -1,10 +1,19 @@
 # State: read this first
 
-Current phase: 2 Study (8 of 15 coded and passing under codebook v2; 7 schools next, starting with Le Moyne-Owen)
+Current phase: 2 Study (11 of 15 coded and passing under codebook v2; 4 schools next, starting with Ohio State)
 
-Last updated: 2026-11-11T11:06:11-05:00 by Claude (session a9056776), just before the fourth `/compact`.
+Last updated: 2026-11-11T11:14:27-05:00 by Claude (session a9056776), just before the fifth `/compact`.
 
 ## Main coding so far (after the pilot)
+- Le Moyne-Owen 220604, Luzerne 213659, Cincinnati 201885 coded and passing (11:09 to 11:14; 5-hour
+  52% to 57%). Le Moyne-Owen: all absences (handbook and catalog say nothing on AI). Luzerne: the AI
+  rule is in the Academic Honesty Policy, a **Word file**; `save_page.py` now saves Word files as
+  `.docx`, `study/docx_text.py <archive>` writes the `.docx.txt` the checker reads (like a PDF's
+  sidecar), new test, study 33/33 (`validation/runs/2026-11-11T16-12-28-115Z_study.json`).
+  Cincinnati: the software engineering course site (uc3093c.github.io) is 404, so se_courses is
+  "no public syllabus found".
+- Small colleges again returned no own-domain pages from the fixed searches; run the two extra
+  `allowed_domains` searches (policy/handbook, CS program/catalog) right after the fixed six.
 - Virginia 234076, MIT 166683, Presbyterian 218539 coded and passing (11:00 to 11:06; 5-hour 45% to
   49%, about 1.3 points per school). Rows in `progress/pilot-cost.md`, "Main coding".
 - Virginia: the CS department site (engineering.virginia.edu) gives curl HTTP 403 and the browser
@@ -29,13 +38,10 @@ Last updated: 2026-11-11T11:06:11-05:00 by Claude (session a9056776), just befor
 ## FIRST, right after the /compact
 1. Take a usage reading marked "after /compact" in `progress/usage.md` (tool: get_usage), with the
    time from `date -Iseconds`. Run `uv run --project pipeline python pipeline/build.py`; C1 to C3 must pass.
-2. Code the remaining 7 schools in this order (same procedure as below, codebook **v2**; `{domain}`
+2. Code the remaining 4 schools in this order (same procedure as below, codebook **v2**; `{domain}`
    is the last two parts of the sample's website, which is what the checker uses):
    | unitid | slug | domain |
    |---|---|---|
-   | 220604 | 220604-le-moyne-owen | loc.edu |
-   | 213659 | 213659-luzerne | luzerne.edu |
-   | 201885 | 201885-cincinnati | uc.edu |
    | 204796 | 204796-ohio-state | osu.edu |
    | 201195 | 201195-baldwin-wallace | bw.edu |
    | 202514 | 202514-defiance | defiance.edu |

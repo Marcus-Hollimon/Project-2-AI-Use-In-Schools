@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://ai.uc.edu/about/ai-guidelines",
+ "final_url": "https://ai.uc.edu/about/ai-guidelines",
+ "http_status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T11:12:59-05:00",
+ "sha256": "0674054a8204103ff78c178cb67c152e502bcc6fca56bda57e5cf26bbe5f63b1",
+ "bytes": 37811
+}

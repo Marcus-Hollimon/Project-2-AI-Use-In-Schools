@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://loc.edu/wp-content/uploads/2025/11/COLLEGE-CATALOG-2025-2026-FINAL_10272025.pdf",
+ "final_url": "https://loc.edu/wp-content/uploads/2025/11/COLLEGE-CATALOG-2025-2026-FINAL_10272025.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T11:09:22-05:00",
+ "sha256": "a37891c81ad41d48f735a3886acff1040e26c71029ba7052d32cadc522cbdbb0",
+ "bytes": 9154005
+}

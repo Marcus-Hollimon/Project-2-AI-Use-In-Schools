@@ -1,472 +1,641 @@
 {
- "codebook_version": 2,
- "schools": [
-  {
-   "unitid": "174066",
-   "slug": "174066-minnesota",
-   "name": "University of Minnesota-Twin Cities",
-   "coded_at": "2026-11-11",
-   "values": {
-    "univ_stance": {
-     "value": "restrict",
-     "quote": "Generative AI tools are considered online learning support platforms and may not be used for course assignments except as explicitly authorized by an instructor",
-     "url": "https://provost.umn.edu/academic-oversight/genai-syllabus-statements",
-     "archive": "data/sources/174066-minnesota/2026-11-11-provost-genai-syllabus.html",
-     "source_type": "guidance page",
-     "note": "Instructors may allow or prohibit, but the stated default under the Student Conduct Code is no use without explicit authorization, so the default is coded (codebook: code the default)."
+  "codebook_version": 2,
+  "schools": [
+    {
+      "unitid": "174066",
+      "slug": "174066-minnesota",
+      "name": "University of Minnesota-Twin Cities",
+      "coded_at": "2026-11-11",
+      "values": {
+        "univ_stance": {
+          "value": "restrict",
+          "quote": "Generative AI tools are considered online learning support platforms and may not be used for course assignments except as explicitly authorized by an instructor",
+          "url": "https://provost.umn.edu/academic-oversight/genai-syllabus-statements",
+          "archive": "data/sources/174066-minnesota/2026-11-11-provost-genai-syllabus.html",
+          "source_type": "guidance page",
+          "note": "Instructors may allow or prohibit, but the stated default under the Student Conduct Code is no use without explicit authorization, so the default is coded (codebook: code the default)."
+        },
+        "univ_tone": {
+          "value": "cautionary",
+          "quote": "Active engagement with course materials, critical thinking and judgment, and expression of original ideas should never be outsourced to technology.",
+          "url": "https://provost.umn.edu/academic-oversight/genai-syllabus-statements",
+          "archive": "data/sources/174066-minnesota/2026-11-11-provost-genai-syllabus.html",
+          "source_type": "guidance page",
+          "note": "The page is mostly procedure, but its required statements are framed around scholastic dishonesty, copyright, and data security, and it ends on this warning."
+        },
+        "dept_stance": {
+          "value": "encourage",
+          "quote": "CS&E faculty encourage students to utilize AI throughout their educational journey from introductory courses to senior seminars.",
+          "url": "https://cse.umn.edu/cs/news/cse-prepares-umn-students-ai-powered-workplace",
+          "archive": "data/sources/174066-minnesota/2026-11-11-cse-news-ai-workplace.html",
+          "source_type": "news or announcement",
+          "note": "Only department text on AI found; the department's academic conduct policy does not mention AI. The same paragraph says some introductory courses ban AI and many others allow it with conditions. Codebook v2 states that news on the department's site counts as department text."
+        },
+        "dept_tone": {
+          "value": "positive",
+          "quote": "AI is a powerful tool that can improve your productivity as long as you have the fundamental knowledge to understand its limitations and use it effectively.",
+          "url": "https://cse.umn.edu/cs/news/cse-prepares-umn-students-ai-powered-workplace",
+          "archive": "data/sources/174066-minnesota/2026-11-11-cse-news-ai-workplace.html",
+          "source_type": "news or announcement"
+        },
+        "collaboration": {
+          "value": "in passing",
+          "quote": "The emphasis is on experimentation, problem-solving, and understanding personal strengths and growth areas when collaborating with AI tools.",
+          "url": "https://cse.umn.edu/cs/news/cse-prepares-umn-students-ai-powered-workplace",
+          "archive": "data/sources/174066-minnesota/2026-11-11-cse-news-ai-workplace.html",
+          "source_type": "news or announcement",
+          "note": "One sentence, describing the CSCI 2521 course; no page reviewed develops AI as a partner further."
+        },
+        "disclosure": {
+          "value": "required",
+          "quote": "Indicate how students will acknowledge GenAI use, including citation practices and required documentation",
+          "url": "https://provost.umn.edu/academic-oversight/genai-syllabus-statements",
+          "archive": "data/sources/174066-minnesota/2026-11-11-provost-genai-syllabus.html",
+          "source_type": "guidance page",
+          "note": "Borderline: the requirement is addressed to instructors of courses that allow AI, telling them to set how students acknowledge it, rather than stated directly to students."
+        },
+        "se_courses": {
+          "value": "not addressed",
+          "reviewed": [
+            "data/sources/174066-minnesota/2026-11-11-csci5802-spring2024.html"
+          ],
+          "note": "CSCI 5801 Software Engineering I has no public syllabus; CSCI 5802 Software Engineering II (spring 2024 page, the newest reachable) has an academic integrity section that does not mention AI. CSCI 4821 GenAI for Software Engineering (new in fall 2026) is described only in news, with no public syllabus."
+        }
+      }
     },
-    "univ_tone": {
-     "value": "cautionary",
-     "quote": "Active engagement with course materials, critical thinking and judgment, and expression of original ideas should never be outsourced to technology.",
-     "url": "https://provost.umn.edu/academic-oversight/genai-syllabus-statements",
-     "archive": "data/sources/174066-minnesota/2026-11-11-provost-genai-syllabus.html",
-     "source_type": "guidance page",
-     "note": "The page is mostly procedure, but its required statements are framed around scholastic dishonesty, copyright, and data security, and it ends on this warning."
+    {
+      "unitid": "162928",
+      "slug": "162928-johns-hopkins",
+      "name": "Johns Hopkins University",
+      "coded_at": "2026-11-11",
+      "values": {
+        "univ_stance": {
+          "value": "instructor decides",
+          "quote": "It is important for faculty to clearly outline the expectations of generative AI usage at the beginning of a course to avoid frustration in students’ learning processes.",
+          "url": "https://teaching.jhu.edu/university-teaching-policies/generative-ai/guidelines/",
+          "archive": "data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-guidelines.html",
+          "source_type": "guidance page",
+          "note": "No university-wide default found; the teaching guidance leaves the rule to each course and its division."
+        },
+        "univ_tone": {
+          "value": "cautionary",
+          "quote": "there is an abundance of ethical considerations that demand careful attention.",
+          "url": "https://teaching.jhu.edu/university-teaching-policies/generative-ai/guidelines/",
+          "archive": "data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-guidelines.html",
+          "source_type": "guidance page",
+          "note": "The guidelines page is mostly FERPA, HIPAA, ownership, bias and privacy risks. The parent overview page (curl blocked, read in the browser) is more upbeat about benefits; the page with the rules was coded."
+        },
+        "dept_stance": {
+          "value": "none found",
+          "search_log": "data/sources/162928-johns-hopkins/search-log.md",
+          "reviewed": [
+            "data/sources/162928-johns-hopkins/2026-11-11-cs-home.html",
+            "data/sources/162928-johns-hopkins/2026-11-11-cs-integrity-code.html",
+            "data/sources/162928-johns-hopkins/2026-11-11-cs-undergrad-current.html",
+            "data/sources/162928-johns-hopkins/2026-11-11-cs-support-ai-wiki.html"
+          ]
+        },
+        "dept_tone": {
+          "value": "none found",
+          "search_log": "data/sources/162928-johns-hopkins/search-log.md"
+        },
+        "collaboration": {
+          "value": "not discussed",
+          "reviewed": [
+            "data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-guidelines.html",
+            "data/sources/162928-johns-hopkins/2026-11-11-cs-integrity-code.html",
+            "data/sources/162928-johns-hopkins/2026-11-11-oose-course-page.html"
+          ]
+        },
+        "disclosure": {
+          "value": "encouraged",
+          "quote": "Transparency: Respect intellectual property rights by acknowledging the sources of AI-generated content used in your work.",
+          "url": "https://teaching.jhu.edu/university-teaching-policies/generative-ai/guidelines/",
+          "archive": "data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-guidelines.html",
+          "source_type": "guidance page",
+          "cue_reason": "Listed under example guidelines that faculty can share with students, so it is advice for courses to adopt, not a rule; codebook v2 codes such example language 'encouraged'. The quote has a disclosure cue but no 'should' cue, hence this reason."
+        },
+        "se_courses": {
+          "value": "no public syllabus found",
+          "search_log": "data/sources/162928-johns-hopkins/search-log.md",
+          "reviewed": [
+            "data/sources/162928-johns-hopkins/2026-11-11-oose-course-page.html"
+          ],
+          "note": "EN.601.421 Object-Oriented Software Engineering: the only page on jhu.edu is from Fall 2018, before ChatGPT, so under codebook v2 it does not count. The Spring 2024 syllabus on Notion (off domain) did not load."
+        }
+      }
     },
-    "dept_stance": {
-     "value": "encourage",
-     "quote": "CS&E faculty encourage students to utilize AI throughout their educational journey from introductory courses to senior seminars.",
-     "url": "https://cse.umn.edu/cs/news/cse-prepares-umn-students-ai-powered-workplace",
-     "archive": "data/sources/174066-minnesota/2026-11-11-cse-news-ai-workplace.html",
-     "source_type": "news or announcement",
-     "note": "Only department text on AI found; the department's academic conduct policy does not mention AI. The same paragraph says some introductory courses ban AI and many others allow it with conditions. Codebook v2 states that news on the department's site counts as department text."
+    {
+      "unitid": "152600",
+      "slug": "152600-valparaiso",
+      "name": "Valparaiso University",
+      "coded_at": "2026-11-11",
+      "values": {
+        "univ_stance": {
+          "value": "instructor decides",
+          "quote": "Include a statement that clearly defines the acceptable use of AI for your course.",
+          "url": "https://intra.valpo.edu/cital/wp-content/uploads/sites/13/2025/08/Syllabus-Elements_revised-_2025.pdf",
+          "archive": "data/sources/152600-valparaiso/2026-11-11-cital-syllabus-elements-2025.pdf",
+          "source_type": "policy page",
+          "cue_reason": "The sentence is a required element of every Valpo syllabus, addressed to the instructor, so each course sets its own rule; no university default is stated.",
+          "note": "Required syllabus elements (revised 2025), not a stand-alone policy page; the Honor Council page also tells faculty to address AI in their syllabi."
+        },
+        "univ_tone": {
+          "value": "cautionary",
+          "quote": "Do not mindlessly use AI tools in place of your own thinking, analysis, and general learning",
+          "url": "https://intra.valpo.edu/cital/wp-content/uploads/sites/13/2025/08/Syllabus-Elements_revised-_2025.pdf",
+          "archive": "data/sources/152600-valparaiso/2026-11-11-cital-syllabus-elements-2025.pdf",
+          "source_type": "policy page",
+          "note": "The suggested AI language is a list of warnings (do not, mistakes, verify); the Honor Council and CITAL pages focus on misuse cases and detection."
+        },
+        "dept_stance": {
+          "value": "none found",
+          "search_log": "data/sources/152600-valparaiso/search-log.md",
+          "reviewed": [
+            "data/sources/152600-valparaiso/2026-11-11-dept-math-cs.html",
+            "data/sources/152600-valparaiso/2026-11-11-cs-program.html"
+          ]
+        },
+        "dept_tone": {
+          "value": "none found",
+          "search_log": "data/sources/152600-valparaiso/search-log.md"
+        },
+        "collaboration": {
+          "value": "not discussed",
+          "reviewed": [
+            "data/sources/152600-valparaiso/2026-11-11-cital-syllabus-elements-2025.pdf",
+            "data/sources/152600-valparaiso/2026-11-11-honor-council-ai.html",
+            "data/sources/152600-valparaiso/2026-11-11-cital-honor-code-ai.html"
+          ]
+        },
+        "disclosure": {
+          "value": "encouraged",
+          "quote": "If you use AI, always provide evidence of how AI tool contributed to your work.",
+          "url": "https://intra.valpo.edu/cital/wp-content/uploads/sites/13/2025/08/Syllabus-Elements_revised-_2025.pdf",
+          "archive": "data/sources/152600-valparaiso/2026-11-11-cital-syllabus-elements-2025.pdf",
+          "source_type": "policy page",
+          "cue_reason": "Part of the suggested syllabus language that instructors may adopt, not a rule on its own; codebook v2 codes such example language 'encouraged'. Saying how AI contributed is a disclosure."
+        },
+        "se_courses": {
+          "value": "no public syllabus found",
+          "search_log": "data/sources/152600-valparaiso/search-log.md",
+          "note": "CS 358 Software Design and Development: the only syllabus found (Spring 2010) now returns HTTP 403."
+        }
+      }
     },
-    "dept_tone": {
-     "value": "positive",
-     "quote": "AI is a powerful tool that can improve your productivity as long as you have the fundamental knowledge to understand its limitations and use it effectively.",
-     "url": "https://cse.umn.edu/cs/news/cse-prepares-umn-students-ai-powered-workplace",
-     "archive": "data/sources/174066-minnesota/2026-11-11-cse-news-ai-workplace.html",
-     "source_type": "news or announcement"
+    {
+      "unitid": "162283",
+      "slug": "162283-coppin-state",
+      "name": "Coppin State University",
+      "coded_at": "2026-11-11",
+      "values": {
+        "univ_stance": {
+          "value": "permit with conditions",
+          "quote": "Inappropriate or excessive use of any Artificial Intelligence (AI ) tool or resource for course work or student dependent graded assignments.",
+          "url": "https://www.coppin.edu/sites/default/files/pdf-library/2025-10/Coppin-State-University-Student-Handbook.pdf",
+          "archive": "data/sources/162283-coppin-state/2026-11-11-student-handbook-2025.pdf",
+          "source_type": "handbook",
+          "cue_reason": "The clause bans only inappropriate or excessive use, so ordinary use is not banned by default; codebook v2 codes such a limit 'permit with conditions'. The quote has no permission cue word, hence this reason.",
+          "note": "The only university text on student AI use is this one Code of Conduct clause (Article IV 1.b) in the 2025-26 Student Handbook."
+        },
+        "univ_tone": {
+          "value": "cautionary",
+          "quote": "Inappropriate or excessive use of any Artificial Intelligence (AI ) tool or resource for course work or student dependent graded assignments.",
+          "url": "https://www.coppin.edu/sites/default/files/pdf-library/2025-10/Coppin-State-University-Student-Handbook.pdf",
+          "archive": "data/sources/162283-coppin-state/2026-11-11-student-handbook-2025.pdf",
+          "source_type": "handbook",
+          "note": "AI appears in university rules only as a form of misconduct. The AI certificate training page (not a rule) is upbeat, but the handbook is the more authoritative source (decision rule 1)."
+        },
+        "dept_stance": {
+          "value": "none found",
+          "search_log": "data/sources/162283-coppin-state/search-log.md",
+          "reviewed": [
+            "data/sources/162283-coppin-state/2026-11-11-cs-program.html"
+          ]
+        },
+        "dept_tone": {
+          "value": "none found",
+          "search_log": "data/sources/162283-coppin-state/search-log.md"
+        },
+        "collaboration": {
+          "value": "not discussed",
+          "reviewed": [
+            "data/sources/162283-coppin-state/2026-11-11-student-handbook-2025.pdf",
+            "data/sources/162283-coppin-state/2026-11-11-cs-program.html",
+            "data/sources/162283-coppin-state/2026-11-11-idea-office.html"
+          ]
+        },
+        "disclosure": {
+          "value": "not stated",
+          "reviewed": [
+            "data/sources/162283-coppin-state/2026-11-11-student-handbook-2025.pdf"
+          ]
+        },
+        "se_courses": {
+          "value": "no public syllabus found",
+          "search_log": "data/sources/162283-coppin-state/search-log.md",
+          "note": "COSC 409 Software Engineering is listed in the curriculum; no syllabus is public."
+        }
+      }
     },
-    "collaboration": {
-     "value": "in passing",
-     "quote": "The emphasis is on experimentation, problem-solving, and understanding personal strengths and growth areas when collaborating with AI tools.",
-     "url": "https://cse.umn.edu/cs/news/cse-prepares-umn-students-ai-powered-workplace",
-     "archive": "data/sources/174066-minnesota/2026-11-11-cse-news-ai-workplace.html",
-     "source_type": "news or announcement",
-     "note": "One sentence, describing the CSCI 2521 course; no page reviewed develops AI as a partner further."
+    {
+      "unitid": "230597",
+      "slug": "230597-snow",
+      "name": "Snow College",
+      "coded_at": "2026-11-11",
+      "values": {
+        "univ_stance": {
+          "value": "permit with conditions",
+          "quote": "AI may be used as a tool in a variety of ways unless prohibited by the instructor or college or in violation of academic integrity or other policy or laws.",
+          "url": "https://snow.edu/general/policies/download/412%20AI%20Classroom%20Policy.pdf",
+          "archive": "data/sources/230597-snow/2026-11-11-ai-classroom-policy-412.pdf",
+          "source_type": "policy page",
+          "cue_reason": "States a default of allowed use; the conditions are instructor or college prohibition and integrity rules. 'may be used' is the permission cue, phrased passively.",
+          "note": "Faculty may set Prohibited, Limited or Required use for each course, but the policy states a default, so the default is coded (codebook: code the default)."
+        },
+        "univ_tone": {
+          "value": "positive",
+          "quote": "AI has transformative potential in teaching, research, service, and administration.",
+          "url": "https://snow.edu/general/policies/download/412%20AI%20Classroom%20Policy.pdf",
+          "archive": "data/sources/230597-snow/2026-11-11-ai-classroom-policy-412.pdf",
+          "source_type": "policy page",
+          "note": "Mixed: the opening section names risks (inaccuracy, bias, privacy) right after the benefits, but the policy leads with opportunity, workforce preparation and 'embracing innovation', and plans student access when courses require AI."
+        },
+        "dept_stance": {
+          "value": "none found",
+          "search_log": "data/sources/230597-snow/search-log.md",
+          "reviewed": [
+            "data/sources/230597-snow/2026-11-11-cs-dept.html",
+            "data/sources/230597-snow/2026-11-11-cs2450-syllabus.html"
+          ]
+        },
+        "dept_tone": {
+          "value": "none found",
+          "search_log": "data/sources/230597-snow/search-log.md"
+        },
+        "collaboration": {
+          "value": "in passing",
+          "quote": "If AI is framed as a tool for accessibility, brainstorming, and scaffolding, it can narrow those gaps.",
+          "url": "https://snow.edu/general/policies/download/412%20AI%20Classroom%20Policy.pdf",
+          "archive": "data/sources/230597-snow/2026-11-11-ai-classroom-policy-412.pdf",
+          "source_type": "policy page",
+          "note": "One sentence in the policy's rationale, addressed to faculty; no page reviewed develops AI as a partner further."
+        },
+        "disclosure": {
+          "value": "required",
+          "quote": "AI use in coursework shall be acknowledged in accordance with the expectations outlined by the instructor.",
+          "url": "https://snow.edu/general/policies/download/412%20AI%20Classroom%20Policy.pdf",
+          "archive": "data/sources/230597-snow/2026-11-11-ai-classroom-policy-412.pdf",
+          "source_type": "policy page"
+        },
+        "se_courses": {
+          "value": "not addressed",
+          "reviewed": [
+            "data/sources/230597-snow/2026-11-11-cs2450-syllabus.html"
+          ],
+          "note": "CS 2450 Introduction to Software Engineering: the college's course syllabus (approved Fall 2025) has no AI statement. Section syllabi from instructors are not public."
+        }
+      }
     },
-    "disclosure": {
-     "value": "required",
-     "quote": "Indicate how students will acknowledge GenAI use, including citation practices and required documentation",
-     "url": "https://provost.umn.edu/academic-oversight/genai-syllabus-statements",
-     "archive": "data/sources/174066-minnesota/2026-11-11-provost-genai-syllabus.html",
-     "source_type": "guidance page",
-     "note": "Borderline: the requirement is addressed to instructors of courses that allow AI, telling them to set how students acknowledge it, rather than stated directly to students."
+    {
+      "unitid": "234076",
+      "slug": "234076-virginia",
+      "name": "University of Virginia-Main Campus",
+      "values": {
+        "univ_stance": {
+          "value": "instructor decides",
+          "quote": "It is important for instructors to make explicit in their syllabi and assignment descriptions which uses of Gen-AI are permitted in coursework, if any, and which are prohibited.",
+          "url": "https://genai.provost.virginia.edu/guidance-for-faculty-students",
+          "archive": "data/sources/234076-virginia/2026-11-11-guidance.html",
+          "source_type": "guidance page",
+          "note": "No university default: the Provost guidance leaves permitted and prohibited uses to each instructor; using AI in ways the instructor prohibits may violate the Honor Code."
+        },
+        "univ_tone": {
+          "value": "positive",
+          "quote": "The emergence of this technology provides an opportunity to model intellectual curiosity and openness.",
+          "url": "https://genai.provost.virginia.edu/guidance-for-faculty-students",
+          "archive": "data/sources/234076-virginia/2026-11-11-guidance.html",
+          "source_type": "guidance page",
+          "note": "Mixed page: the faculty guidance frames AI as an aid to learning and asks instructors to encourage appropriate use; the student FAQ warns about inaccurate and biased output. The faculty guidance is most of the page."
+        },
+        "dept_stance": {
+          "value": "none found",
+          "search_log": "data/sources/234076-virginia/search-log.md",
+          "note": "The CS department site (engineering.virginia.edu) returned HTTP 403 to curl and the browser pane could not open it, so no department page is archived. No search turned up a CS department AI policy."
+        },
+        "dept_tone": {
+          "value": "none found",
+          "search_log": "data/sources/234076-virginia/search-log.md"
+        },
+        "collaboration": {
+          "value": "explicit",
+          "quote": "Acknowledge that these tools can be used to aid learning, and encourage your students to use them in appropriate ways.",
+          "url": "https://genai.provost.virginia.edu/guidance-for-faculty-students",
+          "archive": "data/sources/234076-virginia/2026-11-11-guidance.html",
+          "source_type": "guidance page",
+          "cue_reason": "The same paragraph tells instructors to encourage use to aid learning and then lists tutor-like uses, such as breaking down complex concepts and serving as a \"Socratic opponent\", over more than one sentence."
+        },
+        "disclosure": {
+          "value": "encouraged",
+          "quote": "If you have used AI in completing an assignment, even in ways explicitly permitted by the instructor, you should clearly indicate the tool used, how you used it, the prompts you used",
+          "url": "https://genai.provost.virginia.edu/guidance-for-faculty-students",
+          "archive": "data/sources/234076-virginia/2026-11-11-guidance.html",
+          "source_type": "guidance page"
+        },
+        "se_courses": {
+          "value": "allowed with conditions",
+          "quote": "Use of AI Assistants, like ChatGPT, Copilot, etc., is allowed only in limited circumstances",
+          "url": "https://uva-cs3140-s25.github.io/syllabus.html",
+          "archive": "data/sources/234076-virginia/2026-11-11-cs3140-syllabus-s25.html",
+          "source_type": "syllabus",
+          "domain_reason": "UVA CS courses publish their syllabi on GitHub Pages; uva-cs3140-s25 is the course site for CS 3140 Software Development Essentials, Spring 2025.",
+          "note": "CS 3140 Software Development Essentials (Spring 2025), the first software engineering course in catalog order: small AI snippets allowed as with StackOverflow, no more than about 6 lines at a time, and all AI use must be cited in code comments. CS 4501 Software Engineering and LLMs comes later in the catalog."
+        }
+      }
     },
-    "se_courses": {
-     "value": "not addressed",
-     "reviewed": [
-      "data/sources/174066-minnesota/2026-11-11-csci5802-spring2024.html"
-     ],
-     "note": "CSCI 5801 Software Engineering I has no public syllabus; CSCI 5802 Software Engineering II (spring 2024 page, the newest reachable) has an academic integrity section that does not mention AI. CSCI 4821 GenAI for Software Engineering (new in fall 2026) is described only in news, with no public syllabus."
+    {
+      "unitid": "166683",
+      "slug": "166683-mit",
+      "name": "Massachusetts Institute of Technology",
+      "values": {
+        "univ_stance": {
+          "value": "instructor decides",
+          "quote": "Instructors use an easily understandable format to communicate what is and is not permitted; and",
+          "url": "https://facultygovernance.mit.edu/node/2065",
+          "archive": "data/sources/166683-mit/2026-11-11-faculty-ai-policy.html",
+          "source_type": "policy page",
+          "note": "The Aug 2026 policy message asks every class to post its own AI policy and offers a four-option menu; it sets no Institute-wide default."
+        },
+        "univ_tone": {
+          "value": "neutral",
+          "quote": "AI policies should include a rationale.",
+          "url": "https://facultygovernance.mit.edu/node/2065",
+          "archive": "data/sources/166683-mit/2026-11-11-faculty-ai-policy.html",
+          "source_type": "policy page",
+          "note": "The policy message is procedural: what each class policy should contain and where to get help."
+        },
+        "dept_stance": {
+          "value": "none found",
+          "search_log": "data/sources/166683-mit/search-log.md",
+          "reviewed": [
+            "data/sources/166683-mit/2026-11-11-eecs-undergrad.html"
+          ]
+        },
+        "dept_tone": {
+          "value": "none found",
+          "search_log": "data/sources/166683-mit/search-log.md"
+        },
+        "collaboration": {
+          "value": "in passing",
+          "quote": "Courses where independent problem solving is central, but where AI can reasonably serve as a tutor, editor, or study aid.",
+          "url": "https://bpb-us-e1.wpmucdn.com/sites.mit.edu/dist/d/2418/files/2026/09/AI-Committee-Final-Report-Aug-13.pdf",
+          "archive": "data/sources/166683-mit/2026-11-11-ai-committee-report.pdf",
+          "source_type": "guidance page",
+          "domain_reason": "The Ad Hoc Committee report is hosted on the content network behind MIT's WordPress sites (sites.mit.edu, site 2418); the copy on web.mit.edu returned HTTP 404.",
+          "note": "One option in the committee report's policy menu (Appendix B). The report also names individualized tutoring as an opportunity, without developing it as a recommended way to learn."
+        },
+        "disclosure": {
+          "value": "encouraged",
+          "quote": "Students must clearly distinguish their own work from AI-assisted work and cite AI-generated material or ideas.",
+          "url": "https://bpb-us-e1.wpmucdn.com/sites.mit.edu/dist/d/2418/files/2026/09/AI-Committee-Final-Report-Aug-13.pdf",
+          "archive": "data/sources/166683-mit/2026-11-11-ai-committee-report.pdf",
+          "source_type": "guidance page",
+          "domain_reason": "The Ad Hoc Committee report is hosted on the content network behind MIT's WordPress sites (sites.mit.edu, site 2418); the copy on web.mit.edu returned HTTP 404.",
+          "cue_reason": "Codebook v2: this is example policy language from the report's menu (Appendix B) that instructors may adopt; no Institute rule makes it binding, so it is \"encouraged\"."
+        },
+        "se_courses": {
+          "value": "prohibited",
+          "quote": "You may not use code or text produced by advanced code-authoring tools, e.g. Claude Code, Cursor, GitHub Copilot, or other generative AI tools or chatbots, e.g. ChatGPT.",
+          "url": "https://web.mit.edu/6.102/www/sp26/general/collaboration.html",
+          "archive": "data/sources/166683-mit/2026-11-11-6-102-sp26-collaboration.html",
+          "source_type": "syllabus",
+          "note": "6.1020 Software Construction, Spring 2026, the first software engineering course in catalog order (6.1040 Software Studio comes later)."
+        }
+      }
+    },
+    {
+      "unitid": "218539",
+      "slug": "218539-presbyterian",
+      "name": "Presbyterian College",
+      "values": {
+        "univ_stance": {
+          "value": "none found",
+          "search_log": "data/sources/218539-presbyterian/search-log.md",
+          "reviewed": [
+            "data/sources/218539-presbyterian/2026-11-11-blue-book-2026.pdf",
+            "data/sources/218539-presbyterian/2026-11-11-catalog-2026.pdf"
+          ],
+          "note": "No AI policy or guidance found; the Honor Code covers aid \"not allowed by the instructor\" but never mentions AI."
+        },
+        "univ_tone": {
+          "value": "none found",
+          "search_log": "data/sources/218539-presbyterian/search-log.md"
+        },
+        "dept_stance": {
+          "value": "none found",
+          "search_log": "data/sources/218539-presbyterian/search-log.md",
+          "reviewed": [
+            "data/sources/218539-presbyterian/2026-11-11-cs-program.html"
+          ]
+        },
+        "dept_tone": {
+          "value": "none found",
+          "search_log": "data/sources/218539-presbyterian/search-log.md"
+        },
+        "collaboration": {
+          "value": "not discussed",
+          "reviewed": [
+            "data/sources/218539-presbyterian/2026-11-11-blue-book-2026.pdf",
+            "data/sources/218539-presbyterian/2026-11-11-catalog-2026.pdf",
+            "data/sources/218539-presbyterian/2026-11-11-cs-program.html"
+          ]
+        },
+        "disclosure": {
+          "value": "not stated",
+          "reviewed": [
+            "data/sources/218539-presbyterian/2026-11-11-blue-book-2026.pdf",
+            "data/sources/218539-presbyterian/2026-11-11-catalog-2026.pdf",
+            "data/sources/218539-presbyterian/2026-11-11-cs-program.html"
+          ]
+        },
+        "se_courses": {
+          "value": "no public syllabus found",
+          "search_log": "data/sources/218539-presbyterian/search-log.md",
+          "reviewed": [
+            "data/sources/218539-presbyterian/2026-11-11-catalog-2026.pdf"
+          ],
+          "note": "The catalog lists CSC Software Development I and the CSC 4805 Capstone; no public syllabus for either."
+        }
+      }
+    },
+    {
+      "unitid": "220604",
+      "slug": "220604-le-moyne-owen",
+      "name": "LeMoyne-Owen College",
+      "values": {
+        "univ_stance": {
+          "value": "none found",
+          "search_log": "data/sources/220604-le-moyne-owen/search-log.md",
+          "reviewed": [
+            "data/sources/220604-le-moyne-owen/2026-11-11-student-handbook-2024.pdf",
+            "data/sources/220604-le-moyne-owen/2026-11-11-catalog-2025.pdf"
+          ],
+          "note": "No AI policy or guidance found; the Student Handbook's academic dishonesty rules cover cheating and plagiarism but never mention AI."
+        },
+        "univ_tone": {
+          "value": "none found",
+          "search_log": "data/sources/220604-le-moyne-owen/search-log.md"
+        },
+        "dept_stance": {
+          "value": "none found",
+          "search_log": "data/sources/220604-le-moyne-owen/search-log.md",
+          "reviewed": [
+            "data/sources/220604-le-moyne-owen/2026-11-11-cs-program.html"
+          ]
+        },
+        "dept_tone": {
+          "value": "none found",
+          "search_log": "data/sources/220604-le-moyne-owen/search-log.md"
+        },
+        "collaboration": {
+          "value": "not discussed",
+          "reviewed": [
+            "data/sources/220604-le-moyne-owen/2026-11-11-student-handbook-2024.pdf",
+            "data/sources/220604-le-moyne-owen/2026-11-11-catalog-2025.pdf",
+            "data/sources/220604-le-moyne-owen/2026-11-11-cs-program.html"
+          ]
+        },
+        "disclosure": {
+          "value": "not stated",
+          "reviewed": [
+            "data/sources/220604-le-moyne-owen/2026-11-11-student-handbook-2024.pdf",
+            "data/sources/220604-le-moyne-owen/2026-11-11-catalog-2025.pdf",
+            "data/sources/220604-le-moyne-owen/2026-11-11-cs-program.html"
+          ]
+        },
+        "se_courses": {
+          "value": "no public syllabus found",
+          "search_log": "data/sources/220604-le-moyne-owen/search-log.md",
+          "reviewed": [
+            "data/sources/220604-le-moyne-owen/2026-11-11-catalog-2025.pdf"
+          ],
+          "note": "The catalog has no software engineering course; the nearest are COSI 455 Computer Science Projects and COSI 460 Computer Science Capstone, with no public syllabus for either."
+        }
+      }
+    },
+    {
+      "unitid": "213659",
+      "slug": "213659-luzerne",
+      "name": "Luzerne County Community College",
+      "values": {
+        "univ_stance": {
+          "value": "restrict",
+          "quote": "Using AI to complete an examination, assignment, or any other ancillary coursework without instructor authorization",
+          "url": "https://www.luzerne.edu/currentstudents/forms/policies/AcademicHonestyPolicyApprovedOctober302014_Approved_BOT_Jun18_2024.docx",
+          "archive": "data/sources/213659-luzerne/2026-11-11-academic-honesty-policy.docx",
+          "source_type": "policy page",
+          "cue_reason": "Listed under 'Violations of the Academic Honesty Policy'; AI use without instructor authorization is unauthorized use, which codebook v2 codes 'restrict'. Instructors may set class policies, but this policy is in force when they do not.",
+          "note": "Faculty may write class-specific policies distinguishing acceptable, unacceptable or encouraged AI use; the default treats unauthorized AI use as cheating and misconduct."
+        },
+        "univ_tone": {
+          "value": "cautionary",
+          "quote": "Copying another person's work or presenting another person's work as one's own including content generated by generative AI applications, and/or",
+          "url": "https://www.luzerne.edu/currentstudents/forms/policies/AcademicHonestyPolicyApprovedOctober302014_Approved_BOT_Jun18_2024.docx",
+          "archive": "data/sources/213659-luzerne/2026-11-11-academic-honesty-policy.docx",
+          "source_type": "policy page",
+          "note": "AI appears only in the list of violations."
+        },
+        "dept_stance": {
+          "value": "none found",
+          "search_log": "data/sources/213659-luzerne/search-log.md",
+          "reviewed": [
+            "data/sources/213659-luzerne/2026-11-11-cs-program.html"
+          ]
+        },
+        "dept_tone": {
+          "value": "none found",
+          "search_log": "data/sources/213659-luzerne/search-log.md"
+        },
+        "collaboration": {
+          "value": "not discussed",
+          "reviewed": [
+            "data/sources/213659-luzerne/2026-11-11-academic-honesty-policy.docx",
+            "data/sources/213659-luzerne/2026-11-11-cs-program.html"
+          ]
+        },
+        "disclosure": {
+          "value": "not stated",
+          "reviewed": [
+            "data/sources/213659-luzerne/2026-11-11-academic-honesty-policy.docx",
+            "data/sources/213659-luzerne/2026-11-11-cs-program.html"
+          ],
+          "note": "The policy requires citing other people's work but says nothing about disclosing AI use."
+        },
+        "se_courses": {
+          "value": "no public syllabus found",
+          "search_log": "data/sources/213659-luzerne/search-log.md",
+          "reviewed": [
+            "data/sources/213659-luzerne/2026-11-11-cs-program.html"
+          ],
+          "note": "The Computer Science A.S. has no software engineering course; no public syllabus found."
+        }
+      }
+    },
+    {
+      "unitid": "201885",
+      "slug": "201885-cincinnati",
+      "name": "University of Cincinnati",
+      "values": {
+        "univ_stance": {
+          "value": "instructor decides",
+          "quote": "Communicate with your instructors about the acceptability and appropriate use of AI and Generative AI tools in your coursework.",
+          "url": "https://ai.uc.edu/about/ai-guidelines",
+          "archive": "data/sources/201885-cincinnati/2026-11-11-ai-guidelines.html",
+          "source_type": "guidance page",
+          "note": "The students page and the June 2026 blog guide also send students to each syllabus; the Student Code of Conduct covers misuse."
+        },
+        "univ_tone": {
+          "value": "positive",
+          "quote": "AI is a powerful partner.",
+          "url": "https://ai.uc.edu/about/ai-guidelines",
+          "archive": "data/sources/201885-cincinnati/2026-11-11-ai-guidelines.html",
+          "source_type": "guidance page"
+        },
+        "dept_stance": {
+          "value": "none found",
+          "search_log": "data/sources/201885-cincinnati/search-log.md",
+          "reviewed": [
+            "data/sources/201885-cincinnati/2026-11-11-cs-department.html"
+          ]
+        },
+        "dept_tone": {
+          "value": "none found",
+          "search_log": "data/sources/201885-cincinnati/search-log.md"
+        },
+        "collaboration": {
+          "value": "explicit",
+          "quote": "Treat it like a tutor, not a ghostwriter.",
+          "url": "https://www.uc.edu/blog/using-ai-in-college-rules.html",
+          "archive": "data/sources/201885-cincinnati/2026-11-11-chatgpt-guide-blog.html",
+          "source_type": "guidance page",
+          "note": "The teaching resources page also calls AI a personalized tutor for students; the guidelines open with 'AI is a powerful partner.'"
+        },
+        "disclosure": {
+          "value": "not stated",
+          "reviewed": [
+            "data/sources/201885-cincinnati/2026-11-11-ai-guidelines.html",
+            "data/sources/201885-cincinnati/2026-11-11-ai-students.html",
+            "data/sources/201885-cincinnati/2026-11-11-chatgpt-guide-blog.html",
+            "data/sources/201885-cincinnati/2026-11-11-ai-teaching-rftl.html"
+          ],
+          "note": "Disclosure is left to instructors: the blog guide says some instructors may allow AI if students disclose or cite it, and tells students to be honest if a professor requires disclosure. No university-level expectation."
+        },
+        "se_courses": {
+          "value": "no public syllabus found",
+          "search_log": "data/sources/201885-cincinnati/search-log.md",
+          "note": "The EECE3093C/CS3093C Software Engineering course site (uc3093c.github.io) returned HTTP 404; no other public syllabus found."
+        }
+      }
     }
-   }
-  },
-  {
-   "unitid": "162928",
-   "slug": "162928-johns-hopkins",
-   "name": "Johns Hopkins University",
-   "coded_at": "2026-11-11",
-   "values": {
-    "univ_stance": {
-     "value": "instructor decides",
-     "quote": "It is important for faculty to clearly outline the expectations of generative AI usage at the beginning of a course to avoid frustration in students’ learning processes.",
-     "url": "https://teaching.jhu.edu/university-teaching-policies/generative-ai/guidelines/",
-     "archive": "data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-guidelines.html",
-     "source_type": "guidance page",
-     "note": "No university-wide default found; the teaching guidance leaves the rule to each course and its division."
-    },
-    "univ_tone": {
-     "value": "cautionary",
-     "quote": "there is an abundance of ethical considerations that demand careful attention.",
-     "url": "https://teaching.jhu.edu/university-teaching-policies/generative-ai/guidelines/",
-     "archive": "data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-guidelines.html",
-     "source_type": "guidance page",
-     "note": "The guidelines page is mostly FERPA, HIPAA, ownership, bias and privacy risks. The parent overview page (curl blocked, read in the browser) is more upbeat about benefits; the page with the rules was coded."
-    },
-    "dept_stance": {
-     "value": "none found",
-     "search_log": "data/sources/162928-johns-hopkins/search-log.md",
-     "reviewed": [
-      "data/sources/162928-johns-hopkins/2026-11-11-cs-home.html",
-      "data/sources/162928-johns-hopkins/2026-11-11-cs-integrity-code.html",
-      "data/sources/162928-johns-hopkins/2026-11-11-cs-undergrad-current.html",
-      "data/sources/162928-johns-hopkins/2026-11-11-cs-support-ai-wiki.html"
-     ]
-    },
-    "dept_tone": {
-     "value": "none found",
-     "search_log": "data/sources/162928-johns-hopkins/search-log.md"
-    },
-    "collaboration": {
-     "value": "not discussed",
-     "reviewed": [
-      "data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-guidelines.html",
-      "data/sources/162928-johns-hopkins/2026-11-11-cs-integrity-code.html",
-      "data/sources/162928-johns-hopkins/2026-11-11-oose-course-page.html"
-     ]
-    },
-    "disclosure": {
-     "value": "encouraged",
-     "quote": "Transparency: Respect intellectual property rights by acknowledging the sources of AI-generated content used in your work.",
-     "url": "https://teaching.jhu.edu/university-teaching-policies/generative-ai/guidelines/",
-     "archive": "data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-guidelines.html",
-     "source_type": "guidance page",
-     "cue_reason": "Listed under example guidelines that faculty can share with students, so it is advice for courses to adopt, not a rule; codebook v2 codes such example language 'encouraged'. The quote has a disclosure cue but no 'should' cue, hence this reason."
-    },
-    "se_courses": {
-     "value": "no public syllabus found",
-     "search_log": "data/sources/162928-johns-hopkins/search-log.md",
-     "reviewed": [
-      "data/sources/162928-johns-hopkins/2026-11-11-oose-course-page.html"
-     ],
-     "note": "EN.601.421 Object-Oriented Software Engineering: the only page on jhu.edu is from Fall 2018, before ChatGPT, so under codebook v2 it does not count. The Spring 2024 syllabus on Notion (off domain) did not load."
-    }
-   }
-  },
-  {
-   "unitid": "152600",
-   "slug": "152600-valparaiso",
-   "name": "Valparaiso University",
-   "coded_at": "2026-11-11",
-   "values": {
-    "univ_stance": {
-     "value": "instructor decides",
-     "quote": "Include a statement that clearly defines the acceptable use of AI for your course.",
-     "url": "https://intra.valpo.edu/cital/wp-content/uploads/sites/13/2025/08/Syllabus-Elements_revised-_2025.pdf",
-     "archive": "data/sources/152600-valparaiso/2026-11-11-cital-syllabus-elements-2025.pdf",
-     "source_type": "policy page",
-     "cue_reason": "The sentence is a required element of every Valpo syllabus, addressed to the instructor, so each course sets its own rule; no university default is stated.",
-     "note": "Required syllabus elements (revised 2025), not a stand-alone policy page; the Honor Council page also tells faculty to address AI in their syllabi."
-    },
-    "univ_tone": {
-     "value": "cautionary",
-     "quote": "Do not mindlessly use AI tools in place of your own thinking, analysis, and general learning",
-     "url": "https://intra.valpo.edu/cital/wp-content/uploads/sites/13/2025/08/Syllabus-Elements_revised-_2025.pdf",
-     "archive": "data/sources/152600-valparaiso/2026-11-11-cital-syllabus-elements-2025.pdf",
-     "source_type": "policy page",
-     "note": "The suggested AI language is a list of warnings (do not, mistakes, verify); the Honor Council and CITAL pages focus on misuse cases and detection."
-    },
-    "dept_stance": {
-     "value": "none found",
-     "search_log": "data/sources/152600-valparaiso/search-log.md",
-     "reviewed": [
-      "data/sources/152600-valparaiso/2026-11-11-dept-math-cs.html",
-      "data/sources/152600-valparaiso/2026-11-11-cs-program.html"
-     ]
-    },
-    "dept_tone": {
-     "value": "none found",
-     "search_log": "data/sources/152600-valparaiso/search-log.md"
-    },
-    "collaboration": {
-     "value": "not discussed",
-     "reviewed": [
-      "data/sources/152600-valparaiso/2026-11-11-cital-syllabus-elements-2025.pdf",
-      "data/sources/152600-valparaiso/2026-11-11-honor-council-ai.html",
-      "data/sources/152600-valparaiso/2026-11-11-cital-honor-code-ai.html"
-     ]
-    },
-    "disclosure": {
-     "value": "encouraged",
-     "quote": "If you use AI, always provide evidence of how AI tool contributed to your work.",
-     "url": "https://intra.valpo.edu/cital/wp-content/uploads/sites/13/2025/08/Syllabus-Elements_revised-_2025.pdf",
-     "archive": "data/sources/152600-valparaiso/2026-11-11-cital-syllabus-elements-2025.pdf",
-     "source_type": "policy page",
-     "cue_reason": "Part of the suggested syllabus language that instructors may adopt, not a rule on its own; codebook v2 codes such example language 'encouraged'. Saying how AI contributed is a disclosure."
-    },
-    "se_courses": {
-     "value": "no public syllabus found",
-     "search_log": "data/sources/152600-valparaiso/search-log.md",
-     "note": "CS 358 Software Design and Development: the only syllabus found (Spring 2010) now returns HTTP 403."
-    }
-   }
-  },
-  {
-   "unitid": "162283",
-   "slug": "162283-coppin-state",
-   "name": "Coppin State University",
-   "coded_at": "2026-11-11",
-   "values": {
-    "univ_stance": {
-     "value": "permit with conditions",
-     "quote": "Inappropriate or excessive use of any Artificial Intelligence (AI ) tool or resource for course work or student dependent graded assignments.",
-     "url": "https://www.coppin.edu/sites/default/files/pdf-library/2025-10/Coppin-State-University-Student-Handbook.pdf",
-     "archive": "data/sources/162283-coppin-state/2026-11-11-student-handbook-2025.pdf",
-     "source_type": "handbook",
-     "cue_reason": "The clause bans only inappropriate or excessive use, so ordinary use is not banned by default; codebook v2 codes such a limit 'permit with conditions'. The quote has no permission cue word, hence this reason.",
-     "note": "The only university text on student AI use is this one Code of Conduct clause (Article IV 1.b) in the 2025-26 Student Handbook."
-    },
-    "univ_tone": {
-     "value": "cautionary",
-     "quote": "Inappropriate or excessive use of any Artificial Intelligence (AI ) tool or resource for course work or student dependent graded assignments.",
-     "url": "https://www.coppin.edu/sites/default/files/pdf-library/2025-10/Coppin-State-University-Student-Handbook.pdf",
-     "archive": "data/sources/162283-coppin-state/2026-11-11-student-handbook-2025.pdf",
-     "source_type": "handbook",
-     "note": "AI appears in university rules only as a form of misconduct. The AI certificate training page (not a rule) is upbeat, but the handbook is the more authoritative source (decision rule 1)."
-    },
-    "dept_stance": {
-     "value": "none found",
-     "search_log": "data/sources/162283-coppin-state/search-log.md",
-     "reviewed": [
-      "data/sources/162283-coppin-state/2026-11-11-cs-program.html"
-     ]
-    },
-    "dept_tone": {
-     "value": "none found",
-     "search_log": "data/sources/162283-coppin-state/search-log.md"
-    },
-    "collaboration": {
-     "value": "not discussed",
-     "reviewed": [
-      "data/sources/162283-coppin-state/2026-11-11-student-handbook-2025.pdf",
-      "data/sources/162283-coppin-state/2026-11-11-cs-program.html",
-      "data/sources/162283-coppin-state/2026-11-11-idea-office.html"
-     ]
-    },
-    "disclosure": {
-     "value": "not stated",
-     "reviewed": [
-      "data/sources/162283-coppin-state/2026-11-11-student-handbook-2025.pdf"
-     ]
-    },
-    "se_courses": {
-     "value": "no public syllabus found",
-     "search_log": "data/sources/162283-coppin-state/search-log.md",
-     "note": "COSC 409 Software Engineering is listed in the curriculum; no syllabus is public."
-    }
-   }
-  },
-  {
-   "unitid": "230597",
-   "slug": "230597-snow",
-   "name": "Snow College",
-   "coded_at": "2026-11-11",
-   "values": {
-    "univ_stance": {
-     "value": "permit with conditions",
-     "quote": "AI may be used as a tool in a variety of ways unless prohibited by the instructor or college or in violation of academic integrity or other policy or laws.",
-     "url": "https://snow.edu/general/policies/download/412%20AI%20Classroom%20Policy.pdf",
-     "archive": "data/sources/230597-snow/2026-11-11-ai-classroom-policy-412.pdf",
-     "source_type": "policy page",
-     "cue_reason": "States a default of allowed use; the conditions are instructor or college prohibition and integrity rules. 'may be used' is the permission cue, phrased passively.",
-     "note": "Faculty may set Prohibited, Limited or Required use for each course, but the policy states a default, so the default is coded (codebook: code the default)."
-    },
-    "univ_tone": {
-     "value": "positive",
-     "quote": "AI has transformative potential in teaching, research, service, and administration.",
-     "url": "https://snow.edu/general/policies/download/412%20AI%20Classroom%20Policy.pdf",
-     "archive": "data/sources/230597-snow/2026-11-11-ai-classroom-policy-412.pdf",
-     "source_type": "policy page",
-     "note": "Mixed: the opening section names risks (inaccuracy, bias, privacy) right after the benefits, but the policy leads with opportunity, workforce preparation and 'embracing innovation', and plans student access when courses require AI."
-    },
-    "dept_stance": {
-     "value": "none found",
-     "search_log": "data/sources/230597-snow/search-log.md",
-     "reviewed": [
-      "data/sources/230597-snow/2026-11-11-cs-dept.html",
-      "data/sources/230597-snow/2026-11-11-cs2450-syllabus.html"
-     ]
-    },
-    "dept_tone": {
-     "value": "none found",
-     "search_log": "data/sources/230597-snow/search-log.md"
-    },
-    "collaboration": {
-     "value": "in passing",
-     "quote": "If AI is framed as a tool for accessibility, brainstorming, and scaffolding, it can narrow those gaps.",
-     "url": "https://snow.edu/general/policies/download/412%20AI%20Classroom%20Policy.pdf",
-     "archive": "data/sources/230597-snow/2026-11-11-ai-classroom-policy-412.pdf",
-     "source_type": "policy page",
-     "note": "One sentence in the policy's rationale, addressed to faculty; no page reviewed develops AI as a partner further."
-    },
-    "disclosure": {
-     "value": "required",
-     "quote": "AI use in coursework shall be acknowledged in accordance with the expectations outlined by the instructor.",
-     "url": "https://snow.edu/general/policies/download/412%20AI%20Classroom%20Policy.pdf",
-     "archive": "data/sources/230597-snow/2026-11-11-ai-classroom-policy-412.pdf",
-     "source_type": "policy page"
-    },
-    "se_courses": {
-     "value": "not addressed",
-     "reviewed": [
-      "data/sources/230597-snow/2026-11-11-cs2450-syllabus.html"
-     ],
-     "note": "CS 2450 Introduction to Software Engineering: the college's course syllabus (approved Fall 2025) has no AI statement. Section syllabi from instructors are not public."
-    }
-   }
-  },
-  {
-   "unitid": "234076",
-   "slug": "234076-virginia",
-   "name": "University of Virginia-Main Campus",
-   "values": {
-    "univ_stance": {
-     "value": "instructor decides",
-     "quote": "It is important for instructors to make explicit in their syllabi and assignment descriptions which uses of Gen-AI are permitted in coursework, if any, and which are prohibited.",
-     "url": "https://genai.provost.virginia.edu/guidance-for-faculty-students",
-     "archive": "data/sources/234076-virginia/2026-11-11-guidance.html",
-     "source_type": "guidance page",
-     "note": "No university default: the Provost guidance leaves permitted and prohibited uses to each instructor; using AI in ways the instructor prohibits may violate the Honor Code."
-    },
-    "univ_tone": {
-     "value": "positive",
-     "quote": "The emergence of this technology provides an opportunity to model intellectual curiosity and openness.",
-     "url": "https://genai.provost.virginia.edu/guidance-for-faculty-students",
-     "archive": "data/sources/234076-virginia/2026-11-11-guidance.html",
-     "source_type": "guidance page",
-     "note": "Mixed page: the faculty guidance frames AI as an aid to learning and asks instructors to encourage appropriate use; the student FAQ warns about inaccurate and biased output. The faculty guidance is most of the page."
-    },
-    "dept_stance": {
-     "value": "none found",
-     "search_log": "data/sources/234076-virginia/search-log.md",
-     "note": "The CS department site (engineering.virginia.edu) returned HTTP 403 to curl and the browser pane could not open it, so no department page is archived. No search turned up a CS department AI policy."
-    },
-    "dept_tone": {
-     "value": "none found",
-     "search_log": "data/sources/234076-virginia/search-log.md"
-    },
-    "collaboration": {
-     "value": "explicit",
-     "quote": "Acknowledge that these tools can be used to aid learning, and encourage your students to use them in appropriate ways.",
-     "url": "https://genai.provost.virginia.edu/guidance-for-faculty-students",
-     "archive": "data/sources/234076-virginia/2026-11-11-guidance.html",
-     "source_type": "guidance page",
-     "cue_reason": "The same paragraph tells instructors to encourage use to aid learning and then lists tutor-like uses, such as breaking down complex concepts and serving as a \"Socratic opponent\", over more than one sentence."
-    },
-    "disclosure": {
-     "value": "encouraged",
-     "quote": "If you have used AI in completing an assignment, even in ways explicitly permitted by the instructor, you should clearly indicate the tool used, how you used it, the prompts you used",
-     "url": "https://genai.provost.virginia.edu/guidance-for-faculty-students",
-     "archive": "data/sources/234076-virginia/2026-11-11-guidance.html",
-     "source_type": "guidance page"
-    },
-    "se_courses": {
-     "value": "allowed with conditions",
-     "quote": "Use of AI Assistants, like ChatGPT, Copilot, etc., is allowed only in limited circumstances",
-     "url": "https://uva-cs3140-s25.github.io/syllabus.html",
-     "archive": "data/sources/234076-virginia/2026-11-11-cs3140-syllabus-s25.html",
-     "source_type": "syllabus",
-     "domain_reason": "UVA CS courses publish their syllabi on GitHub Pages; uva-cs3140-s25 is the course site for CS 3140 Software Development Essentials, Spring 2025.",
-     "note": "CS 3140 Software Development Essentials (Spring 2025), the first software engineering course in catalog order: small AI snippets allowed as with StackOverflow, no more than about 6 lines at a time, and all AI use must be cited in code comments. CS 4501 Software Engineering and LLMs comes later in the catalog."
-    }
-   }
-  },
-  {
-   "unitid": "166683",
-   "slug": "166683-mit",
-   "name": "Massachusetts Institute of Technology",
-   "values": {
-    "univ_stance": {
-     "value": "instructor decides",
-     "quote": "Instructors use an easily understandable format to communicate what is and is not permitted; and",
-     "url": "https://facultygovernance.mit.edu/node/2065",
-     "archive": "data/sources/166683-mit/2026-11-11-faculty-ai-policy.html",
-     "source_type": "policy page",
-     "note": "The Aug 2026 policy message asks every class to post its own AI policy and offers a four-option menu; it sets no Institute-wide default."
-    },
-    "univ_tone": {
-     "value": "neutral",
-     "quote": "AI policies should include a rationale.",
-     "url": "https://facultygovernance.mit.edu/node/2065",
-     "archive": "data/sources/166683-mit/2026-11-11-faculty-ai-policy.html",
-     "source_type": "policy page",
-     "note": "The policy message is procedural: what each class policy should contain and where to get help."
-    },
-    "dept_stance": {
-     "value": "none found",
-     "search_log": "data/sources/166683-mit/search-log.md",
-     "reviewed": [
-      "data/sources/166683-mit/2026-11-11-eecs-undergrad.html"
-     ]
-    },
-    "dept_tone": {
-     "value": "none found",
-     "search_log": "data/sources/166683-mit/search-log.md"
-    },
-    "collaboration": {
-     "value": "in passing",
-     "quote": "Courses where independent problem solving is central, but where AI can reasonably serve as a tutor, editor, or study aid.",
-     "url": "https://bpb-us-e1.wpmucdn.com/sites.mit.edu/dist/d/2418/files/2026/09/AI-Committee-Final-Report-Aug-13.pdf",
-     "archive": "data/sources/166683-mit/2026-11-11-ai-committee-report.pdf",
-     "source_type": "guidance page",
-     "domain_reason": "The Ad Hoc Committee report is hosted on the content network behind MIT's WordPress sites (sites.mit.edu, site 2418); the copy on web.mit.edu returned HTTP 404.",
-     "note": "One option in the committee report's policy menu (Appendix B). The report also names individualized tutoring as an opportunity, without developing it as a recommended way to learn."
-    },
-    "disclosure": {
-     "value": "encouraged",
-     "quote": "Students must clearly distinguish their own work from AI-assisted work and cite AI-generated material or ideas.",
-     "url": "https://bpb-us-e1.wpmucdn.com/sites.mit.edu/dist/d/2418/files/2026/09/AI-Committee-Final-Report-Aug-13.pdf",
-     "archive": "data/sources/166683-mit/2026-11-11-ai-committee-report.pdf",
-     "source_type": "guidance page",
-     "domain_reason": "The Ad Hoc Committee report is hosted on the content network behind MIT's WordPress sites (sites.mit.edu, site 2418); the copy on web.mit.edu returned HTTP 404.",
-     "cue_reason": "Codebook v2: this is example policy language from the report's menu (Appendix B) that instructors may adopt; no Institute rule makes it binding, so it is \"encouraged\"."
-    },
-    "se_courses": {
-     "value": "prohibited",
-     "quote": "You may not use code or text produced by advanced code-authoring tools, e.g. Claude Code, Cursor, GitHub Copilot, or other generative AI tools or chatbots, e.g. ChatGPT.",
-     "url": "https://web.mit.edu/6.102/www/sp26/general/collaboration.html",
-     "archive": "data/sources/166683-mit/2026-11-11-6-102-sp26-collaboration.html",
-     "source_type": "syllabus",
-     "note": "6.1020 Software Construction, Spring 2026, the first software engineering course in catalog order (6.1040 Software Studio comes later)."
-    }
-   }
-  },
-  {
-   "unitid": "218539",
-   "slug": "218539-presbyterian",
-   "name": "Presbyterian College",
-   "values": {
-    "univ_stance": {
-     "value": "none found",
-     "search_log": "data/sources/218539-presbyterian/search-log.md",
-     "reviewed": [
-      "data/sources/218539-presbyterian/2026-11-11-blue-book-2026.pdf",
-      "data/sources/218539-presbyterian/2026-11-11-catalog-2026.pdf"
-     ],
-     "note": "No AI policy or guidance found; the Honor Code covers aid \"not allowed by the instructor\" but never mentions AI."
-    },
-    "univ_tone": {
-     "value": "none found",
-     "search_log": "data/sources/218539-presbyterian/search-log.md"
-    },
-    "dept_stance": {
-     "value": "none found",
-     "search_log": "data/sources/218539-presbyterian/search-log.md",
-     "reviewed": [
-      "data/sources/218539-presbyterian/2026-11-11-cs-program.html"
-     ]
-    },
-    "dept_tone": {
-     "value": "none found",
-     "search_log": "data/sources/218539-presbyterian/search-log.md"
-    },
-    "collaboration": {
-     "value": "not discussed",
-     "reviewed": [
-      "data/sources/218539-presbyterian/2026-11-11-blue-book-2026.pdf",
-      "data/sources/218539-presbyterian/2026-11-11-catalog-2026.pdf",
-      "data/sources/218539-presbyterian/2026-11-11-cs-program.html"
-     ]
-    },
-    "disclosure": {
-     "value": "not stated",
-     "reviewed": [
-      "data/sources/218539-presbyterian/2026-11-11-blue-book-2026.pdf",
-      "data/sources/218539-presbyterian/2026-11-11-catalog-2026.pdf",
-      "data/sources/218539-presbyterian/2026-11-11-cs-program.html"
-     ]
-    },
-    "se_courses": {
-     "value": "no public syllabus found",
-     "search_log": "data/sources/218539-presbyterian/search-log.md",
-     "reviewed": [
-      "data/sources/218539-presbyterian/2026-11-11-catalog-2026.pdf"
-     ],
-     "note": "The catalog lists CSC Software Development I and the CSC 4805 Capstone; no public syllabus for either."
-    }
-   }
-  }
- ]
+  ]
 }

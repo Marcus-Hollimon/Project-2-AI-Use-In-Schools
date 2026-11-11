@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T16:06:25.976324Z",
+ "generatedAt": "2026-11-11T16:14:27.738309Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -916,12 +916,49 @@
    "evidence": "`progress/pilot-cost.md`, `data/coded/values.json`"
   },
   {
-   "time": "2026-11-11T16:06:14.775000Z",
+   "time": "2026-11-11T16:06:31Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Main coding 3 of 10: Virginia, MIT, Presbyterian coded",
+   "commit": "228b6f3",
+   "note": "written by Claude, pushed from Marcus's account"
+  },
+  {
+   "time": "2026-11-11T16:06:56.582000Z",
    "actor": "Claude",
    "kind": "reply",
    "turn": 18,
-   "text": "Build.py crashed. Looking at why before committing.",
-   "toolCalls": 78
+   "text": "Virginia, MIT and Presbyterian are coded and pass every check. That makes 8 of 15 schools done, all passing. The three took 6 minutes and 4 points of the 5-hour limit (45% to 49%). That's cheaper than the pilot, so the remaining 7 should fit easily before the 2:40 PM reset.\n\n**What the three schools say:**\n- **Virginia:** Each instructor sets the AI rules, and there's no default. The tone is mostly positive: faculty are told to encourage appropriate use and to treat AI as a learning aid, with tutor-like examples. Students \"should\" say when they used AI, which counts as encouraged, not required. Virginia's software engineering course, CS 3140 (Spring 2025), allows small AI snippets if each one is cited in the code.\n- **MIT:** Its August 2026 policy has every class post its own AI rules, picked from a four-option menu. The tone is neutral and procedural. In the software engineering course, 6.1020 (Spring 2026), AI-written code or text is banned outright.\n- **Presbyterian:** I found nothing about AI. The honor code and the 2026-27 catalog never mention it, so every answer is \"none found\".\n\n**A gap you should know about:** Virginia's CS department site blocks automated downloads, and my browser pane couldn't open it either. I coded the department as \"none found\" based on the searches alone, and wrote a note saying its pages were never read directly. As your standing rule says, I didn't retry with browser-like headers.\n\n**Mistakes I made and fixed:**\n- I stored one school ID as a number instead of text, and the checker treated Virginia as not coded.\n- I pointed two MIT values at the extracted text file instead of the PDF.\n- I left a column out of a log row, which crashed the build.\n\nThe checks caught all three before the commit. One checker quirk made a correct Virginia quote fail on a period after bold text. I shortened the quote instead of changing the checker mid-study. All of these are written up in STATE.md.\n\nEverything is committed and pushed (228b6f3). The GitHub check for this push was still queued; the previous one passed.\n\nContext grew about 76k since the last compact, below your 100k to 150k range. I'm compacting at the 3-school mark as planned. Type this:\n\n```\n/compact Phase 2: 8 of 15 schools coded, 7 left starting with Le Moyne-Owen (loc.edu). Read progress/STATE.md first: it has the coding procedure, the remaining schools with slugs and domains, codebook v2, and the lessons from the last three schools. Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, and the rule not to retry blocked downloads with browser-like headers.\n```",
+   "toolCalls": 81
+  },
+  {
+   "time": "2026-11-11T16:07:23.872000Z",
+   "actor": "Marcus",
+   "kind": "command",
+   "text": "/compact Phase 2: 8 of 15 schools coded, 7 left starting with Le Moyne-Owen (loc.edu). Read progress/STATE.md first: it has the coding procedure, the remaining schools with slugs and domains, codebook v2, and the lessons from the last three schools. Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, and the rule not to retry blocked downloads with browser-like headers."
+  },
+  {
+   "time": "2026-11-11T16:08:47.595000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 19,
+   "text": "continue"
+  },
+  {
+   "time": "2026-11-11T16:13:33.276000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 19,
+   "text": "Cincinnati: university guidance saved; now checking its software engineering course site (EECE/CS 3093C) and the CS department page.",
+   "toolCalls": 73
+  },
+  {
+   "time": "2026-11-11T16:14:27Z",
+   "actor": "Claude",
+   "kind": "milestone",
+   "phase": "2",
+   "text": "Main coding 6 of 10: Le Moyne-Owen, Luzerne, Cincinnati coded; all 11 coded schools pass check_study.py. Checker and save_page now handle Word (.docx) archives (study/docx_text.py writes the text beside them; new test; study 33/33). 5-hour 52% to 57%. Prepared the fifth /compact.",
+   "evidence": "`progress/pilot-cost.md`, `data/coded/values.json`, `validation/runs/2026-11-11T16-12-28-115Z_study.json`"
   }
  ]
 }

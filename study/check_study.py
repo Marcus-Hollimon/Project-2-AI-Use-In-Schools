@@ -174,10 +174,12 @@ def check_school(school, sample_row, codebook, root=ROOT):
             continue
         meta = json.loads(meta_path.read_text(encoding="utf-8"))
         text_path = apath
-        if apath.suffix == ".pdf":
+        # PDF and Word archives are binary: S1 searches the extracted text saved beside them
+        # (<archive>.txt); S2 still hashes the original file.
+        if apath.suffix in (".pdf", ".docx"):
             text_path = Path(str(apath) + ".txt")
         if not text_path.exists():
-            add("S1", False, "no text to search for %s (PDF without extracted text)" % archive, var)
+            add("S1", False, "no text to search for %s (PDF or Word file without extracted text)" % archive, var)
         else:
             found = normalize(quote) in page_text(text_path)
             add("S1", found, "quote %s in %s" % ("found" if found else "NOT found", archive), var)

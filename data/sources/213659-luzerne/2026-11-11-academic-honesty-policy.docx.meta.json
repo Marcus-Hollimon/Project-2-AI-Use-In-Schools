@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.luzerne.edu/currentstudents/forms/policies/AcademicHonestyPolicyApprovedOctober302014_Approved_BOT_Jun18_2024.docx",
+ "final_url": "https://www.luzerne.edu/currentstudents/forms/policies/AcademicHonestyPolicyApprovedOctober302014_Approved_BOT_Jun18_2024.docx",
+ "http_status": 200,
+ "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+ "fetched_at": "2026-11-11T11:11:43-05:00",
+ "sha256": "d0ac129c06d2b80674e44b4db6d5d481ace101830515f0732e9ef2e75291aa5b",
+ "bytes": 45213
+}

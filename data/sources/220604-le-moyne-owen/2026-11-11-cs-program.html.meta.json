@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://loc.edu/academics/computer-science/",
+ "final_url": "https://loc.edu/academics/computer-science/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T11:09:24-05:00",
+ "sha256": "10bddd5161d71f06975ff086269e4bb664f18b567a663f804ffd7224d67469ad",
+ "bytes": 345531
+}
