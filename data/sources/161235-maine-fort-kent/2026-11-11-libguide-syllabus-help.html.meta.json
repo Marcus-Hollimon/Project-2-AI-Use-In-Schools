@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://umfk-umm.libguides.com/c.php?g=1379765&p=10640280",
+ "final_url": "https://umfk-umm.libguides.com/c.php?g=1379765&p=10640280",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:39:34-05:00",
+ "sha256": "ab1bcab33dcfa2428a9cea4a46ef50cc7fc2b282461c66201d4fab8f8ff0a881",
+ "bytes": 54330
+}

@@ -2,14 +2,16 @@
 
 Current phase: 5 More schools (15 to 36; spec `specs/phase-5-more-schools.md`, approved by Marcus 15:15:40 with one extra Ohio school, so 21 new, 36 in all). Evaluation moves to Phase 6. Phase 4 Validation is done.
 
-Last updated: 2026-11-11T16:34:45-05:00 by Claude (session a9056776), 17 of 21 schools coded, /compact prepared.
+Last updated: 2026-11-11T16:41:39-05:00 by Claude (session a9056776), 18 of 21 schools coded; PAUSED for the
+5-hour window (83% at 16:41; the spec's stop line is 85%; it resets 7:40 PM EST). Resume after the reset.
 
 ## FIRST, right after the /compact
 1. Take a usage reading marked "after /compact" (full 7-column row in `progress/usage.md`, phase 5).
-2. Continue coding with school 18, Maine Fort Kent 161235 (order below). Done and passing: Iowa State,
+2. Continue coding with school 19, Berry 139144 (order below), then Tidewater 233772 and Case Western 201645.
+   Done and passing: Iowa State,
    Stanford, NYIT, West Virginia Wesleyan, Glendale CC, Arizona State, Rice, Eastern Kentucky, Nevada State,
-   UDC, UMKC, Penn, College of Charleston, Westminster, Niagara CC, Temple, Nova Southeastern (rows in `progress/pilot-cost.md`).
-   Maine Fort Kent's search queries now use `umfk.maine.edu` (checker fix below): about 2 to 4 five-hour points and 30k to 50k context per school.
+   UDC, UMKC, Penn, College of Charleston, Westminster, Niagara CC, Temple, Nova Southeastern, Maine Fort Kent (rows in `progress/pilot-cost.md`).
+   About 2 to 6 five-hour points and 30k to 50k context per school (Maine Fort Kent cost 4).
    Only 2 schools fit between compacts at that rate (context starts near 100k after a compact). Cost rows: scratchpad `costrow.py "<School unitid>" <start> <5h> <weekly>
    <context> <searches> "<pages>"` (takes the time from `date -Iseconds` itself).
 3. Prepare the next /compact after about 3 to 4 more schools (context near 190k).
@@ -72,6 +74,14 @@ Last updated: 2026-11-11T16:34:45-05:00 by Claude (session a9056776), 17 of 21 s
    learning"); collaboration "not discussed" (the "intelligent partner" wording is about faculty work, as at Niagara);
    disclosure "not stated" (left to each course). nova.edu/ai, which claims to hold the university AI policy, gave
    curl HTTP 404, so nothing is coded from it.
+   Maine Fort Kent: every value comes from the "AI at UMFK" library guide on umfk-umm.libguides.com
+   (domain_reason; its home tab is the official "UMFK Generative Artificial Intelligence (AI) Use Guidance"; the
+   university's own site is now umfk.edu, not umfk.maine.edu). University "instructor decides"; tone **positive**
+   ("can be transformative", a balanced page, same reading as Nova); disclosure **required** ("Students need to
+   clearly cite", the codebook lists "need to" as a must-cue); collaboration "in passing" from a sample syllabus
+   statement the guide borrowed from another school (brainstorming, same reading as Temple); se_courses "no public
+   syllabus found" (no software engineering course; COS 333 Systems Analysis & Design is the closest). The UMS
+   Student Conduct Code treats unattributed AI work as plagiarism; noted, not coded.
    **Inconsistency to raise with Marcus:** Stanford and UDC code an official catalog course description
    that mentions AI as the course page ("AI built into the course"), while EKU, UMKC and an earlier school
    (values.json "CSC 310") treat a description with no AI text as "no public syllabus found", not "not

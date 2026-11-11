@@ -1858,6 +1858,63 @@
      "note": "Only a 2014-15 catalog entry for SENG 4100 Software Engineering came up (before ChatGPT); no current software engineering syllabus was found."
     }
    }
+  },
+  {
+   "unitid": "161235",
+   "slug": "161235-maine-fort-kent",
+   "name": "University of Maine at Fort Kent",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "instructor decides",
+     "quote": "Instructors should clearly communicate when use of generative AI is permissible within courses.",
+     "url": "https://umfk-umm.libguides.com/AIatUMFK",
+     "archive": "data/sources/161235-maine-fort-kent/2026-11-11-libguide-ai-at-umfk.html",
+     "source_type": "guidance page",
+     "domain_reason": "The UMFK Generative Artificial Intelligence (AI) Use Guidance is published on the library guide site that UMFK shares with UMM (umfk-umm.libguides.com), titled 'AI at UMFK'; the university's own site is now umfk.edu.",
+     "note": "From the UMFK Generative AI Use Guidance (guide last updated 25 September 2026), which adds that students 'should adhere to the guidance provided by individual instructors'. The UMS Student Conduct Code (August 2025) counts AI-generated work handed in without attribution as plagiarism, but sets no default ban."
+    },
+    "univ_tone": {
+     "value": "positive",
+     "quote": "Generative AI can be transformative in the classroom when used to augment teaching strategies and personalize learning.",
+     "url": "https://umfk-umm.libguides.com/AIatUMFK",
+     "archive": "data/sources/161235-maine-fort-kent/2026-11-11-libguide-ai-at-umfk.html",
+     "source_type": "guidance page",
+     "domain_reason": "Same UMFK Generative AI Use Guidance, published on the UMFK and UMM library guide site.",
+     "note": "The guidance states its goal is 'to promote innovation while ensuring integrity' and calls the tools 'wonderful', while also covering privacy and critical thinking."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/161235-maine-fort-kent/search-log.md"
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/161235-maine-fort-kent/search-log.md"
+    },
+    "collaboration": {
+     "value": "in passing",
+     "quote": "The use of these tools for brainstorming ideas, exploring possible responses to questions or problems, and creative engagement with the materials may be useful for you as you craft responses to class assignments",
+     "url": "https://umfk-umm.libguides.com/c.php?g=1379765&p=10640280",
+     "archive": "data/sources/161235-maine-fort-kent/2026-11-11-libguide-syllabus-help.html",
+     "source_type": "guidance page",
+     "domain_reason": "Syllabus Help tab of the 'AI at UMFK' library guide on the UMFK and UMM library guide site.",
+     "note": "Sample 'Full or Partial Use' syllabus statement, which the guide marks as borrowed from another institution; a list of uses, not AI framed as a partner or tutor (same reading as Temple)."
+    },
+    "disclosure": {
+     "value": "required",
+     "quote": "Students need to clearly cite when they have used AI and ensure they are abiding by the UMS Academic Integrity Policy .",
+     "url": "https://umfk-umm.libguides.com/AIatUMFK",
+     "archive": "data/sources/161235-maine-fort-kent/2026-11-11-libguide-ai-at-umfk.html",
+     "source_type": "guidance page",
+     "domain_reason": "Same UMFK Generative AI Use Guidance, published on the UMFK and UMM library guide site.",
+     "note": "The university's own guidance, not sample language; the space before the final period is in the page."
+    },
+    "se_courses": {
+     "value": "no public syllabus found",
+     "search_log": "data/sources/161235-maine-fort-kent/search-log.md",
+     "note": "UMFK's computing programs have no software engineering course; the closest, COS 333 Systems Analysis & Design, has only a catalog description with no AI text, and no syllabus was found."
+    }
+   }
   }
  ]
 }

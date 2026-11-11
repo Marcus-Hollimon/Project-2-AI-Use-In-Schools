@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.maine.edu/ai/?p=410",
+ "final_url": "https://www.maine.edu/ai/policies/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:38:04-05:00",
+ "sha256": "ab3c4d668ac69c570c23877879929ecfd5e32e45db8f6a04ece6ecfd658cfd93",
+ "bytes": 759983
+}
