@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-08T06:28:38.443583Z",
+ "generatedAt": "2026-11-11T14:47:24.668177Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -460,12 +460,51 @@
    "text": "Publish all turns. And I do approve of the phase 1 spec with the publishing rule as described."
   },
   {
-   "time": "2026-11-08T06:28:32.003000Z",
+   "time": "2026-11-08T06:28:58Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 1: transcript pipeline, cross-checks, recorded tests, CI step",
+   "commit": "be9164a",
+   "note": "written by Claude, pushed from Marcus's account"
+  },
+  {
+   "time": "2026-11-08T06:29:00Z",
+   "actor": "Claude",
+   "kind": "milestone",
+   "phase": "1",
+   "text": "Pipeline built (tasks 1 to 7). First real run failed C2: one request at 00:13:13 EST got no response (a retry). C2 amended to list such requests as known gaps; reported to Marcus. Now C1 to C3 and privacy all pass. Tests 12/12 recorded; two mutation runs each caught by a test.",
+   "evidence": "`data/derived/checks.json`, `validation/runs/`"
+  },
+  {
+   "time": "2026-11-08T06:30:09Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 1: Claude acceptance checks ticked, usage reading, state",
+   "commit": "7220cfd",
+   "note": "written by Claude, pushed from Marcus's account"
+  },
+  {
+   "time": "2026-11-08T06:30:30.625000Z",
    "actor": "Claude",
    "kind": "reply",
    "turn": 8,
-   "text": "Web tests still pass 17 of 17 (recorded). Now I'm re-running the build, updating the records, and pushing so CI can prove the new test step works.",
-   "toolCalls": 41
+   "text": "Phase 1 is built and pushed (commit `7220cfd`). Your \"publish all\" decision and your approval of the spec are both recorded. GitHub's automatic run passed, including the new pipeline tests: its log shows \"12 passed\".\n\n**What the script found in your session so far**\n- **Real usage:** 101 model calls after removing duplicates, from 309 rows.\n- **Why de-duplicating matters:** simply adding up the rows would have counted 3.08 times the real number of cache reads.\n- **Your conversation:** 8 prompts from you, 2 commands (`/model` and `/compact`) and 1 answer to my multiple-choice questions.\n\n**The four checks, all passing on your real data:**\n\n| Check | Result |\n|---|---|\n| App's context number vs the history | all 7 readings within 281 tokens |\n| Every model request has an answer | passes, with one listed exception (below) |\n| The compact's \"before\" number | exact match |\n| No home folder path or email in published files | 0 found |\n\n**One check failed on the first run.** A request at 00:13 EST got no answer, and a second request followed 0.6 seconds later, most likely the app retrying. I didn't loosen the check to make it pass. That request is now listed by time as a \"known gap\" whose cost we can't see. I wrote the change into the spec under \"Amendment to C2\".\n\n**Proof the tests catch real mistakes:** I broke each of the two duplicate-removal rules on purpose. Each time, a test failed and named the broken rule. All four of those runs are saved in `validation/runs/`.\n\n**Connector result:** turning off Claude Docs saved about 175 tokens per turn, not the thousands I predicted. Almost all of the roughly 20,000 tokens of tool descriptions are built into the app and can't be switched off. That's recorded in `progress/usage.md`.\n\n**Your checklist (4 items):**\n\n1. In PowerShell, run these two lines:\n```powershell\ncd \"C:\\Claude Folder\\Project-2-AI-Use-In-Schools\"\n```\n```powershell\nuv run --project pipeline python pipeline/build.py\n```\nCompare the \"Context now\" number it prints with the context number the app shows. They should be within about 1%. The app's number will be a bit higher, because it also counts this turn.\n\n2. and 3. Open the preview. Skim it, and check that one of your prompts shows roughly the right time. Times are in UTC, so subtract 5 hours.\n```powershell\nnotepad private\\qa-preview.md\n```\n\n4. On GitHub, open `validation/runs/`. Four files there end in `_pipeline.json`.\n\n**Budget:** Phase 1 used 11 points of the 5-hour window (target 15) and 1 weekly point. The 5-hour window is at 42% and resets at 04:30. After your checklist comes the planned `/clear`; I'll hand you the exact steps.\n\n---\n\n**Coaching**\n\n1. **\"Publish all\" before seeing the preview** was your call to make, and the privacy filter still applies. But you decided without seeing what's in it. Skimming the preview takes two minutes and is now item 2 of your checklist; until then, that approval is untested.\n2. **Your four-question message last turn caught a real gap** (the checklist read as if the files already existed). Keep asking \"where is it?\" whenever a spec mentions a file. It's the cheapest check you can do.\n\n**Claude Code feature for this task:** running a command yourself in the app's Terminal panel. Item 1 of your checklist is an independent check only because you run it, not me.",
+   "toolCalls": 52
+  },
+  {
+   "time": "2026-11-11T14:46:39.432000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 9,
+   "text": "The app doesn't show a \"context now\" number? I opened the preview. It's all fine. The command line ran fine though.\n[3 image(s) attached, not published]"
+  },
+  {
+   "time": "2026-11-11T14:46:53.479000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 9,
+   "text": "Before recording your checklist, I need to check one thing: my clock now says it's November 11, two days after your last message. If that's right, the application deadline (Nov 10) has passed, and that changes what we should do next.",
+   "toolCalls": 5
   }
  ]
 }

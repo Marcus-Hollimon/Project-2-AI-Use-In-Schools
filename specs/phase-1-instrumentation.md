@@ -104,11 +104,17 @@ Claude runs these and records the results:
 Marcus's checklist, for the END of Phase 1 (do it yourself, then tick and date each line). None of
 these files or commands exist until Claude has finished the tasks above; Claude will say when the
 checklist is ready and hand over the exact PowerShell commands then.
-- [ ] Run the commands Claude gives you in PowerShell. Compare the "context now" number it prints
-      with the context number the app shows. They are within about 1%.
-- [ ] Read `private/qa-preview.md`. Tell Claude which turns to hide, or "publish all".
-- [ ] Pick one of your prompts in the preview. Its time roughly matches when you sent it.
-- [ ] On GitHub, `validation/runs/` has a run whose name ends in `_pipeline.json`.
+- [x] Run the commands Claude gives you in PowerShell. (2026-11-11, Marcus: ran fine, all checks
+      PASS, screenshot.) The second half, "compare with the context number the app shows", could
+      not be done: the app shows Marcus no context number. Claude wrote this step without checking
+      what the app displays. Replaced by Claude adding the app's own reading at 09:46:57 to
+      `usage.md`; check C1 then matched it within 648 tokens (0.31%). That is Claude's check, not an
+      independent human one, and is recorded as such.
+- [x] Read `private/qa-preview.md`. (2026-11-11, Marcus: "It's all fine"; publish all stands.)
+- [x] Pick one of your prompts in the preview. Its time roughly matches when you sent it.
+      (Covered by Marcus's "all fine"; he did not mention the time check separately.)
+- [x] On GitHub, `validation/runs/` has a run whose name ends in `_pipeline.json`. (2026-11-11,
+      Marcus: screenshot shows four.)
 
 ## End of phase: the deliberate /clear
 1. Claude updates `STATE.md`, commits and pushes, and records a reading "just before /clear".
