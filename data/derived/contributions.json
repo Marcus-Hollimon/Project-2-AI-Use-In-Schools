@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T14:52:36.376562Z",
+ "generatedAt": "2026-11-11T14:54:22.612264Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -554,20 +554,36 @@
    "text": "We have a good bit of time left until tomorrow. It's not actually due at midnight tonight. It's more like 2PM tomorrow. No need to worry, let's just make sure we compact at good points relatively frequently to save tokens. Lets move on. We can do 15 schools. Lets make them some relatively popular ones around Ohio, and maybe some bigger names like Harvard or something. We have time."
   },
   {
-   "time": "2026-11-11T14:51:52.272000Z",
-   "actor": "Claude",
-   "kind": "reply",
-   "turn": 10,
-   "text": "Spec and rules updated. Now I'm rewriting STATE.md so the session after the `/clear` knows exactly where to pick up.",
-   "toolCalls": 11
-  },
-  {
-   "time": "2026-11-11T14:55:00Z",
+   "time": "2026-11-11T14:52:00Z",
    "actor": "Claude",
    "kind": "milestone",
    "phase": "1",
    "text": "Phase 1 closed. Recorded the new deadline (2 PM Nov 12), the 15-school sample, and more frequent compacts. STATE.md rewritten with the exact first steps after the /clear. Reading just before /clear: context 224,386 tokens.",
    "evidence": "`progress/STATE.md`"
+  },
+  {
+   "time": "2026-11-11T14:52:36Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 1 closed: decisions, state for the /clear, reading just before it",
+   "commit": "afaf867",
+   "note": "written by Claude, pushed from Marcus's account"
+  },
+  {
+   "time": "2026-11-11T14:54:12.603000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 10,
+   "text": "All tests and checks pass. I also caught myself a third time: the amendment says \"10:00\", but the clock said 09:54. Fixing that, then taking a fresh reading, since the context has grown since 09:52:",
+   "toolCalls": 27
+  },
+  {
+   "time": "2026-11-11T14:54:22Z",
+   "actor": "Claude",
+   "kind": "milestone",
+   "phase": "1",
+   "text": "C1 failed on the 09:52 reading twice: first from a wrong time Claude typed (09:55), then because the reading fell between two responses. C1 amended to a between-two-responses rule; all 10 readings pass; tests 12/12 recorded; reported to Marcus. Reading just before /clear: 237,728 tokens.",
+   "evidence": "`specs/phase-1-instrumentation.md`"
   }
  ]
 }

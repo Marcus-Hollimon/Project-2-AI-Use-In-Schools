@@ -3,90 +3,131 @@
   {
    "reading": "2026-11-08T05:20:00Z",
    "app": 127976,
-   "transcript": 127879,
+   "between": [
+    127879,
+    137493
+   ],
    "responseTime": "2026-11-08T05:20:10.017Z",
-   "difference": 97,
+   "nearestDifference": 97,
    "pass": true
   },
   {
    "reading": "2026-11-08T05:28:00Z",
    "app": 157199,
-   "transcript": 156918,
+   "between": [
+    156918,
+    169961
+   ],
    "responseTime": "2026-11-08T05:29:17.773Z",
-   "difference": 281,
+   "nearestDifference": 281,
    "pass": true
   },
   {
    "reading": "2026-11-08T05:43:25Z",
    "app": 268883,
-   "transcript": 268747,
+   "between": [
+    268747,
+    271068
+   ],
    "responseTime": "2026-11-08T05:43:22.325Z",
-   "difference": 136,
+   "nearestDifference": 136,
    "pass": true
   },
   {
    "reading": "2026-11-08T05:51:29Z",
    "app": 293955,
-   "transcript": 293827,
+   "between": [
+    293827,
+    296029
+   ],
    "responseTime": "2026-11-08T05:51:25.716Z",
-   "difference": 128,
+   "nearestDifference": 128,
    "pass": true
   },
   {
    "reading": "2026-11-08T05:57:55Z",
    "app": 81551,
-   "transcript": 81551,
-   "responseTime": "2026-11-08T05:57:55.742Z",
-   "difference": 0,
+   "between": [
+    80198,
+    81551
+   ],
+   "responseTime": "2026-11-08T05:57:51.605Z",
+   "nearestDifference": 0,
    "pass": true
   },
   {
    "reading": "2026-11-08T06:13:00Z",
    "app": 137955,
-   "transcript": 137815,
+   "between": [
+    137815,
+    139904
+   ],
    "responseTime": "2026-11-08T06:13:32.816Z",
-   "difference": 140,
+   "nearestDifference": 140,
    "pass": true
   },
   {
    "reading": "2026-11-08T06:21:00Z",
    "app": 146790,
-   "transcript": 146571,
+   "between": [
+    146571,
+    147854
+   ],
    "responseTime": "2026-11-08T06:21:44.931Z",
-   "difference": 219,
+   "nearestDifference": 219,
    "pass": true
   },
   {
    "reading": "2026-11-08T06:30:00Z",
    "app": 198396,
-   "transcript": 198329,
+   "between": [
+    198329,
+    200054
+   ],
    "responseTime": "2026-11-08T06:29:42.298Z",
-   "difference": 67,
+   "nearestDifference": 67,
    "pass": true
   },
   {
    "reading": "2026-11-11T14:46:57Z",
    "app": 207766,
-   "transcript": 207118,
+   "between": [
+    207118,
+    209628
+   ],
    "responseTime": "2026-11-11T14:46:52.685Z",
-   "difference": 648,
+   "nearestDifference": 648,
    "pass": true
   },
   {
-   "reading": "2026-11-11T14:55:00Z",
+   "reading": "2026-11-11T14:52:00Z",
    "app": 224386,
-   "transcript": null,
-   "responseTime": null,
-   "difference": null,
-   "pass": false
+   "between": [
+    222907,
+    226004
+   ],
+   "responseTime": "2026-11-11T14:52:03.773Z",
+   "nearestDifference": 1479,
+   "pass": true
+  },
+  {
+   "reading": "2026-11-11T14:54:22Z",
+   "app": 237728,
+   "between": [
+    237426,
+    239004
+   ],
+   "responseTime": "2026-11-11T14:54:12.600Z",
+   "nearestDifference": 302,
+   "pass": true
   }
  ],
  "C2_completeness": [
   {
    "session": "0cf9c9ad-b66c-4406-998d-e6e34b8c2e47",
    "subagent": false,
-   "apiRequests": 135,
-   "uniqueResponses": 134,
+   "apiRequests": 147,
+   "uniqueResponses": 146,
    "unansweredRequests": [
     "2026-11-08T05:13:13.165Z"
    ],
@@ -104,19 +145,19 @@
   }
  ],
  "C4_inflation": {
-  "usageRows": 397,
-  "uniqueResponses": 134,
+  "usageRows": 426,
+  "uniqueResponses": 146,
   "naive": {
-   "input": 818,
-   "cacheWrite": 2739994,
-   "cacheRead": 70175214,
-   "output": 1352574
+   "input": 876,
+   "cacheWrite": 2768175,
+   "cacheRead": 76884329,
+   "output": 1374702
   },
   "deduplicated": {
-   "input": 276,
-   "cacheWrite": 653471,
-   "cacheRead": 23810437,
-   "output": 278002
+   "input": 300,
+   "cacheWrite": 666471,
+   "cacheRead": 26589068,
+   "output": 286069
   }
  },
  "privacy": [
@@ -217,5 +258,5 @@
    "pass": true
   }
  ],
- "allPass": false
+ "allPass": true
 }

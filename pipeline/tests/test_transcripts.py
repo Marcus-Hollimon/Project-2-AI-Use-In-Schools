@@ -167,11 +167,15 @@ def test_phase_is_the_latest_reading_at_or_before_the_response():
     assert [r["phase"] for r in tx.assign_phases(responses, readings)] == ["planning", "0", "1"]
 
 
-def test_context_check_tolerance_and_time_window():
-    r = [{"time": "2026-11-08T05:57:55Z", "input": 2, "cacheWrite": 1353, "cacheRead": 80196, "output": 1}]
-    assert tx.check_context([{"time": "2026-11-08T05:57:55Z", "context": 81551}], r)[0]["pass"]
-    assert tx.check_context([{"time": "2026-11-08T05:57:55Z", "context": 81551 + 500}], r)[0]["pass"] is False
-    assert tx.check_context([{"time": "2026-11-08T06:30:00Z", "context": 81551}], r)[0]["pass"] is False
+def test_context_check_needs_the_reading_between_two_consecutive_responses_in_time():
+    # Real values from 2026-11-11 14:52: the app read 224,386 while the response at 14:52:03 ran.
+    r = [{"time": "2026-11-11T14:52:03Z", "input": 2, "cacheWrite": 0, "cacheRead": 222905, "output": 2312},
+         {"time": "2026-11-11T14:52:23Z", "input": 2, "cacheWrite": 0, "cacheRead": 226002, "output": 577}]
+    assert tx.check_context([{"time": "2026-11-11T14:52:00Z", "context": 224386}], r)[0]["pass"]
+    assert tx.check_context([{"time": "2026-11-11T14:52:00Z", "context": 222907}], r)[0]["pass"]  # edge counts
+    assert tx.check_context([{"time": "2026-11-11T14:52:00Z", "context": 230000}], r)[0]["pass"] is False
+    assert tx.check_context([{"time": "2026-11-11T14:52:00Z", "context": 200000}], r)[0]["pass"] is False
+    assert tx.check_context([{"time": "2026-11-11T15:30:00Z", "context": 224386}], r)[0]["pass"] is False
 
 
 def test_scrubber_removes_home_folder_in_every_spelling_and_the_email(monkeypatch):

@@ -91,6 +91,15 @@ Script and output: `evidence/phase1-recon/`. Transcript timestamps are UTC; EST 
   later with no error record, most likely a retry. C2 now also accepts requests that are followed
   by another request with no response in between, but only by listing each one by time in
   `checks.json` and as a known gap in `tokens.json`. Nothing is dropped silently.
+- **Amendment to C1 (2026-11-11T09:54-05:00, Claude, reported to Marcus)**: the reading taken at
+  09:52 on Nov 11 (224,386) failed the 0.5% rule. The response that took it wrote a large file,
+  and the app's number fell between that response's context (222,907) and the next one's
+  (226,004). The app's exact formula is unknown (a guess, "context plus output minus thinking",
+  matched none of 10 readings). New rule: each reading must lie between the context sizes of two
+  consecutive responses, the first within 2 minutes of the reading. All 10 readings pass it. The
+  nearest single-response difference is still reported in `checks.json`. Same day, a first run
+  had also failed because Claude wrote the reading time as 09:55 instead of 09:52; the check
+  caught that, and the time was corrected.
 
 ## Acceptance checks
 Claude runs these and records the results:

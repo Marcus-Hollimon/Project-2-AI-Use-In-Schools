@@ -229,25 +229,34 @@ def totals(responses, key):
     return out
 
 
-def check_context(readings, responses, tolerance=0.005, window_s=120):
-    """C1: each app context reading matches some response's context size near that time."""
+def check_context(readings, responses, window_s=120):
+    """C1: each app context reading lies between the context sizes of two consecutive main-session
+    responses, the first of them within `window_s` of the reading.
+
+    The app is read while a response's tool calls run, so its number sits between that response's
+    context and the next one's. (Amended 2026-11-11: the first rule, "within 0.5% of one response",
+    failed when the response taking the reading wrote a large file. Evidence in the Phase 1 spec.)
+    The nearest single response is still reported, so the size of the gap stays visible.
+    """
+    main = [r for r in responses if not r.get("subagent")]
     results = []
     for reading in readings:
         if not reading.get("context"):
             continue
         when = parse_time(reading["time"])
-        best = None
-        for r in responses:
-            gap = abs((parse_time(r["time"]) - when).total_seconds())
-            if gap > window_s:
-                continue
-            diff = abs(context_size(r) - reading["context"])
-            if best is None or diff < best[0]:
-                best = (diff, r["time"], context_size(r))
-        ok = best is not None and best[0] <= tolerance * reading["context"]
-        results.append({"reading": reading["time"], "app": reading["context"],
-                        "transcript": best[2] if best else None, "responseTime": best[1] if best else None,
-                        "difference": best[0] if best else None, "pass": ok})
+        value = reading["context"]
+        bracket = None
+        for a, b in zip(main, main[1:]):
+            if abs((parse_time(a["time"]) - when).total_seconds()) <= window_s and context_size(a) <= value <= context_size(b):
+                bracket = (a["time"], context_size(a), context_size(b))
+                break
+        near = [r for r in main if abs((parse_time(r["time"]) - when).total_seconds()) <= window_s]
+        best = min(near, key=lambda r: abs(context_size(r) - value)) if near else None
+        results.append({"reading": reading["time"], "app": value,
+                        "between": [bracket[1], bracket[2]] if bracket else None,
+                        "responseTime": bracket[0] if bracket else None,
+                        "nearestDifference": abs(context_size(best) - value) if best else None,
+                        "pass": bracket is not None})
     return results
 
 

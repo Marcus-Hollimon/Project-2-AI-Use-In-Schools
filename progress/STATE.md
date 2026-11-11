@@ -2,7 +2,7 @@
 
 Current phase: 1 Instrumentation (complete; the deliberate `/clear` that ends it is next or just happened)
 
-Last updated: 2026-11-11T09:55-05:00 by Claude, just before the `/clear`.
+Last updated: 2026-11-11T09:52-05:00 by Claude, just before the `/clear`.
 
 ## Deadline and pace
 - Everything is due **2 PM EST, Thu Nov 12 2026** (Marcus, 2026-11-11).
@@ -21,7 +21,7 @@ Last updated: 2026-11-11T09:55-05:00 by Claude, just before the `/clear`.
 ## FIRST, right after the /clear (end of Phase 1, spec section "End of phase")
 1. Usage reading marked "after /clear" in `progress/usage.md` (tool: get_usage).
 2. Find how the `/clear` shows up. Look in `~/.claude/projects/C--Claude-Folder/` for `.jsonl`
-   files changed after 09:55 EST Nov 11. Do not open any file without first checking, from its
+   files changed after 09:52 EST Nov 11. Do not open any file without first checking, from its
    first few records only, that its `cwd` is this project or `C:\Claude Folder` and its time is
    after the clear. Expect either a new session file or a marker inside
    `0cf9c9ad-b66c-4406-998d-e6e34b8c2e47.jsonl`. Record what you find in the log and the spec.
