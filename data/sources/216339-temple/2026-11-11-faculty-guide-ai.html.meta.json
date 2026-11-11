@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://teaching.temple.edu/teaching-technologies/faculty-guide-ai",
+ "final_url": "https://teaching.temple.edu/faculty-guide-ai",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:30:26-05:00",
+ "sha256": "140591fce85568c657fd92e5f37e3514cbb567c3aa2959e1e10481b1bc8720e0",
+ "bytes": 88877
+}

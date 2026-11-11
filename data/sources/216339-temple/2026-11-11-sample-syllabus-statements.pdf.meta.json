@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://teaching.temple.edu/sites/teaching/files/resource/pdf/Chat-GPT%20syllabus%20statement%20guidance.pdf",
+ "final_url": "https://teaching.temple.edu/sites/teaching/files/resource/pdf/Chat-GPT%20syllabus%20statement%20guidance.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T16:30:27-05:00",
+ "sha256": "bf6ae6c4945d3b3361adcba8a9130f87054d893fd6a80650240831d75762603a",
+ "bytes": 70357
+}

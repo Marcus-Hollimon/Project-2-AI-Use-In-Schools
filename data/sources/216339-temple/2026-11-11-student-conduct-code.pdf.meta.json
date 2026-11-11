@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://secretary.temple.edu/sites/secretary/files/policies/03.70.12.pdf",
+ "final_url": "https://secretary.temple.edu/sites/secretary/files/policies/03.70.12.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T16:30:26-05:00",
+ "sha256": "7bcedfe9ff3def0b63cd0c8058695a671dae798a7878832524473c376745e0b0",
+ "bytes": 467553
+}

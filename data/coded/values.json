@@ -1750,6 +1750,114 @@
      "note": "The Computer Science A.S. has no software engineering course (CPS 250 Data Structures touches team development but is not software engineering), as at Nevada State."
     }
    }
+  },
+  {
+   "unitid": "216339",
+   "slug": "216339-temple",
+   "name": "Temple University",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "restrict",
+     "quote": "He has provided a blanket policy for Temple University stating that the use of generative AI tools is prohibited for students unless an instructor explicitly grants permission.",
+     "url": "https://teaching.temple.edu/faculty-guide-ai",
+     "archive": "data/sources/216339-temple/2026-11-11-faculty-guide-ai.html",
+     "source_type": "guidance page",
+     "note": "The provost's default, reported by the Center for the Advancement of Teaching (page updated 23 October 2026). The Student Conduct Code (03.70.12, amended August 2025) lists 'unauthorized use of online sources, such as artificial intelligence software' as academic dishonesty, and the Student Success Center tells students that use is not allowed unless the syllabus explicitly permits it."
+    },
+    "univ_tone": {
+     "value": "positive",
+     "quote": "The overarching goal of this new policy is to give students opportunities to explore how generative AI tools can be used in school contexts, while protecting their opportunities to learn.",
+     "url": "https://studentsuccess.temple.edu/resources",
+     "archive": "data/sources/216339-temple/2026-11-11-student-success-resources.html",
+     "source_type": "guidance page",
+     "note": "The university frames its default ban as a way to let students explore AI where it helps; the faculty guide likewise says the tools 'have the potential to revolutionize' learning while listing pitfalls."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/216339-temple/search-log.md"
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/216339-temple/search-log.md"
+    },
+    "collaboration": {
+     "value": "in passing",
+     "quote": "Brainstorming and refining your ideas",
+     "url": "https://teaching.temple.edu/sites/teaching/files/resource/pdf/Chat-GPT%20syllabus%20statement%20guidance.pdf",
+     "archive": "data/sources/216339-temple/2026-11-11-sample-syllabus-statements.pdf",
+     "source_type": "guidance page",
+     "note": "First item in the sample statement's list of permitted uses for a course that allows some AI use; a list of tasks, not AI framed as a partner or tutor."
+    },
+    "disclosure": {
+     "value": "encouraged",
+     "quote": "Your use of AI tools must be properly documented and cited in order to stay within university policies on academic honesty.",
+     "url": "https://teaching.temple.edu/sites/teaching/files/resource/pdf/Chat-GPT%20syllabus%20statement%20guidance.pdf",
+     "archive": "data/sources/216339-temple/2026-11-11-sample-syllabus-statements.pdf",
+     "source_type": "guidance page",
+     "cue_reason": "The sentence says 'must', but it is sample syllabus language faculty may adopt or modify, and codebook v2 codes example language telling students to disclose as 'encouraged' (same reading as UMKC).",
+     "note": "Appears in the sample statements for courses that allow some or broad AI use."
+    },
+    "se_courses": {
+     "value": "no public syllabus found",
+     "search_log": "data/sources/216339-temple/search-log.md",
+     "note": "CIS 3296 Software Design, required for the Computer Science BS, has only a catalog description with no AI text; no syllabus was found."
+    }
+   }
+  },
+  {
+   "unitid": "136215",
+   "slug": "136215-nova-southeastern",
+   "name": "Nova Southeastern University",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "restrict",
+     "quote": "Students’ use of generative artificial intelligence (e.g., ChatGPT, Google Bard, DALL-E, Midjourney, etc.) or similar resources on any coursework or academic assessments without the prior permission of their faculty member",
+     "url": "https://www.nova.edu/documents/student-handbook.pdf",
+     "archive": "data/sources/136215-nova-southeastern/2026-11-11-student-handbook.pdf",
+     "source_type": "handbook",
+     "cue_reason": "The sentence goes on to say such use 'is expressly prohibited'; the full sentence is over the 40-word limit, so the quote stops before that phrase. Use needs the faculty member's prior permission, so the default is restrict.",
+     "note": "Academic standards section of the NSU Student Handbook (last update October 2026). The handbook adds that AI use in student projects 'will be subject to the guidelines issue by the instructor of a particular course'."
+    },
+    "univ_tone": {
+     "value": "positive",
+     "quote": "Generative AI is transforming teaching and learning experiences for both students and faculty.",
+     "url": "https://www.nova.edu/learning-educational-center/ai/index.html",
+     "archive": "data/sources/136215-nova-southeastern/2026-11-11-lec-genai.html",
+     "source_type": "guidance page",
+     "note": "Opening of the Learning and Educational Center's AI page, which goes on to call generative AI a faculty 'intelligent partner' while listing pitfalls such as bias and hallucinations."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/136215-nova-southeastern/search-log.md"
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/136215-nova-southeastern/search-log.md"
+    },
+    "collaboration": {
+     "value": "not discussed",
+     "reviewed": [
+      "data/sources/136215-nova-southeastern/2026-11-11-student-handbook.pdf",
+      "data/sources/136215-nova-southeastern/2026-11-11-lec-genai.html"
+     ],
+     "note": "The teaching center calls AI an 'intelligent partner' and 'faculty assistant' for faculty work; nothing presents AI as a partner or tutor for students."
+    },
+    "disclosure": {
+     "value": "not stated",
+     "reviewed": [
+      "data/sources/136215-nova-southeastern/2026-11-11-student-handbook.pdf",
+      "data/sources/136215-nova-southeastern/2026-11-11-lec-genai.html"
+     ],
+     "note": "The teaching center tells faculty to say 'whether and how they should disclose' AI use, leaving disclosure to each course; the handbook sets no disclosure rule."
+    },
+    "se_courses": {
+     "value": "no public syllabus found",
+     "search_log": "data/sources/136215-nova-southeastern/search-log.md",
+     "note": "Only a 2014-15 catalog entry for SENG 4100 Software Engineering came up (before ChatGPT); no current software engineering syllabus was found."
+    }
+   }
   }
  ]
 }

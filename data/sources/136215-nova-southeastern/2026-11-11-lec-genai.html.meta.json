@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.nova.edu/learning-educational-center/ai/index.html",
+ "final_url": "https://www.nova.edu/learning-educational-center/ai/index.html",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:33:04-05:00",
+ "sha256": "535e3c9fc00909c5a018da0baf1e5c9ee7b2126dcb665e88dbf3ab922585ef23",
+ "bytes": 150560
+}

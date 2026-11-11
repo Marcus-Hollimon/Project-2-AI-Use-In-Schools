@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.nova.edu/academics/documents/computing-graduate-catalog.pdf",
+ "final_url": "https://www.nova.edu/academics/documents/computing-graduate-catalog.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T16:33:08-05:00",
+ "sha256": "290f894a68b192c1344511fbab0ab86d0593d031e7232962b2b03d5478613166",
+ "bytes": 1182202
+}

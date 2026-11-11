@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.nova.edu/documents/student-handbook.pdf",
+ "final_url": "https://www.nova.edu/documents/student-handbook.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T16:33:02-05:00",
+ "sha256": "038beacf821f3d1fdab8d91c8b2a780c7120c83bff4950606bfff0de74a8e106",
+ "bytes": 2521479
+}

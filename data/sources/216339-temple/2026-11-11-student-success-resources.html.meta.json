@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://studentsuccess.temple.edu/resources",
+ "final_url": "https://studentsuccess.temple.edu/resources",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:30:29-05:00",
+ "sha256": "e5aa2f6b188fe6fcccf121c485794d0c36926ce2ca4da38199c0294e04433170",
+ "bytes": 80027
+}
