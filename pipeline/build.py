@@ -60,7 +60,7 @@ def iso(text):
     return tx.parse_time(text).astimezone(timezone.utc).isoformat().replace("+00:00", "Z")
 
 
-PHASES = {"planning", "0", "1", "2", "3", "4", "5"}
+PHASES = {"planning", "0", "1", "2", "3", "4", "5", "6"}
 
 
 def parse_readings(rows):

@@ -178,7 +178,7 @@ export const CLASS_LABELS = {
   output: 'Output (includes thinking)',
 }
 
-const PHASE_ORDER = ['planning', '0', '1', '2', '3', '4', '5']
+const PHASE_ORDER = ['planning', '0', '1', '2', '3', '4', '5', '6']
 export const phaseRows = () =>
   Object.entries(tokens.byPhase).sort((a, b) => PHASE_ORDER.indexOf(a[0]) - PHASE_ORDER.indexOf(b[0]))
 

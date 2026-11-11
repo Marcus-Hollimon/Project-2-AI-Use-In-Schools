@@ -4,7 +4,7 @@ import { contributions, easternDay, easternTime, isMarcus } from '../data.js'
 const ENTRIES = contributions.entries
 const replyByTurn = Object.fromEntries(ENTRIES.filter((e) => e.kind === 'reply').map((e) => [e.turn, e]))
 const KINDS = [...new Set(ENTRIES.map((e) => e.kind))].sort()
-const PHASES = ['planning', '0', '1', '2', '3', '4', '5'].filter((p) => ENTRIES.some((e) => e.phase === p))
+const PHASES = ['planning', '0', '1', '2', '3', '4', '5', '6'].filter((p) => ENTRIES.some((e) => e.phase === p))
 const who = (e) => (isMarcus(e.actor) ? 'Marcus' : 'Claude')
 
 function Counts() {
