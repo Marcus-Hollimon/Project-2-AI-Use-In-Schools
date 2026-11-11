@@ -4,9 +4,9 @@ Goal: find, archive, and code what 15 US computer science departments (and their
 publicly say about generative AI, so the Research findings tab (deliverable 1) has data in which
 every value can be checked against a saved copy of its source.
 
-Status: DRAFT, waiting for Marcus's approval (written 2026-11-11 by Claude, session a9056776).
-Nothing below "Tasks" has started. The frame and the draw are done, because the approval covers
-the drawn list too.
+Status: approved by Marcus 2026-11-11T10:15-05:00, without the blind check (replaced by the checks below).
+Task 1 (sources) is done. The frame and the draw were done before approval, because the approval
+covers the drawn list too.
 
 ## Known before any coding (measured 2026-11-11)
 Raw files: `data/frame/*.zip`, downloaded 10:03 EST from `https://nces.ed.gov/ipeds/datacenter/data/`
@@ -117,20 +117,63 @@ the page URL, the archive file path, and the retrieval time. No value without a 
    codebook if it fails on real pages. Report pace against the deadline before continuing.
 5. Code the other 10. Output: `data/coded/schools.csv` (one row per school) and
    `data/coded/values.json` (every value with quote, URL, archive path, time).
-6. `study/check_sources.py` plus tests: every quote must appear in its archived file (spacing
-   and case ignored); every archive file must exist; every school must have a search log; every
-   variable must be filled. Recorded runs in `validation/runs/`, with one deliberate mutation run
-   (a quote altered, the check must fail).
-7. **Blind check by Marcus on 3 schools** (drawn at random from the 15 with a recorded seed).
-   He codes them from the archived pages using a worksheet, without seeing Claude's values.
-   Then: agreement per variable, and every disagreement listed with how it was resolved. With 3
-   schools a kappa statistic would be meaningless, so percent agreement and the disagreement list
-   are reported instead.
+6. `study/check_study.py` (the checks below) and `study/tests/`, written and proven **before the
+   first school is coded**: each check gets a made-up school folder that breaks exactly that rule,
+   and a test that the check catches it. Recorded runs in `validation/runs/` (`_study.json`),
+   including one deliberate mutation run (a check disabled, its test must fail). CI runs these
+   tests before every deploy.
+7. Results of every check, per school and per value, saved to `data/coded/checks.json` for the
+   Validation tab.
+
+## Checks that replace the human blind check (decided by Marcus, 2026-11-11)
+Marcus does not hand-code. Instead every coded value must survive these checks, run by
+`check_study.py` on the real data after each school and at the end. A failure blocks the school
+from counting as done.
+
+Sources are real and unchanged:
+- **S1 Quote in source.** The quote appears in the archived file, after removing HTML tags and
+  ignoring spacing, case, and curly-versus-straight quote marks.
+- **S2 Hash.** Each archived file's SHA-256 matches the one recorded when it was saved, so no
+  file was edited after coding.
+- **S3 Fetch record.** Each archive has a fetch record (`.meta.json`: URL requested, final URL,
+  HTTP status, time) written by the save script; status must be 200.
+- **S4 Right school.** The page's final URL is on the school's own web domain (from IPEDS
+  `WEBADDR`), or the value carries a written reason (for example a state system's policy page).
+- **S5 Quote length.** At most 40 words, so the archive, not the quote, carries the content.
+
+Coding follows the codebook:
+- **C1 Allowed values.** Every variable for every school is filled with a value the codebook
+  allows.
+- **C2 Consistency.** Stance and tone are "none found" together or not at all; a value other
+  than "none found" has a quote; "none found" has a search log entry for each of the four searches.
+- **C3 Evidence fits the value.** Each stance, collaboration, and disclosure value has a list of
+  cue words in the codebook (for "restrict": prohibited, not permitted, may not, ...). The quote
+  must contain a cue, or the value must carry a written reason why the quote still supports it.
+  Every such reason is shown on the site, so judgment calls are visible rather than hidden.
+- **C4 Search done.** Every school has a search log listing all four fixed searches and what each
+  returned.
+
+"None found" really means none found:
+- **N1 Second search.** For every "none found", two further searches with different wording
+  (`<domain> artificial intelligence course policy`, `<domain> AI syllabus statement`) are run
+  and logged. If either finds a qualifying page, the value is recoded and the miss is reported.
+
+Stability:
+- **R1 Re-fetch.** At the end of the phase every source URL is fetched again. Pages that changed
+  or vanished are listed (a report, not a failure: policies change).
+- **R2 Codebook changes.** If the pilot changes the codebook, the pilot schools are recoded under
+  the new version and the before-and-after differences are saved.
+
+Honest ceiling: these checks prove each value is backed by a real, unaltered page from the right
+school and that the coding rules were applied consistently. They cannot prove a second person
+would read an ambiguous sentence the same way. C3's written reasons are where that judgment
+lives, and the site shows them.
 
 ## Acceptance checks (Claude runs and records)
-- [ ] `check_sources.py` passes on all 15 schools; the mutation run fails; both recorded.
-- [ ] Every "none found" has a search log with all four searches.
-- [ ] Agreement with Marcus computed and saved in `data/coded/agreement.json`.
+- [ ] Study tests pass, recorded; the mutation run fails, recorded.
+- [ ] `check_study.py` passes S1 to S5, C1 to C4, and N1 on all 15 schools; results in
+      `data/coded/checks.json`.
+- [ ] R1 re-fetch report saved.
 - [ ] Web and pipeline tests still pass, recorded.
 
 ## Marcus's checklist (end of Phase 2; no code reading needed)
@@ -138,25 +181,22 @@ the page URL, the archive file path, and the retrieval time. No value without a 
       "fixed by Marcus".
 - [ ] Pick any school folder in `data/sources/`. Open its `search-log.md` and one saved page. Find
       in that page the quote that `data/coded/values.json` gives for it (Ctrl+F).
-- [ ] Fill in the blind worksheet for your 3 schools before looking at Claude's codes.
-- [ ] Read the agreement result. Does each disagreement's resolution seem fair to you?
+- [ ] Open `data/coded/checks.json` (or the summary Claude gives) and confirm every school shows
+      all checks passed.
 
-## Changes this spec makes to the project spec (applied once approved)
-- Hand-coded schools: **3, not 10.** The project spec says 10, written when the sample was 40;
-  10 of 15 would make Marcus code two thirds of the study by the deadline.
+## Changes this spec makes to the project spec (applied with this approval)
+- No hand-coded schools (Marcus, 2026-11-11). Deliverable 2's "human-vs-Claude agreement" becomes
+  the results of the checks above.
 
 ## Budget
 At the start of this phase (10:00 Nov 11): 5-hour 10%, weekly 9%. The pilot measures cost per
 school; Claude reports the projection after the pilot. A `/compact` is prepared after the pilot
 and again at the end of the phase.
 
-## Questions for Marcus
-1. Approve the design and the drawn list as they stand? (Changing the design means re-running the
-   draw with the same seed and saying so.)
-2. Blind check on 3 schools: acceptable, or another number?
-3. Cheaper model for the bulk work? Claude's recommendation: no. Coding quality is the point of the
-   study and the weekly limit is at 9%; revisit only if the pilot shows the 5-hour limit blocking
-   the deadline.
+## Decisions (Marcus, 2026-11-11T10:15)
+- Design and drawn list approved as they stand.
+- No hand-coding; the checks above replace it.
+- No cheaper model (Claude's recommendation stands).
 
 ## Out of scope
 - Pages behind logins (LMS, private syllabi). Their absence is noted, not worked around.

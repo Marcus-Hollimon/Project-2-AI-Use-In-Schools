@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "frozen_at": "2026-11-11",
+  "note": "Single source of truth for allowed values and cue words. check_study.py loads it; codebook.md explains it. Cue matching: case-insensitive, whole words; a cue ending in * matches any word starting with it. A value's cues are groups: the quote must match at least one cue from every group.",
+  "absence_values": ["none found", "not discussed", "not stated", "not addressed", "no public syllabus found"],
+  "variables": {
+    "univ_stance": {
+      "level": "university",
+      "values": {
+        "encourage": [["encourag*", "embrac*", "integrat*", "explore", "opportunit*", "empower*", "leverag*", "innovat*", "promot*", "prepar*"]],
+        "permit with conditions": [["permit*", "allow*", "may use", "acceptable", "appropriate*", "approved", "authoriz*", "with attribution", "disclos*", "acknowledg*", "cite", "citation*"]],
+        "restrict": [["prohibit*", "not permitted", "not allowed", "may not", "must not", "forbid*", "ban", "banned", "unauthorized", "violation*", "not acceptable", "without permission"]],
+        "instructor decides": [["instructor*", "faculty", "each course", "individual course*", "syllabus", "syllabi", "discretion", "course-by-course", "course policies", "course policy"]],
+        "none found": null
+      }
+    },
+    "dept_stance": {
+      "level": "department",
+      "same_values_as": "univ_stance"
+    },
+    "univ_tone": {
+      "level": "university",
+      "values": {"positive": null, "neutral": null, "cautionary": null, "none found": null}
+    },
+    "dept_tone": {
+      "level": "department",
+      "same_values_as": "univ_tone"
+    },
+    "collaboration": {
+      "level": "either",
+      "values": {
+        "explicit": [["collaborat*", "partner*", "assistant*", "tutor*", "pair program*", "copilot*", "co-pilot*", "work with", "working with", "alongside", "teammate*", "thought partner"]],
+        "in passing": [["collaborat*", "partner*", "assistant*", "tutor*", "pair program*", "copilot*", "co-pilot*", "work with", "working with", "alongside", "teammate*", "brainstorm*", "feedback"]],
+        "not discussed": null
+      }
+    },
+    "disclosure": {
+      "level": "either",
+      "values": {
+        "required": [["disclos*", "acknowledg*", "cite", "citation*", "cited", "attribut*", "document*", "transparen*", "indicate", "state"], ["must", "required", "require*", "shall", "expected", "need to", "obligat*"]],
+        "encouraged": [["disclos*", "acknowledg*", "cite", "citation*", "cited", "attribut*", "document*", "transparen*", "indicate", "state"], ["should", "encourag*", "recommend*", "consider", "best practice*"]],
+        "not stated": null
+      }
+    },
+    "se_courses": {
+      "level": "department",
+      "values": {
+        "AI built into the course": [["ai", "chatgpt", "copilot*", "llm*", "large language model*", "generative", "gpt*", "claude", "gemini", "cursor"], ["use", "using", "assign*", "project*", "lab", "labs", "integrat*", "required", "will", "learn*", "practice"]],
+        "allowed with conditions": [["permit*", "allow*", "may use", "acceptable", "appropriate*", "approved", "authoriz*", "disclos*", "acknowledg*", "cite", "citation*"]],
+        "prohibited": [["prohibit*", "not permitted", "not allowed", "may not", "must not", "forbid*", "ban", "banned", "unauthorized", "violation*", "not acceptable", "without permission"]],
+        "not addressed": null,
+        "no public syllabus found": null
+      }
+    }
+  },
+  "source_types": ["policy page", "guidance page", "handbook", "syllabus", "news or announcement"],
+  "required_searches": [
+    "{domain} generative AI policy",
+    "{domain} computer science AI policy",
+    "{domain} software engineering syllabus AI",
+    "{domain} ChatGPT academic integrity"
+  ],
+  "second_searches": [
+    "{domain} artificial intelligence course policy",
+    "{domain} AI syllabus statement"
+  ],
+  "max_quote_words": 40
+}

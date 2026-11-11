@@ -4,6 +4,7 @@ Same top-level shape as the web runs (web/scripts/record-tests.mjs), and the rep
 testResults/assertionResults layout, so the Validation tab reads both suites one way.
 
 Run from the repo root:  uv run --project pipeline python pipeline/record_tests.py "optional label"
+Study checks (Phase 2): uv run --project pipeline python pipeline/record_tests.py --suite study "optional label"
 """
 import json
 import os
@@ -36,10 +37,19 @@ def current_phase():
 
 
 def main():
-    label = " ".join(sys.argv[1:]) or None
-    xml_path = os.path.join(tempfile.mkdtemp(), "pipeline-junit.xml")
+    args = sys.argv[1:]
+    suite = "pipeline"
+    if args[:1] == ["--suite"]:
+        suite, args = args[1], args[2:]
+    if suite not in ("pipeline", "study"):
+        sys.exit("unknown suite: %s" % suite)
+    label = " ".join(args) or None
+    xml_path = os.path.join(tempfile.mkdtemp(), suite + "-junit.xml")
     started = now()
-    proc = subprocess.run([sys.executable, "-m", "pytest", "-q", "--junit-xml=" + xml_path], cwd=HERE)
+    if suite == "pipeline":
+        proc = subprocess.run([sys.executable, "-m", "pytest", "-q", "--junit-xml=" + xml_path], cwd=HERE)
+    else:
+        proc = subprocess.run([sys.executable, "-m", "pytest", "-q", "study/tests", "--junit-xml=" + xml_path], cwd=ROOT)
     finished = now()
 
     files = {}
@@ -57,7 +67,10 @@ def main():
         counts["total"] += 1
         counts[status] += 1
         module = case.get("classname", "")
-        name = "pipeline/" + module.replace(".", "/") + ".py"
+        if suite == "pipeline":
+            name = "pipeline/" + module.replace(".", "/") + ".py"
+        else:
+            name = "study/tests/" + module.split(".")[-1] + ".py"
         files.setdefault(name, []).append({
             "ancestorTitles": [module], "fullName": module + " " + case.get("name"), "title": case.get("name"),
             "status": status, "duration": round(float(case.get("time", 0)) * 1000, 3),
@@ -65,7 +78,8 @@ def main():
         })
 
     run = {
-        "suite": "pipeline", "runner": "pytest", "command": "uv run --project pipeline python pipeline/record_tests.py",
+        "suite": suite, "runner": "pytest",
+        "command": "uv run --project pipeline python pipeline/record_tests.py" + ("" if suite == "pipeline" else " --suite study"),
         "label": label, "startedAt": started, "finishedAt": finished, "phase": current_phase(),
         "gitCommit": git("rev-parse", "--short", "HEAD"), "uncommittedChanges": bool(git("status", "--porcelain")),
         "exitCode": proc.returncode, "summary": counts,
@@ -74,7 +88,7 @@ def main():
     }
     out_dir = os.path.join(ROOT, "validation", "runs")
     os.makedirs(out_dir, exist_ok=True)
-    out = os.path.join(out_dir, started.replace(":", "-").replace(".", "-") + "_pipeline.json")
+    out = os.path.join(out_dir, started.replace(":", "-").replace(".", "-") + "_" + suite + ".json")
     with open(out, "w", encoding="utf-8") as fh:
         json.dump(run, fh, indent=1)
         fh.write("\n")

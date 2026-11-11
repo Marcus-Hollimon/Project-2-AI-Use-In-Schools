@@ -39,6 +39,10 @@ the current phase spec in `specs/`, and write a phase's spec before starting tha
   data, and prompts from this project's sessions after Marcus has reviewed them.
 - Research data: save the raw source page (date-stamped) behind every coded value, so any data
   point can be checked against its source.
+- Study (Phase 2), from the repo root: `uv run --no-project python -I study/save_page.py <slug> <name> <url>`
+  archives a page with its fetch record; `uv run --no-project python -I study/check_study.py` runs checks
+  S1 to S5, C1 to C4, N1 on `data/coded/values.json`; `uv run --project pipeline python pipeline/record_tests.py
+  --suite study "label"` records the study test run. Codebook: `study/codebook.json` (values, cues) and `.md`.
 - Third-party APIs: read `reference/` at the installed version before writing code against them.
 - Commands handed to Marcus must work in Windows PowerShell 5.1.
 - Bash tool quirk seen 2026-11-08: several heredocs in one command failed to parse. Write one

@@ -4,6 +4,7 @@
 #   - lint and tests run before the build, so a failing test blocks deployment
 #   - Node pinned to 24 to match Marcus's machine (lts/* gave CI Node 26.13 on 2026-11-08)
 #   - pipeline tests (Python, run with uv) also run before the build (added in Phase 1)
+#   - study check tests also run before the build (added in Phase 2)
 name: Deploy site to GitHub Pages
 
 on:
@@ -51,6 +52,10 @@ jobs:
         run: |
           pipx install uv==0.11.13
           uv run --locked pytest -q
+      # Study check tests (Phase 2), on made-up schools; they reuse the pipeline's pinned pytest.
+      - name: Study check tests
+        working-directory: .
+        run: uv run --locked --project pipeline python -m pytest -q study/tests
       - name: Build
         run: npm run build
       - name: Setup Pages
