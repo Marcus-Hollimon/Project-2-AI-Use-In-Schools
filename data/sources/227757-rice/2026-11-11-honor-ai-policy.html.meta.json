@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://honor.rice.edu/ai-policy-information",
+ "final_url": "https://honor.rice.edu/ai-policy-information/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:44:05-05:00",
+ "sha256": "92e58230a3d39bb0f960d4d7951212178c292c8666e1c1d95f75abb19b9fd073",
+ "bytes": 69942
+}

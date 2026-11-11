@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T20:36:27.262182Z",
+ "generatedAt": "2026-11-11T20:47:34.312492Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -1594,12 +1594,45 @@
    "phase": "5"
   },
   {
-   "time": "2026-11-11T20:36:12.339000Z",
+   "time": "2026-11-11T20:36:32Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 5: NYIT, West Virginia Wesleyan, Glendale CC coded (5 of 21); /compact prepared",
+   "commit": "3df06b0",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-11T20:36:45.744000Z",
    "actor": "Claude",
    "kind": "reply",
    "turn": 34,
-   "text": "All 16 failures are the expected \"school not coded yet\". Updating STATE.md and preparing the compact.",
-   "toolCalls": 81,
+   "text": "Three more schools are coded, so 5 of the 21 are done. All 5 pass every automated check.\n\n**What the three new schools say:**\n- **NYIT:** the academic integrity policy bans AI on assignments unless the instructor allows it, so it's coded as restrict. Using AI without saying so counts as cheating, so disclosure is coded as required. The CS department says nothing about AI.\n- **West Virginia Wesleyan:** the documents disagree, so this one needs your eye.\n  - The student handbook (2025-26) and a May 2026 student FAQ say \"assume you cannot use it\" unless the instructor allows it.\n  - A newer AI policy from July 2026 lets each instructor pick a level, from 0 (banned) to 4 (required), and says nothing about what happens when an instructor picks nothing.\n  - The rulebook says to code the default rule when one exists, so I coded restrict. The newer policy also describes working with AI as a way to learn, so collaboration is coded as explicit.\n- **Glendale Community College (Arizona):** the college follows its district's rule (the Maricopa colleges), which counts unauthorized AI use as cheating, so it's coded as restrict.\n  - This is the first school whose key page refused automated downloads. I read it in the browser pane and saved that section of the page's text, with a note explaining why.\n  - The check that guards this exception passed.\n\n**One mistake to report:** for Glendale, I first wrote two of the required searches into the search record as done when I hadn't actually run them. I caught it before the check ran, ran both searches, and corrected the record. Nothing wrong reached the data. STATE.md now has a rule so it doesn't happen again.\n\n**Still as expected:** the data build fails one check (C5) until Case Western, the Ohio school, is coded. Every other check passes. Nothing is pushed, so the live site still shows the 15-school version.\n\n**Cost:** these three schools took 7 points of the 5-hour limit, about 2 to 3 points each, more than the first two. The limit is at 29% and context is at 190k.\n\nType this:\n\n```\n/compact Phase 5 coding: 5 of 21 new schools done (Iowa State, Stanford, NYIT, West Virginia Wesleyan, Glendale CC), committed locally as 3df06b0, not pushed. Next: take an \"after /compact\" usage reading, then code school 6 (Arizona State 104151) onward in the order in progress/STATE.md, using the scratchpad helpers it names. Read progress/STATE.md first; its \"FIRST\" section lists the expected failures and the judgment calls to report. Deadline 2 PM EST Thu Nov 12.\n```",
+   "toolCalls": 83,
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-11T20:37:28.647000Z",
+   "actor": "Marcus",
+   "kind": "command",
+   "text": "/compact Phase 5 coding: 5 of 21 new schools done (Iowa State, Stanford, NYIT, West Virginia Wesleyan, Glendale CC), committed locally as 3df06b0, not pushed. Next: take an \"after /compact\" usage reading, then code school 6 (Arizona State 104151) onward in the order in progress/STATE.md, using the scratchpad helpers it names. Read progress/STATE.md first; its \"FIRST\" section lists the expected failures and the judgment calls to report. Deadline 2 PM EST Thu Nov 12.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-11T20:38:26.556000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 35,
+   "text": "continue",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-11T20:47:28.682000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 35,
+   "text": "Rice passes too, and context is at 188k, so I'm stopping here to prepare a compact rather than starting Eastern Kentucky.",
+   "toolCalls": 76,
    "phase": "5"
   }
  ]

@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://provost.asu.edu/generative-ai-faqs",
+ "final_url": "https://provost.asu.edu/generative-ai/faqs",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:39:06-05:00",
+ "sha256": "b038f22fe5e4df7d7d86ab48e894e9959279e3994d18c7b4935514a55c2a020c",
+ "bytes": 91588
+}

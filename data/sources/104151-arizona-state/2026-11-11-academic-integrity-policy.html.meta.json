@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://provost.asu.edu/academic-integrity/policy",
+ "final_url": "https://provost.asu.edu/academic-integrity/policy",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:39:25-05:00",
+ "sha256": "ca077f8a585e12d37f3c0b2166336c0fd2e46c2f6fde2b8373be968069407019",
+ "bytes": 111282
+}

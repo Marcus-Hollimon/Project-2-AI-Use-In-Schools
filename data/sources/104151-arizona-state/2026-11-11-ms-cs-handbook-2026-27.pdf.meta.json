@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2026/06/MS-CS-Handbook-2026-27.pdf",
+ "final_url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2026/06/MS-CS-Handbook-2026-27.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T15:42:05-05:00",
+ "sha256": "975515f17df12731d2c9d5092d9bd744cee451438b8541b5ec4419625a1598ed",
+ "bytes": 566065
+}

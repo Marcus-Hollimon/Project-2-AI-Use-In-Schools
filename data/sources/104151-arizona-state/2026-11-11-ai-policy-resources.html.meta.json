@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://ai.asu.edu/policy-and-resources",
+ "final_url": "https://ai.asu.edu/policy-and-resources",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:39:06-05:00",
+ "sha256": "4faae3967f3a597c74c0ac9490847c13938f811160ba9004bb52b46155b18546",
+ "bytes": 39457
+}

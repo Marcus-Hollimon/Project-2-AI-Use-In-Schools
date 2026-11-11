@@ -1165,6 +1165,132 @@
      "note": "A two-year college: the computer science transfer degree has CSC110, CSC205, CSC230 and CSC240 and no software engineering course."
     }
    }
+  },
+  {
+   "unitid": "104151",
+   "slug": "104151-arizona-state",
+   "name": "Arizona State University Campus Immersion",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "instructor decides",
+     "quote": "Before using AI tools in your coursework, confer with your instructor about their class policy for using AI tools.",
+     "url": "https://provost.asu.edu/generative-ai/faqs",
+     "archive": "data/sources/104151-arizona-state/2026-11-11-provost-genai-faqs.html",
+     "source_type": "guidance page",
+     "note": "The Provost's FAQ answer to 'Will I get accused of cheating if I use AI tools?'. No university default was found: the Academic Integrity Policy page has no text on AI, the Provost's syllabus statements give instructors three options (permitted, some circumstances, none) without naming a default, and the FAQ says the integrity policy is still under review. Unit defaults (such as the School of Sustainable Engineering's) apply only to those units."
+    },
+    "univ_tone": {
+     "value": "positive",
+     "quote": "AI can enhance your teaching and enrich the student experience.",
+     "url": "https://provost.asu.edu/generative-ai",
+     "archive": "data/sources/104151-arizona-state/2026-11-11-provost-generative-ai.html",
+     "source_type": "guidance page",
+     "note": "The Provost's page frames AI through 'principled innovation' and offers ChatGPT Edu and CreateAI; the FAQ says ASU is 'focused on the positive potential of generative AI'."
+    },
+    "dept_stance": {
+     "value": "restrict",
+     "quote": "Unless explicitly allowed by your instructor, the use of generative AI tools to complete any portion of a course assignment or exam will be considered academic dishonesty and a violation of the ASU Academic Integrity Policy.",
+     "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2026/06/MS-CS-Handbook-2026-27.pdf",
+     "archive": "data/sources/104151-arizona-state/2026-11-11-ms-cs-handbook-2026-27.pdf",
+     "source_type": "handbook",
+     "note": "School of Computing and Augmented Intelligence, Computer Science MS Handbook 2026-2027, the newest CS handbook on the department's handbooks page. It is a graduate handbook; SCAI lists no undergraduate handbook. The MCS and PhD handbooks for 2025-26 carry the same rule."
+    },
+    "dept_tone": {
+     "value": "cautionary",
+     "quote": "Unless explicitly allowed by your instructor, the use of generative AI tools to complete any portion of a course assignment or exam will be considered academic dishonesty and a violation of the ASU Academic Integrity Policy.",
+     "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2026/06/MS-CS-Handbook-2026-27.pdf",
+     "archive": "data/sources/104151-arizona-state/2026-11-11-ms-cs-handbook-2026-27.pdf",
+     "source_type": "handbook",
+     "note": "The next sentence says students in non-allowable use 'will be sanctioned according to the academic integrity policy and FSE sanctioning guidelines'."
+    },
+    "collaboration": {
+     "value": "in passing",
+     "quote": "Examples of ways that AI tools can be used include [brainstorming, drafting, editing, and revising assignments].",
+     "url": "https://docs.google.com/document/d/1u9RGD8oU3e16XkdFNC6k8tgXIzYW2L7yZ2ELW5LfZqQ/edit",
+     "archive": "data/sources/104151-arizona-state/2026-11-11-provost-syllabus-statements.pdf",
+     "source_type": "guidance page",
+     "domain_reason": "ASU's official AI guidelines page (ai.asu.edu/policy-and-resources) links this Google Doc as 'Syllabus Statements Concerning Use of Generative Artificial Intelligence (AI)'; it is the Office of the University Provost's sample syllabus language, hosted on Google Docs. Saved through the document's PDF export.",
+     "note": "One bracketed example list in the 'generally permitted' sample statement; the document does not develop AI as a way to learn or work."
+    },
+    "disclosure": {
+     "value": "encouraged",
+     "quote": "Using AI tools to generate content without proper acknowledgement will be considered a violation of the ASU Academic Integrity Policy",
+     "url": "https://docs.google.com/document/d/1u9RGD8oU3e16XkdFNC6k8tgXIzYW2L7yZ2ELW5LfZqQ/edit",
+     "archive": "data/sources/104151-arizona-state/2026-11-11-provost-syllabus-statements.pdf",
+     "source_type": "guidance page",
+     "domain_reason": "Same Provost syllabus statements document as collaboration, linked from ai.asu.edu/policy-and-resources and hosted on Google Docs.",
+     "cue_reason": "Codebook v2: example syllabus language telling students to disclose, which instructors may adopt but no rule makes binding, is 'encouraged'. The sentence is from the Provost's sample 'generally permitted' statement; the Provost FAQ only tells students to ask their professor how to cite."
+    },
+    "se_courses": {
+     "value": "no public syllabus found",
+     "search_log": "data/sources/104151-arizona-state/search-log.md",
+     "note": "CSE 360 Introduction to Software Engineering is the required course; no public syllabus was found (one instructor's course site did not resolve)."
+    }
+   }
+  },
+  {
+   "unitid": "227757",
+   "slug": "227757-rice",
+   "name": "Rice University",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "permit with conditions",
+     "quote": "Utilizing AI software to generate ideas and pass them off as one’s own will also be considered plagiarism and will be adjudicated as such.",
+     "url": "https://honor.rice.edu/ai-policy-information/",
+     "archive": "data/sources/227757-rice/2026-11-11-honor-ai-policy.html",
+     "source_type": "policy page",
+     "cue_reason": "The Honor Council's General AI Policy is the default for all academic work (course policies may supersede it). It does not ban AI use; it forbids presenting AI-generated ideas as one's own, so use is allowed on the condition that it is credited.",
+     "note": "The page says the policy 'governs all academic work' and that 'any course-specific AI policy supersedes the Honor Council’s general AI policy'."
+    },
+    "univ_tone": {
+     "value": "cautionary",
+     "quote": "Utilizing AI software to generate ideas and pass them off as one’s own will also be considered plagiarism and will be adjudicated as such.",
+     "url": "https://honor.rice.edu/ai-policy-information/",
+     "archive": "data/sources/227757-rice/2026-11-11-honor-ai-policy.html",
+     "source_type": "policy page",
+     "note": "The rest of the page is an FAQ for faculty on accusations of unauthorized AI assistance, detector evidence and ways to curb AI use."
+    },
+    "dept_stance": {
+     "value": "encourage",
+     "quote": "Taught by Professor Joe Warren, COMP 101 teaches students how to build real programs by working alongside large language models like Gemini and Claude.",
+     "url": "https://csweb.rice.edu/news/you-already-use-ai-now-learn-how-it-actually-works",
+     "archive": "data/sources/227757-rice/2026-11-11-cs-news-ai-courses.html",
+     "source_type": "news or announcement",
+     "cue_reason": "The codebook's 'encourage' row names 'AI built into courses' as an example. This department news promotes a new course, open to every major, in which students build programs with large language models; no cue word appears in the sentence.",
+     "note": "The only department text on AI found (department news, Aug. 4, 2026); no department rule on AI use in coursework was found, so the Honor Council's general policy applies in other courses. Codebook v2: news on the department's site counts as department text."
+    },
+    "dept_tone": {
+     "value": "positive",
+     "quote": "Whether you are studying business, medicine or the humanities, knowing how AI systems work will make you better at whatever you do next.",
+     "url": "https://csweb.rice.edu/news/you-already-use-ai-now-learn-how-it-actually-works",
+     "archive": "data/sources/227757-rice/2026-11-11-cs-news-ai-courses.html",
+     "source_type": "news or announcement",
+     "note": "The department chair, quoted in department news of Aug. 4, 2026. Codebook v2: news on the department's site counts as department text."
+    },
+    "collaboration": {
+     "value": "explicit",
+     "quote": "Taught by Professor Joe Warren, COMP 101 teaches students how to build real programs by working alongside large language models like Gemini and Claude.",
+     "url": "https://csweb.rice.edu/news/you-already-use-ai-now-learn-how-it-actually-works",
+     "archive": "data/sources/227757-rice/2026-11-11-cs-news-ai-courses.html",
+     "source_type": "news or announcement",
+     "note": "Developed in the next sentence ('Students learn to write effective prompts, test and debug AI-generated code...') and in the FAQ ('you will know how to build and refine programs using large language models'). The university pages reviewed do not discuss working with AI."
+    },
+    "disclosure": {
+     "value": "required",
+     "quote": "Utilizing AI software to generate ideas and pass them off as one’s own will also be considered plagiarism and will be adjudicated as such.",
+     "url": "https://honor.rice.edu/ai-policy-information/",
+     "archive": "data/sources/227757-rice/2026-11-11-honor-ai-policy.html",
+     "source_type": "policy page",
+     "cue_reason": "Passing AI-generated ideas off as one's own is plagiarism under the binding General AI Policy, so a student who uses them must credit them. No cue word appears; the requirement follows from the plagiarism rule."
+    },
+    "se_courses": {
+     "value": "no public syllabus found",
+     "search_log": "data/sources/227757-rice/search-log.md",
+     "note": "COMP 410 Software Engineering Methodology: the 2026 syllabi sit behind the Esther login; the only public one is from 2015 (pre-2023)."
+    }
+   }
   }
  ]
 }

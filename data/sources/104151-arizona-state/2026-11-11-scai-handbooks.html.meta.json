@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://scai.engineering.asu.edu/handbooks/",
+ "final_url": "https://scai.engineering.asu.edu/handbooks/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:41:47-05:00",
+ "sha256": "69e6691a0bbf44cb90153a9b0ad47e72f5abe24d2cf0d89de6c46da847016859",
+ "bytes": 134469
+}

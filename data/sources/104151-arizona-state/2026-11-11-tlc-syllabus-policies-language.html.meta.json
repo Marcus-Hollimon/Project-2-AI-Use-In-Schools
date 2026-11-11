@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://tlc.sols.asu.edu/teaching/toolkits/syllabus-and-policies-language",
+ "final_url": "https://tlc.sols.asu.edu/teaching/toolkits/syllabus-and-policies-generative-ai",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:39:26-05:00",
+ "sha256": "09c9f80e4841ea2431ecf6950d7b5be5ada1bf527ba55690601feeff6ee45234",
+ "bytes": 36352
+}

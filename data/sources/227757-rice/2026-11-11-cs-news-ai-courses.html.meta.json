@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://csweb.rice.edu/news/you-already-use-ai-now-learn-how-it-actually-works",
+ "final_url": "https://csweb.rice.edu/news/you-already-use-ai-now-learn-how-it-actually-works",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:45:54-05:00",
+ "sha256": "9e77e7b2d84bc6148c28b760be8670b2784313028b6335e86c0147f3ff0aa194",
+ "bytes": 58277
+}
