@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://libguides.westminster.edu/artificialintelligenceresources",
+ "final_url": "https://libguides.westminster.edu/artificialintelligenceresources",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:20:17-05:00",
+ "sha256": "230681d42f303478f474890dd7674b003b908b234ee086aa0b4565c8f8337ada",
+ "bytes": 64810
+}

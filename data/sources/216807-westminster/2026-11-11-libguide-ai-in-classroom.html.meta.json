@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://libguides.westminster.edu/artificialintelligenceresources/aiintheclassroom",
+ "final_url": "https://libguides.westminster.edu/artificialintelligenceresources/aiintheclassroom",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:20:16-05:00",
+ "sha256": "a7b104ff4a20656a98eb119c454cfcf8d83194dc47cada3485ec285bb576865d",
+ "bytes": 46303
+}

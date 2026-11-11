@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T16:17:38-05:00",
+ "generatedAt": "2026-11-11T16:24:44-05:00",
  "codebookVersion": 2,
  "schools": [
   {
@@ -7806,16 +7806,277 @@
   {
    "unitid": "216807",
    "name": "Westminster College",
-   "pass": false,
+   "pass": true,
    "checks": {
-    "C1": false
+    "S1": true,
+    "S2": true,
+    "S3": true,
+    "S4": true,
+    "S5": true,
+    "C1": true,
+    "C2": true,
+    "C3": true,
+    "C4": true,
+    "N1": true
    },
    "findings": [
     {
-     "check": "C1",
+     "check": "C4",
      "variable": null,
-     "ok": false,
-     "message": "school not coded yet"
+     "ok": true,
+     "message": "search logged with results: westminster.edu generative AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: westminster.edu computer science AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: westminster.edu software engineering syllabus AI"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: westminster.edu ChatGPT academic integrity"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "value 'permit with conditions' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote has 16 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote found in data/sources/216807-westminster/2026-11-11-catalog-academic-integrity.rendered.txt"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "rendered text; raw curl copy blocked (HTTP 403, or 202 empty); reason: curl gets HTTP 202 with an empty body from catalog.westminster.edu (a bot challenge); the page text was read in Claude's browser pane."
+    },
+    {
+     "check": "S4",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "catalog.westminster.edu is on westminster.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "cue words absent; reason: The Academic Integrity Policy lists handing in AI work as one's own as cheating; it bans passing AI work off, not AI use, so there is no default ban (same reading as Rice)."
+    },
+    {
+     "check": "C1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "value 'neutral' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote has 26 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote found in data/sources/216807-westminster/2026-11-11-catalog-academic-integrity.rendered.txt"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "rendered text; raw curl copy blocked (HTTP 403, or 202 empty); reason: curl gets HTTP 202 with an empty body from catalog.westminster.edu (a bot challenge); the page text was read in Claude's browser pane."
+    },
+    {
+     "check": "S4",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "catalog.westminster.edu is on westminster.edu"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "value 'not discussed' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "absence backed by 3 reviewed pages"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "value 'required' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote has 26 words"
+    },
+    {
+     "check": "S1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote found in data/sources/216807-westminster/2026-11-11-catalog-academic-integrity.rendered.txt"
+    },
+    {
+     "check": "S2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "rendered text; raw curl copy blocked (HTTP 403, or 202 empty); reason: curl gets HTTP 202 with an empty body from catalog.westminster.edu (a bot challenge); the page text was read in Claude's browser pane."
+    },
+    {
+     "check": "S4",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "catalog.westminster.edu is on westminster.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "cue words absent; reason: The plagiarism rule makes it a violation to submit work partly authored by AI programs as one's own, so AI help must be acknowledged; same reading as Rice, Defiance, EKU and UDC."
+    },
+    {
+     "check": "C1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "value 'no public syllabus found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "univ_stance='permit with conditions' and univ_tone='neutral' agree on none found"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "dept_stance='none found' and dept_tone='none found' agree on none found"
     }
    ]
   },
@@ -7916,7 +8177,7 @@
      "check": "S3",
      "variable": "univ_stance",
      "ok": true,
-     "message": "rendered text; raw curl copy got HTTP 403; reason: district.maricopa.edu answers curl with HTTP 403 (a bot check; the raw 403 copy is saved as 2026-11-11-district-ar-2-3.html). Read in Claude's browser pane; section 2.3.11 of the page text is saved as rendered text."
+     "message": "rendered text; raw curl copy blocked (HTTP 403, or 202 empty); reason: district.maricopa.edu answers curl with HTTP 403 (a bot check; the raw 403 copy is saved as 2026-11-11-district-ar-2-3.html). Read in Claude's browser pane; section 2.3.11 of the page text is saved as rendered text."
     },
     {
      "check": "S4",
@@ -7988,7 +8249,7 @@
      "check": "S3",
      "variable": "univ_tone",
      "ok": true,
-     "message": "rendered text; raw curl copy got HTTP 403; reason: district.maricopa.edu answers curl with HTTP 403; read in Claude's browser pane and saved as rendered text."
+     "message": "rendered text; raw curl copy blocked (HTTP 403, or 202 empty); reason: district.maricopa.edu answers curl with HTTP 403; read in Claude's browser pane and saved as rendered text."
     },
     {
      "check": "S4",

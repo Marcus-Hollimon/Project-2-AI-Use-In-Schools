@@ -187,6 +187,28 @@ def test_s3_rendered_text_with_blocked_raw_copy_needs_fetch_reason(world):
     assert only_failures(findings(world, school)) == ["S3"]
 
 
+def test_s3_rendered_text_with_empty_202_raw_copy_needs_fetch_reason(world):
+    # HTTP 202 with an empty body is a bot challenge, treated like 403; a 202 with a body is not.
+    text = "Students may use generative AI tools when the instructor allows it"
+    archive = write_archive(world["root"], "2026-11-11-waf.rendered.txt", text, status=None,
+                            kind="rendered text from Claude's browser pane",
+                            url="https://www.example.edu/waf", final_url="https://www.example.edu/waf")
+    school = mutate(world, "univ_stance", archive=archive, url="https://www.example.edu/waf")
+    write_archive(world["root"], "2026-11-11-waf.html", "", status=202,
+                  url="https://www.example.edu/waf", final_url="https://www.example.edu/waf")
+    assert only_failures(findings(world, school)) == ["S3"]
+    school["values"]["univ_stance"]["fetch_reason"] = "curl gets HTTP 202 with an empty body; read in the browser pane"
+    assert only_failures(findings(world, school)) == []
+    archive2 = write_archive(world["root"], "2026-11-11-busy.rendered.txt", text, status=None,
+                             kind="rendered text from Claude's browser pane",
+                             url="https://www.example.edu/busy", final_url="https://www.example.edu/busy")
+    write_archive(world["root"], "2026-11-11-busy.html", "<html>Accepted</html>", status=202,
+                  url="https://www.example.edu/busy", final_url="https://www.example.edu/busy")
+    school = mutate(world, "univ_stance", archive=archive2, url="https://www.example.edu/busy",
+                    fetch_reason="anything")
+    assert only_failures(findings(world, school)) == ["S3"]
+
+
 def test_s3_missing_fetch_record_fails(world):
     Path(str(world["root"] / world["archive"]) + ".meta.json").unlink()
     assert failed(findings(world), "S1")

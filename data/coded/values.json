@@ -1633,6 +1633,65 @@
      "note": "Public CSCI 362 Software Engineering and CSCI 462 syllabi are from 2010 to 2020, before 2023, so they count as no public syllabus (codebook v2)."
     }
    }
+  },
+  {
+   "unitid": "216807",
+   "slug": "216807-westminster",
+   "name": "Westminster College",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "permit with conditions",
+     "quote": "Handing in the work of another (including commercial services and Artificial Intelligence programs) as your own",
+     "url": "https://catalog.westminster.edu/content.php?catoid=10&navoid=362",
+     "archive": "data/sources/216807-westminster/2026-11-11-catalog-academic-integrity.rendered.txt",
+     "source_type": "policy page",
+     "fetch_reason": "curl gets HTTP 202 with an empty body from catalog.westminster.edu (a bot challenge); the page text was read in Claude's browser pane.",
+     "cue_reason": "The Academic Integrity Policy lists handing in AI work as one's own as cheating; it bans passing AI work off, not AI use, so there is no default ban (same reading as Rice).",
+     "note": "From the cheating list; the 2026-2027 Student Handbook's Academic Integrity page links to this policy. No other college AI rule was found."
+    },
+    "univ_tone": {
+     "value": "neutral",
+     "quote": "Submitting as one’s own work a paper, oral presentation, or visual presentation authored wholly or partially by someone else (including commercial services and Artificial Intelligence programs)",
+     "url": "https://catalog.westminster.edu/content.php?catoid=10&navoid=362",
+     "archive": "data/sources/216807-westminster/2026-11-11-catalog-academic-integrity.rendered.txt",
+     "source_type": "policy page",
+     "fetch_reason": "curl gets HTTP 202 with an empty body from catalog.westminster.edu (a bot challenge); the page text was read in Claude's browser pane.",
+     "note": "AI appears only as an item in procedural lists of violations, with no evaluative language."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/216807-westminster/search-log.md"
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/216807-westminster/search-log.md"
+    },
+    "collaboration": {
+     "value": "not discussed",
+     "reviewed": [
+      "data/sources/216807-westminster/2026-11-11-catalog-academic-integrity.rendered.txt",
+      "data/sources/216807-westminster/2026-11-11-libguide-ai-in-classroom.html",
+      "data/sources/216807-westminster/2026-11-11-libguide-ai-home.html"
+     ],
+     "note": "The library's AI guide lists outside readings for instructors; its own text never presents AI as a partner or tutor (a book blurb on the home tab is publisher text)."
+    },
+    "disclosure": {
+     "value": "required",
+     "quote": "Submitting as one’s own work a paper, oral presentation, or visual presentation authored wholly or partially by someone else (including commercial services and Artificial Intelligence programs)",
+     "url": "https://catalog.westminster.edu/content.php?catoid=10&navoid=362",
+     "archive": "data/sources/216807-westminster/2026-11-11-catalog-academic-integrity.rendered.txt",
+     "source_type": "policy page",
+     "fetch_reason": "curl gets HTTP 202 with an empty body from catalog.westminster.edu (a bot challenge); the page text was read in Claude's browser pane.",
+     "cue_reason": "The plagiarism rule makes it a violation to submit work partly authored by AI programs as one's own, so AI help must be acknowledged; same reading as Rice, Defiance, EKU and UDC.",
+     "note": "Plagiarism list of the Academic Integrity Policy."
+    },
+    "se_courses": {
+     "value": "no public syllabus found",
+     "search_log": "data/sources/216807-westminster/search-log.md",
+     "note": "CS 351 Software Engineering has only a catalog description with no AI text (offered Spring, odd years); no syllabus was found."
+    }
+   }
   }
  ]
 }

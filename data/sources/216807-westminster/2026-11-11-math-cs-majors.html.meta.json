@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.westminster.edu/academics/schools/physical-mathematical/math-cs/majors.cfm",
+ "final_url": "https://www.westminster.edu/academics/schools/physical-mathematical/math-cs/majors.cfm",
+ "http_status": 200,
+ "content_type": "text/html;charset=UTF-8",
+ "fetched_at": "2026-11-11T16:23:28-05:00",
+ "sha256": "edf21323e1937640cd666144e31f67e3b9b0febae18d2f123fe2b95d797fca0f",
+ "bytes": 41028
+}

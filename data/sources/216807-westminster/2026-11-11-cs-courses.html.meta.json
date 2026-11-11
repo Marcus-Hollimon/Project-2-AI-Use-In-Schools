@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://westminster.edu/academics/majors-programs/computer-science/courses.cfm",
+ "final_url": "https://www.westminster.edu/academics/schools/physical-mathematical/math-cs/index.cfm",
+ "http_status": 200,
+ "content_type": "text/html;charset=UTF-8",
+ "fetched_at": "2026-11-11T16:23:29-05:00",
+ "sha256": "e77201f86dc3d49ac4e49d593f923f47555f4e6aa79a8cbebafacd5d1f462a4d",
+ "bytes": 41276
+}

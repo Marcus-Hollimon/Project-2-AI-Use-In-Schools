@@ -56,6 +56,13 @@ new phase row and deliverable 1's "Done when" says 36 schools.
 - Every page behind a value is archived with `study/save_page.py`. Curl-blocked pages follow the
   Phase 2 rule (browser text plus the raw 403 copy and a written reason). Never retry curl with
   browser headers; never complete a CAPTCHA.
+- **Change made while coding (2026-11-11, 16:22 EST, Westminster):** catalog.westminster.edu answers
+  curl with HTTP 202 and an empty body (a bot challenge) instead of 403. Check S3 now treats a raw copy
+  that is HTTP 202 **and** zero bytes as blocked, like 403, so it still needs a written `fetch_reason`;
+  a 202 with any body still fails. New test `test_s3_rendered_text_with_empty_202_raw_copy_needs_fetch_reason`;
+  study tests 39/39 (`validation/runs/2026-11-11T21-24-25-844Z_study.json`). This is a check change, not
+  a codebook change; it is on Marcus's list of judgment calls, and reverting it would leave Westminster's
+  university values without an archive the checker accepts.
 - **Order: round robin by type** (S1, S2, S3, S4, S5, then again; the Ohio school last), so if the budget runs out early,
   every type still has the same number of schools.
 - A school counts as done only when `check_study.py` passes every check (S1 to S5, C1 to C4, N1)

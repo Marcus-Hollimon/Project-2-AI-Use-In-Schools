@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://catalog.westminster.edu/index.php?catoid=13",
+ "final_url": "https://catalog.westminster.edu/index.php?catoid=13",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:20:17-05:00",
+ "sha256": "748f5ebeb2cec91677ecc47530cf6465736001df5c506e1820ffae2df97eac42",
+ "bytes": 45644
+}
