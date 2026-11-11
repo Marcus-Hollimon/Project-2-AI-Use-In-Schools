@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://facultygovernance.mit.edu/node/2065",
+ "final_url": "https://facultygovernance.mit.edu/node/2065",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T11:03:01-05:00",
+ "sha256": "1cdfe53664349782c186fb399dc695472dd3214a240d6f3ab5d936bb0dd0392f",
+ "bytes": 30629
+}

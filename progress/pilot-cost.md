@@ -54,3 +54,11 @@ point means anywhere from about 0.1 to 1.9. Times come from `date -Iseconds` in 
 4. A conduct clause that limits AI ("inappropriate or excessive use") without stating a default (Coppin State): v1 has no clean value; coded "permit with conditions" with a cue_reason. A rule for this case would make it consistent.
 
 Recode (spec R2): one value changed, Johns Hopkins `se_courses` "not addressed" to "no public syllabus found" (`data/coded/codebook-v2-recode.json`). All 5 pass the checks under v2; study tests 32/32 (`validation/runs/2026-11-11T15-53-30-496Z_study.json`).
+
+## Main coding (the 10 schools after the pilot, codebook v2)
+| School | Start (reading before) | End (school passes checks) | 5-hour % | Weekly % | Context tokens | Searches | Pages saved |
+|---|---|---|---|---|---|---|---|
+| (after /compact) | | 2026-11-11T10:59:34-05:00 | 45 | 13 | 88,911 | | |
+| Virginia 234076 | 10:59:34 | 2026-11-11T11:02:39-05:00 | 47 | 14 | 122,305 | 7 | 2 (CS department site blocked) |
+| MIT 166683 | 11:02:39 | 2026-11-11T11:04:48-05:00 | 49 | 14 | 148,301 | 7 | 5 |
+| Presbyterian 218539 | 11:04:48 | 2026-11-11T11:05:45-05:00 | 49 | 14 | 165,412 | 8 | 3 |

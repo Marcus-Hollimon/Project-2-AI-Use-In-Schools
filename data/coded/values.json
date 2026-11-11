@@ -296,6 +296,177 @@
      "note": "CS 2450 Introduction to Software Engineering: the college's course syllabus (approved Fall 2025) has no AI statement. Section syllabi from instructors are not public."
     }
    }
+  },
+  {
+   "unitid": "234076",
+   "slug": "234076-virginia",
+   "name": "University of Virginia-Main Campus",
+   "values": {
+    "univ_stance": {
+     "value": "instructor decides",
+     "quote": "It is important for instructors to make explicit in their syllabi and assignment descriptions which uses of Gen-AI are permitted in coursework, if any, and which are prohibited.",
+     "url": "https://genai.provost.virginia.edu/guidance-for-faculty-students",
+     "archive": "data/sources/234076-virginia/2026-11-11-guidance.html",
+     "source_type": "guidance page",
+     "note": "No university default: the Provost guidance leaves permitted and prohibited uses to each instructor; using AI in ways the instructor prohibits may violate the Honor Code."
+    },
+    "univ_tone": {
+     "value": "positive",
+     "quote": "The emergence of this technology provides an opportunity to model intellectual curiosity and openness.",
+     "url": "https://genai.provost.virginia.edu/guidance-for-faculty-students",
+     "archive": "data/sources/234076-virginia/2026-11-11-guidance.html",
+     "source_type": "guidance page",
+     "note": "Mixed page: the faculty guidance frames AI as an aid to learning and asks instructors to encourage appropriate use; the student FAQ warns about inaccurate and biased output. The faculty guidance is most of the page."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/234076-virginia/search-log.md",
+     "note": "The CS department site (engineering.virginia.edu) returned HTTP 403 to curl and the browser pane could not open it, so no department page is archived. No search turned up a CS department AI policy."
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/234076-virginia/search-log.md"
+    },
+    "collaboration": {
+     "value": "explicit",
+     "quote": "Acknowledge that these tools can be used to aid learning, and encourage your students to use them in appropriate ways.",
+     "url": "https://genai.provost.virginia.edu/guidance-for-faculty-students",
+     "archive": "data/sources/234076-virginia/2026-11-11-guidance.html",
+     "source_type": "guidance page",
+     "cue_reason": "The same paragraph tells instructors to encourage use to aid learning and then lists tutor-like uses, such as breaking down complex concepts and serving as a \"Socratic opponent\", over more than one sentence."
+    },
+    "disclosure": {
+     "value": "encouraged",
+     "quote": "If you have used AI in completing an assignment, even in ways explicitly permitted by the instructor, you should clearly indicate the tool used, how you used it, the prompts you used",
+     "url": "https://genai.provost.virginia.edu/guidance-for-faculty-students",
+     "archive": "data/sources/234076-virginia/2026-11-11-guidance.html",
+     "source_type": "guidance page"
+    },
+    "se_courses": {
+     "value": "allowed with conditions",
+     "quote": "Use of AI Assistants, like ChatGPT, Copilot, etc., is allowed only in limited circumstances",
+     "url": "https://uva-cs3140-s25.github.io/syllabus.html",
+     "archive": "data/sources/234076-virginia/2026-11-11-cs3140-syllabus-s25.html",
+     "source_type": "syllabus",
+     "domain_reason": "UVA CS courses publish their syllabi on GitHub Pages; uva-cs3140-s25 is the course site for CS 3140 Software Development Essentials, Spring 2025.",
+     "note": "CS 3140 Software Development Essentials (Spring 2025), the first software engineering course in catalog order: small AI snippets allowed as with StackOverflow, no more than about 6 lines at a time, and all AI use must be cited in code comments. CS 4501 Software Engineering and LLMs comes later in the catalog."
+    }
+   }
+  },
+  {
+   "unitid": "166683",
+   "slug": "166683-mit",
+   "name": "Massachusetts Institute of Technology",
+   "values": {
+    "univ_stance": {
+     "value": "instructor decides",
+     "quote": "Instructors use an easily understandable format to communicate what is and is not permitted; and",
+     "url": "https://facultygovernance.mit.edu/node/2065",
+     "archive": "data/sources/166683-mit/2026-11-11-faculty-ai-policy.html",
+     "source_type": "policy page",
+     "note": "The Aug 2026 policy message asks every class to post its own AI policy and offers a four-option menu; it sets no Institute-wide default."
+    },
+    "univ_tone": {
+     "value": "neutral",
+     "quote": "AI policies should include a rationale.",
+     "url": "https://facultygovernance.mit.edu/node/2065",
+     "archive": "data/sources/166683-mit/2026-11-11-faculty-ai-policy.html",
+     "source_type": "policy page",
+     "note": "The policy message is procedural: what each class policy should contain and where to get help."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/166683-mit/search-log.md",
+     "reviewed": [
+      "data/sources/166683-mit/2026-11-11-eecs-undergrad.html"
+     ]
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/166683-mit/search-log.md"
+    },
+    "collaboration": {
+     "value": "in passing",
+     "quote": "Courses where independent problem solving is central, but where AI can reasonably serve as a tutor, editor, or study aid.",
+     "url": "https://bpb-us-e1.wpmucdn.com/sites.mit.edu/dist/d/2418/files/2026/09/AI-Committee-Final-Report-Aug-13.pdf",
+     "archive": "data/sources/166683-mit/2026-11-11-ai-committee-report.pdf",
+     "source_type": "guidance page",
+     "domain_reason": "The Ad Hoc Committee report is hosted on the content network behind MIT's WordPress sites (sites.mit.edu, site 2418); the copy on web.mit.edu returned HTTP 404.",
+     "note": "One option in the committee report's policy menu (Appendix B). The report also names individualized tutoring as an opportunity, without developing it as a recommended way to learn."
+    },
+    "disclosure": {
+     "value": "encouraged",
+     "quote": "Students must clearly distinguish their own work from AI-assisted work and cite AI-generated material or ideas.",
+     "url": "https://bpb-us-e1.wpmucdn.com/sites.mit.edu/dist/d/2418/files/2026/09/AI-Committee-Final-Report-Aug-13.pdf",
+     "archive": "data/sources/166683-mit/2026-11-11-ai-committee-report.pdf",
+     "source_type": "guidance page",
+     "domain_reason": "The Ad Hoc Committee report is hosted on the content network behind MIT's WordPress sites (sites.mit.edu, site 2418); the copy on web.mit.edu returned HTTP 404.",
+     "cue_reason": "Codebook v2: this is example policy language from the report's menu (Appendix B) that instructors may adopt; no Institute rule makes it binding, so it is \"encouraged\"."
+    },
+    "se_courses": {
+     "value": "prohibited",
+     "quote": "You may not use code or text produced by advanced code-authoring tools, e.g. Claude Code, Cursor, GitHub Copilot, or other generative AI tools or chatbots, e.g. ChatGPT.",
+     "url": "https://web.mit.edu/6.102/www/sp26/general/collaboration.html",
+     "archive": "data/sources/166683-mit/2026-11-11-6-102-sp26-collaboration.html",
+     "source_type": "syllabus",
+     "note": "6.1020 Software Construction, Spring 2026, the first software engineering course in catalog order (6.1040 Software Studio comes later)."
+    }
+   }
+  },
+  {
+   "unitid": "218539",
+   "slug": "218539-presbyterian",
+   "name": "Presbyterian College",
+   "values": {
+    "univ_stance": {
+     "value": "none found",
+     "search_log": "data/sources/218539-presbyterian/search-log.md",
+     "reviewed": [
+      "data/sources/218539-presbyterian/2026-11-11-blue-book-2026.pdf",
+      "data/sources/218539-presbyterian/2026-11-11-catalog-2026.pdf"
+     ],
+     "note": "No AI policy or guidance found; the Honor Code covers aid \"not allowed by the instructor\" but never mentions AI."
+    },
+    "univ_tone": {
+     "value": "none found",
+     "search_log": "data/sources/218539-presbyterian/search-log.md"
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/218539-presbyterian/search-log.md",
+     "reviewed": [
+      "data/sources/218539-presbyterian/2026-11-11-cs-program.html"
+     ]
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/218539-presbyterian/search-log.md"
+    },
+    "collaboration": {
+     "value": "not discussed",
+     "reviewed": [
+      "data/sources/218539-presbyterian/2026-11-11-blue-book-2026.pdf",
+      "data/sources/218539-presbyterian/2026-11-11-catalog-2026.pdf",
+      "data/sources/218539-presbyterian/2026-11-11-cs-program.html"
+     ]
+    },
+    "disclosure": {
+     "value": "not stated",
+     "reviewed": [
+      "data/sources/218539-presbyterian/2026-11-11-blue-book-2026.pdf",
+      "data/sources/218539-presbyterian/2026-11-11-catalog-2026.pdf",
+      "data/sources/218539-presbyterian/2026-11-11-cs-program.html"
+     ]
+    },
+    "se_courses": {
+     "value": "no public syllabus found",
+     "search_log": "data/sources/218539-presbyterian/search-log.md",
+     "reviewed": [
+      "data/sources/218539-presbyterian/2026-11-11-catalog-2026.pdf"
+     ],
+     "note": "The catalog lists CSC Software Development I and the CSC 4805 Capstone; no public syllabus for either."
+    }
+   }
   }
  ]
 }

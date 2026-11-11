@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.presby.edu/programs/computer-science/",
+ "final_url": "https://www.presby.edu/programs/computer-science/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T11:05:18-05:00",
+ "sha256": "5f74c1a260c2a766f78f837d867d09121e31f00fccd2f26c6686482fe73c6237",
+ "bytes": 169089
+}

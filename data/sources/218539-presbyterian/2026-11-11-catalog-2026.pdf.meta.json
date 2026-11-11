@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.presby.edu/doc/registrar/26.27-AcademicCatalog.pdf",
+ "final_url": "https://www.presby.edu/doc/registrar/26.27-AcademicCatalog.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T11:05:19-05:00",
+ "sha256": "bb2bc3ef80c725b1aabda6c3c00500c362de4fd55ffa50ac72e38105f174ab70",
+ "bytes": 2612019
+}

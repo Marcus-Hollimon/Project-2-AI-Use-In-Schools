@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://engineering.virginia.edu/department/computer-science/academics/undergraduate-programs",
+ "final_url": "https://engineering.virginia.edu/department/computer-science/academics/undergraduate-programs",
+ "http_status": 403,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T11:01:03-05:00",
+ "sha256": "4ad83f149c7f3213112b19736fba93a7ca831f418bdc16803bba3f52bd10687d",
+ "bytes": 5882
+}

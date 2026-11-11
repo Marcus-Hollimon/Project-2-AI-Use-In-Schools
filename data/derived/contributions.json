@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T15:55:09.748110Z",
+ "generatedAt": "2026-11-11T16:06:25.976324Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -871,20 +871,57 @@
    "notes": "Reaffirms the Nov 8 decision after Claude confirmed the 15 prompts are public on GitHub (data/derived/contributions.json). Marcus: \"if I feel like I want to hide some we can circle back to that later.\""
   },
   {
-   "time": "2026-11-11T15:55:03.019000Z",
-   "actor": "Claude",
-   "kind": "reply",
-   "turn": 17,
-   "text": "The codebook v2 work and the handoff notes cost 3 points (40% to 43%). Recording that, the log row and the pre-compact reading, then rebuilding, committing and pushing.",
-   "toolCalls": 68
-  },
-  {
    "time": "2026-11-11T15:55:09Z",
    "actor": "Claude",
    "kind": "milestone",
    "phase": "2",
    "text": "Pilot done: Coppin State and Snow coded; all 5 pass check_study.py. Codebook v2 adopted (4 rule clarifications, reasons in study/codebook.md); pilot recoded, one value changed (Johns Hopkins se_courses), diff in data/coded/codebook-v2-recode.json. Study tests 32/32. Average 2.6 five-hour points per school; 10 schools left, projected about 35 points. Prepared third /compact.",
    "evidence": "`progress/pilot-cost.md`, `data/coded/values.json`, `study/codebook.md`"
+  },
+  {
+   "time": "2026-11-11T15:55:33Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Pilot done: Coppin State and Snow coded; codebook v2 and recode",
+   "commit": "b144052",
+   "note": "written by Claude, pushed from Marcus's account"
+  },
+  {
+   "time": "2026-11-11T15:56:01.884000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 17,
+   "text": "Your prompts stay published in full, and I recorded that decision. The pilot is finished: all 5 schools pass every check. The codebook is now at version 2.\n\n**The last two schools:**\n- **Coppin State** has no AI policy page. The only rule is one line in its 2025-26 Student Handbook: \"inappropriate or excessive\" AI use on coursework counts as misconduct. I coded that as \"allowed with limits\", with a cautionary tone. The CS department says nothing about AI, and its software engineering course (COSC 409) has no public syllabus.\n- **Snow College** is the clearest so far. Its 2026 classroom policy allows AI by default unless an instructor bans it, and requires students to acknowledge use. The tone is mostly positive. The CS department says nothing about AI. Its software engineering syllabus was approved Fall 2025 and doesn't mention AI.\n\n**Codebook version 2.** I adopted all four changes from the pilot. Three only write down rules I was already applying, so no answers changed. The fourth stops counting course pages from before 2023, the year after ChatGPT came out. That changed one answer: Johns Hopkins' software engineering course went from \"doesn't address AI\" to \"no public syllabus found\", since its only page is from 2018. The spec requires recoding the pilot schools after a codebook change, and I saved the before-and-after list. All 32 tests pass.\n\n**Cost and pace.** Schools got cheaper as the routine settled: 3, 4, 3, 2 and 1 points of the 5-hour limit, about 2.6 on average. The limit is at 43% and resets at 2:40 PM. The 10 schools left should take about 35 points including compacts, which ends around 75 to 80%. That's inside this window, and the deadline is tomorrow at 2 PM.\n\n**Two mistakes of mine:**\n- I printed a big block of the Coppin handbook instead of filtering it. That cost about 8,000 tokens of context for no gain.\n- A bookkeeping script crashed on a \"%\" sign. I checked what it had written and fixed the gap.\n\nEverything is committed and pushed (b144052). The GitHub check for that push hadn't started when I last looked; the previous push passed.\n\nContext has grown about 73k since the last compact, which is below your 100k to 150k band. I'm compacting now anyway because the pilot is a phase boundary. Type this:\n\n```\n/compact Phase 2: pilot done, 10 schools left. Read progress/STATE.md first: it has the coding procedure, the list of the 10 remaining schools with slugs and domains, codebook v2, and the plan to compact every 3 schools. Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, and the rule not to retry blocked downloads with browser-like headers.\n```",
+   "toolCalls": 72
+  },
+  {
+   "time": "2026-11-11T15:58:07.720000Z",
+   "actor": "Marcus",
+   "kind": "command",
+   "text": "/compact Phase 2: pilot done, 10 schools left. Read progress/STATE.md first: it has the coding procedure, the list of the 10 remaining schools with slugs and domains, codebook v2, and the plan to compact every 3 schools. Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, and the rule not to retry blocked downloads with browser-like headers."
+  },
+  {
+   "time": "2026-11-11T15:59:25.152000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 18,
+   "text": "continue"
+  },
+  {
+   "time": "2026-11-11T16:06:11Z",
+   "actor": "Claude",
+   "kind": "milestone",
+   "phase": "2",
+   "text": "Main coding 3 of 10: Virginia, MIT, Presbyterian coded under codebook v2; all 8 coded schools pass check_study.py. 5-hour 45% to 49%. Prepared the fourth /compact.",
+   "evidence": "`progress/pilot-cost.md`, `data/coded/values.json`"
+  },
+  {
+   "time": "2026-11-11T16:06:14.775000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 18,
+   "text": "Build.py crashed. Looking at why before committing.",
+   "toolCalls": 78
   }
  ]
 }

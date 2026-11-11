@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.presby.edu/doc/BlueBook.pdf",
+ "final_url": "https://www.presby.edu/doc/BlueBook.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T11:05:17-05:00",
+ "sha256": "193ae7abc5bd0c5b6e63351f09d7717e44dcb4bf77cd8bdadb4affcf39c0a50e",
+ "bytes": 207577
+}

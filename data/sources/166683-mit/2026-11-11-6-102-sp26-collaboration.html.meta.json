@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://web.mit.edu/6.102/www/sp26/general/collaboration.html",
+ "final_url": "https://web.mit.edu/6.102/www/sp26/general/collaboration.html",
+ "http_status": 200,
+ "content_type": "text/html",
+ "fetched_at": "2026-11-11T11:04:04-05:00",
+ "sha256": "c9715726da2c23dde75ec59245a6365d42ed76d13bfca03b96e804bd358e38b4",
+ "bytes": 17815
+}

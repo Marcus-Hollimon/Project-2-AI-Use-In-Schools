@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://uva-cs3140-s25.github.io/syllabus.html",
+ "final_url": "https://uva-cs3140-s25.github.io/syllabus.html",
+ "http_status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T11:00:04-05:00",
+ "sha256": "5710ab6dc18c0dbdc85d2204174d62230aa02cfe97865cbb4229a2eb092859a1",
+ "bytes": 65212
+}

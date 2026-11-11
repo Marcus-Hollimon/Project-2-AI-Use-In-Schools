@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.eecs.mit.edu/academics/undergraduate-programs/",
+ "final_url": "https://www.eecs.mit.edu/academics/undergraduate-programs/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T11:03:03-05:00",
+ "sha256": "de21d60bc9172bc15e040ff92d550345a557394ea2d61453e89541983b0718ac",
+ "bytes": 93664
+}

@@ -25,6 +25,8 @@ percentages as the app reports them, so a change of "1 point" means anywhere fro
 | 2026-11-11T10:43:12-05:00 | 2 | pilot 3 of 5 done, just before /compact | 34 | 12 | 218,345 | none (next row is after /compact) |
 | 2026-11-11T10:47:46-05:00 | 2 | after /compact (pilot school 4 next) | 37 | 12 | 99,537 | /compact by Marcus (manual; 218,345 tokens at the last reading before it); includes one short question turn about published prompts |
 | 2026-11-11T10:55:09-05:00 | 2 | pilot done (5 of 5) and codebook v2, just before /compact | 43 | 13 | 172,762 | none (next row is after /compact) |
+| 2026-11-11T10:59:34-05:00 | 2 | after /compact (main coding, 10 schools next) | 45 | 13 | 88,911 | /compact by Marcus (manual; 172,762 tokens at the last reading before it) |
+| 2026-11-11T11:06:11-05:00 | 2 | main coding 3 of 10 (8 of 15 coded), just before /compact | 49 | 14 | 165,412 | none (next row is after /compact) |
 
 ## Cost per phase
 | Phase | 5-hour points | Weekly points | Context growth (tokens) |

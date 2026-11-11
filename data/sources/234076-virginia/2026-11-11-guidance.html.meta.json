@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://genai.provost.virginia.edu/guidance-for-faculty-students",
+ "final_url": "https://genai.provost.virginia.edu/guidance-for-faculty-students",
+ "http_status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T11:00:02-05:00",
+ "sha256": "07d610c0ea71275a6d1659e61e4331309aae2e6faaaf7b082e9ab3a25d5db236",
+ "bytes": 42570
+}

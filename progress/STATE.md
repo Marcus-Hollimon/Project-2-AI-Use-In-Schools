@@ -1,8 +1,22 @@
 # State: read this first
 
-Current phase: 2 Study (pilot done: 5 of 15 coded and passing under codebook v2; 10 schools next)
+Current phase: 2 Study (8 of 15 coded and passing under codebook v2; 7 schools next, starting with Le Moyne-Owen)
 
-Last updated: 2026-11-11T10:54:17-05:00 by Claude (session a9056776), just before the third `/compact`.
+Last updated: 2026-11-11T11:06:11-05:00 by Claude (session a9056776), just before the fourth `/compact`.
+
+## Main coding so far (after the pilot)
+- Virginia 234076, MIT 166683, Presbyterian 218539 coded and passing (11:00 to 11:06; 5-hour 45% to
+  49%, about 1.3 points per school). Rows in `progress/pilot-cost.md`, "Main coding".
+- Virginia: the CS department site (engineering.virginia.edu) gives curl HTTP 403 and the browser
+  pane could not open it ("navigation denied or failed"); department coded "none found" from the
+  search log, with a note saying so. Do not retry it with browser headers.
+- Presbyterian: the fixed searches returned no presby.edu pages at all; extra searches with
+  `allowed_domains: ["presby.edu"]` found the Blue Book and catalog. Use `allowed_domains` early for
+  small colleges.
+- Lessons: `unitid` in values.json is a **string** (an int made the checker say "not coded yet");
+  for a PDF the value's `archive` is the `.pdf`, not the `.pdf.txt`; the checker joins HTML text
+  pieces with a space, so a quote ending right after `</strong>` or `</em>` fails S1 on the period
+  (drop the trailing period).
 
 ## Deadline and pace
 - Everything is due **2 PM EST, Thu Nov 12 2026** (Marcus, 2026-11-11).
@@ -15,13 +29,10 @@ Last updated: 2026-11-11T10:54:17-05:00 by Claude (session a9056776), just befor
 ## FIRST, right after the /compact
 1. Take a usage reading marked "after /compact" in `progress/usage.md` (tool: get_usage), with the
    time from `date -Iseconds`. Run `uv run --project pipeline python pipeline/build.py`; C1 to C3 must pass.
-2. Code the remaining 10 schools in this order (same procedure as below, codebook **v2**; `{domain}`
+2. Code the remaining 7 schools in this order (same procedure as below, codebook **v2**; `{domain}`
    is the last two parts of the sample's website, which is what the checker uses):
    | unitid | slug | domain |
    |---|---|---|
-   | 234076 | 234076-virginia | virginia.edu |
-   | 166683 | 166683-mit | mit.edu |
-   | 218539 | 218539-presbyterian | presby.edu |
    | 220604 | 220604-le-moyne-owen | loc.edu |
    | 213659 | 213659-luzerne | luzerne.edu |
    | 201885 | 201885-cincinnati | uc.edu |
