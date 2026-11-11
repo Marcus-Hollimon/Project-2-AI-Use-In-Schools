@@ -159,9 +159,11 @@ recorded run that proves the tests pass.
   pages and code.claude.com/docs/en/costs were opened in the browser pane. The caniuse page did
   not render its table there, so its public data file on GitHub was read instead (the register
   cites that file, not the caniuse page).
-- [ ] Live site after the push: the Validation tab shows the claims table and the errors-caught-
-  outside-tests list (browser pane).
-- [ ] Review results written below.
+- [x] Live site after the push: the Validation tab shows the claims table and the errors-caught-
+  outside-tests list (browser pane, 2026-11-11T14:53:28-05:00, commit 5ae32ee): 22 claim rows, C5 59 of 59, C6 8 of 8,
+  15 errors caught outside test runs including Marcus's Ctrl+F report; the Token usage page names
+  the 12:45 /compact as the reset with no reading just before it.
+- [x] Review results written below.
 
 ## Marcus's checklist (no code needed)
 Open the live site: https://marcus-hollimon.github.io/Project-2-AI-Use-In-Schools/
@@ -173,7 +175,7 @@ Open the live site: https://marcus-hollimon.github.io/Project-2-AI-Use-In-School
 4. [ ] **Research findings.** The "Descriptive only" note says two Ohio schools were chosen by you.
 
 ## Review results
-Claude went through the register (`validation/claims.json`, 23 claims) on 2026-11-11 after the
+Claude went through the register (`validation/claims.json`, 22 claims) on 2026-11-11 after the
 build. C5 PASS at the last build: every test named below passed in the newest recorded run of its
 suite (web `2026-11-11T19-49-22-555Z`, pipeline `2026-11-11T19-47-59-829Z`, study
 `2026-11-11T16-32-24-131Z`).

@@ -89,14 +89,13 @@ Last updated: 2026-11-11T14:50:44-05:00 by Claude (session a9056776), Phase 4 bu
 Phase 4 build is done (2026-11-11T14:50:44-05:00). Recorded: web 48/48 (`validation/runs/2026-11-11T19-49-22-555Z_web.json`),
 pipeline 17/17 (`2026-11-11T19-47-59-829Z_pipeline.json`); mutations `2026-11-11T17-42-18-324Z_web.json`
 and `2026-11-11T17-42-41-129Z_web.json`. build.py: C1, C2, C3, C5, C6, privacy all PASS. Spec acceptance
-boxes ticked except the live-site check; Review results written (23 claims, none removed).
+boxes all ticked (live site checked after 5ae32ee); Review results written (22 claims, none removed).
 New in Phase 4: `validation/claims.json` (register), `validation/caught.json` (errors caught outside
 test runs), `web/src/claims.test.jsx`, pipeline checks C5 (claims) and C6 (mutations), the test-command
 counter, and the C3 rule for a /compact after a stopped turn.
 1. If a compact happened, take a usage reading marked "after /compact" FIRST (the 12:45 one was missed
    and the web tests caught it).
-2. If not yet done: check the live site in the browser pane (Validation: claims table, errors caught
-   outside test runs; Token usage: the exception sentence), tick that box in the spec.
+2. Live site checked in the browser pane (done).
 3. Hand Marcus the 4-step checklist in the spec. Phase 4 ends when he confirms it; then the phase-end
    usage reading and a /compact.
 4. Never `git checkout` a file holding uncommitted work (it wiped the Token page marks once); undo a
