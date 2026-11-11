@@ -57,6 +57,7 @@ percentages as the app reports them, so a change of "1 point" means anywhere fro
 | 2026-11-11T16:29:47-05:00 | 5 | after /compact (15 of 21 new schools coded) | 73 | 30 | 102,046 | /compact by Marcus (manual, big chunk; 195,873 tokens before it) |
 | 2026-11-11T16:35:04-05:00 | 5 | 17 of 21 new schools coded, just before /compact | 77 | 31 | 166,709 | none (next row is after /compact) |
 | 2026-11-11T16:37:38-05:00 | 5 | after /compact (17 of 21 new schools coded) | 79 | 31 | 87,017 | /compact by Marcus (manual, big chunk; 166,709 tokens before it); window now reported as 1,000,000 tokens |
+| 2026-11-11T16:59:53-05:00 | 5 | 21 of 21 new schools coded (coding done), just before /compact | 90 | 33 | 234,363 | none (next row is after /compact) |
 
 ## Cost per phase
 | Phase | 5-hour points | Weekly points | Context growth (tokens) |
