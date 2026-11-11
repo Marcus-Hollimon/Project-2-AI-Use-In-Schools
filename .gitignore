@@ -16,3 +16,6 @@ private/
 pipeline/.venv/
 __pycache__/
 .pytest_cache/
+
+# IPEDS CSVs unzipped from the archived zips in data/frame/ (about 67 MB)
+data/frame/extracted/
