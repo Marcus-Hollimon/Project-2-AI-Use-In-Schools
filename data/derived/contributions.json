@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T19:49:33.135997Z",
+ "generatedAt": "2026-11-11T19:54:24.127871Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -1330,12 +1330,47 @@
    "phase": "4"
   },
   {
-   "time": "2026-11-11T19:49:30.121000Z",
+   "time": "2026-11-11T19:50:51Z",
+   "actor": "Claude",
+   "kind": "milestone",
+   "phase": "4",
+   "text": "Phase 4 built: 22 claims in validation/claims.json, each backed by a test, file or outside source; a test fails on any unregistered sentence; pipeline checks C5 (claims' tests passed) and C6 (mutations answered) added; 15 errors caught outside test runs listed. Twelve overstatements or defects found and fixed (spec). Web 48/48, pipeline 17/17 recorded; all pipeline checks PASS. Marcus's 12:45 /compact had no reading before it; now named on the page.",
+   "evidence": "specs/phase-4-validation.md, validation/claims.json, validation/caught.json"
+  },
+  {
+   "time": "2026-11-11T19:51:03Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 4 build: claims register, C5 and C6 checks, errors caught outside tests",
+   "commit": "5ae32ee",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "4"
+  },
+  {
+   "time": "2026-11-11T19:53:34Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 4: live site checked; claim count corrected to 22",
+   "commit": "5af815e",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "4"
+  },
+  {
+   "time": "2026-11-11T19:53:52Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 4: usage reading after the build",
+   "commit": "2f54323",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "4"
+  },
+  {
+   "time": "2026-11-11T19:54:15.684000Z",
    "actor": "Claude",
    "kind": "reply",
    "turn": 27,
-   "text": "48 of 48 passed, recorded. Next: rebuild, then confirm the sentence renders as intended.",
-   "toolCalls": 31,
+   "text": "Build exits 0 with all checks passing. The derived data changed (new reading, new milestone), so I'll record a web run against it before pushing. This time each step checks its exit code.",
+   "toolCalls": 64,
    "phase": "4"
   }
  ]
