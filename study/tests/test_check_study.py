@@ -156,6 +156,28 @@ def test_s3_rendered_text_needs_raw_copy_of_same_url(world):
     assert only_failures(findings(world, school)) == []
 
 
+def test_s3_rendered_text_with_blocked_raw_copy_needs_fetch_reason(world):
+    text = "Students may use generative AI tools when the instructor allows it"
+    archive = write_archive(world["root"], "2026-11-11-wall.rendered.txt", text, status=None,
+                            kind="rendered text from Claude's browser pane",
+                            url="https://www.example.edu/wall", final_url="https://www.example.edu/wall")
+    school = mutate(world, "univ_stance", archive=archive, url="https://www.example.edu/wall")
+    write_archive(world["root"], "2026-11-11-wall.html", "<html>Forbidden</html>", status=403,
+                  url="https://www.example.edu/wall", final_url="https://www.example.edu/wall")
+    assert only_failures(findings(world, school)) == ["S3"]
+    school["values"]["univ_stance"]["fetch_reason"] = "site returns 403 to curl; text read in the browser pane"
+    assert only_failures(findings(world, school)) == []
+    # A 404 raw copy is a page that does not exist, so no reason can excuse it.
+    archive404 = write_archive(world["root"], "2026-11-11-gone.rendered.txt", text, status=None,
+                               kind="rendered text from Claude's browser pane",
+                               url="https://www.example.edu/gone", final_url="https://www.example.edu/gone")
+    write_archive(world["root"], "2026-11-11-gone.html", "<html>Not found</html>", status=404,
+                  url="https://www.example.edu/gone", final_url="https://www.example.edu/gone")
+    school = mutate(world, "univ_stance", archive=archive404, url="https://www.example.edu/gone",
+                    fetch_reason="anything")
+    assert only_failures(findings(world, school)) == ["S3"]
+
+
 def test_s3_missing_fetch_record_fails(world):
     Path(str(world["root"] / world["archive"]) + ".meta.json").unlink()
     assert failed(findings(world), "S1")

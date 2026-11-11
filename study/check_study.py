@@ -186,12 +186,21 @@ def check_school(school, sample_row, codebook, root=ROOT):
         add("S2", digest == meta.get("sha256"), "hash %s" % ("matches" if digest == meta.get("sha256") else "CHANGED since saved"), var)
 
         if "rendered" in meta.get("kind", ""):
-            raw_ok = False
+            # Rendered text needs a raw curl copy of the same URL: HTTP 200 (the page builds its text
+            # with JavaScript), or HTTP 403 plus a written fetch_reason (the site blocks curl but
+            # serves the page to a browser). Any other status fails.
+            raw_statuses = set()
             for other in apath.parent.glob("*.meta.json"):
                 m = json.loads(other.read_text(encoding="utf-8"))
-                if m.get("url") == meta.get("url") and m.get("http_status") == 200 and "raw" in m.get("kind", ""):
-                    raw_ok = True
-            add("S3", raw_ok, "rendered text; raw curl copy of same URL with HTTP 200 %s" % ("present" if raw_ok else "MISSING"), var)
+                if m.get("url") == meta.get("url") and "raw" in m.get("kind", ""):
+                    raw_statuses.add(m.get("http_status"))
+            if 200 in raw_statuses:
+                add("S3", True, "rendered text; raw curl copy of same URL with HTTP 200 present", var)
+            elif 403 in raw_statuses:
+                reason = entry.get("fetch_reason")
+                add("S3", bool(reason), "rendered text; raw curl copy got HTTP 403; reason: %s" % reason, var)
+            else:
+                add("S3", False, "rendered text; raw curl copy of same URL with HTTP 200 (or 403 plus reason) MISSING", var)
         else:
             add("S3", meta.get("http_status") == 200, "HTTP status %s" % meta.get("http_status"), var)
 

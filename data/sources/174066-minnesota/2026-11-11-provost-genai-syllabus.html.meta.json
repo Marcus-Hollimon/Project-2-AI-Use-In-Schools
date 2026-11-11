@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://provost.umn.edu/academic-oversight/genai-syllabus-statements",
+ "final_url": "https://provost.umn.edu/academic-oversight/genai-syllabus-statements",
+ "http_status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T10:32:01-05:00",
+ "sha256": "6c0ace0a3a19efa9edc324821175438021c99e6e7109a96c287fa5a9daff843d",
+ "bytes": 79405
+}

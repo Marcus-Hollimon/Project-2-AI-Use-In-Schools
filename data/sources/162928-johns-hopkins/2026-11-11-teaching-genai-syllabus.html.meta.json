@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://teaching.jhu.edu/university-teaching-policies/generative-ai/syllabus-statements",
+ "final_url": "https://teaching.jhu.edu/university-teaching-policies/generative-ai/syllabus-statements/",
+ "http_status": 403,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T10:35:07-05:00",
+ "sha256": "65673e7552af2164d9c5b42af6dd6b8e25e10e268ff786854121d774d9204be9",
+ "bytes": 5926
+}

@@ -1,0 +1,2 @@
+# Archived source pages are evidence: store their exact bytes so check S2 (SHA-256) holds on any checkout.
+data/sources/** -text

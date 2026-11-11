@@ -1,0 +1,128 @@
+{
+ "codebook_version": 1,
+ "schools": [
+  {
+   "unitid": "174066",
+   "slug": "174066-minnesota",
+   "name": "University of Minnesota-Twin Cities",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "restrict",
+     "quote": "Generative AI tools are considered online learning support platforms and may not be used for course assignments except as explicitly authorized by an instructor",
+     "url": "https://provost.umn.edu/academic-oversight/genai-syllabus-statements",
+     "archive": "data/sources/174066-minnesota/2026-11-11-provost-genai-syllabus.html",
+     "source_type": "guidance page",
+     "note": "Instructors may allow or prohibit, but the stated default under the Student Conduct Code is no use without explicit authorization, so the default is coded (codebook: code the default)."
+    },
+    "univ_tone": {
+     "value": "cautionary",
+     "quote": "Active engagement with course materials, critical thinking and judgment, and expression of original ideas should never be outsourced to technology.",
+     "url": "https://provost.umn.edu/academic-oversight/genai-syllabus-statements",
+     "archive": "data/sources/174066-minnesota/2026-11-11-provost-genai-syllabus.html",
+     "source_type": "guidance page",
+     "note": "The page is mostly procedure, but its required statements are framed around scholastic dishonesty, copyright, and data security, and it ends on this warning."
+    },
+    "dept_stance": {
+     "value": "encourage",
+     "quote": "CS&E faculty encourage students to utilize AI throughout their educational journey from introductory courses to senior seminars.",
+     "url": "https://cse.umn.edu/cs/news/cse-prepares-umn-students-ai-powered-workplace",
+     "archive": "data/sources/174066-minnesota/2026-11-11-cse-news-ai-workplace.html",
+     "source_type": "news or announcement",
+     "note": "Only department text on AI found; the department's academic conduct policy does not mention AI. The same paragraph says some introductory courses ban AI and many others allow it with conditions."
+    },
+    "dept_tone": {
+     "value": "positive",
+     "quote": "AI is a powerful tool that can improve your productivity as long as you have the fundamental knowledge to understand its limitations and use it effectively.",
+     "url": "https://cse.umn.edu/cs/news/cse-prepares-umn-students-ai-powered-workplace",
+     "archive": "data/sources/174066-minnesota/2026-11-11-cse-news-ai-workplace.html",
+     "source_type": "news or announcement"
+    },
+    "collaboration": {
+     "value": "in passing",
+     "quote": "The emphasis is on experimentation, problem-solving, and understanding personal strengths and growth areas when collaborating with AI tools.",
+     "url": "https://cse.umn.edu/cs/news/cse-prepares-umn-students-ai-powered-workplace",
+     "archive": "data/sources/174066-minnesota/2026-11-11-cse-news-ai-workplace.html",
+     "source_type": "news or announcement",
+     "note": "One sentence, describing the CSCI 2521 course; no page reviewed develops AI as a partner further."
+    },
+    "disclosure": {
+     "value": "required",
+     "quote": "Indicate how students will acknowledge GenAI use, including citation practices and required documentation",
+     "url": "https://provost.umn.edu/academic-oversight/genai-syllabus-statements",
+     "archive": "data/sources/174066-minnesota/2026-11-11-provost-genai-syllabus.html",
+     "source_type": "guidance page",
+     "note": "Borderline: the requirement is addressed to instructors of courses that allow AI, telling them to set how students acknowledge it, rather than stated directly to students."
+    },
+    "se_courses": {
+     "value": "not addressed",
+     "reviewed": [
+      "data/sources/174066-minnesota/2026-11-11-csci5802-spring2024.html"
+     ],
+     "note": "CSCI 5801 Software Engineering I has no public syllabus; CSCI 5802 Software Engineering II (spring 2024 page, the newest reachable) has an academic integrity section that does not mention AI. CSCI 4821 GenAI for Software Engineering (new in fall 2026) is described only in news, with no public syllabus."
+    }
+   }
+  },
+  {
+   "unitid": "162928",
+   "slug": "162928-johns-hopkins",
+   "name": "Johns Hopkins University",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "instructor decides",
+     "quote": "It is important for faculty to clearly outline the expectations of generative AI usage at the beginning of a course to avoid frustration in students’ learning processes.",
+     "url": "https://teaching.jhu.edu/university-teaching-policies/generative-ai/guidelines/",
+     "archive": "data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-guidelines.html",
+     "source_type": "guidance page",
+     "note": "No university-wide default found; the teaching guidance leaves the rule to each course and its division."
+    },
+    "univ_tone": {
+     "value": "cautionary",
+     "quote": "there is an abundance of ethical considerations that demand careful attention.",
+     "url": "https://teaching.jhu.edu/university-teaching-policies/generative-ai/guidelines/",
+     "archive": "data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-guidelines.html",
+     "source_type": "guidance page",
+     "note": "The guidelines page is mostly FERPA, HIPAA, ownership, bias and privacy risks. The parent overview page (curl blocked, read in the browser) is more upbeat about benefits; the page with the rules was coded."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/162928-johns-hopkins/search-log.md",
+     "reviewed": [
+      "data/sources/162928-johns-hopkins/2026-11-11-cs-home.html",
+      "data/sources/162928-johns-hopkins/2026-11-11-cs-integrity-code.html",
+      "data/sources/162928-johns-hopkins/2026-11-11-cs-undergrad-current.html",
+      "data/sources/162928-johns-hopkins/2026-11-11-cs-support-ai-wiki.html"
+     ]
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/162928-johns-hopkins/search-log.md"
+    },
+    "collaboration": {
+     "value": "not discussed",
+     "reviewed": [
+      "data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-guidelines.html",
+      "data/sources/162928-johns-hopkins/2026-11-11-cs-integrity-code.html",
+      "data/sources/162928-johns-hopkins/2026-11-11-oose-course-page.html"
+     ]
+    },
+    "disclosure": {
+     "value": "encouraged",
+     "quote": "Transparency: Respect intellectual property rights by acknowledging the sources of AI-generated content used in your work.",
+     "url": "https://teaching.jhu.edu/university-teaching-policies/generative-ai/guidelines/",
+     "archive": "data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-guidelines.html",
+     "source_type": "guidance page",
+     "cue_reason": "Listed under example guidelines that faculty can share with students, so it is advice for courses to adopt, not a rule; that makes it encouraged even though the sentence is an imperative."
+    },
+    "se_courses": {
+     "value": "not addressed",
+     "reviewed": [
+      "data/sources/162928-johns-hopkins/2026-11-11-oose-course-page.html"
+     ],
+     "note": "The only page for EN.601.421 on jhu.edu is from Fall 2018, before ChatGPT; codebook v1 codes it 'not addressed'. Flagged for codebook v2: course pages from before 2023 should not count. The Spring 2024 syllabus on Notion did not load."
+    }
+   }
+  }
+ ]
+}

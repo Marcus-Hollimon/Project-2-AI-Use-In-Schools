@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://teaching.jhu.edu/university-teaching-policies/generative-ai/",
+ "final_url": "https://teaching.jhu.edu/university-teaching-policies/generative-ai/",
+ "http_status": 403,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T10:37:40-05:00",
+ "sha256": "d4b10d2055084735fe938aa1dbbd9b13fe3d6be628d9b83b87d8707a3c06d032",
+ "bytes": 5845
+}

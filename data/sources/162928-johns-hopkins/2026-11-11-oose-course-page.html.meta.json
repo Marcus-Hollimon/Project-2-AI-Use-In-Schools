@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://pl.cs.jhu.edu/oose/index.shtml",
+ "final_url": "https://pl.cs.jhu.edu/oose/index.shtml",
+ "http_status": 200,
+ "content_type": "text/html",
+ "fetched_at": "2026-11-11T10:38:23-05:00",
+ "sha256": "779d1785a3e15deba78d05ad4b0d5fabb7640f7d2120f3a67c0166a7a075aa66",
+ "bytes": 6031
+}

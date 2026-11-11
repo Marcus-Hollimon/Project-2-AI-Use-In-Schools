@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www-users.cse.umn.edu/~mfazzini/teaching/Spring2024_CSCI5802.html",
+ "final_url": "https://www-users.cse.umn.edu/~mfazzini/teaching/Spring2024_CSCI5802.html",
+ "http_status": 200,
+ "content_type": "text/html",
+ "fetched_at": "2026-11-11T10:34:06-05:00",
+ "sha256": "ec11c4f197e19ce8c44fe46caab7165336a83e4ef91c0165b8fd72585553e26e",
+ "bytes": 71482
+}

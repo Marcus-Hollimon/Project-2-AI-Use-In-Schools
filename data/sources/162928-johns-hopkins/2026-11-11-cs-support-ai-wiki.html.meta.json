@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://support.cs.jhu.edu/wiki/AI_at_JHU",
+ "final_url": "https://support.cs.jhu.edu/wiki/AI_at_JHU",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T10:38:03-05:00",
+ "sha256": "83f93c16f62dc64c301accf9684888b7eac5da1797d0e854645c2aa4b84723e5",
+ "bytes": 8982
+}

@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://provost.umn.edu/use-ai-your-classes",
+ "final_url": "https://provost.umn.edu/use-ai-your-classes",
+ "http_status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T10:32:00-05:00",
+ "sha256": "cfc662eda3f784800423eb6a5f1071a6b33c856783086c1d79ff3d717ba660c8",
+ "bytes": 60117
+}

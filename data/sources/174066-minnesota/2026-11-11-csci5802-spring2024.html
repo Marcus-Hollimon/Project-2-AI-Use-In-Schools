@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Analytics -->
+   <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-98353217-3', 'auto');
+ga('send', 'pageview');
+   </script>
+<!-- End Google Analytics -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Spring 2024 - CSCI 5802</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../starter-template.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!--<a class="navbar-brand" href="index.html">Mattia Fazzini</a>-->
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="../index.html">Home</a></li>
+	    <li class="active"><a href="../publications.html">Publications</a></li>
+	    <li class="active"><a href="../teaching.html">Teaching</a></li>
+	    <li class="active"><a href="../service.html">Service</a></li>
+	    <li class="active"><a href="../mattia_fazzini_cv.pdf">CV</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="starter-template">
+      </div>
+
+      <div class="row" id="coursecontent">
+        <div class="col-md-10" align="justify">
+		<h1>CSCI5802: Software Engineering II</br>(Spring 2024)</h1>
+		<h2>Welcome Video</h2>
+<p><iframe id="kaltura_player" title="Kaltura Player" src="https://cdnapisec.kaltura.com/p/958321/sp/95832100/embedIframeJs/uiconf_id/31462381/partner_id/958321?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=1_v0wbukcq&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&amp;wid=1_fbk750op" width="608" height="402" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" loading="lazy" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allow="autoplay *; fullscreen *; encrypted-media *"></iframe></p>
+<h2>General Information</h2>
+<ul>
+    <li>Course: CSCI 5802 Software Engineering II</li>
+    <li>Semester: Spring 2024</li>
+    <li>Credit hours: 3 Credits</li>
+    <li>Instructor: Mattia Fazzini</li>
+    <li>TA: Jack Johnson</li>
+</ul>
+<h3>&nbsp;</h3>
+<h2>Course Schedule</h2>
+<h3>Lectures</h3>
+<p>Lectures will take place in <a class="inline_disabled" href="https://roomsearch.umn.edu/rooms/60421f0c-7245-4e8d-8b34-a24432b66e26" target="_blank" rel="noopener">Keller Hall 3-125</a> Mon, Wed 2:30 pm - 3:45 pm. Although I encourage to attend letures in person,&nbsp; lectures can also be attended remotely through Zoom. If you are attending the course through UNITE, you can join live lectures either through UNITE or Zoom. The course team will also do its best to provide Zoom recordings through this page. (However, please note that recordings might not be available due to unexpected recording issues).</p>
+<h3>Office Hours</h3>
+<p><span style="text-decoration: underline;">Office hours will start from the second week of the course</span>. The instructor's office hours are group office hours and will be on Zoom. The instructor's office hours will be recorded and linked to this Canvas page. The TA's office hours are individual and will be on Zoom.</p>
+<ul>
+    <li>Instructor's office hours: Wed 4:15 pm - 5:15 pm (link)</li>
+    <li>TA's office hours: Thu and Fri 4:00 pm - 5:00 pm (link)</li>
+</ul>
+<p>&nbsp;</p>
+<h3>Topics</h3>
+<table style="border-collapse: collapse; width: 101.821%; height: 937px;" border="1">
+    <tbody>
+        <tr style="height: 29px;">
+            <td style="width: 4.25647%; text-align: center; height: 29px;"><span style="font-size: 10pt;"><em>Week</em></span></td>
+            <td style="width: 10.78%; text-align: center; height: 29px;"><span style="font-size: 10pt;"><em>Date</em></span></td>
+            <td style="width: 11.7093%; text-align: center; height: 29px;"><span style="font-size: 10pt;"><i>Type</i></span></td>
+            <td style="width: 31.733%; text-align: center; height: 29px;"><span style="font-size: 10pt;"><em>Topic</em></span></td>
+            <td style="width: 18.1896%; text-align: center; height: 29px;"><span style="font-size: 10pt;"><em>Remote Attendance<br /></em></span></td>
+            <td style="width: 9.91027%; text-align: center; height: 29px;"><span style="font-size: 10pt;"><em>Slides</em></span></td>
+            <td style="width: 9.55803%; text-align: center; height: 29px;"><span style="font-size: 10pt;"><em>Recording</em></span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 4.25647%; height: 21px; vertical-align: middle; text-align: center;" rowspan="2"><span style="font-size: 10pt;">1</span></td>
+            <td style="width: 10.78%; height: 11px; text-align: center;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 11.7093%; height: 11px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 31.733%; height: 11px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 18.1896%; height: 11px; text-align: center;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 11px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.55803%; height: 11px; text-align: center;"><span style="font-size: 10pt;">-</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 10px; text-align: center;"><span style="font-size: 10pt;">01/17/2024</span></td>
+            <td style="width: 11.7093%; height: 10px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 10px;"><span style="font-size: 10pt;">Introduction</span></td>
+            <td style="width: 18.1896%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 10px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 4.25647%; text-align: center; height: 49px;" rowspan="3"><span style="font-size: 10pt;">2<br /></span></td>
+            <td style="width: 10.78%; text-align: center; height: 29px;"><span style="font-size: 10pt;">01/22/2024</span></td>
+            <td style="width: 11.7093%; height: 29px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 29px;"><span style="font-size: 10pt;">Software Verification and Validation</span></td>
+            <td style="width: 18.1896%; text-align: center; height: 29px;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 29px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; text-align: center; height: 29px;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 10px; text-align: center;"><span style="font-size: 10pt;">01/24/2024</span></td>
+            <td style="width: 11.7093%; height: 10px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 10px;"><span style="font-size: 10pt;">Software Systems</span></td>
+            <td style="width: 18.1896%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 10px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 10px;">
+            <td style="width: 10.78%; height: 10px; text-align: center;"><span style="font-size: 10pt;">01/24/2024</span></td>
+            <td style="width: 11.7093%; height: 10px;"><span style="font-size: 10pt;">Office Hours</span></td>
+            <td style="width: 31.733%; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 18.1896%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.55803%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 4.25647%; text-align: center; height: 68px;" rowspan="3"><span style="font-size: 10pt;">3<br /></span></td>
+            <td style="width: 10.78%; text-align: center; height: 29px;"><span style="font-size: 10pt;">01/29/2024</span></td>
+            <td style="width: 11.7093%; height: 29px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 29px;"><span style="font-size: 10pt;">Building Software Systems</span></td>
+            <td style="width: 18.1896%; text-align: center; height: 29px;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 29px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; text-align: center; height: 29px;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 29px; text-align: center;"><span style="font-size: 10pt;">01/31/2024</span></td>
+            <td style="width: 11.7093%; height: 29px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 29px;"><span style="font-size: 10pt;">Team Building Activity</span></td>
+            <td style="width: 18.1896%; height: 29px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 29px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.55803%; height: 29px; text-align: center;"><span style="font-size: 10pt;">-</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 10px; text-align: center;"><span style="font-size: 10pt;">01/31/2024</span></td>
+            <td style="width: 11.7093%; height: 10px;"><span style="font-size: 10pt;">Office Hours</span></td>
+            <td style="width: 31.733%; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 18.1896%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.55803%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 28px;">
+            <td style="width: 4.25647%; text-align: center; height: 67px;" rowspan="3"><span style="font-size: 10pt;">4<br /></span></td>
+            <td style="width: 10.78%; text-align: center; height: 28px;"><span style="font-size: 10pt;">02/05/2024</span></td>
+            <td style="width: 11.7093%; height: 28px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 28px;"><span style="font-size: 10pt;">Unit testing</span></td>
+            <td style="width: 18.1896%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 29px; text-align: center;"><span style="font-size: 10pt;">02/07/2024</span></td>
+            <td style="width: 11.7093%; height: 29px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 29px;"><span style="font-size: 10pt;">Test Doubles</span></td>
+            <td style="width: 18.1896%; height: 29px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 29px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; height: 29px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 10px; text-align: center;"><span style="font-size: 10pt;">02/07/2024</span></td>
+            <td style="width: 11.7093%; height: 10px;"><span style="font-size: 10pt;">Office Hours</span></td>
+            <td style="width: 31.733%; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 18.1896%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.55803%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 28px;">
+            <td style="width: 4.25647%; text-align: center; height: 67px;" rowspan="3"><span style="font-size: 10pt;">5<br /></span></td>
+            <td style="width: 10.78%; text-align: center; height: 28px;"><span style="font-size: 10pt;">02/12/2024</span></td>
+            <td style="width: 11.7093%; height: 28px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 28px;"><span style="font-size: 10pt;">System Testing</span></td>
+            <td style="width: 18.1896%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 29px; text-align: center;"><span style="font-size: 10pt;">02/14/2024</span></td>
+            <td style="width: 11.7093%; height: 29px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 29px;"><span style="font-size: 10pt;">Acceptance Testing and CI<br /></span></td>
+            <td style="width: 18.1896%; height: 29px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 29px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; height: 29px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 10px; text-align: center;"><span style="font-size: 10pt;">02/14/2024</span></td>
+            <td style="width: 11.7093%; height: 10px;"><span style="font-size: 10pt;">Office Hours</span></td>
+            <td style="width: 31.733%; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 18.1896%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.55803%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 28px;">
+            <td style="width: 4.25647%; text-align: center; height: 48px;" rowspan="3"><span style="font-size: 10pt;">6<br /></span></td>
+            <td style="width: 10.78%; text-align: center; height: 28px;"><span style="font-size: 10pt;">02/19/2024</span></td>
+            <td style="width: 11.7093%; height: 28px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 28px;"><span style="font-size: 10pt;">Program Representations (Part I)</span></td>
+            <td style="width: 18.1896%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 10px; text-align: center;"><span style="font-size: 10pt;">02/21/2024</span></td>
+            <td style="width: 11.7093%; height: 10px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 10px;">
+                <p><span style="font-size: 10pt;">Program Representations (Part II)</span></p>
+            </td>
+            <td style="width: 18.1896%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 10px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 10px; text-align: center;"><span style="font-size: 10pt;">02/21/2024</span></td>
+            <td style="width: 11.7093%; height: 10px;"><span style="font-size: 10pt;">Office Hours</span></td>
+            <td style="width: 31.733%; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 18.1896%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.55803%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 28px;">
+            <td style="text-align: center; height: 86px; width: 4.25647%;" rowspan="3"><span style="font-size: 10pt;">7<br /></span></td>
+            <td style="width: 10.78%; text-align: center; height: 28px;"><span style="font-size: 10pt;">02/26/2024</span></td>
+            <td style="width: 11.7093%; height: 28px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 28px;"><span style="font-size: 10pt;">Control-flow Coverage</span></td>
+            <td style="width: 18.1896%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 29px; text-align: center;"><span style="font-size: 10pt;">02/28/2024</span></td>
+            <td style="width: 11.7093%; height: 29px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 29px;"><span style="font-size: 10pt;">Mutation Coverage</span></td>
+            <td style="width: 18.1896%; height: 29px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 29px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; height: 29px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; text-align: center; height: 29px;"><span style="font-size: 10pt;">02/28/2024</span></td>
+            <td style="width: 11.7093%; height: 29px;"><span style="font-size: 10pt;">Office Hours<br /></span></td>
+            <td style="width: 31.733%; height: 29px;"><span style="font-size: 10pt;">-<br /></span></td>
+            <td style="width: 18.1896%; text-align: center; height: 29px;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 29px;"><span style="font-size: 10pt;">-<br /></span></td>
+            <td style="width: 9.55803%; text-align: center; height: 29px;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 28px;">
+            <td style="width: 4.25647%; text-align: center; height: 67px;" rowspan="3"><span style="font-size: 10pt;">8<br /></span></td>
+            <td style="width: 10.78%; text-align: center; height: 28px;"><span style="font-size: 10pt;">03/05/2024</span></td>
+            <td style="width: 11.7093%; height: 28px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 31.733%; height: 28px;">-</td>
+            <td style="width: 18.1896%; text-align: center; height: 28px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 28px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.55803%; text-align: center; height: 28px;"><span style="font-size: 10pt;">-</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 29px; text-align: center;"><span style="font-size: 10pt;">03/07/2024</span></td>
+            <td style="width: 11.7093%; height: 29px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 31.733%; height: 29px;">-</td>
+            <td style="width: 18.1896%; height: 29px; text-align: center;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 29px;">-</td>
+            <td style="width: 9.55803%; height: 29px; text-align: center;"><span style="font-size: 10pt;">-</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 10px; text-align: center;"><span style="font-size: 10pt;">03/07/2024</span></td>
+            <td style="width: 11.7093%; height: 10px;"><span style="font-size: 10pt;">-<br /></span></td>
+            <td style="width: 31.733%; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 18.1896%; height: 10px; text-align: center;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.55803%; height: 10px; text-align: center;"><span style="font-size: 10pt;">-</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="text-align: center; height: 42px; width: 4.25647%;" rowspan="3"><span style="font-size: 10pt;">9<br /></span></td>
+            <td style="width: 10.78%; text-align: center; height: 14px;"><span style="font-size: 10pt;">03/11/2024</span></td>
+            <td style="width: 11.7093%; height: 14px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 14px;"><span style="font-size: 10pt;">Data-flow Coverage</span></td>
+            <td style="width: 18.1896%; text-align: center; height: 14px;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 14px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; text-align: center; height: 14px;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 18px; text-align: center;"><span style="font-size: 10pt;">03/13/2024</span></td>
+            <td style="width: 11.7093%; height: 18px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 18px;"><span style="font-size: 10pt;">Random Testing</span></td>
+            <td style="width: 18.1896%; height: 18px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 18px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; height: 18px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 10px; text-align: center;"><span style="font-size: 10pt;">03/13/2024</span></td>
+            <td style="width: 11.7093%; height: 10px;"><span style="font-size: 10pt;">Office Hours</span></td>
+            <td style="width: 31.733%; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 18.1896%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.55803%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 28px;">
+            <td style="width: 4.25647%; text-align: center; height: 67px;" rowspan="3"><span style="font-size: 10pt;">10<br /></span></td>
+            <td style="width: 10.78%; text-align: center; height: 28px;"><span style="font-size: 10pt;">03/18/2024</span></td>
+            <td style="width: 11.7093%; height: 28px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 28px;"><span style="font-size: 10pt;">Partition Testing</span></td>
+            <td style="width: 18.1896%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 29px; text-align: center;"><span style="font-size: 10pt;">03/20/2024</span></td>
+            <td style="width: 11.7093%; height: 29px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 29px;"><span style="font-size: 10pt;">Combinatorial Testing</span></td>
+            <td style="width: 18.1896%; height: 29px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 29px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; height: 29px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 10px; text-align: center;"><span style="font-size: 10pt;">03/20/2024</span></td>
+            <td style="width: 11.7093%; height: 10px;"><span style="font-size: 10pt;">Office Hours</span></td>
+            <td style="width: 31.733%; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 18.1896%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.55803%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 28px;">
+            <td style="width: 4.25647%; text-align: center; height: 67px;" rowspan="3"><span style="font-size: 10pt;">11<br /></span></td>
+            <td style="width: 10.78%; text-align: center; height: 28px;"><span style="font-size: 10pt;">03/25/2024</span></td>
+            <td style="width: 11.7093%; height: 28px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 28px;"><span style="font-size: 10pt;">Model-based Testing</span></td>
+            <td style="width: 18.1896%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 29px; text-align: center;"><span style="font-size: 10pt;">03/27/2024</span></td>
+            <td style="width: 11.7093%; height: 29px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 29px;"><span style="font-size: 10pt;">Search-based Testing</span></td>
+            <td style="width: 18.1896%; height: 29px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 29px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; height: 29px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 10px; text-align: center;"><span style="font-size: 10pt;">03/27/2024</span></td>
+            <td style="width: 11.7093%; height: 10px;"><span style="font-size: 10pt;">Office Hours</span></td>
+            <td style="width: 31.733%; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 18.1896%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.55803%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 28px;">
+            <td style="width: 4.25647%; text-align: center; height: 48px;" rowspan="3"><span style="font-size: 10pt;">12<br /></span></td>
+            <td style="width: 10.78%; text-align: center; height: 28px;"><span style="font-size: 10pt;">04/01/2024</span></td>
+            <td style="width: 11.7093%; height: 28px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 28px;"><span style="font-size: 10pt;">Symbolic Execution</span></td>
+            <td style="width: 18.1896%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 10px; text-align: center;"><span style="font-size: 10pt;">04/03/2024</span></td>
+            <td style="width: 11.7093%; height: 10px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 10px;"><span style="font-size: 10pt;">Fuzzing</span></td>
+            <td style="width: 18.1896%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 10px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 10px;">
+            <td style="width: 10.78%; height: 10px; text-align: center;"><span style="font-size: 10pt;">04/03/2024</span></td>
+            <td style="width: 11.7093%; height: 10px;"><span style="font-size: 10pt;">Office Hours</span></td>
+            <td style="width: 31.733%; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 18.1896%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.55803%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 28px;">
+            <td style="width: 4.25647%; text-align: center; height: 67px;" rowspan="3"><span style="font-size: 10pt;">13<br /></span></td>
+            <td style="width: 10.78%; text-align: center; height: 28px;"><span style="font-size: 10pt;">04/08/2024</span></td>
+            <td style="width: 11.7093%; height: 28px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 28px;"><span style="font-size: 10pt;">Test Input Minimization</span></td>
+            <td style="width: 18.1896%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 29px; text-align: center;"><span style="font-size: 10pt;">04/10/2024</span></td>
+            <td style="width: 11.7093%; height: 29px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 29px;"><span style="font-size: 10pt;">Flaky Tests<br /></span></td>
+            <td style="width: 18.1896%; height: 29px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 29px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; height: 29px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 10px; text-align: center;"><span style="font-size: 10pt;">04/10/2024</span></td>
+            <td style="width: 11.7093%; height: 10px;"><span style="font-size: 10pt;">Office Hours</span></td>
+            <td style="width: 31.733%; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 18.1896%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.55803%; height: 10px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 28px;">
+            <td style="width: 4.25647%; text-align: center; height: 67px;" rowspan="3"><span style="font-size: 10pt;">14<br /></span></td>
+            <td style="width: 10.78%; text-align: center; height: 28px;"><span style="font-size: 10pt;">04/15/2024</span></td>
+            <td style="width: 11.7093%; height: 28px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 28px;"><span style="font-size: 10pt;">Group Work on Testing Tech Talks</span></td>
+            <td style="width: 18.1896%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 28px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.55803%; text-align: center; height: 28px;"><span style="font-size: 10pt;">-</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 29px; text-align: center;"><span style="font-size: 10pt;">04/17/2024</span></td>
+            <td style="width: 11.7093%; height: 29px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 29px;"><span style="font-size: 10pt;">Group Work on Testing Tech Talks</span></td>
+            <td style="width: 18.1896%; height: 29px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 29px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.55803%; height: 29px; text-align: center;"><span style="font-size: 10pt;">-</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 10px; text-align: center;"><span style="font-size: 10pt;">04/17/2024</span></td>
+            <td style="width: 11.7093%; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 31.733%; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 18.1896%; height: 10px; text-align: center;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.55803%; height: 10px; text-align: center;"><span style="font-size: 10pt;">-</span></td>
+        </tr>
+        <tr style="height: 28px;">
+            <td style="width: 4.25647%; text-align: center; height: 67px;" rowspan="3"><span style="font-size: 10pt;">15<br /></span></td>
+            <td style="width: 10.78%; text-align: center; height: 28px;"><span style="font-size: 10pt;">04/22/2024</span></td>
+            <td style="width: 11.7093%; height: 28px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 28px;"><span style="font-size: 10pt;">Regression Testing<br /></span></td>
+            <td style="width: 18.1896%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; text-align: center; height: 28px;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; height: 29px; text-align: center;"><span style="font-size: 10pt;">04/24/2024</span></td>
+            <td style="width: 11.7093%; height: 29px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 29px;"><span style="font-size: 10pt;">Software Testing Research<br /></span></td>
+            <td style="width: 18.1896%; height: 29px; text-align: center;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 29px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; height: 29px; text-align: center;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 10.78%; text-align: center; height: 10px;"><span style="font-size: 10pt;">04/24/2024</span></td>
+            <td style="width: 11.7093%; height: 10px;"><span style="font-size: 10pt;">Office Hours</span></td>
+            <td style="width: 31.733%; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 18.1896%; text-align: center; height: 10px;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 10px;"><span style="font-size: 10pt;">-</span></td>
+            <td style="width: 9.55803%; text-align: center; height: 10px;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 4.25647%; text-align: center; height: 10px;"><span style="font-size: 10pt;">16</span></td>
+            <td style="width: 10.78%; text-align: center; height: 10px;"><span style="font-size: 10pt;">04/29/2024</span></td>
+            <td style="width: 11.7093%; height: 10px;"><span style="font-size: 10pt;">Class</span></td>
+            <td style="width: 31.733%; height: 10px;"><span style="font-size: 10pt;">Software Quality Panel<br /></span></td>
+            <td style="width: 18.1896%; text-align: center; height: 10px;"><span style="font-size: 10pt;">Zoom</span></td>
+            <td style="width: 9.91027%; text-align: center; height: 10px;"><span style="font-size: 10pt;">Slides</span></td>
+            <td style="width: 9.55803%; text-align: center; height: 10px;"><span style="font-size: 10pt;">Video</span></td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;&nbsp;</p>
+<h2>Course Logistics</h2>
+<p>You should refer to this <span>Canvas</span> site and our Piazza site for finding information about course meetings, assessments, and grades. We are going to meet in class for lectures but there is also an option to join lectures synchronously on Zoom. If you enrolled through UNITE, you can also use the UNITE live stream. We will do our best to also provide Zoom recordings for the lectures a few hours after each lecture. UNITE students can also access UNITE recordings. <strong><span style="text-decoration: underline;">We will use Piazza for all communications between students, the instructor, and the TA</span></strong>. (We will add you to Piazza using your UMN email.) We use Piazza as it is a great place to promote interactions among students, and the course staff (instructor and TA) can keep track of all course-related discussions in one place. You will be using Gradescope to complete <em>participation assessments</em> and <em>quizzes</em>. You will be using GitHub, GitHub classroom, and Gradescope to complete <em>coding assignments</em>. You will use Gradescope to submit the link to your testing tech talks.</p>
+<h3>Quick Links</h3>
+<ul>
+    <li>Piazza</li>
+</ul>
+<h2>Assessment</h2>
+<p><span>You can find all the assessment tasks on the Assignments page of this Canvas site and on Gradescope. Please check this page at the end of each course meeting for updated information.</span></p>
+<h3><span>Grade Components</span></h3>
+<p><span>Final course grades will be calculated based on the following percentages:</span>&nbsp;</p>
+<table style="height: 126px; width: 66.9522%; border-collapse: collapse;" border="1">
+    <tbody>
+        <tr style="height: 29px;">
+            <td style="width: 19.2547%; text-align: center; height: 29px;"><span style="font-size: 10pt;"><em>Percentage</em></span></td>
+            <td style="width: 29.5116%; text-align: center; height: 29px;"><span style="font-size: 10pt;"><em>Assessment Type</em></span></td>
+            <td style="width: 31.7331%; text-align: center; height: 29px;"><span style="font-size: 10pt;"><em>Submission Type</em></span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 19.2547%; text-align: center; height: 29px;"><span style="font-size: 10pt;">10%</span></td>
+            <td style="width: 29.5116%; height: 29px;"><span style="font-size: 10pt;">Participation</span></td>
+            <td style="width: 31.7331%; height: 29px;"><span style="font-size: 10pt;">Individual</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 19.2547%; text-align: center; height: 29px;"><span style="font-size: 10pt;">40%</span></td>
+            <td style="width: 29.5116%; height: 29px;"><span style="font-size: 10pt;">Quizzes</span></td>
+            <td style="width: 31.7331%; height: 29px;"><span style="font-size: 10pt;">Individual</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 19.2547%; text-align: center; height: 29px;"><span style="font-size: 10pt;">40%</span></td>
+            <td style="width: 29.5116%; height: 29px;"><span style="font-size: 10pt;">Coding Assignments</span></td>
+            <td style="width: 31.7331%; height: 29px;"><span style="font-size: 10pt;">Team</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 19.2547%; text-align: center; height: 10px;"><span style="font-size: 10pt;">10%</span></td>
+            <td style="width: 29.5116%; height: 10px;"><span style="font-size: 10pt;">Testing Tech Talks</span></td>
+            <td style="width: 31.7331%; height: 10px;"><span style="font-size: 10pt;">Team</span></td>
+        </tr>
+    </tbody>
+</table>
+<p><strong>Participation</strong>: The course has a participation grade. The participation grade will be based on offline assessments that include questions already answered in the class meetings. Specifically, at the end of each class meeting, you will need to complete a participation assessment on Gradescope. <span style="text-decoration: underline;">The assessment will be open for 48 hours</span> and is based on content presented in the lecture. <span style="text-decoration: underline;">Participation assessments are individual</span>.</p>
+<p><strong>Quizzes</strong>: There will be six quizzes. The quiz with the lowest score will be automatically dropped from the final grade computation. <span style="text-decoration: underline;">Quizzes will be available for 48 hours but once you start them they will be open for 40 minutes. Quizzes need to be performed individually.</span></p>
+<p><strong>Coding Assignments</strong>: There will be six coding assignments. <span style="text-decoration: underline;">Coding assignments are based on teams of two students</span>. In the coding assignments, your team will use technologies that implement the theoretical concepts discussed in the course. <span>We will use peer evaluations to help us assess how much the individual team members contributed to the results of the team in the assignments. Please note that we will (1) give a lower weight to outliers (e.g., discount one negative rating when all other ratings for that student are positive), (2) consider individual cases (e.g., specific problems that might have affected the performance), and (3) provide the opportunity to detail the individual contributions in the assessments. In general, we will use a grain of salt when taking the assessments into account.</span></p>
+<p><strong>Testing Tech Talks</strong>: Your team will create a video discussing a testing technology. <span style="text-decoration: underline;">The testing tech talk is a team-based assessment.</span> Peer evaluations will also cover the tech talks.</p>
+<p><strong>Exams</strong>: There is no midterm or final exam.</p>
+<h4>Late Work Policy</h4>
+<p>Late work is not accepted in this class. There are a few reasons for this policy. First, the assessment schedule follows a tight timeline and we would like to grade assessments as quickly as possible. Second, you will have ample time to complete the assessments. Finally, the majority of the assessments will help you complete immediately following assessments.</p>
+<h4>Regrades/Grade Changes</h4>
+<p>Requests for items to be regraded must be made ​within <span style="text-decoration: underline;">seven</span> calendar days of the marks being posted. This means that students may not ask for an assignment from early in the term to be regraded after they receive their final grade. If a mistake has been made in recording a student's marks,&nbsp; please bring this to the attention of the course staff prior to the end of the term.</p>
+<h3>Final Grade</h3>
+<p><span>Final grades will be assigned based on the following scale. Grading for this course is on an absolute scale (i.e. no curve, no rounding up, etc.).</span></p>
+<table style="height: 348px; width: 73.1366%; border-collapse: collapse;" border="1">
+    <tbody>
+        <tr style="height: 29px;">
+            <td style="width: 33.3333%; height: 29px; text-align: center;"><span style="font-size: 10pt;"><em>Weighted</em><em> </em><em>Score (x)</em></span></td>
+            <td style="width: 21.8426%; height: 29px; text-align: center;"><span style="font-size: 10pt;"><em>Letter Grade</em></span></td>
+            <td style="width: 17.981%; height: 29px; text-align: center;"><span style="font-size: 10pt;"><em>S/N</em></span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.3333%; height: 29px; text-align: center;"><span style="font-size: 10pt;">94.0% &le; x &le; 100.0%</span></td>
+            <td style="width: 21.8426%; height: 29px; text-align: center;"><span style="font-size: 10pt;">A</span></td>
+            <td style="width: 17.981%; height: 29px; text-align: center;"><span style="font-size: 10pt;">S</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.3333%; height: 29px; text-align: center;"><span style="font-size: 10pt;">90.0% &le; x &lt; 94.0%</span></td>
+            <td style="width: 21.8426%; height: 29px; text-align: center;"><span style="font-size: 10pt;">A-</span></td>
+            <td style="width: 17.981%; height: 29px; text-align: center;"><span style="font-size: 10pt;">S</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.3333%; height: 29px; text-align: center;"><span style="font-size: 10pt;">87.0% &le; x &lt; 90.0%</span></td>
+            <td style="width: 21.8426%; height: 29px; text-align: center;"><span style="font-size: 10pt;">B+</span></td>
+            <td style="width: 17.981%; height: 29px; text-align: center;"><span style="font-size: 10pt;">S</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.3333%; height: 29px; text-align: center;"><span style="font-size: 10pt;">83.0% &le; x &lt; 87.0%</span></td>
+            <td style="width: 21.8426%; height: 29px; text-align: center;"><span style="font-size: 10pt;">B</span></td>
+            <td style="width: 17.981%; height: 29px; text-align: center;"><span style="font-size: 10pt;">S</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.3333%; height: 29px; text-align: center;"><span style="font-size: 10pt;">80.0% &le; x &lt; 83.0%</span></td>
+            <td style="width: 21.8426%; height: 29px; text-align: center;"><span style="font-size: 10pt;">B-</span></td>
+            <td style="width: 17.981%; height: 29px; text-align: center;"><span style="font-size: 10pt;">S</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.3333%; height: 29px; text-align: center;"><span style="font-size: 10pt;">77.0% &le; x &lt; 80.0%</span></td>
+            <td style="width: 21.8426%; height: 29px; text-align: center;"><span style="font-size: 10pt;">C+</span></td>
+            <td style="width: 17.981%; height: 29px; text-align: center;"><span style="font-size: 10pt;">S</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.3333%; height: 29px; text-align: center;"><span style="font-size: 10pt;">73.0% &le; x &lt; 77.0%</span></td>
+            <td style="width: 21.8426%; height: 29px; text-align: center;"><span style="font-size: 10pt;">C</span></td>
+            <td style="width: 17.981%; height: 29px; text-align: center;"><span style="font-size: 10pt;">S</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.3333%; height: 29px; text-align: center;"><span style="font-size: 10pt;">70.0% &le; x &lt; 73.0%</span></td>
+            <td style="width: 21.8426%; height: 29px; text-align: center;"><span style="font-size: 10pt;">C-</span></td>
+            <td style="width: 17.981%; height: 29px; text-align: center;"><span style="font-size: 10pt;">S</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.3333%; height: 29px; text-align: center;"><span style="font-size: 10pt;">65.0% &le; x &lt; 70.00</span></td>
+            <td style="width: 21.8426%; height: 29px; text-align: center;"><span style="font-size: 10pt;">D+</span></td>
+            <td style="width: 17.981%; height: 29px; text-align: center;"><span style="font-size: 10pt;">N</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.3333%; height: 29px; text-align: center;"><span style="font-size: 10pt;">60.0% &le; x &lt; 65.0%</span></td>
+            <td style="width: 21.8426%; height: 29px; text-align: center;"><span style="font-size: 10pt;">D</span></td>
+            <td style="width: 17.981%; height: 29px; text-align: center;"><span style="font-size: 10pt;">N</span></td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.3333%; height: 29px; text-align: center;"><span style="font-size: 10pt;">0% &le; x &lt; 60.0%</span></td>
+            <td style="width: 21.8426%; height: 29px; text-align: center;"><span style="font-size: 10pt;">F</span></td>
+            <td style="width: 17.981%; height: 29px; text-align: center;"><span style="font-size: 10pt;">N</span></td>
+        </tr>
+    </tbody>
+</table>
+<h4><span>Considerations on Final Grade</span></h4>
+<p>I also would like to share some of my thoughts on final grades. First and foremost, your grade isn't a judgment of who you are as a person. It is not an overarching statement about your fitness for work in this major or this field. It is not even necessarily a statement about how much of the course material you know or how hard you tried. It is a summary of the record of how you did on the required assessments for this course.</p>
+<p>Second, if you mention to me that you think that your grade doesn't reflect your effort or your understanding, I want to let you know that I understand that. I want to let you know that you are so much more than that number or letter on a page. However, if you ask me whether it is possible to change your grade, please understand that you are asking me to falsify the record of how you did on the required assessments for this course. I cannot do that. I can tell you that even if your grade is not what you would have hoped it would be, I still believe in you and in the dream behind that hope. I 100% believe that you can go on to be successful in this major and in the field throughout your life.</p>
+<p>&nbsp; &nbsp;</p>
+<h2>COVID-19 Response</h2>
+<p>For more information about COVID-19 response measures, please visit this <a class="inline_disabled" href="https://safe-campus.umn.edu/personal-wellbeing/covid-19-response" target="_blank" rel="noopener">page</a>.</p>
+<h2>Detailed Course Information</h2>
+<h3>Prerequisites</h3>
+<p>CSCI5801 is the formal prerequisite for this class. You must be accepted to the CS upper-division, be a CS graduate student, or receive department permission to take this class. You are expected to have previous programming experience in Java, know how to use Unix-like command-line tools (e.g., cp), and be familiar with Git. You are expected to know basic data structures (such as lists), algorithms (such as search), recursion, and data abstraction. You are expected to be proficient in English and in using a computer to produce text documents and figures as required by the assignments. Please contact the instructor on Piazza if you have questions about whether the course is a good fit for your background and academic goals.</p>
+<h3>Course Topics</h3>
+<p>In this course, you will learn the theory, skills, and tools to test real-world software systems. This course will prepare you for some important aspects associated with a career in software engineering. The topics covered in the course include:</p>
+<ul>
+    <li><span><span style="text-decoration: underline;">Testing theory and techniques:</span> the theory behind software testing.</span></li>
+    <li><span><span style="text-decoration: underline;">Testing tools:</span> how to test software in practice.</span></li>
+    <li><span><span style="text-decoration: underline;">Test automation</span>: how to automate software testing.</span></li>
+</ul>
+<h3>Student Learning Outcomes</h3>
+<p><span>Students will learn theoretical concepts behind software testing and get hands-on experience with key testing technologies. Students will learn to identify and solve software testing problems. Students will learn the theory behind unit testing, test doubles, system testing, acceptance testing, program representations, coverage criteria, black-box and white-box testing techniques, and test management. Students will get hands-on experience with test automation tools and frameworks like JUnit, Mockito, JaCoCo, Randoop, and EvoSuite. </span><span>Students will learn time management skills to coordinate group work and be held accountable for group commitments. Students will learn how to interact as a team member and to work and collaborate together with shared goals.</span></p>
+<h3>Expected Effort and Participation</h3>
+<p>This course covers a medium-large amount of material, requires good programming skills, and needs a significant amount of time spent on using software testing tools. Therefore the course will require a good amount of time to do all the reading, programming, and studying for quizzes. Students should expect to spend an average of 9 to 12 hours a week on this course.</p>
+<h3>Course Components</h3>
+<h4>Testing Real-World Software</h4>
+<p><span>In previous courses, you were introduced to software testing. In this course, you will learn software testing techniques used in industry and learn how to use the tools that implement these techniques. In the course, you will be given access to real-world software systems and you will use the systems in the coding assignments of the course.</span></p>
+<h3>Course Staff</h3>
+<p><span>The first priority of the TA is to ensure that each student receives the support they need to understand the course content. Please see the TA first with any questions about the course content.</span><span> The course staff also forms the first line of support when it comes to the assignments. </span></p>
+<h3>Textbook</h3>
+<p>There is no required textbook and the course meetings together with the course's slides will help you prepare for the assessments. There are a few books that I suggest if you would like to further explore some of the concepts we will cover throughout the course. The books are:</p>
+<ul>
+    <li><a class="instructure_file_link inline_disabled" href="https://www.amazon.com/Software-Testing-Analysis-Principles-Techniques/dp/0471455938" target="_blank" rel="noopener">Software Testing and Analysis: Process, Principles, and Techniques</a></li>
+    <li><a class="instructure_file_link inline_disabled" href="https://www.amazon.com/Introduction-Software-Testing-Paul-Ammann-dp-1107172012/dp/1107172012" target="_blank" rel="noopener">Introduction to Software Testing</a></li>
+    <li><a href="https://www.amazon.com/Software-Engineering-10th-Ian-Sommerville/dp/0133943038">Software Engineering</a></li>
+</ul>
+<p>&nbsp;</p>
+<h2>&nbsp;Tips for Doing Well in the Course</h2>
+<ul>
+    <li><span style="text-decoration: underline;">Embrace this opportunity</span>: Many of us are in computer science because we find software development rewarding. This class is an invitation to become a better software engineer and tester. We are lucky to have this hands-on, very practical course as a part of our curriculum. This course has the objective to teach all the things "I wish" I had learned in school once you start a career as a software engineer.</li>
+    <li><span style="text-decoration: underline;">Keep pace with the class</span>: Our class meetings will mix lectures with in-class activities. This is the kind of course that relies upon practice and participation rather than book learning. For this reason, it is highly encouraged that you attend class meetings or watch class recordings periodically.</li>
+    <li><span style="text-decoration: underline;">Understand the nature of the class​</span>: This class is not an introductory class. It is a "learn by doing" class; a class that assumes you already know programming, testing, and computer science basics; and a class that involves professional skills such as group work and communication skills.</li>
+    <li><strong><span style="text-decoration: underline;">Give yourself a buffer on assignment deadlines​</span></strong>: One common occurrence in software development is that there are often unexpected delays. This class has rigid deadlines on many assessments, so stay on pace in course activities. <span style="text-decoration: underline;">Plan to get crucial work done ahead of time so if/when unexpected issues arise you have time to address them and still meet the deadline.</span></li>
+</ul>
+<p>&nbsp;</p>
+<h2>Academic Integrity</h2>
+<p><span>All work submitted for this course is required to be your original work or that of your group in the case of group work. You are expected to do your own thinking about how to solve an assessment. You are encouraged to discuss the content of the lectures with your peers. <strong><span style="text-decoration: underline;">If you have any questions about whether discussing something with peers might go beyond what is permitted, then stop and ask us first on Piazza for clarification on the policy.</span></strong></span></p>
+<p>You are also not allowed to post your solutions to a repo that is not the one we assigned to you. We will also use code plagiarism detectors in this class.</p>
+<p><span>The web is a fantastic resource for learning about testing, but it is also a potential source for solutions to assignments, so it is important that we are all on the same page with regard to what is permitted use of an online resource for this class and what is not. The use of the web in a way that supplements the type of information you will find in your class materials is great. This is encouraged. For example, if we talk about dynamic symbolic execution in class, you are encouraged to search for "dynamic symbolic execution" online and read more about this as a generic technique that can be used to test many programs. However, when it comes to a question in a quiz, you are not allowed to search online for something like "what is the result of symbolically executing <em>if (x==3)</em>". This crosses a line into searching out the solution to an assessment rather than learning about dynamic symbolic execution.</span></p>
+<p><span>&nbsp;</span></p>
+<h2><span>Scholastic Conduct: Course, Department, and University Policies</span></h2>
+<p><span>Scholastic dishonesty includes any deceptive means whereby a student attempts to gain an unfair advantage. Examples of scholastic dishonesty include violating the course policies outlined here, especially its &ldquo;Academic Integrity&rdquo; section; plagiarizing; cheating on assignments; or engaging in unauthorized collaboration on academic work, either with other students or via the internet. In order to be as clear as possible about your scholastic conduct responsibilities and how these relate specifically to the types of courses that we teach in the Department of Computer Science &amp; Engineering, the faculty have prepared a <a href="https://cse.umn.edu/cs/undergraduate-academic-conduct-policy">CS&amp;E Department Academic Conduct Policy​</a>.</span><span> Our course will follow this policy, which stands alongside the broader <a href="http://regents.umn.edu/sites/regents.umn.edu/files/policies/Student_Conduct_Code.pdf">Board of Regents Student Conduct Code</a>.</span></p>
+<p><span>Within the course, a student responsible for scholastic dishonesty can be given a penalty, including an "F" or "N" for the course. I am also required to report the incident to the <a href="https://communitystandards.umn.edu/">Office for Community Standards</a></span><span>, and further disciplinary action may occur.</span><span>&nbsp;</span></p>
+<p><span>You are responsible for knowing and following the policies on scholastic conduct that are described in the syllabus ​and in the related documents discussed above (see especially the CS&amp;E Department Academic Conduct Policy).</span><strong></strong></p>
+<p><span>&nbsp;</span></p>
+<h2><span>Additional Information</span></h2>
+<h3>Disability Information</h3>
+<p>University policy is to provide, on a flexible and individualized basis, reasonable accommodations to students who have documented disability conditions (e.g., physical, learning, psychiatric, vision, hearing, or systemic) that may affect their ability to participate in course activities or to meet course requirements. Students with disabilities are encouraged to contact Disability Services and their instructors to discuss individual needs for accommodations. Disability Services, McNamara Alumni Center, Suite 170, 200 Oak Street, East Bank. Staff can be reached by calling (612) 626-1333.</p>
+<h3>Mental Health Information</h3>
+<p>As a student you may experience a range of issues that can cause barriers to learning, such as strained relationships, increased anxiety, alcohol/drug problems, feeling down, difficulty concentrating, and/or lack of motivation. These mental health concerns or stressful events may lead to diminished academic performance or reduce your ability to participate in daily activities. University of Minnesota services are available to assist you with addressing these and other concerns you may be experiencing. You can learn more about the broad range of confidential mental health services available on campus <a href="https://safe-campus.umn.edu/personal-wellbeing">here</a>.</p>
+<h3>Equal Opportunity</h3>
+<p><span style="font-size: 12pt;">In this course, we are committed to the University's equal access and opportunity policy. The University of Minnesota shall provide equal access to and opportunity in its programs, facilities, and employment without regard to race, color, creed, religion, national origin, gender, age, marital status, disability, public assistance status, veteran status, sexual orientation, gender identity, or gender expression.</span></p>
+<h3>Sexual Harassment, Sexual Assault, Stalking and Relationship Violence</h3>
+<p>In this course, we are committed to the University's Sexual Harassment, Sexual Assault, Stalking and Relationship Violence <a href="https://policy.umn.edu/hr/sexharassassault">policy</a>. The University of Minnesota is committed to taking prompt and effective steps intended to end sexual harassment, sexual assault, stalking, relationship violence, and related retaliation, prevent their recurrence, and, as appropriate, remedy their effects.</p>
+<h3>Recordings Information</h3>
+<p>For UNITE students, the University of Minnesota holds the copyright to the UNITE recordings - your access is strictly limited to your enrollment in this course. &nbsp;Accessing the media through either the UNITE Media Portal or within the Canvas course site obligates the student to the UNITE media agreement posted in the UNITE Media Portal. Individual access may be discontinued if found in violation of the agreement. For troubleshooting assistance with the recordings, use the UNITE Troubleshooting FAQ or &ldquo;Submit a Trouble Report to UNITE&rdquo; link found on all pages within the UNITE Media Portal.</p>
+<h3>Visibility on the Web</h3>
+<p><span><span style="text-decoration: underline;">Zoom</span>: We will use Zoom for classes to allow in class participation and remote attendace. We will also use Zoom for office hours meetings. If you have concerns, please contact the instructor on Piazza for further information.</span></p>
+<p><span><span style="text-decoration: underline;">Websites</span>: In this course, our use of technology will involve sharing students' names, UMN usernames, and/or coursework information to course-related websites (e.g., Gradescope). All web sites might be affected by security vulnerabilities and it could be possible for them to be the target of software attacks. If you have concerns about the visibility of your name, username, or other information, please contact the instructor on Piazza for further information. Rest assured that it is our priority to keep this information within the boundaries of these websites.</span></p>
+<h3>Class Climate</h3>
+<p><span>All students are expected to behave as scholars at a leading institute of technology. This includes not talking over each other during the meetings. Disruptive students will be warned and potentially dismissed from the meetings.</span></p>
+<h3>Exceptional Circumstances</h3>
+<p>We reserve the right to make changes to the syllabus to accommodate for exceptional circumstances that are out of the course staff's control. We will announce any change if it needs to happen.</p>
+<p>&nbsp;</p>
+	</div>
+      </div>
+      <div class="row">
+        <div class="col-md-10" align="justify">
+          <br/>
+          <br/>
+	  <br/>
+          <br/>
+          <br/>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+
+    
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>

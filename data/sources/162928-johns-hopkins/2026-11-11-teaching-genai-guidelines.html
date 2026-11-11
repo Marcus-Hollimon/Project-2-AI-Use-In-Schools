@@ -1,0 +1,905 @@
+<!doctype html>
+	<html lang="en" class="default">
+<head>
+		<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>
+			Guidelines | Teaching @ JHU		</title>
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+	<link rel="shortcut icon" href="https://teaching.jhu.edu/wp-content/themes/Johns-Hopkins-University/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="https://teaching.jhu.edu/wp-content/themes/Johns-Hopkins-University/evo-calendar/css/evo-calendar.css"/>
+	<style type="text/css">
+		/* ============ desktop view ============ */
+		@media all and (min-width: 992px) {
+			.sub-menu li {
+				position: relative;
+			}
+
+			.sub-menu .submenu {
+				display: none;
+				position: absolute;
+				left: 100%;
+				top: -7px;
+			}
+
+			.sub-menu .submenu-left {
+				right: 100%;
+				left: auto;
+			}
+
+			.sub-menu>li:hover {
+				background-color: #f1f1f1
+			}
+
+			.sub-menu>li:hover>.submenu {
+				display: block;
+			}
+
+			#wpadminbar {
+				top: -32px !important;
+			}
+
+			.navbar-nav {}
+		}
+
+		/* ============ desktop view .end// ============ */
+		/* ============ small devices ============ */
+		@media (max-width: 991px) {
+			.sub-menu .sub-menu {
+				margin-left: 0.7rem;
+				margin-right: 0.7rem;
+				margin-bottom: .5rem;
+			}
+		}
+
+		/* ============ small devices .end// ============ */
+	</style>
+
+
+	<script type="text/javascript">
+		window.onload = function () {
+			setTimeout(function () {
+				var tabindex = 0;
+
+				var nextTabIndex = $(this).prev().tabIndex;
+
+				$('a.skip-link').attr('tabindex', 0);
+				$('ul.navbar-nav li').attr('tabindex', -1);
+				$('a[href=""]').remove();
+				$('li.post-tile-menu-item, li.menu-item, li.menu-item button, li.menu-item li.menu-item').each(function () {
+					var currentTabIndex = $(this).find('a').attr('tabindex');
+					$(this).css('order', currentTabIndex);
+					$('li.menu-item button').attr('tabindex', $(this).prev('a').attr('tabindex'))
+				});
+
+				let firstTabbedKey = 'false';
+				let tabbedKey = 'false';
+				let skippedKey = 'false';
+				let { nextElementSibling } = this;
+				while (nextElementSibling && nextElementSibling.tagName !== 'li a') {
+					nextElementSibling = nextElementSibling.nextElementSibling;
+				}
+				document.onkeydown = function (evt) {
+					evt = evt || window.event;
+					const elem = document.querySelector('.skip-link');
+					if (evt.keyCode == 27) {//27 is the code for escape
+						var subMenuToggle = document.activeElement.parentNode.parentNode.parentNode;
+						$('.sub-menu').removeClass('show');
+						$(subMenuToggle).find('.sub-menu-toggle').focus();
+					}
+					if (evt.keyCode == 9 && firstTabbedKey == 'false') {
+						var skipTab = $('.skip-link');
+						skipTab.focus();
+						firstTabbedKey = 'true';
+						evt.preventDefault();
+						return false;
+					}
+					if (evt.keyCode == 13 && firstTabbedKey == 'true' && skippedKey == 'false' && tabbedKey == 'false') {
+						var skipToContent = $('#main h2:first, #main li:first, #main a:first');
+						//			var skipToContent = document.getElementsByTagName("a")[0];
+						skipToContent.focus();
+						skippedKey = 'true';
+						evt.preventDefault();
+						return false;
+					}
+					if (evt.keyCode == 13 && firstTabbedKey == 'true' && skippedKey == 'false' && tabbedKey == 'true' && elem === document.activeElement) {
+						var skipToContent = $('#main h2:first, #main li:first, #main a:first');
+						//			var skipToContent = document.getElementsByTagName("a")[0];
+						skipToContent.focus();
+						evt.preventDefault();
+						return false;
+
+					}
+					if (evt.keyCode == 9 && firstTabbedKey == 'true' && skippedKey == 'false' && tabbedKey == 'false') {
+						//			let order = document.getElementsByTagName("li")[0].tabIndex;
+						//			var menuTab = $('#menu-main-nav li[tabindex="' + order + '"]');
+						if($('.alert')){
+							if(!$('.alert-btn')){
+								var alertTab = $('.close');
+								alertTab.focus();
+								tabbedKey = 'true';
+								evt.preventDefault();
+								return false;
+							}else{
+								var alertTab = $('.alert-btn');
+								alertTab.focus();
+								tabbedKey = 'true';
+								evt.preventDefault();
+								return false;
+							}
+						}
+						else{
+						   var menuTab = $('.logo-wrap');
+						menuTab.focus();
+						tabbedKey = 'true';
+						evt.preventDefault();
+						return false;
+						   }
+					}
+					if (evt.keyCode == 13 && firstTabbedKey == 'true' && skippedKey == 'true' && tabbedKey == 'true') {
+						var skipToContent = $('#main h2:first, #main li:first, #main a:first');
+						skipToContent.focus();
+
+					}
+
+				}
+				document.onkeyup = function (evt) {
+					if (evt.keyCode == 27) {
+						$(this).closest('.menu-item-has-children').find('.sub-menu-toggle').focus();
+					}
+				}
+			}, 10);
+		};
+		document.addEventListener("DOMContentLoaded", function () {
+			/////// Prevent closing from click inside dropdown
+			document.querySelectorAll('.sub-menu').forEach(function (element) {
+				element.addEventListener('click', function (e) {
+					e.stopPropagation();
+				});
+			})
+			// make it as accordion for smaller screens
+			if (window.innerWidth < 992) {
+				// close all inner dropdowns when parent is closed
+				document.querySelectorAll('.navbar .menu-item-has-children').forEach(function (everydropdown) {
+					everydropdown.addEventListener('hidden.bs.dropdown', function () {
+						// after dropdown is hidden, then find all submenus
+						this.querySelectorAll('.sub-menu').forEach(function (everysubmenu) {
+							// hide every submenu as well
+							everysubmenu.style.display = 'none';
+						});
+					})
+				});
+				document.querySelectorAll('.sub-menu a').forEach(function (element) {
+					element.addEventListener('hover', function (e) {
+
+
+						let nextEl = this.nextElementSibling;
+						if (nextEl && nextEl.classList.contains('sub-menu')) {
+							// prevent opening link if link needs to open dropdown
+							e.preventDefault();
+							console.log(nextEl);
+							if (nextEl.style.display == 'block') {
+								nextEl.style.display = 'none';
+							} else {
+								nextEl.style.display = 'block';
+							}
+
+						}
+					});
+				});
+			}
+		}); 
+	</script>
+	<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//teaching.jhu.edu' />
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//code.jquery.com' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://teaching.jhu.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fteaching.jhu.edu%2Funiversity-teaching-policies%2Fgenerative-ai%2Fguidelines%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://teaching.jhu.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fteaching.jhu.edu%2Funiversity-teaching-policies%2Fgenerative-ai%2Fguidelines%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='wp-statistics-widgets/blocks-style-css' href='https://teaching.jhu.edu/wp-content/plugins/wp-statistics-widgets/assets//css/blocks.css?ver=7.1.4' media='all' />
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="wp-block-list-inline-css">
+ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
+/*# sourceURL=https://teaching.jhu.edu/wp-includes/blocks/list/style.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://teaching.jhu.edu/wp-includes/blocks/paragraph/style.min.css */
+</style>
+
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='pb-accordion-blocks-style-css' href='https://teaching.jhu.edu/wp-content/plugins/accordion-blocks/build/index.css?ver=1.5.0' media='all' />
+<link rel='stylesheet' id='wp-statistics-widgets-css' href='https://teaching.jhu.edu/wp-content/plugins/wp-statistics-widgets/assets/css/style.css?ver=7.1.4' media='all' />
+<link rel='stylesheet' id='wp-statistics-widget-blocks-css' href='https://teaching.jhu.edu/wp-content/plugins/wp-statistics-widgets/assets/css/blocks.css?ver=7.1.4' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='https://teaching.jhu.edu/wp-content/themes/Johns-Hopkins-University/vendors/bootstrap/css/bootstrap.min.css?ver=7.1.4' media='all' />
+<link rel='stylesheet' id='calendar_style-css' href='https://teaching.jhu.edu/wp-content/themes/Johns-Hopkins-University/evo-calendar/css/evo-calendar.css?ver=1778768644' media='all' />
+<link rel='stylesheet' id='style-css' href='https://teaching.jhu.edu/wp-content/themes/Johns-Hopkins-University/style.css?ver=1790110736' media='all' />
+<link rel='stylesheet' id='tablepress-default-css' href='https://teaching.jhu.edu/wp-content/plugins/tablepress/css/build/default.css?ver=3.3.4' media='all' />
+<script id="wp-statistics-widget-chartjs-js" src="https://teaching.jhu.edu/wp-content/plugins/wp-statistics/assets/js/chartjs/chart.umd.min.js?ver=3.5.1"></script>
+<link rel="https://api.w.org/" href="https://teaching.jhu.edu/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://teaching.jhu.edu/wp-json/wp/v2/pages/357" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://teaching.jhu.edu/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1.4" />
+<link rel="canonical" href="https://teaching.jhu.edu/university-teaching-policies/generative-ai/guidelines/" />
+<link rel='shortlink' href='https://teaching.jhu.edu/?p=357' />
+<style type="text/css">
+.feedzy-rss-link-icon:after {
+	content: url("https://teaching.jhu.edu/wp-content/plugins/feedzy-rss-feeds/img/external-link.png");
+	margin-left: 3px;
+}
+</style>
+		<!-- Analytics by WP Statistics - https://wp-statistics.com -->
+</head>
+
+<a class="skip-link screen-reader-text" href="#main" aria-label="Skip To Content" role="navigation" tabindex="0">Skip to content</a>
+
+<body class="wp-singular page-template-default page page-id-357 page-child parent-pageid-349 wp-custom-logo wp-theme-Johns-Hopkins-University">
+	
+		<a href="https://150.jhu.edu" parent="_blank" id="jhu-150th-bar" jhu-150th-bar-style="light">
+
+		<style>
+			/* Remove the following @import line if your website is already loading Proxima Nova Medium (500) */
+			@import url("https://use.typekit.net/tgg3dge.css");
+
+			:root {
+				--jhu-brand-heritage-blue: #002D72;
+				--jhu-blue-50: #0077D8;
+				--jhu-brand-spirit-blue: #68ACE5;
+				--jhu-brand-white: #FFFFFF;
+				--jhu-150th-bar-accent: var(--jhu-brand-spirit-blue);
+				--jhu-150th-bar-background: var(--jhu-brand-heritage-blue);
+				--jhu-150th-bar-color: var(--jhu-brand-white);
+				--jhu-150th-bar-secondary: var(--jhu-brand-spirit-blue);
+				--jhu-150th-bar-height: 52px;
+
+				@media (1020px <=width) {
+					--jhu-150th-bar-height: 68px;
+				}
+			}
+
+			#jhu-150th-bar {
+				align-items: center;
+				background: var(--jhu-150th-bar-background);
+				box-sizing: border-box;
+				color: var(--jhu-150th-bar-color);
+				display: grid;
+				font-family: "Work Sans", sans-serif;
+				font-weight: 500;
+				font-size: min(3vw, 12px);
+				font-style: normal;
+				gap: 0;
+				grid-template-areas:
+					"logo name"
+					"logo tagline";
+				grid-template-columns: 60px 1fr;
+				height: var(--jhu-150th-bar-height);
+				letter-spacing: 0.05em;
+				margin: 0;
+				padding: 0 1em;
+				text-decoration: none;
+				text-transform: uppercase;
+				width: 100%;
+
+				@media (460px <=width) {
+					grid-template-columns: 90px 1fr;
+					letter-spacing: 0.1em;
+				}
+
+				@media (800px <=width) {
+					gap: 0 1em;
+					grid-template-areas: "name logo tagline";
+					grid-template-columns: 1fr 72px 1fr;
+				}
+
+				@media (1020px <=width) {
+					font-size: clamp(16px, 1.56vw, 21px);
+					grid-template-columns: 1fr 108px 1fr;
+				}
+			}
+
+			#jhu-150th-bar[jhu-150th-bar-style="light"] {
+				--jhu-150th-bar-accent: var(--jhu-brand-spirit-blue);
+				--jhu-150th-bar-background: var(--jhu-brand-white);
+				--jhu-150th-bar-color: var(--jhu-brand-heritage-blue);
+				--jhu-150th-bar-secondary: var(--jhu-blue-50);
+			}
+
+			#jhu-150th-bar * {
+				box-sizing: inherit;
+				font-size: 1em;
+				line-height: 1.4;
+				margin: 0;
+				padding: 0;
+				vertical-align: middle;
+			}
+
+			#jhu-150th-bar p {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+			}
+
+			#jhu-150th-bar .jhu-150th-bar-sep {
+				background-color: var(--jhu-150th-bar-accent);
+				color: red;
+				display: inline-block;
+				height: 1.4em;
+				margin: 0 0.5em;
+				width: 1px;
+
+				@media (480px <=width) {
+					margin: 0 1em;
+					width: 2px;
+				}
+			}
+
+			#jhu-150th-bar #jhu-150th-name {
+				grid-area: name;
+				justify-self: start;
+				text-align: left;
+
+				@media (width < 800px) {
+					align-self: end;
+				}
+
+				@media (800px <=width) {
+					justify-self: end;
+					text-align: right;
+				}
+			}
+
+			#jhu-150th-bar #jhu-150th-name .jhu-150th-bar-sep:last-child {
+
+				@media (width < 800px) {
+					order: -1;
+				}
+			}
+
+			#jhu-150th-bar #jhu-150th-logo {
+				aspect-ratio: 144 / 90;
+				grid-area: logo;
+				height: auto;
+				justify-self: center;
+				object-fit: contain;
+				text-align: center;
+				max-height: 100%;
+				max-width: 144px;
+				width: 100%;
+			}
+
+			#jhu-150th-bar #jhu-150th-tagline {
+				color: var(--jhu-150th-bar-secondary);
+				grid-area: tagline;
+				justify-self: start;
+				text-align: left;
+
+				@media (width < 800px) {
+					align-self: start;
+				}
+			}
+		</style>
+		<p id="jhu-150th-name">Johns&nbsp;Hopkins&nbsp;University<span
+				class="jhu-150th-bar-sep"></span>Est.&nbsp;1876<span class="jhu-150th-bar-sep"></span></p>
+		<svg id="jhu-150th-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 90">
+			<defs>
+				<style>
+					.cls-1 {
+						fill: none;
+					}
+
+					.cls-2 {
+						fill: var(--jhu-150th-bar-color);
+					}
+
+					.cls-3 {
+						fill: var(--jhu-150th-bar-accent);
+					}
+				</style>
+			</defs>
+			<path class="cls-2"
+				d="M69.75,68.12c-3.33-.14-5.69-.2-8.4-.2-2.85,0-5.35.07-8.4.2-.42-.2-.56-1.32-.14-1.73l1.32-.21c4.24-.7,4.24-1.39,4.24-8.68v-9.79c0-2.08-.14-2.22-3.47-2.22h-19.86c-3.33,0-3.47.14-3.47,2.22v9.79c0,7.29.34,8.26,4.23,8.68l2.02.21c.41.28.28,1.53-.14,1.73-3.75-.14-6.11-.2-8.82-.2-2.99,0-5.35.13-8.06.2-.42-.2-.55-1.32-.14-1.73l1.18-.21c3.89-.7,4.03-1.39,4.03-8.68v-25c0-6.35-.01-8.02-2.85-8.58-.59-.12-1.19-.11-1.77.02-2.9.64-2.89,2.14-2.89,8.7v25.76c0,5.48-.28,10.27-1.6,13.47-2.3,5.56-7.22,10-13.68,10-.83,0-2.98-.07-2.98-1.46,0-1.18,1.04-3.2,2.5-3.2.83,0,1.67.14,2.57.42.97.28,1.94.49,2.92.49,1.46,0,2.29-.83,2.78-1.81,1.6-3.27,1.8-13.68,1.8-17.43v-26.25c0-7.71-.69-8.54-4.79-8.89l-1.73-.14c-.42-.28-.28-1.53.14-1.74,4.03.14,6.39.21,9.3.21,1.54,0,2.95-.02,4.38-.06.78-.02,1.35-.03,2.16-.07.44.01,1.08,0,1.5.02,1.78.06,3.39.11,5.25.11,2.71,0,5.07-.07,8.05-.21.42.21.56,1.46.14,1.74l-1.32.14c-4.03.42-4.16,1.46-4.16,8.75v7.99c0,2.15.14,2.22,3.47,2.22h19.86c3.33,0,3.47-.07,3.47-2.22v-7.99c0-7.29-.14-8.33-4.24-8.75l-1.32-.14c-.42-.28-.28-1.53.14-1.74,3.19.14,5.56.21,8.4.21s5.07-.07,8.2-.21c.42.21.55,1.46.14,1.74l-1.46.14c-4.03.42-4.17,1.46-4.17,8.75v25c0,7.29.14,8.2,4.17,8.68l1.67.21c.42.28.28,1.53-.14,1.73h0Z">
+			</path>
+			<path class="cls-3"
+				d="M126.76,26.84c6.87,0,11.55,6.45,11.55,15.07s-4.69,14.9-11.55,14.9-11.55-6.45-11.55-14.9,4.69-15.07,11.55-15.07M126.76,22.99c-10.05,0-17.16,7.87-17.16,18.92s7.95,18.75,17.16,18.75c10.05,0,17.16-7.87,17.16-18.75s-7.12-18.92-17.16-18.92">
+			</path>
+			<path class="cls-3"
+				d="M81.05,53.13c0,4.28-.09,5.14-3.6,5.57l-1.46.17c-.43.34-.43,1.54.09,1.8,2.4-.09,5.14-.17,7.54-.17,2.65,0,5.31.09,7.88.17.51-.26.51-1.46.09-1.8l-1.46-.17c-3.51-.43-3.6-1.28-3.6-5.57v-19.61c0-2.05,0-4.45.17-6.25,0-.34-.34-.43-.6-.43-2.31.86-5.74,2.23-10.45,3-.43.34-.43,1.28.09,1.63l2.65.26c2.48.26,2.65,1.71,2.65,4.88v16.53h0Z">
+			</path>
+			<path class="cls-3"
+				d="M109.02,55.87c0-6.76-3.94-11.64-9.51-15.5-1.11-.77-2.65-1.8-4.02-2.74-2.4-1.63-2.83-2.57-2.4-4.11.43-1.37.86-2.05,3.34-2.4l10.88-1.54c2.74-.43,4.28-3.6,4.88-5.48.09-.51-.17-1.03-.94-1.11-.94.6-1.54.86-4.71,1.28l-5.99.86c-2.74.43-4.45.68-5.57,1.03-1.11.34-2.65,2.91-3.77,5.57-1.11,2.57-1.88,5.39-1.88,6.85,0,3,3.08,4.71,6.77,7.36,3.68,2.65,6.94,6.51,6.94,11.9,0,9.42-8.91,15.76-13.62,17.21-.68.6-.34,1.97.69,2.4,6.25-1.88,18.92-9.76,18.92-21.58">
+			</path>
+			<rect class="cls-1" width="144" height="90"></rect>
+		</svg>
+		<p id="jhu-150th-tagline"><span
+				class="jhu-150th-bar-sep"></span>America’s&nbsp;First&nbsp;Research&nbsp;University</p>
+	</a>
+	<div class="sticky-header">
+		<header>
+			<div class="brand-bar">
+				<div class="container">
+					<div class="navbar nav-head">
+						<a class="logo-wrap" href="/">
+							<div class="brand-wrapper">
+								<div class="brand-logo">
+									<span class="logo">
+										<img alt="Johns Hopkins University Logo"
+											src="https://teaching.jhu.edu/wp-content/themes/Johns-Hopkins-University/assets/img/JHU_logo_horizontal.white.svg" /></span>
+
+								</div>
+								<div class="brand-name"><span class="title">Teaching @ JHU</span>
+								</div>
+							</div>
+						</a>
+						<!--div class="navbar-brand d-flex">
+					
+					<a class="logo-wrap" href="/">
+					<span class="logo">
+						<img alt="Johns Hopkins University Logo" src="<!?php bloginfo('template_url'); ?>/assets/img/JHU_logo_blue.svg" />
+					</span>
+					<span class="title"><!?php echo get_bloginfo( 'name' ); ?></span>
+						</a>
+				</div-->
+						<div class="utility-menu">
+																													<a class="btn btn-primary-outline nav-contact" href="/contact">Contact</a>
+																											</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<nav class="navbar navbar-expand-lg main-navigation" role="navigation">
+			<div class="container">
+				<button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fa fa-bars" aria-hidden="true"></i> Menu
+				</button>
+				<div class="collapse navbar-collapse menu-main-nav-container" role="navigation"
+					id="navbarSupportedContent">
+					
+
+
+	<!--div class="menu-container container"-->
+		<!--?php get_template_part( 'template-parts/header/site-header/button-menu-close' ); ?-->
+		<!--div class="row" -->
+<ul id="menu-main-nav" class="navbar-nav "><li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84"><a href="https://teaching.jhu.edu/support/">Support</a></li>
+<li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-has-children menu-item-50"><a href="https://teaching.jhu.edu/university-teaching-policies/">Policies &amp; Guidelines<span class="screen-reader-text">. Sub menu is available. Go to the button next to this link to open sub menu.</span></a><button class="sub-menu-toggle dropdown-arrow" aria-expanded="false"><i aria-hidden="false" class="fa fa-chevron-down"></i><span class="sub-menu-toggle-text-open screen-reader-text" aria-hidden="false">Open menu</span><span class="sub-menu-toggle-text-close screen-reader-text" aria-hidden="true">Close menu</span></button>
+<ul class="sub-menu">
+	<li id="menu-item-434" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-434"><a href="https://teaching.jhu.edu/university-teaching-policies/generative-ai/">Generative AI Tool Guidance</a></li>
+</ul>
+</li>
+<li id="menu-item-102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102"><a href="https://teaching.jhu.edu/initiatives/">Initiatives</a></li>
+<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="https://teaching.jhu.edu/university-teaching-committees/">Committees</a></li>
+<li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112"><a href="https://teaching.jhu.edu/events/">Events</a></li>
+<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a href="https://teaching.jhu.edu/university-supported-technology/">Technology</a></li>
+<li id="menu-item-156" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-156"><a href="https://teaching.jhu.edu/teaching-publications-at-hopkins/">Publications</a></li>
+<li id="menu-item-533" class="team menu-item menu-item-type-custom menu-item-object-custom menu-item-533"><a href="https://teaching.jhu.edu/team/">Team</a></li>
+</ul>
+		<!--/div--><!-- .row -->
+	<!--/div--><!-- .menu-container -->
+					<ul class="archives-menu navbar-nav ml-auto">
+						
+												
+												
+												
+											</ul>
+					<ul class="mobile-navbar-nav">
+						<li class="menu-item utility-item">
+																										<li class="menu-item utility-item">
+								<a href="/contact">Contact</a>
+							</li>
+																							</ul>
+					<!--div class="more">
+				<a href="javascript:toggleOverflow()"><i class="fa fa-ellipsis-v" aria-hidden="true"></i> More</a>
+			</div-->
+				</div>
+			</div>
+	</div>
+	</nav>
+	</div>	<div class="secondary-jumbotron" role="banner" aria-label="Page Banner">
+		<div class="container-fluid">
+			<img src="https://teaching.jhu.edu/wp-content/themes/Johns-Hopkins-University/assets/img/small_banner@2x.png" alt="Guidelines Site Banner" />
+			<div class="jumbotron-overlay">
+				<div class="inner-wrap">
+					<h1 role="heading" aria-label="Page Heading">
+						Guidelines					</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="container">
+		<div class="breadcrumb">
+			<div id="crumbs" role="navigation" aria-label="breadcrumb"><a href="https://teaching.jhu.edu">Home</a> <span class="bread-sep">/</span> <a href="https://teaching.jhu.edu/university-teaching-policies/">University Teaching Policies &amp; Guidelines</a> <span class="bread-sep">/</span> <a href="https://teaching.jhu.edu/university-teaching-policies/generative-ai/">Generative AI Tool Guidance</a> <span class="bread-sep">/</span> <span class="current">Guidelines</span></div>		</div>
+	</div>
+<main role="main" id="main" tabindex="-1">
+	
+	<section id="mainContent" class="container pt-2">
+		<div class="narrow-width">
+				 		
+		
+<p class="wp-block-paragraph">On this page:</p>
+
+
+
+<ul class="wp-block-list">
+<li><a href="#ferpa-guidelines">FERPA Guidelines</a></li>
+
+
+
+<li><a href="#hippa-guidelines">HIPAA Guidelines</a></li>
+
+
+
+<li><a href="#ownership-of-data">Ownership of Data</a></li>
+
+
+
+<li><a href="#ethical-considerations">Ethical Considerations</a></li>
+
+
+
+<li><a href="#guidelines-for-students">Guidelines for Students</a></li>
+
+
+
+<li><a href="#example-syllabi-statements">Example Syllabi Statements</a></li>
+
+
+
+<li><a href="#collecting-publishing-data">Collecting and Publishing Data From Courses</a></li>
+</ul>
+
+
+
+<div class="wp-block-customblock-custom-short-separator"><div class="row"><div class="hr-short">Short Separator</div></div></div>
+
+
+
+<p class="wp-block-paragraph"></p>
+
+
+
+<h4 class="wp-block-customblock-custom-headline-title">FERPA Guidelines</h4>
+
+
+
+<p class="wp-block-paragraph" id="ferpa-guidelines">Instructors should consider <a href="https://registrar.jhu.edu/ferpa-compliance/" data-type="link" data-id="https://registrar.jhu.edu/ferpa-compliance/">FERPA guidelines</a> before submitting student work to generative AI tools like chatbots (e.g., generating draft feedback on student work) or using tools like <a href="https://uis.jhu.edu/zoom/zoom-ai-companion/" data-type="link" data-id="https://uis.jhu.edu/zoom/zoom-ai-companion/" target="_blank" rel="noreferrer noopener">Zoom&#8217;s AI Companion</a>. Proper de-identification under FERPA requires removal of all personally identifiable information, as well as a reasonable determination made by the institution that a student’s identity is not personally identifiable. This includes single or multiple releases and must take into account other reasonably available information that might be available online. Depending on the nature of the assignment, student work could potentially include identifiable information if they are describing personal experiences that would need to be removed before it could be considered properly de-identified.</p>
+
+
+
+<p class="wp-block-paragraph"></p>
+
+
+
+<h4 class="wp-block-customblock-custom-headline-title">HIPAA Guidelines</h4>
+
+
+
+<p class="wp-block-paragraph" id="hippa-guidelines">Instructors including faculty, staff, and trainees who present should also consider <a href="https://www.hopkinsmedicine.org/administrative/hipaa-compliance">HIPAA implications</a> before using generative AI tools in the context of healthcare education. Almost all identifiable health information maintained by health care providers and payers (covered entities), and the vendors they use (business associates), is subject to HIPAA and its implementing regulations.  Instructors should educate themselves on the permissible uses and disclosures of identifiable patient and plan member information to ensure any use or disclosure of such information in the context of generative AI does not run afoul of <a href="https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Flivejohnshopkins.sharepoint.com%2Fsites%2Finside-privacy-office%2FSitePages%2Fpolicies-and-forms-for-providers%2FPolicies.aspx&amp;data=05%7C02%7Cmreese%40jhu.edu%7C7950849c27644997959c08dc5a37cf6c%7C9fa4f438b1e6473b803f86f8aedf0dec%7C0%7C0%7C638484442949111837%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=2LRrwB%2B1cNUXlxDUKKMDOipKIRYZ9Uqzprzfb1yDFVQ%3D&amp;reserved=0" target="_blank" rel="noreferrer noopener">HIPAA or Johns Hopkins policies</a>.  Even though regulated health information can be <a href="https://hpo.johnshopkins.edu/doc/fetch.cfm/NSuBVWnD" target="_blank" rel="noreferrer noopener">de-identified</a> with the removal of direct identifiers, use or disclosure of such data should be made with caution.  External information in the context of generative AI could be available to render the information re-dentifiable, posing privacy risks to patients and plan members.  Use or disclosure of health information should be made in the context of generative AI only with JH-approved vendors where appropriate <a href="https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Flivejohnshopkins.sharepoint.com%2Fsites%2Finside-privacy-office%2FSitePages%2Fquick-links%2Frequest-or-review-a-business-associate-agreement.aspx&amp;data=05%7C02%7Cmreese%40jhu.edu%7C7950849c27644997959c08dc5a37cf6c%7C9fa4f438b1e6473b803f86f8aedf0dec%7C0%7C0%7C638484442949119861%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=BrAYKb5DT5zspGEWYCUXg3qDKkYCfdeU%2BP7soZg8vaU%3D&amp;reserved=0">agreements</a> are in place that offer appropriate protections to the information submitted and generated. </p>
+
+
+
+<h4 class="wp-block-customblock-custom-headline-title">Ownership of Data</h4>
+
+
+
+<p class="wp-block-paragraph" id="ownership-of-data">JHU faculty, students, and staff should adhere to the established <a rel="noreferrer noopener" href="https://ventures.jhu.edu/wp-content/uploads/2019/10/The-IP-Policy.pdf" target="_blank">JHU Intellectual Property Policy</a> including copyrights. Policies describing ownership of AI-generated content are still evolving. <strong>Users should begin by checking the policies or guidelines for the tools they are using.</strong> That said, the <a rel="noreferrer noopener" href="https://crsreports.congress.gov/product/pdf/LSB/LSB10922" target="_blank">U.S. Copyright Office currently recognizes copyright only when it is created by human beings</a>. In addition, the office “accepts that works ‘containing’ AI-generated material may be copyrighted under some circumstances, such as ‘sufficiently creative’ human arrangements or modifications of AI-generated material or works that combine AI-generated and human-authored material. The office states that the author may only claim copyright protection ‘for their own contributions’ to such works, and they must identify and disclaim AI-generated parts of the work if they apply to register their copyright.”</p>
+
+
+
+<p class="wp-block-paragraph">Copyright ownership, however, of AI-generated content has not been articulated by the U.S. Copyright Office. Therefore, companies providing AI software may acquire or reject ownership of copyright through their terms and conditions. As previously noted, check the policies and guidelines for the tools you are using.</p>
+
+
+
+<div class="wp-block-pb-accordion-item c-accordion__item js-accordion-item no-js" data-initially-open="false" data-click-to-close="true" data-auto-close="true" data-scroll="false" data-scroll-offset="0"><h2 id="at-3570" class="c-accordion__title js-accordion-controller" role="button">Resources</h2><div id="ac-3570" class="c-accordion__content">
+<ul class="wp-block-list">
+<li><a href="https://www.bloomberglaw.com/external/document/XDDQ1PNK000000/copyrights-professional-perspective-copyright-chaos-legal-implic" target="_blank" rel="noreferrer noopener">Copyright Chaos: Legal Implications of Generative AI. </a>Bloomberg Law.</li>
+
+
+
+<li><a href="https://www.forbes.com/sites/joemckendrick/2022/12/21/who-ultimately-owns-content-generated-by-chatgpt-and-other-ai-platforms/?sh=3deb9b235423" target="_blank" rel="noreferrer noopener">Who Ultimately Owns Content Generated By ChatGPT And Other AI Platforms?</a> Forbes.&nbsp;</li>
+
+
+
+<li><a href="https://www.natlawreview.com/article/navigating-data-ownership-ai-age-part-1-types-big-data-and-ai-derived-data" target="_blank" rel="noreferrer noopener">Navigating Data Ownership in the AI Age, Part 1: Types of Big Data and AI-Derived Data</a>. National Law Review.&nbsp;</li>
+
+
+
+<li><a href="https://engineering.jhu.edu/ctld/chatgpt/ethics-privacy/" target="_blank" rel="noreferrer noopener">Generative AI Ethics &amp; Privacy</a>. JHU’s Center for Learning Design and Technology.</li>
+</ul>
+</div></div>
+
+
+
+<p class="wp-block-paragraph"></p>
+
+
+
+<h4 class="wp-block-customblock-custom-headline-title">Ethical Considerations</h4>
+
+
+
+<p class="wp-block-paragraph" id="ethical-considerations">When integrating generative AI in higher education, there is an abundance of ethical considerations that demand careful attention. It is crucial for divisions to prioritize ethical guidelines and establish comprehensive frameworks that not only leverage the benefits of generative AI but also safeguard users against its potential ethical pitfalls, ensuring an equitable and conducive learning environment for all students.&nbsp;The following are some highlights and strategies to help faculty and instructors address those issues.</p>
+
+
+
+<ol class="wp-block-list">
+<li>Potential biases within the AI algorithms can inadvertently perpetuate and reinforce existing prejudices and inequalities.&nbsp;&nbsp;<br><br><em><strong>Strategy</strong>: For AI-generated instructional content, faculty should ensure that the content covers diverse and inclusive perspectives to mitigate such biases.</em><br><br></li>
+
+
+
+<li>Maintaining transparency about the use of AI-generated content and clearly delineating between automated and human-generated materials is essential to uphold academic integrity.&nbsp;&nbsp;<br><br><em><strong>Strategy</strong>: It is important for faculty to clearly outline the expectations of generative AI usage at the beginning of a course to avoid frustration in students’ learning processes.</em><br><br></li>
+
+
+
+<li>The use of vast datasets to train AI models raises questions about data sourcing and consent. There is a risk that sensitive or personal data might be incorporated into AI models without individuals’ explicit consent, leading to privacy breaches and potential misuse of information.<br><br><em><strong>Strategy</strong>: Safeguarding student data and privacy, and obtaining consent for data usage, is equally imperative in adhering to ethical standards. <a href="#ferpa-guidelines">Proper de-identification under FERPA</a> requires removal of all personally identifiable information, as well as a reasonable determination made by the institution that a student’s identity is not personally identifiable.&nbsp;&nbsp;</em><br><br></li>
+
+
+
+<li>The potential for social shame associated with the use of generative AI, like chatbots for content creation, is a valid concern. There might be a perception that relying on AI for content creation could undermine the authenticity and originality of an individual’s work, leading to apprehension within professional or academic communities.<br><br><em><strong>Strategy</strong>: Providing clear guidelines on the appropriate use of generative AI tools, including transparent attribution when AI-generated content is used, can help mitigate the potential for social shame. Encouraging open conversations about the benefits and limitations of AI technology and emphasizing its role as a tool for augmenting human capabilities rather than replacing them can foster a more accepting and supportive environment.&nbsp;&nbsp;</em></li>
+</ol>
+
+
+
+<p class="wp-block-paragraph"></p>
+
+
+
+<h4 class="wp-block-customblock-custom-headline-title">Guidelines for Students</h4>
+
+
+
+<p class="wp-block-paragraph" id="guidelines-for-students">The following are example guidelines faculty can share with students who may use AI tools for course work.</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Validation:</strong> Always verify and cross-reference AI-generated content with credible sources. Maintain a critical approach to information and be mindful of the possibility of manipulated or misleading content. Be cautious when relying solely on AI-generated content for critical decision-making or academic research.&nbsp;</li>
+
+
+
+<li><strong>Inclusiveness:</strong> Understand the limitations and potential biases of AI-generated content. Always promote inclusive and equity perspectives in your work.&nbsp;&nbsp;&nbsp;</li>
+
+
+
+<li><strong>Communication:</strong> Communicate with and seek guidance from your professors or instructors when you are uncertain about the authenticity of AI-generated materials.&nbsp;</li>
+
+
+
+<li><strong>Transparency:</strong> Respect intellectual property rights by acknowledging the sources of AI-generated content used in your work.&nbsp;</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph"></p>
+
+
+
+<h4 class="wp-block-customblock-custom-headline-title">Example Syllabi Statements</h4>
+
+
+
+<p class="wp-block-paragraph" id="example-syllabi-statements">Syllabus statement should reflect the unique uses or concerns for a course along with the AI tools that might be available to students or assigned by the instructor. The following section provides examples of statements instructors included in their syllabus to explain appropriate and inappropriate use of AI. Additional examples are provided online by <a href="https://docs.google.com/spreadsheets/d/1lM6g4yveQMyWeUbEwBM6FZVxEWCLfvWDh1aWUErWWbQ/edit?gid=0#gid=0" target="_blank" rel="noreferrer noopener"><strong>Lance Eaton – College Unbound</strong></a>, which includes AI policy statements crowdsourced from instructors across the United States.  Please consult your division for specific language to include.</p>
+
+
+
+<div class="wp-block-pb-accordion-item c-accordion__item js-accordion-item no-js" data-initially-open="false" data-click-to-close="true" data-auto-close="true" data-scroll="false" data-scroll-offset="0"><h2 id="at-3571" class="c-accordion__title js-accordion-controller" role="button"><strong>Carly Schnitzler, Krieger School of Arts and Sciences, University Writing Program</strong></h2><div id="ac-3571" class="c-accordion__content">
+<p class="wp-block-paragraph">Our class developed the following standards of conduct for AI-powered tool use: &nbsp;</p>
+
+
+
+<ul class="wp-block-list">
+<li>AI tool use should support—and not detract from—the goals of the course: developing critical thinking, analytical skills, personal voice, etc. To this end, AI-generated output will<strong> not</strong><strong><em> </em></strong>be permitted in any writing assignment, unless explicitly part of an assignment (read: You can’t copy/paste output and turn it in). &nbsp;</li>
+
+
+
+<li>AI tools can be used for light brainstorming (think: getting unstuck from writer’s block, working through an outline) and light editing or revision. All uses of AI tools in any assignment (daily work/feeders/major projects) must be disclosed. <strong>If you use AI tools in any part of the writing process, </strong><a href="https://forms.office.com/Pages/ShareFormPage.aspx?id=OPSkn-axO0eAP4b4rt8N7L2dwSImz6RDuYS1exAzBEpUOUs1MVVTSzU4MUdYTjlGUlY1S0pGTU8wUy4u&amp;sharetoken=UnSYW8yh35FOG7I2F2X1" target="_blank" rel="noreferrer noopener"><strong>please disclose via this form (also on Canvas)</strong></a><strong>.</strong> Failure to disclose is in violation of our course syllabus and the Homewood Undergraduate Academic Ethics Policy. &nbsp;</li>
+
+
+
+<li>Conferences and revision are privileged over any disciplinary action in the case of overreliance on AI tools in the course (read: If you’re relying on AI tools too much, I’ll ask to meet with you as a first step of intervention). &nbsp;</li>
+</ul>
+</div></div>
+
+
+
+<div class="wp-block-pb-accordion-item c-accordion__item js-accordion-item no-js" data-initially-open="false" data-click-to-close="true" data-auto-close="true" data-scroll="false" data-scroll-offset="0"><h2 id="at-3572" class="c-accordion__title js-accordion-controller" role="button"><strong>Shannon Robinson, Krieger School of Arts and Sciences, Introduction to Fiction and Poetry</strong> &nbsp;</h2><div id="ac-3572" class="c-accordion__content">
+<p class="wp-block-paragraph">There is currently an AI policy in place for Introduction to Fiction and Poetry (IFP) I and II, which is taught across multiple sections. All syllabi from IFP I and II contain the following: &nbsp;</p>
+
+
+
+<p class="wp-block-paragraph">“The use of artificial intelligence (AI) to produce any writing for this course is not allowed. A student who is found to have used AI-generated content for an assignment will receive an F for the assignment and may fail the course. A notation will be made in departmental records. Students enrolled in IFP I and II are required to sign an honor code statement acknowledging that they understand these policies.” &nbsp;</p>
+
+
+
+<p class="wp-block-paragraph">(“These policies” refers to both this AI policy and the plagiarism policy, which is outlined in the same section.) &nbsp;</p>
+
+
+
+<p class="wp-block-paragraph"> I’ve directed instructors to use Canvas’s Turnitin function to scan for AI on all assignments (poetry and stories).  Also, instructors are to have students do short in-class writing assignments (pen and paper), which they hand in—at least once a week. This way, the instructors will have samples of each student’s writing that is uncontestably in their own voice.</p>
+</div></div>
+
+
+
+<div class="wp-block-pb-accordion-item c-accordion__item js-accordion-item no-js" data-initially-open="false" data-click-to-close="true" data-auto-close="true" data-scroll="false" data-scroll-offset="0"><h2 id="at-3573" class="c-accordion__title js-accordion-controller" role="button"><strong>Mike Reese, Krieger School of Arts and Sciences, Sociology, Introduction to Social Statistics</strong> &nbsp;</h2><div id="ac-3573" class="c-accordion__content">
+<p class="wp-block-paragraph"><strong>Acceptable Use of Generative Artificial Intelligence (ChatGPT, Google Bard, etc.): </strong>Students <em>should not </em>use generative AI to write any required essays or solve problems. This is considered use of unauthorized electronic devices or software as stated in the university ethics policy. More important, the purpose of these assignments is to give you practice developing the important skill of writing and applying course concepts. Students <em>are allowed</em> to use generative AI to brainstorm ideas or ask questions about how to solve a problem, but the final work should be their own narrative. <em>Students who use generative AI should indicate how they used it in their homework or paper.</em> The purpose is not to raise suspicion, but to help the instructor identify possible sources of incorrect information. Generative AI has a bias to give an answer, even if it is not correct. This is especially the case with more sophisticated topics such as those studied in this course. When using generative AI, be sure to verify any information provided against the course materials. If you have any questions about appropriate use of these technologies, please consult the instructor. </p>
+</div></div>
+
+
+
+<div class="wp-block-pb-accordion-item c-accordion__item js-accordion-item no-js" data-initially-open="false" data-click-to-close="true" data-auto-close="true" data-scroll="false" data-scroll-offset="0"><h2 id="at-3574" class="c-accordion__title js-accordion-controller" role="button"><strong>Jim Diamond, School of Education, Digital Age Learning &amp; Educational Technology Program</strong> &nbsp;</h2><div id="ac-3574" class="c-accordion__content">
+<p class="wp-block-paragraph"><strong>AI-Generated Material is Permitted in this Course: </strong>In this course, you are allowed to use AI tools (e.g., ChatGPT, etc.) to <strong>support</strong> your work. To maintain academic integrity, however, you must specify any AI-generated material you use and properly cite it. For proper APA formatting of such citations, see <a href="https://apastyle.apa.org/blog/how-to-cite-chatgpt" target="_blank" rel="noreferrer noopener">How to cite ChatGPT</a>. You are responsible for fact checking statements composed by AI tools. &nbsp;</p>
+
+
+
+<p class="wp-block-paragraph">I know that many of us in this group are very interested in thinking about how to use AI (such as ChatGPT) in support of educational experiences. I am all for you using it in this course, but only as a tool to supplement your own thinking, or design. I’m going to leave it up to you to determine what’s meant by “supplement.” You’re all doctoral students, and I can’t imagine that you would want to deprive yourself of opportunities to structure your thinking through the process of writing (as one example) in pursuit of a grade. (Of course, there are many other things for which you might be using the chatbot, or other forms of AI—I’ll be interested to see them.) So, don’t use ChatGPT to write your discussion posts. But it might be interesting, for example, to have ChatGPT generate a discussion post and then you engage that post critically. No matter what you do, just indicate exactly who’s responsible for what (which might get tedious and could be an educative experience in and of itself) in the work you present. &nbsp;</p>
+</div></div>
+
+
+
+<div class="wp-block-pb-accordion-item c-accordion__item js-accordion-item no-js" data-initially-open="false" data-click-to-close="true" data-auto-close="true" data-scroll="false" data-scroll-offset="0"><h2 id="at-3575" class="c-accordion__title js-accordion-controller" role="button"><strong>Anna Broughel, School of Advanced International Studies Online MASE Program, Economics of Sustainable Energy</strong></h2><div id="ac-3575" class="c-accordion__content">
+<p class="wp-block-paragraph">Enrollment at the School of Advanced International Studies (SAIS) requires each student to conduct all activities in accordance with the rules and spirit of the school’s Honor Code and Academic Integrity Policy listed in <a href="https://sais.jhu.edu/current-students/student-and-academic-handbook" target="_blank" rel="noreferrer noopener">The Red Book: SAIS Student and Academic Handbook</a><a href="https://sais.jhu.edu/current-students/student-and-academic-handbook" target="_blank" rel="noreferrer noopener">.</a> Students are required to be truthful and exercise integrity and honesty in all their academic endeavors. With the SAIS Honor Code in mind, the use of artificial intelligence (AI) tools in this course is allowed, but only according to a set of guidelines to ensure responsible and ethical utilization.  &nbsp;</p>
+
+
+
+<p class="wp-block-paragraph">Students are prohibited from using ChatGPT or other AI tools to generate written content for assignments; the primary responsibility for original text creation lies with the student. However, AI tools may be employed for light editing purposes, focusing on improving grammar and clarity. During quizzes, the use of AI tools is prohibited. In the research and preparation phase of assignments, students are permitted to leverage AI for generating ideas, questions, or summaries. Nevertheless, the submitted text must be entirely composed and written by the student.  &nbsp;</p>
+
+
+
+<p class="wp-block-paragraph">It is crucial for students to be aware of both the benefits and limitations of AI as a learning and research tool. Students should critically evaluate sources, methods, and outputs provided by the algorithm. Violations of these guidelines will be treated as academic misconduct, with appropriate consequences as laid forth in the SAIS Honor Code. Students are encouraged to seek clarification if they have any questions about the expectations surrounding AI, fostering open communication to ensure a clear understanding of the guidelines.&nbsp;</p>
+</div></div>
+
+
+
+<div class="wp-block-pb-accordion-item c-accordion__item js-accordion-item no-js" data-initially-open="false" data-click-to-close="true" data-auto-close="true" data-scroll="false" data-scroll-offset="0"><h2 id="at-3576" class="c-accordion__title js-accordion-controller" role="button"><strong>Anicia Timberlake, Peabody</strong> &nbsp;</h2><div id="ac-3576" class="c-accordion__content">
+<ul class="wp-block-list">
+<li><a href="https://krieger.jhu.edu/writing-program/wp-content/uploads/sites/66/2023/08/Toolkit_AI-writing-undergraduate-policy-Timberlake.pdf" target="_blank" rel="noreferrer noopener">Undergraduate AI Policy</a> &nbsp;</li>
+
+
+
+<li><a href="https://krieger.jhu.edu/writing-program/wp-content/uploads/sites/66/2023/08/Toolkit_AI-Writing-Graduate-Policy-Timberlake.pdf" target="_blank" rel="noreferrer noopener">Graduate AI Policy</a> &nbsp;</li>
+</ul>
+</div></div>
+
+
+
+<h4 class="wp-block-customblock-custom-headline-title">Collecting and Publishing Data From Courses</h4>
+
+
+
+<p class="wp-block-paragraph" id="collecting-publishing-data">Instructors are permitted to collect data and analyze it to continually improve their teaching, however, if faculty plan to present or publish on that research they must submit an application to their respective Institutional Review Board (e.g., <a href="https://homewoodirb.jhu.edu/">Homewood</a>, <a href="https://www.hopkinsmedicine.org/institutional-review-board">School of Medicine</a>, <a href="https://publichealth.jhu.edu/offices-and-services/institutional-review-board-irb">Bloomberg School of Public Health</a>).&nbsp; Publishing or presenting on course data falls under human-subjects research.</p>
+
+
+
+<p class="wp-block-paragraph"><em>Last update 2/19/26</em></p>
+
+
+
+<p class="wp-block-paragraph"></p>
+				</div>
+	</section>
+	</main>
+	<footer>
+		<div class="container py-5">
+			<div class="row">
+				<div class="col-lg-3"><a class="footer-logo" href="/"><img src="https://teaching.jhu.edu/wp-content/themes/Johns-Hopkins-University/assets/img/JHU_logo_white.svg" width="227px" height="43px" alt="Johns Hopkins University Logo" /></a></div>
+								<div id="footerLocation" class="col-lg">
+					<p id="locationInfo">This site represents the collaboration of JHU&#039;s Teaching and Learning Centers.					</p>
+				</div>
+												<div id="footerContact" class="footer-contact col-lg">
+					
+					<p>
+										</p>
+					
+					<p><a href="/cdn-cgi/l/email-protection#12667773717a7b7c7552787a673c777667"><span class="__cf_email__" data-cfemail="1b6f7e7a787372757c5b71736e357e7f6e">[email&#160;protected]</span></a></p>
+					
+				</div>
+															</div>
+			<hr />
+			<div class="copyright">Copyright @ 2026 The Johns Hopkins University. All rights reserved.</div>
+		</div>
+	</footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/sites/29/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/Johns-Hopkins-University/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="jquery-js" src="https://code.jquery.com/jquery-3.7.1.min.js?ver=1"></script>
+<script id="pb-accordion-blocks-frontend-script-js" src="https://teaching.jhu.edu/wp-content/plugins/accordion-blocks/js/accordion-blocks.min.js?ver=1.5.0"></script>
+<script id="bootstrapjs-js" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js?ver=1"></script>
+<script id="customjs-js" src="https://teaching.jhu.edu/wp-content/themes/Johns-Hopkins-University/assets/js/script.js?ver=1778768642"></script>
+<script id="errigal-menu-js" src="https://teaching.jhu.edu/wp-content/themes/Johns-Hopkins-University/assets/js/menu.min.js?ver=1778768639"></script>
+<script id="errigal-mobile-js" src="https://teaching.jhu.edu/wp-content/themes/Johns-Hopkins-University/assets/js/mobile.min.js?ver=1785337599"></script>
+<script id="calendarjs-js" src="https://teaching.jhu.edu/wp-content/themes/Johns-Hopkins-University/evo-calendar/js/evo-calendar.js?ver=1778768647"></script>
+<script id="customJHjs-js" src="https://teaching.jhu.edu/wp-content/themes/Johns-Hopkins-University/assets/js/custom-scripts.js?ver=1794002055"></script>
+<script id="wp-statistics-tracker-js-extra">
+var WP_Statistics_Tracker_Object = {"requestUrl":"https://teaching.jhu.edu/wp-json/wp-statistics/v2","ajaxUrl":"https://teaching.jhu.edu/wp-admin/admin-ajax.php","hitParams":{"wp_statistics_hit":1,"source_type":"page","source_id":357,"search_query":"","signature":"e67d41217929683038e3b1f4e6a1e3a2","endpoint":"hit"},"option":{"dntEnabled":"","bypassAdBlockers":"","consentIntegration":{"name":null,"status":[]},"isPreview":false,"userOnline":false,"isWpConsentApiActive":false},"isLegacyEventLoaded":"","customEventAjaxUrl":"https://teaching.jhu.edu/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=2d829df18c","onlineParams":{"wp_statistics_hit":1,"source_type":"page","source_id":357,"search_query":"","signature":"e67d41217929683038e3b1f4e6a1e3a2","action":"wp_statistics_online_check"},"jsCheckTime":"60000"};
+var WP_Statistics_DataPlus_Event_Object = {"eventAjaxUrl":"https://teaching.jhu.edu/wp-admin/admin-ajax.php?action=wp_statistics_event&nonce=289bc5a44d","fileExtensions":["pdf","xlsx?","docx?","txt","rtf","csv","exe","key","pp(s|t|tx)","7z","pkg","rar","gz","zip","avi","mov","mp4","mpe?g","wmv","midi?","mp3","wav","wma","vcf"],"options":{"linkTracker":true,"downloadTracker":true}};
+var WP_Statistics_Marketing_Event_Object = {"events":{"clicks":[]}};
+//# sourceURL=wp-statistics-tracker-js-extra
+</script>
+<script id="wp-statistics-tracker-js" src="https://teaching.jhu.edu/wp-content/plugins/wp-statistics/assets/js/tracker.js?ver=14.16.10"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://teaching.jhu.edu/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://teaching.jhu.edu/wp-includes/js/wp-emoji-loader.min.js
+</script>
+<div id="myOverlay" class="overlay">
+  <span class="closebtn" onclick="closeSearch()" onKeyPress="closeSearch()" tabindex="3" title="Close Overlay"><i class="fal fa-times"></i></span>
+  <div class="overlay-content">
+    <form id="searchform" class="search" method="get" action="/">
+	<div class="input-group">
+		<input type="search" class="field search-field form-control" tabindex="1" id="" name="s" value="" placeholder="Search &hellip;">
+					<span class="input-group-append">
+				<input type="submit" class="submit btn btn-primary" name="submit" tabindex="2" value="Search">
+			</span>
+			</div>
+</form>
+  </div>	
+</div>
+
+<script type="text/javascript" language="javascript">
+	// Open the full screen search box
+function openSearch() {
+  document.getElementById("myOverlay").style.display = "block";
+	 $('.search-field').focus();
+}
+
+// Close the full screen search box
+function closeSearch() {
+  document.getElementById("myOverlay").style.display = "none";
+	if (location.hash == '#myOverlay') {
+        location.hash = '';
+    }
+	
+}
+
+// Handle ESC key (key code 27)
+document.addEventListener('keyup', function(e) {
+    if (e.keyCode == 27) {
+        closeSearch();
+    }
+});
+
+</script>
+<!--<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>-->
+		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js" integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI=" crossorigin="anonymous"></script>
+<!--		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>-->
+		<script type="text/javascript" src="https://teaching.jhu.edu/wp-content/themes/Johns-Hopkins-University/assets/js/jquery.maskedinput.min.js"></script>
+		<script type="text/javascript" src="https://teaching.jhu.edu/wp-content/themes/Johns-Hopkins-University/assets/js/client.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a58e61e3ed226417',t:'MTc5NDQxMTQ4OQ=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a58e61e3ed226417',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+

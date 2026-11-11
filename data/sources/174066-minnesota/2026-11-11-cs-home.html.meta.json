@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://cse.umn.edu/cs",
+ "final_url": "https://cse.umn.edu/cs",
+ "http_status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T10:32:55-05:00",
+ "sha256": "744e17f1ee923f6ff06f03f9c55fa366f519db6ab1e043e903f4d10dee7e5822",
+ "bytes": 131433
+}

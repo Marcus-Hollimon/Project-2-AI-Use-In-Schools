@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://cse.umn.edu/cs/news/cse-prepares-umn-students-ai-powered-workplace",
+ "final_url": "https://cse.umn.edu/cs/news/cse-prepares-umn-students-ai-powered-workplace",
+ "http_status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T10:32:01-05:00",
+ "sha256": "d270efd018013b8ee2055a264d1a4ca448c46319b2a9a0a4532404da80f8dc47",
+ "bytes": 158656
+}

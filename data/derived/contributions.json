@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T15:22:14.936742Z",
+ "generatedAt": "2026-11-11T15:31:12.103532Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -758,20 +758,49 @@
    "note": "written by Claude, pushed from Marcus's account"
   },
   {
-   "time": "2026-11-11T15:21:18.143000Z",
-   "actor": "Claude",
-   "kind": "reply",
-   "turn": 14,
-   "text": "Pushed. Before starting the pilot, I need the web search tool loaded and a starting usage reading, since the pilot's job is to measure cost per school. Also checking that CI passed with the new step.",
-   "toolCalls": 40
-  },
-  {
    "time": "2026-11-11T15:22:14Z",
    "actor": "Claude",
    "kind": "milestone",
    "phase": "2",
    "text": "5-hour window went 10% to 22% in 21 minutes (context 78k to 198k). Prepared a /compact before the pilot: STATE.md rewritten with the exact pilot procedure; reading just before /compact recorded.",
    "evidence": "`progress/STATE.md`"
+  },
+  {
+   "time": "2026-11-11T15:22:15Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "State for /compact before the Phase 2 pilot; reading just before /compact",
+   "commit": "0ee3af9",
+   "note": "written by Claude, pushed from Marcus's account"
+  },
+  {
+   "time": "2026-11-11T15:22:44.794000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 14,
+   "text": "I've recorded your decision: no hand-coding, and the spec says so. Automated checks now take its place, and they are built, tested and pushed. No school has been researched yet. I stopped before the pilot because of how fast the usage limit is going.\n\n**What replaces your blind check.** Every coded answer has to pass 10 checks before a school counts as done:\n- **The source is real and untouched.** The quote is actually on the saved page. The saved page hasn't been edited since it was downloaded. The download really succeeded. The page is on that school's own website, not another school's.\n- **The coding follows the rules.** Every answer is one the codebook allows, and the answers don't contradict each other. Each answer's quote contains words that fit it (for \"restrict\": words like prohibited or may not). If it doesn't, I have to write down why the quote still supports the answer, and those notes get published so my judgment calls are visible.\n- **\"None found\" means really none found.** Every school gets the same four searches. Any \"none found\" triggers two more searches with different wording.\n\n**Proof the checks work.** I wrote and tested them before coding any school:\n- **31 tests, all passing.** Each test feeds the checks a made-up school that breaks exactly one rule, and confirms they catch it.\n- **A deliberate sabotage run.** I switched off the \"page not edited\" check. Exactly the one matching test failed, then I restored the file exactly as it was. All runs are recorded.\n- **CI runs them now.** The GitHub log shows \"31 passed\", so a broken check would block the site from updating.\n\n**A limit you should know.** These checks prove every answer rests on a real, unaltered page from the right school and that the rules were applied the same way everywhere. They can't prove another person would read an unclear sentence the same way I did. The written notes on borderline answers are where that judgment shows, and the site will publish them.\n\n**Why I stopped here.** The 5-hour usage limit jumped from 10% to 22% in about 20 minutes, because every step re-reads the whole conversation (now about 198k tokens). That's the point where you asked me to prepare a compact, and the pilot will cost much less afterwards. Everything is saved: the progress file has the exact pilot procedure, and the usage reading is recorded. The limit resets at 2:40 PM.\n\nType this:\n\n```\n/compact Phase 2 pilot is next. Read progress/STATE.md first: it has the exact procedure for coding each school, the 5 pilot schools, and the checks every school must pass. Keep: Marcus's decisions today (no hand-coding, testing proves quality; no Coaching sections; no plan mode), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, the CIP fix that brought in Ohio State and Cincinnati, and the open question about transcript ddc7d76a (do not open it).\n```\n\nThe other thing I asked earlier is still open. A session record from Nov 8 at 6:00 PM (`ddc7d76a…`) sits in this project's folder. I haven't opened it, and I won't unless you tell me it belongs to this project.",
+   "toolCalls": 42
+  },
+  {
+   "time": "2026-11-11T15:22:57.148000Z",
+   "actor": "Marcus",
+   "kind": "command",
+   "text": "/compact Phase 2 pilot is next. Read progress/STATE.md first: it has the exact procedure for coding each school, the 5 pilot schools, and the checks every school must pass. Keep: Marcus's decisions today (no hand-coding, testing proves quality; no Coaching sections; no plan mode), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, the CIP fix that brought in Ohio State and Cincinnati, and the open question about transcript ddc7d76a (do not open it)."
+  },
+  {
+   "time": "2026-11-11T15:31:01.241000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 15,
+   "text": "You can open that transcript. Continue the phase 2 pilot."
+  },
+  {
+   "time": "2026-11-11T15:31:01.241000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 15,
+   "text": "",
+   "toolCalls": 4
   }
  ]
 }

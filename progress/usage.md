@@ -21,6 +21,7 @@ percentages as the app reports them, so a change of "1 point" means anywhere fro
 | 2026-11-11T09:59:10-05:00 | 1 | just before /clear | 9 | 9 | 248,054 | none (next row is after /clear) |
 | 2026-11-11T10:00:44-05:00 | 2 | after /clear (phase start) | 10 | 9 | 78,618 | /clear by Marcus (manual; 248,054 tokens before) |
 | 2026-11-11T10:21:20-05:00 | 2 | checks built, just before /compact | 22 | 10 | 198,481 | none (next row is after /compact) |
+| 2026-11-11T10:31:23-05:00 | 2 | after /compact (pilot start) | 24 | 11 | 89,035 | /compact by Marcus (manual; 198,481 tokens at the last reading before it) |
 
 ## Cost per phase
 | Phase | 5-hour points | Weekly points | Context growth (tokens) |

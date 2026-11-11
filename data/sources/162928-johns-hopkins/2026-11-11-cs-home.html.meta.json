@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.cs.jhu.edu/",
+ "final_url": "https://www.cs.jhu.edu/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T10:35:08-05:00",
+ "sha256": "571e69d0f66510e6326bcfa5e9c6f3914e37fcebd35ef216f40b9191cd89c80e",
+ "bytes": 146494
+}

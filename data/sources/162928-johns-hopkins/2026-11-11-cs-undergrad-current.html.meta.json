@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.cs.jhu.edu/academic-programs/undergraduate-studies/undergraduate-academics/current-undergraduate-students/",
+ "final_url": "https://www.cs.jhu.edu/academic-programs/undergraduate-studies/undergraduate-academics/current-undergraduate-students/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T10:38:04-05:00",
+ "sha256": "0f4c54043bb7b5db09f671aab85d7c8d0f045aa3acdda70a35d1a9a64f93d10f",
+ "bytes": 146251
+}

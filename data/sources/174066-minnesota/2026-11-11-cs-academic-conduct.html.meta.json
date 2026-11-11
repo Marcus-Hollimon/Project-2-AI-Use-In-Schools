@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://cse.umn.edu/cs/undergraduate-academic-conduct-policy",
+ "final_url": "https://cse.umn.edu/cs/undergraduate-academic-conduct-policy",
+ "http_status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T10:32:55-05:00",
+ "sha256": "b6cce15a9f382a1bde2a92180cc7732967c979efd7d7caa9df0426f5527e0e43",
+ "bytes": 130976
+}

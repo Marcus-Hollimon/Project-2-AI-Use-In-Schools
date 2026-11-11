@@ -136,7 +136,11 @@ Sources are real and unchanged:
 - **S2 Hash.** Each archived file's SHA-256 matches the one recorded when it was saved, so no
   file was edited after coding.
 - **S3 Fetch record.** Each archive has a fetch record (`.meta.json`: URL requested, final URL,
-  HTTP status, time) written by the save script; status must be 200.
+  HTTP status, time) written by the save script; status must be 200. Text read in Claude's
+  browser pane (`--rendered`) needs a raw curl copy of the same URL: HTTP 200, or HTTP 403 plus a
+  written `fetch_reason` on the value (the site blocks curl but serves browsers). Added during the
+  pilot, 2026-11-11, when teaching.jhu.edu returned 403 to curl; this weakens S3 for those pages,
+  since the archive is then Claude's copy of the browser text, not bytes from the server.
 - **S4 Right school.** The page's final URL is on the school's own web domain (from IPEDS
   `WEBADDR`), or the value carries a written reason (for example a state system's policy page).
 - **S5 Quote length.** At most 40 words, so the archive, not the quote, carries the content.
