@@ -1,0 +1,70 @@
+Information Security Program
+Responsible Use of Generative AI
+(1) Purpose and Scope
+These guidelines outline the responsible use of generative artificial intelligence (AI) tools at Columbus State Community College. They are intended to support innovation, safeguard college data, and ensure ethical and compliant use of AI technologies across academic and administrative environments.
+(2) Definitions
+(a) Restricted Data - Data protected by law, regulation, or contract, or that could cause significant harm to individuals or the college if disclosed. Access is strictly limited. Examples of restricted data include but are not limited to student records (grades and transcripts), Social Security Numbers, and financial account numbers.
+(b) Internal Data - Data intended for use within the college community. Not regulated by law, but unauthorized disclosure could harm operations, cause reputational damage, or create risk. Examples of internal data include but are not limited to student directory information, meeting notes, departmental procedures, reports, payroll information, and purchase orders.
+(c) Unrestricted Data - Data approved for public release. Disclosure carries little or no risk to the college, though accuracy and integrity must always be maintained. Examples of unrestricted data include but are not limited to information published on college websites, public event announcements or press releases, course catalog, and program descriptions.
+(3) Use and Approval of Generative AI
+(a) The acquisition and use of generative AI tools at Columbus State must adhere to all relevant college policies, including college Policy 15-01 Responsible Acquisition and Use of Computing Resources, Policy 9-03 Purchasing. Consult with your Information Technology (IT) Point of Contact before procuring generative AI tools.
+(b) When necessary for college business purposes, AI tools may be used with internal or restricted data under the following conditions:
+(i) Users must be using college-approved computing resources.
+(ii) Users must be logged into the college-approved AI tools using their college provided credentials.
+1|Page
+550 East Spring Street :: Columbus, Oh 43215 :: www.cscc.edu :: (614) 287-5353
+
+Information Security Program
+Responsible Use of Generative AI
+(c) For questions or concerns about data usage, to report suspected misuse, and/or to report unintentional or accidental restricted or internal data exposure, contact the IT Support Center.
+(d) Users are responsible for any AI-generated content they produce or publish. This content can sometimes be inaccurate and/or contain copyrighted material. It's crucial that the people using AI tools review the AI-generated content before its publication or distribution.
+(e) AI generated content containing Restricted data may not be published or shared without authorization from the Institutional Review Board.
+(4) College-approved AI tools
+College-licensed and approved AI tools offer enterprise-level protections that are not assured when using unapproved tools.
+(a) Microsoft 365 Copilot (including Copilot Web Chat)
+(i) Copilot Web Chat, available through Microsoft Edge or Bing to all employees and students, is included with the college’s Microsoft 365 subscription and provides secure, browser-based access to AI capabilities such as summarizing, drafting, and generating insights.
+(ii) Microsoft 365 Copilot for Applications (Word, Excel, Outlook, PowerPoint, and OneDrive integrations) is a paid, add-on service that provides AI features directly within Microsoft 365 applications for enhanced workflow automation and document generation.
+(b) Adobe Firefly
+(i) Adobe Firefly is a creative generative AI engine that is included in Adobe Creative Cloud and Adobe Express. Firefly generates images, edits objects, and transforms text.
+(c) Mongoose AI-Chatbot
+(i) Mongoose AI-Chatbot is an administrative tool that facilitates conversational engagements with students and prospective students.
+(d) Blackboard Ultra AI Design Assistant (Specifically AI Course Features)
+(i) Blackboard Ultra AI Design Assistant Course Feature aids instructors with the creation and design of new courses. The AI course feature can assist in creating royalty-free images, propose test questions,
+2|Page
+550 East Spring Street :: Columbus, Oh 43215 :: www.cscc.edu :: (614) 287-5353
+
+Information Security Program
+Responsible Use of Generative AI
+
+generate question banks, and suggest course structure and assignments.
+
+(5) Use of Non-Approved AI Tools
+
+(a) Employees who elect to use non-approved AI tools, such as ChatGPT, Google Gemini, or similar tools, must not use or enter restricted or internal college data under any circumstances. Only unrestricted data—already intended for public release—may be used.
+
+(b) Employees are responsible for ensuring that any information provided to a non-approved college AI model is fully anonymized and does not contain restricted or internal data that could expose the college to risk.
+
+(c) College-approved tools must always be used when handling restricted or internal college data, as these solutions include enterprise safeguards that protect confidentiality, integrity, and compliance with college policies.
+
+(6) Academic Guidelines
+
+(a) The Student Code of Conduct applies to all student use of generative AI.
+
+(b) Faculty and students should refer to their respective handbooks and/or syllabi for guidelines on using generative AI in academic work.
+
+(c) Faculty should clearly communicate their policies on the use of AI tools.
+
+(d) The Standard Syllabus Statement provides guidance on incorporating AIrelated policies into course syllabi.
+
+(7) Change History
+
+Description Version 1
+
+Date 3/6/26
+
+Who
+A. Kraus, S. Casbarro, M. Reiter, B. Dalton
+
+3|Page 550 East Spring Street :: Columbus, Oh 43215 :: www.cscc.edu :: (614) 287-5353
+
+

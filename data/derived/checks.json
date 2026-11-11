@@ -237,8 +237,8 @@
   {
    "session": "a9056776-4951-4636-a9ad-acb1dbccb955",
    "subagent": false,
-   "apiRequests": 298,
-   "uniqueResponses": 298,
+   "apiRequests": 351,
+   "uniqueResponses": 351,
    "unansweredRequests": [],
    "newestRecordIsUnansweredRequest": false,
    "extra": 0,
@@ -275,22 +275,28 @@
    "preTokens": 174121,
    "computed": 174121,
    "pass": true
+  },
+  {
+   "time": "2026-11-11T16:16:09.055Z",
+   "preTokens": 175324,
+   "computed": 175324,
+   "pass": true
   }
  ],
  "C4_inflation": {
-  "usageRows": 1226,
-  "uniqueResponses": 456,
+  "usageRows": 1372,
+  "uniqueResponses": 509,
   "naive": {
-   "input": 2524,
-   "cacheWrite": 4798078,
-   "cacheRead": 189591026,
-   "output": 2045901
+   "input": 2816,
+   "cacheWrite": 5279871,
+   "cacheRead": 210642571,
+   "output": 2159558
   },
   "deduplicated": {
-   "input": 934,
-   "cacheWrite": 1363074,
-   "cacheRead": 70969652,
-   "output": 517919
+   "input": 1040,
+   "cacheWrite": 1512922,
+   "cacheRead": 78835427,
+   "output": 556096
   }
  },
  "privacy": [

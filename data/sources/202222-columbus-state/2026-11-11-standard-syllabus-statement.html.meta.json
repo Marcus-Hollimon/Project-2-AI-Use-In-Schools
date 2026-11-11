@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.cscc.edu/academics/syllabus.shtml",
+ "final_url": "https://www.cscc.edu/academics/syllabus.shtml",
+ "http_status": 200,
+ "content_type": "text/html",
+ "fetched_at": "2026-11-11T11:22:37-05:00",
+ "sha256": "cacc96b4d0ca46460e1750d394785a1b85d6a687bfe7d933ab77466e58cd5d87",
+ "bytes": 117237
+}

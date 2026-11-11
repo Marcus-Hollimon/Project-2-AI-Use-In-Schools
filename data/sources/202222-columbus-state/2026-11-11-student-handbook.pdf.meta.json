@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.cscc.edu/services/pdf/StudentHandbook_25_26.pdf",
+ "final_url": "https://www.cscc.edu/services/pdf/StudentHandbook_25_26.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T11:22:38-05:00",
+ "sha256": "7ca3cc3109601158edd2e34160154baf8b56280eb9d65224e5ab1b1ef4d91c88",
+ "bytes": 128461
+}

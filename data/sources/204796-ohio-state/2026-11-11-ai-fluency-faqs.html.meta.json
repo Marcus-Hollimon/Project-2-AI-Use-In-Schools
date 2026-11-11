@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://oaa.osu.edu/ai-fluency-faqs",
+ "final_url": "https://oaa.osu.edu/ai-fluency-faqs",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T11:17:15-05:00",
+ "sha256": "65d5e9e2fd6c68396419943879bd5a7022907efa0e8b1131bb00e482cf43d7f9",
+ "bytes": 60650
+}

@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.cscc.edu/employee/technology/pdf/Responsible_Use_of_Generative_AI.pdf",
+ "final_url": "https://www.cscc.edu/employee/technology/pdf/Responsible_Use_of_Generative_AI.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T11:22:22-05:00",
+ "sha256": "69b1c5bb71ae9f694f4aa5a32b64f182cf6055e4a1d92f7955251da3df3f6005",
+ "bytes": 128320
+}

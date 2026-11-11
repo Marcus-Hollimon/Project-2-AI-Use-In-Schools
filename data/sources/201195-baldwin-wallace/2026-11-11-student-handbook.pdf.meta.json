@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.bw.edu/Assets/Offices/student-affairs/handbook.pdf",
+ "final_url": "https://www.bw.edu/student-life/conduct/_files/handbook.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T11:19:24-05:00",
+ "sha256": "d7f25af1f69e62afa6f95701a0c77264c365169b436cf7f357b48fbeeb1e182d",
+ "bytes": 864956
+}

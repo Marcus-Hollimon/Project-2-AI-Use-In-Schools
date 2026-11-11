@@ -66,3 +66,8 @@ Recode (spec R2): one value changed, Johns Hopkins `se_courses` "not addressed" 
 | Le Moyne-Owen 220604 | 11:08:58 | 2026-11-11T11:10:07-05:00 | 53 | 15 | 110,623 | 8 | 3 |
 | Luzerne 213659 | 11:10:07 | 2026-11-11T11:12:22-05:00 | 56 | 15 | 145,510 | 8 | 3 (policy is a Word file) |
 | Cincinnati 201885 | 11:12:22 | 2026-11-11T11:14:06-05:00 | 57 | 15 | 170,108 | 10 | 5 |
+| (after /compact) | | 2026-11-11T11:16:38-05:00 | 59 | 15 | 93,176 | | |
+| Ohio State 204796 | 11:16:38 | 2026-11-11T11:19:11-05:00 | 61 | 16 | 122,995 | 8 | 5 (CSE site and syllabus site blocked) |
+| Baldwin Wallace 201195 | 11:19:11 | 2026-11-11T11:21:29-05:00 (written late; usage read a few minutes earlier) | 63 | 16 | 147,380 | 11 | 4 (all absences) |
+| Defiance 202514 | 11:21:29 | 2026-11-11T11:22:08-05:00 | 65 | 16 | 168,535 | 8 | 3 |
+| Columbus State 202222 | 11:22:08 | 2026-11-11T11:24:02-05:00 | 66 | 16 | 195,190 | 8 | 5 (syllabus is a Word file) |

@@ -1,10 +1,29 @@
 # State: read this first
 
-Current phase: 2 Study (11 of 15 coded and passing under codebook v2; 4 schools next, starting with Ohio State)
+Current phase: 2 Study (all 15 schools coded and passing under codebook v2; Phase 2 wrap-up next: R1 re-fetch, acceptance checks)
 
-Last updated: 2026-11-11T11:14:27-05:00 by Claude (session a9056776), just before the fifth `/compact`.
+Last updated: 2026-11-11T11:24:12-05:00 by Claude (session a9056776), just before the sixth `/compact`.
 
-## Main coding so far (after the pilot)
+## Main coding done (11:16 to 11:24 Nov 11; 5-hour 59% to 66%)
+- `check_study.py` with no `--only`: all 15 PASS, "All checks pass: True" (11:24:02). Study tests
+  33/33 recorded (`validation/runs/2026-11-11T16-24-02-902Z_study.json`).
+- Ohio State 204796: university **restrict** (ai.osu.edu Responsible Use: GenAI for coursework only
+  with each instructor's explicit permission; cue_reason), tone positive (AI Fluency FAQ). CSE site
+  cse.osu.edu gives curl 403; read in the browser pane (no AI rule), dept "none found" from the search
+  log. The official CSE 3231 syllabus site (syllabi.engineering.osu.edu) is curl 403 and the browser
+  pane is refused: se_courses "no public syllabus found".
+- Baldwin Wallace 201195: all absences (handbook revised Aug 2026 and the 2026-27 catalog honesty
+  policy say nothing on AI; catalog.bw.edu gives curl HTTP 202 empty, read in the browser pane).
+- Defiance 202514: the only rule is the library's AI guide: restrict ("Unauthorized use ... is
+  considered cheating"), cautionary, disclosure **required** ("necessary to cite"; cue_reason).
+- Columbus State 202222: Standard Syllabus Statement: restrict ("may not use ... unless explicitly
+  permitted"), neutral, disclosure required. se_courses **prohibited**: the CSCI 2221 Spring 2026
+  syllabus (Word file) has no course rule and adopts the college statement by reference (cue_reason).
+  This is the one judgment call worth Marcus's eye.
+- A time typed from memory slipped into the Baldwin Wallace cost row and was replaced with a
+  `date -Iseconds` reading (marked "written late").
+
+## Main coding, earlier batches
 - Le Moyne-Owen 220604, Luzerne 213659, Cincinnati 201885 coded and passing (11:09 to 11:14; 5-hour
   52% to 57%). Le Moyne-Owen: all absences (handbook and catalog say nothing on AI). Luzerne: the AI
   rule is in the Academic Honesty Policy, a **Word file**; `save_page.py` now saves Word files as
@@ -38,19 +57,18 @@ Last updated: 2026-11-11T11:14:27-05:00 by Claude (session a9056776), just befor
 ## FIRST, right after the /compact
 1. Take a usage reading marked "after /compact" in `progress/usage.md` (tool: get_usage), with the
    time from `date -Iseconds`. Run `uv run --project pipeline python pipeline/build.py`; C1 to C3 must pass.
-2. Code the remaining 4 schools in this order (same procedure as below, codebook **v2**; `{domain}`
-   is the last two parts of the sample's website, which is what the checker uses):
-   | unitid | slug | domain |
-   |---|---|---|
-   | 204796 | 204796-ohio-state | osu.edu |
-   | 201195 | 201195-baldwin-wallace | bw.edu |
-   | 202514 | 202514-defiance | defiance.edu |
-   | 202222 | 202222-columbus-state | cscc.edu |
-   Prepare a /compact after every 3 schools (STATE.md, commit, reading "just before /compact").
-   Record a get_usage reading per school in `progress/pilot-cost.md` under a new "Main coding" table.
-3. After all 15 pass: run `check_study.py` with no `--only` (must say "All checks pass: True"),
-   record the study tests, then the R1 re-fetch report, the acceptance checks and Marcus's
-   checklist in `specs/phase-2-study.md`, then Phase 3.
+2. Coding is done (all 15 pass). Finish Phase 2 per `specs/phase-2-study.md` "Acceptance checks":
+   a. **R1 re-fetch**: write a small script (e.g. `study/refetch.py`) that fetches every source URL
+      in `data/sources/*/*.meta.json` again (curl, no extra headers), compares the SHA-256 with the
+      saved one, and writes a report (`data/coded/refetch-report.json` plus a short Markdown
+      summary): unchanged, changed, gone. A report, not a failure. Rendered-text records have no
+      byte hash to compare; list them separately.
+   b. Mutation run for the study tests is already recorded (earlier, S2 disabled); confirm in
+      `validation/runs/` and tick it.
+   c. Run and record web tests (`npm run test:record` in `web/`) and pipeline tests
+      (`uv run --project pipeline python pipeline/record_tests.py "label"`).
+   d. Tick the acceptance boxes in the spec, write the phase-end log row and usage reading, tell
+      Marcus his 3-step checklist, and prepare the phase-end /compact. Then Phase 3 (write its spec first).
 
 ## Pilot result (details and costs in `progress/pilot-cost.md`)
 - Minnesota 174066, Johns Hopkins 162928, Valparaiso 152600, Coppin State 162283, Snow 230597:

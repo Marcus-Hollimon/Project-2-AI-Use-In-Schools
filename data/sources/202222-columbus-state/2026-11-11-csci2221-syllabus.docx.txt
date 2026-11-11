@@ -1,0 +1,415 @@
+4660909334500Columbus State Community College  
+Information Systems Technology Department 
+
+  
+COURSE:
+CSCI-2221 –Agile Software Development and Testing
+CREDITS:
+3
+HOURS PER WEEK:
+LAB:
+3
+LECTURE:
+2
+TERM:
+
+CLASS LENGTH:
+
+COURSE DELIVERY:
+
+PRE-REQUISITES:
+CSCI-1511 or CSCI-1630 or CSCI-2467 or CSCI-1275
+MEETING TIMES AND LOCATION:
+
+CO-REQUISITES:
+N/A
+INSTRUCTOR:
+
+CONTACT:
+
+SUPPORT HOURS:
+
+OTHER INFO:
+
+
+DESCRIPTION OF COURSE: 
+CSCI 2221 Agile Software Development and Testing introduces students to delivering software in an agile project environment. Students build web applications to specification using Red/Green /Refactor with test- driven and acceptance test driven development. The course emphasizes collaboration through agile practices like standups, pull requests, code reviews, and build monitoring. Concepts and technologies covered include TDD, ATDD, Cucumber, Gherkin, continuous integration, RSpec, page object design, and browser automation. Students perform hands-on labs using open source software frameworks.
+
+COURSE STUDENT LEARNING OUTCOMES:  
+Develop, test, and enhance interactive Android applications using Java, and third-party APIs. 
+Students will identify and resolve issues in code through debugging tools and unit tests
+Will write efficient and maintainable code through the use of design patterns and refactoring strategies
+Utilize Git and GitHub for version control and collaboration.
+
+OUTCOMES BASED ASSESSMENT OF STUDENT LEARNING:  
+For this course, students are expected to demonstrate the skills associated with the Institutional Learning Goals (ILG) identified below: 
+1. Critical Thinking
+5. Technological Competence
+6. Communication Competence
+In class, students are assessed on their achievement of these outcomes. Names will not be used when reporting results. Outcomes-based assessment is used to improve instructional planning and design and the quality of student learning throughout the college.
+COVERED TOPICS:  
+Agile & Collaboration Practices
+Testing Concepts & Frameworks
+Development & Tooling
+Agile Principles & Scrum Framework
+Test-Driven Development (TDD)
+Web Applications
+Sprints & Sprint Planning
+Acceptance Test-Driven Development (ATDD)
+Continuous Integration (CI)
+Standups
+Red/Green/Refactor Cycle
+Build Monitoring
+Code Reviews
+Behavior-Driven Development (BDD)
+Browser Automation
+Pull Requests
+Gherkin Syntax
+Git/GitHub Version Control
+Collaborative Workflow
+Cucumber & RSpec Frameworks
+
+
+Page Object Design Pattern
+
+
+Test Coverage & Quality Metrics
+
+
+COURSE MATERIALS REQUIRED:  
+A computer, 
+A modern code editor (e.g., Visual Studio Code) and the specific software frameworks (e.g., Ruby, RSpec, Cucumber) required for the course projects. 
+GitHub account (linked to CSCC email)
+TEXTBOOKS(S), MANUALS, REFERENCES, AND OTHER READINGS:  
+All required course materials, references, videos, and links are embedded in the course
+
+GENERAL INSTRUCTIONAL METHODS:
+Lecture  
+Demonstration  
+Video  
+Group Discussion  
+STANDARDS AND METHODS FOR EVALUATION:
+Item
+Points Per
+Quantity
+Sub-Total
+Percentage
+Sprints/Code-Reviews
+
+
+
+
+Sprint
+20.00
+10
+200
+20.00%
+Code-Reviews
+20.00
+10
+200
+20.00%
+Sprints/Code-Reviews (Sub-Total)
+
+
+400
+40.00%
+
+
+
+
+
+Quizzes/Tests/Mid-Term Exam 
+
+
+
+
+Preparation quizzes (Formative)
+20.00
+5
+100
+10.00%
+Unit test (Summative)
+30.00
+5
+150
+15.00%
+Mid-Term Exam
+100.00
+1
+100
+10.00%
+Quizzes/Tests/Mid-Term Exam (Sub-Total)
+
+350
+35.00%
+
+
+
+
+
+Essay/Concept Tutorial(Written or Video)
+
+
+
+Topic Signed off and Outline
+10
+1
+10
+1.00%
+Progress Check 
+20
+2
+40
+4.00%
+Turn-in
+200
+1
+200
+20.00%
+Essay/Concept Tutorial(Written or Video)
+
+250
+25.00%
+
+Total Possible Points for Course
+1000 SUM() \# "0" 
+100.00%
+
+GRADING SCALE:
+Point Range
+Percent Range
+Letter Grade
+900.00 to 1000.00 points
+90 to 100%
+A
+800.00 to 899.99 points
+80 to 89%
+B
+700.00 to 799.99 points
+70 to 79%
+C
+600.00 to 699.99 points
+60 to 69%
+D
+599.99 points and below
+0 to 59%
+E
+Assessments:
+Columbus State Community College is committed to assessment (measurement) of student achievement of academic outcomes.  This process addresses the issues of what you need to learn in your program of study and if you are learning what you need to learn.  The assessment program at Columbus State has four specific and interrelated purposes: (1) to improve student academic achievements; (2) to improve teaching strategies; (3) to document successes and identify opportunities for program improvement; (4) to provide evidence for institutional effectiveness.  In class you are assessed and graded on your achievement of the outcomes for this course.  You may also be required to participate in broader assessment activities.  
+This course requires you to take tests online using LockDown Browser and Respondus Monitor. You must use a computer (Windows PC laptop/desktop, Apple Mac laptop/desktop, or Chromebook). Do not use your phone, tablet, or iPad for taking tests. You will also need a working camera and microphone on your computer. You must have reliable Internet. A wired connection is best. If you use a wireless Internet connection, make sure that it is a strong connection. You may need to move close to the router to obtain the best signal. Respondus Monitor requires you to have and display a valid photo ID and complete an environmental scan. Please review this video to follow the proper procedures: http://www.kaltura.com/tiny/bn75m. Failure to follow the instructions below could result in you having to retest or receive a zero for your exam. It is critical that you take the Practice Test to identify any issues or concerns for your specific testing equipment and environment. Notify your instructor if you are unable to test using Respondus Monitor. Your instructor will determine if you can take course exams at a CSCC Testing Center. Please make every effort to use LockDown Browser and Respondus Monitor if possible. Most testing accommodations are available in Respondus Monitor and should be used when taking the Practice Test. Please contact the testing center at 614.287.5089 with any questions. These instructions are also available at https://cs-cc.net/proctored. Select the article for your specific computer.
+
+ATTENDANCE POLICY:
+Students are expected to attend all class sessions unless expressly stated by the instructor. Students are expected to be on time to class and to participate in class discussions, individual and group work. If there is an issue and the student cannot make the class, it is the responsibility and expectation of the student to do the following:
+Contact the instructor before the class session if you don’t understand what you need to do for the unit/week that you would miss and to discuss if there needs to be any extensions
+Go through any material that was missed, 
+Turn in missing work by the original or revised deadline, and 
+be prepared for next scheduled class.  
+INCLEMENT WEATHER OR OTHER EMERGENCIES:   
+In the event of severe weather or other emergencies that could force the college to close or to cancel classes, such information will be broadcast on radio stations and television stations.  Students who reside in areas that fall under a Level III emergency should not attempt to drive to the college even if the college remains open.  
+Assignments due on a day the college is closed will be due the next scheduled class period.  If an examination is scheduled for a day the campus is closed, the examination will be given on the next class day.  If a laboratory is scheduled on the day the campus is closed, it will be made up at the next scheduled laboratory class.  If necessary, laboratory make-up may be held on a Saturday.    
+Students who miss a class because of weather-related problems with the class is held as scheduled are responsible for reading and other assignments as indicated in the syllabus.  If a laboratory or examination is missed, contact me as soon as possible to determine how to make up the missed exam or lab.  Remember!  It is the student’s responsibility to keep up with reading and other assignments when a scheduled class does not meet, whatever the reason.  
+In the event the college is forced to close during Final Examination Week, exams scheduled for the first missed date will be rescheduled for another date, in the same location at the same time scheduled, but only during the course period.     
+FINANCIAL AID ATTENDANCE REPORTING:  
+Columbus State is required by federal law to verify the enrollment of students who participate in Federal Title IV student aid programs and/or who receive educational benefits through the Department of Veterans Affairs. It is the responsibility of the College to identify students who do not commence attendance or who stop attendance in any course for which you are registered and paid. Non-attendance is reported quarterly by each instructor, and results in a student being administratively withdrawn from the class section. Please contact the Financial 
+Aid Office for information regarding the impact of course withdrawals on financial aid eligibility.  
+COLLEGE SYLLABUS STATEMENTS:
+Columbus State Community College required College Syllabus Statements on College Policies and Student Support Services can be found at www.cscc.edu/syllabus or on the College website Quick Links “ Syllabus Statements”.
+
+Topic Breakdown
+STUDENT RESOURCES
+STUDENT RIGHTS AND RESPONSIBILITIES
+Student Handbook
+Student Advocacy Center
+Student Code of Conduct
+Advising
+Military and Veterans Services
+Use of Artificial Intelligence (AI) and Large Language Models (LLMs)
+Financial Aid Resources
+Accessibility Services
+Financial Aid Attendance Reporting
+Student Central
+Title IX, Discrimination / Harassment and Retaliation
+Accessing Accommodations through the Office of Accessibility Services
+Academic Calendar
+Counseling Services
+Audio/Video Recording of Class
+Testing Center
+Campus Police
+Tobacco-Free Columbus State
+Information Technology Support Center
+Assistance Programs
+Concealed Carry Policy
+Tech Requirements
+Facilities to Support Students/ Needs
+FERPA (Family Educational Rights and Privacy Act)
+Library
+College Credit Plus Information
+Student Handbook
+Tutoring Services
+Institutional Learning Goals
+Inclement Weather or Other Emergencies
+Writing Center (In-person and Online)
+Mid-Ohio Market at Columbus State
+Religious Accommodations
+
+
+UNITS OF INSTRUCTION
+Note: The submission window closes at 11:59pm on the due date.  If late submissions are allowed, the Late submission window opens at the close of the normal due date window and closes at 11:59pm on the day that the late submission window closes (See Turn-in and Late policies above).  The start day of each unit may vary from section to section so please check with your instructor and your syllabus for the due dates for each unit. 
+  
+UNIT
+READING 
+(Before class)
+LEARNING  
+OBJECTIVES/GOALS  
+ASSESSMENT 
+METHODS  
+Assignments & Due Date
+Unit 1: 
+
+
+Can explain Agile principles and the Scrum framework;
+
+Prep Quiz (Formative)
+Unit test (Summative)
+Prep Quiz, Unit Quiz
+Unit 2: 
+
+
+Can write effective unit tests;
+Can apply TDD principles to guide software design;
+Can apply ATDD to ensure software meets user needs and acceptance criteria;
+Can use other testing frameworks to write tests
+
+Prep Quiz (Formative)
+Unit test (Summative)
+Prep Quiz, Unit Quiz
+Unit 3:  
+
+
+Can implement page object design for reusable test code;
+Can write instrumentation and UI tests for Android
+Prep Quiz (Formative)
+Unit test (Summative)
+Prep Quiz, Unit Quiz
+Unit 4:  
+
+
+
+Can measure test coverage and code quality using tools;
+Can implement code reviews and refactoring techniques to improve code quality
+Prep Quiz (Formative)
+Unit test (Summative)
+Prep Quiz, Unit Quiz
+
+Unit 5:  
+
+
+Can define sprint goals;
+Can estimate time required and split tasks effectively
+Prep Quiz (Formative)
+Unit test (Summative)
+Prep Quiz, Unit Quiz
+Unit 6:  
+
+
+
+Can apply Agile principles and testing practices to design, develop, test, and deliver a working increment of the banking app within each sprint; 
+Can participate in code reviews, and sprint retrospectives;
+Can demonstrate completed features and reflect on the sprint process for future sprints
+Mid-Term Exam (Units 1-5) (Summative)
+Sprint 1, Code Review, Mid-Term Exam(Units 1-5)
+
+Unit 7:  
+
+
+Can apply Agile principles and testing practices to design, develop, test, and deliver a working increment of the banking app within each sprint; 
+Can participate in code reviews, and sprint retrospectives;
+Can demonstrate completed features and reflect on the sprint process for future sprints
+Prep Quiz (Formative)
+Unit test (Summative)
+Sprint, Code Review
+Unit 8:  
+
+
+
+Can apply Agile principles and testing practices to design, develop, test, and deliver a working increment of the banking app within each sprint; 
+Can participate in code reviews, and sprint retrospectives;
+Can demonstrate completed features and reflect on the sprint process for future sprints 
+Prep Quiz (Formative)
+Unit test (Summative)
+Sprint, Code Review
+
+Unit 9:  
+
+
+
+Can apply Agile principles and testing practices to design, develop, test, and deliver a working increment of the banking app within each sprint; 
+Can participate in code reviews, and sprint retrospectives;
+Can demonstrate completed features and reflect on the sprint process for future sprints
+Prep Quiz (Formative)
+Unit test (Summative)
+Sprint, Code Review
+Unit 10:  
+
+
+Can apply Agile principles and testing practices to design, develop, test, and deliver a working increment of the banking app within each sprint; 
+Can participate in code reviews, and sprint retrospectives;
+Can demonstrate completed features and reflect on the sprint process for future sprints
+Prep Quiz (Formative)
+Unit test (Summative)
+Sprint, Code Review
+Unit 11: 
+
+
+Can apply Agile principles and testing practices to design, develop, test, and deliver a working increment of the banking app within each sprint; 
+Can participate in code reviews, and sprint retrospectives;
+Can demonstrate completed features and reflect on the sprint process for future sprints 
+Prep Quiz (Formative)
+Unit test (Summative)
+Sprint, Code Review
+
+Unit 12:  
+
+
+Can apply Agile principles and testing practices to design, develop, test, and deliver a working increment of the banking app within each sprint; 
+Can participate in code reviews, and sprint retrospectives;
+Can demonstrate completed features and reflect on the sprint process for future sprints
+Prep Quiz (Formative)
+Unit test (Summative)
+Sprint, Code Review
+Unit 13:  
+
+
+Can apply Agile principles and testing practices to design, develop, test, and deliver a working increment of the banking app within each sprint; 
+Can participate in code reviews, and sprint retrospectives;
+Can demonstrate completed features and reflect on the sprint process for future sprints
+
+Sprint, Code Review
+
+Unit 14:  
+
+
+Can apply Agile principles and testing practices to design, develop, test, and deliver a working increment of the banking app within each sprint; 
+Can participate in code reviews, and sprint retrospectives;
+Can demonstrate completed features and reflect on the sprint process for future sprints 
+
+Sprint, Code Review
+Unit 15:  
+
+
+Can apply Agile principles and testing practices to design, develop, test, and deliver a working increment of the banking app within each sprint; 
+Can participate in code reviews, and sprint retrospectives;
+Can demonstrate completed features and reflect on the sprint process for future sprints
+
+Sprint, Code Review
+
+Unit 16:  
+
+Finals Week
+Can describe advanced testing frameworks and concepts;
+Can model how to implement testing frameworks and concepts;
+
+Sprint, Code Review, Essay/Written or Video Tutorial
+Syllabus Disclaimer: I do not anticipate any changes to the syllabus. This syllabus acts as a set of principles and guidelines to the direction of the course, but I may change it if I deem it necessary to do so to ensure an effective learning experience for all.  Any changes will be announced in class, and subsequent revisions of the syllabus will be posted to Blackboard accompanied by a Blackboard announcement and email to all students.
+

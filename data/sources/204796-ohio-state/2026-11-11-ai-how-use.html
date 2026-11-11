@@ -1,0 +1,804 @@
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+          <script>
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({initCookieBanner: 'full'});
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P8MKDW6');
+      </script>
+        <meta charset="utf-8" />
+<script>/**
+ * @file
+ * Lightbox click guard (OneTrust race fix).
+ *
+ * OneTrust's consent SDK (loaded async via GTM) can defer Drupal's aggregated
+ * JS on a cold cache, so blazy/colorbox may not have bound its click handler
+ * yet at a user's very first click on a slideshow image. The browser then
+ * follows the anchor to the raw image instead of opening the modal — only
+ * reproducible on the first click of an uncached page.
+ *
+ * This guard is inlined synchronously into <head> by
+ * wcm_onetrust_page_attachments(), so it runs at initial parse — before the
+ * async OneTrust SDK loads and before any user click. It holds a premature
+ * click on a not-yet-upgraded lightbox link, blocks the navigation to the raw
+ * image, and opens the modal the instant colorbox is ready (giving up after
+ * TIMEOUT so an abandoned click never pops a modal later).
+ *
+ * Replaces the former "slick hack" that force-loaded version-pinned copies of
+ * jQuery/blazy/slick/colorbox in <head>.
+ */
+(function () {
+  'use strict';
+
+  // Colorbox is considered ready for a link once it carries one of these
+  // classes: blazy adds is-b-cbox when it processes the trigger; the jQuery
+  // colorbox plugin adds cboxElement when it binds.
+  var READY = ['is-b-cbox', 'cboxElement'];
+  var TIMEOUT = 3000;
+  var POLL = 100;
+  var pending = null;
+
+  // Nearest ancestor lightbox trigger, or null. Blazy renders lightbox links
+  // as <a data-colorbox-trigger> regardless of the carousel (slick or splide).
+  function triggerLink(el) {
+    while (el && el !== document) {
+      if (el.tagName === 'A' && el.hasAttribute('data-colorbox-trigger')) {
+        return el;
+      }
+      el = el.parentNode;
+    }
+    return null;
+  }
+
+  function isReady(el) {
+    for (var i = 0; i < READY.length; i++) {
+      if (el.classList && el.classList.contains(READY[i])) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  document.addEventListener('click', function (e) {
+    var link = triggerLink(e.target);
+    // No trigger, or colorbox already owns it: let the normal handler run.
+    if (!link || isReady(link)) {
+      return;
+    }
+    // Not upgraded yet: block navigation to the raw image and open the modal
+    // as soon as colorbox is ready.
+    e.preventDefault();
+    pending = link;
+    var elapsed = 0;
+    var timer = setInterval(function () {
+      elapsed += POLL;
+      if (isReady(link)) {
+        clearInterval(timer);
+        if (pending === link) {
+          pending = null;
+          // Now upgraded; re-dispatch — the guard above passes it through to
+          // colorbox's own click handler.
+          link.click();
+        }
+      }
+      else if (elapsed >= TIMEOUT) {
+        clearInterval(timer);
+        if (pending === link) {
+          pending = null;
+        }
+      }
+    }, POLL);
+  }, true);
+})();
+</script>
+<meta name="description" content="See Ohio State tips to help beginners understand and use artificial intelligence (AI)" />
+<link rel="canonical" href="https://www.ai.osu.edu/resources-buckeyes/how-use-ai" />
+<meta property="og:title" content="How to use AI | Artificial Intelligence at Ohio State" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="How to use AI | Artificial Intelligence at Ohio State" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/themes/wcm-osu/wcm_bux/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>How to use AI | Artificial Intelligence at Ohio State</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_SMvU81qQc5Ktq3_WJz0lFEhgMNLag36V9Hu0gWn0Xgo.css?delta=0&amp;language=en&amp;theme=wcm_bux&amp;include=eJxtz9EKwzAIBdAfSusnFWNckZo4YtIu-_qVjsEGe5Er5_pgVHwOUMMkZQ2x08aDF1SuDX620x6wqkXUydtQ9kBWGcjy3QqX5vPZmKZYGRPVnuN_l4wr_yeVsgXFYb0tsYsmrtAOI9PFmZpY-WgSJ9u5DjjvTw-ZkyDcRBvXmfB-lV2FNojoHHx44_zOu_DhcM05W-rK4aC8fP1H7i-ccWyB" />
+<link rel="stylesheet" media="all" href="https://assets.bux.osu.edu/bux-icons/bux-icons.css" />
+<link rel="stylesheet" media="all" href="https://s3.amazonaws.com/assets.bux.osu.edu/bux-webfonts2/bux-webfonts2.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_-4dhU50EVXcbB-PqSVOOopQSx4S_oxM6e1qxu2zC1jY.css?delta=3&amp;language=en&amp;theme=wcm_bux&amp;include=eJxtz9EKwzAIBdAfSusnFWNckZo4YtIu-_qVjsEGe5Er5_pgVHwOUMMkZQ2x08aDF1SuDX620x6wqkXUydtQ9kBWGcjy3QqX5vPZmKZYGRPVnuN_l4wr_yeVsgXFYb0tsYsmrtAOI9PFmZpY-WgSJ9u5DjjvTw-ZkyDcRBvXmfB-lV2FNojoHHx44_zOu_DhcM05W-rK4aC8fP1H7i-ccWyB" />
+
+    
+  </head>
+  <body class="footer-color--light node-id--19 node-type--wcm_page path--node anonymous">
+    <div class="bux-buckeye-alert__wrapper" role="region" aria-labelledby="bux-buckeye-alert" hidden>
+    <div id="bux-buckeye-alert" class="bux-buckeye-alert" aria-label="Buckeye Alert" aria-live="polite" role="status" hidden>
+    </div>
+</div>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <a href="#main-content" class="bux-skip-navigation">
+	Skip to main content
+</a>
+
+<header role="banner">
+	
+<nav id="osu-navbar" class="bux-osu-navbar bux-osu-nav" aria-label="Ohio State links">
+  <div class="bux-osu-nav__overlay"></div>
+  <div class="bux-osu-nav__wrapper">
+    <div class="bux-container">
+      <div id="osu-navname-block">
+        
+
+
+
+
+
+  
+  
+
+
+
+<a                    class="bux-osu-nav__osu-logo-link"
+                        href="https://osu.edu"
+                                                rel="noopener"
+            >
+              <span class="bux-osu-nav__logos">
+              
+
+
+
+<figure                     class="bux-image bux-osu-nav__osu-logo-img logo-light"
+            >
+  <img
+    
+    src="/modules/contrib/bux/dist/images/osu-logos/navbar/osu-navbar.svg"
+    alt="The Ohio State University Homepage"
+    height="50"
+    width=""
+  />
+  </figure>
+
+
+              
+
+
+
+<figure                     class="bux-image bux-osu-nav__osu-logo-img logo-dark"
+            >
+  <img
+    
+    src="/modules/contrib/bux/dist/images/osu-logos/navbar/osu-navbar-white.svg"
+    alt="The Ohio State University Homepage"
+    height="50"
+    width=""
+  />
+  </figure>
+
+            </span>
+          </a>
+      </div>
+      <div id="osu-navlinks-block">
+        <button type="button" id="osu-nav-trigger" aria-controls="osu-navlinks" aria-expanded="false">
+          <span class="visually-hidden">Show Links</span>
+        </button>
+        <ul id="osu-navlinks" aria-labelledby="osu-nav-trigger" class="bux-osu-nav__links">
+                                <li class="bux-osu-nav__link">
+              
+
+
+
+
+
+  
+  
+
+
+
+<a                    class="bux-base__link"
+                        href="https://maps.osu.edu"
+                                                rel="noopener"
+            >
+  <span class="bux-base__link__text">Map</span></a>
+
+            </li>
+                      <li class="bux-osu-nav__link">
+              
+
+
+
+
+
+  
+  
+
+
+
+<a                    class="bux-base__link"
+                        href="https://buckeyelink.osu.edu"
+                                                rel="noopener"
+            >
+  <span class="bux-base__link__text">Buckeye Link</span></a>
+
+            </li>
+                      <li class="bux-osu-nav__link">
+              
+
+
+
+
+
+  
+  
+
+
+
+<a                    class="bux-base__link"
+                        href="https://email.osu.edu"
+                                                rel="noopener"
+            >
+  <span class="bux-base__link__text">Webmail</span></a>
+
+            </li>
+                      <li class="bux-osu-nav__link">
+              
+
+
+
+
+
+  
+  
+
+
+
+<a                    class="bux-base__link"
+                        href="https://www.osu.edu/search"
+                                                rel="noopener"
+            >
+  <span class="bux-base__link__text">Search Ohio State</span></a>
+
+            </li>
+                  </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+		<div id="masthead" class="bux-header">
+		<div class="bux-container">
+			<div class="bux-header__col bux-header__col--left">
+				<div class="bux-header__site-name-container">
+																	<div class="bux-header__site-name">
+							<a href="/">Artificial Intelligence at Ohio State</a>
+													</div>
+									</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+
+	
+
+		<nav role="navigation" aria-labelledby="block-wcm-bux-main-menu-menu" id="block-wcm-bux-main-menu">
+            
+  <span class="visually-hidden" id="block-wcm-bux-main-menu-menu">Main navigation</span>
+  
+              
+
+
+
+
+
+
+
+  
+<div class="bux-menu-wrapper">
+  <div class="bux-container bux-grid bux-container__menu bux-container__menu--with-search">
+    <nav id="bux-main-menu" aria-label="" class="disclosure-nav disclosure-nav-orientation-horizontal">
+              <ul class="bux-menu">
+                      <li class="bux-menu__item">
+                              <a href="/education-and-fluency"
+    class="bux-menu__link disclosure-nav-item-with-submenu"
+    target=""
+    data-button-aria-label="Education and Fluency"  >Education and Fluency</a>
+
+                                              <ul class="disclosure-nav-submenu disclosure-nav-submenu-closed">
+              <li class="bux-menu__item">
+                    <a href="/education-and-fluency/learn-ai"
+    class="bux-menu__link"
+    target=""
+      >Learn with AI</a>
+
+                  </li>
+              <li class="bux-menu__item">
+                    <a href="/education-and-fluency/teach-ai"
+    class="bux-menu__link"
+    target=""
+      >Teach with AI</a>
+
+                  </li>
+              <li class="bux-menu__item">
+                    <a href="/education-and-fluency/work-smarter-ai"
+    class="bux-menu__link"
+    target=""
+      >Work Smarter with AI</a>
+
+                  </li>
+          </ul>
+  
+                          </li>
+                      <li class="bux-menu__item">
+                              <a href="/research-and-innovation"
+    class="bux-menu__link disclosure-nav-item-with-submenu"
+    target=""
+    data-button-aria-label="Research and Innovation"  >Research and Innovation</a>
+
+                                              <ul class="disclosure-nav-submenu disclosure-nav-submenu-closed">
+              <li class="bux-menu__item">
+                    <a href="https://ohiostateresearch.knowledgebase.co/article/artificial-intelligence-40;ai-41;-in-research-guidelines-126.html"
+    class="bux-menu__link"
+    target=""
+      >Research Guidelines</a>
+
+                  </li>
+              <li class="bux-menu__item">
+                    <a href="/research-and-innovation/aix-hub-ai-innovation-public-good"
+    class="bux-menu__link"
+    target=""
+      >AI(X) Hub</a>
+
+                  </li>
+              <li class="bux-menu__item">
+                    <a href="https://www.osu.edu/research/ai"
+    class="bux-menu__link"
+    target=""
+      >Research Partners</a>
+
+                  </li>
+          </ul>
+  
+                          </li>
+                      <li class="bux-menu__item">
+                                    <a href="/resources-buckeyes"
+    class="bux-menu__link bux-menu__link--active disclosure-nav-item-with-submenu"
+    target=""
+    data-button-aria-label="Resources for Buckeyes"  >Resources for Buckeyes</a>
+
+                                              <ul class="disclosure-nav-submenu disclosure-nav-submenu-closed">
+              <li class="bux-menu__item">
+                          <a href="/resources-buckeyes/how-use-ai"
+    class="bux-menu__link bux-menu__link--active"
+    target=""
+      >How to use AI</a>
+
+                  </li>
+              <li class="bux-menu__item">
+                    <a href="/resources-buckeyes/approved-ai-tools"
+    class="bux-menu__link"
+    target=""
+      >Approved Tools</a>
+
+                  </li>
+              <li class="bux-menu__item">
+                    <a href="https://ai.osu.edu/GoogleAI"
+    class="bux-menu__link"
+    target=""
+      >Ohio State and Google Partnership</a>
+
+                  </li>
+              <li class="bux-menu__item">
+                    <a href="https://ai.osu.edu/prompt-library"
+    class="bux-menu__link"
+    target=""
+      >Prompt Library</a>
+
+                  </li>
+              <li class="bux-menu__item">
+                    <a href="/resources-buckeyes/resources-and-events"
+    class="bux-menu__link"
+    target=""
+      >Resources and Events</a>
+
+                  </li>
+              <li class="bux-menu__item">
+                    <a href="/resources-buckeyes/responsible-use"
+    class="bux-menu__link"
+    target=""
+      >Responsible Use</a>
+
+                  </li>
+          </ul>
+  
+                          </li>
+                  </ul>
+          </nav>
+    
+                                                            
+      <div class="bux-menu__search">
+        <div class="bux-form__text-field--menu-search__wrapper" role="dialog" aria-modal="true">
+          <form id="site-search" class="bux-search" role="search" action="/search" method="get">
+            <label class="bux-search__label visually-hidden" for="edit-ai-search">Search</label>
+            <input
+              id="edit-ai-search"
+              class="bux-search__input bux-form__text-field bux-form__text-field--menu-search"
+              placeholder="Search"
+              tabindex="-1"
+              data-drupal-selector=""
+              name="q"
+              type="text"
+            />
+            <button
+              class="bux-search__submit is-hidden ai-search"
+              tabindex="-1"
+              data-drupal-selector=""
+              type="submit"
+            >
+              <span class="visually-hidden">Submit search</span>
+            </button>
+          </form>
+        </div>
+        <button id="menu-search-btn" type="button" aria-expanded="false" aria-controls="site-search">
+          <span class="visually-hidden">Toggle search dialog</span>
+          <span id="search-icon" class="icon icon-ai-search" aria-hidden="true"></span>
+        </button>
+      </div>
+      </div>
+</div>
+
+    </nav>
+
+
+
+
+
+
+
+
+    
+    
+<nav id="breadcrumb-region">
+	<div class="bux-container bux-container--inset">
+    <div class="bux-grid">
+                    <div class="bux-grid__cell bux-grid__cell--12 bux-grid__cell--1@md"></div>
+                <div class="bux-grid__cell bux-grid__cell--12 bux-grid__cell--10@md">
+            
+
+			<div class="region region-breadcrumb">
+			<div id="block-wcm-bux-breadcrumbs">
+  
+    
+      
+<nav aria-label="Breadcrumb" class="bux-breadcrumb">
+  <ol class="bux-breadcrumb__list">
+                                                                                                            <li class="bux-breadcrumb__item">
+                          
+
+
+
+
+
+  
+  
+
+
+
+<a                    class="bux-breadcrumb__link"
+                        href="/"
+                                                rel="noopener"
+            >
+  <span class="bux-base__link bux-breadcrumb__link__text bux-link__text--underline">Home</span></a>
+
+                      </li>
+                                <li class="bux-breadcrumb__item">
+                          
+
+
+
+
+
+  
+  
+
+
+
+<a                    class="bux-breadcrumb__link"
+                        href="/resources-buckeyes"
+                                                rel="noopener"
+            >
+  <span class="bux-base__link bux-breadcrumb__link__text bux-link__text--underline">Resources for Buckeyes</span></a>
+
+                      </li>
+                                <li class="bux-breadcrumb__item bux-breadcrumb__item--current" aria-current="page">How to use AI</li>
+                    </ol>
+</nav>
+
+  </div>
+
+		</div>
+	
+        </div>
+                    <div class="bux-grid__cell bux-grid__cell--12 bux-grid__cell--1@md"></div>
+            </div>
+    </div>
+    </nav>
+
+<main id="main-regions">
+	<div class="bux-container bux-container--inset">
+    <div class="bux-grid">
+		<div class="bux-grid__cell bux-grid__cell--12">
+                    
+
+			<div class="region region-hero">
+			<div class="views-element-container" id="block-wcm-bux-views-block-hero-banner-block-1">
+  
+    
+      <div region="hero"><div class="js-view-dom-id-ac3e3b3d3cdabe4afff9c8570b9aedfbadf0e61a1ccc785fc79da882b94de28d">
+  
+  
+  
+
+  
+  
+  
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+		</div>
+	
+                </div>
+    </div>
+    <div class="bux-grid">
+			
+							<div class="bux-grid__cell bux-grid__cell--12 bux-grid__cell--1@md"></div>
+			
+			<div class="bux-grid__cell bux-grid__cell--12 bux-grid__cell--10@md">
+
+									
+
+			<div class="region region-system">
+			<div data-drupal-messages-fallback class="hidden"></div>
+
+		</div>
+	
+				
+									
+
+
+				
+				<div id="main-content" class="content">
+											
+
+			<div class="region region-content">
+			<div id="block-wcm-bux-page-title">
+  
+    
+      
+  <h1 class="page-title"><span>How to use AI</span>
+</h1>
+
+
+  </div>
+<div id="block-wcm-bux-content">
+  
+    
+      
+<article class="node node--type--wcm-page node--view-mode--full node--layout-builder">
+
+	
+		
+
+	<div class="node__content">
+		
+
+		
+	<div class="layout layout--twocol-section layout--twocol-section--50-50 layout__section--bottom-pad layout--multicol">
+		<div class="layout-inner">
+			<div class="layout-inner-grid bux-grid">
+									<div  class="layout-region layout-region--1 bux-grid__cell bux-grid__cell--12 bux-grid__cell--6@md">
+						
+
+<div class="block block--layout-builder block--inline-block block--wcm-block-text">
+	
+		
+			
+						<div class="field field--name-field-wcm-block-text-body field--type-text-with-summary field--label-hidden field__item"><p class="tagline tagline--small">Keep up with changes in AI by exploring learning resources provided here, attending upcoming AI events across campus or watching workshop recordings at your convenience.</p><p><a class="button" href="/node/44/">Resources and Events</a></p></div>
+			
+	</div>
+
+					</div>
+				
+									<div  class="layout-region layout-region--2 bux-grid__cell bux-grid__cell--12 bux-grid__cell--6@md">
+						
+
+
+
+
+<div class="block block--layout-builder block--inline-block block--wcm-block-image">
+	
+		
+			
+						<div class="blazy blazy--field blazy--field-wcm-block-image-media blazy--field-wcm-block-image-media--full field field--name-field-wcm-block-image-media field--type-entity-reference field--label-hidden field__item" data-blazy="">    <div data-b-token="b-8bdf9f071b0" class="media media--blazy media--bundle--image media--image media--responsive is-b-loading">  <picture>
+                  <source srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E 1x" media="all and (min-width: 1280px)" type="image/jpeg" width="1920" height="1280" data-srcset="/sites/default/files/styles/max_1920x1920/public/images/Stock_Phone_SocialMedia.jpg?itok=B0L4UILp 1x, /sites/default/files/styles/max_1920x1920/public/images/Stock_Phone_SocialMedia.jpg?itok=B0L4UILp 2x"/>
+              <source srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E 1x" media="all and (min-width: 960px) and (max-width: 1279px)" type="image/jpeg" width="960" height="640" data-srcset="/sites/default/files/styles/max_960x960/public/images/Stock_Phone_SocialMedia.jpg?itok=Z2m6Nvfn 1x, /sites/default/files/styles/max_1280x1280/public/images/Stock_Phone_SocialMedia.jpg?itok=r7LKJYLw 2x"/>
+              <source srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E 1x" media="all and (min-width: 640px) and (max-width: 959px)" type="image/jpeg" width="640" height="427" data-srcset="/sites/default/files/styles/max_640x640/public/images/Stock_Phone_SocialMedia.jpg?itok=zzol4aPS 1x, /sites/default/files/styles/max_960x960/public/images/Stock_Phone_SocialMedia.jpg?itok=Z2m6Nvfn 2x"/>
+              <source srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E 1x" media="(min-width: 0px)" type="image/jpeg" width="640" height="427" data-srcset="/sites/default/files/styles/max_640x640/public/images/Stock_Phone_SocialMedia.jpg?itok=zzol4aPS 1x, /sites/default/files/styles/max_960x960/public/images/Stock_Phone_SocialMedia.jpg?itok=Z2m6Nvfn 2x"/>
+                  <img decoding="async" class="media__element b-lazy b-responsive" loading="lazy" data-src="/sites/default/files/styles/max_960x960/public/images/Stock_Phone_SocialMedia.jpg?itok=Z2m6Nvfn" width="960" height="640" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%20960%20640&#039;%2F%3E" alt="hand tapping tablet" />
+
+  </picture>
+        </div>
+  </div>
+			
+        	</div>
+
+					</div>
+							</div>
+		</div>
+	</div>
+
+	<div class="layout layout--onecol">
+		<div class="layout-inner">
+			<div  class="layout-region layout-region--1">
+				
+
+<div class="block block--layout-builder block--inline-block block--wcm-block-text">
+	
+		
+			
+						<div class="field field--name-field-wcm-block-text-body field--type-text-with-summary field--label-hidden field__item"><h2>What is Generative AI?</h2><details><summary>What Is AI?</summary><div class="details-wrapper"><p>AI stands for Artificial Intelligence. You can think of it as teaching computers to think and reason in the way that humans can. AI learns from its experiences, just like you do when you learn new things. AI learns from data – looking at lots of examples and trying to find patterns. For example, if it sees millions of pictures of dogs, it learns what a dog looks like.</p><p>You are already acquainted with some forms of AI – most of us have used chatbots, many people use assistants like Siri and Alexa, and smart appliances, ranging from ovens to thermostats, are becoming increasingly common. Another form of AI you have likely used is facial recognition to unlock your phone or electronic device.</p></div></details><details><summary>“Traditional” AI vs. Generative AI</summary><div class="details-wrapper"><p>While the impact of generative AI is just beginning, “traditional” non-generative AI is already widely used:</p><ul><li><strong>Non-generative AI:</strong> Non-generative AI is also called traditional or predictive AI. It is programmed with strict rules or instructions to do specific tasks. For example, traditional AI might be good at recognizing pictures of cats, but it can’t create a new picture on its own. It needs someone to give it the rules or tell it what to do.</li><li><strong>Generative AI:</strong> the user enters prompts, and the tool can create new things like drawings, stories or even music all by itself. It's like an artist robot that can think up ideas and make something from scratch. <span>In the same example, Generative AI can not only recognize a cat, but can create a new image of a cat that has never existed before, based on images it has used to learn.</span></li></ul><p>The rise of generative AI is fueled by three key factors: massive amounts of data available online, the concentrated power of cloud computing, and advancements in neural networks, which mimic the human brain's learning patterns.</p><p><span>However, in order to best protect </span><a href="https://it.osu.edu/security/policies/institutional-data-policy"><span>institutional data</span></a><span>, it is a best practice to only use S1 (public) or S2 (internal) institutional data in </span><a href="https://ai.osu.edu/resources-buckeyes/approved-ai-tools"><span>approved AI tools</span></a><span>. S3 (private) and/or S4 (restricted) data can be included when using approved AI tools when necessary for your education, business or research use case. </span><a href="https://it.osu.edu/news/2023/04/28/security-and-privacy-statement-artificial-intelligence"><span>Read more about security guidelines for institutional data in AI on the Office of Technology and Digital Innovation website</span></a><span>.&nbsp;</span></p></div></details><p><br>&nbsp;</p><article class="align-left media media--type-image media--view-mode-half-width">
+  
+      
+						<div class="field field--name-field-media-image field--type-image field--label-hidden field__item">    <picture>
+                  <source srcset="/sites/default/files/styles/max_1280x1280/public/images/Stock%20Computer%20%2B%20Chalkboard.jpg?itok=0IgczPB6 1280w, /sites/default/files/styles/max_1920x1920/public/images/Stock%20Computer%20%2B%20Chalkboard.jpg?itok=qCZ6aeHW 1920w, /sites/default/files/styles/max_2560x2560/public/images/Stock%20Computer%20%2B%20Chalkboard.jpg?itok=YPyYcojQ 2650w, /sites/default/files/styles/max_3840x3840/public/images/Stock%20Computer%20%2B%20Chalkboard.jpg?itok=v0RuHLo5 3840w" media="all and (min-width: 1280px)" type="image/jpeg" sizes="40vw" width="1920" height="1280">
+              <source srcset="/sites/default/files/styles/max_640x640/public/images/Stock%20Computer%20%2B%20Chalkboard.jpg?itok=R2yyDugT 640w, /sites/default/files/styles/max_1280x1280/public/images/Stock%20Computer%20%2B%20Chalkboard.jpg?itok=0IgczPB6 1280w" media="all and (min-width: 960px) and (max-width: 1279px)" type="image/jpeg" sizes="50vw" width="640" height="427">
+              <source srcset="/sites/default/files/styles/max_480x480/public/images/Stock%20Computer%20%2B%20Chalkboard.jpg?itok=mrQgYPON 480w, /sites/default/files/styles/max_960x960/public/images/Stock%20Computer%20%2B%20Chalkboard.jpg?itok=GBGSLcMX 960w" media="all and (min-width: 640px) and (max-width: 959px)" type="image/jpeg" sizes="50vw" width="480" height="320">
+              <source srcset="/sites/default/files/styles/max_960x960/public/images/Stock%20Computer%20%2B%20Chalkboard.jpg?itok=GBGSLcMX 960w, /sites/default/files/styles/max_1920x1920/public/images/Stock%20Computer%20%2B%20Chalkboard.jpg?itok=qCZ6aeHW 1920w" media="(min-width: 0px)" type="image/jpeg" sizes="100vw" width="960" height="640">
+                  <img loading="eager" width="640" height="427" src="/sites/default/files/styles/max_640x640/public/images/Stock%20Computer%20%2B%20Chalkboard.jpg?itok=R2yyDugT" alt="computer sitting on a chalkboard covered with equations">
+
+  </picture>
+
+</div>
+			
+  </article>
+<h2>AI terms</h2><p class="tagline tagline--small">&nbsp;New AI terms are constantly coming to the forefront, existing terms are becoming more relevant, older terms are discarded, and new ones are being created. &nbsp;We update these terms continually, but this list should not be considered comprehensive. If you have a term to add to this glossary, contact us at <a href="mailto:ai@osu.edu">ai@osu.edu</a>. &nbsp;</p><details><summary>AI Terms</summary><div class="details-wrapper"><ul><li><strong>AI Agent/Agentic AI:</strong> An AI agent is an AI system that can take actions to complete tasks on behalf of a user. Agents may combine reasoning, memory, tool usage and automation to carry out multi-step work such as scheduling meetings, researching information or completing workflows.</li><li><strong>Alignment: </strong>Alignment refers to efforts to ensure AI systems behave in ways that match human values, goals and safety expectations.</li><li><span><strong>Artificial Intelligence/Machine Learning Models</strong></span><ul><li><span><strong>Supervised methods:</strong> This learning model is used in traditional AI (not generative AI). It uses a mechanism to tell the AI model what the targets it should focus on. A few examples include: numeric values; specification of whether something belongs to a specific class; ascertaining if something is correct or incorrect. The downside to this model is that it is task-specific and does not translate outside of the data provided.</span></li><li><span><strong>Unsupervised methods:</strong> This learning model is used in both traditional and generative AI. The model focuses on detecting patterns of characteristics and group together similar data. This artificial intelligence is best for clustering data.</span></li></ul></li><li><span><strong>Bias:</strong> </span><span dir="ltr">Bias in AI refers to situations where traditional or generative AI systems produce unfair or prejudiced results based on how the model was trained and/or designed. Bias is higher on more complex models with many variables to track, but using a larger quantity of high-quality data to train the model can lower both bias and variance. <strong>There are many types of biases AI users should be aware of, including:</strong></span><ul><li><span><strong>Sample Bias:&nbsp;</strong>sample is too small or not representative of the population</span></li><li><span><strong>Programmatic Morality Bias:&nbsp;</strong>AI doesn’t know right from wrong</span></li><li><span><strong>Ignorance Bias:&nbsp;</strong>users blindly believing results</span></li><li><span><strong>Overton Window Bias:&nbsp;</strong>AI can struggle to account for how views evolve over time, making it difficult to detect potential controversies</span></li><li><span><strong>Deference</strong> <strong>Bias</strong>: users believe AI has wisdom and are overly trustful of AI outputs</span></li></ul></li><li><span><strong>Context Window: </strong></span>This refers to the amount of text (tokens) an AI model can consider at once while generating responses. If your conversation or document is too long, older parts may “fall out” of the context window and be ignored.</li><li><span><strong>Decision Trees:</strong> Binary decision trees are used in traditional AI for classification tasks, even when the model includes a large number of features. Decision trees still are one of the most widely used types of AI models, especially when the input features can logically be split into two different parts (i.e., present or not present, A or B, true or false, etc.). Decision trees are not inherently generative AI models, as they do not generate new content but rather make decisions based on the learned patterns from the training data.</span></li><li><strong>Deepfake: </strong>A deepfake is AI-generated or AI-altered audio, video or images designed to realistically imitate a person or event. Deepfakes can be used for entertainment, education or misinformation.</li><li><strong>Embeddings: </strong>Embeddings are numerical representations of text, images or other data that help AI systems identify meaning and similarity. Embeddings are commonly used in semantic search, recommendation systems and RAG systems.</li><li><strong>Explainability / Interpretability: </strong>Explainability refers to how understandable an AI system’s decisions or outputs are to humans. Some AI systems are easier to interpret than others.</li><li><strong>Fine-Tuning: </strong>Fine-tuning is the process of taking a pre-trained AI model and further training it on specialized data so it performs better for a specific task, organization or subject area.</li><li><strong>Grounding: </strong>In generative AI, grounding means connecting AI output to a reliable source of truth (like a company’s internal database or verified content). Retrieval-Augmented Generation (RAG) is one way to do this. Grounding helps reduce hallucinations.</li><li><strong>Guardrails: </strong>Guardrails are safety controls or rules designed to prevent AI systems from generating harmful, inappropriate or inaccurate outputs. Examples include content moderation, privacy protections and usage restrictions.</li><li><span><strong>Hallucinations:</strong> Hallucinations are incorrect or misleading results that generative AI models sometimes produce. These errors can be caused by a variety of factors, including insufficient training data, incorrect assumptions made by the model, or biases in the data used to train the model.</span></li><li><strong>Human in the Loop (HITL): </strong>Human in the loop refers to systems where humans review, guide or approve AI outputs before action is taken. This helps improve accuracy, safety and accountability.</li><li><span><strong>Large Language Model (LLM):</strong> An LLM is a type of AI that has been trained on a vast amount of text data. Through this training, LLMs learn to understand and generate language much like humans do. Think of it as a very advanced version of auto-complete on your phone, but instead of predicting just the next word, it can predict entire sentences and paragraphs that make sense in the context of what has been written before. While all LLMs are a form of generative AI, </span>not all generative AI relies on LLMs.</li><li><strong>Latency: &nbsp;</strong>Latency refers to the time it takes for an AI model to respond after a prompt is submitted. Users may experience longer wait times with more complex requests or if many people are using the tool simultaneously.</li><li><strong>Multimodal:</strong> A multimodal model can process and generate more than one type of input or output—like text, images, video, or audio. For example, some AI tools can analyze a picture and describe it in natural language.</li><li><span><strong>Natural Language Processing (NLP)</strong>: NLP is a field of AI that focuses on the interaction between computers and humans through natural language. The ultimate objective of NLP is to enable computers to understand, interpret and generate human language in a valuable way – to determine intent, sentiment and meaning. It involves various tasks such as translating languages, responding to spoken commands and summarizing large volumes of text. Essentially, NLP allows machines to read, decipher, understand and make sense of the human languages in a manner that is both meaningful and useful. NLP is used with traditional and generative AI systems.</span></li><li><span><strong>Neural Networks:</strong> Inspired by the structure and function of the human brain, neural networks are a powerful machine learning method used in both traditional and generative AI. These networks consist of interconnected processing units, mimicking simplified neurons, organized in layers. This architecture allows them to excel at pattern recognition and learning from data. </span>All data inputs into a neural network get converted into numerical representations (vectors) for the network to process. This allows them to not only<span> group unlabeled data according to similarities among the inputs, but also to classify data when they have a labeled dataset to train on. Neural networks are used in both traditional AI and generative AI.</span></li><li><strong>Inference: </strong>Inference is the process where an AI model generates a response or prediction after it has already been trained. When a user submits a prompt to ChatGPT or another AI tool, the model is performing inference.</li><li><span><strong>Overfitting:</strong> In AI, overfitting is when a model learns the training data so well, including the random noise, that it can’t make accurate predictions on new, unseen data. It’s like the model is so focused on the details of the examples it was trained on that it can’t apply the rules to anything else. Overfitting can occur in both traditional and generative AI.</span></li><li><strong>Prompt: </strong>A prompt is the instruction, question or input a user gives to an AI tool. Prompts can be short (“Summarize this”) or detailed (“Write a professional email in a friendly tone using these bullet points…”). The quality and clarity of a prompt can significantly affect the quality of the AI’s response.</li><li><strong>Prompt Engineering:</strong> Prompt engineering is the practice of designing prompts in a way that helps AI produce more accurate, useful or structured outputs. This can include giving examples, specifying tone or format, or breaking a task into steps.</li><li><span><strong>Regression:</strong> Regression is widely used machine learning tool – both in traditional and generative AI – that enables AI to predict things, even before they have occurred, using signals that are available. It involves two kinds of variables: 1) those that are in our control or observed and 2) unknowns that are not in our control and cannot be currently observed. AI that uses regression most often uses multiple linear regression to consider a variety of variables to best predict the answer to questions. The AI model uses the data it has been trained on to find the best relationship between the predictors and the outcome so it can make accurate predictions for new data it hasn’t seen before.</span></li><li><span><strong>Retrieval Automated Generation (RAG):</strong> RAG is a solution for AI tools that return information for prompts. A RAG framework solves two of the biggest problems with LLMs – it enables LLMs to be more accurate and up-to-date by adding a "content store" that is meticulously maintained. It is particularly useful for knowledge-intensive tasks, information that has continuous updates and integration of domain-specific information. It can use only native data (for example only Ohio State data) as source material for an AI tool.</span></li><li><strong>Synthetic Data: </strong>Synthetic data is artificially generated data used instead of real-world data for training or testing AI systems. It can help protect privacy or supplement limited datasets.</li><li><strong>Temperature: </strong>Temperature is a setting in some AI tools that controls how predictable or creative the output is. Lower temperatures produce more consistent and focused responses, while higher temperatures can produce more varied or creative responses.</li><li><strong>Token: </strong>Tokens are chunks of text (like words or subwords) that an AI model processes to understand and generate language. For example, the sentence “ChatGPT is smart” might be broken into tokens like “Chat”, “G”, “PT”, “is”, “smart.” Knowing about tokens is important for understanding input length limits and pricing in some AI tools.</li><li><strong>Training Data: </strong>Training data is the information used to teach an AI model. This data may include text, images, audio, video or structured data. The quality and diversity of training data strongly affect how accurate and fair an AI system will be.</li><li><span><strong>Variance:</strong> In the context of AI, variance refers to how much the model’s predictions for a given data point vary each time it is run. It’s a measure of the model’s consistency. If a model has high variance, it means that its predictions are very sensitive to small changes in the training data, which can lead to overfitting.</span></li></ul></div></details><p>&nbsp;</p><p>&nbsp;</p><h2 id="LearnFree">Free learning resources</h2><p>LinkedIn and other industry leaders offer free courses that are available to help you learn about AI. Students may be interested in exploring <a href="https://style.mla.org/student-guide-to-ai-literacy/?gad_source=1&amp;gclid=Cj0KCQjw3vO3BhCqARIsAEWblcD2aohsGM1PUdQtXtIOqygJT4fussDo36c-bPN2TN9V76A5BHtGds8aAv_iEALw_wcB">MLA's Student Guide to AI Literacy</a>.</p><details><summary>Ohio State Courses in BuckeyeLearn</summary><div class="details-wrapper"><p><span>OTDI Training has developed several courses that are designed specifically for staff:</span></p><p><a href="https://go.osu.edu/intro-gen-ai"><span>Introduction to Generative AI</span></a><span>:</span> (<span>11 minutes) Learn the basics of generative AI and how it fits into your work at Ohio State</span></p><p><a href="https://go.osu.edu/ai-prompts-curriculum"><span>AI Prompt Curriculum</span></a>: 4 <span>classes to prompting expertise (76-minute curriculum)</span></p><ul><li><a href="https://go.osu.edu/ai-prompts-basics"><span>AI Prompts: The Basics of Effective Prompts</span></a>: (15 minutes) learn to write, refine, and ethically use effective AI prompts by understanding their purpose and key components.</li><li><a href="https://go.osu.edu/ai-prompts-constraints"><span>AI Prompts: Constraints</span></a><span>: (16 minutes) Sharpen your prompts using smart constraints like tone and personas</span></li><li><a href="https://go.osu.edu/ai-prompts-few-shot-prompts"><span>AI Prompts: Few-Shot Prompts</span></a><span>: (22 minutes) Develop prompts that improve decision‑making, maintain consistency across large datasets, and deliver more precise results</span></li><li><a href="https://go.osu.edu/ai-prompts-mitigating-bias"><span>AI Prompts: Mitigating Bias</span></a><span>: (23‑minutes) Recognize and reduce bias in AI‑generated outputs</span></li></ul><p><a href="https://ohiostate.csod.com/ui/lms-learning-details/app/course/e1dbf8be-d14e-4e8a-bbb5-d4ff340e46b2"><span>Generative AI: Identifying Use Cases</span></a><span>:&nbsp;(18 minutes) Discover how to identify when AI tools can take on tasks and how it can help you.</span></p><p><a href="https://go.osu.edu/using-ai-securely-and-ethically"><span>Generative AI: Using AI Securely and Ethically</span></a><span>:&nbsp;(18 minutes) Explore the security, privacy, and ethical considerations surrounding AI use.</span></p><p><a href="https://go.osu.edu/intro-agentic-ai"><span>Introduction to Agentic AI</span></a><span>:&nbsp;(12 minutes) Learn how agentic AI works and how to determine if agentic AI would be useful in your work.</span></p><p><a href="https://go.osu.edu/ai-for-univ-business-writing">AI for University Business Writing</a>: (15 minutes) <span>Assistance with writing is one of the most common ways to use AI tools. But how can you use it most efficiently and without making your writing sound like generic AI slop? When you have completed this &nbsp;course, you will be able to understand the security and ethical concerns of using AI tools; use AI tools to brainstorm and outline before writing your first draft; identify and edit telltale AI tool writing patterns; and explain the importance of human review.</span></p><div><div class="fai-CopilotMessage__content r1izxv8h ___7qar2c0 fcthzvy"><div><div><div class="___1vve6yh f22iagw f1vx9l62 f122n59 f3bhgqh f1mnxvew fly5x3f"><div class="___j4vmuw0 f22iagw f1vx9l62 f1869bpl fly5x3f fbc6vix"><div><div><div><div class="___1yop6mf f336tjw f9ijwd5 fz7g6wx fod5ikn f1s184ao"><div class="___1peis63 f22iagw f1063pyq f6jr5hl f1c88k3p"><div class="___4htdyp0 fz7g6wx fy77jfu"><div class="___1j4t0a1 f1lmfglv f1abmfm4"><div class="___nfp7g60 f22iagw f1vx9l62 fkmyikg fk15e71 f1k953kz f137keqj f1rncccw f1stllg3 f1w4kmmc f1tric3v f10dk5ic fx8cdsv f16nlwsl f1eookvz fhjrts3 fqugt2f f18d18k8 f1v1vhmp f1hdmul3 f198vjnp f2dshw1 fjpjndq fnmj2pj ffrrb40 f1mon110 fhajzam fimndk6 fxv4dng fb1rn9k f59wlhv f1xmfh30 f18yf5o5 fmr6chf fw8qy2q ff161sd f1qr7t77 f1yyogn1 foogchg fp5872b f1tpb8gf f1hdgrc8 f1vatr43 frkxccd f9pdzkb f158oiaz ft5kggy f5l4ui7 f13j03li f18xdoka f8off4e f1go6zfc f128n2ra f1jpxw2j f1lwd9n0 fy0b8hm f1g2633v fx4kvgi fkvolse f1gxrt3a f1os76ua f1js9cnw f1g87ej0 freluf8 f1yggaq6 f2i3chp f1151osp florpoh f35kzfz ftp9m57 f1e288vi fz62hnz fixvuys f1nmofwh fc1c6mv f18a2er7 fhvkrdl fhxnn68 f1oce4bo fvhlfan f7tc0t0 f1ngf1n2 ffrzq6x f1yjiq2m f1aqdgql f1huvaf f10ij78l f1k94sa4 fkmfumq f1jvzkyl f1eu24ob f1xbfc1f fmf0lwf f107dsy8 f3w566c f4648sl f13zpkng f7unjfp f8p1rz fzu6h1w f1i1bi6h f1smo7hi f1sk1xod f1kgogdq f1gjktkp ft608jz f1o9wiiv fg3xr24 fhd155k f1b8gl2e fg4b9ou flb4lo fdicbfk fgwcyh1 f1jbds0d f1fb9uea f1stuka4 fcrtu6g fwqh0xn f11w66yg f6e0e65 f1vvgu0 f1607507 fgct6un f1ec1nbe fg3fpv7 f1m9bycv f1ntoah8 f1b694rt faql4r2 fpjuhzh fmavl6h f1d9bsk fmzhlt0 f145l92p fwkyaqm f129obh1 f19la9g f127w39w fr0ux9m fxhidck f1cu4h9j f1wnbo7v f1eueg4z fy9c24f f1h2o91j f1iw08fq f19n0e5"><p><a href="https://go.osu.edu/rmsai">Risk Management Series: Command AI Safely</a> (1 hour, 26 minutes) Learn about protecting institutional data, selecting university-approved AI tools, writing effective prompts, understanding how large language models work, and avoiding risks such as inaccurate outputs, plagiarism and intellectual property concerns. <em>This training can be applied toward your annual security awareness requirement (ISPCR – IT16.1.1).</em></p></div></div></div></div></div></div></div></div></div></div></div></div></div><div class="fai-CopilotMessage__actions rmlvq19 ___7qar2c0 fcthzvy">&nbsp;</div></div></div></details><details><summary>Free courses from LinkedIn Learning</summary><div class="details-wrapper"><p>Faculty, staff and students can leverage LinkedIn Learning to get started with learning about AI – remember to <a href="https://buckeyelearn.osu.edu/">log in through BuckeyeLearn</a> to access courses at no cost. We recommend you get started with a few basic courses.</p><h3><span>AI Primer: BuckeyeLearn LinkedIn Learning Courses to start your GenAI journey&nbsp;</span></h3><ul><li><a href="https://www.linkedin.com/learning/search?keywords=get%20ready%20for%20generative%20ai&amp;promptType=LEARNER_TYPED&amp;u=74657426#:~:text=Summarize%20key%20learnings-,What%20is%20generative%20AI%3F,-Video"><strong>What is Generative AI</strong></a><strong>: </strong>(6 minutes, 35 seconds): This video offers a very brief overview of AI. It is most effective when combined with other courses, like those listed here.</li><li><a href="https://www.linkedin.com/learning/ai-productivity-hacks-to-reimagine-your-workday-and-career"><span><strong>AI Productivity Hacks to Reimagine Your Workday and Career</strong></span></a><strong>:</strong> (30 minutes): <span>This course shows you how new generative AI tools can automate routine tasks, boost productivity, enhance collaboration, and improve decision-making. Discover key hacks to reimagine your workday and create new workflows.</span></li><li><a href="https://ohiostate.csod.com/samldefault.aspx?returnurl=%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253d45a01000-8cb9-5965-acbe-0b714fe9c87a"><strong>Prompt Engineering: How to Talk to the AIs</strong></a> (29 minutes): This basic course explains prompts and how to write them to increase the likelihood of AI tools returning your desired results.</li><li><a href="https://www.linkedin.com/learning/ethics-in-the-age-of-generative-ai?u=74657426" id="ember680"><span><strong>Ethics in the Age of Generative AI</strong></span></a><span><strong> </strong></span>(39 minutes): This overview of ethical concerns related to AI focuses on prioritizing human-centered approaches, ethical considerations and maintaining human control over AI-generated content.&nbsp;</li></ul><h3>LinkedIn Learning Courses by Category</h3><p class="subhead"><span>Case Studies in AI</span></p><ul><li><a href="https://ohiostate.csod.com/samldefault.aspx?returnurl=%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253d5f2283b5-bb62-5058-914b-6f34a826dec9"><span>Artificial Intelligence for Students</span></a></li><li><a href="https://ohiostate.csod.com/samldefault.aspx?returnurl=%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253d62938423-1803-5d11-b033-92939eb9382b"><span>Understanding Bias in AI</span></a></li><li><a href="https://ohiostate.csod.com/samldefault.aspx?returnurl=%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253da8ee8dd4-7a20-54f6-b86a-0039adc75689"><span>Artificial Intelligence Case Studies in Different Business Industries</span></a></li><li><a href="https://ohiostate.csod.com/samldefault.aspx?returnurl=%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253deb65ef83-8830-570b-a78e-86980a6aa792"><span>Digital Technologies Case Studies: AI, IOT, Robotics, Blockchain</span></a><span>&nbsp;</span></li></ul><p class="subhead"><span>Ethics in AI</span></p><ul><li><a href="https://ohiostate.csod.com/samldefault.aspx?returnurl=%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253d5d3a4d0a-2820-5396-9669-cfc7f7d9645e"><span>AI Show: Being Responsible with Generative AI</span></a></li><li><a href="https://ohiostate.csod.com/samldefault.aspx?returnurl=%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253d133d37c7-51d3-5957-9070-72a2eb3561bf"><span>AI Ethics: Disability-Centered Frameworks</span></a></li><li><a href="https://ohiostate.csod.com/samldefault.aspx?returnurl=%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253db9b10ee9-05ff-5fd1-a1fd-42853eeeb121"><span>Compliance and Regulations for Generative AI</span></a><span>&nbsp;</span></li></ul><p class="subhead"><span>AI and Research</span></p><ul><li><a href="https://ohiostate.csod.com/samldefault.aspx?returnurl=%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253d8e2d7507-c2a3-5b64-ba9c-2d22689d13dc"><span>Using AI in Research Projects</span></a></li><li><a href="https://ohiostate.csod.com/samldefault.aspx?returnurl=%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253d45e9038c-616b-5198-9978-717866992b67"><span>How to Research and Write Using Generative AI Tools</span></a><span>&nbsp;</span></li></ul><p class="subhead"><span>AI and Cloud Services</span></p><ul><li><a href="https://ohiostate.csod.com/samldefault.aspx?returnurl=%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253df49be58a-aaeb-54b4-b34b-0585b1aae8be"><span>Understanding Generative AI in Cloud Computing: Services and Use Cases</span></a></li><li><a href="https://ohiostate.csod.com/samldefault.aspx?returnurl=%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253dd096f4e3-09e5-5ea0-8e82-93d3c7620a53"><span>Delivering Data-Driven Decisions with AWS: Applying Machine Learning, Data Engineering, and Generative AI</span></a></li><li><a href="https://ohiostate.csod.com/samldefault.aspx?returnurl=%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253dac589970-9ed4-5305-ba50-c2fea68764e8"><span>Azure OpenAI: Generative AI Models and How to Use Them</span></a></li><li><a href="https://ohiostate.csod.com/samldefault.aspx?returnurl=%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253dca4be31a-5d91-599c-9fc0-42a16d2eedee"><span>Google Cloud Platform for Machine Learning Essential Training</span></a><span>&nbsp;</span></li></ul><p>You can also find helpful Copilot courses from LinkedIn Learning through BuckeyeLearn, but many of these courses highlight features that are not yet available through Ohio State’s version of Copilot.</p><p>&nbsp;</p></div></details><details><summary>Free courses from industry leaders</summary><div class="details-wrapper"><p>Since AI is still new to most of us, service providers are interested in educating the public to encourage adoption of AI tools. Here are some a few places that you can find free courses to build knowledge and sharpen your skills:</p><ul><li><a href="https://aws.amazon.com/training/learn-about/machine-learning/" target="_blank"><span>Amazon&nbsp;Web Services</span></a></li><li><a href="https://www.edx.org/course/google-ai-for-anyone?index=product&amp;queryID=20f255a72e55f01f6dbb7ba10089489d&amp;position=3" target="_blank"><span>Google AI for Anyone</span></a></li><li><a href="https://www.coursera.org/specializations/ai-foundations-for-everyone" target="_blank"><span>IBM AI Foundations for Everyone</span></a></li><li><a href="https://www.intel.com/content/www/us/en/developer/topic-technology/artificial-intelligence/training/overview.html" target="_blank"><span>Intel</span></a></li><li><span>Microsoft: Courses geared to both students and instructors</span><ul><li><a href="https://learn.microsoft.com/en-us/training/paths/ai-education/">AI for educators</a></li><li><a href="https://learn.microsoft.com/en-us/training/modules/empower-educators-explore-potential-artificial-intelligence/">Empower educators to explore the potential of artificial intelligence</a></li></ul></li></ul></div></details></div>
+			
+	</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="layout__section--gray layout__section--top-pad layout layout--onecol">
+		<div class="layout-inner">
+			<div  class="layout-region layout-region--1">
+				
+
+<div class="block block--layout-builder block--inline-block block--wcm-block-text">
+	
+		
+			
+						<div class="field field--name-field-wcm-block-text-body field--type-text-with-summary field--label-hidden field__item"><h2>Prompting for Higher Education: Best Practices&nbsp;</h2><p>Prompt engineering is an exciting area that is developing as the GenAI ecosystem grows. To get started with simple prompts, <a href="https://ai.osu.edu/prompt-library">visit our prompt library</a>. Prompts guide generative GenAI tools, like ChatGPT, Gemini or Copilot, to produce specific outputs or complete tasks based on your instructions. These sections provide tips for writing prompts. Assume that all references to "AI" in this section are specifically referring to Generative Artificial Intelligence.</p><details><summary>The Anatomy of an AI Prompt: Be Specific and Minimize Assumptions</summary><div class="details-wrapper"><p>By default, AI tends towards broad, general responses. To guide AI to more specific, and therefore more likely to be useful, responses include, at minimum, these 4 main components when creating a prompt: Goal, Context, Source, Expectations. Remember, the more information you provide an AI tool, the better it can meet your request. &nbsp;</p><ul><li>Goal: What response do you want (i.e., bulleted list, data table, paragraph, image, etc.)?</li><li>Context: Why do you need the information and who is involved (i.e., instructor, student, other staff, management, etc.)?</li><li>Source: Which information sources or samples should be used (i.e., existing spreadsheets, background information, etc.)?</li><li>Expectations: How should the AI respond (i.e., use simple or complex language, explain something in laymen’s terms, use a certain tone, etc.)?</li><li>Additional Information: &nbsp;The more information and constraints you provide to the AI the better the results will be.</li></ul><p>Being specific in prompting will also help minimize the assumptions the AI makes in creating a response to a prompt. Think of your prompt as a set of clear instructions. The more detailed it is, the better the AI can perform each task, resulting in higher quality output.</p></div></details><details><summary>4 Steps to Writing Great AI Prompts</summary><div class="details-wrapper"><ol><li><strong>Learn About Your Prompt’s Subject:</strong> Understand the subject matter to write a specific and precise prompt. This background knowledge can help you avoid issues such as AI-generated hallucinations (believable, but incorrect or entirely made-up outputs) and misinformation. Having background knowledge also helps you to evaluate the quality and accuracy of the AI's response. &nbsp;</li><li><strong>Refine, Iterate and Experiment with Prompting Styles:</strong> You often won’t get a perfect response on the first try. Refine your prompt and try again. Use "iterative refinement," a technique that involves providing feedback on the AI's responses and requesting improvements. Many successful prompting sessions evolve into dialogues through the refining process. Refining may even involve changing the conversation style. For example, you can try asking the tool to be more creative or more precise in generating a response.</li><li><strong>Keep Your Audience in Mind:</strong> As you refine your prompt, ensure the generated content aligns with your target audience. Consider their knowledge level and adjust the complexity as needed. Don't be afraid to explicitly tell the AI who you're creating the content for. &nbsp;</li><li><strong>Ethical Considerations:</strong> The ethical implications of AI in education are crucial. Be mindful of issues like data security, privacy and copyright concerns. Always be transparent regarding your use of AI tools. &nbsp;&nbsp;</li></ol><p><br>In summary, remember to do the following when prompting AI: &nbsp;&nbsp;</p><ul><li><strong>Be clear and concise:</strong> State your desired outcome or question in a straightforward manner. &nbsp;</li><li><strong>Provide context: </strong>The more information you give the AI about the topic, the better it can tailor its response. &nbsp;</li><li><strong>Use specific language:</strong> Avoid ambiguity. The more precise your terms, the more focused the AI's output will be.</li><li><strong>Refine and iterate:</strong> Don't be afraid to experiment with different prompts to achieve the best results. &nbsp;&nbsp;</li></ul></div></details><details><summary>Writing Inclusive Photo Prompts</summary><div class="details-wrapper"><p>It’s important to be aware that AI has biases that impact its responses. If an AI model is trained on a dataset that lacks inclusivity and diversity, biases can emerge. If you experiment with headshot generating apps, a popular alternative to the time and cost involved with hiring a professional photographer for a business headshot, you will likely notice that the results are over filtered and lack nuance.&nbsp;</p><p>One company that has articulated this issue particularly well is Dove Soap, a Unilever brand that is well known for its inclusive “Real Beauty” advertising campaign. The <a href="https://assets.unileversolutions.com/v1/125422237.pdf">Real Beauty Prompt Playbook</a> does a great job of offering tips on how to create images on the most popular generative AI programs that are representative of a more inclusive population. It also has a glossary of terms to make your prompting more inclusive.</p><p><span>This content is for educational purposes only and should not be construed as a endorsement or recommendation of Dove/Unilever brands.</span></p></div></details><details><summary>Administrative Resource Center (ARC) Prompt Training Materials</summary><div class="details-wrapper"><p>REMINDER: You must use your university log in to access this content.</p><p><a href="https://admin.resources.osu.edu/google-productivity-services/gemini-chat" hreflang="en">Gemini Chat</a></p><p><a href="https://admin.resources.osu.edu/microsoft-365/microsoft-365-copilot-in-app/prompting-in-copilot">Prompting for Microsoft Copilot</a></p><p><a href="https://admin.resources.osu.edu/microsoft-365/microsoft-365-copilot-in-app/copilot-prompt-gallery" hreflang="en">Copilot Prompt Gallery</a></p><p><a href="https://admin.resources.osu.edu/copilot-with-data-protection/tip-for-successful-usage-of-prompting" hreflang="en">Tips for Successful Usage of Prompting</a></p><p><a href="https://admin.resources.osu.edu/microsoft-365/microsoft-365-copilot-in-app/copilot-in-excel-prompting" hreflang="en">Copilot in Excel Prompting Ideas</a></p><p><a href="https://admin.resources.osu.edu/microsoft-365/microsoft-365-copilot-in-app/copilot-prompt-gallery" hreflang="en">Copilot Prompt Gallery</a></p><p><a href="https://admin.resources.osu.edu/microsoft-365-formerly-office-365/copilot-for-microsoft-365/curating-a-collection-of-free-microsoft" hreflang="en">Curating a collection of free Microsoft Copilot prompts</a></p></div></details><details><summary><span lang="EN-US">Sample Higher Ed Prompts You Can Try</span></summary><div class="details-wrapper"><p>Try some of the prompts below to start getting acquainted with AI. Seeing the answers will give you an idea of what kinds of responses you can expect when writing prompts for AI tools. These are some good samples that will demonstrate how being specific in writing your prompts can help you get responses in the way that is most helpful to you.&nbsp;</p><p>Create a rubric for a term paper 1000-level college course on creative writing. Students are asked to write their own story for this term paper. The rubric should have five components and each component should be graded on a 1-5 scale. &nbsp;&nbsp;</p><p>I need help studying for a biology quiz on the parts of the cell and their functions. Please quiz me. &nbsp;&nbsp;</p><p>Create a workout plan for a 35-year-old women. This workout plan should include three days per week of strength training and three days per week of cardio. Each day should have different exercises. The goals of this program are to increase overall fitness. &nbsp;&nbsp;</p><p>I’m starting my first job and need outfit ideas. I am a 24-year-old male, and the work environment is business casual. Please provide images and descriptions of potential outfits. &nbsp;&nbsp;</p><p>Write a SQL query on how to connect these two prompts: SELECT "email","points"&nbsp;<br>FROM &nbsp; "user" LIMIT &nbsp;100000 and SELECT "achievementid", "title", "authoremail"&nbsp;<br>FROM &nbsp; "achievement" LIMIT &nbsp;10000 &nbsp;</p><p>Draft an email to my boss to update her on a project I have been working on. Here is relevant information about the project [Insert Text]. &nbsp;&nbsp;</p><p>Generate 3-5 bullet points to prepare me for a meeting with Client X to discuss their next branding campaign. Generate the bullet points as a summary of this text: [Insert Text]. Please use simple language.</p></div></details></div>
+			
+	</div>
+
+			</div>
+		</div>
+	</div>
+
+	</div>
+
+</article>
+
+  </div>
+
+		</div>
+	
+									</div>
+
+			</div>
+
+			
+							<div class="bux-grid__cell bux-grid__cell--12 bux-grid__cell--1@md"></div>
+					</div>
+	</div>
+</main>
+
+	
+
+			<div class="region region-content-after">
+			<div class="views-element-container" id="block-wcm-bux-views-block-bottom-banner-block-1">
+  
+    
+      <div region="content_after"><div class="js-view-dom-id-2080865d537635482209857494bc55a7fdee95f92d6a5f9082a311a52b68c4af">
+  
+  
+  
+
+  
+  
+  
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+		</div>
+	
+
+	
+
+
+		
+<footer class="bux-footer bux-footer--light">
+	<div class="bux-container bux-grid bux-grid--footer">
+		<div class="bux-footer__col bux-footer__col--left bux-grid__cell bux-grid__cell--12 bux-grid__cell--5@md">
+			<div class="bux-footer__logo">
+				<a href="http://osu.edu" target="_blank">
+                        <picture>
+        <source srcset="/themes/wcm-osu/wcm_bux/design-system/bux/images/osu-logos/horiz/osu-horiz-white.svg" media="(prefers-color-scheme: dark)" class="bux-osu-nav__osu-logo-img" />
+        <source srcset="/themes/wcm-osu/wcm_bux/design-system/bux/images/osu-logos/horiz/osu-horiz-gray.svg" media="(prefers-color-scheme: light)" class="bux-osu-nav__osu-logo-img" />
+        <img src="/themes/wcm-osu/wcm_bux/design-system/bux/images/osu-logos/navbar/osu-navbar.svg" alt="The Ohio State University Homepage" class="bux-osu-nav__osu-logo-img" />
+        </picture>
+        				</a>
+			</div>
+			<div class="bux-footer__contact bux-footer__contact--address">
+				<p class="bux_footer__site-name">
+										Artificial Intelligence at Ohio State
+				</p>
+															</div>
+
+							<div class="bux-footer__contact bux-footer__contact--email-phone">
+					<hr/>
+											<p class="bux_footer__email"><a class="bux-link" href="mailto:AI@osu.edu">AI@osu.edu</a></p>
+																			</div>
+					</div>
+
+		<div class="bux-footer__col bux-footer__col--right bux-grid__cell bux-grid__cell--12 bux-grid__cell--7@md">
+
+    
+			<div class="bux-footer__fine-print">
+				<div class="bux-footer__ada">
+                        <p>If you have a disability and experience difficulty accessing this content please call the Accessibility Helpline at <a href="tel:+1614-292-5000">614-292-5000</a>.</p>
+				</div>
+				<div class="bux-footer__links">
+                    <ul>
+                        <li class="bux_footer__link"><a class="bux-link" href="https://it.osu.edu/privacy">Privacy Statement</a></li>
+                        <li class="bux_footer__link"><a class="bux-link" href="https://go.osu.edu/nondiscrimination-notice">Non-discrimination Notice</a></li>
+                        <li class="bux_footer__link"><a id="ot-sdk-btn" class="ot-sdk-show-settings bux-link">Review Cookie Settings</a></li>
+                                                    <li class="bux_footer__link"><a class="bux-link" href="https://www.ai.osu.edu/user/login">Login</a></li>
+                                            </ul>
+				</div>
+				<div class="bux-footer__copyright">© 2026 The Ohio State University</div>
+			</div>
+		</div>
+	</div>
+	</footer>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/19","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJxtkOFuwyAMhF8oiR8pMsataEyMMEnGnn6U0UlT--fk4zuBOSf4XcE9deoKJGgmwcrwoujHmFTqLYi8bNYYjIfLeBvTxS5N7qCNK68onAv8c419wV3UocxWqrBNpJmBNCbdeS-2tMQ8u8zoKR_RfeYh4p0_Iwn79kYuimunase84-kw_2Z8PhLKQiqCqX1IsOpRWjaI5wzl0oZWYypB9xf1wUhPzhXa9Y1PkX1AaP0Uzgth6uHWJG3QdelNWrXCERy2d87Al0HXJao_hKexIzz3fNifHW2RvR097AfgIq4F","theme":"wcm_bux","theme_token":null},"ajaxTrustedUrl":[],"blazy":{"loadInvisible":false,"offset":100,"saveViewportOffsetDelay":50,"validateDelay":25,"container":"","loader":true,"unblazy":false,"visibleClass":false},"blazyIo":{"disconnect":false,"rootMargin":"0px","threshold":[0,0.25,0.5,0.75,1]},"slick":{"accessibility":true,"adaptiveHeight":false,"autoplay":false,"autoplaySpeed":3000,"pauseOnHover":true,"pauseOnDotsHover":false,"pauseOnFocus":true,"arrows":true,"downArrow":false,"downArrowTarget":"","downArrowOffset":0,"centerMode":false,"centerPadding":"50px","dots":false,"dotsClass":"slick-dots","draggable":true,"fade":false,"focusOnSelect":false,"infinite":true,"initialSlide":0,"lazyLoad":"ondemand","mouseWheel":false,"randomize":false,"rtl":false,"rows":1,"slidesPerRow":1,"slide":"","slidesToShow":1,"slidesToScroll":1,"speed":500,"swipe":true,"swipeToSlide":false,"edgeFriction":0.35,"touchMove":true,"touchThreshold":5,"useCSS":true,"cssEase":"ease","cssEaseBezier":"","cssEaseOverride":"","useTransform":true,"easing":"linear","variableWidth":false,"vertical":false,"verticalSwiping":false,"waitForAnimate":true},"buckeye_alert":{"feed_url":"\/\/www.osu.edu\/feeds\/emergency-alert.rss","messageClass":"grid-container","animate":1,"additional":""},"user":{"uid":0,"permissionsHash":"2858a783ed5dd2ae2a0470fc65365752c08a218e122345e30c76ea538f640409"}}</script>
+<script src="/sites/default/files/js/js_kXIGsgSfNmt33n-pH2XcvAkKgJ4kJzta46M5-dZUO0s.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=wcm_bux&amp;include=eJx1j-EKgzAMhF9I7SNJkkbpmpqSKs49_arrBoPtz3FfjoMcCjwOh6d2lzoSKEVCWRuLgm82qxxTEHmjaQqFGxlMze2MucONIh88grCt7otqdnceLPZJPXekxo40ZV14WctQ075HY_BkW8LfeUgw_6lKWOIr8bZlkIFUBHJ9tM6i6C4drlk7pfF85uzdygdnUQSplye2VW1d"></script>
+
+  </body>
+</html>

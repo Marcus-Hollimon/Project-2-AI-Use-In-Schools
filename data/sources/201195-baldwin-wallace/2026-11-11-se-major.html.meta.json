@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.bw.edu/academics/undergraduate/software-engineering/",
+ "final_url": "https://www.bw.edu/academics/undergraduate/software-engineering/",
+ "http_status": 200,
+ "content_type": "text/html",
+ "fetched_at": "2026-11-11T11:20:30-05:00",
+ "sha256": "585dadc665d8e8339745b4073322d4f6560ad2923fbea1fd089f5e5aeceacf34",
+ "bytes": 80519
+}

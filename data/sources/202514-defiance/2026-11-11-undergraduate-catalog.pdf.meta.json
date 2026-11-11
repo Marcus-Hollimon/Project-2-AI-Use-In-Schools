@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.defiance.edu/wp-content/uploads/2026/02/2025-2026-Undergraduate-Catalog-Revised-2-23-2026.pdf",
+ "final_url": "https://www.defiance.edu/wp-content/uploads/2026/02/2025-2026-Undergraduate-Catalog-Revised-2-23-2026.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T11:21:10-05:00",
+ "sha256": "746c3314cc2c07145926834afec736d006d51ef179e5f35bdeb5dd06aacd81a8",
+ "bytes": 1863945
+}

@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.bw.edu/academics/undergraduate/computer-science/",
+ "final_url": "https://www.bw.edu/academics/undergraduate/computer-science/",
+ "http_status": 200,
+ "content_type": "text/html",
+ "fetched_at": "2026-11-11T11:20:30-05:00",
+ "sha256": "92ad01346cb49745f74868a561414e81a750884049f2c8f4fd8e78dd91603abf",
+ "bytes": 91432
+}

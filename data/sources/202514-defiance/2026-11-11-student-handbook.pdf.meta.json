@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.defiance.edu/wp-content/uploads/2025/10/DC-Handbook-Insides-25-26-1.pdf",
+ "final_url": "https://www.defiance.edu/wp-content/uploads/2025/10/DC-Handbook-Insides-25-26-1.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T11:21:11-05:00",
+ "sha256": "8de2a7d1eadd8d7469362c2aa9563e0c930d62e025022c2604d4edc87066e6fd",
+ "bytes": 2765181
+}

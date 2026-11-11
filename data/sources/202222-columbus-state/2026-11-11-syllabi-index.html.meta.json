@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.cscc.edu/academics/syllabi/",
+ "final_url": "https://www.cscc.edu/academics/syllabi/",
+ "http_status": 200,
+ "content_type": "text/html",
+ "fetched_at": "2026-11-11T11:22:38-05:00",
+ "sha256": "8c11a1badd40f96083313ca434a0d9714f7acfd378b55e3e98222c9e9f8cd50e",
+ "bytes": 381325
+}

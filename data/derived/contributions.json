@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T16:14:27.738309Z",
+ "generatedAt": "2026-11-11T16:24:43.833005Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -945,20 +945,57 @@
    "text": "continue"
   },
   {
-   "time": "2026-11-11T16:13:33.276000Z",
-   "actor": "Claude",
-   "kind": "reply",
-   "turn": 19,
-   "text": "Cincinnati: university guidance saved; now checking its software engineering course site (EECE/CS 3093C) and the CS department page.",
-   "toolCalls": 73
-  },
-  {
    "time": "2026-11-11T16:14:27Z",
    "actor": "Claude",
    "kind": "milestone",
    "phase": "2",
    "text": "Main coding 6 of 10: Le Moyne-Owen, Luzerne, Cincinnati coded; all 11 coded schools pass check_study.py. Checker and save_page now handle Word (.docx) archives (study/docx_text.py writes the text beside them; new test; study 33/33). 5-hour 52% to 57%. Prepared the fifth /compact.",
    "evidence": "`progress/pilot-cost.md`, `data/coded/values.json`, `validation/runs/2026-11-11T16-12-28-115Z_study.json`"
+  },
+  {
+   "time": "2026-11-11T16:14:35Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Main coding 6 of 10: Le Moyne-Owen, Luzerne, Cincinnati coded",
+   "commit": "f856e3a",
+   "note": "written by Claude, pushed from Marcus's account"
+  },
+  {
+   "time": "2026-11-11T16:15:00.512000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 19,
+   "text": "Le Moyne-Owen, Luzerne and Cincinnati are coded, so 11 of the 15 schools are done. All 11 pass every check. The three took about 5 minutes and 5 points of the 5-hour limit (52% to 57%). That leaves plenty of room for the last 4 before the 2:40 PM reset.\n\n**What the three schools say:**\n- **Le Moyne-Owen:** I found nothing about AI. The student handbook, the 2025-26 catalog and the CS program page never mention student AI use, so every answer is \"none found\". The catalog has no software engineering course either.\n- **Luzerne:** Its Academic Honesty Policy, revised June 2024, lists \"using AI to complete an examination, assignment, or any other ancillary coursework without instructor authorization\" as misconduct. I coded that as **restrict**, under the codebook rule that a ban on unauthorized use counts as restrict. Instructors may write their own class rules, but this policy applies when they don't. The tone is cautionary, since AI appears only in the list of violations. Luzerne has no software engineering course.\n- **Cincinnati:** The university leaves AI rules to each instructor, and the tone is positive: its guidelines open with \"AI is a powerful partner.\" A June 2026 university guide tells students to \"treat it like a tutor, not a ghostwriter,\" so collaboration is coded explicit. Disclosure is left to instructors, so it's coded \"not stated\". The CS department says nothing about student AI use.\n\n**A tool change you should know about:** Luzerne's policy is a Word file, and the checker could only read web pages and PDFs. I extended it to read Word files the same way it reads PDFs, from a text copy saved next to the original. The original file's fingerprint is still checked. A new test covers this, and all 33 study tests pass. This was a change to the checker mid-study. It only adds a file type, and no existing check got looser.\n\n**Gaps:**\n- Cincinnati's software engineering course site now returns \"page not found\", so that answer is \"no public syllabus found\". The search tool's summary claimed the page had no AI section, but I couldn't read it myself, so I didn't use that claim.\n- A Luzerne student message from Oct 1 2026 announced an AI roundtable. The page no longer serves that message, so it isn't used as evidence. Both gaps are written in the search logs.\n\nEverything is committed and pushed (f856e3a). Context grew about 81k since the last compact, so this is the planned 3-school compact. Type this:\n\n```\n/compact Phase 2: 11 of 15 schools coded, 4 left starting with Ohio State (osu.edu). Read progress/STATE.md first: it has the coding procedure, the remaining schools with slugs and domains, codebook v2, and the lessons so far (including Word-file archives via study/docx_text.py). Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, and the rule not to retry blocked downloads with browser-like headers.\n```",
+   "toolCalls": 75
+  },
+  {
+   "time": "2026-11-11T16:15:27.192000Z",
+   "actor": "Marcus",
+   "kind": "command",
+   "text": "/compact Phase 2: 11 of 15 schools coded, 4 left starting with Ohio State (osu.edu). Read progress/STATE.md first: it has the coding procedure, the remaining schools with slugs and domains, codebook v2, and the lessons so far (including Word-file archives via study/docx_text.py). Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, and the rule not to retry blocked downloads with browser-like headers."
+  },
+  {
+   "time": "2026-11-11T16:16:29.759000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 20,
+   "text": "continue"
+  },
+  {
+   "time": "2026-11-11T16:24:08.477000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 20,
+   "text": "All 15 schools pass every check and the study tests pass 33/33. Now recording costs, updating STATE.md and committing before the compact.",
+   "toolCalls": 95
+  },
+  {
+   "time": "2026-11-11T16:24:12Z",
+   "actor": "Claude",
+   "kind": "milestone",
+   "phase": "2",
+   "text": "Main coding done: Ohio State, Baldwin Wallace, Defiance, Columbus State coded; all 15 schools pass check_study.py (All checks pass: True); study tests 33/33",
+   "evidence": "data/coded/checks.json; validation/runs/2026-11-11T16-24-02-902Z_study.json"
   }
  ]
 }

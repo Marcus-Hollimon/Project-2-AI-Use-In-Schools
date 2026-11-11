@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.ai.osu.edu/resources-buckeyes/responsible-use",
+ "final_url": "https://www.ai.osu.edu/resources-buckeyes/responsible-use",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T11:17:15-05:00",
+ "sha256": "e5a55d2a8d7fa74ff4e401c473ac9916fe488dd32d9572081008630dff8e1cfe",
+ "bytes": 52532
+}

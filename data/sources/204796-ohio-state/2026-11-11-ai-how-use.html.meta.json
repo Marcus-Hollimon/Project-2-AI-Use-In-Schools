@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.ai.osu.edu/resources-buckeyes/how-use-ai",
+ "final_url": "https://www.ai.osu.edu/resources-buckeyes/how-use-ai",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T11:17:45-05:00",
+ "sha256": "d08da14d43797a6d72a0ae1827cf16bf6c04245828f929c142767bb60ff2cf82",
+ "bytes": 67344
+}

@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://library.defiance.edu/c.php?g=1453712&p=10809168",
+ "final_url": "https://library.defiance.edu/c.php?g=1453712&p=10809168",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T11:21:10-05:00",
+ "sha256": "58aed9a8aab28d12dbb62ffd602028adf1a1f62d111cc336057ce0d5b8bb4988",
+ "bytes": 29151
+}

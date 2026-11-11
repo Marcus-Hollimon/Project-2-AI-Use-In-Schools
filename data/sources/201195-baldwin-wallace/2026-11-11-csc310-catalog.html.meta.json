@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://catalog.bw.edu/preview_course_nopop.php?catoid=14&coid=33552",
+ "final_url": "https://catalog.bw.edu/preview_course_nopop.php?catoid=14&coid=33552",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T11:19:26-05:00",
+ "sha256": "8a262fe4cabfcf365a1a54e52da933d5fabcf93da45176b52d35de6cbf7421c6",
+ "bytes": 46630
+}

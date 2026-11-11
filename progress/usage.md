@@ -41,3 +41,5 @@ Between 00:51:29 and 00:57:55 the 5-hour window moved 3 points. That covers one 
 Connector test (01:13 to 01:21): turning off the Claude Docs connector saved about 175 tokens per turn, not the thousands Claude predicted. MCP tool descriptions went up 464 (a Workflow tool appeared at the same time) and MCP instructions went down 639. The 20,000 tokens of MCP tools are almost all built into the app (browser, computer control, app controls), which cannot be switched off from a session.
 | 2026-11-11T11:08:58-05:00 | after /compact (main coding, 7 schools next) | 52 | 14 | 89,371 |
 | 2026-11-11T11:14:27-05:00 | main coding 6 of 10 (11 of 15 coded), just before /compact | 57 | 15 | 170,108 |
+| 2026-11-11T11:16:38-05:00 | after /compact (main coding, 4 schools next) | 59 | 15 | 93,176 |
+| 2026-11-11T11:24:12-05:00 | main coding done (15 of 15 coded and passing), just before /compact | 66 | 16 | 195,190 |
