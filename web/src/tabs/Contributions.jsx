@@ -14,7 +14,7 @@ function Counts() {
     return { name, total: mine.length, byKind }
   })
   return (
-    <ul className="stats">
+    <ul className="stats" data-from="data/derived/contributions.json">
       {rows.map((r) => (
         <li key={r.name}>
           <strong>{r.total}</strong> entries by {r.name}:{' '}
@@ -85,7 +85,7 @@ export default function Contributions() {
 
   return (
     <>
-      <p>
+      <p data-claim="contributions-source">
         Built by <code>pipeline/build.py</code> from this project’s Claude Code transcripts (Marcus’s
         prompts and commands, Claude’s replies), <code>progress/log.md</code> (milestones),{' '}
         <code>progress/decisions.md</code> (Marcus’s decisions) and the git history (commits). Every
@@ -127,11 +127,11 @@ export default function Contributions() {
           Search <input type="search" value={filters.query} onChange={set('query')} />
         </label>
       </div>
-      <p className="muted" aria-live="polite">
+      <p className="muted" aria-live="polite" data-from="data/derived/contributions.json">
         Showing {shown.length} entries.
       </p>
       {days.map((d) => (
-        <section key={d.day} className="day">
+        <section key={d.day} className="day" data-from="data/derived/contributions.json">
           <h2>{d.day}</h2>
           <ol className="timeline">
             {d.entries.map((e, i) => (

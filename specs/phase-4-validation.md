@@ -27,9 +27,10 @@ Two kinds of text appear on the site:
    6 were deliberate mutations", "2.65 times") count as prose claims and need a test that
    recomputes them.
 
-Text that states no fact (headings, filter labels, "Showing 12 of 30 runs" style counters already
-covered by the filter tests) is marked `data-claim="none"` only where the claims test would
-otherwise flag it, and the register test lists every "none" so a reader can see what was exempted.
+Text that states no fact (headings, filter labels) is not checked. As built, `data-claim="none"`
+is allowed only on the small label above a page title (class `eyebrow`), and the test fails on any
+other use. Counters such as "Showing 12 of 30 runs" sit inside a `data-from` area naming the file
+they count, instead of being exempted.
 
 ## Found while surveying the site (fixed in this phase)
 Read at Phase 4 start, from the page code in `web/src/`:
@@ -61,6 +62,29 @@ Read at Phase 4 start, from the page code in `web/src/`:
    entries carry his code). No new test: it is a statement of how the project was run, and the
    timeline is the evidence.
 
+### Found during the build (also fixed)
+7. **The Token usage summary promised a "new session" comparison** the page does not have. It now
+   names only /clear and /compact.
+8. **Finding 2's own wording was false.** On Nov 8 the first web mutation was followed by a second
+   mutation, not a passing run. The sentence now says each mutation is followed by a passing run
+   of the same suite once the bug is removed.
+9. **Claude's first design for the mutation follow-up test could never pass**: a web test cannot
+   see the run it is part of, so the newest mutation always looked unanswered. The clean run
+   failed (`validation/runs/2026-11-11T17-42-46-143Z_web.json`, kept with a correction note). The
+   check moved to the pipeline as **C6**, for the same reason C5 lives there.
+10. **C3 failed on Marcus's /compact at 12:45**, which came right after a tool call he stopped. The
+    rejection and the interrupt note were in the context but never answered, so the transcript's
+    count was 508 tokens above the last response. C3 now allows a larger count only when such
+    unanswered records exist, and lists them; every other /compact must still match exactly.
+11. **"Before and after every reset" was no longer true**: no reading was taken just before the
+    12:45 /compact (the 5-hour window had run out), and the reading after it was taken late. The
+    Token usage page now names every reset with no reading just before it, computed from
+    `progress/usage.md`, and its reset table marks the row.
+12. **Claude reverted a page with `git checkout` while it held uncommitted work**, wiping the claim
+    marks on the Token usage page. Caught by checking the diff, restored from a backup copy made
+    beforehand; mutations after that were undone by copying a saved file back. Not a site error,
+    so it is not in `caught.json`.
+
 ## Design
 ### 1. The claims register: `validation/claims.json`
 One entry per claim:
@@ -84,8 +108,13 @@ Every factual prose element on the five pages carries `data-claim`; every data a
 3. Every `files` path exists. Every `tests` name is defined in that suite's test source
    (`web/src/*.test.jsx`, `pipeline/tests/`, `study/tests/`). Every `sources` entry has a url,
    a checked date and a paraphrase.
-4. The new numeric checks from the findings above (mutations followed by a passing run; a reading
-   around every reset; the Ohio count).
+4. The new numeric checks from the findings above (a reading around every reset, with exceptions
+   named; the Ohio count; the re-check line; the unrecorded test-command count). The mutation
+   follow-up became pipeline check C6 (finding 9).
+
+### 4b. Pipeline check C6 (added during the build)
+Every run labelled as a mutation (label starts with "mutation") has at least one failed test, and
+a later run of the same suite that is not a mutation passed. Pipeline test for C6.
 
 ### 4. Pipeline check C5 (run by `build.py`, after test runs are recorded)
 Every test named in the register **passed in the newest recorded run of its suite**. This runs in
@@ -117,14 +146,19 @@ for each (backed as is, reworded, or removed) in a "Review results" section of t
 recorded run that proves the tests pass.
 
 ## Acceptance checks (Claude)
-- [ ] `claims.test.jsx` passes in a recorded web run, and the whole web suite passes.
-- [ ] Mutation: a sentence added to a page without a register entry makes the claims test fail
-  (recorded run), then removed.
-- [ ] Mutation: a register entry pointing at a test name that does not exist fails (recorded run),
-  then removed.
-- [ ] Pipeline tests pass in a recorded run, including C5 and the unrecorded-run counter; build.py
-  reports C5 PASS.
-- [ ] Each outside source was opened in the browser pane and its paraphrase matches the page.
+- [x] `claims.test.jsx` passes in a recorded web run, and the whole web suite passes: 48 of 48,
+  `validation/runs/2026-11-11T19-49-22-555Z_web.json`.
+- [x] Mutation: a sentence added to a page without a register entry makes the claims test fail
+  (`2026-11-11T17-42-18-324Z_web.json`: 1 failed, the coverage test), then removed.
+- [x] Mutation: a register entry pointing at a test name that does not exist fails
+  (`2026-11-11T17-42-41-129Z_web.json`: 2 failed), then removed.
+- [x] Pipeline tests pass in a recorded run, including C5, C6, the C3 stopped-turn rule and the
+  unrecorded-run counter: 17 of 17, `2026-11-11T19-47-59-829Z_pipeline.json`. build.py reports
+  C1, C2, C3, C5, C6 and privacy all PASS (30 test commands recorded, 17 not recorded).
+- [x] Each outside source was read and its paraphrase matches it. The two platform.claude.com
+  pages and code.claude.com/docs/en/costs were opened in the browser pane. The caniuse page did
+  not render its table there, so its public data file on GitHub was read instead (the register
+  cites that file, not the caniuse page).
 - [ ] Live site after the push: the Validation tab shows the claims table and the errors-caught-
   outside-tests list (browser pane).
 - [ ] Review results written below.
@@ -139,4 +173,36 @@ Open the live site: https://marcus-hollimon.github.io/Project-2-AI-Use-In-School
 4. [ ] **Research findings.** The "Descriptive only" note says two Ohio schools were chosen by you.
 
 ## Review results
-(Filled in after the build.)
+Claude went through the register (`validation/claims.json`, 23 claims) on 2026-11-11 after the
+build. C5 PASS at the last build: every test named below passed in the newest recorded run of its
+suite (web `2026-11-11T19-49-22-555Z`, pipeline `2026-11-11T19-47-59-829Z`, study
+`2026-11-11T16-32-24-131Z`).
+
+| Claim | Verdict |
+|---|---|
+| overview-lede | Backed as is: roles in CLAUDE.md and decisions.md; no commit in the timeline carries Marcus's code. |
+| overview-cards | Backed as is: four Phase 3 tests compare each page with its file. |
+| overview-repo | Backed as is: the paths exist. |
+| research-lede | Backed as is: the four questions are the codebook's. |
+| research-descriptive | Reworded: now says 2 of the 5 Ohio schools were chosen by Marcus (finding 3), with a test. |
+| research-strata | Backed as is: draw_sample.py and SOURCES.md. |
+| research-links | Backed as is, with an outside source: caniuse data (Chrome 81, Edge 83, Firefox 131, Safari 16.1). |
+| research-refetch | Backed as is: a new test recomputes all three numbers from refetch-report.json. |
+| validation-lede | Backed as is. |
+| validation-scope | Reworded: "Nothing is left out" removed; the page states what the list does not hold, with the pipeline's count (finding 1). |
+| validation-mutations | Reworded (finding 8) and now checked by pipeline check C6 (finding 9). |
+| validation-claims | New in Phase 4; backed by the claims tests and C5. |
+| validation-caught-outside | New in Phase 4; a test checks every entry is complete and its evidence exists. |
+| validation-study | Backed as is: one study test per check. |
+| contributions-lede | Backed as is. |
+| contributions-source | Backed as is: the hide list is empty, now tested. |
+| tokens-lede | Reworded: the "new session" comparison removed (finding 7). |
+| tokens-thinking-cache | Backed as is, with outside sources: thinking counted in output; cache reads at 0.1x the input price (0.05x on Opus 5.5 and Sonnet 5.5). Cache reads being the largest class is now tested. |
+| tokens-dedup | Backed as is: pipeline tests and the session-1 audit. |
+| tokens-resets | Backed as is, with an outside source (costs page): /compact summarises the conversation. |
+| tokens-readings | Reworded twice: "every phase boundary" became "every phase start and before and after every reset" (finding 5), then exceptions are named from the data (finding 11). |
+| tokens-checks | Backed as is: one pipeline test per check. |
+
+Removed: none. Every factual paragraph, list item and definition on the five pages is either in
+this register or inside an area that names the file it is drawn from, and a recorded test fails
+otherwise.

@@ -1,0 +1,717 @@
+{
+  "suite": "web",
+  "runner": "vitest",
+  "command": "npm run test:record",
+  "label": "MUTATION: a claim points at a test that does not exist, a claims test must fail",
+  "startedAt": "2026-11-11T17:42:41.129Z",
+  "finishedAt": "2026-11-11T17:42:45.201Z",
+  "phase": 4,
+  "gitCommit": "3096c2c",
+  "uncommittedChanges": true,
+  "exitCode": 1,
+  "summary": {
+    "total": 49,
+    "passed": 47,
+    "failed": 2,
+    "skipped": 0
+  },
+  "report": {
+    "numTotalTestSuites": 11,
+    "numPassedTestSuites": 8,
+    "numFailedTestSuites": 3,
+    "numPendingTestSuites": 0,
+    "numTotalTests": 49,
+    "numPassedTests": 47,
+    "numFailedTests": 2,
+    "numPendingTests": 0,
+    "numTodoTests": 0,
+    "snapshot": {
+      "added": 0,
+      "failure": false,
+      "filesAdded": 0,
+      "filesRemoved": 0,
+      "filesRemovedList": [],
+      "filesUnmatched": 0,
+      "filesUpdated": 0,
+      "matched": 0,
+      "total": 0,
+      "unchecked": 0,
+      "uncheckedKeysByFile": [],
+      "unmatched": 0,
+      "updated": 0,
+      "didUpdate": false
+    },
+    "startTime": 1794418962067,
+    "success": false,
+    "testResults": [
+      {
+        "assertionResults": [
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address an empty address shows the overview",
+            "status": "passed",
+            "title": "an empty address shows the overview",
+            "duration": 2.622500000000173,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address address #/ opens page overview",
+            "status": "passed",
+            "title": "address #/ opens page overview",
+            "duration": 0.4052000000001499,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address address #/research opens page research",
+            "status": "passed",
+            "title": "address #/research opens page research",
+            "duration": 0.2117000000000644,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address address #/validation opens page validation",
+            "status": "passed",
+            "title": "address #/validation opens page validation",
+            "duration": 0.19869999999991705,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address address #/contributions opens page contributions",
+            "status": "passed",
+            "title": "address #/contributions opens page contributions",
+            "duration": 0.18599999999992178,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address address #/tokens opens page tokens",
+            "status": "passed",
+            "title": "address #/tokens opens page tokens",
+            "duration": 0.14999999999986358,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address an unknown page falls back to the overview instead of breaking",
+            "status": "passed",
+            "title": "an unknown page falls back to the overview instead of breaking",
+            "duration": 0.1981999999998152,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "tabFromHash: choosing the page from the address"
+            ],
+            "fullName": "tabFromHash: choosing the page from the address a missing slash still works (#tokens)",
+            "status": "passed",
+            "title": "a missing slash still works (#tokens)",
+            "duration": 0.1835000000000946,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees the overview is shown when no page is chosen",
+            "status": "passed",
+            "title": "the overview is shown when no page is chosen",
+            "duration": 97.37889999999993,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees opening #/research directly, as a hard refresh does, shows \"Research findings\"",
+            "status": "passed",
+            "title": "opening #/research directly, as a hard refresh does, shows \"Research findings\"",
+            "duration": 129.42160000000013,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees opening #/validation directly, as a hard refresh does, shows \"Validation evidence\"",
+            "status": "passed",
+            "title": "opening #/validation directly, as a hard refresh does, shows \"Validation evidence\"",
+            "duration": 163.08039999999983,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees opening #/contributions directly, as a hard refresh does, shows \"Timeline and contributions\"",
+            "status": "passed",
+            "title": "opening #/contributions directly, as a hard refresh does, shows \"Timeline and contributions\"",
+            "duration": 112.19599999999991,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees opening #/tokens directly, as a hard refresh does, shows \"Token usage\"",
+            "status": "passed",
+            "title": "opening #/tokens directly, as a hard refresh does, shows \"Token usage\"",
+            "duration": 31.76390000000015,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees clicking a menu tab switches the page and marks that tab as current",
+            "status": "passed",
+            "title": "clicking a menu tab switches the page and marks that tab as current",
+            "duration": 84.48159999999984,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees the menu lists deliverables 1 to 4 in assignment order",
+            "status": "passed",
+            "title": "the menu lists deliverables 1 to 4 in assignment order",
+            "duration": 8.620499999999993,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees the overview links to each deliverable exactly once",
+            "status": "passed",
+            "title": "the overview links to each deliverable exactly once",
+            "duration": 17.82619999999997,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "App: what a visitor sees"
+            ],
+            "fullName": "App: what a visitor sees the footer names the commit the page was built from",
+            "status": "passed",
+            "title": "the footer names the commit the page was built from",
+            "duration": 4.78410000000008,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          }
+        ],
+        "startTime": 1794418963366,
+        "endTime": 1794418964019.7842,
+        "status": "passed",
+        "message": "",
+        "name": "web/src/App.test.jsx"
+      },
+      {
+        "assertionResults": [
+          {
+            "ancestorTitles": [
+              "Claims register"
+            ],
+            "fullName": "Claims register every marked claim on the pages is in the register, and every register entry is on its tab",
+            "status": "passed",
+            "title": "every marked claim on the pages is in the register, and every register entry is on its tab",
+            "duration": 446.067,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Claims register"
+            ],
+            "fullName": "Claims register every paragraph, list item and definition on every page is a registered claim or drawn from a named file",
+            "status": "passed",
+            "title": "every paragraph, list item and definition on every page is a registered claim or drawn from a named file",
+            "duration": 420.6014,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Claims register"
+            ],
+            "fullName": "Claims register every claim names evidence that exists: files, test names in their suite, outside sources with a date",
+            "status": "failed",
+            "title": "every claim names evidence that exists: files, test names in their suite, outside sources with a date",
+            "duration": 12.441100000000006,
+            "failureMessages": [
+              "AssertionError: tokens-thinking-cache: web test \"a test that was never written\": expected [ …(40) ] to include 'a test that was never written'\n    at Proxy.<anonymous> (file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/vitest/dist/chunks/index.CZzC1gGg.js:1791:15)\n    at Proxy.<anonymous> (file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/vitest/dist/chunks/index.CZzC1gGg.js:1656:14)\n    at Proxy.methodWrapper (file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/chai/index.js:1737:25)\n    at C:/Claude Folder/Project-2-AI-Use-In-Schools/web/src/claims.test.jsx:90:101\n    at file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20"
+            ],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Claims register"
+            ],
+            "fullName": "Claims register the claims table lists every register entry with its C5 result",
+            "status": "passed",
+            "title": "the claims table lists every register entry with its C5 result",
+            "duration": 147.7546000000002,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Claims register"
+            ],
+            "fullName": "Claims register every entry in caught.json is complete and its evidence exists",
+            "status": "passed",
+            "title": "every entry in caught.json is complete and its evidence exists",
+            "duration": 146.36100000000033,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Numbers stated in prose"
+            ],
+            "fullName": "Numbers stated in prose the Research note counts the Ohio schools Marcus chose from sample.csv",
+            "status": "passed",
+            "title": "the Research note counts the Ohio schools Marcus chose from sample.csv",
+            "duration": 70.5657000000001,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Numbers stated in prose"
+            ],
+            "fullName": "Numbers stated in prose the re-check line matches refetch-report.json",
+            "status": "passed",
+            "title": "the re-check line matches refetch-report.json",
+            "duration": 97.52300000000014,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Numbers stated in prose"
+            ],
+            "fullName": "Numbers stated in prose every mutation run is followed by a passing run of the same suite",
+            "status": "failed",
+            "title": "every mutation run is followed by a passing run of the same suite",
+            "duration": 5.543300000000272,
+            "failureMessages": [
+              "AssertionError: no passing web run after \"MUTATION: unmarked sentence added to the Token usage page, a claims test must fail\": expected undefined to be +0 // Object.is equality\n    at C:/Claude Folder/Project-2-AI-Use-In-Schools/web/src/claims.test.jsx:159:88\n    at file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Claude%20Folder/Project-2-AI-Use-In-Schools/web/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+            ],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Numbers stated in prose"
+            ],
+            "fullName": "Numbers stated in prose the run list states the unrecorded test commands counted by the pipeline",
+            "status": "passed",
+            "title": "the run list states the unrecorded test commands counted by the pipeline",
+            "duration": 101.99589999999989,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Numbers stated in prose"
+            ],
+            "fullName": "Numbers stated in prose every prompt is published: the hide list is empty",
+            "status": "passed",
+            "title": "every prompt is published: the hide list is empty",
+            "duration": 1.8052000000002408,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Numbers stated in prose"
+            ],
+            "fullName": "Numbers stated in prose cache reads are the largest token class",
+            "status": "passed",
+            "title": "cache reads are the largest token class",
+            "duration": 0.26929999999993015,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Numbers stated in prose"
+            ],
+            "fullName": "Numbers stated in prose every phase has a first reading and every reset a reading before and after",
+            "status": "passed",
+            "title": "every phase has a first reading and every reset a reading before and after",
+            "duration": 0.8505000000000109,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          }
+        ],
+        "startTime": 1794418963366,
+        "endTime": 1794418964818.8506,
+        "status": "failed",
+        "message": "",
+        "name": "web/src/claims.test.jsx"
+      },
+      {
+        "assertionResults": [
+          {
+            "ancestorTitles": [
+              "Research findings"
+            ],
+            "fullName": "Research findings every question adds up to 10 national schools (2 per stratum) and 5 Ohio schools",
+            "status": "passed",
+            "title": "every question adds up to 10 national schools (2 per stratum) and 5 Ohio schools",
+            "duration": 3.920599999999922,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Research findings"
+            ],
+            "fullName": "Research findings each count equals a count taken directly from values.json and sample.csv",
+            "status": "passed",
+            "title": "each count equals a count taken directly from values.json and sample.csv",
+            "duration": 0.8792999999998301,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Research findings"
+            ],
+            "fullName": "Research findings the page shows the counts and says the findings are descriptive",
+            "status": "passed",
+            "title": "the page shows the counts and says the findings are descriptive",
+            "duration": 227.78330000000005,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Research findings"
+            ],
+            "fullName": "Research findings every quote has a live link (with a text fragment for web pages) and a saved copy that exists",
+            "status": "passed",
+            "title": "every quote has a live link (with a text fragment for web pages) and a saved copy that exists",
+            "duration": 218.28109999999992,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Research findings"
+            ],
+            "fullName": "Research findings every \"none found\" style value links to a search log that exists",
+            "status": "passed",
+            "title": "every \"none found\" style value links to a search log that exists",
+            "duration": 140.68349999999987,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Research findings"
+            ],
+            "fullName": "Research findings a text fragment matches the whole quote (never first,last words), escapes dashes, skips PDFs",
+            "status": "passed",
+            "title": "a text fragment matches the whole quote (never first,last words), escapes dashes, skips PDFs",
+            "duration": 0.37380000000007385,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Research findings"
+            ],
+            "fullName": "Research findings the group filter shows only that sample",
+            "status": "passed",
+            "title": "the group filter shows only that sample",
+            "duration": 174.80600000000004,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Validation"
+            ],
+            "fullName": "Validation lists exactly one entry per file in validation/runs",
+            "status": "passed",
+            "title": "lists exactly one entry per file in validation/runs",
+            "duration": 138.8291999999999,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Validation"
+            ],
+            "fullName": "Validation \"had failures\" shows only runs with failed tests, and each is under Errors caught",
+            "status": "passed",
+            "title": "\"had failures\" shows only runs with failed tests, and each is under Errors caught",
+            "duration": 146.82300000000032,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Validation"
+            ],
+            "fullName": "Validation phase and suite filters show only matching runs",
+            "status": "passed",
+            "title": "phase and suite filters show only matching runs",
+            "duration": 0.6322999999997592,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Validation"
+            ],
+            "fullName": "Validation searching a test name finds the runs that contain it",
+            "status": "passed",
+            "title": "searching a test name finds the runs that contain it",
+            "duration": 160.23370000000023,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Validation"
+            ],
+            "fullName": "Validation the study check table has all 15 schools, each cell matching checks.json",
+            "status": "passed",
+            "title": "the study check table has all 15 schools, each cell matching checks.json",
+            "duration": 135.35669999999982,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Contributions"
+            ],
+            "fullName": "Contributions with no filters, every entry is shown (replies under their prompts)",
+            "status": "passed",
+            "title": "with no filters, every entry is shown (replies under their prompts)",
+            "duration": 93.61740000000009,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Contributions"
+            ],
+            "fullName": "Contributions every prompt has its reply reachable from it",
+            "status": "passed",
+            "title": "every prompt has its reply reachable from it",
+            "duration": 0.7530000000001564,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Contributions"
+            ],
+            "fullName": "Contributions filtering by person shows only that person",
+            "status": "passed",
+            "title": "filtering by person shows only that person",
+            "duration": 221.41110000000026,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Contributions"
+            ],
+            "fullName": "Contributions every entry has a phase",
+            "status": "passed",
+            "title": "every entry has a phase",
+            "duration": 0.213799999999992,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Token usage"
+            ],
+            "fullName": "Token usage the four totals equal the sum of the per-response rows and are shown separately",
+            "status": "passed",
+            "title": "the four totals equal the sum of the per-response rows and are shown separately",
+            "duration": 36.67539999999963,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Token usage"
+            ],
+            "fullName": "Token usage the phase rows add up to the totals",
+            "status": "passed",
+            "title": "the phase rows add up to the totals",
+            "duration": 0.23860000000013315,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Token usage"
+            ],
+            "fullName": "Token usage the reset table has at least one /clear and one /compact row",
+            "status": "passed",
+            "title": "the reset table has at least one /clear and one /compact row",
+            "duration": 20.830000000000382,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          },
+          {
+            "ancestorTitles": [
+              "Token usage"
+            ],
+            "fullName": "Token usage every usage reading is in the readings table",
+            "status": "passed",
+            "title": "every usage reading is in the readings table",
+            "duration": 18.559900000000198,
+            "failureMessages": [],
+            "meta": {},
+            "tags": [],
+            "benchmarks": []
+          }
+        ],
+        "startTime": 1794418963367,
+        "endTime": 1794418965108.5598,
+        "status": "passed",
+        "message": "",
+        "name": "web/src/tabs.test.jsx"
+      }
+    ]
+  }
+}

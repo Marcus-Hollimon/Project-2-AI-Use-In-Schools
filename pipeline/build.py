@@ -114,6 +114,52 @@ def read_commits():
     return commits
 
 
+def read_runs():
+    """Every recorded test run, oldest first (file names start with the run's UTC start time)."""
+    runs = []
+    for path in sorted(glob.glob(os.path.join(ROOT, "validation", "runs", "*.json"))):
+        run = json.load(open(path, encoding="utf-8"))
+        run["file"] = os.path.basename(path)
+        runs.append(run)
+    return runs
+
+
+def check_claims(claims, runs):
+    """C5: each test named in the claims register passed in the newest recorded run of its suite.
+
+    A web test cannot see the result of the run it is part of, so this is checked here, after the
+    runs are recorded. One result per (claim, test)."""
+    newest = {}
+    for run in runs:
+        newest[run["suite"]] = run  # runs are oldest first, so the last one per suite wins
+    results = []
+    for claim in claims:
+        for t in claim.get("tests", []):
+            run = newest.get(t["suite"])
+            found = [a for f in (run or {}).get("report", {}).get("testResults", [])
+                     for a in f.get("assertionResults", []) if a.get("title") == t["test"]]
+            status = found[0]["status"] if found else "not in the newest run"
+            results.append({"claim": claim["id"], "suite": t["suite"], "test": t["test"],
+                            "run": run["file"] if run else None, "status": status, "pass": status == "passed"})
+    return results
+
+
+def check_mutations(runs):
+    """C6: every mutation run (label starting "mutation") failed, and a later run of the same suite
+    that is not a mutation passed. Checked here, after recording, because a test cannot see the run
+    it is part of (found 2026-11-11: a web test of this rule failed its own clean run)."""
+    results = []
+    for i, run in enumerate(runs):
+        if not re.match(r"mutation", run.get("label") or "", re.I):
+            continue
+        later = [r for r in runs[i + 1:] if r["suite"] == run["suite"] and not re.match(r"mutation", r.get("label") or "", re.I)]
+        passing = next((r for r in later if r["summary"]["failed"] == 0), None)
+        results.append({"run": run["file"], "suite": run["suite"], "label": run["label"],
+                        "failed": run["summary"]["failed"], "laterPassingRun": passing["file"] if passing else None,
+                        "pass": run["summary"]["failed"] > 0 and passing is not None})
+    return results
+
+
 def git_email():
     r = subprocess.run(["git", "config", "user.email"], cwd=ROOT, capture_output=True, text=True)
     return r.stdout.strip()
@@ -164,6 +210,17 @@ def main():
         "C1_context": tx.check_context(readings, responses),
         "C2_completeness": tx.check_completeness(walked["fileStats"], live),
         "C3_compact": tx.check_compacts(walked["boundaries"]),
+        "C5_claims": check_claims(json.load(open(os.path.join(ROOT, "validation", "claims.json"),
+                                                 encoding="utf-8"))["claims"], read_runs()),
+        "C6_mutations": check_mutations(read_runs()),
+    }
+    commands = walked["testCommands"]
+    checks["testCommands"] = {
+        "recorded": sum(1 for c in commands if c["kind"] == "recorded"),
+        "unrecorded": sum(1 for c in commands if c["kind"] == "unrecorded"),
+        "first": min((c["time"] for c in commands), default=None),
+        "rule": "shell commands Claude ran whose program is uv, python, pytest, npx, npm or vitest and that "
+                "name pytest, vitest, npm test or a recorder; recorded = through record_tests.py or test:record",
     }
     dedup = {k: sum(r[k] for r in responses) for k in tx.CLASSES}
     checks["C4_inflation"] = {"usageRows": walked["usageRows"], "uniqueResponses": len(responses),
@@ -221,7 +278,7 @@ def main():
                          for name, blob in blobs.items() for i, pat in enumerate(forbidden)]
     for name, blob in blobs.items():
         open(os.path.join(out_dir, name), "w", encoding="utf-8").write(blob + "\n")
-    all_pass = all(c["pass"] for key in ("C1_context", "C2_completeness", "C3_compact", "privacy") for c in checks[key])
+    all_pass = all(c["pass"] for key in ("C1_context", "C2_completeness", "C3_compact", "C5_claims", "C6_mutations", "privacy") for c in checks[key])
     checks["allPass"] = all_pass
     open(os.path.join(out_dir, "checks.json"), "w", encoding="utf-8").write(json.dumps(checks, indent=1) + "\n")
 
@@ -244,8 +301,10 @@ def main():
     print("Turns: %d prompts from Marcus" % len(walked["turns"]))
     if last:
         print("Context now (last response): %d tokens. Compare with the app's context number." % tx.context_size(last[-1]))
-    for key in ("C1_context", "C2_completeness", "C3_compact", "privacy"):
+    for key in ("C1_context", "C2_completeness", "C3_compact", "C5_claims", "C6_mutations", "privacy"):
         print("%-16s %s" % (key, "PASS" if all(c["pass"] for c in checks[key]) else "FAIL"))
+    print("Test commands in the transcripts: %d recorded, %d not recorded"
+          % (checks["testCommands"]["recorded"], checks["testCommands"]["unrecorded"]))
     print("All checks pass: %s" % all_pass)
     return 0 if all_pass else 1
 

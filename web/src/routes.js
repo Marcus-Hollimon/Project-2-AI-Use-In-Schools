@@ -41,7 +41,7 @@ export const TABS = [
     deliverable: 4,
     title: 'Token usage',
     summary:
-      'Tokens by project phase and by practice (/clear, /compact, new session), deduplicated and split into their four classes.',
+      'Tokens by project phase and around each /clear and /compact, deduplicated and split into their four classes.',
   },
 ]
 

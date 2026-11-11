@@ -22,10 +22,12 @@ function useCurrentTabId() {
 function Overview({ tab }) {
   return (
     <>
-      <p className="eyebrow">Project 2 · Agentic development with Claude Code</p>
+      <p className="eyebrow" data-claim="none">Project 2 · Agentic development with Claude Code</p>
       <h1>{tab.title}</h1>
-      <p className="lede">{tab.summary}</p>
-      <ol className="cards">
+      <p className="lede" data-claim="overview-lede">
+        {tab.summary}
+      </p>
+      <ol className="cards" data-claim="overview-cards">
         {TABS.filter((t) => t.deliverable).map((t) => (
           <li key={t.id}>
             <a className="card" href={hashFor(t.id)}>
@@ -37,7 +39,7 @@ function Overview({ tab }) {
           </li>
         ))}
       </ol>
-      <p className="note">
+      <p className="note" data-claim="overview-repo">
         Specs, progress logs, and every recorded test run are in the{' '}
         <a href={REPO_URL}>GitHub repository</a>.
       </p>
@@ -49,9 +51,11 @@ function Deliverable({ tab }) {
   const Page = PAGES[tab.id]
   return (
     <>
-      <p className="eyebrow">Deliverable {tab.deliverable}</p>
+      <p className="eyebrow" data-claim="none">Deliverable {tab.deliverable}</p>
       <h1>{tab.title}</h1>
-      <p className="lede">{tab.summary}</p>
+      <p className="lede" data-claim={`${tab.id}-lede`}>
+        {tab.summary}
+      </p>
       <Page />
     </>
   )

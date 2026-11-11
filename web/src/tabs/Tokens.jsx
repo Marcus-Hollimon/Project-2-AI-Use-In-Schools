@@ -10,7 +10,7 @@ function resetSummary(rows) {
   const clears = after('/clear')
   if (!compacts.length || !clears.length) return null
   return (
-    <p>
+    <p data-claim="tokens-resets">
       After a <strong>/clear</strong> the next reading showed {clears.map(fmt).join(', ')} tokens of
       context; after a <strong>/compact</strong> it showed {fmt(Math.min(...compacts))} to{' '}
       {fmt(Math.max(...compacts))}. Both throw away the conversation; a /compact keeps a written
@@ -25,11 +25,12 @@ function resetSummary(rows) {
 
 export default function Tokens() {
   const resets = resetRows()
+  const missedBefore = resets.filter((r) => r.noReadingJustBefore)
   const checks = ['C1_context', 'C2_completeness', 'C3_compact', 'privacy']
   return (
     <>
       <h2>All tokens, deduplicated</h2>
-      <table className="data" aria-label="Token totals">
+      <table className="data" aria-label="Token totals" data-from="data/derived/tokens.json">
         <thead>
           <tr>
             {CLASSES.map((c) => (
@@ -51,12 +52,12 @@ export default function Tokens() {
           </tr>
         </tbody>
       </table>
-      <p>
+      <p data-claim="tokens-thinking-cache">
         Thinking: {fmt(tokens.totals.thinking)} tokens, already counted inside output and never added
         on top. Cache reads dominate because every message re-sends the whole conversation, which the
         cache serves cheaply.
       </p>
-      <p className="callout" role="note">
+      <p className="callout" role="note" data-claim="tokens-dedup">
         <strong>Deduplicated.</strong> The transcripts repeat one response’s usage on several rows, and a
         resumed session copies old rows into a new file. The {fmt(inflation.usageRows)} usage rows hold{' '}
         {fmt(inflation.uniqueResponses)} distinct responses, each counted once. Summing rows instead
@@ -65,7 +66,7 @@ export default function Tokens() {
       </p>
 
       <h2>By phase</h2>
-      <table className="data" aria-label="Tokens by phase">
+      <table className="data" aria-label="Tokens by phase" data-from="data/derived/tokens.json">
         <thead>
           <tr>
             <th scope="col">Phase</th>
@@ -94,7 +95,7 @@ export default function Tokens() {
 
       <h2>/clear compared with /compact</h2>
       {resetSummary(resets)}
-      <table className="data" aria-label="Context resets">
+      <table className="data" aria-label="Context resets" data-from="data/derived/tokens.json progress/usage.md">
         <thead>
           <tr>
             <th scope="col">Reset</th>
@@ -109,7 +110,10 @@ export default function Tokens() {
           {resets.map((r) => (
             <tr key={r.after.time}>
               <th scope="row">{r.kind}</th>
-              <td>{eastern(r.before.time)}</td>
+              <td>
+                {eastern(r.before.time)}
+                {r.noReadingJustBefore && ' (none was taken just before this reset)'}
+              </td>
               <td>{eastern(r.after.time)}</td>
               <td>
                 {fmt(r.before.context)} → {fmt(r.after.context)}
@@ -128,11 +132,16 @@ export default function Tokens() {
       </table>
 
       <h2>Plan-limit readings</h2>
-      <p>
-        Read from the Claude app’s usage figures at every phase boundary and around every reset, and
-        written to <code>progress/usage.md</code>. Percentages are whole numbers, as the app shows them.
+      <p data-claim="tokens-readings">
+        Read from the Claude app’s usage figures at the start of every phase and before and after every
+        reset, and written to <code>progress/usage.md</code>. Percentages are whole numbers, as the app shows them.
+        {missedBefore.length === 0
+          ? ' Every reset has a reading taken just before it.'
+          : ` Exceptions: no reading was taken just before the ${missedBefore
+              .map((r) => `${r.kind} of ${eastern(r.time)}`)
+              .join('; ')}, so the table above shows the last earlier reading.`}
       </p>
-      <table className="data" aria-label="Plan-limit readings">
+      <table className="data" aria-label="Plan-limit readings" data-from="progress/usage.md">
         <thead>
           <tr>
             <th scope="col">Time</th>
@@ -160,7 +169,7 @@ export default function Tokens() {
       </table>
 
       <h2>Checks on these numbers</h2>
-      <ul className="checks">
+      <ul className="checks" data-claim="tokens-checks">
         {checks.map((id) => {
           const list = pipelineChecks[id]
           const ok = list.every((x) => x.pass)
@@ -184,7 +193,7 @@ export default function Tokens() {
         })}
       </ul>
       <h3>Known gaps</h3>
-      <ul>
+      <ul data-from="data/derived/tokens.json">
         {tokens.gaps.map((g) => (
           <li key={g.time + g.what}>
             {eastern(g.time)}: {g.what}

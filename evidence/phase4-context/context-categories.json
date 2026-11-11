@@ -1,0 +1,17 @@
+{
+ "what": "Context window breakdown read with the Claude app's get_usage tool right after the Phase 3 to 4 /compact (the reading at 2026-11-11T12:27:10-05:00 in progress/usage.md). Backs the Token usage sentence that most of what is left after a reset is fixed overhead.",
+ "readAt": "2026-11-11T12:27:10-05:00",
+ "tokensUsed": 90315,
+ "categories": {
+  "System tools": 41071,
+  "MCP tools": 19736,
+  "Messages": 11697,
+  "System prompt": 9681,
+  "Skills": 4910,
+  "MCP server instructions": 1700
+ },
+ "fixedOverhead": 77098,
+ "fixedOverheadIs": "every category except Messages (the conversation itself, here the /compact summary)",
+ "categoriesSum": 88795,
+ "unlisted": "the app listed categories summing to 88,795 of 90,315; the other 1,520 tokens were not broken down"
+}

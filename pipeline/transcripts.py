@@ -17,6 +17,28 @@ from datetime import datetime
 CLASSES = ("input", "cacheWrite", "cacheRead", "output")
 COMMAND_NAME = re.compile(r"<command-name>(.*?)</command-name>", re.S)
 COMMAND_ARGS = re.compile(r"<command-args>(.*?)</command-args>", re.S)
+SHELL_TOOLS = ("Bash", "PowerShell")
+TEST_STARTERS = ("uv", "python", "python3", "pytest", "npx", "npm", "vitest")
+TEST_WORDS = re.compile(r"\b(pytest|vitest)\b|record_tests\.py|^npm\s+(run\s+)?test(:record)?(\s|$)")
+RECORDERS = re.compile(r"record_tests\.py|test:record")
+
+
+def classify_test_command(command):
+    """"recorded", "unrecorded" or None for a shell command Claude ran.
+
+    A command is split into its parts (at newlines, ;, &&, || and |). A part runs tests when its
+    first word starts a program (uv, python, pytest, npx, npm, vitest) and it names a test runner or
+    a recorder, so `grep pytest file` or a commit message that mentions pytest does not count."""
+    found = None
+    for part in re.split(r"\n|;|&&|\|\||\|", command or ""):
+        part = part.strip()
+        words = part.split()
+        if not words or words[0] not in TEST_STARTERS or not TEST_WORDS.search(part):
+            continue
+        if RECORDERS.search(part):
+            return "recorded"
+        found = "unrecorded"
+    return found
 
 
 def parse_time(text):
@@ -87,6 +109,8 @@ def walk(files):
     events = []  # Marcus's slash commands and answers to Claude's questions
     ask_ids = set()
     tool_ids = set()
+    test_ids = set()
+    test_commands = []  # every shell command of Claude's that ran tests, and whether it was recorded
     segment = None
     turn = None
 
@@ -109,6 +133,7 @@ def walk(files):
         unanswered = [rows[a].get("timestamp") for a, b in zip(request_indexes, request_indexes[1:])
                       if not any(a < i < b for i in assistant_indexes)]
         last_response = None
+        after_last_response = []  # user records (tool results, prompts) the model never answered
         first_new = True
         for index, record in enumerate(rows):
             message = _message(record)
@@ -146,10 +171,14 @@ def walk(files):
                     "postTokens": meta.get("postTokens"),
                     "durationMs": meta.get("durationMs"),
                     "lastResponseContextPlusOutput": expected,
+                    "unansweredAfter": list(after_last_response),
                 })
                 segment["endReason"] = "/compact"
                 segment = new_segment(record.get("timestamp"), "/compact", session)
                 continue
+
+            if record.get("type") == "user" and not f.get("subagent") and message.get("content"):
+                after_last_response.append(record.get("timestamp"))
 
             if record.get("type") == "assistant" and usage:
                 mid = message.get("id")
@@ -163,8 +192,14 @@ def walk(files):
                     responses.append(entry)
                 if not f.get("subagent"):
                     last_response = classes
+                    after_last_response = []
                 for block in _blocks(message):
                     if block.get("type") == "tool_use":
+                        if block.get("name") in SHELL_TOOLS and block.get("id") not in test_ids:
+                            test_ids.add(block.get("id"))
+                            kind = classify_test_command((block.get("input") or {}).get("command"))
+                            if kind:
+                                test_commands.append({"time": record.get("timestamp"), "kind": kind})
                         if block.get("name") == "AskUserQuestion":
                             ask_ids.add(block.get("id"))
                         if turn is not None and block.get("id") not in tool_ids:
@@ -211,7 +246,8 @@ def walk(files):
         t["reply"] = "\n\n".join(t["reply"]).strip()
         del t["lastReplyId"]
     return {"responses": responses, "naive": naive, "usageRows": usage_rows, "segments": segments,
-            "boundaries": boundaries, "fileStats": file_stats, "turns": turns, "events": events}
+            "boundaries": boundaries, "fileStats": file_stats, "turns": turns, "events": events,
+            "testCommands": test_commands}
 
 
 def totals(responses, key):
@@ -275,10 +311,24 @@ def check_completeness(file_stats, live_session):
 
 
 def check_compacts(boundaries):
-    """C3: a boundary's tokens-before equals the last response's context plus its output, exactly."""
-    return [{"time": b["time"], "preTokens": b["preTokens"], "computed": b["lastResponseContextPlusOutput"],
-             "pass": b["preTokens"] is not None and b["preTokens"] == b["lastResponseContextPlusOutput"]}
-            for b in boundaries]
+    """C3: a boundary's tokens-before equals the last response's context plus its output, exactly.
+
+    One exception, seen on 2026-11-11 at 12:45 EST: when the turn was stopped, the tool result and the
+    interrupt note sit after the last response and were never sent to the model, so tokens-before is
+    larger. That passes only when such records exist and tokens-before is larger; the difference and
+    the records' times are listed."""
+    results = []
+    for b in boundaries:
+        pre, computed = b["preTokens"], b["lastResponseContextPlusOutput"]
+        unanswered = b.get("unansweredAfter") or []
+        exact = pre is not None and pre == computed
+        stopped = pre is not None and computed is not None and bool(unanswered) and pre > computed
+        r = {"time": b["time"], "preTokens": pre, "computed": computed, "pass": exact or stopped}
+        if stopped and not exact:
+            r["unansweredAfter"] = unanswered
+            r["difference"] = pre - computed
+        results.append(r)
+    return results
 
 
 def assign_phases(responses, readings):

@@ -329,6 +329,17 @@
    "responseTime": "2026-11-11T17:27:04.446Z",
    "nearestDifference": 0,
    "pass": true
+  },
+  {
+   "reading": "2026-11-11T19:47:36Z",
+   "app": 111661,
+   "between": [
+    110791,
+    111661
+   ],
+   "responseTime": "2026-11-11T19:47:32.726Z",
+   "nearestDifference": 0,
+   "pass": true
   }
  ],
  "C2_completeness": [
@@ -347,8 +358,8 @@
   {
    "session": "a9056776-4951-4636-a9ad-acb1dbccb955",
    "subagent": false,
-   "apiRequests": 492,
-   "uniqueResponses": 490,
+   "apiRequests": 566,
+   "uniqueResponses": 564,
    "unansweredRequests": [
     "2026-11-11T16:53:13.167Z",
     "2026-11-11T17:22:15.570Z"
@@ -412,22 +423,579 @@
    "preTokens": 224175,
    "computed": 224175,
    "pass": true
+  },
+  {
+   "time": "2026-11-11T17:45:03.485Z",
+   "preTokens": 209907,
+   "computed": 209399,
+   "pass": true,
+   "unansweredAfter": [
+    "2026-11-11T17:43:46.542Z",
+    "2026-11-11T17:43:46.544Z"
+   ],
+   "difference": 508
   }
  ],
+ "C5_claims": [
+  {
+   "claim": "overview-cards",
+   "suite": "web",
+   "test": "each count equals a count taken directly from values.json and sample.csv",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "overview-cards",
+   "suite": "web",
+   "test": "lists exactly one entry per file in validation/runs",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "overview-cards",
+   "suite": "web",
+   "test": "with no filters, every entry is shown (replies under their prompts)",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "overview-cards",
+   "suite": "web",
+   "test": "the four totals equal the sum of the per-response rows and are shown separately",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "research-descriptive",
+   "suite": "web",
+   "test": "every question adds up to 10 national schools (2 per stratum) and 5 Ohio schools",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "research-descriptive",
+   "suite": "web",
+   "test": "the page shows the counts and says the findings are descriptive",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "research-descriptive",
+   "suite": "web",
+   "test": "the Research note counts the Ohio schools Marcus chose from sample.csv",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "research-descriptive",
+   "suite": "study",
+   "test": "test_s4_other_domain_fails",
+   "run": "2026-11-11T16-32-24-131Z_study.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "research-links",
+   "suite": "web",
+   "test": "every quote has a live link (with a text fragment for web pages) and a saved copy that exists",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "research-links",
+   "suite": "web",
+   "test": "a text fragment matches the whole quote (never first,last words), escapes dashes, skips PDFs",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "research-links",
+   "suite": "study",
+   "test": "test_s2_archive_edited_after_saving_fails",
+   "run": "2026-11-11T16-32-24-131Z_study.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "research-refetch",
+   "suite": "web",
+   "test": "the re-check line matches refetch-report.json",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-lede",
+   "suite": "web",
+   "test": "lists exactly one entry per file in validation/runs",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-lede",
+   "suite": "web",
+   "test": "searching a test name finds the runs that contain it",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-lede",
+   "suite": "web",
+   "test": "the study check table has all 15 schools, each cell matching checks.json",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-scope",
+   "suite": "pipeline",
+   "test": "test_test_commands_are_counted_once_and_split_recorded_from_unrecorded",
+   "run": "2026-11-11T19-47-59-829Z_pipeline.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-scope",
+   "suite": "web",
+   "test": "the run list states the unrecorded test commands counted by the pipeline",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-mutations",
+   "suite": "pipeline",
+   "test": "test_each_mutation_needs_to_fail_and_a_later_passing_run_of_its_suite",
+   "run": "2026-11-11T19-47-59-829Z_pipeline.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-mutations",
+   "suite": "web",
+   "test": "\"had failures\" shows only runs with failed tests, and each is under Errors caught",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-claims",
+   "suite": "web",
+   "test": "every marked claim on the pages is in the register, and every register entry is on its tab",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-claims",
+   "suite": "web",
+   "test": "every paragraph, list item and definition on every page is a registered claim or drawn from a named file",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-claims",
+   "suite": "web",
+   "test": "every claim names evidence that exists: files, test names in their suite, outside sources with a date",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-claims",
+   "suite": "web",
+   "test": "the claims table lists every register entry with its C5 result",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-claims",
+   "suite": "pipeline",
+   "test": "test_claim_check_needs_each_backing_test_to_pass_in_the_newest_run_of_its_suite",
+   "run": "2026-11-11T19-47-59-829Z_pipeline.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-caught-outside",
+   "suite": "web",
+   "test": "every entry in caught.json is complete and its evidence exists",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-study",
+   "suite": "study",
+   "test": "test_valid_school_passes_every_check",
+   "run": "2026-11-11T16-32-24-131Z_study.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-study",
+   "suite": "study",
+   "test": "test_s1_altered_quote_fails",
+   "run": "2026-11-11T16-32-24-131Z_study.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-study",
+   "suite": "study",
+   "test": "test_s2_archive_edited_after_saving_fails",
+   "run": "2026-11-11T16-32-24-131Z_study.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-study",
+   "suite": "study",
+   "test": "test_s3_missing_fetch_record_fails",
+   "run": "2026-11-11T16-32-24-131Z_study.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-study",
+   "suite": "study",
+   "test": "test_s4_other_domain_fails",
+   "run": "2026-11-11T16-32-24-131Z_study.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-study",
+   "suite": "study",
+   "test": "test_s5_quote_over_40_words_fails",
+   "run": "2026-11-11T16-32-24-131Z_study.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-study",
+   "suite": "study",
+   "test": "test_c1_value_outside_codebook_fails",
+   "run": "2026-11-11T16-32-24-131Z_study.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-study",
+   "suite": "study",
+   "test": "test_c2_value_without_quote_fails",
+   "run": "2026-11-11T16-32-24-131Z_study.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-study",
+   "suite": "study",
+   "test": "test_c3_restrict_without_cue_fails_and_reason_overrides",
+   "run": "2026-11-11T16-32-24-131Z_study.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-study",
+   "suite": "study",
+   "test": "test_c4_missing_search_log_fails",
+   "run": "2026-11-11T16-32-24-131Z_study.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-study",
+   "suite": "study",
+   "test": "test_n1_none_found_without_second_searches_fails",
+   "run": "2026-11-11T16-32-24-131Z_study.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "validation-study",
+   "suite": "web",
+   "test": "the study check table has all 15 schools, each cell matching checks.json",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "contributions-lede",
+   "suite": "web",
+   "test": "filtering by person shows only that person",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "contributions-lede",
+   "suite": "web",
+   "test": "every entry has a phase",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "contributions-source",
+   "suite": "web",
+   "test": "every prompt has its reply reachable from it",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "contributions-source",
+   "suite": "web",
+   "test": "every prompt is published: the hide list is empty",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "contributions-source",
+   "suite": "pipeline",
+   "test": "test_user_records_that_are_not_prompts",
+   "run": "2026-11-11T19-47-59-829Z_pipeline.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "contributions-source",
+   "suite": "pipeline",
+   "test": "test_subagent_files_add_tokens_but_never_prompts",
+   "run": "2026-11-11T19-47-59-829Z_pipeline.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "tokens-lede",
+   "suite": "web",
+   "test": "the phase rows add up to the totals",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "tokens-lede",
+   "suite": "web",
+   "test": "the reset table has at least one /clear and one /compact row",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "tokens-lede",
+   "suite": "pipeline",
+   "test": "test_repeated_rows_of_one_response_count_once",
+   "run": "2026-11-11T19-47-59-829Z_pipeline.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "tokens-thinking-cache",
+   "suite": "web",
+   "test": "the four totals equal the sum of the per-response rows and are shown separately",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "tokens-thinking-cache",
+   "suite": "web",
+   "test": "cache reads are the largest token class",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "tokens-dedup",
+   "suite": "pipeline",
+   "test": "test_repeated_rows_of_one_response_count_once",
+   "run": "2026-11-11T19-47-59-829Z_pipeline.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "tokens-dedup",
+   "suite": "pipeline",
+   "test": "test_response_copied_into_a_resumed_file_counts_once",
+   "run": "2026-11-11T19-47-59-829Z_pipeline.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "tokens-resets",
+   "suite": "web",
+   "test": "the reset table has at least one /clear and one /compact row",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "tokens-resets",
+   "suite": "pipeline",
+   "test": "test_compact_boundary_starts_a_segment_and_matches_tokens_before",
+   "run": "2026-11-11T19-47-59-829Z_pipeline.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "tokens-readings",
+   "suite": "web",
+   "test": "every usage reading is in the readings table",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "tokens-readings",
+   "suite": "web",
+   "test": "every phase has a first reading, and every reset with no reading just before it is named on the page",
+   "run": "2026-11-11T19-49-22-555Z_web.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "tokens-readings",
+   "suite": "pipeline",
+   "test": "test_usage_row_with_missing_columns_stops_the_build",
+   "run": "2026-11-11T19-47-59-829Z_pipeline.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "tokens-checks",
+   "suite": "pipeline",
+   "test": "test_context_check_needs_the_reading_between_two_consecutive_responses_in_time",
+   "run": "2026-11-11T19-47-59-829Z_pipeline.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "tokens-checks",
+   "suite": "pipeline",
+   "test": "test_unanswered_retry_is_listed_and_unexplained_gaps_fail",
+   "run": "2026-11-11T19-47-59-829Z_pipeline.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "tokens-checks",
+   "suite": "pipeline",
+   "test": "test_compact_check_fails_when_tokens_disagree",
+   "run": "2026-11-11T19-47-59-829Z_pipeline.json",
+   "status": "passed",
+   "pass": true
+  },
+  {
+   "claim": "tokens-checks",
+   "suite": "pipeline",
+   "test": "test_scrubber_removes_home_folder_in_every_spelling_and_the_email",
+   "run": "2026-11-11T19-47-59-829Z_pipeline.json",
+   "status": "passed",
+   "pass": true
+  }
+ ],
+ "C6_mutations": [
+  {
+   "run": "2026-11-08T05-39-22-898Z_web.json",
+   "suite": "web",
+   "label": "mutation 1: hashchange listener removed, expect click test to fail",
+   "failed": 1,
+   "laterPassingRun": "2026-11-08T05-39-30-256Z_web.json",
+   "pass": true
+  },
+  {
+   "run": "2026-11-08T05-39-26-647Z_web.json",
+   "suite": "web",
+   "label": "mutation 2: tabFromHash always returns overview, expect routing tests to fail",
+   "failed": 10,
+   "laterPassingRun": "2026-11-08T05-39-30-256Z_web.json",
+   "pass": true
+  },
+  {
+   "run": "2026-11-08T06-27-47-859Z_pipeline.json",
+   "suite": "pipeline",
+   "label": "mutation: dedup by response id removed",
+   "failed": 1,
+   "laterPassingRun": "2026-11-08T06-27-48-806Z_pipeline.json",
+   "pass": true
+  },
+  {
+   "run": "2026-11-08T06-27-58-908Z_pipeline.json",
+   "suite": "pipeline",
+   "label": "mutation: records copied by a resume no longer skipped",
+   "failed": 1,
+   "laterPassingRun": "2026-11-08T06-27-59-839Z_pipeline.json",
+   "pass": true
+  },
+  {
+   "run": "2026-11-11T15-20-17-071Z_study.json",
+   "suite": "study",
+   "label": "MUTATION: S2 hash check disabled, a test must fail",
+   "failed": 1,
+   "laterPassingRun": "2026-11-11T15-20-18-378Z_study.json",
+   "pass": true
+  },
+  {
+   "run": "2026-11-11T17-07-38-873Z_web.json",
+   "suite": "web",
+   "label": "MUTATION: Ohio added into national counts, a test must fail",
+   "failed": 2,
+   "laterPassingRun": "2026-11-11T17-07-48-753Z_web.json",
+   "pass": true
+  },
+  {
+   "run": "2026-11-11T17-42-18-324Z_web.json",
+   "suite": "web",
+   "label": "MUTATION: unmarked sentence added to the Token usage page, a claims test must fail",
+   "failed": 1,
+   "laterPassingRun": "2026-11-11T19-47-55-863Z_web.json",
+   "pass": true
+  },
+  {
+   "run": "2026-11-11T17-42-41-129Z_web.json",
+   "suite": "web",
+   "label": "MUTATION: a claim points at a test that does not exist, a claims test must fail",
+   "failed": 2,
+   "laterPassingRun": "2026-11-11T19-47-55-863Z_web.json",
+   "pass": true
+  }
+ ],
+ "testCommands": {
+  "recorded": 30,
+  "unrecorded": 17,
+  "first": "2026-11-08T05:38:06.464Z",
+  "rule": "shell commands Claude ran whose program is uv, python, pytest, npx, npm or vitest and that name pytest, vitest, npm test or a recorder; recorded = through record_tests.py or test:record"
+ },
  "C4_inflation": {
-  "usageRows": 1701,
-  "uniqueResponses": 648,
+  "usageRows": 1880,
+  "uniqueResponses": 722,
   "naive": {
-   "input": 3486,
-   "cacheWrite": 6168039,
-   "cacheRead": 257651170,
-   "output": 2447443
+   "input": 3848,
+   "cacheWrite": 6615527,
+   "cacheRead": 283078900,
+   "output": 2656045
   },
   "deduplicated": {
-   "input": 1326,
-   "cacheWrite": 1829095,
-   "cacheRead": 98813216,
-   "output": 666008
+   "input": 1476,
+   "cacheWrite": 2002775,
+   "cacheRead": 109216629,
+   "output": 742460
   }
  },
  "privacy": [

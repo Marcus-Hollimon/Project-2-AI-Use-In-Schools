@@ -203,3 +203,71 @@ def test_usage_row_with_missing_columns_stops_the_build():
             assert "usage.md row" in str(err)
         else:
             raise AssertionError("malformed row was accepted: %r" % (bad,))
+
+
+def test_test_commands_are_counted_once_and_split_recorded_from_unrecorded():
+    # Trap found 2026-11-11: the site said "Nothing is left out" while Claude had also run tests
+    # without the recorder. Searching for the word "pytest" would also count greps and commit messages.
+    def shell(command, tid=None, name="Bash"):
+        return {"type": "tool_use", "id": tid or uid(), "name": name, "input": {"command": command}}
+    assert tx.classify_test_command("cd pipeline && uv run --locked pytest -q") == "unrecorded"
+    assert tx.classify_test_command("cd web; npm run test:record -- 'x'") == "recorded"
+    assert tx.classify_test_command("uv run --project pipeline python pipeline/record_tests.py --suite study") == "recorded"
+    assert tx.classify_test_command("cd web && npx vitest run src/tabs.test.jsx") == "unrecorded"
+    assert tx.classify_test_command("npm test") == "unrecorded"
+    for not_a_run in ('grep -n "pytest|vitest" .github/workflows/deploy.yml', 'git commit -m "pytest passes"',
+                      "npm run build", "uv run --project pipeline python pipeline/build.py", "echo vitest"):
+        assert tx.classify_test_command(not_a_run) is None, not_a_run
+    rows = [prompt("2026-11-08T05:00:00Z", "hi"), request("2026-11-08T05:00:01Z")]
+    rows += assistant_rows("m1", "2026-11-08T05:00:02Z", [shell("npm test", "t1"), shell("grep pytest x"),
+                                                         shell("npm run test:record", name="PowerShell")])
+    copied = [dict(r) for r in rows]  # a resumed session copies the same tool calls
+    w = tx.walk([one_file(rows, "s1"), one_file(copied, "s2")])
+    assert [c["kind"] for c in w["testCommands"]] == ["unrecorded", "recorded"]
+
+
+def test_claim_check_needs_each_backing_test_to_pass_in_the_newest_run_of_its_suite():
+    def run(file, suite, results):
+        return {"file": file, "suite": suite, "report": {"testResults": [
+            {"assertionResults": [{"title": t, "status": s} for t, s in results]}]}}
+    runs = [run("1_web.json", "web", [("a", "failed")]), run("2_web.json", "web", [("a", "passed"), ("b", "failed")]),
+            run("3_pipeline.json", "pipeline", [("p", "passed")])]
+    claims = [{"id": "ok", "tests": [{"suite": "web", "test": "a"}, {"suite": "pipeline", "test": "p"}]},
+              {"id": "failing", "tests": [{"suite": "web", "test": "b"}]},
+              {"id": "missing", "tests": [{"suite": "web", "test": "nope"}, {"suite": "study", "test": "s"}]},
+              {"id": "file-only", "files": ["x.md"]}]
+    got = {(r["claim"], r["test"]): (r["pass"], r["run"], r["status"]) for r in build.check_claims(claims, runs)}
+    assert got[("ok", "a")] == (True, "2_web.json", "passed")  # the newest web run, not the older failure
+    assert got[("ok", "p")][0] is True
+    assert got[("failing", "b")] == (False, "2_web.json", "failed")
+    assert got[("missing", "nope")] == (False, "2_web.json", "not in the newest run")
+    assert got[("missing", "s")] == (False, None, "not in the newest run")
+    assert len(got) == 5
+
+
+def test_each_mutation_needs_to_fail_and_a_later_passing_run_of_its_suite():
+    def run(file, suite, label, failed):
+        return {"file": file, "suite": suite, "label": label, "summary": {"failed": failed}}
+    runs = [run("1", "web", "mutation 1: x", 2), run("2", "web", "MUTATION: y", 1),
+            run("3", "web", "clean run after restoring mutations", 1),  # not a mutation, and it failed
+            run("4", "pipeline", "mutation: z", 0),  # a mutation no test noticed
+            run("5", "web", "fixed", 0), run("6", "study", "mutation: w", 3)]
+    got = {r["run"]: (r["pass"], r["laterPassingRun"]) for r in build.check_mutations(runs)}
+    assert got == {"1": (True, "5"), "2": (True, "5"), "4": (False, None), "6": (False, None)}
+
+
+def test_compact_after_a_stopped_turn_passes_only_with_unanswered_records_and_more_tokens():
+    u = usage(inp=2, cw=100, cr=1000, out=50)
+    rows = [prompt("2026-11-08T05:00:00Z", "hi"), request("2026-11-08T05:00:01Z")]
+    rows += assistant_rows("m1", "2026-11-08T05:00:02Z", [tool("Bash", "t1")], u)
+    rows.append({"type": "user", "uuid": uid(), "timestamp": "2026-11-08T05:00:03Z",
+                 "message": {"content": [{"type": "tool_result", "tool_use_id": "t1", "content": "rejected"}]}})
+    boundary = {"type": "system", "subtype": "compact_boundary", "uuid": uid(), "timestamp": "2026-11-08T05:05:00Z",
+                "compactMetadata": {"trigger": "manual", "preTokens": 1200, "postTokens": 100, "durationMs": 1}}
+    w = tx.walk([one_file(rows + [boundary])])
+    [r] = tx.check_compacts(w["boundaries"])
+    assert r["pass"] and r["difference"] == 48 and r["unansweredAfter"] == ["2026-11-08T05:00:03Z"]
+    fewer = dict(boundary, uuid=uid(), compactMetadata=dict(boundary["compactMetadata"], preTokens=1100))
+    assert not tx.check_compacts(tx.walk([one_file(rows + [fewer])])["boundaries"])[0]["pass"]
+    completed = rows[:-1] + [dict(boundary, uuid=uid())]  # no unanswered record: must match exactly
+    assert not tx.check_compacts(tx.walk([one_file(completed)])["boundaries"])[0]["pass"]

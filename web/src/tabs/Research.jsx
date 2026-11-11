@@ -13,6 +13,7 @@ import {
 
 const national = SCHOOLS.filter((s) => s.group === 'National').length
 const ohio = SCHOOLS.length - national
+const chosen = SCHOOLS.filter((s) => s.group === 'Ohio' && s.how === 'fixed by Marcus').length
 const perStratum = national / STRATA.length
 
 function CountTable({ variable }) {
@@ -127,15 +128,16 @@ export default function Research() {
   const quotes = refetch.rows.flatMap((r) => r.quotes ?? [])
   return (
     <>
-      <p className="callout" role="note">
+      <p className="callout" role="note" data-claim="research-descriptive">
         <strong>Descriptive only.</strong> {national} schools were drawn at random nationally ({perStratum} in
-        each of {STRATA.length} strata) and {ohio} in Ohio, reported separately and never added into the
+        each of {STRATA.length} strata) and {ohio} in Ohio ({chosen} chosen by Marcus, {ohio - chosen}{' '}
+        at random), reported separately and never added into the
         national counts. Groups this small support counts, not percentages or claims about all US
         departments. Coded on {SCHOOLS[0].coded_at} from public web pages only.
       </p>
 
       <h2>Answers by question</h2>
-      <dl className="strata">
+      <dl className="strata" data-claim="research-strata">
         {STRATA.map((s) => (
           <div key={s.id}>
             <dt>{s.id}</dt>
@@ -143,14 +145,14 @@ export default function Research() {
           </div>
         ))}
       </dl>
-      <div className="tables">
+      <div className="tables" data-from="data/coded/values.json data/frame/sample.csv">
         {VARIABLES.map((v) => (
           <CountTable key={v.id} variable={v} />
         ))}
       </div>
 
       <h2>Every school, with its sources</h2>
-      <p>
+      <p data-claim="research-links">
         Open a school to see the quote behind each answer. “Open the live page at this quote” scrolls
         the school’s page to the sentence and highlights it (current Chrome, Edge, Firefox and
         Safari); “Saved copy” is the page as it was on the day it was coded.
@@ -163,13 +165,13 @@ export default function Research() {
           <option value="Ohio">Ohio sample</option>
         </select>
       </label>
-      <div className="schools">
+      <div className="schools" data-from="data/coded/values.json data/coded/checks.json">
         {shown.map((s) => (
           <SchoolRow key={s.unitid} school={s} />
         ))}
       </div>
 
-      <p className="note">
+      <p className="note" data-claim="research-refetch">
         Re-checked {new Date(refetch.generated_at).toLocaleDateString('en-US')}: all {refetch.pages}{' '}
         saved pages were fetched again; {quotes.length - refetch.coded_quotes_missing_from_new_copy} of{' '}
         {quotes.length} quotes on pages that had changed are still there, and{' '}

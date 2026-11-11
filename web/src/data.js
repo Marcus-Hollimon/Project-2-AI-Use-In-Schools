@@ -8,9 +8,20 @@ import sampleCsv from '../../data/frame/sample.csv?raw'
 import contributions from '../../data/derived/contributions.json'
 import tokens from '../../data/derived/tokens.json'
 import pipelineChecks from '../../data/derived/checks.json'
+import claimsFile from '../../validation/claims.json'
+import caughtFile from '../../validation/caught.json'
 import { REPO_URL } from './routes.js'
 
 export { codebook, values, studyChecks, refetch, contributions, tokens, pipelineChecks }
+
+// The claims register (Phase 4): every factual sentence on the site and what backs it.
+export const CLAIMS = claimsFile.claims
+export const CAUGHT = caughtFile.entries
+// Pipeline check C5, one result per (claim, test); empty until build.py has run with the register.
+export const CLAIM_RESULTS = pipelineChecks.C5_claims ?? []
+// Pipeline check C6: each mutation run failed and a later run of its suite passed.
+export const MUTATION_RESULTS = pipelineChecks.C6_mutations ?? []
+export const TEST_COMMANDS = pipelineChecks.testCommands ?? { recorded: 0, unrecorded: 0 }
 
 // Every recorded test run (validation/runs/*.json), keyed by file path.
 const runModules = import.meta.glob('../../validation/runs/*.json', { eager: true, import: 'default' })
@@ -191,6 +202,9 @@ export function resetRows() {
       after: r,
       transcriptBefore: boundary?.preTokens ?? null,
       transcriptAfter: boundary?.postTokens ?? null,
+      time: boundary?.time ?? r.time, // the /compact itself; for a /clear, its first reading after
+      // A reading taken for the reset says "just before" in its moment; otherwise none was taken.
+      noReadingJustBefore: !/just before/.test(before.moment),
     })
   })
   return rows
