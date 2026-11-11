@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://libguides.berry.edu/c.php?g=1296085&p=9523033",
+ "final_url": "https://libguides.berry.edu/c.php?g=1296085&p=9523033",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:53:44-05:00",
+ "sha256": "b2f96f1ee619227807564816199ce2b19e009ed7e42207daeee73f6eb76ee741",
+ "bytes": 66068
+}

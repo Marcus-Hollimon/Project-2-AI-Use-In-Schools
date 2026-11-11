@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://libguides.berry.edu/generativeaiguideforstudents/AI_use_policy",
+ "final_url": "https://libguides.berry.edu/generativeaiguideforstudents/AI_use_policy",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:53:43-05:00",
+ "sha256": "5a22928efaf5e796b74de873df34ea2e9cab16d0321a7c1bbff104ac656ef68a",
+ "bytes": 33399
+}

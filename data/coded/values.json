@@ -1915,6 +1915,59 @@
      "note": "UMFK's computing programs have no software engineering course; the closest, COS 333 Systems Analysis & Design, has only a catalog description with no AI text, and no syllabus was found."
     }
    }
+  },
+  {
+   "unitid": "139144",
+   "slug": "139144-berry",
+   "name": "Berry College",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "instructor decides",
+     "quote": "Instructors should develop individual AI usage policies in accordance with their own teaching philosophy and course goals.",
+     "url": "https://libguides.berry.edu/c.php?g=1296085&p=9523033",
+     "archive": "data/sources/139144-berry/2026-11-11-libguide-faculty-considerations.html",
+     "source_type": "guidance page",
+     "note": "The library's faculty guide says this is 'taken directly from Berry's syllabus statement'. The student guide adds that Berry 'does not currently have a comprehensive policy' but every instructor must say in the syllabus whether AI can be used."
+    },
+    "univ_tone": {
+     "value": "neutral",
+     "quote": "Berry College does not currently have a comprehensive policy on the use of generative AI or LLMs.",
+     "url": "https://libguides.berry.edu/generativeaiguideforstudents/AI_use_policy",
+     "archive": "data/sources/139144-berry/2026-11-11-libguide-students-ai-use-policy.html",
+     "source_type": "guidance page",
+     "note": "The student guide (last updated 8 September 2026) is mostly procedural advice: ask your instructor, be transparent, cite AI."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/139144-berry/search-log.md"
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/139144-berry/search-log.md"
+    },
+    "collaboration": {
+     "value": "in passing",
+     "quote": "Would you like to use ChatGPT or Copilot to help brainstorm ideas or come up with a topic for your assignment?",
+     "url": "https://libguides.berry.edu/generativeaiguideforstudents/AI_use_policy",
+     "archive": "data/sources/139144-berry/2026-11-11-libguide-students-ai-use-policy.html",
+     "source_type": "guidance page",
+     "note": "One of several example uses students should name when asking an instructor; 'Copilot' here is a product name, not AI framed as a co-pilot or partner."
+    },
+    "disclosure": {
+     "value": "encouraged",
+     "quote": "If you do want to use generative AI on an assignment it is highly recommended that you ask your instructor and be completely transparent about its use.",
+     "url": "https://libguides.berry.edu/generativeaiguideforstudents/AI_use_policy",
+     "archive": "data/sources/139144-berry/2026-11-11-libguide-students-ai-use-policy.html",
+     "source_type": "guidance page",
+     "note": "The guide also says 'Transparency is an imperative' and to 'include proper citations'; the college sets no disclosure rule of its own."
+    },
+    "se_courses": {
+     "value": "no public syllabus found",
+     "search_log": "data/sources/139144-berry/search-log.md",
+     "note": "No current CS syllabus came up; the only one found was CSC 120 from Spring 2020 (before ChatGPT). CSC 345 Elements of Computing Systems covers some software engineering topics in its catalog description."
+    }
+   }
   }
  ]
 }
