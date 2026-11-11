@@ -1,8 +1,8 @@
 # State: read this first
 
-Current phase: 3 Interfaces is DONE (Marcus's checklist ticked). Next: Phase 4 Validation, spec first.
+Current phase: 4 Validation (in progress; spec: specs/phase-4-validation.md). Phase 3 Interfaces is done.
 
-Last updated: 2026-11-11T12:22:58-05:00 by Claude (session a9056776), just before the eighth `/compact` (Phase 3 end).
+Last updated: 2026-11-11T12:29:39-05:00 by Claude (session a9056776), Phase 4 spec written.
 
 ## Phase 3 done: Marcus's checklist ticked 2026-11-11T12:22:58-05:00 from his screenshots
 
@@ -86,20 +86,17 @@ Last updated: 2026-11-11T12:22:58-05:00 by Claude (session a9056776), just befor
   rule and the per-turn hook; and no plan mode. "Let's just try and get this done properly."
 
 ## FIRST, right after the /compact
-1. Take a usage reading marked "after /compact (phase start)" in `progress/usage.md` (tool:
-   get_usage), as a full 7-column row inserted in the main table (Phase 4), with the time from
-   `date -Iseconds`. Never append at the end of the file: that lands below "Cost per phase".
-   Then update the header line here to "Current phase: 4" BEFORE recording any test run (the
-   recorders read the phase from it). Run `uv run --project pipeline python pipeline/build.py`.
-2. Phase 4 Validation (`specs/00-project.md`: "Validation tab complete, evidence review"; exit check:
-   "Any claim on the site traces to a test or a source"). Write `specs/phase-4-validation.md`
-   FIRST. Idea: a list of every claim the site makes (each number and sentence that states a fact),
-   each linked to the test or file that backs it, shown on the Validation tab and checked by a test
-   that fails when a claim has no backing. Also consider real errors caught outside test runs (the
-   usage.md rows, the CIP frame, the guessed times, the text-fragment highlight), today only in
-   log.md and the specs.
-3. Budget: 5-hour was 87% at 12:23 and resets 14:40 EST. Phase 3's build cost about 11 points.
-   Write the Phase 4 spec before the reset if it fits; build after.
+Phase 4 started 12:27 (usage row recorded, header set to Phase 4, build.py all pass). The spec
+`specs/phase-4-validation.md` was written 2026-11-11T12:29:39-05:00 and committed; nothing is built yet.
+1. If a compact happened, take a usage reading marked "after /compact" (full 7-column row in the
+   main table of `progress/usage.md`, Phase 4) and run build.py.
+2. Build per the spec, in order: claims register `validation/claims.json`; `data-claim` and
+   `data-from` marks on the pages; `web/src/claims.test.jsx`; pipeline C5 and the counter of test
+   commands run without the recorder; the six survey fixes; `validation/caught.json` (details from
+   `progress/log.md` and the phase specs, not memory); Validation tab sections; the outside sources
+   opened in the browser pane; mutations; recorded runs; push; live check; Review results.
+3. Budget: 5-hour was 89% at 12:27 and resets 14:40 EST. Phase 3's build cost about 11 points, so
+   the build waits for the reset unless Marcus says otherwise.
 
 ## Pilot result (details and costs in `progress/pilot-cost.md`)
 - Minnesota 174066, Johns Hopkins 162928, Valparaiso 152600, Coppin State 162283, Snow 230597:

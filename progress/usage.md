@@ -36,6 +36,7 @@ percentages as the app reports them, so a change of "1 point" means anywhere fro
 | 2026-11-11T11:58:16-05:00 | 3 | after /compact (phase start) | 74 | 17 | 84,625 | /compact by Marcus (manual; 118,314 tokens at the last reading before it) |
 | 2026-11-11T12:11:53-05:00 | 3 | tabs built (a /compact was prepared here, then put off until Marcus finished the checklist) | 86 | 19 | 210,753 | none |
 | 2026-11-11T12:22:58-05:00 | 3 | phase end, just before /compact | 87 | 19 | 219,395 | none (next row is after /compact) |
+| 2026-11-11T12:27:10-05:00 | 4 | after /compact (phase start) | 89 | 19 | 90,315 | /compact by Marcus (manual; 219,395 tokens at the last reading before it) |
 
 ## Cost per phase
 | Phase | 5-hour points | Weekly points | Context growth (tokens) |
