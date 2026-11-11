@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T15:01:40.897098Z",
+ "generatedAt": "2026-11-11T15:08:26.089439Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -648,12 +648,44 @@
    "text": "Read progress/STATE.md and continue"
   },
   {
-   "time": "2026-11-11T15:00:42.411000Z",
+   "time": "2026-11-11T15:02:26Z",
+   "actor": "Claude",
+   "kind": "milestone",
+   "phase": "2",
+   "text": "After the /clear: reading 78,618 tokens (C1: 15 apart from the transcript). The /clear leaves no record: the old file stops at 09:59:41, a new session a9056776 starts at 10:00:07 with no parent. Added it to sessions.json; build all PASS (12/12 responses); tests 12/12 recorded.",
+   "evidence": "`specs/phase-1-instrumentation.md` item 8"
+  },
+  {
+   "time": "2026-11-11T15:02:49Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "After /clear: new session a9056776 added, how a /clear shows up, reading after /clear",
+   "commit": "b506747",
+   "note": "written by Claude, pushed from Marcus's account"
+  },
+  {
+   "time": "2026-11-11T15:06:07Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 2 prep: IPEDS 2024 raw files and the draw script, committed with its seed before the first run",
+   "commit": "405f8dd",
+   "note": "written by Claude, pushed from Marcus's account"
+  },
+  {
+   "time": "2026-11-11T15:08:06Z",
+   "actor": "Claude",
+   "kind": "milestone",
+   "phase": "2",
+   "text": "Frame and draw: IPEDS 2024 downloaded and archived; found the planned CIP 11.0701-only frame would have excluded Ohio State and Cincinnati (fixed: 11.0701 or 11.0101); 1,509 schools in 5 strata (2025 Carnegie); seed 20261111 committed before the run; 15 drawn; second run identical. Phase 2 spec written, waiting for approval.",
+   "evidence": "`specs/phase-2-study.md`, `data/frame/`"
+  },
+  {
+   "time": "2026-11-11T15:08:21.835000Z",
    "actor": "Claude",
    "kind": "reply",
    "turn": 12,
-   "text": "Context cleared successfully (78,618 tokens now, down from 248,054). Recording the after-/clear usage reading, then checking how the /clear shows up in the transcripts.",
-   "toolCalls": 21
+   "text": "Rebuilding derived data (it reads the log), then committing and pushing.",
+   "toolCalls": 58
   }
  ]
 }

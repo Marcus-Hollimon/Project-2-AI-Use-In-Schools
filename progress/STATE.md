@@ -1,8 +1,8 @@
 # State: read this first
 
-Current phase: 2 Study (spec being written; not yet approved)
+Current phase: 2 Study (spec written, frame built, 15 schools drawn; WAITING for Marcus's approval)
 
-Last updated: 2026-11-11T10:02:48-05:00 by Claude (session a9056776, after the /clear).
+Last updated: 2026-11-11T10:08:06-05:00 by Claude (session a9056776).
 
 ## Deadline and pace
 - Everything is due **2 PM EST, Thu Nov 12 2026** (Marcus, 2026-11-11).
@@ -24,35 +24,16 @@ Last updated: 2026-11-11T10:02:48-05:00 by Claude (session a9056776, after the /
 - `a9056776` added to `pipeline/sessions.json`; build all PASS; tests 12/12 recorded.
 - Still open: `ddc7d76a-46ca-4bba-a89a-f901ccc7b9a7.jsonl` (same folder, last written Nov 8 18:00,
   while Marcus was away). Not opened (privacy). Asked Marcus whether it belongs to this project.
-- Next: write `specs/phase-2-study.md` (below) and get Marcus's approval.
+- Phase 2 spec written: `specs/phase-2-study.md`. Frame built and 15 schools drawn
+  (`data/frame/`, seed 20261111 committed in `405f8dd` before the run).
 
-## Next: Phase 2 Study (15 schools)
-Marcus's decision (Nov 11, 09:58, replacing his 09:51 hand-picked list): stratified, to reach "US
-CS departments" as far as 15 schools can; Ohio included because he lives there; Ohio State and
-University of Cincinnati must be in it; the design is left to Claude. Claude's design (put it in the
-Phase 2 spec for his approval):
-- **Frame**: US degree-granting institutions that award computer science degrees (CIP 11.07),
-  from the federal IPEDS data files (institution file plus completions file, latest year). Download
-  the raw files, archive them in `data/frame/`, and record their URLs and dates. Verify the
-  Carnegie classification field names from the files themselves, never from memory.
-- **Strata (5)**, by Carnegie basic classification and control: public R1; private R1; other
-  doctoral and master's universities; baccalaureate (liberal arts) colleges; associate's
-  (community) colleges.
-- **National sample (10)**: 2 per stratum, drawn at random with a recorded seed, excluding Ohio.
-  Record each school's region so the spread is visible.
-- **Ohio oversample (5)**: Ohio State and Cincinnati fixed (Marcus), plus 3 Ohio schools drawn at
-  random, one each from the master's, baccalaureate, and associate's strata.
-- **Reporting**: national 10 by stratum, Ohio 5 separately; never pooled into one "US" percent.
-  With 2 per stratum the findings are illustrative, not estimates, and the site says so.
-- Harvard (mentioned earlier by Marcus) is in only if the draw picks it. Hand-adding it would make
-  private R1 a chosen pick again; ask Marcus only if he raises it.
-- Fallback if IPEDS cannot be downloaded and filtered within about 30 minutes: hand-pick within
-  the same strata and label the sample as hand-picked.
-Spec outline: codebook written before any coding (stance on genAI: encourage, permit, restrict,
-mixed, none found; tone; whether collaboration with AI is discussed; how software engineering
-courses handle it; source type). Save the raw page behind every coded value with `curl` into
-`data/sources/<school>/<date>-<name>.html` (real bytes, not a summary). One row per school in
-`data/coded/`. Marcus hand-codes a few schools blind; compute agreement. Then Phase 3 (tabs).
+## Next: Phase 2 Study (waiting for Marcus's approval of `specs/phase-2-study.md`)
+- The spec is the plan. Its "Questions for Marcus" are the open items (design and list, blind
+  check on 3 schools, cheaper model).
+- The pre-clear design here said CIP 11.07 only; that would have excluded Ohio State and
+  Cincinnati. Replaced by 11.0701 or 11.0101 (spec, "Known before any coding" item 3).
+- On approval: change the project spec's "10 hand-coded schools" to 3 (if he agrees), write
+  `study/codebook.md`, then the 5-school pilot.
 
 ## Sessions in this project
 | Session | Started in | Model | Covers |

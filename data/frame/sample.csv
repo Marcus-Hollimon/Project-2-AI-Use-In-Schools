@@ -1,0 +1,16 @@
+group,how,unitid,name,state,region,control,carnegie_research,carnegie_ic,highest_offering,website,cs_degrees_2024,stratum
+national,random,174066,University of Minnesota-Twin Cities,MN,4,1,1,6,9,https://twin-cities.umn.edu/,713,S1
+national,random,234076,University of Virginia-Main Campus,VA,5,1,1,6,9,https://www.virginia.edu/,424,S1
+national,random,162928,Johns Hopkins University,MD,2,2,1,6,9,www.jhu.edu/,513,S2
+national,random,166683,Massachusetts Institute of Technology,MA,1,2,1,30,9,web.mit.edu/,668,S2
+national,random,152600,Valparaiso University,IN,3,2,-2,10,9,https://www.valpo.edu/,13,S3
+national,random,218539,Presbyterian College,SC,5,2,-2,8,9,https://www.presby.edu/,7,S3
+national,random,162283,Coppin State University,MD,2,1,-2,15,9,www.coppin.edu/,8,S4
+national,random,220604,Le Moyne-Owen College,TN,5,2,-2,15,5,www.loc.edu/,3,S4
+national,random,230597,Snow College,UT,7,1,-2,2,5,https://www.snow.edu/,16,S5
+national,random,213659,Luzerne County Community College,PA,2,1,-2,11,3,www.luzerne.edu/,7,S5
+ohio,fixed by Marcus,201885,University of Cincinnati-Main Campus,OH,3,1,1,16,9,www.uc.edu/,309,S1
+ohio,fixed by Marcus,204796,Ohio State University-Main Campus,OH,3,1,1,6,9,www.osu.edu/,138,S1
+ohio,random,201195,Baldwin Wallace University,OH,3,2,-2,20,8,https://www.bw.edu/,11,S3
+ohio,random,202514,Defiance College,OH,3,2,-2,15,8,www.defiance.edu/,3,S4
+ohio,random,202222,Columbus State Community College,OH,3,1,-2,1,5,https://www.cscc.edu/,70,S5
