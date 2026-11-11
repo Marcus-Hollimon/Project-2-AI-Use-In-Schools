@@ -60,14 +60,32 @@ def iso(text):
     return tx.parse_time(text).astimezone(timezone.utc).isoformat().replace("+00:00", "Z")
 
 
-def read_readings():
+PHASES = {"planning", "0", "1", "2", "3", "4", "5"}
+
+
+def parse_readings(rows):
+    """Usage readings from table rows. A malformed row stops the build instead of shifting columns:
+    on 2026-11-11 seven rows written with 5 cells made "66" the moment and "195,190" the weekly %."""
     readings = []
-    for cells in table_rows(os.path.join(ROOT, "progress", "usage.md")):
-        digits = re.sub(r"[^0-9]", "", cells[5]) if len(cells) > 5 else ""
+    for cells in rows:
+        problem = None
+        if len(cells) != 7:
+            problem = "has %d cells, expected 7" % len(cells)
+        elif cells[1] not in PHASES:
+            problem = "phase %r is not one of %s" % (cells[1], sorted(PHASES))
+        elif not all(re.fullmatch(r"\d+|not read", c) for c in cells[3:5]):
+            problem = "5-hour and weekly must be whole percentages or 'not read'"
+        if problem:
+            raise ValueError("progress/usage.md row %s: %s" % (cells[0], problem))
+        digits = re.sub(r"[^0-9]", "", cells[5])
         readings.append({"time": iso(cells[0]), "phase": cells[1], "moment": cells[2],
                          "fiveHour": cells[3], "weekly": cells[4],
-                         "context": int(digits) if digits else None, "reset": cells[6] if len(cells) > 6 else ""})
+                         "context": int(digits) if digits else None, "reset": cells[6]})
     return readings
+
+
+def read_readings():
+    return parse_readings(table_rows(os.path.join(ROOT, "progress", "usage.md")))
 
 
 def read_milestones():
@@ -183,6 +201,9 @@ def main():
     entries += read_milestones() + read_decisions() + read_commits()
     for e in entries:
         e["time"] = iso(e["time"])
+    # Milestones carry the phase written in log.md; every other entry gets the phase of the
+    # latest usage reading at or before it, the same rule as token responses.
+    tx.assign_phases([e for e in entries if "phase" not in e], readings)
     entries.sort(key=lambda e: e["time"])
 
     scrub, leaks = make_scrubber()

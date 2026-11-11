@@ -1,12 +1,13 @@
 {
- "generatedAt": "2026-11-11T16:33:08.233538Z",
+ "generatedAt": "2026-11-11T17:10:21.100404Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 1,
-   "text": "Alright I have the following project I need to complete. It's vague, but my teacher gave me the following instructions: \n\n<pasted_content id=\"8936\">\nroject 2: Claude Code and agentic development\nIn this project, we will explore:\nProject level 1:  Gather data on how students are permitted (or encouraged) to use genAI for CS courses around the country.  How are other CS departments talking about AI/genAI in their official publications.  Do they have a positive take on AI?  Do they discuss collaboration with AI.  How are software engineering courses handling AI around the country.  Make a dashboard to visually communicate the findings.  Identify an approach to analyze this data.  \nDo this using: 1. Agentic development* with Claude Code.  This involves working with Claude to write specification files and run tests for the project as a whole, and individual phases of the project.  In this mode, you may be only minimally looking at code directly.  More of your interactions will be around developing the plans, specifications, and reviewing the validations. \nSpec driven development- These specifications should allow you to routinely clear or compact the context window (You: Prepare to clear.  Claude:  (preps). You: /clear).  These specifications should enable you to inspect Claude's code evaluation (#2 below), create the document of your contributions (#3 below) and document token usage (#4 below). \nOutside of this goal, make visual interfaces using web technologies (or other UI/visual tools): \n2. Validating the code and reporting validation results.  When you work with Claude, it runs many tests automatically.  These tests may be hard to keep track of and look at yourself.  For this project, explore an alternative way to view and inspect and communicate the tests.  Suggestion: a web interface to display and explore (search, filter....) the tests it is running.  Validation report must include evidence for correctness, show the tests and results, and help a skeptical reviewer accept the validity of your code.  This could include your direct review of code, but be sure to document your reviewing steps with Claude. \n3. Documenting and describing your contribution to the project and Claude's contribution to the project.  Here you ensure that Claude records progress, with timestamps.  Stores your questions and its responses.  You will make with Claude a web-based interface to document your project timeline, your contributions, etc. \n4. Documenting your token usage and how different practices (clear, compact) or project steps (gathering data, processing data, writing code, running validations) impact token usage.  Make a web-based interface for token usage. \nFinally: \nEvaluating the project for how well it meets the initial goals.  This step will be completed primarily by you, not Claude. But you can use Claude to get you information you need for this evaluation. \nYou will complete this project following an agentic development approach- the code will be primarily written by an AI agent (Claude Code), with you directly supervising.  You will do less direct code editing than in an AI assisted development workflow.   Your job is to make sure 1. the agent is producing accurate, efficient and valid code and 2. your code meets the objectives of the project (the goals, addresses user needs).  \nUse Claude Code, pro-level ($20/month).  I suggest the Opus 5.5 model.  I was able to complete my previous project without running out of tokens, and Opus 5.5 \nPlease publish your project and all documentation results on github and on the web.  \nReflect: How do you feel about an agentic development approach vs an AI assisted development approach (if you have a basis for comparison). \n \nDeadline:\nNov 10- application\nNov 11- documentation\nNov 12- presentation\n \n \n\n* Def:\n* Manual coding- you write code. Maybe occasional search/AI help with library, what function will do X\n* AI assisted- You are looking at the code, and asking for help from AI for parts of the code, but you make decisions for every code addition, change etc.\n* Agentic – An agent writes the code. You may only minimally review code, but primarily look at requirements, specs, tests etc.\n</pasted_content id=\"8936\">\n\nI want to do this all properly from the beginning. Lets take some time together laying out all the potential options and tradeoffs. I'm not very technical to be honest. Tell me only the higher level ideas, not the nitty gritty. When you say something works PROVE IT through some verifyable method, so you can iterate and improve on it. If you think I am messing up with using you make sure to tell me. Always feel free to reinterpret my prompts as you see best!"
+   "text": "Alright I have the following project I need to complete. It's vague, but my teacher gave me the following instructions: \n\n<pasted_content id=\"8936\">\nroject 2: Claude Code and agentic development\nIn this project, we will explore:\nProject level 1:  Gather data on how students are permitted (or encouraged) to use genAI for CS courses around the country.  How are other CS departments talking about AI/genAI in their official publications.  Do they have a positive take on AI?  Do they discuss collaboration with AI.  How are software engineering courses handling AI around the country.  Make a dashboard to visually communicate the findings.  Identify an approach to analyze this data.  \nDo this using: 1. Agentic development* with Claude Code.  This involves working with Claude to write specification files and run tests for the project as a whole, and individual phases of the project.  In this mode, you may be only minimally looking at code directly.  More of your interactions will be around developing the plans, specifications, and reviewing the validations. \nSpec driven development- These specifications should allow you to routinely clear or compact the context window (You: Prepare to clear.  Claude:  (preps). You: /clear).  These specifications should enable you to inspect Claude's code evaluation (#2 below), create the document of your contributions (#3 below) and document token usage (#4 below). \nOutside of this goal, make visual interfaces using web technologies (or other UI/visual tools): \n2. Validating the code and reporting validation results.  When you work with Claude, it runs many tests automatically.  These tests may be hard to keep track of and look at yourself.  For this project, explore an alternative way to view and inspect and communicate the tests.  Suggestion: a web interface to display and explore (search, filter....) the tests it is running.  Validation report must include evidence for correctness, show the tests and results, and help a skeptical reviewer accept the validity of your code.  This could include your direct review of code, but be sure to document your reviewing steps with Claude. \n3. Documenting and describing your contribution to the project and Claude's contribution to the project.  Here you ensure that Claude records progress, with timestamps.  Stores your questions and its responses.  You will make with Claude a web-based interface to document your project timeline, your contributions, etc. \n4. Documenting your token usage and how different practices (clear, compact) or project steps (gathering data, processing data, writing code, running validations) impact token usage.  Make a web-based interface for token usage. \nFinally: \nEvaluating the project for how well it meets the initial goals.  This step will be completed primarily by you, not Claude. But you can use Claude to get you information you need for this evaluation. \nYou will complete this project following an agentic development approach- the code will be primarily written by an AI agent (Claude Code), with you directly supervising.  You will do less direct code editing than in an AI assisted development workflow.   Your job is to make sure 1. the agent is producing accurate, efficient and valid code and 2. your code meets the objectives of the project (the goals, addresses user needs).  \nUse Claude Code, pro-level ($20/month).  I suggest the Opus 5.5 model.  I was able to complete my previous project without running out of tokens, and Opus 5.5 \nPlease publish your project and all documentation results on github and on the web.  \nReflect: How do you feel about an agentic development approach vs an AI assisted development approach (if you have a basis for comparison). \n \nDeadline:\nNov 10- application\nNov 11- documentation\nNov 12- presentation\n \n \n\n* Def:\n* Manual coding- you write code. Maybe occasional search/AI help with library, what function will do X\n* AI assisted- You are looking at the code, and asking for help from AI for parts of the code, but you make decisions for every code addition, change etc.\n* Agentic – An agent writes the code. You may only minimally review code, but primarily look at requirements, specs, tests etc.\n</pasted_content id=\"8936\">\n\nI want to do this all properly from the beginning. Lets take some time together laying out all the potential options and tradeoffs. I'm not very technical to be honest. Tell me only the higher level ideas, not the nitty gritty. When you say something works PROVE IT through some verifyable method, so you can iterate and improve on it. If you think I am messing up with using you make sure to tell me. Always feel free to reinterpret my prompts as you see best!",
+   "phase": "planning"
   },
   {
    "time": "2026-11-08T05:00:55Z",
@@ -28,7 +29,8 @@
    "time": "2026-11-08T05:13:13.107000Z",
    "actor": "Marcus",
    "kind": "answer",
-   "text": "Your questions have been answered: \"For the study itself (how CS departments talk about genAI), which sampling design do you want?\"=\"Stratified ~40 schools (Recommended)\", \"Your standing rules say you design the UI yourself and I only assist. This assignment says the agent writes the code and you supervise. Which governs for this project?\"=\"I write the UI, you review (Recommended)\", \"How much technical machinery do you want in the web deliverables?\"=\"React with a build step\", \"If we run short on time before Nov 10, what should be protected at full quality?\"=\"The study and its findings dashboard (Recommended)\". You can now continue with these answers in mind."
+   "text": "Your questions have been answered: \"For the study itself (how CS departments talk about genAI), which sampling design do you want?\"=\"Stratified ~40 schools (Recommended)\", \"Your standing rules say you design the UI yourself and I only assist. This assignment says the agent writes the code and you supervise. Which governs for this project?\"=\"I write the UI, you review (Recommended)\", \"How much technical machinery do you want in the web deliverables?\"=\"React with a build step\", \"If we run short on time before Nov 10, what should be protected at full quality?\"=\"The study and its findings dashboard (Recommended)\". You can now continue with these answers in mind.",
+   "phase": "planning"
   },
   {
    "time": "2026-11-08T05:13:13Z",
@@ -44,7 +46,8 @@
    "kind": "decision",
    "text": "Study design: stratified sample of about 40 schools",
    "options": "Stratified ~40 (Claude's recommendation) · narrow and deep, 20 to 30 · broad and shallow, 100+",
-   "notes": "At 00:22 Claude advised piloting 5 schools first and setting the final number from measured cost per school. Final number open until Phase 2."
+   "notes": "At 00:22 Claude advised piloting 5 schools first and setting the final number from measured cost per school. Final number open until Phase 2.",
+   "phase": "planning"
   },
   {
    "time": "2026-11-08T05:13:13Z",
@@ -52,7 +55,8 @@
    "kind": "decision",
    "text": "UI authorship: Claude writes the UI, Marcus reviews",
    "options": "Claude writes, Marcus reviews (recommendation) · Marcus designs, Claude wires up · split",
-   "notes": "Recorded in the project CLAUDE.md."
+   "notes": "Recorded in the project CLAUDE.md.",
+   "phase": "planning"
   },
   {
    "time": "2026-11-08T05:13:13Z",
@@ -60,7 +64,8 @@
    "kind": "decision",
    "text": "Web technology: React with a build step",
    "options": "Static site (recommendation) · React with a build step · Python server",
-   "notes": "At 00:22 Claude agreed React is reasonable. The deployment risk was retired first, in Phase 0."
+   "notes": "At 00:22 Claude agreed React is reasonable. The deployment risk was retired first, in Phase 0.",
+   "phase": "planning"
   },
   {
    "time": "2026-11-08T05:13:13Z",
@@ -68,7 +73,8 @@
    "kind": "decision",
    "text": "Priority if time runs short: the study and its findings dashboard",
    "options": "Study (recommendation) · all four evenly · validation",
-   "notes": ""
+   "notes": "",
+   "phase": "planning"
   },
   {
    "time": "2026-11-08T05:14:14Z",
@@ -84,13 +90,15 @@
    "kind": "reply",
    "turn": 1,
    "text": "Phase 0 is unblocked except for the GitHub login, and I can do the workspace, specs, and state file while you handle that. Phase 1 needs nothing from you at all, since the transcript data is already sitting on disk.\n\nOne thing I want to say plainly about the next 48 hours: the failure mode for this project is not bad code, it is running out of time in Phase 2 and having four beautiful empty dashboards. So my bias throughout will be to get real data into the pipeline early and ugly, then make it presentable, rather than the reverse.\n\n---\n\n**Coaching**\n\nTwo things about how you prompted this one.\n\nFirst, you did something genuinely right and it is worth naming so you repeat it: \"when you say something works PROVE IT\" is the highest-leverage instruction in your message. It is why this turn opened with six commands against your actual filesystem instead of a confident essay about what Claude Code \"generally\" stores. Without that line I would likely have planned around a logging system you did not need to build. Keep using it, and consider making it stronger: \"prove it or say you have not checked\" closes the gap where I quietly assert the unverifiable.\n\nSecond, the thing to improve: you gave me a 600-word assignment and asked for \"all the potential options and tradeoffs\" with no boundary on what you had already decided. That invites me to re-ask things you may have settled weeks ago. A sentence like \"I have already decided X and Y, do not relitigate those\" would have bought you a shorter, sharper first turn. Non-technical is not the same as having no constraints, and your constraints are the most useful thing you can hand me.\n\n**Claude Code feature for this task:** project-level `CLAUDE.md`. Your global one at `~\\.claude\\CLAUDE.md` is injected into every turn of every project, and right now it is spending that budget on canon-keeper's MCP SDK pinning rules while we work on a policy study. A `CLAUDE.md` inside this project's folder gets loaded alongside the global one and is the correct home for this project's rules, which also lets the canon-keeper block move out of your global file and into canon-keeper's own. Phase 0 sets that up, and the immediate payoff is that every single turn from then on carries instructions that actually apply.",
-   "toolCalls": 11
+   "toolCalls": 11,
+   "phase": "planning"
   },
   {
    "time": "2026-11-08T05:14:38.139000Z",
    "actor": "Marcus",
    "kind": "command",
-   "text": "/model claude-opus-5-5"
+   "text": "/model claude-opus-5-5",
+   "phase": "planning"
   },
   {
    "time": "2026-11-08T05:14:38Z",
@@ -106,14 +114,16 @@
    "kind": "decision",
    "text": "Use Opus 5.5, as the teacher suggested",
    "options": "",
-   "notes": "Transcripts record the model per response, so the switch is visible in the token data."
+   "notes": "Transcripts record the model per response, so the switch is visible in the token data.",
+   "phase": "planning"
   },
   {
    "time": "2026-11-08T05:15:56.111000Z",
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 2,
-   "text": "Yes. Forget about canon keeper stuff in the claude.md. Fix that entire Claude.md, I will never do the canon keeper stuff. I have logged in to the best of my ability. Also the truth is that I haven't decided on anything to be honest... You are now opus 5.5, the much smarter model, dwell on what has been done so far. Give me your opinion, then we can continue.\n[2 image(s) attached, not published]"
+   "text": "Yes. Forget about canon keeper stuff in the claude.md. Fix that entire Claude.md, I will never do the canon keeper stuff. I have logged in to the best of my ability. Also the truth is that I haven't decided on anything to be honest... You are now opus 5.5, the much smarter model, dwell on what has been done so far. Give me your opinion, then we can continue.\n[2 image(s) attached, not published]",
+   "phase": "planning"
   },
   {
    "time": "2026-11-08T05:15:56Z",
@@ -129,7 +139,8 @@
    "kind": "decision",
    "text": "Remove canon-keeper from the global CLAUDE.md",
    "options": "",
-   "notes": "Backup kept."
+   "notes": "Backup kept.",
+   "phase": "planning"
   },
   {
    "time": "2026-11-08T05:19:21Z",
@@ -153,14 +164,16 @@
    "kind": "reply",
    "turn": 2,
    "text": "## Done this turn, with proof\n\n- **GitHub works.** `gh auth status` reports you logged in as `Marcus-Hollimon`. Your repo `Project-2-AI-Use-In-Schools` exists, is public, and is empty.\n- **Git identity is set.** It now reports `user.name = Marcus` and `user.email = [email removed]`. The failure in your screenshot was my fault: I gave you bash syntax (`&&`), and your terminal is Windows PowerShell 5.1, which rejects it. About the email: your GitHub profile already shows it publicly, so committing with it exposes nothing new.\n- **Global CLAUDE.md is rewritten.** It went from 95 lines to 70. A line-by-line comparison shows only what I meant to change: the canon-keeper section is gone, the header is updated, and three rules are added (PowerShell-safe commands, high-level explanations first, tell you when you're misusing me). Everything else is word-for-word the same. A byte-identical backup is at `~/.claude/backups/CLAUDE.md.2026-11-08.before-canon-keeper-removal`.\n\n## I audited what I told you last turn, and several claims were wrong\n\n| What I said | Verdict | Evidence |\n|---|---|---|\n| Transcripts record tokens, timestamps, prompts and tool calls for every turn | Holds | |\n| `/compact` is recorded | Holds | 25 flagged rows, all `true` |\n| Biggest session: 4.50B cache reads vs 13.9M output | **Wrong, about 2x too high** | Each reply is saved as several rows, and each row repeats the same token counts. That session has 12,131 rows but only 5,733 real replies. Corrected: 2.18B vs 5.51M |\n| Session files can simply be added together | **Wrong** | 316 replies appear in two or more files, because reopening a session copies its history into a new file |\n| The 04:51 / 04:52 gap was a `/clear` | **Wrong** | 1,362 of the new file's 1,364 rows were copied from the old one, so that was a reopened session. How `/clear` shows up in the data is still unknown |\n| Hooks can record `/clear` exactly | **Unverified** | I had only seen two other hook types working |\n| Weight tokens by billed rates | **Wrong for you** | You pay a flat Pro fee. What you actually spend is a percentage of your usage limits |\n| CLAUDE.md was \"90% canon-keeper\" | Exaggerated | 38 of 95 lines, so 40% |\n\nThe main conclusion survives and gets stronger: cache reads outweigh output 395 to 1 after the fix, not 324 to 1.\n\nThis is good news for deliverable 2. My first analysis double-counted tokens and misread a reopened session, and a deliberate check caught both. A skeptical reviewer wants exactly that story. I'll keep these audit scripts and their output as the first tests in Phase 1, so your validation report opens with a real error that got caught instead of a wall of green checkmarks.\n\n## Two findings that change the plan\n\n**1. Your real budget, read straight from your account.** You're on Pro. You've used 50% of your weekly limit, and it resets **Tuesday Nov 10 at 1:00 AM EST**. Your 5-hour window is at 12%. Extra usage is turned off, so hitting the limit means a hard stop until the reset. The timing is mixed:\n- Bad: today and Monday, when the heaviest work (the research) happens, only have half a week of budget left.\n- Good: you get a full fresh week starting the night before the application is due.\n\nYour standing rule says never cut investigation to save tokens. I'm keeping that rule. The way to honor it on this budget is to cut the number of schools, not the quality of the work on each one.\n\n**2. Canon-keeper is still wired into this folder outside CLAUDE.md.** `C:\\Claude Folder\\.claude\\settings.json` runs canon-keeper's code checks and tests after every file write or edit, with a 3-minute timeout. It hasn't fired yet only because I've been writing files through the shell. Once Phase 0 starts editing files the normal way, it would run a retired project's test suite on every single edit. I haven't checked whether it also fires in sessions started inside a subfolder. Your OK last turn covered CLAUDE.md only, so I left it alone. I'd remove it and keep a backup.\n\n## My opinion on the plan\n\n**On your four answers:**\n\n1. **Stratified ~40 schools.** Right design, but the number shouldn't be fixed before we measure.\n   - Pilot 5 schools first, one per institution type.\n   - Read how much of your weekly limit each school costs, then choose the final number. If one school costs 2%, then 40 schools cost 80%, which isn't possible before the reset.\n   - With about 8 schools per group, comparisons between groups are descriptive, not statistically significant. Say that plainly in the write-up.\n   - Save the actual web page behind every coded claim (your own \"read real bytes\" rule, applied to websites), so a reviewer can check any data point against its source.\n2. **I write the UI, you review.** Right for this assignment. Since you aren't reading code, \"review\" should mean clicking through the live site against a checklist written into each spec. That checklist with your pass/fail marks becomes documented evidence of your contribution.\n3. **React.** Keep it. My static-site recommendation was more cautious than this situation needs. The search-and-filter views for deliverable 2 are easier to build well in React, and React comes with tools for testing the UI, which strengthens deliverable 2. The real risk is publishing it to the web, and Phase 0 deals with that first.\n4. **Protect the study.** Agreed, with one hard truth: the study is also the phase most likely to run out your budget. The pilot is what actually protects it.\n\n**What I'd change in my own plan from last turn:**\n- **Deliverable 4 needs a deliberate experiment, not just old data.** To show how clear and compact affect usage, this project's own sessions need to contain clears and compacts at known moments, labeled by phase. So at every phase boundary I'll record a usage reading, you'll do a deliberate `/clear` or `/compact`, and the state file will log both. The first `/clear` also serves as the test of how `/clear` really appears in the data, replacing my wrong guess.\n- **Never publish raw transcripts.** This folder's history includes 73 calls to a company-search tool from other work, plus your email and pasted materials. Only derived numbers, and prompts from this project that you've reviewed, should go public.\n\n**Timeline:**\n\n| When | Budget | Work |\n|---|---|---|\n| Sun Nov 8 | remaining 50% | Phase 0, Phase 1, codebook, 5-school pilot |\n| Mon Nov 9 | rest of that 50% | Main collection (size set by the pilot), your 10 hand-coded schools |\n| Tue Nov 10 | fresh week from 1 AM | Interfaces and validation; application due |\n| Wed Nov 11 | | Documentation, your evaluation |\n| Thu Nov 12 | | Presentation |\n\n**On \"I haven't decided anything\":** that means last turn's coaching point, telling me what you'd already decided, rested on a wrong assumption. Drop it. It also means the four answers you clicked were your first real decisions, which is why I reviewed each one above instead of treating them as settled.\n\n---\n\n**Coaching**\n\n1. **\"Dwell on what has been done so far\" was the most valuable thing you said this session.** It produced the audit, and the audit found four wrong claims. Notice what actually caused it, though: not the switch to a \"smarter model,\" but your instruction to re-check earlier work. A model switch doesn't make old claims any more or less true. Ask for an audit of earlier claims at every phase boundary, whichever model is running.\n2. **Say your whole intent, not just the first place it applies.** \"Fix the CLAUDE.md, I will never do canon-keeper stuff\" really meant \"remove canon-keeper from my setup everywhere.\" Because you named only the CLAUDE.md, the hook had to wait for a second approval. Stating the broader goal would have let me finish the cleanup this turn.\n\n**Claude Code feature for this task:** the app's usage card. It shows the same 5-hour and weekly percentages I read for you above. Check it at the start and end of every phase. Those readings are the most honest data you can get for deliverable 4, because on Pro the limit is what you're really spending, not dollars.",
-   "toolCalls": 12
+   "toolCalls": 12,
+   "phase": "planning"
   },
   {
    "time": "2026-11-08T05:27:41.097000Z",
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 3,
-   "text": "Start Phase 0"
+   "text": "Start Phase 0",
+   "phase": "planning"
   },
   {
    "time": "2026-11-08T05:27:41Z",
@@ -176,7 +189,8 @@
    "kind": "decision",
    "text": "Start Phase 0, including removing the canon-keeper test hook",
    "options": "Start Phase 0 · keep the hook",
-   "notes": ""
+   "notes": "",
+   "phase": "planning"
   },
   {
    "time": "2026-11-08T05:29:33Z",
@@ -240,7 +254,8 @@
    "kind": "commit",
    "text": "Phase 0: project foundation, React skeleton, GitHub Pages deploy",
    "commit": "b945d66",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "0"
   },
   {
    "time": "2026-11-08T05:41:47Z",
@@ -272,7 +287,8 @@
    "kind": "commit",
    "text": "Phase 0 complete: progress records, live-site checks, CI on Node 24",
    "commit": "58801b4",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "0"
   },
   {
    "time": "2026-11-08T05:47:12.051000Z",
@@ -280,7 +296,8 @@
    "kind": "reply",
    "turn": 3,
    "text": "Phase 0 is done, and your site is live at **https://marcus-hollimon.github.io/Project-2-AI-Use-In-Schools/**\n\n## What's proven, and how\n\n| Claim | Proof |\n|---|---|\n| The code works | Lint is clean, the build is clean, and 17/17 tests pass. Every run is saved in `validation/runs/`. |\n| The tests aren't decorative | I broke the app twice on purpose. Breaking tab clicks failed exactly the click test. Breaking page addresses failed 10 tests. After restoring, both files were byte-identical and 17/17 passed again. |\n| Publishing works | GitHub's own machine ran lint, tests, and build before each deploy. Both runs passed (27 s and 18 s). |\n| The live site is the current code | The live page's footer shows commit `58801b4`, which is the latest on GitHub. That proves pushing to GitHub rebuilds the site automatically. |\n| Every page survives a fresh load | Tested in a real browser: each page loaded fresh (confirmed by an in-page marker getting wiped), showed the right heading and tab, and produced zero console errors. |\n| Nothing from memory | Configs came from the exact versions in use (Vite 8.3.6, Vitest 5.1.0). The workflow's five security-pinned action versions match Vite's own doc character for character. |\n\nBudget: Phase 0 cost about **1 point of your weekly limit** (51% to 52%) and 10 points of the 5-hour window. You have roughly 48% of the week left before Tuesday 1 AM.\n\n## What went wrong along the way\n\n- **The shell tool silently ate backslashes** in three lines of code. The linter caught it before anything ran, and I rewrote those lines so they contain no backslashes at all. It's now a rule in the project's CLAUDE.md.\n- **My first browser check proved less than it looked like it did.** Switching between `#` addresses doesn't load a fresh page, and my first marker test only covered one page. My own checks flagged both problems, and the table in `validation/manual-checks.md` is from the corrected run. Both failures are recorded there too, because a reviewer should see them.\n- **Copying Vite's deploy file word for word gave CI a different Node version** than your machine (26 vs 24). It's now pinned to 24, and the second deploy confirms CI used Node 24.\n- **Not proven: the reload key itself.** My browser pane ignores F5. A fresh load is technically the same thing as a refresh, but the actual keystroke is your check.\n\n## Your turn: the Phase 0 checklist\n\nOpen the live site in **your own normal browser** (not my pane, which ignores reload keys) and check:\n1. The site loads.\n2. Clicking each of the four numbered tabs shows its own title.\n3. On **Token usage**, press **Ctrl+F5**. You should still be on Token usage.\n4. The commit code in the footer (`58801b4`) matches the latest commit on your GitHub repo page.\n5. On GitHub, you can find the `specs/`, `progress/`, and `validation/` folders.\n\nTell me how it went and I'll record your result, with a timestamp, as your review in `validation/manual-checks.md`. Then type `/clear`, and in the fresh conversation type: **\"Read progress/STATE.md and start Phase 1.\"** That `/clear` does two jobs at once: it's the context reset between phases, and it's the controlled experiment that shows how `/clear` really appears in the transcript data. Last time I guessed at that and got it wrong.\n\n---\n\n**Coaching**\n\n1. **\"Start Phase 0\" was two words, and that was enough.** It worked because the spec carried the detail: what to build, what \"done\" means, how it gets checked. That is the core idea of spec-driven development, and it's what lets you `/clear` safely. Keep going-ahead prompts short only when a written spec exists. When none exists, a two-word prompt hands every decision to me.\n2. **Don't skip the checklist to save time.** The assignment grades your supervision, and right now the repo honestly says \"Marcus's checklist: not done.\" If you approve Phase 1 without doing it, the project's claim that you reviewed Phase 0 has no evidence behind it. Five minutes of clicking is the cheapest proof of your contribution you'll get all project.\n\n**Claude Code feature for this task:** `/clear`, combined with the `progress/STATE.md` file. After a clear I remember nothing, so the next session's quality depends entirely on what that file says. That makes your `/clear` a live test of whether this project's specs actually work, which is exactly what your teacher asked you to demonstrate. If the next session picks up Phase 1 correctly from one sentence, that's your evidence.",
-   "toolCalls": 67
+   "toolCalls": 67,
+   "phase": "0"
   },
   {
    "time": "2026-11-08T05:51:00Z",
@@ -296,14 +313,16 @@
    "kind": "decision",
    "text": "Context resets use `/compact`, not `/clear`",
    "options": "`/clear` (Claude's suggestion) · `/compact`",
-   "notes": "Claude cannot trigger `/compact`; Marcus types it at boundaries Claude prepares. Deliverable 4 compares the two, so one deliberate `/clear` is still proposed (open)."
+   "notes": "Claude cannot trigger `/compact`; Marcus types it at boundaries Claude prepares. Deliverable 4 compares the two, so one deliberate `/clear` is still proposed (open).",
+   "phase": "0"
   },
   {
    "time": "2026-11-08T05:51:13.582000Z",
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 4,
-   "text": "I prefer using compacts to be honest, so can we do that instead? All 5 checks passed. Can you compact yourself at reasonable points?"
+   "text": "I prefer using compacts to be honest, so can we do that instead? All 5 checks passed. Can you compact yourself at reasonable points?",
+   "phase": "0"
   },
   {
    "time": "2026-11-08T05:52:12Z",
@@ -311,7 +330,8 @@
    "kind": "commit",
    "text": "Record Marcus's Phase 0 review; switch context resets to /compact",
    "commit": "2e6ce59",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "0"
   },
   {
    "time": "2026-11-08T05:52:32.715000Z",
@@ -319,7 +339,8 @@
    "kind": "reply",
    "turn": 4,
    "text": "Yes, we'll use `/compact`. One hard limit first: **I can't compact myself.** I have no tool that runs `/compact`; only you can type it. The only automatic version kicks in at 97% of my 1M-token context, which would be very late and expensive. Every turn re-reads the whole context, so a bloated context drains your weekly budget faster. So here's how it'll work: at good stopping points I'll update `STATE.md`, commit, take a usage reading, and give you the exact line to paste. That's now a rule in the project's CLAUDE.md.\n\n**Recorded:** your 5/5 checklist pass is in `validation/manual-checks.md` with its time, and all ten boxes in the Phase 0 spec are ticked. It's committed and pushed as `2e6ce59`. Your decision to use compact instead of clear is logged in `progress/decisions.md`.\n\n**Now is a good point.** Phase 0 is finished, everything is committed, and I took a \"just before /compact\" reading: weekly 53%, 5-hour 28%, context 293,955 tokens. Paste this:\n\n```\n/compact Phase 0 is complete and committed (2e6ce59). Keep: the project lives in C:\\Claude Folder\\Project-2-AI-Use-In-Schools; progress/STATE.md and specs/ are the source of truth; token figures must be deduplicated by response id; never publish raw transcripts; the shell tool collapses double backslashes; Marcus prefers /compact and I must take a usage reading right after one. Next: write specs/phase-1-instrumentation.md.\n```\n\nAfter it finishes, say \"continue\". My first step will be the \"after /compact\" usage reading, so the compact's effect gets measured.\n\n**Hard truth about compact-only.** Deliverable 4 asks how *both* clear and compact affect token usage. If we never `/clear`, you can only describe compact; you can't compare the two. One deliberate `/clear` at a safe point, say after Phase 1 once `STATE.md` has proven itself, would give you that comparison. It's your call, and if you'd rather skip it, the write-up should say plainly that the comparison wasn't run.\n\n---\n\n**Coaching**\n\n1. **Stating a preference (\"I prefer compacts\") was exactly right.** It changed the workflow in one sentence. What would have made it stronger is one clause of reasoning, like \"because I lose too much with clear.\" That tells me whether to protect the comparison or drop it, instead of asking you a follow-up question.\n2. **\"Can you compact yourself?\" was a good question to ask rather than assume.** The answer is no, and if I'd silently agreed to do it, Phase 1 would have started with a bloated context and nobody noticing. Keep asking \"can you actually do X?\" whenever a plan depends on my abilities.\n\n**Claude Code feature for this task:** `/compact` with focus text, which is the line above. A bare `/compact` lets the summarizer decide what matters. Focus text tells it what must survive, and you've used that form 7 times before. The specific rules that are easy to lose (dedup, privacy, the backslash quirk) are exactly the things a generic summary drops.",
-   "toolCalls": 10
+   "toolCalls": 10,
+   "phase": "0"
   },
   {
    "time": "2026-11-08T05:53:00Z",
@@ -334,7 +355,8 @@
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 5,
-   "text": "Yes, one /clear"
+   "text": "Yes, one /clear",
+   "phase": "0"
   },
   {
    "time": "2026-11-08T05:53:40Z",
@@ -342,7 +364,8 @@
    "kind": "decision",
    "text": "One deliberate `/clear`, at the end of Phase 1; `/compact` everywhere else",
    "options": "One `/clear` (Claude's suggestion) · compact only",
-   "notes": "Gives deliverable 4 a real clear-vs-compact comparison. Placed after Phase 1 so STATE.md has already been tested once."
+   "notes": "Gives deliverable 4 a real clear-vs-compact comparison. Placed after Phase 1 so STATE.md has already been tested once.",
+   "phase": "0"
   },
   {
    "time": "2026-11-08T05:53:48Z",
@@ -350,7 +373,8 @@
    "kind": "commit",
    "text": "Decision: one deliberate /clear at the end of Phase 1, /compact elsewhere",
    "commit": "d300855",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "0"
   },
   {
    "time": "2026-11-08T05:54:04.254000Z",
@@ -358,13 +382,15 @@
    "kind": "reply",
    "turn": 5,
    "text": "I recorded it. The plan is one deliberate `/clear` at the end of Phase 1, with `/compact` everywhere else.\n\n- **Where it's written down:** `progress/decisions.md` (timestamped 00:53:40) and the \"How context is reset\" section of `progress/STATE.md`. Before that `/clear`, I'll commit, update `STATE.md`, and take a usage reading, so we can measure what the clear changes.\n- **Why the end of Phase 1:** after Phase 1, `STATE.md` will already have carried us through one compact. If the clear goes badly, it's the instructions file that failed, not the timing.\n- **Saved to GitHub:** committed and pushed as `d300855`, with nothing left uncommitted.\n\nNow paste this. It's the same as the line I gave you before, with the commit updated:\n\n```\n/compact Phase 0 is complete and committed (d300855). Keep: the project lives in C:\\Claude Folder\\Project-2-AI-Use-In-Schools; progress/STATE.md and specs/ are the source of truth; token figures must be deduplicated by response id; never publish raw transcripts; the shell tool collapses double backslashes; Marcus prefers /compact, with one deliberate /clear at the end of Phase 1; take a usage reading right after any compact. Next: write specs/phase-1-instrumentation.md.\n```\n\nThen say \"continue\".\n\n---\n\n**Coaching**\n\n1. **Your answer was short and clear, and that was enough.** The tradeoff was already explained, so \"Yes, one /clear\" decided it. Next time you could also say *where* it should go (\"after Phase 1\" or \"before the study\"). I chose the end of Phase 1 for you, and that placement shapes what the comparison can show.\n2. **Order matters right now: compact first, then continue.** If you say \"continue\" before compacting, Phase 1 starts on top of about 294k tokens of context. Every turn re-reads all of that, which burns your weekly budget faster.\n\n**Claude Code feature for this task:** the app's usage card. Look at it once just before and once just after you run `/compact`. You'll see the context number drop, and that before-and-after pair is the first real measurement for deliverable 4.",
-   "toolCalls": 5
+   "toolCalls": 5,
+   "phase": "0"
   },
   {
    "time": "2026-11-08T05:56:19.680000Z",
    "actor": "Marcus",
    "kind": "command",
-   "text": "/compact Phase 0 is complete and committed (d300855). Keep: the project lives in C:\\Claude Folder\\Project-2-AI-Use-In-Schools; progress/STATE.md and specs/ are the source of truth; token figures must be deduplicated by response id; never publish raw transcripts; the shell tool collapses double backslashes; Marcus prefers /compact, with one deliberate /clear at the end of Phase 1; take a usage reading right after any compact. Next: write specs/phase-1-instrumentation.md."
+   "text": "/compact Phase 0 is complete and committed (d300855). Keep: the project lives in C:\\Claude Folder\\Project-2-AI-Use-In-Schools; progress/STATE.md and specs/ are the source of truth; token figures must be deduplicated by response id; never publish raw transcripts; the shell tool collapses double backslashes; Marcus prefers /compact, with one deliberate /clear at the end of Phase 1; take a usage reading right after any compact. Next: write specs/phase-1-instrumentation.md.",
+   "phase": "0"
   },
   {
    "time": "2026-11-08T05:57:16Z",
@@ -379,7 +405,8 @@
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 6,
-   "text": "continue"
+   "text": "continue",
+   "phase": "0"
   },
   {
    "time": "2026-11-08T06:02:00Z",
@@ -395,7 +422,8 @@
    "kind": "commit",
    "text": "Phase 1 spec and pre-code recon (waiting for approval)",
    "commit": "3014eef",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "1"
   },
   {
    "time": "2026-11-08T06:04:02.101000Z",
@@ -403,14 +431,16 @@
    "kind": "reply",
    "turn": 6,
    "text": "I've written the Phase 1 plan ([specs/phase-1-instrumentation.md](specs/phase-1-instrumentation.md)). Phase 1 builds a script that turns our Claude Code history into the data for tabs 3 and 4 (Contributions and Token usage). Before writing the plan, I measured how your compact shows up in the history files, so the plan is built on facts rather than guesses.\n\n**What the compact showed (measured, saved in [evidence/phase1-recon/](evidence/phase1-recon/recon-output.txt)):**\n- **The compact worked as hoped.** Context went from 305,065 tokens to 14,969 of conversation, in 56 seconds. The app now shows 81,551 tokens in total.\n- **Most of what's left is fixed overhead.** About 78,000 of those 81,551 tokens are the same every turn: tool descriptions, connectors and system instructions, re-sent each time no matter what we talk about.\n- **The compact's own cost is not in the history.** The history files record every normal step, but the step that writes the summary leaves no trace. Only the app's usage percentages see it. The Token usage tab will say so openly instead of quietly under-counting.\n- **The app's numbers and the history agree.** All 5 of your usage readings match a step in the history to within 0.18%, and one matches exactly. That means we have an independent check that the script reads the right numbers.\n\n**What you're approving, in plain terms:**\n1. **Your questions and my answers go public only after you've read them.** The script writes a preview that stays on your computer. You tell me which turns to hide, or say \"publish all\".\n2. **Every number gets checked against one my code didn't produce:** the app's context readings, a second count of steps that the app logs separately, and the compact's \"before\" number.\n3. **Your checklist is 4 items.** The main one: run one command and compare its number to the app's context number.\n4. **Budget target: at most 15 points of the 5-hour window.** Phase 0 used 10.\n\n**Two mistakes of mine, fixed:**\n- My check script first labelled its matches \"at or before the reading\", but one match was a minute *after*. I corrected the label instead of hiding that row. The two earliest readings were only written down to the minute, which is why the timing is loose for those two.\n- The shell command for writing the spec failed again, the same quirk as before, in a new form. I wrote the file a different way and noted the workaround in the project rules.\n\n---\n\n**Coaching**\n\n1. **When you review the spec, check just three things:** the publishing rule (point 1), the 15-point budget, and whether the 4-item checklist is something you'll actually do. You don't need to read the rest; it's written so I can pick up where I left off after the `/clear`.\n2. **This one will cost you:** about 20,000 tokens of every turn are descriptions of connectors this project doesn't use (Google Drive, Docs and others). Several of the engineering-plugin connectors are failing to connect anyway. I can turn off the unused ones for this session if you say so, and take a reading before and after. That saving would be a measured data point for tab 4.\n\n**Claude Code feature for this task:** the connector toggles for a session. Connectors are switched on per session, and each one you leave on gets re-sent with every message.",
-   "toolCalls": 31
+   "toolCalls": 31,
+   "phase": "1"
   },
   {
    "time": "2026-11-08T06:13:27.969000Z",
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 7,
-   "text": "Turn off the unused ones for this session for sure. What are the commands to run in powershell? The link to private/qa-review.md is broken in the phase 1 md. Also i don't see a run whose name ends in pipeline.json. What's the publishing rule?"
+   "text": "Turn off the unused ones for this session for sure. What are the commands to run in powershell? The link to private/qa-review.md is broken in the phase 1 md. Also i don't see a run whose name ends in pipeline.json. What's the publishing rule?",
+   "phase": "1"
   },
   {
    "time": "2026-11-08T06:13:58Z",
@@ -418,7 +448,8 @@
    "kind": "commit",
    "text": "Phase 1 spec: checklist is for the end of the phase; log connector change",
    "commit": "2a1e49d",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "1"
   },
   {
    "time": "2026-11-08T06:14:16.920000Z",
@@ -426,7 +457,8 @@
    "kind": "reply",
    "turn": 7,
    "text": "The broken link and the missing run have the same cause, and it's my fault: the spec's checklist is for the **end** of Phase 1, but I didn't say so. I haven't written any Phase 1 code yet, so `private/qa-preview.md` (you typed \"qa-review\"), the `_pipeline.json` run and the PowerShell commands don't exist yet. The spec viewer turned the filename into a link to a file that isn't there. I added a line to the spec saying the checklist comes at the end of the phase, and pushed it (`2a1e49d`).\n\n**PowerShell commands:** none yet. When the script exists, I'll give you two or three commands, one per line, to compare its number with the app's context number.\n\n**Connectors:** I turned off Claude Docs, the only one of your connectors still switched on (Google Drive and Google Docs were already off). The change takes effect when this turn ends, so I'll take the \"after\" reading next turn. Don't expect much from it. The \"before\" reading shows 20,442 tokens of tool descriptions from connectors, and most of that comes from tools built into the app (the browser, computer control, the app's own controls), which can't be switched off here. Claude Docs has 8 tools, so I expect a saving of a few thousand tokens, not 20,000. My \"about 20,000 tokens\" in the last message overstated what turning connectors off can save; next turn's reading will show the real number.\n\nThere's also a list of engineering-plugin connectors (Slack, GitHub, and others), but they aren't connected, so they add no tools. You can remove the plugin itself in the app's plugin settings if you want to tidy up.\n\n**The publishing rule:** nothing you typed to me, and nothing I wrote back, goes on the public site until you've seen it.\n1. The script writes every question and answer, with times, into `private/qa-preview.md`. That file stays on your computer and is never uploaded.\n2. You read it and tell me \"publish all\" or \"hide turns 3 and 7\".\n3. Only then do those turns go public. Some things are never published even after you approve: what tools did, file contents, images, and my internal reasoning. Your home folder path is shortened to `~`, and your email address is removed.\n\n---\n\n**Coaching**\n\n1. **Four questions in one message worked well here.** Each one got its own answer. Your \"I don't see the run\" question also caught a real flaw in the spec. Checking whether something exists is exactly the kind of review you should be doing.\n2. **\"For sure\" approved one action,** turning off connectors. It didn't approve the spec, so I'm still waiting on that. When you want both, say so: \"turn them off, and the spec is approved.\"\n\n**Claude Code feature for this task:** the Connectors list in the composer's + menu shows which connectors are on. You can switch them off there yourself in two clicks.",
-   "toolCalls": 8
+   "toolCalls": 8,
+   "phase": "1"
   },
   {
    "time": "2026-11-08T06:15:00Z",
@@ -442,7 +474,8 @@
    "kind": "decision",
    "text": "Phase 1 spec approved, including the publishing rule",
    "options": "approve · change",
-   "notes": "Work on Phase 1 tasks starts."
+   "notes": "Work on Phase 1 tasks starts.",
+   "phase": "1"
   },
   {
    "time": "2026-11-08T06:21:00Z",
@@ -450,14 +483,16 @@
    "kind": "decision",
    "text": "Publish all question-and-answer turns",
    "options": "publish all · hide some after reading the preview",
-   "notes": "Decided before the preview existed. The privacy filter still applies (no tool output, file contents, images, thinking; home path and email removed), and the preview is still generated so he can change his mind before the first publish."
+   "notes": "Decided before the preview existed. The privacy filter still applies (no tool output, file contents, images, thinking; home path and email removed), and the preview is still generated so he can change his mind before the first publish.",
+   "phase": "1"
   },
   {
    "time": "2026-11-08T06:21:39.705000Z",
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 8,
-   "text": "Publish all turns. And I do approve of the phase 1 spec with the publishing rule as described."
+   "text": "Publish all turns. And I do approve of the phase 1 spec with the publishing rule as described.",
+   "phase": "1"
   },
   {
    "time": "2026-11-08T06:28:58Z",
@@ -465,7 +500,8 @@
    "kind": "commit",
    "text": "Phase 1: transcript pipeline, cross-checks, recorded tests, CI step",
    "commit": "be9164a",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "1"
   },
   {
    "time": "2026-11-08T06:29:00Z",
@@ -481,7 +517,8 @@
    "kind": "commit",
    "text": "Phase 1: Claude acceptance checks ticked, usage reading, state",
    "commit": "7220cfd",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "1"
   },
   {
    "time": "2026-11-08T06:30:30.625000Z",
@@ -489,14 +526,16 @@
    "kind": "reply",
    "turn": 8,
    "text": "Phase 1 is built and pushed (commit `7220cfd`). Your \"publish all\" decision and your approval of the spec are both recorded. GitHub's automatic run passed, including the new pipeline tests: its log shows \"12 passed\".\n\n**What the script found in your session so far**\n- **Real usage:** 101 model calls after removing duplicates, from 309 rows.\n- **Why de-duplicating matters:** simply adding up the rows would have counted 3.08 times the real number of cache reads.\n- **Your conversation:** 8 prompts from you, 2 commands (`/model` and `/compact`) and 1 answer to my multiple-choice questions.\n\n**The four checks, all passing on your real data:**\n\n| Check | Result |\n|---|---|\n| App's context number vs the history | all 7 readings within 281 tokens |\n| Every model request has an answer | passes, with one listed exception (below) |\n| The compact's \"before\" number | exact match |\n| No home folder path or email in published files | 0 found |\n\n**One check failed on the first run.** A request at 00:13 EST got no answer, and a second request followed 0.6 seconds later, most likely the app retrying. I didn't loosen the check to make it pass. That request is now listed by time as a \"known gap\" whose cost we can't see. I wrote the change into the spec under \"Amendment to C2\".\n\n**Proof the tests catch real mistakes:** I broke each of the two duplicate-removal rules on purpose. Each time, a test failed and named the broken rule. All four of those runs are saved in `validation/runs/`.\n\n**Connector result:** turning off Claude Docs saved about 175 tokens per turn, not the thousands I predicted. Almost all of the roughly 20,000 tokens of tool descriptions are built into the app and can't be switched off. That's recorded in `progress/usage.md`.\n\n**Your checklist (4 items):**\n\n1. In PowerShell, run these two lines:\n```powershell\ncd \"C:\\Claude Folder\\Project-2-AI-Use-In-Schools\"\n```\n```powershell\nuv run --project pipeline python pipeline/build.py\n```\nCompare the \"Context now\" number it prints with the context number the app shows. They should be within about 1%. The app's number will be a bit higher, because it also counts this turn.\n\n2. and 3. Open the preview. Skim it, and check that one of your prompts shows roughly the right time. Times are in UTC, so subtract 5 hours.\n```powershell\nnotepad private\\qa-preview.md\n```\n\n4. On GitHub, open `validation/runs/`. Four files there end in `_pipeline.json`.\n\n**Budget:** Phase 1 used 11 points of the 5-hour window (target 15) and 1 weekly point. The 5-hour window is at 42% and resets at 04:30. After your checklist comes the planned `/clear`; I'll hand you the exact steps.\n\n---\n\n**Coaching**\n\n1. **\"Publish all\" before seeing the preview** was your call to make, and the privacy filter still applies. But you decided without seeing what's in it. Skimming the preview takes two minutes and is now item 2 of your checklist; until then, that approval is untested.\n2. **Your four-question message last turn caught a real gap** (the checklist read as if the files already existed). Keep asking \"where is it?\" whenever a spec mentions a file. It's the cheapest check you can do.\n\n**Claude Code feature for this task:** running a command yourself in the app's Terminal panel. Item 1 of your checklist is an independent check only because you run it, not me.",
-   "toolCalls": 52
+   "toolCalls": 52,
+   "phase": "1"
   },
   {
    "time": "2026-11-11T14:46:39.432000Z",
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 9,
-   "text": "The app doesn't show a \"context now\" number? I opened the preview. It's all fine. The command line ran fine though.\n[3 image(s) attached, not published]"
+   "text": "The app doesn't show a \"context now\" number? I opened the preview. It's all fine. The command line ran fine though.\n[3 image(s) attached, not published]",
+   "phase": "1"
   },
   {
    "time": "2026-11-11T14:47:50Z",
@@ -504,7 +543,8 @@
    "kind": "commit",
    "text": "Phase 1: Marcus checklist recorded; reading after 3-day pause",
    "commit": "48eec05",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "1"
   },
   {
    "time": "2026-11-11T14:48:11.560000Z",
@@ -512,7 +552,8 @@
    "kind": "reply",
    "turn": 9,
    "text": "Your checklist is recorded, and Phase 1 is complete and pushed (commit `48eec05`).\n\n**The context number was my mistake.** I wrote that checklist step without checking what the app actually shows you, and it shows no context number. So I added this morning's app reading to the usage log, and the script's automatic check compared the two: 648 tokens apart (0.31%), within the 0.5% allowed. That check was done by me, not by you, and the spec now says so in plain words. The other three items passed: you ran the script and every check showed PASS, the preview was fine, and GitHub shows four pipeline runs.\n\n**The bigger problem: the date.** It's **Wed Nov 11, 09:46**. The last work on this project was Sun Nov 8 at 01:30.\n- **Application deadline (Nov 10):** passed. What's live is a skeleton site with four empty tabs; your Token usage screenshot shows \"Not built yet\".\n- **Documentation:** due today. **Presentation:** tomorrow.\n- **Not started yet:** the study (part 1, the main research), all four tabs, your evaluation, and your reflection.\n- **Budget is no longer the problem:** the weekly limit reset yesterday and is at 8%. Time is now the constraint.\n\n**My recommended plan for today, most valuable first:**\n1. **The planned `/clear` (5 minutes).** Phase 1 is done, and tab 4 needs the clear-versus-compact comparison. I'll give you the steps.\n2. **Tabs 3 and 4, Contributions and Token usage (about 1 to 2 hours).** Their data already exists and passes its checks, so these are the fastest real content.\n3. **A smaller study, not the 40-school plan.** Treat the planned 5-school pilot as the study, perhaps 8 to 10 schools, each linked to an archived source page, plus your own hand-coding of a few schools to compare against mine. I'd label the findings honestly as a small descriptive sample. Forty schools no longer fits in a day.\n4. **Tab 2, Validation:** the recorded test runs and checks that already exist.\n5. **Your evaluation and reflection.** These have to be your own writing. I can give you the numbers and the timeline.\n\n**Two things only you can do:**\n- **Ask your instructor today whether a late submission is accepted.** That decides whether the missed deadline matters.\n- **Tell me about the other session file.** One was last saved on Nov 8 at 18:00 in the same folder as this project. I haven't opened it, because the privacy rule keeps me out of other sessions. If it was work on this project, tell me and I'll add it to the timeline.\n\n---\n\n**Coaching**\n\n1. **When you come back after a break, say so first.** \"I'm back, it's Nov 11, deadline passed\" would have put the schedule problem at the top of the turn instead of after the checklist. I only caught the date because my clock changed.\n2. **Ask \"can I see that?\" when a checklist step points at something on screen.** You found my unchecked assumption, the missing context number, just by trying to do the step. That's exactly how a reviewer should catch a builder.\n\n**Claude Code feature for this task:** the usage card in the app, which shows when the weekly limit resets. This week, budget stopped being what limits you; the calendar is.",
-   "toolCalls": 10
+   "toolCalls": 10,
+   "phase": "1"
   },
   {
    "time": "2026-11-11T14:50:00Z",
@@ -528,7 +569,8 @@
    "kind": "decision",
    "text": "Deadline is 2 PM Nov 12 for everything, not midnight",
    "options": "(information from Marcus)",
-   "notes": "Replaces the Nov 10, 11, 12 split in specs/00-project.md."
+   "notes": "Replaces the Nov 10, 11, 12 split in specs/00-project.md.",
+   "phase": "1"
   },
   {
    "time": "2026-11-11T14:51:00Z",
@@ -536,7 +578,8 @@
    "kind": "decision",
    "text": "Study sample: 15 schools, popular Ohio schools plus some big national names (Harvard named as an example)",
    "options": "stratified ~40 (earlier plan) · 15 chosen by Marcus",
-   "notes": "A chosen (purposive) sample, not a random or stratified one: findings describe these 15 schools only and cannot be generalized to US CS departments. Exact list proposed in the Phase 2 spec for his approval."
+   "notes": "A chosen (purposive) sample, not a random or stratified one: findings describe these 15 schools only and cannot be generalized to US CS departments. Exact list proposed in the Phase 2 spec for his approval.",
+   "phase": "1"
   },
   {
    "time": "2026-11-11T14:51:00Z",
@@ -544,14 +587,16 @@
    "kind": "decision",
    "text": "Compact at good points, relatively frequently, to save tokens",
    "options": "(instruction from Marcus)",
-   "notes": "Claude prepares a /compact at every phase end and after each big chunk of work. The planned /clear at the end of Phase 1 still happens."
+   "notes": "Claude prepares a /compact at every phase end and after each big chunk of work. The planned /clear at the end of Phase 1 still happens.",
+   "phase": "1"
   },
   {
    "time": "2026-11-11T14:51:06.957000Z",
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 10,
-   "text": "We have a good bit of time left until tomorrow. It's not actually due at midnight tonight. It's more like 2PM tomorrow. No need to worry, let's just make sure we compact at good points relatively frequently to save tokens. Lets move on. We can do 15 schools. Lets make them some relatively popular ones around Ohio, and maybe some bigger names like Harvard or something. We have time."
+   "text": "We have a good bit of time left until tomorrow. It's not actually due at midnight tonight. It's more like 2PM tomorrow. No need to worry, let's just make sure we compact at good points relatively frequently to save tokens. Lets move on. We can do 15 schools. Lets make them some relatively popular ones around Ohio, and maybe some bigger names like Harvard or something. We have time.",
+   "phase": "1"
   },
   {
    "time": "2026-11-11T14:52:00Z",
@@ -567,7 +612,8 @@
    "kind": "commit",
    "text": "Phase 1 closed: decisions, state for the /clear, reading just before it",
    "commit": "afaf867",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "1"
   },
   {
    "time": "2026-11-11T14:54:22Z",
@@ -583,7 +629,8 @@
    "kind": "commit",
    "text": "C1 amended to a between-two-responses rule; fix wrong timestamps; reading before /clear",
    "commit": "69ffb99",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "1"
   },
   {
    "time": "2026-11-11T14:55:17Z",
@@ -591,7 +638,8 @@
    "kind": "commit",
    "text": "Rule: timestamps come from the clock, never typed",
    "commit": "88e7849",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "1"
   },
   {
    "time": "2026-11-11T14:55:41.209000Z",
@@ -599,14 +647,16 @@
    "kind": "reply",
    "turn": 10,
    "text": "Your decisions are recorded: everything is due at 2 PM tomorrow, the study uses 15 schools, and we compact at good points. Phase 1 is closed and pushed (commit `88e7849`), and GitHub's automatic checks passed.\n\n**About the sample:** 15 schools you pick (Ohio plus some big names) is fine for this assignment, but it changes what the findings can say. They describe *these 15 schools*, not \"US CS departments\" in general. The site and your write-up will say that plainly. Here's my proposed list, which you'll confirm or change in the next step:\n- **Ohio (10):** Ohio State, Cincinnati, Case Western Reserve, Miami University, Ohio University, Kent State, Dayton, Bowling Green State, Toledo, Wright State\n- **National (5):** Harvard, MIT, Stanford, Carnegie Mellon, UC Berkeley\n\n**Three mistakes of mine this turn, all fixed:**\n1. **I committed data while a check was failing.** My command saved to GitHub straight after running the checks, without stopping when one failed. The next commit replaced that data, and from then on I only committed after reading the result.\n2. **I typed guessed times three times** (09:55 when the clock said 09:52, and 10:00 when it said 09:54). One of them made the context check fail, which is how I noticed. The project rules now say every time must come from the clock.\n3. **The context check needed a better rule.** After the time was fixed, it still failed once: the app took its reading while I was writing a large file, so the number landed partway between two steps. My guess at the app's exact formula matched 0 of 10 readings, so I dropped it. The new rule, \"the reading falls between the step before and the step after\", holds for all 10 readings. It's written into the spec with the evidence, like the earlier change to the request-count check.\n\n**Now the `/clear`:**\n1. Type `/clear` and press Enter.\n2. Then send: `Read progress/STATE.md and continue.`\n\nThe fresh session will take a reading first, find how the clear shows up in the history files, and then write the Phase 2 spec with the school list for your approval. It will also ask you about the other session file from Nov 8, which I haven't opened.\n\n---\n\n**Coaching**\n\n1. **\"We can do 15 schools, Ohio plus big names\" was a clear decision.** One sentence settled the sample and the deadline. To make your write-up stronger, add a reason for the choice, such as \"Ohio because that's where I study, big names for contrast\". Your evaluation will need that reasoning, and right now only you know it.\n2. **This clear is the experiment, so don't add anything to the message after it.** Send only \"Read progress/STATE.md and continue.\" That way the comparison measures what the files alone can carry over, not what you remind the new session of.\n\n**Claude Code feature for this task:** `/clear`. It starts a fresh conversation in the same folder, so everything carries over only through the project files (CLAUDE.md and STATE.md). That's why I wrote them before asking you to clear.",
-   "toolCalls": 31
+   "toolCalls": 31,
+   "phase": "1"
   },
   {
    "time": "2026-11-11T14:57:59.311000Z",
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 11,
-   "text": "Ehh. Lets try and make it more stratified, to really reach that goal of US CS departments, I'll leave it up to you, but I would like Ohio schools, simply because I live in ohio. Definitely include OSU and University of Cincinnati at least. After this step I'll follow those clear instructions."
+   "text": "Ehh. Lets try and make it more stratified, to really reach that goal of US CS departments, I'll leave it up to you, but I would like Ohio schools, simply because I live in ohio. Definitely include OSU and University of Cincinnati at least. After this step I'll follow those clear instructions.",
+   "phase": "1"
   },
   {
    "time": "2026-11-11T14:58:31Z",
@@ -614,7 +664,8 @@
    "kind": "decision",
    "text": "Study sample: stratified, so it covers every kind of US CS department; Ohio included; Ohio State and Cincinnati must be in it; design left to Claude",
    "options": "15 chosen by Marcus (09:51 decision, replaced) · stratified",
-   "notes": "Claude's design: national schools drawn at random within strata from the official federal list (IPEDS), plus an Ohio oversample reported separately. 15 schools cannot give statistics for all US departments; the strata give coverage, not estimates."
+   "notes": "Claude's design: national schools drawn at random within strata from the official federal list (IPEDS), plus an Ohio oversample reported separately. 15 schools cannot give statistics for all US departments; the strata give coverage, not estimates.",
+   "phase": "1"
   },
   {
    "time": "2026-11-11T14:59:10Z",
@@ -630,7 +681,8 @@
    "kind": "commit",
    "text": "Sample redesign: stratified IPEDS draw plus Ohio oversample; reading before /clear",
    "commit": "7acabfc",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "1"
   },
   {
    "time": "2026-11-11T14:59:38.332000Z",
@@ -638,14 +690,16 @@
    "kind": "reply",
    "turn": 11,
    "text": "The new sample design is saved and pushed (commit `7acabfc`). The checks still pass, and nothing is left uncommitted.\n\n**The design, in plain terms:**\n- **5 kinds of CS department:** big public research universities, big private research universities, other universities, liberal arts colleges, and community colleges.\n- **National part (10 schools):** 2 of each kind, chosen at random from the federal government's official list of colleges that award CS degrees (IPEDS). The random draw is saved, so anyone can repeat it and get the same schools. Ohio schools are left out of this part.\n- **Ohio part (5 schools):** Ohio State and Cincinnati (your picks), plus 3 Ohio schools drawn at random: one regular university, one liberal arts college and one community college.\n- **Reporting:** the national 10 are reported by kind, and Ohio separately. With 2 schools per kind, the site will call the findings illustrative examples, not percentages for the whole country.\n- **Harvard is in only if the draw picks it.** Adding it by hand would turn that slot back into a hand-picked choice. If you want it anyway, say so when you review the Phase 2 plan.\n- **Backup plan:** if the federal data takes more than about 30 minutes to get working, I'll hand-pick schools within the same 5 kinds and label them as hand-picked.\n\nThe fresh session will show you the actual 15 schools in the Phase 2 plan before any research starts.\n\n**Now the clear:**\n1. Type `/clear` and press Enter.\n2. Then send exactly this, and nothing else: `Read progress/STATE.md and continue.`\n\n---\n\n**Coaching**\n\n1. **This was a good correction to make.** You noticed that hand-picked schools couldn't support the goal you'd stated, and you fixed it before any research was done, when the fix was nearly free. \"Ehh, let's make it stratified\" a day into the research would have meant starting over.\n2. **\"I'll leave it up to you\" plus two firm rules (Ohio, Ohio State and Cincinnati) works well.** I can decide the details and you keep what matters to you. Do the same for the codebook in the Phase 2 plan: name the one or two questions you care most about, and leave the rest to me.\n\n**Claude Code feature for this task:** the `/clear` you're about to run. Afterwards, the session's first step tells us whether STATE.md alone was enough to pick up the work.",
-   "toolCalls": 11
+   "toolCalls": 11,
+   "phase": "1"
   },
   {
    "time": "2026-11-11T15:00:07.318000Z",
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 12,
-   "text": "Read progress/STATE.md and continue"
+   "text": "Read progress/STATE.md and continue",
+   "phase": "1"
   },
   {
    "time": "2026-11-11T15:02:26Z",
@@ -661,7 +715,8 @@
    "kind": "commit",
    "text": "After /clear: new session a9056776 added, how a /clear shows up, reading after /clear",
    "commit": "b506747",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:06:07Z",
@@ -669,7 +724,8 @@
    "kind": "commit",
    "text": "Phase 2 prep: IPEDS 2024 raw files and the draw script, committed with its seed before the first run",
    "commit": "405f8dd",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:08:06Z",
@@ -685,7 +741,8 @@
    "kind": "commit",
    "text": "Phase 2 spec draft: frame (1,509 schools, 5 strata), 15 drawn, sources recorded; awaiting approval",
    "commit": "6cfc04c",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:08:48Z",
@@ -693,7 +750,8 @@
    "kind": "commit",
    "text": "Phase 2 spec: state the limit of the seed-first evidence",
    "commit": "63cc469",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:09:19.883000Z",
@@ -701,14 +759,16 @@
    "kind": "reply",
    "turn": 12,
    "text": "I finished the steps that come after the /clear, wrote the Phase 2 plan (the \"spec\") and drew the 15 schools. Nothing gets researched or coded until you approve the plan.\n\n**What the /clear looks like in the records.** It doesn't leave any mark. The old session's record just stops at 09:59:41, and a brand-new session starts at 10:00:07 with a new id. From the records alone, a /clear looks exactly like opening a fresh session, so our usage log is what says which one it was. I added the new session to the token pipeline and all four checks still pass. The app said 78,618 tokens right after the clear, and the records agree to within 15.\n\n**A mistake in my own earlier plan.** The sample design I wrote before the /clear would have left out **both Ohio State and Cincinnati**, the two schools you required. It looked only for schools that report degrees as \"Computer Science\" in the federal college data (IPEDS). Ohio State files its CS degrees as \"Computer Engineering\" and \"Computer and Information Sciences, General\", and Cincinnati also uses the general category. I widened the rule to include the general category, so both schools now qualify the same way every other school does, without being added by hand.\n\n**The draw.** 1,509 eligible schools, sorted into 5 groups using the current (2025) Carnegie classification. The random draw is repeatable: a second run gave the exact same list.\n\n| National, drawn at random | Ohio |\n|---|---|\n| Public research universities: Minnesota, Virginia | Ohio State, Cincinnati (your picks) |\n| Private research universities: MIT, Johns Hopkins | Baldwin Wallace (random) |\n| Other universities with graduate programs: Valparaiso, Presbyterian | Defiance (random) |\n| Mostly-bachelor's colleges: Coppin State, Le Moyne-Owen | Columbus State Community College (random) |\n| Community colleges: Snow, Luzerne County | |\n\nThings to know before you approve:\n- **Harvard wasn't drawn.** Adding it by hand would turn the private-research group back into a hand-picked one.\n- **Four schools give fewer than 10 CS degrees a year.** They may publish nothing about AI. That still counts as a finding, because every school gets the same fixed search.\n- **Two schools per group shows examples, not national rates.** The site will say that plainly.\n- **One overclaim, corrected.** I said the git history proves I fixed the random seed before the draw. It was only a local commit, six seconds before the run, and GitHub didn't see it until later. The spec now says so.\n\nBesides approving the plan, three questions for you:\n1. **Blind check:** you code **3** schools yourself, not the 10 the project spec says. That 10 was written when the study had 40 schools.\n2. **Cheaper model:** I recommend **no**, because the quality of the coding is the whole study and the weekly limit is only at 9%.\n3. **A record file I didn't open** (`ddc7d76a…`, last written Nov 8 at 6:00 PM while you were away) sits in this project's folder. Is it a session of yours from another project? I'm leaving it unopened for privacy until you say.\n\nThe plan is at [specs/phase-2-study.md](specs/phase-2-study.md), and the 15 schools are listed in [data/frame/sample.csv](data/frame/sample.csv).\n\n**Coaching**\n- \"Read STATE.md and continue\" worked because that file was precise. Next time, add a stopping point, like \"continue until you need my approval.\" This turn happened to stop at the right place because the plan requires your approval, but saying it yourself keeps you in control of how much gets done without you.\n- **Plan mode** would suit the pilot that comes next. In plan mode, Claude can only read and propose; nothing changes until you approve, so you see exactly how the first 5 schools will be searched before any work starts. You can switch it on from the mode picker in the app, or ask me to enter it.",
-   "toolCalls": 62
+   "toolCalls": 62,
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:11:34.931000Z",
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 13,
-   "text": "Change something"
+   "text": "Change something",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:11:34.931000Z",
@@ -716,14 +776,16 @@
    "kind": "reply",
    "turn": 13,
    "text": "",
-   "toolCalls": 0
+   "toolCalls": 0,
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:14:40.804000Z",
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 14,
-   "text": "I don't think I will have time to hand code these things... let's just leave that as is. That was just one way of proving that I know what you've done is good, that will be done through forcing you to prove yourself at each step through extensive testing, not by me hand-coding. Other than that we can continue. No need for an explicit plan mode. Also no need for coaching tips from this point on to be honest. Lets just try and get this done properly."
+   "text": "I don't think I will have time to hand code these things... let's just leave that as is. That was just one way of proving that I know what you've done is good, that will be done through forcing you to prove yourself at each step through extensive testing, not by me hand-coding. Other than that we can continue. No need for an explicit plan mode. Also no need for coaching tips from this point on to be honest. Lets just try and get this done properly.",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:15:10Z",
@@ -731,7 +793,8 @@
    "kind": "decision",
    "text": "Phase 2 spec approved, except the blind check: Marcus will not hand-code any schools",
    "options": "blind check on 3 schools (Claude's proposal) · on 10 (project spec) · none",
-   "notes": "Quality is to be shown by extensive testing at each step instead. Claude's recommendation of no cheaper model stands (Marcus: \"Other than that we can continue\")."
+   "notes": "Quality is to be shown by extensive testing at each step instead. Claude's recommendation of no cheaper model stands (Marcus: \"Other than that we can continue\").",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:15:10Z",
@@ -739,7 +802,8 @@
    "kind": "decision",
    "text": "No more Coaching sections",
    "options": "(instruction from Marcus)",
-   "notes": "Overrides the global CLAUDE.md rule and the per-turn hook for this work; the hook and global file were not changed."
+   "notes": "Overrides the global CLAUDE.md rule and the per-turn hook for this work; the hook and global file were not changed.",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:21:08Z",
@@ -755,7 +819,8 @@
    "kind": "commit",
    "text": "Phase 2: codebook v1, archive script, study checker with 31 tests and a mutation run; CI runs them",
    "commit": "5ccc209",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:22:14Z",
@@ -771,7 +836,8 @@
    "kind": "commit",
    "text": "State for /compact before the Phase 2 pilot; reading just before /compact",
    "commit": "0ee3af9",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:22:44.794000Z",
@@ -779,20 +845,23 @@
    "kind": "reply",
    "turn": 14,
    "text": "I've recorded your decision: no hand-coding, and the spec says so. Automated checks now take its place, and they are built, tested and pushed. No school has been researched yet. I stopped before the pilot because of how fast the usage limit is going.\n\n**What replaces your blind check.** Every coded answer has to pass 10 checks before a school counts as done:\n- **The source is real and untouched.** The quote is actually on the saved page. The saved page hasn't been edited since it was downloaded. The download really succeeded. The page is on that school's own website, not another school's.\n- **The coding follows the rules.** Every answer is one the codebook allows, and the answers don't contradict each other. Each answer's quote contains words that fit it (for \"restrict\": words like prohibited or may not). If it doesn't, I have to write down why the quote still supports the answer, and those notes get published so my judgment calls are visible.\n- **\"None found\" means really none found.** Every school gets the same four searches. Any \"none found\" triggers two more searches with different wording.\n\n**Proof the checks work.** I wrote and tested them before coding any school:\n- **31 tests, all passing.** Each test feeds the checks a made-up school that breaks exactly one rule, and confirms they catch it.\n- **A deliberate sabotage run.** I switched off the \"page not edited\" check. Exactly the one matching test failed, then I restored the file exactly as it was. All runs are recorded.\n- **CI runs them now.** The GitHub log shows \"31 passed\", so a broken check would block the site from updating.\n\n**A limit you should know.** These checks prove every answer rests on a real, unaltered page from the right school and that the rules were applied the same way everywhere. They can't prove another person would read an unclear sentence the same way I did. The written notes on borderline answers are where that judgment shows, and the site will publish them.\n\n**Why I stopped here.** The 5-hour usage limit jumped from 10% to 22% in about 20 minutes, because every step re-reads the whole conversation (now about 198k tokens). That's the point where you asked me to prepare a compact, and the pilot will cost much less afterwards. Everything is saved: the progress file has the exact pilot procedure, and the usage reading is recorded. The limit resets at 2:40 PM.\n\nType this:\n\n```\n/compact Phase 2 pilot is next. Read progress/STATE.md first: it has the exact procedure for coding each school, the 5 pilot schools, and the checks every school must pass. Keep: Marcus's decisions today (no hand-coding, testing proves quality; no Coaching sections; no plan mode), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, the CIP fix that brought in Ohio State and Cincinnati, and the open question about transcript ddc7d76a (do not open it).\n```\n\nThe other thing I asked earlier is still open. A session record from Nov 8 at 6:00 PM (`ddc7d76a…`) sits in this project's folder. I haven't opened it, and I won't unless you tell me it belongs to this project.",
-   "toolCalls": 42
+   "toolCalls": 42,
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:22:57.148000Z",
    "actor": "Marcus",
    "kind": "command",
-   "text": "/compact Phase 2 pilot is next. Read progress/STATE.md first: it has the exact procedure for coding each school, the 5 pilot schools, and the checks every school must pass. Keep: Marcus's decisions today (no hand-coding, testing proves quality; no Coaching sections; no plan mode), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, the CIP fix that brought in Ohio State and Cincinnati, and the open question about transcript ddc7d76a (do not open it)."
+   "text": "/compact Phase 2 pilot is next. Read progress/STATE.md first: it has the exact procedure for coding each school, the 5 pilot schools, and the checks every school must pass. Keep: Marcus's decisions today (no hand-coding, testing proves quality; no Coaching sections; no plan mode), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, the CIP fix that brought in Ohio State and Cincinnati, and the open question about transcript ddc7d76a (do not open it).",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:31:01.241000Z",
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 15,
-   "text": "You can open that transcript. Continue the phase 2 pilot."
+   "text": "You can open that transcript. Continue the phase 2 pilot.",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:31:39Z",
@@ -800,7 +869,8 @@
    "kind": "decision",
    "text": "Transcript ddc7d76a may be opened",
    "options": "(Marcus: \"You can open that transcript\")",
-   "notes": "Checked metadata only: messages dated 2026-09-09 17:36 to 18:55 UTC, working folders C:\\Claude Folder and canon-keeper, first prompt about an MCP server for roleplay canon. It is the retired canon-keeper project, not this one; the Nov 8 18:00 file date is not when it was used. Not read further; not added to pipeline/sessions.json."
+   "notes": "Checked metadata only: messages dated 2026-09-09 17:36 to 18:55 UTC, working folders C:\\Claude Folder and canon-keeper, first prompt about an MCP server for roleplay canon. It is the retired canon-keeper project, not this one; the Nov 8 18:00 file date is not when it was used. Not read further; not added to pipeline/sessions.json.",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:40:03Z",
@@ -808,7 +878,8 @@
    "kind": "commit",
    "text": "Pilot: Minnesota and Johns Hopkins coded; S3 allows browser text for curl-blocked pages",
    "commit": "116489e",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:42:58Z",
@@ -824,7 +895,8 @@
    "kind": "commit",
    "text": "Pilot: Valparaiso coded; state and costs before second /compact",
    "commit": "4809af9",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:43:39.671000Z",
@@ -832,20 +904,23 @@
    "kind": "reply",
    "turn": 15,
    "text": "Three of the five pilot schools are done: Minnesota, Johns Hopkins and Valparaiso. Each one passes every check, and everything is pushed. I stopped here because context has grown 124k since the last compact, which is inside your 100k to 150k band.\n\n**What they say about AI.** Two of the three universities leave the rule to each course, and Minnesota's default is no AI without the instructor's permission. Only Minnesota's CS department says anything about AI, and only in a news article that encourages students to use it. Johns Hopkins' and Valpo's CS pages say nothing about AI, so they are coded \"none found\" after the extra searches.\n\n**Cost.** Each school took 3 to 4 points of the 5-hour limit, about 3.3 on average. That limit is at 34% and resets at 2:40 PM. The remaining 12 schools should fit before the deadline if I compact every 3 schools.\n\n**Problems I hit and fixed:**\n- **Git would have broken the hash check.** It was rewriting line endings in the saved pages, which changes their bytes. On a fresh checkout, check S2 (\"page not edited\") would then fail on every page. Saved pages are now stored exactly as downloaded, and I confirmed the stored bytes match the recorded hashes.\n- **Some sites block automated downloads.** teaching.jhu.edu refused the download tool on some pages. My retry with browser-like settings was itself blocked by the permission system as getting around a bot check, which is the right call. I read those pages in the built-in browser instead. I also loosened check S3 so a page read that way can pass, but only with a written reason attached. A new test covers this, and the sabotage run failed exactly that test. No coded answer uses this yet.\n- **One codebook gap.** Johns Hopkins' only official software engineering course page is from Fall 2018, before ChatGPT. Version 1 of the codebook still codes that as \"the course doesn't address AI\", which is misleading. I've listed it and two smaller issues as candidate version 2 changes, to decide after school 5. If I adopt them, the pilot schools get recoded.\n\n**The Nov 8 transcript (ddc7d76a).** I checked only its dates, folders and first prompt. It's from your retired canon-keeper project on Sep 9, not this one, so I didn't read further and it's closed.\n\nThe full check over all 15 schools still reports a failure, because 12 aren't coded yet. CI isn't affected: it runs only the check tests.\n\nType this:\n\n```\n/compact Phase 2 pilot continues. Read progress/STATE.md first: it has the procedure for coding each school, what is done (Minnesota, Johns Hopkins, Valparaiso pass all checks), and next steps (Coppin State, then Snow, then the pilot report and codebook v2 decision). Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, and the rule not to retry blocked downloads with browser-like headers.\n```",
-   "toolCalls": 104
+   "toolCalls": 104,
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:44:07.927000Z",
    "actor": "Marcus",
    "kind": "command",
-   "text": "/compact Phase 2 pilot continues. Read progress/STATE.md first: it has the procedure for coding each school, what is done (Minnesota, Johns Hopkins, Valparaiso pass all checks), and next steps (Coppin State, then Snow, then the pilot report and codebook v2 decision). Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, and the rule not to retry blocked downloads with browser-like headers."
+   "text": "/compact Phase 2 pilot continues. Read progress/STATE.md first: it has the procedure for coding each school, what is done (Minnesota, Johns Hopkins, Valparaiso pass all checks), and next steps (Coppin State, then Snow, then the pilot report and codebook v2 decision). Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, and the rule not to retry blocked downloads with browser-like headers.",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:45:44.686000Z",
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 16,
-   "text": "have you been saving each prompt to private to ensure that you can keep track of my prompts and stuff, and then it gets published to github?"
+   "text": "have you been saving each prompt to private to ensure that you can keep track of my prompts and stuff, and then it gets published to github?",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:47:04.382000Z",
@@ -853,14 +928,16 @@
    "kind": "reply",
    "turn": 16,
    "text": "Yes, and your prompts are already public. Your repo on GitHub is public, and your prompts are in it word for word.\n\n**How it works:**\n- Claude Code keeps its own record of every conversation on your computer, outside the project. I'm not making a separate copy of your prompts.\n- When the build runs, it reads that record and pulls out only the messages you typed (15 so far). It saves them in [contributions.json](data/derived/contributions.json), with your decisions, my replies and the commits.\n- That file is committed and pushed. I checked that it's on GitHub's main branch and that the repo is public. Anyone with the link can read it today. The website's Contributions tab hasn't been built yet (that's Phase 3), but the file itself is already visible.\n- The prompts are complete, not trimmed. Your first one is about 4,700 characters and includes your teacher's whole assignment text. Images you attached are listed but not published.\n- Your email address appears nowhere in the repo; I searched for it.\n\n**What `private/` is:** `private/qa-preview.md` lists every turn exactly as it would be published, so you can read it over first. Git ignores that folder, so it never gets uploaded.\n\n**Why it's set up this way:** your assignment asks for a document of your contributions, and the project rules say to publish only prompts from this project, after you've reviewed them. On Nov 8 at 1:21 AM you chose \"publish all\", which is why [prompt-exclusions.json](progress/prompt-exclusions.json) has no hidden turns. This question will be published too, the next time the build runs.\n\n**If you want something hidden:** tell me the turn numbers and I'll mark them hidden. They'll then show as \"[hidden by Marcus]\". One catch: hiding them only changes the file from now on. Every earlier version is still in the repo's history on GitHub. Removing text from that history takes a history rewrite and a force push, which I'd only do if you ask.",
-   "toolCalls": 10
+   "toolCalls": 10,
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:47:34.975000Z",
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 17,
-   "text": "Just publish them all, and continue phase 2, if I feel like I want to hide some we can circle back to that later."
+   "text": "Just publish them all, and continue phase 2, if I feel like I want to hide some we can circle back to that later.",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:47:46Z",
@@ -868,7 +945,8 @@
    "kind": "decision",
    "text": "Keep publishing every prompt in full",
    "options": "publish all · hide some turns",
-   "notes": "Reaffirms the Nov 8 decision after Claude confirmed the 15 prompts are public on GitHub (data/derived/contributions.json). Marcus: \"if I feel like I want to hide some we can circle back to that later.\""
+   "notes": "Reaffirms the Nov 8 decision after Claude confirmed the 15 prompts are public on GitHub (data/derived/contributions.json). Marcus: \"if I feel like I want to hide some we can circle back to that later.\"",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:55:09Z",
@@ -884,7 +962,8 @@
    "kind": "commit",
    "text": "Pilot done: Coppin State and Snow coded; codebook v2 and recode",
    "commit": "b144052",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:56:01.884000Z",
@@ -892,20 +971,23 @@
    "kind": "reply",
    "turn": 17,
    "text": "Your prompts stay published in full, and I recorded that decision. The pilot is finished: all 5 schools pass every check. The codebook is now at version 2.\n\n**The last two schools:**\n- **Coppin State** has no AI policy page. The only rule is one line in its 2025-26 Student Handbook: \"inappropriate or excessive\" AI use on coursework counts as misconduct. I coded that as \"allowed with limits\", with a cautionary tone. The CS department says nothing about AI, and its software engineering course (COSC 409) has no public syllabus.\n- **Snow College** is the clearest so far. Its 2026 classroom policy allows AI by default unless an instructor bans it, and requires students to acknowledge use. The tone is mostly positive. The CS department says nothing about AI. Its software engineering syllabus was approved Fall 2025 and doesn't mention AI.\n\n**Codebook version 2.** I adopted all four changes from the pilot. Three only write down rules I was already applying, so no answers changed. The fourth stops counting course pages from before 2023, the year after ChatGPT came out. That changed one answer: Johns Hopkins' software engineering course went from \"doesn't address AI\" to \"no public syllabus found\", since its only page is from 2018. The spec requires recoding the pilot schools after a codebook change, and I saved the before-and-after list. All 32 tests pass.\n\n**Cost and pace.** Schools got cheaper as the routine settled: 3, 4, 3, 2 and 1 points of the 5-hour limit, about 2.6 on average. The limit is at 43% and resets at 2:40 PM. The 10 schools left should take about 35 points including compacts, which ends around 75 to 80%. That's inside this window, and the deadline is tomorrow at 2 PM.\n\n**Two mistakes of mine:**\n- I printed a big block of the Coppin handbook instead of filtering it. That cost about 8,000 tokens of context for no gain.\n- A bookkeeping script crashed on a \"%\" sign. I checked what it had written and fixed the gap.\n\nEverything is committed and pushed (b144052). The GitHub check for that push hadn't started when I last looked; the previous push passed.\n\nContext has grown about 73k since the last compact, which is below your 100k to 150k band. I'm compacting now anyway because the pilot is a phase boundary. Type this:\n\n```\n/compact Phase 2: pilot done, 10 schools left. Read progress/STATE.md first: it has the coding procedure, the list of the 10 remaining schools with slugs and domains, codebook v2, and the plan to compact every 3 schools. Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, and the rule not to retry blocked downloads with browser-like headers.\n```",
-   "toolCalls": 72
+   "toolCalls": 72,
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:58:07.720000Z",
    "actor": "Marcus",
    "kind": "command",
-   "text": "/compact Phase 2: pilot done, 10 schools left. Read progress/STATE.md first: it has the coding procedure, the list of the 10 remaining schools with slugs and domains, codebook v2, and the plan to compact every 3 schools. Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, and the rule not to retry blocked downloads with browser-like headers."
+   "text": "/compact Phase 2: pilot done, 10 schools left. Read progress/STATE.md first: it has the coding procedure, the list of the 10 remaining schools with slugs and domains, codebook v2, and the plan to compact every 3 schools. Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, and the rule not to retry blocked downloads with browser-like headers.",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T15:59:25.152000Z",
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 18,
-   "text": "continue"
+   "text": "continue",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T16:06:11Z",
@@ -921,7 +1003,8 @@
    "kind": "commit",
    "text": "Main coding 3 of 10: Virginia, MIT, Presbyterian coded",
    "commit": "228b6f3",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T16:06:56.582000Z",
@@ -929,20 +1012,23 @@
    "kind": "reply",
    "turn": 18,
    "text": "Virginia, MIT and Presbyterian are coded and pass every check. That makes 8 of 15 schools done, all passing. The three took 6 minutes and 4 points of the 5-hour limit (45% to 49%). That's cheaper than the pilot, so the remaining 7 should fit easily before the 2:40 PM reset.\n\n**What the three schools say:**\n- **Virginia:** Each instructor sets the AI rules, and there's no default. The tone is mostly positive: faculty are told to encourage appropriate use and to treat AI as a learning aid, with tutor-like examples. Students \"should\" say when they used AI, which counts as encouraged, not required. Virginia's software engineering course, CS 3140 (Spring 2025), allows small AI snippets if each one is cited in the code.\n- **MIT:** Its August 2026 policy has every class post its own AI rules, picked from a four-option menu. The tone is neutral and procedural. In the software engineering course, 6.1020 (Spring 2026), AI-written code or text is banned outright.\n- **Presbyterian:** I found nothing about AI. The honor code and the 2026-27 catalog never mention it, so every answer is \"none found\".\n\n**A gap you should know about:** Virginia's CS department site blocks automated downloads, and my browser pane couldn't open it either. I coded the department as \"none found\" based on the searches alone, and wrote a note saying its pages were never read directly. As your standing rule says, I didn't retry with browser-like headers.\n\n**Mistakes I made and fixed:**\n- I stored one school ID as a number instead of text, and the checker treated Virginia as not coded.\n- I pointed two MIT values at the extracted text file instead of the PDF.\n- I left a column out of a log row, which crashed the build.\n\nThe checks caught all three before the commit. One checker quirk made a correct Virginia quote fail on a period after bold text. I shortened the quote instead of changing the checker mid-study. All of these are written up in STATE.md.\n\nEverything is committed and pushed (228b6f3). The GitHub check for this push was still queued; the previous one passed.\n\nContext grew about 76k since the last compact, below your 100k to 150k range. I'm compacting at the 3-school mark as planned. Type this:\n\n```\n/compact Phase 2: 8 of 15 schools coded, 7 left starting with Le Moyne-Owen (loc.edu). Read progress/STATE.md first: it has the coding procedure, the remaining schools with slugs and domains, codebook v2, and the lessons from the last three schools. Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, and the rule not to retry blocked downloads with browser-like headers.\n```",
-   "toolCalls": 81
+   "toolCalls": 81,
+   "phase": "2"
   },
   {
    "time": "2026-11-11T16:07:23.872000Z",
    "actor": "Marcus",
    "kind": "command",
-   "text": "/compact Phase 2: 8 of 15 schools coded, 7 left starting with Le Moyne-Owen (loc.edu). Read progress/STATE.md first: it has the coding procedure, the remaining schools with slugs and domains, codebook v2, and the lessons from the last three schools. Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, and the rule not to retry blocked downloads with browser-like headers."
+   "text": "/compact Phase 2: 8 of 15 schools coded, 7 left starting with Le Moyne-Owen (loc.edu). Read progress/STATE.md first: it has the coding procedure, the remaining schools with slugs and domains, codebook v2, and the lessons from the last three schools. Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, and the rule not to retry blocked downloads with browser-like headers.",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T16:08:47.595000Z",
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 19,
-   "text": "continue"
+   "text": "continue",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T16:14:27Z",
@@ -958,7 +1044,8 @@
    "kind": "commit",
    "text": "Main coding 6 of 10: Le Moyne-Owen, Luzerne, Cincinnati coded",
    "commit": "f856e3a",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T16:15:00.512000Z",
@@ -966,20 +1053,23 @@
    "kind": "reply",
    "turn": 19,
    "text": "Le Moyne-Owen, Luzerne and Cincinnati are coded, so 11 of the 15 schools are done. All 11 pass every check. The three took about 5 minutes and 5 points of the 5-hour limit (52% to 57%). That leaves plenty of room for the last 4 before the 2:40 PM reset.\n\n**What the three schools say:**\n- **Le Moyne-Owen:** I found nothing about AI. The student handbook, the 2025-26 catalog and the CS program page never mention student AI use, so every answer is \"none found\". The catalog has no software engineering course either.\n- **Luzerne:** Its Academic Honesty Policy, revised June 2024, lists \"using AI to complete an examination, assignment, or any other ancillary coursework without instructor authorization\" as misconduct. I coded that as **restrict**, under the codebook rule that a ban on unauthorized use counts as restrict. Instructors may write their own class rules, but this policy applies when they don't. The tone is cautionary, since AI appears only in the list of violations. Luzerne has no software engineering course.\n- **Cincinnati:** The university leaves AI rules to each instructor, and the tone is positive: its guidelines open with \"AI is a powerful partner.\" A June 2026 university guide tells students to \"treat it like a tutor, not a ghostwriter,\" so collaboration is coded explicit. Disclosure is left to instructors, so it's coded \"not stated\". The CS department says nothing about student AI use.\n\n**A tool change you should know about:** Luzerne's policy is a Word file, and the checker could only read web pages and PDFs. I extended it to read Word files the same way it reads PDFs, from a text copy saved next to the original. The original file's fingerprint is still checked. A new test covers this, and all 33 study tests pass. This was a change to the checker mid-study. It only adds a file type, and no existing check got looser.\n\n**Gaps:**\n- Cincinnati's software engineering course site now returns \"page not found\", so that answer is \"no public syllabus found\". The search tool's summary claimed the page had no AI section, but I couldn't read it myself, so I didn't use that claim.\n- A Luzerne student message from Oct 1 2026 announced an AI roundtable. The page no longer serves that message, so it isn't used as evidence. Both gaps are written in the search logs.\n\nEverything is committed and pushed (f856e3a). Context grew about 81k since the last compact, so this is the planned 3-school compact. Type this:\n\n```\n/compact Phase 2: 11 of 15 schools coded, 4 left starting with Ohio State (osu.edu). Read progress/STATE.md first: it has the coding procedure, the remaining schools with slugs and domains, codebook v2, and the lessons so far (including Word-file archives via study/docx_text.py). Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, and the rule not to retry blocked downloads with browser-like headers.\n```",
-   "toolCalls": 75
+   "toolCalls": 75,
+   "phase": "2"
   },
   {
    "time": "2026-11-11T16:15:27.192000Z",
    "actor": "Marcus",
    "kind": "command",
-   "text": "/compact Phase 2: 11 of 15 schools coded, 4 left starting with Ohio State (osu.edu). Read progress/STATE.md first: it has the coding procedure, the remaining schools with slugs and domains, codebook v2, and the lessons so far (including Word-file archives via study/docx_text.py). Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, and the rule not to retry blocked downloads with browser-like headers."
+   "text": "/compact Phase 2: 11 of 15 schools coded, 4 left starting with Ohio State (osu.edu). Read progress/STATE.md first: it has the coding procedure, the remaining schools with slugs and domains, codebook v2, and the lessons so far (including Word-file archives via study/docx_text.py). Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, and the rule not to retry blocked downloads with browser-like headers.",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T16:16:29.759000Z",
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 20,
-   "text": "continue"
+   "text": "continue",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T16:24:12Z",
@@ -995,7 +1085,8 @@
    "kind": "commit",
    "text": "Phase 2: all 15 schools coded and passing (Ohio State, Baldwin Wallace, Defiance, Columbus State)",
    "commit": "5ebd799",
-   "note": "written by Claude, pushed from Marcus's account"
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T16:25:12.238000Z",
@@ -1003,28 +1094,23 @@
    "kind": "reply",
    "turn": 20,
    "text": "All 15 schools are coded. The full check passes for every school (\"All checks pass: True\"), and the study tests pass 33/33. The last four took about 8 minutes and 7 points of the 5-hour limit (59% to 66%), well inside what's left before the 2:40 PM reset.\n\n**What the last four say:**\n- **Ohio State:** **restrict**. Students may use AI tools for coursework \"only with the explicit permission of each instructor\". A 2023 Academic Affairs page says the same. The tone is positive: the university's AI Fluency initiative wants every graduate able to apply AI in their field.\n  - The CSE department's site blocks automated downloads. I read it in the browser pane and found no AI rule, so the department is coded \"none found\".\n  - The official software engineering syllabus site is blocked to both my download tool and the browser, so that answer is \"no public syllabus found\".\n- **Baldwin Wallace:** I found nothing about AI. The student handbook (revised August 2026), the 2026-27 catalog's honesty policy and the CS and software engineering major pages never mention it.\n- **Defiance:** The only AI rule I found is in the library's AI guide: \"Unauthorized use of Generative AI tools... is considered cheating and/or plagiarism.\" That makes the stance restrict and the tone cautionary. Disclosure is coded **required**, because the guide says \"it is necessary to cite\" anything taken from AI. The catalog and handbook say nothing about AI, and the college has no software engineering course.\n- **Columbus State:** The college's standard syllabus statement says students \"may not use\" AI \"unless explicitly permitted by the instructor\" (restrict) and must use it \"transparently and with appropriate citations\" (disclosure required). The tone is neutral: it says AI can help students learn but can also get in the way.\n\n**Two judgment calls to look at:**\n- **Columbus State's software engineering course is coded \"prohibited\", and this is the call worth checking.** The Spring 2026 CSCI 2221 syllabus has no AI rule of its own. It lists the college's AI statement among its required statements and grants no permission, so AI is banned in that course by default. Someone could reasonably argue for \"not addressed\" instead. The reasoning is written next to the value and will show on the site.\n- **Defiance's only AI rule comes from a library guide, not an official policy.** I coded it because it's the college's own published guidance to students. The value's note says where it comes from.\n\n**A slip I fixed:** I typed one time into the Baldwin Wallace cost row from memory, against the project rule. I replaced it with a real clock reading, marked \"written late\".\n\n**Left for Phase 2:**\n- Re-fetch every saved source page and report which ones changed or disappeared.\n- Re-run and record the web and pipeline tests.\n- Tick the acceptance checks and go through your checklist.\n\nSteps for all three are in STATE.md. Everything is committed and pushed (5ebd799).\n\nI prepared this compact after four schools instead of three, because only one was left. Context grew about 100k since the last compact. Type this:\n\n```\n/compact Phase 2: all 15 schools coded and passing (check_study.py: All checks pass: True; study tests 33/33). Next: Phase 2 wrap-up per progress/STATE.md \"FIRST, right after the /compact\" (R1 re-fetch report script, web and pipeline test runs, acceptance checks, Marcus's checklist, phase-end /compact), then Phase 3 (spec first). Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, timestamps only from date -Iseconds, and the rule not to retry blocked downloads with browser-like headers.\n```",
-   "toolCalls": 97
+   "toolCalls": 97,
+   "phase": "2"
   },
   {
    "time": "2026-11-11T16:26:59.926000Z",
    "actor": "Marcus",
    "kind": "command",
-   "text": "/compact Phase 2: all 15 schools coded and passing (check_study.py: All checks pass: True; study tests 33/33). Next: Phase 2 wrap-up per progress/STATE.md \"FIRST, right after the /compact\" (R1 re-fetch report script, web and pipeline test runs, acceptance checks, Marcus's checklist, phase-end /compact), then Phase 3 (spec first). Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, timestamps only from date -Iseconds, and the rule not to retry blocked downloads with browser-like headers."
+   "text": "/compact Phase 2: all 15 schools coded and passing (check_study.py: All checks pass: True; study tests 33/33). Next: Phase 2 wrap-up per progress/STATE.md \"FIRST, right after the /compact\" (R1 re-fetch report script, web and pipeline test runs, acceptance checks, Marcus's checklist, phase-end /compact), then Phase 3 (spec first). Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, timestamps only from date -Iseconds, and the rule not to retry blocked downloads with browser-like headers.",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T16:28:17.045000Z",
    "actor": "Marcus",
    "kind": "prompt",
    "turn": 21,
-   "text": "continue"
-  },
-  {
-   "time": "2026-11-11T16:32:29.085000Z",
-   "actor": "Claude",
-   "kind": "reply",
-   "turn": 21,
-   "text": "Everything passes: web 17/17, pipeline 12/12, study 33/33, and every school passes every check. Now I'll tick the acceptance boxes and update the log, usage and STATE.",
-   "toolCalls": 41
+   "text": "continue",
+   "phase": "2"
   },
   {
    "time": "2026-11-11T16:33:07Z",
@@ -1033,6 +1119,74 @@
    "phase": "2",
    "text": "Phase 2 done: R1 re-fetch report (69 pages, 0 coded quotes missing; study/refetch.py), web 17/17, pipeline 12/12, study 33/33 recorded, all 15 schools pass check_study; acceptance checks ticked. Prepared the seventh /compact (phase end).",
    "evidence": "data/coded/refetch-report.md; specs/phase-2-study.md; validation/runs/2026-11-11T16-32-19-757Z_web.json"
+  },
+  {
+   "time": "2026-11-11T16:33:15Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 2 done: R1 re-fetch report, Phase 2 end test runs, acceptance checks ticked",
+   "commit": "0d9f966",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "2"
+  },
+  {
+   "time": "2026-11-11T16:33:31.584000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 21,
+   "text": "Phase 2 is finished. Every acceptance check passes and is recorded, and everything is committed and pushed (0d9f966).\n\n**Re-checking the sources:** I wrote a small script, `study/refetch.py`. It downloads all 69 saved source pages again with the same method used to save them, then compares each with the saved copy:\n- **41 unchanged.**\n- **26 changed.** These are mostly web pages whose bytes differ on every load (dates, page tokens). Where we coded a quote from a changed page, the script searched the new copy for it. **All 12 of those quotes are still there.**\n- **2 refused (HTTP 403).** These are a 2010 Valparaiso syllabus and a Virginia department page. Neither carries a coded quote.\n\nThe report is in [refetch-report.md](data/coded/refetch-report.md).\n\n**Correction:** my first run listed 4 pages as \"gone\". They had actually refused the request. On the next run the two Johns Hopkins pages loaded normally. One of them backs three coded values, and I had already confirmed those quotes in the browser pane. The script now labels refusals separately, and the report says why.\n\n**Tests, all recorded:**\n\n| Suite | Result |\n|---|---|\n| Web | 17/17 |\n| Pipeline | 12/12 |\n| Study | 33/33 |\n| Full study check | all 15 schools pass every check |\n\nThe deliberate sabotage run from earlier, with the source-integrity check switched off, is also on record: it failed as it should.\n\n**Cost:** the wrap-up took 2 points of the 5-hour limit (69% to 71%), and the limit resets at 2:40 PM. Note that the /compact itself cost about 3 points (66% before, 69% after).\n\n**Your Phase 2 checklist** (no code reading needed):\n1. On GitHub, open `data/frame/sample.csv`. It should have 15 rows, with Ohio State and Cincinnati marked \"fixed by Marcus\".\n2. Open any school folder in `data/sources/`, then its `search-log.md` and one saved page. Use Ctrl+F to find the quote that `data/coded/values.json` gives for that page.\n3. Open `data/coded/checks.json` and confirm that every school passed every check.\n\nThis is a phase end, so the next step is a compact. Phase 3 (filling the four site tabs with real data) starts with writing its spec. Type this:\n\n```\n/compact Phase 2 done: all acceptance checks ticked (R1 re-fetch 69 pages, 0 coded quotes missing; web 17/17, pipeline 12/12, study 33/33 recorded; all 15 schools pass). Next: Phase 3 Interfaces per progress/STATE.md \"FIRST, right after the /compact\": write specs/phase-3-interfaces.md first, then fill the four tabs with real data. Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint (71% at Phase 2 end, resets 14:40 EST), timestamps only from date -Iseconds, and the rule not to retry blocked downloads with browser-like headers.\n```",
+   "toolCalls": 44,
+   "phase": "2"
+  },
+  {
+   "time": "2026-11-11T16:53:12.848000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 22,
+   "text": "the direct quotes aren't found on the page from what I can see? I went to search log.md for mit, and no quote can be found directly on that page. Every check is true though.\n[3 image(s) attached, not published]",
+   "phase": "2"
+  },
+  {
+   "time": "2026-11-11T16:54:01Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 2 checklist: quote step points at the live URL, not search-log.md; sample.csv step ticked",
+   "commit": "0db60c0",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "2"
+  },
+  {
+   "time": "2026-11-11T16:54:16.977000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 22,
+   "text": "You found a real problem, but it's in my checklist, not in the data. The MIT quotes are on their pages. My step told you to open `search-log.md`, and that file only lists the searches I ran and the links they returned. The quotes are in `data/coded/values.json`, and each one points to the page it came from.\n\nI tested every MIT quote against its saved page:\n\n| Value | Saved page | Ctrl+F on the raw file | What the checker reads |\n|---|---|---|---|\n| University stance | faculty-ai-policy.html | found | found |\n| University tone | faculty-ai-policy.html | found | found |\n| Collaboration | ai-committee-report.pdf | found in the `.pdf.txt` beside it | found |\n| Disclosure | ai-committee-report.pdf | found in the `.pdf.txt` beside it | found |\n| Software engineering course | 6-102-sp26-collaboration.html | **not found** | found |\n\nThe one miss is still on its page. The saved file stores that sentence with formatting tags in the middle (\"advanced code-authoring tools, `<em>e.g.</em>` Claude Code\"). GitHub shows HTML files as code, so Ctrl+F doesn't match across the tags. The checker strips tags before comparing, which is why the check passes. So even if you had opened the right file, your Ctrl+F test could have failed on a true quote. That's a flaw in how I wrote the step.\n\nThe re-check from earlier also shows the faculty policy page, the committee report and the 6.102 page are unchanged on the live web today. That means you can check against the live page.\n\n**What I changed:**\n- **Checklist step 2** now says: open `values.json`, pick a value with a quote, open its `url` in your browser, and Ctrl+F a few words. A live page shows text the way you read it, so formatting tags can't get in the way.\n- **Step 1 is ticked** from your screenshot: 15 rows, with Cincinnati and Ohio State marked \"fixed by Marcus\".\n- **A note for Phase 3:** the Research findings tab should show each quote next to its value, with a link that opens the source page. Then this check is one click, with no hunting through files.\n- Both changes are pushed (0db60c0).\n\nYour third screenshot shows \"false\" with **No results**. That's the result you want, as long as you searched `checks.json`: every failed check would show up there as `false`. The screenshot doesn't show which file was open. If it was `checks.json`, step 3 is done too.\n\nThe phase-end `/compact` line from my last message is still the right next step.",
+   "toolCalls": 8,
+   "phase": "2"
+  },
+  {
+   "time": "2026-11-11T16:55:48.116000Z",
+   "actor": "Marcus",
+   "kind": "command",
+   "text": "/compact Phase 2 done: all acceptance checks ticked (R1 re-fetch 69 pages, 0 coded quotes missing; web 17/17, pipeline 12/12, study 33/33 recorded; all 15 schools pass). Next: Phase 3 Interfaces per progress/STATE.md \"FIRST, right after the /compact\": write specs/phase-3-interfaces.md first, then fill the four tabs with real data. Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint (71% at Phase 2 end, resets 14:40 EST), timestamps only from date -Iseconds, and the rule not to retry blocked downloads with browser-like headers.",
+   "phase": "2"
+  },
+  {
+   "time": "2026-11-11T16:58:07.841000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 23,
+   "text": "continue",
+   "phase": "2"
+  },
+  {
+   "time": "2026-11-11T17:09:48.540000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 23,
+   "text": "Tests pass 37 of 37. Now proving the fix on the live MIT page:",
+   "toolCalls": 84,
+   "phase": "3"
   }
  ]
 }

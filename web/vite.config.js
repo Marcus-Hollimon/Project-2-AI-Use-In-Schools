@@ -24,6 +24,9 @@ export default defineConfig({
   // (reference/vite-v8.3.6/docs/guide/static-deploy.md, "GitHub Pages", step 1).
   base: '/Project-2-AI-Use-In-Schools/',
   plugins: [react()],
+  // The pages read data files from the repository root (data/, validation/, study/), one level
+  // above this app, so the dev server may serve them (reference/vite-v8.3.6/docs/config/server-options.md).
+  server: { fs: { allow: ['..'] } },
   define: {
     __BUILD_COMMIT__: JSON.stringify(buildCommit()),
     __BUILD_TIME__: JSON.stringify(new Date().toISOString()),

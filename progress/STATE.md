@@ -1,6 +1,6 @@
 # State: read this first
 
-Current phase: 2 Study is DONE (all acceptance checks ticked). Next: Phase 3 Interfaces, spec first.
+Current phase: 3 Interfaces (in progress; spec: specs/phase-3-interfaces.md). Phase 2 Study is done.
 
 Last updated: 2026-11-11T11:33:07-05:00 by Claude (session a9056776), just before the seventh `/compact` (Phase 2 end).
 

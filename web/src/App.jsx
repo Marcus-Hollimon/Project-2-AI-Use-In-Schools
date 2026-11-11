@@ -1,6 +1,12 @@
 import { useEffect, useState } from 'react'
 import { REPO_URL, TABS, hashFor, tabFromHash } from './routes.js'
+import Contributions from './tabs/Contributions.jsx'
+import Research from './tabs/Research.jsx'
+import Tokens from './tabs/Tokens.jsx'
+import Validation from './tabs/Validation.jsx'
 import './App.css'
+
+const PAGES = { research: Research, validation: Validation, contributions: Contributions, tokens: Tokens }
 
 // Keeps the visible page in step with the address bar, including Back/Forward and hard refresh.
 function useCurrentTabId() {
@@ -26,7 +32,7 @@ function Overview({ tab }) {
               <span className="card-num">Deliverable {t.deliverable}</span>
               <span className="card-title">{t.title}</span>
               <span className="card-body">{t.summary}</span>
-              <span className="status">Planned for Phase {t.plannedPhase}</span>
+              <span className="status">Built from the project’s recorded data</span>
             </a>
           </li>
         ))}
@@ -40,12 +46,13 @@ function Overview({ tab }) {
 }
 
 function Deliverable({ tab }) {
+  const Page = PAGES[tab.id]
   return (
     <>
       <p className="eyebrow">Deliverable {tab.deliverable}</p>
       <h1>{tab.title}</h1>
       <p className="lede">{tab.summary}</p>
-      <p className="status">Not built yet. Planned for Phase {tab.plannedPhase}.</p>
+      <Page />
     </>
   )
 }

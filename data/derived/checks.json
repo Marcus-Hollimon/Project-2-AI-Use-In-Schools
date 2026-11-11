@@ -219,6 +219,83 @@
    "responseTime": "2026-11-11T16:05:43.871Z",
    "nearestDifference": 59,
    "pass": true
+  },
+  {
+   "reading": "2026-11-11T16:08:58Z",
+   "app": 89371,
+   "between": [
+    87913,
+    89371
+   ],
+   "responseTime": "2026-11-11T16:08:50.472Z",
+   "nearestDifference": 0,
+   "pass": true
+  },
+  {
+   "reading": "2026-11-11T16:14:27Z",
+   "app": 170108,
+   "between": [
+    170097,
+    171553
+   ],
+   "responseTime": "2026-11-11T16:14:10.302Z",
+   "nearestDifference": 11,
+   "pass": true
+  },
+  {
+   "reading": "2026-11-11T16:16:38Z",
+   "app": 93176,
+   "between": [
+    85149,
+    93176
+   ],
+   "responseTime": "2026-11-11T16:16:32.362Z",
+   "nearestDifference": 0,
+   "pass": true
+  },
+  {
+   "reading": "2026-11-11T16:24:12Z",
+   "app": 195190,
+   "between": [
+    195179,
+    197200
+   ],
+   "responseTime": "2026-11-11T16:23:59.936Z",
+   "nearestDifference": 11,
+   "pass": true
+  },
+  {
+   "reading": "2026-11-11T16:28:24Z",
+   "app": 86616,
+   "between": [
+    83705,
+    86616
+   ],
+   "responseTime": "2026-11-11T16:28:20.723Z",
+   "nearestDifference": 0,
+   "pass": true
+  },
+  {
+   "reading": "2026-11-11T16:33:07Z",
+   "app": 118314,
+   "between": [
+    118303,
+    121098
+   ],
+   "responseTime": "2026-11-11T16:32:35.999Z",
+   "nearestDifference": 11,
+   "pass": true
+  },
+  {
+   "reading": "2026-11-11T16:58:16Z",
+   "app": 84625,
+   "between": [
+    82862,
+    84625
+   ],
+   "responseTime": "2026-11-11T16:58:12.495Z",
+   "nearestDifference": 0,
+   "pass": true
   }
  ],
  "C2_completeness": [
@@ -237,9 +314,11 @@
   {
    "session": "a9056776-4951-4636-a9ad-acb1dbccb955",
    "subagent": false,
-   "apiRequests": 381,
-   "uniqueResponses": 381,
-   "unansweredRequests": [],
+   "apiRequests": 458,
+   "uniqueResponses": 457,
+   "unansweredRequests": [
+    "2026-11-11T16:53:13.167Z"
+   ],
    "newestRecordIsUnansweredRequest": false,
    "extra": 0,
    "pass": true
@@ -287,22 +366,28 @@
    "preTokens": 206134,
    "computed": 206134,
    "pass": true
+  },
+  {
+   "time": "2026-11-11T16:56:32.209Z",
+   "preTokens": 137426,
+   "computed": 137426,
+   "pass": true
   }
  ],
  "C4_inflation": {
-  "usageRows": 1443,
-  "uniqueResponses": 539,
+  "usageRows": 1629,
+  "uniqueResponses": 615,
   "naive": {
-   "input": 2960,
-   "cacheWrite": 5516097,
-   "cacheRead": 218313331,
-   "output": 2201646
+   "input": 3336,
+   "cacheWrite": 5947116,
+   "cacheRead": 245777965,
+   "output": 2383408
   },
   "deduplicated": {
-   "input": 1102,
-   "cacheWrite": 1583412,
-   "cacheRead": 82218218,
-   "output": 573047
+   "input": 1258,
+   "cacheWrite": 1741425,
+   "cacheRead": 93358555,
+   "output": 640058
   }
  },
  "privacy": [

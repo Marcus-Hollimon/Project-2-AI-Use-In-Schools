@@ -27,6 +27,13 @@ percentages as the app reports them, so a change of "1 point" means anywhere fro
 | 2026-11-11T10:55:09-05:00 | 2 | pilot done (5 of 5) and codebook v2, just before /compact | 43 | 13 | 172,762 | none (next row is after /compact) |
 | 2026-11-11T10:59:34-05:00 | 2 | after /compact (main coding, 10 schools next) | 45 | 13 | 88,911 | /compact by Marcus (manual; 172,762 tokens at the last reading before it) |
 | 2026-11-11T11:06:11-05:00 | 2 | main coding 3 of 10 (8 of 15 coded), just before /compact | 49 | 14 | 165,412 | none (next row is after /compact) |
+| 2026-11-11T11:08:58-05:00 | 2 | after /compact (main coding, 7 schools next) | 52 | 14 | 89,371 | /compact by Marcus (manual; 165,412 tokens at the last reading before it) |
+| 2026-11-11T11:14:27-05:00 | 2 | main coding 6 of 10 (11 of 15 coded), just before /compact | 57 | 15 | 170,108 | none (next row is after /compact) |
+| 2026-11-11T11:16:38-05:00 | 2 | after /compact (main coding, 4 schools next) | 59 | 15 | 93,176 | /compact by Marcus (manual; 170,108 tokens at the last reading before it) |
+| 2026-11-11T11:24:12-05:00 | 2 | main coding done (15 of 15 coded and passing), just before /compact | 66 | 16 | 195,190 | none (next row is after /compact) |
+| 2026-11-11T11:28:24-05:00 | 2 | after /compact (Phase 2 wrap-up next) | 69 | 17 | 86,616 | /compact by Marcus (manual; 195,190 tokens at the last reading before it) |
+| 2026-11-11T11:33:07-05:00 | 2 | phase end, just before /compact | 71 | 17 | 118,314 | none (next row is after /compact) |
+| 2026-11-11T11:58:16-05:00 | 3 | after /compact (phase start) | 74 | 17 | 84,625 | /compact by Marcus (manual; 118,314 tokens at the last reading before it) |
 
 ## Cost per phase
 | Phase | 5-hour points | Weekly points | Context growth (tokens) |
@@ -39,9 +46,3 @@ The first 20 minutes of planning were not measured: no reading was taken at sess
 Between 00:51:29 and 00:57:55 the 5-hour window moved 3 points. That covers one short turn (recording a decision) plus the compaction itself, and they cannot be separated: the transcript keeps no record of the compaction's own model call (`evidence/phase1-recon/`). The context the next turn re-reads fell from 293,955 to 81,551 tokens, of which about 78,000 is fixed overhead (tool definitions, system prompt, skills) sent on every turn.
 
 Connector test (01:13 to 01:21): turning off the Claude Docs connector saved about 175 tokens per turn, not the thousands Claude predicted. MCP tool descriptions went up 464 (a Workflow tool appeared at the same time) and MCP instructions went down 639. The 20,000 tokens of MCP tools are almost all built into the app (browser, computer control, app controls), which cannot be switched off from a session.
-| 2026-11-11T11:08:58-05:00 | after /compact (main coding, 7 schools next) | 52 | 14 | 89,371 |
-| 2026-11-11T11:14:27-05:00 | main coding 6 of 10 (11 of 15 coded), just before /compact | 57 | 15 | 170,108 |
-| 2026-11-11T11:16:38-05:00 | after /compact (main coding, 4 schools next) | 59 | 15 | 93,176 |
-| 2026-11-11T11:24:12-05:00 | main coding done (15 of 15 coded and passing), just before /compact | 66 | 16 | 195,190 |
-| 2026-11-11T11:28:24-05:00 | after /compact (Phase 2 wrap-up next) | 69 | 17 | 86,616 |
-| 2026-11-11T11:33:07-05:00 | Phase 2 end, just before /compact | 71 | 17 | 118,314 |

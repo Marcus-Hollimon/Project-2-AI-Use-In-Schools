@@ -188,3 +188,18 @@ def test_scrubber_removes_home_folder_in_every_spelling_and_the_email(monkeypatc
     cleaned = [scrub(s) for s in samples]
     assert all("testuser" not in c.lower() and "someone@" not in c for c in cleaned), cleaned
     assert cleaned[1] == "~/x"
+
+
+def test_usage_row_with_missing_columns_stops_the_build():
+    # Trap measured 2026-11-11: seven readings written with 5 cells (no Phase, no reset column)
+    # were read with every value shifted one column, and nothing failed.
+    good = ["2026-11-11T11:33:07-05:00", "2", "phase end", "71", "17", "118,314", "none"]
+    assert build.parse_readings([good])[0]["context"] == 118314
+    short = ["2026-11-11T11:24:12-05:00", "main coding done", "66", "16", "195,190"]
+    for bad in (short, good[:1] + ["main coding done"] + good[2:], good[:3] + ["16%"] + good[4:]):
+        try:
+            build.parse_readings([bad])
+        except ValueError as err:
+            assert "usage.md row" in str(err)
+        else:
+            raise AssertionError("malformed row was accepted: %r" % (bad,))
