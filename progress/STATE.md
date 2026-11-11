@@ -1,8 +1,12 @@
 # State: read this first
 
-Current phase: 5 Evaluation (Marcus's phase: his evaluation, reflection and presentation; no spec yet). Phase 4 Validation is done.
+Current phase: 5 More schools (15 to 35; spec `specs/phase-5-more-schools.md`, draft waiting for Marcus's approval). Evaluation moves to Phase 6. Phase 4 Validation is done.
 
-Last updated: 2026-11-11T15:03:10-05:00 by Claude (session a9056776), Phase 4 closed; /compact prepared.
+Last updated: 2026-11-11T15:12:05-05:00 by Claude (session a9056776), Phase 5 spec drafted.
+
+## NOW: Phase 5 spec waits for Marcus
+- Marcus asked to add schools before the evaluation (15:08:57) and chose 20 more, 6 per type (15:10:24).
+- Spec `specs/phase-5-more-schools.md`: round-2 seed 20261115 named in the spec and pushed before any draw; no draw or coding until Marcus approves.
 
 ## Phase 3 done: Marcus's checklist ticked 2026-11-11T12:22:58-05:00 from his screenshots
 

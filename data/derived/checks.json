@@ -391,8 +391,8 @@
   {
    "session": "a9056776-4951-4636-a9ad-acb1dbccb955",
    "subagent": false,
-   "apiRequests": 604,
-   "uniqueResponses": 602,
+   "apiRequests": 627,
+   "uniqueResponses": 625,
    "unansweredRequests": [
     "2026-11-11T16:53:13.167Z",
     "2026-11-11T17:22:15.570Z"
@@ -1022,19 +1022,19 @@
   "rule": "shell commands Claude ran whose program is uv, python, pytest, npx, npm or vitest and that name pytest, vitest, npm test or a recorder; recorded = through record_tests.py or test:record"
  },
  "C4_inflation": {
-  "usageRows": 1971,
-  "uniqueResponses": 760,
+  "usageRows": 2016,
+  "uniqueResponses": 783,
   "naive": {
-   "input": 4030,
-   "cacheWrite": 6779840,
-   "cacheRead": 295680438,
-   "output": 2708326
+   "input": 4120,
+   "cacheWrite": 6854945,
+   "cacheRead": 300146376,
+   "output": 2738940
   },
   "deduplicated": {
-   "input": 1552,
-   "cacheWrite": 2057449,
-   "cacheRead": 114520920,
-   "output": 762231
+   "input": 1598,
+   "cacheWrite": 2094867,
+   "cacheRead": 116796301,
+   "output": 777271
   }
  },
  "privacy": [
