@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-11-11T16:54:52-05:00",
+ "generatedAt": "2026-11-11T16:57:10-05:00",
  "codebookVersion": 2,
  "schools": [
   {
-   "unitid": "139144",
-   "name": "Berry College",
+   "unitid": "233772",
+   "name": "Tidewater Community College",
    "pass": true,
    "checks": {
     "S1": true,
@@ -23,31 +23,31 @@
      "check": "C4",
      "variable": null,
      "ok": true,
-     "message": "search logged with results: berry.edu generative AI policy"
+     "message": "search logged with results: tcc.edu generative AI policy"
     },
     {
      "check": "C4",
      "variable": null,
      "ok": true,
-     "message": "search logged with results: berry.edu computer science AI policy"
+     "message": "search logged with results: tcc.edu computer science AI policy"
     },
     {
      "check": "C4",
      "variable": null,
      "ok": true,
-     "message": "search logged with results: berry.edu software engineering syllabus AI"
+     "message": "search logged with results: tcc.edu software engineering syllabus AI"
     },
     {
      "check": "C4",
      "variable": null,
      "ok": true,
-     "message": "search logged with results: berry.edu ChatGPT academic integrity"
+     "message": "search logged with results: tcc.edu ChatGPT academic integrity"
     },
     {
      "check": "C1",
      "variable": "univ_stance",
      "ok": true,
-     "message": "value 'instructor decides' allowed"
+     "message": "value 'restrict' allowed"
     },
     {
      "check": "C2",
@@ -59,19 +59,19 @@
      "check": "C1",
      "variable": "univ_stance",
      "ok": true,
-     "message": "source_type 'guidance page' allowed"
+     "message": "source_type 'policy page' allowed"
     },
     {
      "check": "S5",
      "variable": "univ_stance",
      "ok": true,
-     "message": "quote has 17 words"
+     "message": "quote has 21 words"
     },
     {
      "check": "S1",
      "variable": "univ_stance",
      "ok": true,
-     "message": "quote found in data/sources/139144-berry/2026-11-11-libguide-faculty-considerations.html"
+     "message": "quote found in data/sources/233772-tidewater/2026-11-11-code-student-rights-2024.pdf"
     },
     {
      "check": "S2",
@@ -89,7 +89,7 @@
      "check": "S4",
      "variable": "univ_stance",
      "ok": true,
-     "message": "libguides.berry.edu is on berry.edu"
+     "message": "www.tcc.edu is on tcc.edu"
     },
     {
      "check": "C3",
@@ -119,7 +119,7 @@
      "check": "C1",
      "variable": "univ_tone",
      "ok": true,
-     "message": "value 'neutral' allowed"
+     "message": "value 'positive' allowed"
     },
     {
      "check": "C2",
@@ -137,13 +137,13 @@
      "check": "S5",
      "variable": "univ_tone",
      "ok": true,
-     "message": "quote has 17 words"
+     "message": "quote has 21 words"
     },
     {
      "check": "S1",
      "variable": "univ_tone",
      "ok": true,
-     "message": "quote found in data/sources/139144-berry/2026-11-11-libguide-students-ai-use-policy.html"
+     "message": "quote found in data/sources/233772-tidewater/2026-11-11-libguide-student-use-of-ai.html"
     },
     {
      "check": "S2",
@@ -161,7 +161,7 @@
      "check": "S4",
      "variable": "univ_tone",
      "ok": true,
-     "message": "libguides.berry.edu is on berry.edu"
+     "message": "libguides.tcc.edu is on tcc.edu"
     },
     {
      "check": "C1",
@@ -203,13 +203,13 @@
      "check": "S5",
      "variable": "collaboration",
      "ok": true,
-     "message": "quote has 21 words"
+     "message": "quote has 2 words"
     },
     {
      "check": "S1",
      "variable": "collaboration",
      "ok": true,
-     "message": "quote found in data/sources/139144-berry/2026-11-11-libguide-students-ai-use-policy.html"
+     "message": "quote found in data/sources/233772-tidewater/2026-11-11-libguide-student-use-of-ai.html"
     },
     {
      "check": "S2",
@@ -227,7 +227,7 @@
      "check": "S4",
      "variable": "collaboration",
      "ok": true,
-     "message": "libguides.berry.edu is on berry.edu"
+     "message": "libguides.tcc.edu is on tcc.edu"
     },
     {
      "check": "C3",
@@ -239,7 +239,7 @@
      "check": "C1",
      "variable": "disclosure",
      "ok": true,
-     "message": "value 'encouraged' allowed"
+     "message": "value 'required' allowed"
     },
     {
      "check": "C2",
@@ -251,19 +251,19 @@
      "check": "C1",
      "variable": "disclosure",
      "ok": true,
-     "message": "source_type 'guidance page' allowed"
+     "message": "source_type 'policy page' allowed"
     },
     {
      "check": "S5",
      "variable": "disclosure",
      "ok": true,
-     "message": "quote has 27 words"
+     "message": "quote has 30 words"
     },
     {
      "check": "S1",
      "variable": "disclosure",
      "ok": true,
-     "message": "quote found in data/sources/139144-berry/2026-11-11-libguide-students-ai-use-policy.html"
+     "message": "quote found in data/sources/233772-tidewater/2026-11-11-code-student-rights-2024.pdf"
     },
     {
      "check": "S2",
@@ -281,13 +281,13 @@
      "check": "S4",
      "variable": "disclosure",
      "ok": true,
-     "message": "libguides.berry.edu is on berry.edu"
+     "message": "www.tcc.edu is on tcc.edu"
     },
     {
      "check": "C3",
      "variable": "disclosure",
      "ok": true,
-     "message": "cue words present"
+     "message": "cue words absent; reason: No 'must' or 'required' word, but the code makes unacknowledged AI content plagiarism, so acknowledging AI is required (same reading as Defiance, EKU and UDC)."
     },
     {
      "check": "C1",
@@ -311,7 +311,7 @@
      "check": "C2",
      "variable": null,
      "ok": true,
-     "message": "univ_stance='instructor decides' and univ_tone='neutral' agree on none found"
+     "message": "univ_stance='restrict' and univ_tone='positive' agree on none found"
     },
     {
      "check": "C2",

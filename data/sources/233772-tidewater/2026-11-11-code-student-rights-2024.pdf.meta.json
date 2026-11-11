@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.tcc.edu/wp-content/uploads/2024/08/TCC-Code-updated-summer-2024-003.pdf",
+ "final_url": "https://www.tcc.edu/wp-content/uploads/2024/08/TCC-Code-updated-summer-2024-003.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T16:55:39-05:00",
+ "sha256": "4e90e6dfd6dff7407f17aae523221668262db873b0708451f88d03504390cf54",
+ "bytes": 232543
+}

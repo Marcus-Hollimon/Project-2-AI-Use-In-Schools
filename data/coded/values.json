@@ -1968,6 +1968,60 @@
      "note": "No current CS syllabus came up; the only one found was CSC 120 from Spring 2020 (before ChatGPT). CSC 345 Elements of Computing Systems covers some software engineering topics in its catalog description."
     }
    }
+  },
+  {
+   "unitid": "233772",
+   "slug": "233772-tidewater",
+   "name": "Tidewater Community College",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "restrict",
+     "quote": "Cheating: Unauthorized use of notes, study aides, electronic devices, artificial intelligence, or acquiring information from another student’s papers on an examination",
+     "url": "https://www.tcc.edu/wp-content/uploads/2024/08/TCC-Code-updated-summer-2024-003.pdf",
+     "archive": "data/sources/233772-tidewater/2026-11-11-code-student-rights-2024.pdf",
+     "source_type": "policy page",
+     "note": "Section 3.1.1 of the TCC Code of Student Rights & Responsibilities (updated summer 2024). Unauthorized AI use is cheating, so the default is restrict (same reading as Niagara). A newer Student Code of Conduct, Policy 2214 (July 2025), could not be read: curl got HTTP 403 and the browser pane offered it only as a download. Search results say it also lists 'unauthorized use of AI tools' under plagiarism."
+    },
+    "univ_tone": {
+     "value": "positive",
+     "quote": "ChatGPT can be a valuable tool, but it’s essential for college students to use it in conjunction with other academic resources.",
+     "url": "https://libguides.tcc.edu/topic/chatgpt/students",
+     "archive": "data/sources/233772-tidewater/2026-11-11-libguide-student-use-of-ai.html",
+     "source_type": "guidance page",
+     "note": "Library student guide 'How Students Can Use AI' (last updated 27 August 2026): it goes on to call ChatGPT 'a powerful tool' and lists ways students use it, then a list of limitations. A balanced page read as positive, same reading as Nova and Maine Fort Kent."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/233772-tidewater/search-log.md"
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/233772-tidewater/search-log.md"
+    },
+    "collaboration": {
+     "value": "in passing",
+     "quote": "Brainstorming ideas",
+     "url": "https://libguides.tcc.edu/topic/chatgpt/students",
+     "archive": "data/sources/233772-tidewater/2026-11-11-libguide-student-use-of-ai.html",
+     "source_type": "guidance page",
+     "note": "First item in the student guide's list of ways students can use ChatGPT; a list of tasks, not AI framed as a partner or tutor."
+    },
+    "disclosure": {
+     "value": "required",
+     "quote": "Presenting within one’s own work the ideas, representations, or words of another person, or artificial intelligence, without customary and proper acknowledgment, or citation of that proper authorship is considered plagiarism.",
+     "url": "https://www.tcc.edu/wp-content/uploads/2024/08/TCC-Code-updated-summer-2024-003.pdf",
+     "archive": "data/sources/233772-tidewater/2026-11-11-code-student-rights-2024.pdf",
+     "source_type": "policy page",
+     "cue_reason": "No 'must' or 'required' word, but the code makes unacknowledged AI content plagiarism, so acknowledging AI is required (same reading as Defiance, EKU and UDC).",
+     "note": "Section 3.1.3 of the TCC Code of Student Rights & Responsibilities (updated summer 2024)."
+    },
+    "se_courses": {
+     "value": "no public syllabus found",
+     "search_log": "data/sources/233772-tidewater/search-log.md",
+     "note": "The Computer Science A.S. has no software engineering course; the closest, ITP 100 Software Design, has only a catalog description (no AI text in the result), and no syllabus was found."
+    }
+   }
   }
  ]
 }

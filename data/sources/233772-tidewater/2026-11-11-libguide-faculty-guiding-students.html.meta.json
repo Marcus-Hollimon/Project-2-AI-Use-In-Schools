@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://libguides.tcc.edu/c.php?g=1313261&p=9857454",
+ "final_url": "https://libguides.tcc.edu/c.php?g=1313261&p=9857454",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:55:41-05:00",
+ "sha256": "0f116fb85a5ff979e7c177574b2bb613702e65cb420d9b4c827a88c5e6f9643e",
+ "bytes": 44702
+}

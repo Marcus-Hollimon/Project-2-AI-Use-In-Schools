@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://libguides.tcc.edu/topic/chatgpt/students",
+ "final_url": "https://libguides.tcc.edu/topic/chatgpt/students",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:55:40-05:00",
+ "sha256": "d39d2ef4f831bea1d7181e8aa79b1135150b14b0890bbbda479911a6074dad09",
+ "bytes": 40874
+}
