@@ -1,0 +1,150 @@
+1
+West Virginia Wesleyan College
+Comprehensive Artificial Intelligence (“AI”) Policy
+​ Policy Version: 1.0
+General Statement
+West Virginia Wesleyan College (“WVWC”) recognizes AI as a rapidly evolving technology and understands that today’s employers are actively seeking AI-literate graduates. Given the competitive climate, many faculty and administrators prioritize equipping students with AI proficiency; at the same time, WVWC values the traditional analytical and creative processes that remain foundational to many academic disciplines. WVWC respects the autonomy of faculty members who choose to limit the use of AI in their courses and instead emphasize traditional instructional approaches. Regardless of the approach taken, all members of the WVWC community must adhere to the following policy to advance these important objectives:
+To protect the rights and privacy of WVWC and its Users, including data rights, intellectual property, and personal privacy.
+To minimize legal risk by providing a clear understanding of the potential ramifications associated with the misuse of AI.
+To ensure safety through proactive risk assessment and established guidelines for responsible AI use.
+To preserve academic freedom by upholding the right of faculty and students to choose how, when, or whether to integrate AI into their work.
+Definitions
+An “AI Tool” is any system capable of performing tasks that typically require human intelligence, such as reasoning, learning & adaptation, cognitive capabilities, problem-solving, creativity, perception, and decision-making, and that use data and algorithms to identify patterns, improve performance over time without explicit programming, and operate autonomously. These systems include, without limitation, generative and agentic artificial intelligence tools, large language models (LLMs), machine and deep learning tools, multi-layered neural networks, chatbots, and spell check programs.
+A “User” is any member of WVWC’s campus community, including, without limitation, its faculty, instructors, staff, administrators, researchers, and students (undergraduate,
+
+2
+graduate, and professional) using an AI Tool to conduct activities under WVWC's name or using its institutional resources, including, without limitation, use of personal devices when handling Personally Identifiable Information and/or Confidential Information pursuant to Section II(1)(5) of this Policy.
+“Personally Identifiable Information” encompasses: (i) “personally identifiable information for education records” as defined in the Family Educational Rights and Privacy Act (“FERPA”) and in 34 CFR §99.3; (ii) “protected health information” as defined in the Health Insurance Portability and Accountability Act of 1996 (“HIPAA”) and 45 CFR §160.103; (iii) the “personal data” of a “data subject” as both are defined in the European Union’s General Data Protection Regulation (“GDPR”) relating to any User; and (iv) “sensitive personal data” as defined in the California Consumer Privacy Act (“CCPA”) relating to any User.
+“Confidential Information” is any information embodied in writing, electronically, orally, or by inspection of tangible objects (including, without limitation: financial plans, operational plans, business plans, documents, prototypes, samples, software, schematics, flowcharts, unpublished research data and materials, work product, student grades, graphical layouts and descriptions, plans, and equipment). Confidential Information shall not, however, include any information which: (i) was publicly known and made generally available in the public domain prior to the time of disclosure to an AI Tool by a User; (ii) becomes publicly known and made generally available after disclosure to an AI Tool by a User; and (iii) is obtained by an AI Tool from a third party without a breach of such third party’s obligations of confidentiality.
+I. Purpose and Scope
+This Policy provides a comprehensive framework for the responsible, transparent, secure, and lawful use of AI Tools accessed by Users, while supporting Users to mitigate bias and ensure fairness of AI Tool processing and outputs. As AI Tools rapidly evolve and become integral to academic work, this Policy aims to balance innovation with academic integrity, data security, and ethical considerations.
+II. Guiding Principles
+WVWC’s approach to AI integration and use is guided by the following core principles:
+1. Cognitive Development
+
+3
+AI Tools should enhance, not replace, critical thinking, analytical skills, and intellectual development. Users must develop competencies that prepare them for a workforce where they work alongside humans and AI Tools. 2. Transparency and Attribution All use of AI Tools must be openly acknowledged and properly attributed. Academic integrity requires honesty about the sources and methods used in scholarly work. 3. Academic Freedom Faculty and instructors retain the authority to determine if and how AI Tools align with their course learning outcomes, disciplinary values, and pedagogical approaches. This policy provides a framework while respecting diverse teaching methods. 4. Ethical Responsibility All Users must consider the implications of the use of AI Tools, including, without limitation, bias, accuracy, privacy, environmental impact, and broader societal effects. 5. Data Privacy and Security Users shall not enter Personally Identifiable Information and/or Confidential Information into unapproved AI Tools. Use only WVWC vetted and approved AI Tools with proper authorization and security protocols when handling such data and data that identifies WVWC. Notwithstanding the foregoing, Users should only enter such data into WVWC vetted and approved AI Tools when: (i) the desired output from the AI Tool necessitates it; and (ii) comparable results are not possible from de-identifying and anonymizing such data. 6. Accountability and Human Oversight Users remain responsible for the output of AI Tools, with human review required for decisions in grading, research, or advising to prevent errors or harm. ​7. Inclusivity and Innovation All use of AI Tools must promote equitable access, reduce barriers for diverse learners, and foster experimentation while aligning with WVWC’s mission and values.
+III. General Requirements for All Users A. Understand AI Limitations & Risks All Users must recognize that AI Tools:
+
+4
+●​ Can produce inaccurate information, false citations, and "hallucinations" ●​ May contain biases related to race, gender, culture, and other characteristics ●​ Cannot replace human judgment, creativity, or critical analysis ●​ Generate outputs based upon patterns in training data, not true understanding ●​ May violate copyright or other intellectual property rights ●​ Have the potential to impact the climate and environment ●​ May capture data by connecting to email and calendars to perform agentic tasks ●​ Should not be used as a substitute for professional medical guidance or
+psychological counseling services Users are fully responsible for all content and data they submit to AI Tools, regardless of its source. The use of AI Tools otherwise permitted by, and in accordance with, this Policy, by any User to violate any other WVWC policy or procedure applicable to such User, shall also constitute a violation of this Policy. B. Data Security and Privacy Before using any AI Tool for institutional data, contact WVWC Computing Services for vendor review and approval. This includes third party apps and extensions through Google Chrome or any other web browser. PROHIBITED: Users shall NOT input the following into AI Tools without explicit authorization:
+●​ Personally Identifiable Information ●​ Confidential Information or other WVWC proprietary data ●​ Information covered by non-disclosure agreements ●​ Any information that would include descriptions or information that could reveal
+sensitive/classified data or information about WVWC’s campus or physical plant. Moreover, Users shall NOT enter such data into WVWC vetted and approved AI Tools unless: (i) the desired output from the AI Tool necessitates it; and (ii) comparable results are not possible from de-identifying and anonymizing such data.
+
+5
+No User shall use AI Tools to aid in decisionmaking relating to tenure eligibility, promotion, and/or termination of employment at WVWC, including, without limitation, the uploading of portfolios or other work product of faculty. All Users should understand that they shall be personally responsible to WVWC for any and all damages resulting from any disclosures in violation of this Section III(B). C. Attribution and Citation When AI Tools contribute to any academic or professional work, the relevant User shall:
+●​ Clearly identify which portions were generated or assisted by AI Tools ●​ Use the appropriate citation format for User’s discipline (APA, MLA, Chicago,
+etc.) ●​ Include the AI Tool name, date of access, and relevant prompt information ●​ Maintain records of interactions with AI Tools (screenshots, conversation logs) as
+documentation Example citation (APA 7th edition):​ OpenAI. (2024). ChatGPT (GPT-4) [Large language model]. https://chat.openai.com
+IV. Policy for Student Users A. Academic Integrity Standards Unauthorized use of AI Tools constitutes academic misconduct when:
+●​ AI-generated content is submitted as original student work without attribution ●​ AI Tools are used for assignments, exams, or projects where it has been
+explicitly prohibited ●​ Students misrepresent the extent of AI assistance in their work ●​ AI Tools are used to circumvent learning objectives or assessment requirements ●​ Agentic AI Tools and/or browsers are used to autonomously or
+semi-autonomously complete assignments in a class in contravention of its syllabus Violations will be addressed according to the institution's academic integrity policy and may result in consequences ranging from assignment failure to dismissal.
+
+6
+B. Course-Specific Policies
+Instructors will specify AI use policies for each course, unit thereof, or even per individual assignment. These may fall into the following categories:
+Level 0 - Prohibited: Students may not use AI Tools for any aspect of coursework. This typically applies to courses focused on developing fundamental skills in writing, artistic expression, critical thinking, or technical competencies.
+Level 1 - Basic Assistance: Students may use AI Tools for grammar checking, language translation, clarifying concepts, or preliminary research. Students must still produce original analysis and synthesis.
+Level 2 - Collaborative Use: Students may use AI Tools for brainstorming, outlining, code debugging, or draft review. Students must substantially transform AI outputs and demonstrate deep engagement with material.
+Level 3 - Integrated Use: Instructors intentionally incorporate AI Tools into learning activities. Students may use AI Tools extensively but must document their process, evaluate AI outputs critically, and reflect on AI's role in their learning.
+Level 4 - Required Use: Assignments explicitly require engagement with AI Tools as part of learning objectives, such as comparing human and AI-generated analyses or studying AI limitations.
+These levels represent examples that faculty and instructors may choose to adopt or modify to align with their specific course policies.
+When in doubt, students should refer to the course syllabus and ask instructors before using AI Tools.
+C. Recommended Practices
+To use AI Tools responsibly and effectively:
+●​ Use WVWC vetted and approved tools in Appendix A, attached hereto, made a part hereof, and expressly incorporated herein by this reference, and only through a User’s @wvwc.edu account and sign in
+●​ Consider the environmental impact of such use
+●​ Start with original, human thinking before consulting AI Tools
+●​ Use AI Tools to enhance learning, not to bypass it
+●​ Verify all AI-generated information with credible sources
+
+7
+●​ Critically evaluate AI outputs for accuracy, bias, and relevance ●​ Develop prompts thoughtfully and iteratively to improve results ●​ Keep detailed records of interactions with AI Tools ●​ Be prepared to explain and defend original human work in discussions with
+instructors D. Documentation Requirements When instructors permit use of AI Tools, students may be required to submit:
+●​ An AI disclosure statement (see Appendices for samples) indicating which AI Tools were used and for what purpose
+●​ Screenshots or transcripts of relevant interactions with AI Tools ●​ A brief reflection on what they learned through interactions with AI Tools ●​ Specific prompts used and how outputs were modified
+V. Policy for Faculty and Instructors A. Syllabus Requirements All course syllabi must include a clear AI use policy that specifies:
+●​ Which AI Tools, if any, are permitted or prohibited ●​ Specific assignments where use of AI Tools is allowed or required ●​ Required attribution and documentation methods ●​ Consequences for policy violations ●​ How to ask questions about use of AI Tools in the course ●​ Disclosure of how AI Tools (e.g., Brisk, Gemini, Blackboard, etc.) will be used to
+assess student work and generate course materials (see Appendices for examples). Sample syllabus language is available from Academic Affairs Office/ Center for Teaching and Learning Blackboard page>Campus Essentials>AI Stance for Syllabi.
+
+8
+Furthermore, instructors are encouraged to have open and ongoing dialog with students regarding academically responsible use of AI Tools and provide examples of permitted prompts and use.
+B. Responsible Use of AI Tools by Faculty (Pedagogy)
+When designing course materials – including, without limitation, Blackboard course content, assessments and rubrics, lectures and slides, grading and feedback – faculty should consider:
+●​ Whether use of AI Tools would undermine learning objectives
+●​ Whether use of AI Tools to create course content violates, in any way, any human resources policy or procedures or contractual obligations
+●​ Ways to integrate AI Tools meaningfully and responsibly into learning activities, as appropriate for specific classes, outcomes, or assessments
+●​ Maintaining human connection and engagement with students, even as AI Tools may enhance work, efficiency, and time management
+●​ Modeling responsible and transparent use of AI Tools for students, when appropriate
+●​ Not requiring students to use AI Tools, unless necessary for the specific class, unit, assignment, or the desired academic outcomes therefrom
+●​ Prohibit entering Personally Identifiable Information, Confidential Information, or sensitive human‑subjects data into AI Tools unless WVWC has properly vetted and approved them, and has entered into an institutional agreement addressing privacy, security, and intellectual property issues
+C. Upholding Academic Integrity
+If faculty suspect unauthorized use of AI Tools:
+1.​ Document specific concerns with evidence
+2.​ Meet with the student to discuss the work and assess understanding per the WVWC Student handbook
+3.​ Report suspected violations to Guardian according to the WVWC Student Handbook
+4.​ Do not rely on AI detection software to detect violations. AI detection software can produce false positives.
+
+9
+D. Professional Development WVWC encourages faculty to:
+●​ Explore WVWC’s vetted and approved AI Tools (See Appendix A) ●​ Research relevant AI Tools and extensions and consider risks, then obtain
+WVWC vetting and approval before use ●​ Consider the risks of AI Tools and third-party applications
+●​ Participate in workshops on AI in education ●​ Share effective practices with colleagues ●​ Experiment with AI-enhanced pedagogy while maintaining academic rigor
+VI. Policy for Researchers A. Research Integrity When using AI Tools in research activities:
+●​ Acknowledge AI contributions in publications according to journal guidelines ●​ Ensure AI use complies with research ethics protocols and IRB requirements ●​ Verify all AI-generated data, analyses, sources, and citations ●​ Consider bias and reproducibility issues in AI-assisted research ●​ Maintain records of AI Tool use in research processes ●​ Prohibit entering Personally Identifiable Information, Confidential Information or
+sensitive human‑subjects data into external AI Tools unless WVWC has properly vetted and approved them, and has entered into an institutional agreement addressing privacy, security, and intellectual property issues
+B. Data Management Researchers must:
+●​ Make explicit any known use of AI Tools in the collection and analysis of research data in IRB applications
+●​ Ensure use of AI Tools complies with grant requirements and sponsor guidelines
+
+10
+●​ Refrain from inputting Confidential Information into public AI Tools, unless it is de-identified and anonymized beforehand
+●​ Use only WVWC vetted and approved Tools for Confidential Information and other sensitive research data
+C. Publication and Authorship Researchers should:
+●​ Follow discipline-specific guidelines for acknowledging AI assistance ●​ Not list AI Tools as authors on scholarly output including, without limitation,
+articles, chapters, presentations, and reports consistent with major journals, publishers, and professional development organizations. ●​ Disclose use of AI Tools in methods sections when relevant to research outcomes ●​ Be aware that some journals and publishers prohibit or restrict the use of AI Tools in manuscript preparation
+VII. Policy for Staff and Administrative Use A. Operational Use Staff and administrators may consider using WVWC vetted and approved AI Tools (See Appendix A) to:
+●​ Draft communications and improve writing clarity ●​ Assist with student scheduling, calendar management, planning, and
+organization
+●​ Generate ideas for projects and initiatives ●​ Analyze data and create visualizations ●​ Automate routine tasks Staff and administrators may NOT use AI Tools to: ●​ Process Personally Identifiable Information or Confidential Information without
+authorization
+
+11
+●​ Make decisions about student admissions, financial aid, or academic standing without human oversight
+●​ Replace human judgment in sensitive personnel matters ●​ Generate official WVWC communications without review B. Procurement and Vendor Management Before purchasing or using AI Tools with WVWC resources: ●​ Contact Computing Services for security and privacy review ●​ Contact the General Counsel to ensure vendor agreements include appropriate
+data protection and privacy provisions ●​ Verify compliance with FERPA, HIPAA, GDPR, CCPA, and other regulatory
+requirements with the General Counsel ●​ Consider whether existing WVWC tools offer the desired functionality prior to
+proceeding with the procurement process
+VIII. Institutional Responsibilities WVWC commits to: A. Education and Training
+●​ Provide resources and workshops on responsible use of AI Tools ●​ Offer AI literacy programs for all Users ●​ Offer ongoing professional development opportunities B. Infrastructure and Support ●​ Maintain a list of vetted, approved, and secure AI Tools for use at WVWC (see
+Appendix A) ●​ Provide access to appropriate AI Tools for teaching and learning ●​ Ensure accessibility of AI Tools for Users with disabilities C. Policy Evolution ●​ Annually review and update this Policy as technology evolves ●​ Solicit feedback from all Users and from external experts
+
+12
+●​ Monitor emerging best practices and regulatory requirements ●​ Communicate policy changes clearly to the WVWC community D. Governance ●​ Establish an AI Advisory Committee with representatives from all User subgroups
+and from Computing Services ●​ Address ethical concerns and unintended consequences ●​ Ensure equitable access to AI Tools
+IX. Practical Applications of AI Tools Users should consider whether or not AI Tools may be used for the activities below:
+Writing and Composition ●​ Permitted: Grammar checking, language translation, clarity improvements, idea generation ●​ Requires disclosure: Significant content suggestions, restructuring, or paragraph-level assistance ●​ Prohibited in most writing courses: Direct submission of essays, publications, or major sections thereof generated by AI Tools
+Research and Analysis ●​ Permitted: Literature search assistance, data visualization, preliminary coding, methodology clarification ●​ Requires disclosure: AI-assisted data analysis, interpretation of results, synthesis of findings ●​ Prohibited: Fabrication of data, citations, or research participants
+Coding and Technical Work ●​ Permitted: Debugging assistance, syntax help, code explanation, optimization suggestions ●​ Requires disclosure: Substantial code generation, algorithm design, architecture decisions
+
+13
+●​ Prohibited: Submitting AI-generated code without understanding or ability to explain
+Creative Work ●​ Permitted: Brainstorming, inspiration, iteration on concepts ●​ Requires disclosure: AI-generated images, music, videos, or text incorporated into final work ●​ Prohibited: Passing off AI-generated creations as original human creative work
+X. Frequently Asked Questions Q: Can I use Grammarly or spell-check tools?​ A: Standard grammar and spell-check functions are generally acceptable unless instructors specify otherwise. More advanced AI Tools used for writing assistance should be disclosed. Q: What if my course doesn't mention AI use in the syllabus?​ A: Ask the instructor before using AI Tools. If the use of AI Tools is not explicitly permitted, assume it should not be used for graded work. Q: Are AI detection tools reliable?​ A: No. AI detection tools have high false-positive rates and can be biased against non-native English speakers. They should not be the sole basis for academic integrity allegations. Q: Can I use AI Tools for personal learning outside of assignments?​ A: Yes. AI Tools can be valuable for understanding concepts, exploring topics, and supplementing learning when not applied to graded work. Q: What if I accidentally violated the AI Policy?​ A: Immediately speak with the instructor, unit leader, or supervisor, as applicable. Honesty and proactive communication are important in resolving potential violations.
+XI. Reporting and Resources Report Policy Violations
+●​ Students: Academic Affairs ●​ Faculty/Staff/Administration: Academic Affairs / Human Resources / General
+Counsel
+
+14
+Get Assistance ●​ AI Tool Support: WVWC Helpdesk - Middleton Hall, top floor. Email helpdesk@wvwc.edu or call 304.473.8877 Traci Probst - Haymond Hall of Science, Office 14. Email probst_t@wvwc.edu or call 304.473.8676 ●​ Research Ethics: IRB Committee>Blackboard>CTL Organization ●​ Data Security: Jonathan Andrew>andrew@wvwc.edu ●​ Teaching with AI: Traci Probst - Haymond Hall of Science, Office 14. Email probst_t@wvwc.edu or call 304.473.8676
+Additional Resources ●​ AI Literacy Tutorials: Blackboard>Technology Resources and Tutorials AMP Library>The Impact of AI on Business ●​ Citation Guides: AMP Library Citation Guides ●​ Faculty Development Workshops: Center for Teaching and Learning Calendar ●​ Faculty Resources: Center for Teaching and Learning>AI in Education module
+XII. Policy Review and Feedback This Policy is a living document that will evolve with technology and institutional experience. WVWC welcomes feedback from all Users. Submit feedback to: academicaffairs@wvwc.edu Policy Review Schedule: This Policy will be reviewed annually by WVWC’s AI Advisory Committee with input from Users.
+Appendix A: WV Wesleyan College Approved and Vetted AI Tools
+Brisk Teaching. (2026). Brisk Teaching (Version 1.0.359) [Browser extension]. https://www.briskteaching.com (Must use wvwc.edu account)
+
+15
+Google. (2026). Gemini (Gemini 3 Flash version) [Large language model]. https://gemini.google.com (Must use wvwc.edu account)
+
+

@@ -1,0 +1,1967 @@
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    <!--meta name="msapplication-square310x310logo" content="/microsoft-icon.png">      
+    <link rel="shortcut icon" href="/nyitFavicon32x32.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/touch-icon-ipad-retina.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/touch-icon-iphone-retina.png">
+    <link rel="icon" sizes="192x192" href="/android-icon.png"-->
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png?v=BGm7x80pRk">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png?v=BGm7x80pRk">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png?v=BGm7x80pRk">
+    <link rel="manifest" href="/favicons/site.webmanifest?v=BGm7x80pRk">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg?v=BGm7x80pRk" color="#f2a900">
+    <link rel="shortcut icon" href="/favicons/favicon.ico?v=BGm7x80pRk">
+    <meta name="apple-mobile-web-app-title" content="New York Tech">
+    <meta name="application-name" content="New York Tech">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png?v=BGm7x80pRk">
+    <meta name="theme-color" content="#002d72">
+
+
+    
+      <link rel="stylesheet" href="/files/inc/css/happycogcss.css" media="all"> 
+      <script src="/files/inc_dev/js/modernizr.min.js?1450925419"></script>
+      <script src="/files/inc/js/jquery/jquery.js" ></script>
+      <script src="/files/inc/js/jquery/jquery-migrate.js"></script>
+      <script src="/files/inc/js/moment.js"></script>
+      <script src="/files/inc/js/pikaday.min.js?1450925419"></script>
+      
+      <link rel="stylesheet" href="https://customer.cludo.com/css/templates/v2.1/essentials/cludo-search.min.css" media="all"> 
+      <script src="https://customer.cludo.com/scripts/bundles/search-script.min.js" defer></script>
+      
+      <style>
+        html{
+          background: inherit;
+          color: inherit;
+          box-sizing: inherit;
+          font-family: inherit;
+        }
+
+        .longform ul.slides > li:before{
+            height: 0px;
+        }
+        .article-hero-gallery-container .slider-navigation {
+            bottom: 8px;
+            top: initial;
+            right: initial;
+        }
+        a.icon-controls-expand{
+            width: 100%;
+            background-image: initial;
+            font-size: 13px;
+            font-family: arial;
+        }
+        .slider-navigation a{
+            background-color: #0b0b0b;
+            margin-left: 0px;
+            padding-left: 16px;
+        }
+        .slider-navigation a:hover{
+            background-color: #0b0b0b;
+            text-decoration: none;
+        }
+        div.mfp-bottom-bar{
+            padding: 16px;
+            opacity: initial;
+            background-color: #0b0b0b;
+        }
+        div.mfp-bottom-bar > h2{
+            font-size: 24px;
+            font-weight: bold;
+            font-style: italic;
+            padding-bottom: 8px;
+        }
+        div.mfp-content{
+            background-color: #0b0b0b;
+            opacity: initial;
+        }
+        .mfp-bg .mfp-ready{
+            opacity: 0.85;
+        }
+        .mfp-figure{
+            margin: 40px;
+        }
+        .mfp-figure:after{
+            background: #0b0b0b;
+        }
+        .icon-controls-expand > img{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+        }
+        .mfp-arrow-left:after{
+            border-right: 17px solid white;
+        }
+        .mfp-arrow-left:before{
+            border-right: initial;
+        }
+        .mfp-arrow-right:after{
+            border-left: 17px solid white;
+        }
+        .mfp-arrow-right:before{
+            border-left: initial;
+        }
+        button.mfp-arrow{
+            background: #000;
+        }
+        .slider-navigation a {
+            padding-right: 16px;
+        }
+        .mfp-container{
+            background-color: rgba(33, 33, 33, 0.9);
+        }
+        .mfp-counter {
+            right: 24px;
+        }
+        .mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close{
+            padding-right: 16px;
+        }
+        .mfp-close{
+            font-size: 40px;
+            font-weight: bolder;
+        }
+        .reverse .sidebar-nav{
+            background: initial;
+        }
+        div.mfp-bottom-bar{
+            padding-bottom: 8%;
+        }
+        @media screen and (min-width: 1000px){
+            button.mfp-arrow.mfp-arrow-right.mfp-prevent-close{
+              right: 10%;
+            }
+            button.mfp-arrow.mfp-arrow-left.mfp-prevent-close{
+              left: 10%;
+            }
+        }
+
+
+.lightbox_gallery_items {
+  clear: both; }
+  .lightbox_gallery_items li {
+    display: none; }
+  .lightbox_gallery_items li:first-child {
+    display: inline !important; }
+  .lightbox_gallery_items li img {
+    width: 100%; }
+  @media screen and (min-width: 37.5em) {
+    .lightbox_gallery_items {
+      clear: none; } }
+
+
+/* Makes Embedded Facebook Video Responsive */
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+    
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.ui-dialog{
+    z-index: 99999 !important;
+    background-color: white;
+    border-radius: 1px;
+    padding: 6px;
+}
+.ui-widget-overlay.ui-front{
+    z-index: 99998 !important;
+    background-color: black;   
+}
+.ui-dialog-titlebar-close {
+    visibility: hidden;
+}
+.ui-dialog-titlebar{
+    display: none;
+}
+.ui-widget.ui-widget-content{
+    border: 1px solid #c5c5c5;
+}
+.ui-widget-content {
+    border: 1px solid #dddddd;
+    background: #ffffff;
+    color: #333333;
+}
+.ui-dialog .ui-dialog-content {
+    position: relative;
+    border: 0;
+    padding: .5em 1em;
+    background: none;
+    overflow: auto;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+    float: right;
+}
+.ui-dialog .ui-dialog-buttonpane button {
+    margin: .5em .4em .5em 0;
+    cursor: pointer;
+}
+.ui-dialog .ui-dialog-buttonpane {
+    text-align: left;
+    border-width: 1px 0 0 0;
+    background-image: none;
+    margin-top: .5em;
+    padding: .3em 1em .5em .4em;
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus {
+    border: 1px solid #cccccc;
+    background: #ededed;
+    font-weight: normal;
+    color: #2b2b2b;
+}
+.ui-widget .ui-widget {
+    font-size: 1em;
+}
+.ui-widget-overlay {
+    background: #aaaaaa;
+    opacity: .3;
+    filter: Alpha(Opacity=30);
+}
+.ui-widget-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.ui-helper-clearfix:after {
+    clear: both;
+}
+.ui-helper-clearfix:before, .ui-helper-clearfix:after {
+    content: "";
+    display: table;
+    border-collapse: collapse;
+}
+.footer_logo{
+    float: inherit;
+    width: 100%;
+    max-width: 200px;
+}
+
+.footer_logo svg {
+    width: inherit;
+    height: inherit;
+    padding-bottom: 2%;
+}
+
+.footer_nav {
+    padding-right: 2%;
+}
+.footer_social-list a {
+    background-color: inherit;
+    color: #fdaf3f;
+}
+.footer_social-list a svg, .footer_social-list a svg g, .footer_social-list a svg g path, .footer_social-list a svg path, .footer_social-list a svg g circle {
+    fill: #fdaf3f !important;
+}
+.footer_social-list a:hover svg, .footer_social-list a:hover svg g, .footer_social-list a:hover svg g path, .footer_social-list a:hover svg path, .footer_social-list a:hover svg g circle {
+    fill: #fff !important;
+}
+.footer_social-list a:hover{
+    background-color: inherit;
+}
+@media screen and (min-width: 46.875em){
+    .social-list-item:nth-child(3) {
+        clear: none;
+    }
+    .social-list-item{
+        width: auto;
+        float: right;
+    }
+    .footer_social-list{
+        float: none;
+        width: 40%;
+    }
+    .footer_nav {
+        width: inherit;
+    }
+    .breadcrumbs {
+        padding-top: 10px;
+    }
+    .footer_social-list{
+        margin-right: 10%;
+    }
+    .logo{
+        margin-bottom: 16px; 
+        margin-top: 0px; 
+        width: 25%;
+    }
+}
+@media screen and (max-width: 46.875em){
+    .logo{
+        margin-bottom: 24px; 
+        margin-top: 0px; 
+        width: 200px;
+    }
+}
+.footer_social-list{
+    
+    margin-left: auto;
+}
+
+div.site-footer__inner.column{
+    padding-top: 0px;
+}
+.footer_schools-expand{
+    background-color: inherit;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bolder;
+    /*margin-left: -25px;*/
+    position: relative;
+}
+.footer_schools-title:hover a, .footer_schools-title:focus a {
+    background: #000;
+    color: #f6a704;
+}
+.footer_schools-title{
+    padding-left: 0px;
+}
+.mobile-nav-triggers{
+    top: 2rem;
+}
+input:-ms-input-placeholder{
+    color: #9c9c9c;
+}
+</style>
+
+    
+
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/dev-new-york-institute-of-technology.pantheonsite.io\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.5"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+    img.wp-smiley, img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 0.07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+    }
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.nyit.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.5.3' type='text/css' media='all'/>
+    <style id='global-styles-inline-css' type='text/css'>
+    body {
+        --wp--preset--color--black: #000000;
+        --wp--preset--color--cyan-bluish-gray: #abb8c3;
+        --wp--preset--color--white: #ffffff;
+        --wp--preset--color--pale-pink: #f78da7;
+        --wp--preset--color--vivid-red: #cf2e2e;
+        --wp--preset--color--luminous-vivid-orange: #ff6900;
+        --wp--preset--color--luminous-vivid-amber: #fcb900;
+        --wp--preset--color--light-green-cyan: #7bdcb5;
+        --wp--preset--color--vivid-green-cyan: #00d084;
+        --wp--preset--color--pale-cyan-blue: #8ed1fc;
+        --wp--preset--color--vivid-cyan-blue: #0693e3;
+        --wp--preset--color--vivid-purple: #9b51e0;
+        --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+        --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+        --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+        --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+        --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+        --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+        --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+        --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+        --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+        --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+        --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+        --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+        --wp--preset--font-size--small: 13px;
+        --wp--preset--font-size--medium: 20px;
+        --wp--preset--font-size--large: 36px;
+        --wp--preset--font-size--x-large: 42px;
+        --wp--preset--spacing--20: 0.44rem;
+        --wp--preset--spacing--30: 0.67rem;
+        --wp--preset--spacing--40: 1rem;
+        --wp--preset--spacing--50: 1.5rem;
+        --wp--preset--spacing--60: 2.25rem;
+        --wp--preset--spacing--70: 3.38rem;
+        --wp--preset--spacing--80: 5.06rem;
+        --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+        --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+        --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .wp-site-blocks > .alignleft {
+        float: left;
+        margin-right: 2em;
+    }
+
+    .wp-site-blocks > .alignright {
+        float: right;
+        margin-left: 2em;
+    }
+
+    .wp-site-blocks > .aligncenter {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    :where(.is-layout-flex) {
+        gap: 0.5em;
+    }
+
+    :where(.is-layout-grid) {
+        gap: 0.5em;
+    }
+
+    body .is-layout-flow > .alignleft {
+        float: left;
+        margin-inline-start: 0;
+        margin-inline-end: 2em;
+    }
+
+    body .is-layout-flow > .alignright {
+        float: right;
+        margin-inline-start: 2em;
+        margin-inline-end: 0;
+    }
+
+    body .is-layout-flow > .aligncenter {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    body .is-layout-constrained > .alignleft {
+        float: left;
+        margin-inline-start: 0;
+        margin-inline-end: 2em;
+    }
+
+    body .is-layout-constrained > .alignright {
+        float: right;
+        margin-inline-start: 2em;
+        margin-inline-end: 0;
+    }
+
+    body .is-layout-constrained > .aligncenter {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    body .is-layout-flex {
+        display: flex;
+    }
+
+    body .is-layout-flex {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    body .is-layout-flex > * {
+        margin: 0;
+    }
+
+    body .is-layout-grid {
+        display: grid;
+    }
+
+    body .is-layout-grid > * {
+        margin: 0;
+    }
+
+    body {
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    }
+
+    a:where(:not(.wp-element-button)) {
+        text-decoration: underline;
+    }
+
+    .wp-element-button, .wp-block-button__link {
+        background-color: #32373c;
+        border-width: 0;
+        color: #fff;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        padding: calc(0.667em + 2px) calc(1.333em + 2px);
+        text-decoration: none;
+    }
+
+    .has-black-color {
+        color: var(--wp--preset--color--black) !important;
+    }
+
+    .has-cyan-bluish-gray-color {
+        color: var(--wp--preset--color--cyan-bluish-gray) !important;
+    }
+
+    .has-white-color {
+        color: var(--wp--preset--color--white) !important;
+    }
+
+    .has-pale-pink-color {
+        color: var(--wp--preset--color--pale-pink) !important;
+    }
+
+    .has-vivid-red-color {
+        color: var(--wp--preset--color--vivid-red) !important;
+    }
+
+    .has-luminous-vivid-orange-color {
+        color: var(--wp--preset--color--luminous-vivid-orange) !important;
+    }
+
+    .has-luminous-vivid-amber-color {
+        color: var(--wp--preset--color--luminous-vivid-amber) !important;
+    }
+
+    .has-light-green-cyan-color {
+        color: var(--wp--preset--color--light-green-cyan) !important;
+    }
+
+    .has-vivid-green-cyan-color {
+        color: var(--wp--preset--color--vivid-green-cyan) !important;
+    }
+
+    .has-pale-cyan-blue-color {
+        color: var(--wp--preset--color--pale-cyan-blue) !important;
+    }
+
+    .has-vivid-cyan-blue-color {
+        color: var(--wp--preset--color--vivid-cyan-blue) !important;
+    }
+
+    .has-vivid-purple-color {
+        color: var(--wp--preset--color--vivid-purple) !important;
+    }
+
+    .has-black-background-color {
+        background-color: var(--wp--preset--color--black) !important;
+    }
+
+    .has-cyan-bluish-gray-background-color {
+        background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+    }
+
+    .has-white-background-color {
+        background-color: var(--wp--preset--color--white) !important;
+    }
+
+    .has-pale-pink-background-color {
+        background-color: var(--wp--preset--color--pale-pink) !important;
+    }
+
+    .has-vivid-red-background-color {
+        background-color: var(--wp--preset--color--vivid-red) !important;
+    }
+
+    .has-luminous-vivid-orange-background-color {
+        background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+    }
+
+    .has-luminous-vivid-amber-background-color {
+        background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+    }
+
+    .has-light-green-cyan-background-color {
+        background-color: var(--wp--preset--color--light-green-cyan) !important;
+    }
+
+    .has-vivid-green-cyan-background-color {
+        background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+    }
+
+    .has-pale-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+    }
+
+    .has-vivid-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+    }
+
+    .has-vivid-purple-background-color {
+        background-color: var(--wp--preset--color--vivid-purple) !important;
+    }
+
+    .has-black-border-color {
+        border-color: var(--wp--preset--color--black) !important;
+    }
+
+    .has-cyan-bluish-gray-border-color {
+        border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+    }
+
+    .has-white-border-color {
+        border-color: var(--wp--preset--color--white) !important;
+    }
+
+    .has-pale-pink-border-color {
+        border-color: var(--wp--preset--color--pale-pink) !important;
+    }
+
+    .has-vivid-red-border-color {
+        border-color: var(--wp--preset--color--vivid-red) !important;
+    }
+
+    .has-luminous-vivid-orange-border-color {
+        border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+    }
+
+    .has-luminous-vivid-amber-border-color {
+        border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+    }
+
+    .has-light-green-cyan-border-color {
+        border-color: var(--wp--preset--color--light-green-cyan) !important;
+    }
+
+    .has-vivid-green-cyan-border-color {
+        border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+    }
+
+    .has-pale-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+    }
+
+    .has-vivid-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+    }
+
+    .has-vivid-purple-border-color {
+        border-color: var(--wp--preset--color--vivid-purple) !important;
+    }
+
+    .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+        background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+    }
+
+    .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+        background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+    }
+
+    .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+        background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+    }
+
+    .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+        background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+    }
+
+    .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+        background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+    }
+
+    .has-cool-to-warm-spectrum-gradient-background {
+        background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+    }
+
+    .has-blush-light-purple-gradient-background {
+        background: var(--wp--preset--gradient--blush-light-purple) !important;
+    }
+
+    .has-blush-bordeaux-gradient-background {
+        background: var(--wp--preset--gradient--blush-bordeaux) !important;
+    }
+
+    .has-luminous-dusk-gradient-background {
+        background: var(--wp--preset--gradient--luminous-dusk) !important;
+    }
+
+    .has-pale-ocean-gradient-background {
+        background: var(--wp--preset--gradient--pale-ocean) !important;
+    }
+
+    .has-electric-grass-gradient-background {
+        background: var(--wp--preset--gradient--electric-grass) !important;
+    }
+
+    .has-midnight-gradient-background {
+        background: var(--wp--preset--gradient--midnight) !important;
+    }
+
+    .has-small-font-size {
+        font-size: var(--wp--preset--font-size--small) !important;
+    }
+
+    .has-medium-font-size {
+        font-size: var(--wp--preset--font-size--medium) !important;
+    }
+
+    .has-large-font-size {
+        font-size: var(--wp--preset--font-size--large) !important;
+    }
+
+    .has-x-large-font-size {
+        font-size: var(--wp--preset--font-size--x-large) !important;
+    }
+
+    .wp-block-navigation a:where(:not(.wp-element-button)) {
+        color: inherit;
+    }
+
+    :where(.wp-block-post-template.is-layout-flex) {
+        gap: 1.25em;
+    }
+
+    :where(.wp-block-post-template.is-layout-grid) {
+        gap: 1.25em;
+    }
+
+    :where(.wp-block-columns.is-layout-flex) {
+        gap: 2em;
+    }
+
+    :where(.wp-block-columns.is-layout-grid) {
+        gap: 2em;
+    }
+
+    .wp-block-pullquote {
+        font-size: 1.5em;
+        line-height: 1.6;
+    }
+
+    #header-search{
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      box-sizing: border-box;
+    }
+    </style>
+<link rel='stylesheet' id='theme-style-css' href='https://www.nyit.edu/wp-content/themes/nyit/public/dist/style.css' type='text/css' media='all'/>
+<link rel="https://api.w.org/" href="https://www.nyit.edu/wp-json/"/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.nyit.edu/xmlrpc.php?rsd"/>
+<meta name="generator" content="WordPress 6.5" />
+  <style>
+        .Subnav ul ul {
+      display: block;
+    }
+    /*.Hero__image, .Hero img{
+      height: inherit;
+    }*/
+  </style>
+  
+  <script>
+			/*! grunt-grunticon Stylesheet Loader - v2.1.6 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+
+			(function(e){function n(n,t,o,a){"use strict";var i=e.document.createElement("link"),r=t||e.document.getElementsByTagName("script")[0],d=e.document.styleSheets;return i.rel="stylesheet",i.href=n,i.media="only x",a&&(i.onload=a),r.parentNode.insertBefore(i,r),i.onloadcssdefined=function(e){for(var t,o=0;d.length>o;o++)d[o].href&&d[o].href.indexOf(n)>-1&&(t=!0);t?e():setTimeout(function(){i.onloadcssdefined(e)})},i.onloadcssdefined(function(){i.media=o||"all"}),i}function t(e,n){e.onload=function(){e.onload=null,n&&n.call(e)},"isApplicationInstalled"in navigator&&"onloadcssdefined"in e&&e.onloadcssdefined(n)}var o=function(a,i){"use strict";if(a&&3===a.length){var r=e.Image,d=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===navigator.userAgent.indexOf("Chrome")||-1!==navigator.userAgent.indexOf("Series40")),c=new r;c.onerror=function(){o.method="png",o.href=a[2],n(a[2])},c.onload=function(){var e=1===c.width&&1===c.height,r=a[e&&d?0:e?1:2];o.method=e&&d?"svg":e?"datapng":"png",o.href=r,t(n(r),i)},c.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};o.loadCSS=n,o.onloadCSS=t,e.grunticon=o})(this);(function(e,n){"use strict";var t=n.document,o="grunticon:",r=function(e){if(t.attachEvent?"complete"===t.readyState:"loading"!==t.readyState)e();else{var n=!1;t.addEventListener("readystatechange",function(){n||(n=!0,e())},!1)}},a=function(e){return n.document.querySelector('link[href$="'+e+'"]')},i=function(e){var n,t,r,a,i,c,s={};if(n=e.sheet,!n)return s;t=n.cssRules?n.cssRules:n.rules;for(var d=0;t.length>d;d++)r=t[d].cssText,a=o+t[d].selectorText,i=r.split(");")[0].match(/US\-ASCII\,([^"']+)/),i&&i[1]&&(c=decodeURIComponent(i[1]),s[a]=c);return s},c=function(e){var n,r,a,i;a="data-grunticon-embed";for(var c in e){i=c.slice(o.length);try{n=t.querySelectorAll(i)}catch(s){continue}r=[];for(var d=0;n.length>d;d++)null!==n[d].getAttribute(a)&&r.push(n[d]);if(r.length)for(d=0;r.length>d;d++)r[d].innerHTML=e[c],r[d].style.backgroundImage="none",r[d].removeAttribute(a)}return r},s=function(n){"svg"===e.method&&r(function(){c(i(a(e.href))),"function"==typeof n&&n()})};e.embedIcons=c,e.getCSS=a,e.getIcons=i,e.ready=r,e.svgLoadedCallback=s,e.embedSVG=s})(grunticon,this);
+
+			grunticon(["/files/inc_dev/images/svg/icons.data.svg.css", "/files/inc_dev/images/svg/icons.data.png.css", "/files/inc_dev/images/svg/icons.fallback.css"], grunticon.svgLoadedCallback );
+		</script>
+
+<title>Semester Map | New York Tech</title>
+
+</head>
+
+<header data-stuck="false" class="Header  theme-navy">
+    <div class="Header__interior">
+        <a href="https://catalog.nyit.edu" class="Header__logo Header__logo--default" aria-label="New York Tech">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 468 171">
+                <path fill="#F2A900" d="M468 0H0v37h468V0Z"></path>
+                <path d="M140.705 103.472V75.244c0-4.101 2.97-7.017 7.003-7.017h8.951c4.087 0 7.057 2.916 7.057 7.016v28.229c0 4.1-2.97 7.016-7.057 7.016h-8.951c-4.046 0-7.003-2.916-7.003-7.016Zm13.665 1.13c1.267 0 2.043-.762 2.043-2.043V76.224c0-1.28-.776-2.057-2.043-2.057h-4.36c-1.226 0-2.003.777-2.003 2.057v26.335c0 1.281.777 2.043 2.003 2.043h4.36ZM17.043 85.638V68.541h6.594v41.688h-7.003L6.553 82.669h-.15L6.812 92v18.228H.204V68.541h7.017l10.081 27.397h.15l-.409-10.3Zm21.607.26V74.425h12.29V68.54H31.334v41.688H50.94v-5.94H38.65V91.892h11.158v-5.995H38.65ZM95.802 68.54l-6.09 41.688h-9.21L77.328 87.6l-.572-3.651h-.15l-.504 3.651-3.175 22.629h-9.223l-6.13-41.688h7.316l3.882 30.83h.11l4.14-30.83h7.371l4.196 30.83h.164l3.774-30.83h7.275Zm14.958 0 9.373 28.623v13.065h7.357V97.164l9.428-28.623h-7.629l-5.368 19.304h-.205l-5.326-19.304h-7.63Zm83.173 41.702V96.319c0-3.228-1.594-5.327-4.455-6.103 2.67-.967 4.455-3.379 4.4-6.458l-.041-8.188c-.054-4.1-2.97-7.016-7.111-7.016h-15.763v41.689h7.316V93.036h6.349c1.28 0 1.989.763 1.989 1.989v15.218h7.316Zm-15.667-23.147V74.453h6.253c1.267 0 2.043.763 2.043 1.99v8.664c0 1.226-.763 1.99-2.043 1.99h-6.253Zm39.372 23.133-9.005-19.618v19.618h-7.371V68.541h7.371V87.6l9.005-19.06h7.929L215.39 89.03l10.286 21.198h-8.038Zm33.133 0h-7.316V68.541h7.316v41.688Zm31.13-41.688v41.688h-7.016l-10.082-27.56h-.15l.409 9.332v18.228h-6.594V68.541h7.003l10.081 27.397h.15l-.395-10.3V68.541h6.594Zm7.261 27.506v7.438c0 4.101 2.957 7.016 7.003 7.016h8.951c4.1 0 7.016-2.915 7.016-7.016v-8.406c0-4.4-1.485-6.852-5.627-7.888l-8.392-2.356c-1.226-.355-1.635-.968-1.635-2.153v-6.458c0-1.28.722-2.057 1.948-2.057h4.401c1.267 0 1.989.777 1.989 2.057v6.513h7.316v-7.48c0-4.1-2.929-7.016-7.016-7.016h-8.951c-4.033 0-7.003 2.915-7.003 7.016v7.983c0 3.788 1.73 6.717 4.85 7.534l9.319 2.616c1.076.368 1.485 1.022 1.485 2.153v7.016c0 1.281-.722 2.043-1.989 2.043h-4.401c-1.239 0-1.948-.762-1.948-2.043v-6.512h-7.316Zm50.871-21.621h-7.629v35.803h-7.316V74.426h-7.575v-5.885h22.52v5.885Zm13.923 35.803h-7.37V68.541h7.37v41.688Zm29.06-35.803H375.4v35.803h-7.33V74.426h-7.561v-5.885h22.507v5.885Zm6.403-5.885v34.931h.013c0 4.1 3.025 7.016 7.057 7.016h8.91c4.142 0 7.057-2.916 7.057-7.016v-34.93h-7.316v34.072c0 1.227-.708 1.989-1.989 1.989h-4.359c-1.281 0-2.003-.762-2.003-1.989V68.541h-7.37Zm51.988 5.885h-7.63v35.803h-7.316V74.426h-7.574v-5.885h22.52v5.885Zm13.923 11.471v-11.47h12.288v-5.885h-19.604v41.688h19.604v-5.94H455.33V91.892h11.158v-5.995H455.33ZM0 163.511v-28.078c0-4.455 2.711-7.125 7.166-7.125h5.477c4.51 0 7.111 2.656 7.111 7.125v28.078c0 4.455-2.615 7.125-7.111 7.125H7.166c-4.455 0-7.166-2.67-7.166-7.125Zm11.566 3.529c2.616 0 3.842-1.281 3.842-3.992v-27.152c0-2.711-1.226-3.992-3.841-3.992H8.241c-2.615 0-3.882 1.281-3.882 3.992v27.152c0 2.711 1.28 3.992 3.882 3.992h3.324Zm18.529-19.618v-15.218H42.37v-3.583H25.735v41.702h4.36v-19.264h11.457v-3.637H30.095Zm49.999-12.861h-7.67v35.762h-7.317v-35.762h-7.574v-5.94h22.56v5.94Zm14.127 11.43v-11.43h12.275v-5.94h-19.59v41.702h19.59v-5.94H94.221v-12.397h11.158v-5.995H94.221Zm18.637 17.575v-28.174c0-4.101 3.025-7.071 7.057-7.071h8.91c4.101 0 7.112 2.97 7.112 7.071v8.556h-7.371v-7.63c0-1.28-.722-2.043-2.043-2.043h-4.36c-1.226 0-1.989.763-1.989 2.043v26.335c0 1.28.763 2.043 1.989 2.043h4.36c1.321 0 2.043-.763 2.043-2.043v-8.76h7.371v9.686c0 4.101-3.011 7.071-7.112 7.071h-8.91c-4.046 0-7.057-2.97-7.057-7.071v-.013Zm53.296 6.757v-41.702h-7.329v18.392h-8.284v-18.392h-7.315v41.702h7.315v-17.316h8.284v17.316h7.329Zm31.321-41.702v41.702h-7.016l-10.068-27.561h-.164l.409 9.373v18.188h-6.594v-41.702h7.003l10.095 27.411h.15l-.409-10.245v-17.166h6.594Zm7.439 6.771v28.174c0 4.1 3.024 7.07 7.057 7.07h8.909c4.101 0 7.112-2.97 7.112-7.07v-28.174c0-4.101-3.024-7.071-7.112-7.071h-8.909c-4.033 0-7.057 2.97-7.057 7.071Zm15.708 27.261c0 1.28-.763 2.043-2.044 2.043h-4.346c-1.24 0-2.003-.763-2.003-2.043v-26.335c0-1.28.763-2.043 2.003-2.043h4.346c1.281 0 2.044.763 2.044 2.043v26.335Zm32.764 1.73v5.94h-17.969v-41.702h7.316v35.762h10.653Zm5.382-28.991v28.174c0 4.1 2.97 7.07 7.057 7.07h8.91c4.087 0 7.111-2.97 7.111-7.07v-28.174c0-4.101-3.024-7.071-7.111-7.071h-8.91c-4.087 0-7.057 2.97-7.057 7.071Zm15.708 27.261c0 1.28-.777 2.043-2.044 2.043h-4.359c-1.226 0-1.989-.763-1.989-2.043v-26.335c0-1.28.763-2.043 1.989-2.043h4.359c1.267 0 2.044.763 2.044 2.043v26.335Zm30.054-20.15v-6.198c0-1.281-.777-2.044-2.044-2.044h-4.359c-1.227 0-1.99.763-1.99 2.044v26.334c0 1.281.763 2.044 1.99 2.044h4.659c1.226 0 1.989-.763 1.989-2.044v-9.073h-5.054v-5.94h12.125v22.697h-3.788l-.763-3.079c-.776 2.153-2.411 3.379-5.422 3.379h-6.035c-4.046 0-7.016-2.97-7.016-7.071v-28.174c0-4.1 2.97-7.07 7.016-7.07h8.951c4.1 0 7.057 2.97 7.057 7.07v7.125h-7.316Zm12.493-13.882 9.414 28.637v13.065h7.315v-13.065l9.469-28.637h-7.629l-5.423 19.318h-.149l-5.382-19.318h-7.615Z"></path>
+            </svg>
+        </a>
+        <a href="https://catalog.nyit.edu" class="Header__logo-stack" aria-label="New York Tech">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+                <path fill="#f2a900" d="M0 0h180v180H0z"></path>
+                <path fill="#002d72" d="M59.63 25.17v14.38l.34 8.66h-.13l-8.47-23.04h-5.89v35.06h5.54V44.9l-.34-7.85h.13l8.47 23.18h5.9V25.17h-5.55zm18.17 4.95v9.65h9.38v5.04H77.8v10.42h10.33v5H71.64V25.17h16.49v4.95H77.8zm48.05-4.95-5.13 35.06h-7.74l-2.66-19.04-.48-3.06h-.13l-.43 3.06-2.66 19.04h-7.75L93.7 25.17h6.16l3.27 25.93h.08l3.49-25.93h6.2l3.52 25.93h.14l3.18-25.93h6.11zm-46.22 78.54c1.07 0 1.72-.64 1.72-1.72V79.85c0-1.07-.65-1.72-1.72-1.72h-3.66c-1.03 0-1.68.65-1.68 1.72v22.14c0 1.08.65 1.72 1.68 1.72h3.66Zm-11.49-.95V79.03c0-3.45 2.5-5.9 5.89-5.9h7.53c3.44 0 5.94 2.45 5.94 5.9v23.73c0 3.45-2.5 5.9-5.94 5.9h-7.53c-3.4 0-5.89-2.46-5.89-5.9m31.59-24.42v10.63h5.25c1.07 0 1.72-.65 1.72-1.68v-7.28c0-1.03-.65-1.67-1.72-1.67h-5.25Zm13.17 18.39v11.71h-6.16V95.65c0-1.04-.6-1.68-1.67-1.68h-5.34v14.47h-6.15V73.38h13.25c3.49 0 5.94 2.45 5.98 5.9l.04 6.89c.05 2.58-1.46 4.61-3.7 5.43 2.41.65 3.74 2.41 3.74 5.13m-62.05.73-7.87-24.07h6.41l4.47 16.23h.17l4.52-16.23h6.41l-7.92 24.07v10.99h-6.19V97.46zm81.99 10.99-7.58-16.5v16.5h-6.19V73.39h6.19v16.02l7.58-16.02h6.66l-8.55 17.23 8.64 17.83h-6.75zm-69.19 18.37h-6.45v30.06h-6.16v-30.06h-6.37v-5h18.98v5zm11.88 0v9.6h9.38v5.04h-9.38v10.43h10.32v4.99H69.36v-35.06h16.48v5H75.52zm15.67 24.38v-23.69c0-3.45 2.54-5.94 5.94-5.94h7.49c3.45 0 5.98 2.5 5.98 5.94v7.19h-6.2v-6.42c0-1.08-.6-1.72-1.72-1.72h-3.66c-1.03 0-1.67.65-1.67 1.72v22.14c0 1.08.64 1.72 1.67 1.72h3.66c1.12 0 1.72-.65 1.72-1.72v-7.37h6.2v8.14c0 3.45-2.54 5.94-5.98 5.94h-7.49c-3.4 0-5.94-2.5-5.94-5.94m44.8-29.37v35.06h-6.15v-14.55h-6.97v14.55h-6.16v-35.06h6.16v15.47h6.97v-15.47h6.15z"></path>
+            </svg>
+        </a>
+        <div class="contents">
+            <button class="Header__search-toggle" aria-label="Toggle search" aria-expanded="false"></button>
+            <div class="Header__search">
+                <form class="Header__form" method="get" action="" id="cludo-header-search">
+                    <label class="Header__label" for="header-search">Search</label>
+                    <input type="search" id="header-search" class="Header__input" placeholder="What can we help you find?" name="s" value="" autocomplete="off">
+                    <button class="Header__submit" aria-label="Submit"></button>
+                </form>
+                <div class="Header__popular"></div>
+            </div>
+        </div>
+        <div class="contents">
+            <button class="Header__menu-toggle" aria-label="Toggle menu" aria-expanded="false"></button>
+                <nav class="Header__menu underline">
+                    <ul id="menu-header-primary-news" class="Header__primary">
+                        <li id="menu-item-4745" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/help/undergraduate_students">Undergraduate</a></li>
+                        <li id="menu-item-16305" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/help/graduate_students">Graduate</a></li>
+                        <li id="menu-item-16305" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/medicine">NYITCOM</a></li>
+                    </ul>
+                    <ul id="menu-header-audience" class="Header__audience">
+                        <li id="menu-item-20052" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" rel="noopener"  href="https://www.nyit.edu">U.S. Site</a></li>
+                        <li id="menu-item-4808" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" rel="noopener" href="https://vancouver.nyit.edu/">Vancouver</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </div>
+</header>
+
+    
+    
+
+
+        
+        <main role="main" class="contents">
+
+          
+            <div class="Hero">
+
+                
+                <div class="Hero__text flush">
+                                                            <h1 class="Hero__heading">Semester Map</h1>
+                    <p class="Hero__subheading">Bachelor of Science in Computer Science</p>
+                </div>
+
+                
+                <div class="Breadcrumbs">
+                  <a href="https://www.nyit.edu/academics">Academics</a> &gt; <a href="https://www.nyit.edu/academics/degrees">Degrees</a> &gt; <a href="https://www.nyit.edu/academics/degrees/computer-science-bs">Bachelor of Science in Computer Science</a> &gt; Semester Map
+                </div>
+            </div>
+
+            
+
+            <div class="Main">
+                
+
+                <div class="Main__subnav flush">
+                    <nav class="Subnav">
+                        <h2 class="Subnav__heading">Explore</h2>
+                        <button class="Subnav__toggle" aria-expanded="false">Explore</button>
+                        <div class="Subnav__menu">
+                            <ul>
+                                <li class="page_item page-item-634">
+                                    <a href="https://www.nyit.edu/academics/degrees/computer-science-bs">Bachelor of Science in Computer Science</a>
+                                </li>
+                                <li class="page_item page-item-634">
+                                    <a href="https://www.nyit.edu/academics/degrees/computer-science-bs/admission-requirements/">Admission Requirements</a>
+                                </li>
+                                <li class="page_item page-item-635">
+                                    <a href="/curriculum/computer-science-bs">Curriculum</a>
+                                </li>
+                                <li class="page_item page-item-636 current_page_item">
+                                    <a href="/semester-map/computer-science-bs" aria-current="page">Semester Map</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="Main__content flush">
+
+
+
+
+                    <div class="Common flush">
+
+                        <style type="text/css">
+                            table#semester_box tr td {
+                                padding:8px 5px;
+                            }
+                            table#semester_box tfoot { border-top: 1px solid #dbdbdb; }
+
+                            .archivepdfs {
+                                    width: 100%;
+                                }
+
+                            .archive-sm-label:last-child {
+                                margin-bottom: 0px !important;
+                            }
+
+                                @media screen and (min-width: 46.875em) {
+                                   .archivepdfs {
+                                        float: right;
+                                        width: 300px;
+                                    } 
+                                }
+                            </style>
+                            <script type="text/javascript">
+                            $(function(){
+
+
+                            // This bit of jQuery forces all the semester box tables-containers to be the same height for the sake of uniformity.
+                            var height = 0;
+                            $('.table-container').each(function(){
+
+                                if($(this).height() > height)
+                                    height = $(this).height();
+
+                            });
+
+                            $('.table-container').each(function(){
+
+                                $(this).css('height',(height + 50) +"px");
+
+                            });
+
+                            $('.archive-sm-label').click(function(){
+
+                                if($(this).data("archive") != "")
+                                    {
+                                        var archive_data = $(this).data("archive");
+                                        var archive_data_split = archive_data.split("|");                    
+                                        window.open("https://www.nyit.edu/files/advising/semester_maps_" + archive_data_split[0]+ "/" + archive_data_split[1]);
+                                    }
+
+                            });
+
+                            });
+                        </script>
+                
+                        <!-- SEMESTER MAP DATA -->
+
+
+                                                        <form class="Filter__form archivepdfs" data-filter-form style="margin-block:unset;">
+
+                                    <div class="Filter__option">
+                                        <button type="button" class="Filter__toggle" aria-expanded="false">PDF Semester Maps</button>
+                                        <div class="Filter__list">
+                                            <label class='Filter__label archive-sm-label' data-archive='2026|ADV_DegreeMap_COECS_ComputerScienceConcentrationsBS_2026.pdf'>2026</label><label class='Filter__label archive-sm-label' data-archive='2025|ADV_DegreeMap_COECS_ComputerScienceConcentrationsBS_2025.pdf'>2025</label><label class='Filter__label archive-sm-label' data-archive='2024|ADV_DegreeMap_COECS_ComputerScienceBS_2024.pdf'>2024</label><label class='Filter__label archive-sm-label' data-archive='2023|ADV_DegreeMap_COECS_ComputerScienceBS_2023.pdf'>2023</label><label class='Filter__label archive-sm-label' data-archive='2022|ADV_DegreeMap_COECS_ComputerScienceBS_2022.pdf'>2022</label><label class='Filter__label archive-sm-label' data-archive='2021|ADV_DegreeMap_COECS_ComputerScienceBS_2021.pdf'>2021</label>                                        </div>
+                                    </div>
+
+                                </form>
+                                
+
+                        <h3>TOTAL CREDITS: 122&ndash;124</h3>
+
+
+                        <div class="layout-split-2">
+                                    <div class="column">
+                                        <div class="table-wrap">
+                                            <h4 style="background-color:#002D72; color:#fff; display:block; padding:4px; width:100%;">Fall, Year One</h4>
+                                            <div class="table-container small-screen-full-width" style="margin-right:0px; margin-left:0px; margin-top:0px;">
+                                                <table id="semester_box">
+                                                    <thead style="width:100%;">
+                                                        <tr style="width:100%;">
+                                                            <td style="width:50%;">Course</td><td style="width:50%;">Credits</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=ETCS&cal=UG&cc=ETCS-105' target='new'>ETCS 105</a></strong><br />Career Discovery                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">2</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=MATH&cal=UG&cc=MATH-170' target='new'>MATH 170</a></strong><br />Calculus I                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">4</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong>Natural Science Elective</strong><a href='#Anchor1' style='text-decoration:none;'><sup>A</sup></a><br />                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">4</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=FCWR&cal=UG&cc=FCWR-101' target='new'>FCWR 101</a></strong><br />Writing I: Foundations of College Composition                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=DATA&cal=UG&cc=DATA-101' target='new'>DATA 101</a></strong><br />Making Sense of a Data-Oriented Society                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th style="padding:8px 5px;"><strong>TOTAL CREDITS</strong></th><th style="text-align:right; padding:8px 5px;" nowrap="nowrap"><strong>16</strong></th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="table-wrap">
+                                            <h4 style="background-color:#002D72; color:#fff; display:block; padding:4px; width:100%;">Spring, Year One</h4>
+                                            <div class="table-container small-screen-full-width" style="margin-right:0px; margin-left:0px; margin-top:0px;">
+                                                <table id="semester_box">
+                                                    <thead style="width:100%;">
+                                                        <tr style="width:100%;">
+                                                            <td style="width:50%;">Course</td><td style="width:50%;">Credits</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=CSCI&cal=UG&cc=CSCI-125' target='new'>CSCI 125</a></strong><br />Computer Programming I                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=MATH&cal=UG&cc=MATH-180' target='new'>MATH 180</a></strong><br />Calculus II                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">4</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong>Natural Science Elective</strong><a href='#Anchor1' style='text-decoration:none;'><sup>A</sup></a>                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">4</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=FCWR&cal=UG&cc=FCWR-151' target='new'>FCWR 151</a></strong><br />Writing II: Foundations of Research Writing                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong>Liberal Arts Elective</strong>                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th style="padding:8px 5px;"><strong>TOTAL CREDITS</strong></th><th style="text-align:right; padding:8px 5px;" nowrap="nowrap"><strong>17</strong></th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="layout-split-2">
+                                    <div class="column">
+                                        <div class="table-wrap">
+                                            <h4 style="background-color:#002D72; color:#fff; display:block; padding:4px; width:100%;">Fall, Year Two</h4>
+                                            <div class="table-container small-screen-full-width" style="margin-right:0px; margin-left:0px; margin-top:0px;">
+                                                <table id="semester_box">
+                                                    <thead style="width:100%;">
+                                                        <tr style="width:100%;">
+                                                            <td style="width:50%;">Course</td><td style="width:50%;">Credits</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=CSCI&cal=UG&cc=CSCI-185' target='new'>CSCI 185</a></strong><br />Computer Programming II                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=CSCI&cal=UG&cc=CSCI-135' target='new'>CSCI 135</a></strong><br />Digital Logic Design Fundamentals                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=MATH&cal=UG&cc=MATH-310' target='new'>MATH 310</a></strong><br />Linear Algebra                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong>Natural Science Elective</strong><a href='#Anchor1' style='text-decoration:none;'><sup>A</sup></a><br />                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=FCWR&cal=UG&cc=FCWR-304' target='new'>FCWR 304</a></strong><br />Communication for Technical Professions                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th style="padding:8px 5px;"><strong>TOTAL CREDITS</strong></th><th style="text-align:right; padding:8px 5px;" nowrap="nowrap"><strong>15</strong></th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="table-wrap">
+                                            <h4 style="background-color:#002D72; color:#fff; display:block; padding:4px; width:100%;">Spring, Year Two</h4>
+                                            <div class="table-container small-screen-full-width" style="margin-right:0px; margin-left:0px; margin-top:0px;">
+                                                <table id="semester_box">
+                                                    <thead style="width:100%;">
+                                                        <tr style="width:100%;">
+                                                            <td style="width:50%;">Course</td><td style="width:50%;">Credits</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=CSCI&cal=UG&cc=CSCI-260' target='new'>CSCI 260</a></strong><br />Data Structures                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=CSCI&cal=UG&cc=CSCI-235' target='new'>CSCI 235</a></strong><br />Elements of Discrete Structures                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=CSCI&cal=UG&cc=CSCI-155' target='new'>CSCI 155</a></strong><br />Computer Organization and Architecture                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=ETCS&cal=UG&cc=ETCS-108' target='new'>ETCS 108</a></strong><br />Computer, Internet, and Society                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong>Math/Science Elective</strong>                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th style="padding:8px 5px;"><strong>TOTAL CREDITS</strong></th><th style="text-align:right; padding:8px 5px;" nowrap="nowrap"><strong>15</strong></th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="layout-split-2">
+                                    <div class="column">
+                                        <div class="table-wrap">
+                                            <h4 style="background-color:#002D72; color:#fff; display:block; padding:4px; width:100%;">Fall, Year Three</h4>
+                                            <div class="table-container small-screen-full-width" style="margin-right:0px; margin-left:0px; margin-top:0px;">
+                                                <table id="semester_box">
+                                                    <thead style="width:100%;">
+                                                        <tr style="width:100%;">
+                                                            <td style="width:50%;">Course</td><td style="width:50%;">Credits</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=CSCI&cal=UG&cc=CSCI-330' target='new'>CSCI 330</a></strong><br />Operating Systems                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=CSCI&cal=UG&cc=CSCI-270' target='new'>CSCI 270</a></strong><br />Probability and Statistics for Computer Science<a href='#Anchor4' style='text-decoration:none;'><sup>D</sup></a><br />                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=CSCI&cal=UG&cc=CSCI-312' target='new'>CSCI 312</a></strong><br />Theory of Computation                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=CSCI&cal=UG&cc=CSCI-318' target='new'>CSCI 318</a></strong><br />Programming Language Concepts                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=ICLT&cal=UG' target='new'>ICLT 3XX</a></strong><br />Literature choice                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th style="padding:8px 5px;"><strong>TOTAL CREDITS</strong></th><th style="text-align:right; padding:8px 5px;" nowrap="nowrap"><strong>15</strong></th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="table-wrap">
+                                            <h4 style="background-color:#002D72; color:#fff; display:block; padding:4px; width:100%;">Spring, Year Three</h4>
+                                            <div class="table-container small-screen-full-width" style="margin-right:0px; margin-left:0px; margin-top:0px;">
+                                                <table id="semester_box">
+                                                    <thead style="width:100%;">
+                                                        <tr style="width:100%;">
+                                                            <td style="width:50%;">Course</td><td style="width:50%;">Credits</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=CSCI&cal=UG&cc=CSCI-335' target='new'>CSCI 335</a></strong><br />Design and Analysis of Algorithms                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=CSCI&cal=UG&cc=CSCI-345' target='new'>CSCI 345</a></strong><br />Computer Networks                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=CSCI&cal=UG&cc=CSCI-300' target='new'>CSCI 300</a></strong><br />Database Management<a href='#Anchor5' style='text-decoration:none;'><sup>E</sup></a>                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong>Math/Science Elective</strong>                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=ICBS&cal=UG' target='new'>ICBS 3XX</a></strong><br />Behavioral Science choice<a href='#Anchor6' style='text-decoration:none;'><sup>F</sup></a>                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th style="padding:8px 5px;"><strong>TOTAL CREDITS</strong></th><th style="text-align:right; padding:8px 5px;" nowrap="nowrap"><strong>15</strong></th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="layout-split-2">
+                                    <div class="column">
+                                        <div class="table-wrap">
+                                            <h4 style="background-color:#002D72; color:#fff; display:block; padding:4px; width:100%;">Fall, Year Four</h4>
+                                            <div class="table-container small-screen-full-width" style="margin-right:0px; margin-left:0px; margin-top:0px;">
+                                                <table id="semester_box">
+                                                    <thead style="width:100%;">
+                                                        <tr style="width:100%;">
+                                                            <td style="width:50%;">Course</td><td style="width:50%;">Credits</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=CSCI&cal=UG&cc=CSCI-456' target='new'>CSCI 456</a></strong><br />Senior Project I                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">2</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=CSCI&cal=UG&cc=CSCI-380' target='new'>CSCI 380</a></strong><br />Introduction to Software Engineering                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong>Computer Science Concentration choice</strong><a href='#Anchor2' style='text-decoration:none;'><sup>B</sup></a><br />                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong>Computer Science Concentration choice</strong><a href='#Anchor6' style='text-decoration:none;'><sup>F</sup></a><br />                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong>Math/Science Elective</strong>                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=ICPH&cal=UG' target='new'>ICPH 3XX</a></strong><br />Philosophy choice                                                                    </td>
+                                                                    <td valign="top" style="text-align: right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th style="padding:8px 5px;"><strong>TOTAL CREDITS</strong></th><th style="text-align:right; padding:8px 5px;" nowrap="nowrap"><strong>17</strong></th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="table-wrap">
+                                            <h4 style="background-color:#002D72; color:#fff; display:block; padding:4px; width:100%;">Spring, Year Four</h4>
+                                            <div class="table-container small-screen-full-width" style="margin-right:0px; margin-left:0px; margin-top:0px;">
+                                                <table id="semester_box">
+                                                    <thead style="width:100%;">
+                                                        <tr style="width:100%;">
+                                                            <td style="width:50%;">Course</td><td style="width:50%;">Credits</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=CSCI&cal=UG&cc=CSCI-457' target='new'>CSCI 457</a></strong><br />Senior Project II                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">2</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong>Computer Science Concentration choice</strong><a href='#Anchor2' style='text-decoration:none;'><sup>B</sup></a>                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong>Computer Science Concentration choice</strong><a href='#Anchor2' style='text-decoration:none;'><sup>B</sup></a>                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong>General Elective</strong><a href='#Anchor6' style='text-decoration:none;'><sup>F</sup></a>                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <strong><a href='/courses/?cs=IENG&cal=UG&cc=IENG-400' target='new'>IENG 400</a></strong><br />Technology and Global Issues<a href='#Anchor3' style='text-decoration:none;'><sup>C</sup></a>                                                                    </td>
+                                                                    <td valign="top" style="text-align:right;" nowrap="nowrap">3</td>
+                                                                </tr>
+                                                                </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th style="padding:8px 5px;"><strong>TOTAL CREDITS</strong></th><th style="text-align:right; padding:8px 5px;" nowrap="nowrap"><strong>14</strong></th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                <div id="Anchor1" style="margin-bottom: 50px;">
+                                <strong style="color: #ff0000;">A</strong><br />
+                                    Students must choose one grouping of courses from BIOL, CHEM, or PHYS to complete the <em>Natural Science Elective</em> requirement.
+<br />
+    <table>
+      <thead>
+        <tr>
+          <th style="width:33%;">Biology</th>
+          <th style="width:33%;">Chemistry</th>
+          <th style="width:33%;">Physics</th>
+        </tr>
+      </thead>
+      <tbody>
+           <tr>
+          <td style="border-right:solid 1px #ddd;">BIOL 110 General Biology I</td>
+          <td style="border-right:solid 1px #ddd;">CHEM 110 General Chemistry I</td>
+          <td>PHYS 170 General Physics I</td>
+        </tr>
+           <tr>
+          <td style="border-right:solid 1px #ddd;">BIOL 150 General Biology II</td>
+          <td style="border-right:solid 1px #ddd;">CHEM 150 General Chemistry II</td>
+          <td>PHYS 180 General Physics II</td>
+        </tr>
+          <tr>
+          <td style="border-right:solid 1px #ddd;">PHYS XXX Physics Elective</td>
+          <td style="border-right:solid 1px #ddd;">PHYS XXX Physics Elective</td>
+          <td>BIOL/CHEM XXX Life Science Elective</td>
+        </tr>
+      </tbody>
+    </table>                                </div>
+                                                                <div id="Anchor2" style="margin-bottom: 50px;">
+                                <strong style="color: #ff0000;">B</strong><br />
+                                    Select one concentration below and choose 12 credits to complete.
+<br />
+<table>
+<thead>
+<tr>
+<th style="width:25%;">Artificial Intelligence</th>
+<th style="width:25%;">Big Data Management and Analytics</th>
+<th style="width:25%;">General Option</th>
+<th style="width:25%;">Network Security</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border-right:solid 1px #ddd;">CSCI 435 Probability and Statistics (required)</td>
+<td>CSCI 436 Big Data Management and Analytics</td>
+<td rowspan="8" style="vertical-align:top; border-right:solid 1px #ddd;">CSCI/ITEC XXX: Choose four 300- or 400-level courses from Computer Science or Information Technology (excluding CSCI 316 and CSCI 317)</td>
+<td>CSCI 352 Intro to Network and Internet Security</td>
+</tr>
+<tr>
+<td style="border-right:solid 1px #ddd;">CSCI 353 Programming for Artificial Intelligence</td>
+<td>CSCI 426 Information Retrieval</td>
+<td>CSCI 354 Principles of Information Security</td>
+</tr>
+<tr>
+<td style="border-right:solid 1px #ddd;">CSCI 355 Artificial Intelligence I</td>
+<td>CSCI 401 Database Interfaces and Programming</td>
+<td>CSCI 357 CISCO Academy Level 1</td>
+</tr>
+<tr>
+<td style="border-right:solid 1px #ddd;">CSCI 410 Artificial Intelligence II</td>
+<td>CSCI 405 Distributed Database Systems</td>
+<td>CSCI 362 Intro System Security Engineering and Administration</td>
+</tr>
+<tr>
+<td style="border-right:solid 1px #ddd;">CSCI 425 Optimization Methods</td>
+<td>CSCI 415 Introduction to Data Mining</td>
+<td>CSCI 440 Advanced Network and Internet Security</td>
+</tr>
+<tr>
+<td style="border-right:solid 1px #ddd;">CSCI 460 Special Topics I</td>
+<td>&nbsp;</td>
+<td>CSCI 445 Operating System Security</td>
+</tr>
+<tr>
+<td style="border-right:solid 1px #ddd;">CSCI 465 Machine Learning</td>
+<td>&nbsp;</td>
+<td>CSCI 460 Special Topics I</td>
+</tr>
+<tr>
+<td style="border-right:solid 1px #ddd;">CSCI 470 Special Topics II</td>
+<td>&nbsp;</td>
+<td>CSCI 470 Special Topics II</td>
+</tr>
+</tbody>
+</table>                                </div>
+                                                                <div id="Anchor3" style="margin-bottom: 50px;">
+                                <strong style="color: #ff0000;">C</strong><br />
+                                    Cross-listed with ICSS 309.                                </div>
+                                                                <div id="Anchor4" style="margin-bottom: 50px;">
+                                <strong style="color: #ff0000;">D</strong><br />
+                                    Students pursuing the AI concentration take CSCI 435 Probability and Statistics Methods in lieu of CSCI 270. AI concentration students will take CSCI 300 Database Management in this fall slot and CSCI 435 in the spring.                                </div>
+                                                                <div id="Anchor5" style="margin-bottom: 50px;">
+                                <strong style="color: #ff0000;">E</strong><br />
+                                    Students pursuing the AI concentration will take CSCI 435 Probability and Statistics Methods in this spring slot.                                </div>
+                                                                <div id="Anchor6" style="margin-bottom: 50px;">
+                                <strong style="color: #ff0000;">F</strong><br />
+                                    Students pursuing the AI concentration may be advised to take Seminar, General Elective, and Concentration choice in a different order than listed.                                 </div>
+                                                                <div id="Anchor7" style="margin-bottom: 50px;">
+                                <strong style="color: #ff0000;">G</strong><br />
+                                    Students must receive a grade of C- or higher in all required CSCI and EENG courses.                                </div>
+                                
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+        </main>
+        
+
+
+
+<style type="text/css">
+/** hiding WWW cookie notice container created by WordPress **/
+.cookie-notice-container {
+    display: none !important;
+}
+</style>
+
+      
+    
+<footer class="Footer theme-navy">
+  <div class="Footer__brand">
+    <a href="https://www.nyit.edu" class="Footer__logo" aria-label="New York Tech">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 468 171">
+  <path fill="#F2A900" d="M468 0H0v37h468V0Z"/>
+  <path d="M140.705 103.472V75.244c0-4.101 2.97-7.017 7.003-7.017h8.951c4.087 0 7.057 2.916 7.057 7.016v28.229c0 4.1-2.97 7.016-7.057 7.016h-8.951c-4.046 0-7.003-2.916-7.003-7.016Zm13.665 1.13c1.267 0 2.043-.762 2.043-2.043V76.224c0-1.28-.776-2.057-2.043-2.057h-4.36c-1.226 0-2.003.777-2.003 2.057v26.335c0 1.281.777 2.043 2.003 2.043h4.36ZM17.043 85.638V68.541h6.594v41.688h-7.003L6.553 82.669h-.15L6.812 92v18.228H.204V68.541h7.017l10.081 27.397h.15l-.409-10.3Zm21.607.26V74.425h12.29V68.54H31.334v41.688H50.94v-5.94H38.65V91.892h11.158v-5.995H38.65ZM95.802 68.54l-6.09 41.688h-9.21L77.328 87.6l-.572-3.651h-.15l-.504 3.651-3.175 22.629h-9.223l-6.13-41.688h7.316l3.882 30.83h.11l4.14-30.83h7.371l4.196 30.83h.164l3.774-30.83h7.275Zm14.958 0 9.373 28.623v13.065h7.357V97.164l9.428-28.623h-7.629l-5.368 19.304h-.205l-5.326-19.304h-7.63Zm83.173 41.702V96.319c0-3.228-1.594-5.327-4.455-6.103 2.67-.967 4.455-3.379 4.4-6.458l-.041-8.188c-.054-4.1-2.97-7.016-7.111-7.016h-15.763v41.689h7.316V93.036h6.349c1.28 0 1.989.763 1.989 1.989v15.218h7.316Zm-15.667-23.147V74.453h6.253c1.267 0 2.043.763 2.043 1.99v8.664c0 1.226-.763 1.99-2.043 1.99h-6.253Zm39.372 23.133-9.005-19.618v19.618h-7.371V68.541h7.371V87.6l9.005-19.06h7.929L215.39 89.03l10.286 21.198h-8.038Zm33.133 0h-7.316V68.541h7.316v41.688Zm31.13-41.688v41.688h-7.016l-10.082-27.56h-.15l.409 9.332v18.228h-6.594V68.541h7.003l10.081 27.397h.15l-.395-10.3V68.541h6.594Zm7.261 27.506v7.438c0 4.101 2.957 7.016 7.003 7.016h8.951c4.1 0 7.016-2.915 7.016-7.016v-8.406c0-4.4-1.485-6.852-5.627-7.888l-8.392-2.356c-1.226-.355-1.635-.968-1.635-2.153v-6.458c0-1.28.722-2.057 1.948-2.057h4.401c1.267 0 1.989.777 1.989 2.057v6.513h7.316v-7.48c0-4.1-2.929-7.016-7.016-7.016h-8.951c-4.033 0-7.003 2.915-7.003 7.016v7.983c0 3.788 1.73 6.717 4.85 7.534l9.319 2.616c1.076.368 1.485 1.022 1.485 2.153v7.016c0 1.281-.722 2.043-1.989 2.043h-4.401c-1.239 0-1.948-.762-1.948-2.043v-6.512h-7.316Zm50.871-21.621h-7.629v35.803h-7.316V74.426h-7.575v-5.885h22.52v5.885Zm13.923 35.803h-7.37V68.541h7.37v41.688Zm29.06-35.803H375.4v35.803h-7.33V74.426h-7.561v-5.885h22.507v5.885Zm6.403-5.885v34.931h.013c0 4.1 3.025 7.016 7.057 7.016h8.91c4.142 0 7.057-2.916 7.057-7.016v-34.93h-7.316v34.072c0 1.227-.708 1.989-1.989 1.989h-4.359c-1.281 0-2.003-.762-2.003-1.989V68.541h-7.37Zm51.988 5.885h-7.63v35.803h-7.316V74.426h-7.574v-5.885h22.52v5.885Zm13.923 11.471v-11.47h12.288v-5.885h-19.604v41.688h19.604v-5.94H455.33V91.892h11.158v-5.995H455.33ZM0 163.511v-28.078c0-4.455 2.711-7.125 7.166-7.125h5.477c4.51 0 7.111 2.656 7.111 7.125v28.078c0 4.455-2.615 7.125-7.111 7.125H7.166c-4.455 0-7.166-2.67-7.166-7.125Zm11.566 3.529c2.616 0 3.842-1.281 3.842-3.992v-27.152c0-2.711-1.226-3.992-3.841-3.992H8.241c-2.615 0-3.882 1.281-3.882 3.992v27.152c0 2.711 1.28 3.992 3.882 3.992h3.324Zm18.529-19.618v-15.218H42.37v-3.583H25.735v41.702h4.36v-19.264h11.457v-3.637H30.095Zm49.999-12.861h-7.67v35.762h-7.317v-35.762h-7.574v-5.94h22.56v5.94Zm14.127 11.43v-11.43h12.275v-5.94h-19.59v41.702h19.59v-5.94H94.221v-12.397h11.158v-5.995H94.221Zm18.637 17.575v-28.174c0-4.101 3.025-7.071 7.057-7.071h8.91c4.101 0 7.112 2.97 7.112 7.071v8.556h-7.371v-7.63c0-1.28-.722-2.043-2.043-2.043h-4.36c-1.226 0-1.989.763-1.989 2.043v26.335c0 1.28.763 2.043 1.989 2.043h4.36c1.321 0 2.043-.763 2.043-2.043v-8.76h7.371v9.686c0 4.101-3.011 7.071-7.112 7.071h-8.91c-4.046 0-7.057-2.97-7.057-7.071v-.013Zm53.296 6.757v-41.702h-7.329v18.392h-8.284v-18.392h-7.315v41.702h7.315v-17.316h8.284v17.316h7.329Zm31.321-41.702v41.702h-7.016l-10.068-27.561h-.164l.409 9.373v18.188h-6.594v-41.702h7.003l10.095 27.411h.15l-.409-10.245v-17.166h6.594Zm7.439 6.771v28.174c0 4.1 3.024 7.07 7.057 7.07h8.909c4.101 0 7.112-2.97 7.112-7.07v-28.174c0-4.101-3.024-7.071-7.112-7.071h-8.909c-4.033 0-7.057 2.97-7.057 7.071Zm15.708 27.261c0 1.28-.763 2.043-2.044 2.043h-4.346c-1.24 0-2.003-.763-2.003-2.043v-26.335c0-1.28.763-2.043 2.003-2.043h4.346c1.281 0 2.044.763 2.044 2.043v26.335Zm32.764 1.73v5.94h-17.969v-41.702h7.316v35.762h10.653Zm5.382-28.991v28.174c0 4.1 2.97 7.07 7.057 7.07h8.91c4.087 0 7.111-2.97 7.111-7.07v-28.174c0-4.101-3.024-7.071-7.111-7.071h-8.91c-4.087 0-7.057 2.97-7.057 7.071Zm15.708 27.261c0 1.28-.777 2.043-2.044 2.043h-4.359c-1.226 0-1.989-.763-1.989-2.043v-26.335c0-1.28.763-2.043 1.989-2.043h4.359c1.267 0 2.044.763 2.044 2.043v26.335Zm30.054-20.15v-6.198c0-1.281-.777-2.044-2.044-2.044h-4.359c-1.227 0-1.99.763-1.99 2.044v26.334c0 1.281.763 2.044 1.99 2.044h4.659c1.226 0 1.989-.763 1.989-2.044v-9.073h-5.054v-5.94h12.125v22.697h-3.788l-.763-3.079c-.776 2.153-2.411 3.379-5.422 3.379h-6.035c-4.046 0-7.016-2.97-7.016-7.071v-28.174c0-4.1 2.97-7.07 7.016-7.07h8.951c4.1 0 7.057 2.97 7.057 7.07v7.125h-7.316Zm12.493-13.882 9.414 28.637v13.065h7.315v-13.065l9.469-28.637h-7.629l-5.423 19.318h-.149l-5.382-19.318h-7.615Z"/>
+</svg>
+    </a>
+  </div>
+  <div class="Footer__nav">
+          <div class="Footer__group flush underline">
+        <h2 class="Footer__heading">Connect</h2>
+        <ul id="menu-connect" class="menu"><li id="menu-item-2679" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2679"><a href="https://www.nyit.edu/news/">News</a></li>
+<li id="menu-item-16577" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16577"><a href="https://www.nyit.edu/about/our-campuses">Locations</a></li>
+<li id="menu-item-16603" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16603"><a href="https://events.nyit.edu/week">Events</a></li>
+<li id="menu-item-16604" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16604"><a href="https://www.nyit.edu/scea/follow_nyit">Social Media</a></li>
+<li id="menu-item-16605" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16605"><a href="https://www.nyit.edu/about/contact">Contact</a></li>
+<li id="menu-item-16583" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16583"><a href="https://apps.nyit.edu/directory/">Directory</a></li>
+</ul>      </div>
+          <div class="Footer__group flush underline">
+        <h2 class="Footer__heading">Academics</h2>
+        <ul id="menu-academics" class="menu"><li id="menu-item-16587" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16587"><a href="https://www.nyit.edu/academics/architecture-and-design">Architecture &amp; Design</a></li>
+<li id="menu-item-16588" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16588"><a href="https://www.nyit.edu/academics/arts-and-sciences">Arts &amp; Sciences</a></li>
+<li id="menu-item-16589" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16589"><a href="https://www.nyit.edu/academics/engineering-and-computing-sciences">Engineering &amp; Computing Sciences</a></li>
+<li id="menu-item-16591" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16591"><a href="https://www.nyit.edu/academics/health-professions">Health Professions</a></li>
+<li id="menu-item-16592" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16592"><a href="https://www.nyit.edu/academics/management">Management</a></li>
+<li id="menu-item-16594" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16594"><a href="https://www.nyit.edu/medicine/college-of-osteopathic-medicine">Osteopathic Medicine</a></li>
+</ul>      </div>
+          <div class="Footer__group flush underline">
+        <h2 class="Footer__heading">Resources</h2>
+        <ul id="menu-resources" class="menu"><li id="menu-item-16596" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16596"><a href="https://www.nyit.edu/student-life/campus-safety">Emergency Info</a></li>
+<li id="menu-item-16597" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16597"><a href="https://my.nyit.edu/">my.NYIT Portal</a></li>
+<li id="menu-item-16598" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16598"><a href="https://www.nyit.edu/students/classes-schedules-and-transcripts/academic-calendar">Academic Calendar</a></li>
+<li id="menu-item-16599" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16599"><a href="https://www.nyit.edu/library">Libraries</a></li>
+<li id="menu-item-21052" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21052"><a href="https://www.nyit.edu/student_resources/new_york_tech_bookstore">Bookstore</a></li>
+<li id="menu-item-16600" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16600"><a href="https://www.nyit.edu/human_resources/careers">Jobs</a></li>
+<li id="menu-item-16601" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16601"><a href="https://alumni.nyit.edu/donate">Donate</a></li>
+</ul>      </div>
+      </div>
+  <div class="Footer__social">
+    <ul>
+              <li>
+          <a href="https://www.facebook.com/mynyit" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="64 64.36 384 381.64">
+  <path d="M331 312h-45v134a192 192 0 1 0-60 0V312h-49v-56h49v-45q4-89 116-68v47h-26q-29 1-30 30v36h53.5"/>
+</svg>
+          </a>
+        </li>
+              <li>
+          <a href="https://www.instagram.com/mynyit/" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <path d="M12 0C8.741 0 8.333.014 7.053.072c-1.277.06-2.15.262-2.912.559a5.882 5.882 0 0 0-2.125 1.383A5.882 5.882 0 0 0 .63 4.14c-.297.763-.5 1.635-.559 2.912C.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.058 1.277.262 2.15.559 2.912.307.79.716 1.46 1.383 2.127A5.882 5.882 0 0 0 4.14 23.37c.764.297 1.635.5 2.912.559C8.332 23.986 8.74 24 12 24s3.667-.014 4.947-.072c1.277-.058 2.15-.262 2.912-.559a5.883 5.883 0 0 0 2.127-1.383 5.883 5.883 0 0 0 1.383-2.127c.297-.763.5-1.635.559-2.912.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.058-1.277-.262-2.15-.559-2.912a5.882 5.882 0 0 0-1.383-2.127A5.883 5.883 0 0 0 19.86.63c-.763-.297-1.635-.5-2.912-.559C15.667.014 15.26 0 12 0zm0 2.162c3.204 0 3.585.012 4.85.07 1.17.054 1.803.249 2.226.413.56.218.961.478 1.381.898.42.42.68.82.899 1.38.164.424.359 1.057.412 2.227.058 1.265.07 1.646.07 4.85s-.012 3.585-.07 4.85c-.053 1.17-.248 1.803-.412 2.226-.218.56-.479.961-.899 1.381s-.82.68-1.38.899c-.424.164-1.057.359-2.227.412-1.265.058-1.646.07-4.85.07s-3.585-.012-4.85-.07c-1.17-.053-1.803-.248-2.226-.412a3.718 3.718 0 0 1-1.381-.899c-.42-.42-.68-.82-.899-1.38-.164-.424-.359-1.057-.412-2.227-.058-1.265-.07-1.646-.07-4.85s.012-3.585.07-4.85c.053-1.17.248-1.803.412-2.226a3.73 3.73 0 0 1 .899-1.381c.42-.42.82-.68 1.38-.898.424-.164 1.057-.36 2.227-.413 1.265-.058 1.646-.07 4.85-.07zm6.613 1.285a1.714 1.714 0 0 0-1.47 1.696 1.714 1.714 0 0 0 3.427 0 1.714 1.714 0 0 0-1.957-1.696zM12.43 5.143a6.429 6.429 0 1 0 0 12.857 6.429 6.429 0 0 0 0-12.857zm0 2.256a4.173 4.173 0 0 1 0 8.345 4.173 4.173 0 1 1 0-8.345z"/>
+</svg>
+          </a>
+        </li>
+              <li>
+          <a href="https://www.tiktok.com/@newyorktech" aria-label="TikTok">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 449.45 515.38">
+  <path d="M382.31 103.3c-27.76-18.1-47.79-47.07-54.04-80.82-1.35-7.29-2.1-14.8-2.1-22.48h-88.6l-.15 355.09c-1.48 39.77-34.21 71.68-74.33 71.68-12.47 0-24.21-3.11-34.55-8.56-23.71-12.47-39.94-37.32-39.94-65.91 0-41.07 33.42-74.49 74.48-74.49 7.67 0 15.02 1.27 21.97 3.44V190.8c-7.2-.99-14.51-1.59-21.97-1.59C73.16 189.21 0 262.36 0 352.3c0 55.17 27.56 104 69.63 133.52 26.48 18.61 58.71 29.56 93.46 29.56 89.93 0 163.08-73.16 163.08-163.08V172.23c34.75 24.94 77.33 39.64 123.28 39.64v-88.61c-24.75 0-47.8-7.35-67.14-19.96z"/>
+</svg>
+          </a>
+        </li>
+              <li>
+          <a href="https://twitter.com/nyit" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="12.91 0 1174.2 1200">
+  <path d="M711.71 508.12 1148.83 0h-103.58L665.7 441.19 362.55 0H12.91l458.42 667.16L12.91 1200H116.5l400.82-465.91L837.47 1200h349.64L711.69 508.12zM569.83 673.04l-46.447-66.434-369.56-528.62h159.11l298.24 426.62 46.447 66.434 387.68 554.54H886.19l-316.36-452.5z"/>
+</svg>
+          </a>
+        </li>
+              <li>
+          <a href="https://www.youtube.com/user/nyitview" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 4 28 20">
+  <path d="M27.415 7.123a3.543 3.543 0 0 0-2.475-2.526C22.756 4 14 4 14 4s-8.756 0-10.94.597A3.543 3.543 0 0 0 .585 7.123C0 9.351 0 14 0 14s0 4.65.585 6.877a3.543 3.543 0 0 0 2.475 2.526C5.244 24 14 24 14 24s8.756 0 10.94-.597a3.543 3.543 0 0 0 2.475-2.526C28 18.649 28 14 28 14s0-4.649-.585-6.877ZM11.2 18.286V9.714L18.474 14Z"/>
+</svg>
+          </a>
+        </li>
+              <li>
+          <a href="https://www.linkedin.com/edu/school?id=18987" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.01 39.67 1791.96 1712.7">
+  <path d="M407.17 596.17v1156.2h-385V596.17zm24.5-357q1.167 85.167-58.917 142.33-60.083 57.167-158.08 57.167h-2.333q-95.667 0-154-57.167T.007 239.17q0-86.333 60.083-142.92 60.083-56.583 156.92-56.583T372.18 96.25q58.333 56.583 59.5 142.92zm1360.3 850.5v662.67h-383.83v-618.33q0-122.5-47.25-191.92-47.25-69.417-147.58-69.417-73.5 0-123.08 40.25t-74.083 99.75q-12.833 35-12.833 94.5v645.17h-383.83q2.333-465.5 2.333-754.83 0-289.33-1.166-345.33l-1.167-56h383.83v168h-2.333q23.333-37.333 47.833-65.333t65.917-60.667 101.5-50.75 133.58-18.083q199.5 0 320.83 132.42 121.33 132.42 121.33 387.92z"/>
+</svg>
+          </a>
+        </li>
+          </ul>
+  </div>
+  <div class="Footer__legal">
+    <div class="Footer__copyright">&copy; 2026 New York Tech</div>
+    <div class="Footer__links underline underline-invert">
+      <ul id="menu-footer-legal" class="menu"><li id="menu-item-69" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69"><a href="https://www.nyit.edu/about/statement_on_non_discrimination">Statement of Non-Discrimination</a></li>
+<li id="menu-item-70" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70"><a href="https://www.nyit.edu/policies/privacy_statement">Privacy Statement</a></li>
+<li id="menu-item-71" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-71"><a href="https://www.nyit.edu/about/terms_and_conditions">Terms &amp; Conditions</a></li>
+<li id="menu-item-72" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-72"><a href="https://www.nyit.edu/about/consumer_information">Consumer Information</a></li>
+<li id="menu-item-20076" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20076"><a href="https://www.nyit.edu/policies">Policies</a></li>
+</ul>    </div>
+  </div>
+  </footer><script src="/files/inc/js/happycogjs.js"></script> 
+  <script src="/files/inc/js/03_modules/gallery.js"></script>
+  <script src="/files/inc/js/03_modules/vidSwap.js"></script>
+  <script src="/files/inc/js/03_modules/videoPopup.js"></script>
+  <script src="/files/inc/js/03_modules/datepicker.js"></script>
+  <script src="/files/inc/js/03_modules/carousel.js"></script>
+  <script src="/files/inc/js/02_plugins/pikaday.min.js"></script>
+  <script src="/files/inc/js/02_plugins/owl.carousel.min.js"></script>
+  <script src="/files/inc/js/02_plugins/jquery.flexslider-min.js"></script>
+  <script src="/files/inc/js/02_plugins/jquery.magnific-popup.min.js"></script>
+
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function (event) {
+      $(".lightbox_gallery_items").each(function(){
+        var gallery = $(this);
+        gallery.magnificPopup({
+            delegate: "a",
+            type: "image",
+            gallery: {
+                enabled: true,
+                preload: [ 0, 2 ]
+            }
+        });
+        gallery.parent().find(".icon-controls-expand").click(function() {gallery.magnificPopup("open");});
+      });
+    });
+  </script>
+    <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/nyit/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.tiktok-embed').forEach(function(bq){
+      var title = bq.getAttribute('data-title') || bq.getAttribute('data-tt-title') || '';
+      var wrapper = bq.closest('.tiktok-embed-wrapper') || bq.parentElement;
+      setTimeout(function(){
+        var iframe = wrapper.querySelector('iframe');
+        if(iframe){
+          iframe.setAttribute('title', title);
+          iframe.setAttribute('aria-label', title);
+        }
+      }, 600);
+    });
+  });
+  </script>
+    
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T2ZZ2F9W');</script>
+<!-- End Google Tag Manager -->
+  
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){margin-left: auto !important;margin-right: auto !important;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+		<!-- Cookie Notice plugin v2.5.14 by Hu-manity.co https://hu-manity.co/ -->
+		<div id="cookie-notice" role="dialog" class="cookie-notice-hidden cookie-revoke-hidden cn-position-bottom" aria-label="Cookie Notice" style="background-color: rgba(10,10,10,1);"><div class="cookie-notice-container" style="color: #fbfbfb"><span id="cn-notice-text" class="cn-text-container">By continuing to use the website, you consent to analytics tracking per New York Tech&apos;s <a href="https://apps.nyit.edu/policies/privacy_statement" target="_blank" id="cn-more-info" class="cn-privacy-policy-link cn-link" data-link-url="https://apps.nyit.edu/policies/privacy_statement" data-link-target="_blank">Privacy Statement</a></span><span id="cn-notice-buttons" class="cn-buttons-container"><button id="cn-accept-cookie" data-cookie-set="accept" class="cn-set-cookie cn-button" aria-label="Accept Cookies" style="background-color: #0060c7">Accept Cookies</button></span><button type="button" id="cn-close-notice" data-cookie-set="accept" class="cn-close-icon" aria-label="No"></button></div>
+			
+		</div>
+		<!-- / Cookie Notice plugin -->  </body>
+</html>
+<script type="text/javascript" src="https://www.nyit.edu/wp-content/themes/nyit/public/dist/script.js" id="theme-script-js"></script>
+
+
+<script>
+var CludoSearch;
+function initCludo() {
+    let engine = 10002624;
+    let searchUrl = '/search';
+
+    var cludoSettings = {
+        customerId: 10001487,
+        engineId: engine,
+        searchUrl: searchUrl,
+        language: 'en',
+        searchInputs: ['cludo-header-search'],
+        initSearchBoxText: '',
+        richAutocomplete: false,
+        jumpToTopOnFacetClick: false,
+        showInstantSuggestions: false,
+    };
+    CludoSearch = new Cludo(cludoSettings);
+    CludoSearch.init();
+}
+document.addEventListener("DOMContentLoaded", initCludo);
+</script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+// Get URL
+var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
+// Split segments into array
+var segments = window.location.pathname.split( '/' );
+
+
+// This function should be placed somewhere globally so that the banner, the page and this snippet can use it.
+function getCookie(name)
+    {
+        var re = new RegExp(name + "=([^;]+)");
+        var value = re.exec(document.cookie);
+        return (value != null) ? unescape(value[1]) : null;
+    }
+
+function getClientIP()
+    {
+        var ipAddress = "192.24.140.171";
+        return ipAddress;
+    }
+
+var clientIP = getClientIP();
+var trackME = getCookie('nyit_tracking');
+
+// Check if cookie/tracking code should run.
+var runTrackingCode = true;
+var internal = false;
+
+
+// Only track if user opted-in or said ask again tomorrow
+switch(trackME) 
+    {
+        case "asktomorrow":
+            runTrackingCode = true;
+            break;
+        case "optin":
+            runTrackingCode = true;
+            break;
+        case "optout":
+            runTrackingCode = false;
+            break;
+        default:
+            runTrackingCode = true;
+    }
+
+
+// Only track if client IP address is not an NYIT IP Address
+
+if(clientIP.search('192.168.') >= 0)
+    { 
+        runTrackingCode = false; 
+        //alert("Found " + clientIP); 
+        internal = true;
+    }
+
+if(clientIP.search('10.0.') >= 0)
+    { 
+        runTrackingCode = false; 
+        //alert("Found " + clientIP); 
+        internal = true;
+    }
+
+for(i = 176; i <= 191; i++) 
+    {
+        if(clientIP.search('64.35.'+i) >= 0)
+            { 
+                runTrackingCode = false; 
+                //alert("Found " + clientIP); 
+                internal = true;
+            }
+    }
+
+for(i = 240; i <= 255; i++) 
+    {
+        if(clientIP.search('64.187.'+i) >= 0)
+            { 
+                runTrackingCode = false; 
+                //alert("Found " + clientIP); 
+                internal = true;
+            }
+    }
+
+for(i = 96; i <= 103; i++) 
+    {
+        if(clientIP.search('216.37.'+i) >= 0)
+            { 
+                runTrackingCode = false; 
+                //alert("Found " + clientIP); 
+                internal = true;
+            }
+    }
+
+for(i = 104; i <= 107; i++) 
+    {
+        if(clientIP.search('216.37.'+i) >= 0)
+            { 
+                runTrackingCode = false; 
+                //alert("Found " + clientIP); 
+                internal = true;
+            }
+    }
+for(i = 108; i <= 111; i++) 
+    {
+        if(clientIP.search('216.37.'+i) >= 0)
+            { 
+                runTrackingCode = false; 
+                //alert("Found " + clientIP); 
+                internal = true;
+            }
+    }
+
+for(i = 0; i <= 255; i++) 
+    {
+        if(clientIP.search('147.97.'+i) >= 0)
+            { 
+                runTrackingCode = false; 
+                //alert("Found " + clientIP); 
+                internal = true;
+            }
+    }
+
+for(i = 128; i <= 159; i++) 
+    {
+        if(clientIP.search('147.97.67.'+i) >= 0)
+            { 
+                runTrackingCode = false; 
+                //alert("Found " + clientIP); 
+                internal = true;
+            }
+    }
+
+
+</script>
+
+<style type="text/css">
+
+/** hiding WWW cookie notice container created by WordPress **/
+.cookie-notice-container {
+    display: none !important;
+}
+
+
+
+.tracking {
+    background: #000;
+    color: #fff;
+    /* Javascript cookie script will toggle this */
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    z-index: 99999;
+    width:100%;
+    margin:0px;
+    text-align:center;
+    padding: 0.5em 0;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width:641px)
+  {
+    .tracking {
+      width: 100%;
+      margin: 0px;
+    }
+  }
+
+.tracking .tracking-body {
+    margin: 0;
+    display: inline-block;
+    padding: 0px 20px 0px 10px;
+    font-size: 14px !important;
+    font-family: 'DINNext';
+}
+
+.tracking .tracking-body a {
+    color: var(--gray);
+    text-decoration: underline;
+}
+
+a.theX {
+    position: absolute;
+    display: block;
+    padding: 3px 5px;
+    margin-top: -8px;
+    right: 0;
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 9999;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+@media screen and (min-width: 81.25em) {
+  .tracking { 
+    /*padding: 1em 0; */
+  } 
+}
+
+button.trackOPTOUT, button.trackOPTIN, button.learnMore {
+    font-weight: normal;
+    font-size: 16px;
+    background: #0060c7;
+    color: #fff;
+    font-size: 12px !important;
+    padding: 3px 5px;
+    border-radius: 5px;
+    border:none;
+    margin-top: 3px;
+}
+
+</style>
+
+<script type="text/javascript">
+var _paq = _paq || [];
+
+
+$(document).ready(function(){
+
+    // User Opted Out
+    $('.trackOPTOUT').click(function(){
+        // Delete current cookie
+        document.cookie = 'nyit_tracking=;expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;';
+
+        // Create Cooookie!
+        var date = new Date();
+        var expires = 'expires=';
+        date.setDate(date.getDate() + 365);
+        expires += date.toGMTString();
+        document.cookie = "nyit_tracking=optout" + "; " + expires + "; path=/;";
+
+        _paq.push(['trackGoal',2]);
+
+        $('.tracking').slideUp('fast');
+
+    });
+
+    $('.learnMore').click(function(){
+        window.location = "https://www.nyit.edu/about/nyits_use_of_cookies";
+    });
+
+    // User OK'd Notice of Tracking
+    $('.trackOPTIN').click(function(){
+        // Delete current cookie
+        document.cookie = 'nyit_tracking=;expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;';
+
+        // Create Cooookie!
+        var date = new Date();
+        var expires = 'expires=';
+        date.setDate(date.getDate() + 365);
+        expires += date.toGMTString();
+        document.cookie = "nyit_tracking=optin" + "; " + expires + "; path=/;";
+
+        _paq.push(['trackGoal',1]);
+
+        $('.tracking').slideUp('fast');
+
+    });
+
+    // User X'd out, ask later
+    $('.theX').click(function(){
+        // Delete current cookie
+        document.cookie = 'nyit_tracking=;expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;';
+
+        // Create Cooookie!
+        var date = new Date();
+        var expires = 'expires=';
+        date.setDate(date.getDate() + 1);
+        expires += date.toGMTString();
+        document.cookie = "nyit_tracking=asktomorrow" + "; " + expires + "; path=/;";
+        
+        _paq.push(['trackGoal',3]);
+
+        $('.tracking').slideUp('fast');
+
+    });
+
+
+    if(getCookie('nyit_tracking') != "asktomorrow" && getCookie('nyit_tracking') != "optin" && getCookie('nyit_tracking') != "optout")
+        {
+            if(internal == false)
+                {$('.tracking').slideDown('fast');}
+            else
+                {$('.tracking').slideUp('fast');}
+        }
+    else
+        {$('.tracking').slideUp('fast');}
+
+    //console.log(getCookie('nyit_tracking'));
+
+    console.log("Internal = " + internal);
+    //console.log("ClientIP = " + clientIP);
+
+});
+</script>
+
+
+<div class="tracking">
+    <!-- <a href="#" class="theX">X</a> -->
+    <p class="tracking-body">
+        By continuing to use the website, you consent to analytics tracking per New York Tech's <a href="https://www.nyit.edu/policies/privacy_statement">Privacy Statement</a>
+        <button class="trackOPTIN">Accept Cookies</button>
+    </p>
+</div>
+
+
+
+<script id='asyncSrc' async></script>
+<script type="text/javascript">
+        var trackID = "UA-114733247-1";
+        if(internal) trackID = "UA-114733247-2";
+        if(runTrackingCode || internal){document.getElementById("asyncSrc").setAttribute('src',"https://www.googletagmanager.com/gtag/js?id="+trackID);}
+</script>
+<script>
+    if(runTrackingCode || internal){
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', trackID);
+  }
+</script> 

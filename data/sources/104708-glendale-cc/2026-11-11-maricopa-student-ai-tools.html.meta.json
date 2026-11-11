@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.maricopa.edu/students/artificial-intelligence-ai/tools",
+ "final_url": "https://www.maricopa.edu/students/artificial-intelligence-ai/tools",
+ "http_status": 403,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:33:31-05:00",
+ "sha256": "434dcb9b79fc3a61b16cd5c5e18273fdb9a651bd1fc2afdfc55b02b4e8867b4f",
+ "bytes": 5796
+}

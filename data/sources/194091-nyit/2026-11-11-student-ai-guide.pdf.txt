@@ -1,0 +1,222 @@
+Navigating AI
+A Student Guide to Artificial ICnOMtePAlNlYigence at New York Tech
+NAME
+
+Table of Contents
+
+Introduction
+
+03
+
+Working with Artificial Intelligence (AI)
+
+04
+
+AI in Education
+
+05
+
+Developing AI Skills
+
+07
+
+Academic Integrity in the Age of AI
+
+09
+
+AI Ethics
+
+10
+
+AI and Sustainability
+
+11
+
+AI and Your Career
+
+12
+
+Building a Professional Portfolio
+
+13
+
+Future of AI: Challenges and Opportunities
+
+14
+
+New York Tech AI Resources
+
+15
+
+Introduction
+Artificial Intelligence (AI) is rapidly transforming the world, reshaping education, work, and daily life. The Student Guide to Artificial Intelligence at New York Tech is designed to empower students to navigate this new era– academically, professionally, and ethically. Understanding AI is not just useful; it is essential. This guide will help you use AI responsibly, assess its capabilities critically, and participate in shaping its future. This publication is an adaptation from the Student Guide to Artificial Intelligence produced by Elon University and the American Association of Colleges and Universities (AAC&U) in response to global calls for responsible AI education.
+PAGE 3
+
+Working with Artificial Intelligence (AI)
+
+Generative AI uses machine learning to analyze prompts, data, and images, and generates outputs such as text, voices, pictures, and videos. While AI can mimic human reasoning and problem-solving, it is crucial to remember that AI is not human and does not have emotions or feelings.
+
+AI Use in Everyday Life
+
+Accessing AI Tools
+
+AI powers many platforms you use daily – search engines, streaming services, navigation apps, social media, and virtual assistants to name a few. Most technology firms are embedding AI capabilities into software like Microsoft Copilot, Google Gemini, Adobe Firefly, and Zoom AI Companion.
+
+Free and paid AI tools are available, and it’s wise to test different models before subscribing to any service. Explore embedded AI features in programs like Word, Excel, Google Docs, PowerPoint, and more.
+PAGE 4
+
+AI in Education
+AI is changing higher education by providing access to vast knowledge sources and new ways of thinking. Most employers expect graduates to have AI skills and experience. Acquiring continuous learning skills—learning how to learn—will serve you throughout your lifetime as AI evolves.
+Types of AI
+Generative AI: ChatGPT, Claude, Gemini, Copilot, Perplexity, MetaAI, Deepseek, Mistral, Grok Specialized AI: NotebookLM, Grammarly, Elicit, GitHub, Consensus Creative AI: DALL-E, Midjourney, Canva, Runway ML, Sora, Suno, Stability.ai, Adobe Firefly Analytical AI: Tableau, Wolfram Alpha, PowerBI, DataRobot, RapidMiner, Python tools Embedded AI: Adobe Applications, Google Docs, Zoom AI Companion Open-source AI: Github, Hugging Face, Nvidia For a more detailed list of AI tools, please visit the New York Tech Generative AI LibGuide
+PAGE 5
+
+Uses of AI in Your Studies
+Improve Study Skills
+Create & Express Innovative Ideas
+Analyze Data, Solve Problems,
+and Uncover Patterns
+Enhance Writing & Communication Skills
+Research, Organize, & Summarize Information
+PAGE 6
+
+Developing AI Skills
+
+A Strong Prompt Should:
+Using AI for Research & Writing
+
+Clearly state your goal and context Provide background and constraints Specify task instructions and output format Define the AI’s role, if needed Include examples or references Focus prompt to provide summaries first and expand as needed
+Brainstorming: Use AI to generate ideas and new approaches Drafting: Let AI suggest ways to organize content for various audiences and purposes Revising: Have AI review drafts for tone, clarity, and vocabulary Editing: Use AI to check spelling, grammar, punctuation, and citation style Always remain the primary author, using AI to augment—not replace—your thinking Compare outputs from multiple AI platforms and select the best ideas Keep track of how AI was used, and cite its role following your assignment guidelines
+
+Using AI for Creative Work
+
+Treat AI as a complement to your creativity Try AI tools for generating images, videos, and sound to inspire new ideas Experiment with AI for exploring styles and remixing content to gain fresh perspectives Use multiple AI systems, compare results, and mix them with your own vision
+
+PAGE 7
+
+Developing AI Skills
+
+Using AI for Data & Numerical Analysis
+Using AI for Study & Learning Assistance
+Evaluating AIGenerated Content
+
+Assess dataset quality Perform repetitive calculations and detect patterns Build predictive models and forecasts Visualize data with AI tools Solve advanced math problems
+
+Ask questions tailored to your knowledge, skills, preferences, and pace Create diagrams and organize class notes Assist with notetaking, translation, captions, speech-to-text, and accessibility Use AI tutors like Khanmigo or Quizlet for personalized learning support Quiz yourself on materials using tools like Notebook.lm‘s study guide
+
+Check accuracy and sources, verify with
+
+reputable publications
+
+Assess logical flow and consistency
+
+Use AI output as inspiration, not a final product
+
+Always disclose when content is AI-generated
+
+Check for biases or stereotypes in AI results
+
+Avoid using copyrighted materials, logos, or
+
+styles without permission
+
+Never use AI to produce deepfakes or harmful,
+
+misleading, or exploitative content
+
+Never share datasets with AI tools if it risks the
+
+rights or privacy of others
+
+Do not share company or personal data with
+
+free AI tools
+
+Take your own notes—don’t rely solely on AI;
+
+process ideas yourself
+
+PAGE 8
+
+Academic Integrity in the Age of AI
+Academic honesty requires clear transparency in the use of AI. At New York Tech, Generative AI tools may only be used for course assignments when specifically permitted by the instructor. Consult the course syllabus or assignment instructions for specific details and always credit your sources. You can also click here for New York Tech’s Academic Integrity policy. Four recommended ways to disclose AI use include:
+Acknowledgments
+List the use of AI in the acknowledgements section: “The authors acknowledge moderate use of ChatGPT (OpenAI, 2024) in reviewing initial
+drafts of this material and suggesting revisions. The final content was reviewed and edited by the authors, who take full responsibility for the work.”
+Footnotes/Bibliography
+Cite the AI like a source in footnotes, endnotes or bibliography, using APA, MLA or Chicago style: “OpenAI. (2024). ChatGPT (Jan 2024 version) [Large
+language model]. Retrieved from https://openai.com/chatgpt”
+Methodology Section
+Declare the use of AI in methodology: “AI-assisted data analysis using Python was used to a minimal level, identifying patterns and outlier test
+results which were then reviewed for accuracy by the authors.”
+Inline Attribution
+Inline attribution within the text: “According to a summary generated by ChatGPT (2025) and reviewed for accuracy by the author, the main themes
+of the series of essays on this topic…”
+PAGE 9
+
+AI Ethics
+Ethical Issues in AI
+Job loss and economic shifts Over-reliance on AI and diminished human capabilities such as creativity and critical thinking Digital divides and global power imbalances Loss of human control over AI systems Intellectual property and copyright concerns Privacy and data security risks Bias and fairness—AI can inherit prejudices from training data Misuse—AI can generate fake media and be used for disinformation Harmful environmental impact and excessive use of water
+PAGE 10
+
+AI and Sustainability
+Artificial intelligence has the power to drive innovation, but it also comes with an environmental cost. As AI models grow larger and more powerful, the energy required to train and run them increases dramatically. Understanding these impacts is the key to a more sustainable AI future.
+Environmental Impact of AI
+High Energy Use – Training large AI models and then running queries against them requires as much electricity as powering a small town. Carbon Emissions – Data centers running on non-renewable energy sources contribute substantially to greenhouse gas emissions, accelerating climate change. One large model run can match the lifetime emissions of several cars. Water Usage – Many AI data centers use water-based cooling systems to keep servers from overheating. This can mean millions of gallons of water per year per data center, straining local supplies, especially in drought-prone regions. Compounding Effects at Scale – While one user’s AI query may have a small footprint, billions of queries daily amplify the environmental toll.
+Best Practices for Sustainable AI Use
+Prompt with Intention – Plan questions carefully and avoid overly verbose outputs by including word limit constraints in your prompts to reduce unnecessary processing. Use AI Wisely – Reserve AI for tasks that provide real efficiency rather than for simple queries. A single ChatGPT query consumes 5x more electricity than a basic web search. Batch Your Work - Group related questions into a single prompt to minimize system load. Choose Sustainable Tools – Use smaller, less resource-intensive models and AI providers that prioritize openness about energy use and environmental impact.
+By adopting thoughtful habits and supporting transparency and sustainability, individuals can help reduce the environmental footprint of AI while still benefiting from its transformative potential.
+PAGE 11
+
+AI and Your Career
+
+As the workplace transforms in the AI era, employers are placing increasing emphasis on a blend of technical and human-centered abilities. According to a 2025 survey by the World Economic Forum of over 1,000 employers, the following skills are among those most valued:
+Analytical thinking (69%) Resilience, flexibility, agility (67%) Leadership and social influence (61%) Creative thinking (57%) Motivation and self-awareness (52%) Technological literacy (51%)
+
+Two-Part Career Plan for the AI Era:
+
+Succeeding in the AI era means pairing the skills that make you uniquely human with the ability to use AI effectively. This two-part plan shows how to do both.
+
+Strengthen Human Capabilities
+Critical thinking, creativity, emotional intelligence, ethical judgment, strategic thinking, leadership, and collaboration.
+
+Become AI-Fluent
+Develop fundamental AI skills (prompting, fact-checking, editing with AI, technical understanding), and gain experience with AI tools in your field.
+PAGE 12
+
+Building a Professional Portfolio
+Create a portfolio to showcase your AI skills. Share your work at research fairs or on LinkedIn, GitHub, and other platforms. Some ideas for AI projects in different disciplines include:
+
+STEM
+
+AI-powered data analysis, drug discovery, cybersecurity, robotics
+
+Business
+
+AI-assisted business plans, market segmentation, supply chain optimization
+
+Arts & Humanitites
+Social Sciences
+Health Sciences
+
+AI translation projects, historical data analysis, AI-generated music
+Analyzing political trends, crime pattern analysis, social movement comparisons
+Personalized nutrition, AI for speech therapy, AI-generated fitness plans
+
+Education Architecture Medicine
+
+Differentiated instructional materials
+AI-assisted building design, energy efficiency modeling, generative urban planning
+AI for medical imaging analysis, patient risk prediction, personalized treatment planning
+
+PAGE 13
+
+The Future of AI: Challenges and Opportunities
+Experts predict both opportunities and ethical dilemmas: Potential for cognitive atrophy due to overreliance on AI Challenges in distinguishing between humans and AI personalities Opportunities for a new “enlightenment” as AI handles routine tasks Rise of AI affinity groups and conscientious objectors
+PAGE 14
+
+More Resources
+New York Tech ITS On Demand Video Trainings New York Tech AI LibGuide New York Tech AI Website LinkedIn Learning Videos on AI ( all members of New York Tech community receive a free LinkedIn Learning subscription) Educause Artificial Intelligence Library: Basics of AI in Higher Ed, AI on Campus, AI Classroom Use and Policies New York Tech RSS feed AI in Higher Ed NYT—standard section: New York Times- Artificial Intelligence (all members of New York Tech community receive a free New York Times subscription)
+PAGE 15
+
+

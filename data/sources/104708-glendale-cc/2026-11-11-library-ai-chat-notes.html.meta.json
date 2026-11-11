@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://guides.gccaz.edu/ai-chat/notes",
+ "final_url": "https://guides.gccaz.edu/ai-chat/notes",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:33:32-05:00",
+ "sha256": "44c99156cab6f381bad40ff5ca4118f886c71fdd218b1d70984dbd74e29b6c3e",
+ "bytes": 55544
+}

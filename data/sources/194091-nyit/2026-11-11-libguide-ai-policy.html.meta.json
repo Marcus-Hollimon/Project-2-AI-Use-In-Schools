@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://libguides.nyit.edu/ai/policy",
+ "final_url": "https://libguides.nyit.edu/ai/policy",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:27:54-05:00",
+ "sha256": "01692dd6f0960b1350136cd1adacd1169cb10b0853fae6dc722303c68f7bcdd4",
+ "bytes": 28957
+}

@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.wvwc.edu/major-checklists/computer-science/",
+ "final_url": "https://www.wvwc.edu/major-checklists/computer-science/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:31:44-05:00",
+ "sha256": "cbed1d79b16931843f2a751a2e426ddc9fa507841b00c1ef5a4b2f900d8f2bdf",
+ "bytes": 86093
+}

@@ -979,6 +979,192 @@
      "note": "CS146S The Modern Software Developer (Stanford Bulletin 2026-27; counts toward the CS BS) is the department's course on how software is built and maintained; it is the first such course in catalog order (CS190 Software Design Studio and CS194 Software Project come later). The official course description is the course page coded here; no autumn sections were listed when saved."
     }
    }
+  },
+  {
+   "unitid": "194091",
+   "slug": "194091-nyit",
+   "name": "New York Institute of Technology",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "restrict",
+     "quote": "It is the responsibility of all students to understand that Generative AI tools should not be used in the completion of course assignments unless an instructor for a given course specifically authorizes their use.",
+     "url": "https://apps.nyit.edu/policies/academic_integrity_policy_us_campuses",
+     "archive": "data/sources/194091-nyit/2026-11-11-academic-integrity-policy.html",
+     "source_type": "policy page",
+     "cue_reason": "'should not be used ... unless an instructor ... authorizes' sets a default of no use; the policy section holding this sentence is titled 'Unauthorized use of Generative AI', and codebook v2 codes 'unauthorized' use as restrict.",
+     "note": "Academic Integrity Policy: U.S. Campuses. The 2023 ChatGPT FAQ says the same ('you should assume its use is not permitted'). The AI Systems Usage Policy (April 2026) covers data and procurement, not coursework."
+    },
+    "univ_tone": {
+     "value": "cautionary",
+     "quote": "Using GenAI to generate programming code snippets or to complete programs.",
+     "url": "https://apps.nyit.edu/policies/academic_integrity_policy_us_campuses",
+     "archive": "data/sources/194091-nyit/2026-11-11-academic-integrity-policy.html",
+     "source_type": "policy page",
+     "note": "The AI text in the policy is a list of forbidden uses followed by sanctions. The November 2025 student guide is more upbeat, but the policy is the page coded for the university."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/194091-nyit/search-log.md",
+     "reviewed": [
+      "data/sources/194091-nyit/2026-11-11-cs-dept.html"
+     ],
+     "note": "The department site mentions AI only as an M.S. degree and a minor."
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/194091-nyit/search-log.md"
+    },
+    "collaboration": {
+     "value": "in passing",
+     "quote": "Use AI tutors like Khanmigo or Quizlet for personalized learning support",
+     "url": "https://www.nyit.edu/wp-content/uploads/2025/11/student-guide-to-artificial-Intelligence-at-new-york-tech.pdf",
+     "archive": "data/sources/194091-nyit/2026-11-11-student-ai-guide.pdf",
+     "source_type": "guidance page",
+     "note": "One item in the student guide's list of study uses; AI as a learning partner is not developed further."
+    },
+    "disclosure": {
+     "value": "required",
+     "quote": "Using GenAI without proper attribution, unless the instructor has stated that citation is not necessary.",
+     "url": "https://apps.nyit.edu/policies/academic_integrity_policy_us_campuses",
+     "archive": "data/sources/194091-nyit/2026-11-11-academic-integrity-policy.html",
+     "source_type": "policy page",
+     "cue_reason": "'attribution' is the disclosure cue; the sentence is in the policy's list of 'Examples of unauthorized use of Generative AI', so using AI without attribution is an integrity violation: a rule, coded required although it has no 'must' word."
+    },
+    "se_courses": {
+     "value": "no public syllabus found",
+     "search_log": "data/sources/194091-nyit/search-log.md",
+     "reviewed": [
+      "data/sources/194091-nyit/2026-11-11-cs-bs-semester-map.html",
+      "data/sources/194091-nyit/2026-11-11-csci-380-course.html"
+     ],
+     "note": "CSCI 380 Introduction to Software Engineering is the B.S. course; the catalog gives only its description."
+    }
+   }
+  },
+  {
+   "unitid": "237969",
+   "slug": "237969-wv-wesleyan",
+   "name": "West Virginia Wesleyan College",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "restrict",
+     "quote": "Use of AI technology, such as ChatGPT, or any other Artificial Intelligence tool in the creation of course content without the instructor’s consent and proper citation;",
+     "url": "https://www.wvwc.edu/wp-content/uploads/2025/08/Student-Handbook-Fall-2025.pdf",
+     "archive": "data/sources/237969-wv-wesleyan/2026-11-11-student-handbook-2025-26.pdf",
+     "source_type": "handbook",
+     "cue_reason": "The sentence is an item in the handbook's list headed 'Violations of Academic Integrity include but are not limited to the following': AI use without the instructor's consent is a violation, so the default is no use. 'without the instructor's consent' has the meaning of the cue 'without permission'.",
+     "note": "Judgment call. The July 2026 Comprehensive AI Policy lets each instructor set a level from 0 (prohibited) to 4 (required) and states no default; the 2025-26 handbook and the May 2026 student technology FAQ ('Assume that you cannot use it for assignments, exams, or quizzes unless the directions include AI parameters') both state a no-use default, so the default is coded."
+    },
+    "univ_tone": {
+     "value": "neutral",
+     "quote": "AI Tools should enhance, not replace, critical thinking, analytical skills, and intellectual development.",
+     "url": "https://www.wvwc.edu/wp-content/uploads/2026/07/WV-Wesleyan-Ethical-Use-of-AI-Policy-4-1.pdf",
+     "archive": "data/sources/237969-wv-wesleyan/2026-11-11-ai-policy.pdf",
+     "source_type": "policy page",
+     "note": "Balanced: the policy opens by saying employers seek 'AI-literate graduates' and also defends faculty who limit AI; most of the text is data-security and integrity rules."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/237969-wv-wesleyan/search-log.md",
+     "reviewed": [
+      "data/sources/237969-wv-wesleyan/2026-11-11-cs-major.html",
+      "data/sources/237969-wv-wesleyan/2026-11-11-catalog-2024-25.pdf"
+     ],
+     "note": "The computer science page on wvwc.edu is an empty page with only its title; the catalog lists courses and no AI rule."
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/237969-wv-wesleyan/search-log.md"
+    },
+    "collaboration": {
+     "value": "explicit",
+     "quote": "Level 2 - Collaborative Use: Students may use AI Tools for brainstorming, outlining, code debugging, or draft review.",
+     "url": "https://www.wvwc.edu/wp-content/uploads/2026/07/WV-Wesleyan-Ethical-Use-of-AI-Policy-4-1.pdf",
+     "archive": "data/sources/237969-wv-wesleyan/2026-11-11-ai-policy.pdf",
+     "source_type": "policy page",
+     "note": "Developed in more than one sentence: the core principles say students must prepare for 'a workforce where they work alongside humans and AI Tools', and Levels 2 to 4 describe collaborative, integrated and required use as ways to learn."
+    },
+    "disclosure": {
+     "value": "required",
+     "quote": "All use of AI Tools must be openly acknowledged and properly attributed.",
+     "url": "https://www.wvwc.edu/wp-content/uploads/2026/07/WV-Wesleyan-Ethical-Use-of-AI-Policy-4-1.pdf",
+     "archive": "data/sources/237969-wv-wesleyan/2026-11-11-ai-policy.pdf",
+     "source_type": "policy page",
+     "note": "Section III.C adds what to include: the tool name, date of access and prompt information."
+    },
+    "se_courses": {
+     "value": "no public syllabus found",
+     "search_log": "data/sources/237969-wv-wesleyan/search-log.md",
+     "reviewed": [
+      "data/sources/237969-wv-wesleyan/2026-11-11-catalog-2024-25.pdf"
+     ],
+     "note": "The catalog has no regular software engineering course; Software Engineering is named only as a possible Special Topics offering (CSCI 188/288/388/488), and no syllabus was found."
+    }
+   }
+  },
+  {
+   "unitid": "104708",
+   "slug": "104708-glendale-cc",
+   "name": "Glendale Community College",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "restrict",
+     "quote": "(d) the unauthorized use of generative AI tools to complete some or all of an assignment or exam without approval of the instructor of the class",
+     "url": "https://district.maricopa.edu/regulations/admin-regs/section-2/2-3",
+     "archive": "data/sources/104708-glendale-cc/2026-11-11-district-ar-2-3.rendered.txt",
+     "source_type": "policy page",
+     "domain_reason": "Glendale Community College is one of the Maricopa County Community Colleges; district Administrative Regulation 2.3.11 is the academic misconduct rule for all of them, and the college's Syllabus Common Elements page points students to Student Handbook section 2.3.11 for it.",
+     "fetch_reason": "district.maricopa.edu answers curl with HTTP 403 (a bot check; the raw 403 copy is saved as 2026-11-11-district-ar-2-3.html). Read in Claude's browser pane; section 2.3.11 of the page text is saved as rendered text.",
+     "note": "Regulation 2.3.11 (amended April 7, 2026) lists unauthorized AI use under both cheating and plagiarism."
+    },
+    "univ_tone": {
+     "value": "cautionary",
+     "quote": "(d) the unauthorized use of generative AI tools to complete some or all of an assignment or exam without approval of the instructor of the class",
+     "url": "https://district.maricopa.edu/regulations/admin-regs/section-2/2-3",
+     "archive": "data/sources/104708-glendale-cc/2026-11-11-district-ar-2-3.rendered.txt",
+     "source_type": "policy page",
+     "domain_reason": "Same district regulation as univ_stance; it binds Glendale Community College.",
+     "fetch_reason": "district.maricopa.edu answers curl with HTTP 403; read in Claude's browser pane and saved as rendered text.",
+     "note": "AI appears only in the misconduct definitions, followed by consequences up to course failure and expulsion."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/104708-glendale-cc/search-log.md",
+     "note": "The Computer Science program page (curl 403; read in the browser pane, 526 characters) says nothing about AI use; there is no separate CS department site."
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/104708-glendale-cc/search-log.md"
+    },
+    "collaboration": {
+     "value": "in passing",
+     "quote": "Provide tutoring Assistance",
+     "url": "https://guides.gccaz.edu/ai-chat/notes",
+     "archive": "data/sources/104708-glendale-cc/2026-11-11-library-ai-chat-notes.html",
+     "source_type": "guidance page",
+     "note": "One item in the library AI guide's list of what AI chat systems can do ('Answer factual questions', 'Brainstorm', 'Help you code/math', 'Provide tutoring Assistance'); not developed further."
+    },
+    "disclosure": {
+     "value": "not stated",
+     "reviewed": [
+      "data/sources/104708-glendale-cc/2026-11-11-district-ar-2-3.rendered.txt",
+      "data/sources/104708-glendale-cc/2026-11-11-library-ai-chat-notes.html",
+      "data/sources/104708-glendale-cc/2026-11-11-catalog-2024-25.pdf"
+     ],
+     "note": "Regulation 2.3.11 requires attribution for another person's or entity's work in general but says nothing about disclosing AI use; the college syllabus page (read in the browser pane) has no text on AI."
+    },
+    "se_courses": {
+     "value": "no public syllabus found",
+     "search_log": "data/sources/104708-glendale-cc/search-log.md",
+     "reviewed": [
+      "data/sources/104708-glendale-cc/2026-11-11-catalog-2024-25.pdf"
+     ],
+     "note": "A two-year college: the computer science transfer degree has CSC110, CSC205, CSC230 and CSC240 and no software engineering course."
+    }
+   }
   }
  ]
 }

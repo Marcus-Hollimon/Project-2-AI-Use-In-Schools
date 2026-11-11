@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://apps.nyit.edu/policies/academic_integrity_policy_us_campuses",
+ "final_url": "https://apps.nyit.edu/policies/academic_integrity_policy_us_campuses",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:27:48-05:00",
+ "sha256": "c45d4fb6aa2af6a3cc5f3255c834ee5ee4db78d124255a3763610e3da96944f0",
+ "bytes": 100741
+}

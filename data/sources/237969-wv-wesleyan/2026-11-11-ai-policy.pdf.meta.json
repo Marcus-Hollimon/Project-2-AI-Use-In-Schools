@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.wvwc.edu/wp-content/uploads/2026/07/WV-Wesleyan-Ethical-Use-of-AI-Policy-4-1.pdf",
+ "final_url": "https://www.wvwc.edu/wp-content/uploads/2026/07/WV-Wesleyan-Ethical-Use-of-AI-Policy-4-1.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T15:30:47-05:00",
+ "sha256": "f90eb3926b3a1326b36708b52d2fc97851607d9fd07b5b78e7e30e21e1328893",
+ "bytes": 207055
+}

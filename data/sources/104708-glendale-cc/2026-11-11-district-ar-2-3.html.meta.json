@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://district.maricopa.edu/regulations/admin-regs/section-2/2-3",
+ "final_url": "https://district.maricopa.edu/regulations/admin-regs/section-2/2-3",
+ "http_status": 403,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:33:31-05:00",
+ "sha256": "72ebe1617eecb73e747be60cf905ab5936affa0f2012d6aad90b05b020a64345",
+ "bytes": 6127
+}

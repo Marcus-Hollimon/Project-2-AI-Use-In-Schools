@@ -1,0 +1,949 @@
+
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]},feature_flags:["rum_v2"]};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-fa0742831156875b2b5",applicationID:"1083057993",browserID:"1120314566"};;/*! For license information please see nr-loader-rum-1.324.1.min.js.LICENSE.txt */
+(()=>{var e={8122(e,t,r){"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(r).length?e:r;for(let s in a)if(void 0!==e[s])try{if(null===e[s]){r[s]=null;continue}Array.isArray(e[s])&&Array.isArray(t[s])?r[s]=Array.from(new Set([...e[s],...t[s]])):e[s]instanceof Map||e[s]instanceof Set||e[s]instanceof Date||e[s]instanceof RegExp?r[s]=e[s]:"object"==typeof e[s]&&null!==t[s]&&"object"==typeof t[s]?r[s]=i(e[s],t[s]):r[s]=e[s]}catch(e){r[s]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},2555(e,t,r){"use strict";r.d(t,{f:()=>s});var n=r(384),i=r(8122);const a={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function s(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}r.d(t,["D",0,e=>(0,i.a)(e,a)])},7699(e,t,r){"use strict";var n=r(860);const i=1e6,a={[n.K7.logging]:!0,[n.K7.genericEvents]:!0,[n.K7.jserrors]:!0,[n.K7.ajax]:!0};r.d(t,["It",0,i,"KC",0,a,"qh",0,"SESSION_ERROR","zd",0,5e5])},9324(e,t,r){"use strict";r.d(t,["xv",0,"1.324.1"])},981(e,t,r){"use strict";r.d(t,["R",0,{AJAX:"AjaxRequest",PA:"PageAction",UA:"UserAction",BP:"BrowserPerformance",WS:"WebSocket",SPV:"SecurityPolicyViolation",JSE:"JavaScriptError",LOG:"Log",PVE:"PageView",PVT:"PageViewTiming",SR:"SessionReplay",ST:"SessionTrace",BI:"BrowserInteraction"}])},6154(e,t,r){"use strict";var n=r(1863);const i="undefined"!=typeof window&&!!window.document,a="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),s=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),o=Boolean("hidden"===s?.document?.visibilityState),c=""+s?.location,u=/iPad|iPhone|iPod/.test(s.navigator?.userAgent),d=u&&"undefined"==typeof SharedWorker,l=((()=>{const e=s.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)());r.d(t,["OF",0,u,"RI",0,i,"WN",0,l,"bv",0,a,"gm",0,s,"m",0,c,"mw",0,o,"sb",0,d,"zk",0,()=>{const e=s?.performance?.getEntriesByType?.("navigation")?.[0];if(e&&e.responseStart>0&&e.responseStart<s.performance.now())return e}])},3241(e,t,r){"use strict";r.d(t,{W:()=>i});var n=r(6154);function i(e={}){try{n.gm.dispatchEvent(new CustomEvent("newrelic",{detail:e}))}catch(e){}}},1687(e,t,r){"use strict";r.d(t,{Ak:()=>o,Ze:()=>u,x3:()=>c});var n=r(3241),i=r(3606),a=r(860),s=r(2646);function o(e,t){if(!e)return;const r={staged:!1,priority:a.P3[t]||0};e.runtime.drainRegistry.get(t)||e.runtime.drainRegistry.set(t,r)}function c(e,t){if(!e)return;const r=e.runtime.drainRegistry;r&&(r.get(t)&&r.delete(t),l(e,t,!1),r.size&&d(e))}function u(e,t="feature",r=!1){if(e){if(!e.runtime.drainRegistry.get(t)||r)return l(e,t);e.runtime.drainRegistry.get(t).staged=!0,d(e)}}function d(e){if(!e)return;const t=Array.from(e.runtime.drainRegistry);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{e.runtime.drainRegistry.delete(t),l(e,t)}))}function l(e,t,r=!0){if(!e)return;const a=e.ee,o=i.i.handlers;if(a&&!a.aborted&&a.backlog&&o){if((0,n.W)({type:"lifecycle",name:"drain",feature:t}),r){const e=a.backlog[t],r=o[t];if(r){for(let t=0;e&&t<e.length;++t)f(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0].context()instanceof s.y&&!t[0].listeners(e).includes(t[1])&&t[0].on(e,t[1])})})}}a.isolatedBacklog||delete o[t],a.backlog[t]=null,a.emit("drain-"+t,[])}}function f(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],a=e[2];n.apply(i,a)}})}},7836(e,t,r){"use strict";var n=r(384),i=r(8990),a=r(2646),s=r(5607);const o="nr@context:".concat(s.W),c=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&u.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,a){!1!==a&&(a=!0);if(c.aborted&&!i)return;t&&a&&t.emit(e,r,n);var o=g(n);m(e).forEach(e=>{e.apply(o,r)});var u=v()[s[e]];u&&u.push([f,e,r,o]);return o},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{s[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=>{delete f.backlog[e]})},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,o,()=>new a.y(o)):new a.y(o)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),u=(0,n.Zm)();u.ee||(u.ee=c),r.d(t,["P",0,o,"ee",0,c])},2646(e,t,r){"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},9908(e,t,r){"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,a){a?(a.buffer([e],i),a.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},3606(e,t,r){"use strict";r.d(t,{i:()=>a});var n=r(9908);a.on=s;var i=a.handlers={};function a(e,t,r,a){s(a||n.d,i,e,t,r)}function s(e,t,r,i,a){a||(a="feature"),e||(e=n.d);var s=t[a]=t[a]||{};(s[r]=s[r]||[]).push([e,i])}},3878(e,t,r){"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function a(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>a,jT:()=>n,sp:()=>i})},5607(e,t,r){"use strict";const n=(0,r(9566).bz)();r.d(t,["W",0,n])},9566(e,t,r){"use strict";r.d(t,{LA:()=>s,bz:()=>a});var n=r(6154);function i(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".split("").map(e=>"x"===e?i(t,r++).toString(16):"y"===e?(3&i()|8).toString(16):e).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,a=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const s=[];for(var o=0;o<e;o++)s.push(i(r,a++).toString(16));return s.join("")}},2614(e,t,r){"use strict";r.d(t,["BB",0,18e5,"Wt",0,"NRBA_SESSION::","iL",0,{SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},"tS",0,{STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},"wk",0,144e5])},1863(e,t,r){"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},944(e,t,r){"use strict";r.d(t,{R:()=>i});var n=r(3241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},8990(e,t,r){"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},6389(e,t,r){"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},1910(e,t,r){"use strict";r.d(t,{i:()=>a});var n=r(944);const i=new Map;function a(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),a=t.includes("nrWrapper");return r||a||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},5289(e,t,r){"use strict";r.d(t,{GG:()=>s,Qr:()=>c,sB:()=>o});var n=r(3878),i=r(6389);function a(){return"undefined"==typeof document||"complete"===document.readyState}function s(e,t){if(a())return e();const r=(0,i.J)(e),s=setInterval(()=>{a()&&(clearInterval(s),r())},500);(0,n.sp)("load",r,t)}function o(e){if(a())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(a())return e();(0,n.sp)("popstate",e)}},384(e,t,r){"use strict";r.d(t,{Zm:()=>c,bQ:()=>d,dV:()=>u,pV:()=>l});var n=r(6154),i=r(1863),a=r(944),s=r(1910);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function c(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function u(){let e=c();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,s.i)(...Object.values(e.o))),e}function d(e,t){let r=c();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t,2===Object.keys(r.initializedAgents).length&&(0,a.R)(69)}function l(){return function(){let e=c();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=c();const t=e.init||{};e.init={...t}}(),u(),function(){let e=c();const t=e.loader_config||{};e.loader_config={...t}}(),c()}r.d(t,["NT",0,o])},2843(e,t,r){"use strict";r.d(t,{G:()=>a,u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function a(e,t,r){(0,n.sp)("pagehide",e,t,r)}},9300(e,t,r){"use strict";r(860).K7.ajax;r.d(t,["mo",0,{NONE:"none",FAILURES:"failures",ALL:"all"}])},3969(e,t,r){"use strict";const n=r(860).K7.metrics;r.d(t,["TZ",0,n,"XG",0,"storeEventMetrics","xV",0,"storeSupportabilityMetrics"])},6630(e,t,r){"use strict";const n=r(860).K7.pageViewEvent;r.d(t,["T",0,n])},782(e,t,r){"use strict";const n=r(860).K7.pageViewTiming;r.d(t,["T",0,n])},4234(e,t,r){"use strict";r.d(t,{W:()=>i});var n=r(1687);class i{constructor(e,t){this.agentRef=e,this.ee=e?.ee,this.featureName=t,this.blocked=!1}deregisterDrain(){(0,n.x3)(this.agentRef,this.featureName)}}},7767(e,t,r){"use strict";var n=r(6154);r.d(t,["V",0,e=>n.RI&&!0===e?.privacy.cookies_enabled])},8362(e,t,r){"use strict";r.d(t,{d:()=>a});var n=r(9566),i=r(1741);class a extends i.W{agentIdentifier=(0,n.LA)(16)}},1741(e,t,r){"use strict";r.d(t,{W:()=>a});var n=r(944),i=r(4261);class a{#e(e,...t){if(this[e]!==a.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e,t=!1){return this.#e(i.Dl,e,t)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e("log",e,t)}start(){return this.#e("start")}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},4261(e,t,r){"use strict";r.d(t,["BL",0,"finished","CH",0,"recordReplay","Dl",0,"setUserId","Fw",0,"setPageViewName","PA",0,"setCurrentRouteName","Pv",0,"consent","Tb",0,"pauseReplay","U2",0,"addToTrace","V1",0,"measure","Wb",0,"wrapLogger","bt",0,"setErrorHandler","cD",0,"setCustomAttribute","dT",0,"interaction","eY",0,"register","fF",0,"recordCustomEvent","hG",0,"addPageAction","k6",0,"addRelease","nb",0,"setApplicationVersion","o5",0,"noticeError"])},1738(e,t,r){"use strict";r.d(t,{U:()=>l,Y:()=>d});var n=r(3241),i=r(9908),a=r(1863),s=r(944),o=r(3969),c=r(8362),u=r(860);function d(e,t,r,a){const d=a||r;!d||d[e]&&d[e]!==c.d.prototype[e]||(d[e]=function(){(0,i.p)(o.xV,["API/"+e+"/called"],void 0,u.K7.metrics,r.ee),(0,n.W)({drained:!!r.runtime?.activatedFeatures,type:"data",name:"api",feature:"api-"+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,s.R)(23,e)}})}function l(e,t,r,n,s){const o=e.info;null===r?delete o.jsAttributes[t]:o.jsAttributes[t]=r,(s||null===r)&&(0,i.p)("api-"+n,[(0,a.t)(),t,r],void 0,"session",e.ee)}},8374(e,t,r){r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860(e,t,r){"use strict";const n="events",i="jserrors",a="browser/blobs",s="browser/logs",o={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations"},c={[o.pageViewEvent]:1,[o.pageViewTiming]:2,[o.metrics]:3,[o.jserrors]:4,[o.softNav]:5,[o.ajax]:6,[o.sessionTrace]:7,[o.sessionReplay]:8,[o.logging]:9,[o.genericEvents]:10},u={[o.pageViewEvent]:"rum",[o.pageViewTiming]:n,[o.ajax]:n,[o.softNav]:n,[o.metrics]:i,[o.jserrors]:i,[o.sessionTrace]:a,[o.sessionReplay]:a,[o.logging]:s,[o.genericEvents]:"ins"};r.d(t,["$J",0,u,"K7",0,o,"P3",0,c,"XX",0,i,"Yy",0,s,"df",0,a,"hg",0,"connect"])}};const t={};function r(n){const i=t[n];if(void 0!==i)return i.exports;const a=t[n]={exports:{}};return e[n](a,a.exports,r),a.exports}r.m=e,r.d=(e,t)=>{if(Array.isArray(t))for(var n=0;n<t.length;){var i=t[n++],a=t[n++];r.o(e,i)?0===a&&n++:0===a?Object.defineProperty(e,i,{enumerable:!0,value:t[n++]}):Object.defineProperty(e,i,{enumerable:!0,get:a})}else for(var i in t)r.o(t,i)&&!r.o(e,i)&&Object.defineProperty(e,i,{enumerable:!0,get:t[i]})},r.f={},r.e=e=>Promise.all(Object.keys(r.f).reduce((t,n)=>(r.f[n](e,t),t),[])),r.u=e=>"nr-rum-1.324.1.min.js",r.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),(()=>{const e={},t="NRBA-1.324.1.PROD:";r.l=(n,i,a,s)=>{if(e[n])return void e[n].push(i);let o,c;if(void 0!==a){const e=document.getElementsByTagName("script");for(var u=0;u<e.length;u++){const r=e[u];if(r.getAttribute("src")==n||r.getAttribute("data-webpack")==t+a){o=r;break}}}if(!o){c=!0;var d={296:"sha512-zuv39xzZ8AH/HwpVrtkixvcBuOFo2ydcFzMtXjx+3Iwr5g++inX+6YDH7J/8fOCAtBetz8aDyaYCRkGy2nnG/w=="};o=document.createElement("script"),o.charset="utf-8",r.nc&&o.setAttribute("nonce",r.nc),o.setAttribute("data-webpack",t+a),o.src=n,0!==o.src.indexOf(window.location.origin+"/")&&(o.crossOrigin="anonymous"),d[s]&&(o.integrity=d[s])}e[n]=[i];const l=(t,r)=>{o.onerror=o.onload=null,clearTimeout(f);const i=e[n];if(delete e[n],o.parentNode?.removeChild(o),i?.forEach(e=>e(r)),t)return t(r)},f=setTimeout(l.bind(null,void 0,{type:"timeout",target:o}),12e4);o.onerror=l.bind(null,o.onerror),o.onload=l.bind(null,o.onload),c&&document.head.appendChild(o)}})(),r.r=e=>{Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.p="https://js-agent.newrelic.com/",(()=>{const e={374:0,840:0};r.f.j=(t,n)=>{let i=r.o(e,t)?e[t]:void 0;if(0!==i)if(i)n.push(i[2]);else{const a=new Promise((r,n)=>i=e[t]=[r,n]);n.push(i[2]=a);const s=r.p+r.u(t),o=new Error,c=n=>{if(r.o(e,t)&&(i=e[t],0!==i&&(e[t]=void 0),i)){const e=n&&("load"===n.type?"missing":n.type),r=n&&n.target&&n.target.src;o.message="Loading chunk "+t+" failed: ("+e+": "+r+")",o.name="ChunkLoadError",o.type=e,o.request=r,i[1](o)}};r.l(s,c,"chunk-"+t,t)}};const t=(t,n)=>{let[i,a,s]=n;var o,c,u=0;if(i.some(t=>0!==e[t])){for(o in a)r.o(a,o)&&(r.m[o]=a[o]);if(s)s(r)}for(t&&t(n);u<i.length;u++)c=i[u],r.o(e,c)&&e[c]&&e[c][0](),e[c]=0},n=self["webpackChunk:NRBA-1.324.1.PROD"]=self["webpackChunk:NRBA-1.324.1.PROD"]||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})(),(()=>{"use strict";r(8374);var e=r(8362),t=r(860);const n=Object.values(t.K7);var i=r(384),a=r(1741);var s=r(2555),o=r(981);t.K7.genericEvents,o.R.PA,o.R.UA,o.R.BP;const c={RESOURCES:"experimental.resources",REGISTER:"register"};var u=r(9300);const d=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var l=r(2614),f=r(944),g=r(8122);const p="[data-nr-mask]",m=e=>(0,g.a)(e,(()=>{const e={feature_flags:[],experimental:{register:!1,resources:!1,iframe_bridge:!1,iframe_domains:[]},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0,capture_payloads:u.mo.NONE},api:{register:{get enabled(){return e.feature_flags.includes(c.REGISTER)||e.experimental.register},set enabled(t){e.experimental.register=t},duplicate_data_to_container:!1,get allow_iframe_bridge(){return e.feature_flags.includes(c.IFRAME_BRIDGE)||e.experimental.iframe_bridge},set allow_iframe_bridge(t){e.experimental.iframe_bridge=t},get iframe_domains(){return e.experimental.iframe_domains},set iframe_domains(t){Array.isArray(t)?e.experimental.iframe_domains=t:(0,f.R)(1,t)}}},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(c.RESOURCES)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:l.wk,inactiveMs:l.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){d(t)?e.mask_selector="".concat(t,",").concat(p):""===t||null===t?e.mask_selector=p:(0,f.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){d(t)?e.block_selector+=",".concat(t):""!==t&&(0,f.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,f.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]},web_sockets:{enabled:!1}}})());var h=r(6154),v=r(9324);let b=0;const y={buildEnv:"PROD",distMethod:"CDN",version:v.xv,originTime:h.WN},_={consented:!1},w={activatedFeatures:void 0,appMetadata:{},configured:!1,get consented(){return this.session?.state?.consent||_.consented},set consented(e){_.consented=e},customTransaction:void 0,denyList:[],disabled:!1,drainRegistry:new Map,connector:void 0,harvester:void 0,v2Target:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++b},listeningForIframeMessages:!1},R="BA";var A=r(7836),x=r(3241);const E={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0};var S=r(9908);const k="newrelic-iframe-";function T(e,t={},n,o){let{init:c,info:u,loader_config:d,runtime:l={},exposed:f=!0}=t;if(!u){const e=(0,i.pV)();c=e.init,u=e.info,d=e.loader_config}var p;e.init=m(c||{}),e.loader_config=(p=d||{},(0,g.a)(p,E)),u.jsAttributes??={},h.bv&&(u.jsAttributes.isWorker=!0),e.info=(0,s.D)(u);const v=e.init;e.runtime??=(e=>{const t=(0,g.a)(e,w),r=Object.keys(y).reduce((e,t)=>(e[t]={value:y[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)})(l),e.runtime.v2Target??={type:R,instance:e.agentIdentifier,get id(){return e.runtime.appMetadata?.agents?.[0]?.entityGuid},get attributes(){return{"entity.guid":this.id,appId:e.info.applicationID}}},v.proxy.assets&&(e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e})(v.proxy.assets),e.runtime.configured||(Object.defineProperty(e,"beacons",{get:()=>[e.info.beacon,e.info.errorBeacon,e.init.proxy.assets,e.init.proxy.beacon].filter(Boolean)}),Object.defineProperty(e.runtime,"denyList",{get:()=>[...e.init.ajax.deny_list||[],...e.init.ajax.block_internal?e.beacons:[]]}),e.runtime.ptid=e.agentIdentifier,function(e){const t=(0,i.pV)();Object.getOwnPropertyNames(a.W.prototype).forEach(r=>{const n=a.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let i=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return i?i(...t):n})})}(e),e.runtime.loaderType=n,e.ee=A.ee.get(e.agentIdentifier),e.exposed=f,(0,x.W)({drained:!!e.runtime.activatedFeatures,type:"lifecycle",name:"initialize",feature:void 0,data:e.config}),e.init.api.register.allow_iframe_bridge&&h.gm.addEventListener("message",t=>{"string"==typeof t.data?.type&&t.data.type.startsWith(k)&&(0,S.p)("iframe-message",[t],void 0,"IFRAME",e.ee)}),e.runtime.configured=!0)}var j=r(1863),P=r(4261),N=r(1738);var O=r(1687),M=r(4234),I=r(5289),D=r(7767);function V(e){return!!(0,i.dV)().o.MO&&(0,D.V)(e)&&!0===e?.session_trace.enabled}var W=r(6389),B=r(7699);const C=new WeakSet,K=new WeakMap;class U extends M.W{constructor(e,t){super(e,t),this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,W.J)(()=>{(0,O.Ak)(e,this.featureName),t()}))}):(0,O.Ak)(e,t)}importAggregator(e,t,n={}){if(this.featAggregate)return;const i=async()=>{if(await this.deferred,this.#t(e),!(0,s.f)(e.info))return(0,f.R)(43),e.ee.abort(),void this.loadedSuccessfully(!1);try{await async function(e,t,n){if(K.has(e))return K.get(e);const i=(async()=>{if((0,D.V)(e.init))try{const{setupAgentSession:t}=await r.e(296).then(r.bind(r,1768));t(e)}catch(e){(0,f.R)(20,e),t.emit("internal-error",[e]),(0,S.p)(B.qh,[e],void 0,n,t)}if(e.init.api.register.allow_iframe_bridge)try{const{setupIframeMFEMessageListener:t}=await Promise.resolve().then(function(){const e=new Error("Cannot find module '../../loaders/configure/iframe-message-handler'");throw e.code="MODULE_NOT_FOUND",e});t(e)}catch(e){(0,f.R)(23,e)}const[{Connector:i},{Harvester:a}]=await Promise.all([r.e(296).then(r.bind(r,6589)),r.e(296).then(r.bind(r,5237))]);e.runtime.connector=new i(e),e.runtime.harvester=new a(e);const s=Object.values(e.features).filter(t=>e.runtime.drainRegistry.has(t.featureName));Promise.all(s.map(e=>e.onAggregateImported)).then(()=>e.runtime.harvester.startTimer())})();K.set(e,i),await i}(e,this.ee,this.featureName)}catch(e){return(0,f.R)(79,e),this.ee.abort(),void this.loadedSuccessfully(!1)}try{if(!this.#r(this.featureName,e.runtime.session,e.init))return this.abortHandler?.(),(0,O.Ze)(this.agentRef,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:r}=await t();this.featAggregate=new r(e,n),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,f.R)(34,e),this.abortHandler?.(),(0,O.Ze)(this.agentRef,this.featureName,!0),this.loadedSuccessfully(!1)}};h.RI?(0,I.GG)(()=>i(),!0):i()}#r(e,r,n){if(this.blocked)return!1;switch(e){case t.K7.sessionReplay:return V(n)&&!!r;case t.K7.sessionTrace:return!!r;default:return!0}}#t(e){if(!C.has(e)&&(C.add(e),!(0,s.f)(e.info))){const t=(0,i.pV)();let r={...t.info?.jsAttributes};try{r={...r,...e.info?.jsAttributes}}catch(e){}T(e,{...t,info:{...t.info,jsAttributes:r},runtime:e.runtime},e.runtime.loaderType)}}}var L=r(6630);class F extends U{static featureName=L.T;constructor(e){var t;super(e,L.T),this.setupInspectionEvents(),t=e,(0,N.Y)(P.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,S.p)("api-"+P.Fw,[(0,j.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>e.init.feature_flags.includes("rum_v2")?r.e(296).then(r.bind(r,908)):r.e(296).then(r.bind(r,7927)))}setupInspectionEvents(){const e=(e,t)=>{e&&(0,x.W)({timeStamp:e.timeStamp,loaded:"complete"===e.target.readyState,type:"window",name:t,data:e.target.location+""})};(0,I.sB)(t=>{e(t,"DOMContentLoaded")}),(0,I.GG)(t=>{e(t,"load")}),(0,I.Qr)(t=>{e(t,"navigate")}),this.ee.on(l.tS.UPDATE,(e,t)=>{(0,x.W)({type:"lifecycle",name:"session",data:t})})}}class G extends e.d{constructor(e){var t;(super(),h.gm)?(this.features={},(0,i.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(F),T(this,e,e.loaderType||"agent"),t=this,(0,N.Y)(P.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return(0,N.U)(t,e,r,P.cD,n);(0,f.R)(40,typeof r)}else(0,f.R)(39,typeof e)},t),function(e){(0,N.Y)(P.Dl,function(t,r=!1){if("string"!=typeof t&&null!==t)return void(0,f.R)(41,typeof t);const n=e.info.jsAttributes["enduser.id"];r&&null!=n&&n!==t?(0,S.p)("api-setUserIdAndResetSession",[t],void 0,"session",e.ee):(0,N.U)(e,"enduser.id",t,P.Dl,!0)},e)}(this),function(e){(0,N.Y)(P.nb,function(t){if("string"==typeof t||null===t)return(0,N.U)(e,"application.version",t,P.nb,!1);(0,f.R)(42,typeof t)},e)}(this),function(e){(0,N.Y)("start",function(){e.ee.emit("manual-start-all")},e)}(this),function(e){(0,N.Y)(P.Pv,function(t=!0){if("boolean"==typeof t){if((0,S.p)("api-"+P.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum?.()})}}else(0,f.R)(65,typeof t)},e)}(this),this.run()):(0,f.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return n.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),r=[...this.desiredFeatures],i=this.init.feature_flags.includes("rum_v2");r.sort((e,r)=>t.P3[e.featureName]-t.P3[r.featureName]),r.forEach(r=>{if(!e[r.featureName]&&(i||r.featureName!==t.K7.pageViewEvent))return;const n=function(e){switch(e){case t.K7.ajax:return[t.K7.jserrors];case t.K7.sessionTrace:return[t.K7.ajax,t.K7.pageViewEvent];case t.K7.sessionReplay:return[t.K7.sessionTrace];case t.K7.pageViewTiming:return[t.K7.pageViewEvent];default:return[]}}(r.featureName).filter(e=>!(e in this.features));n.length>0&&(0,f.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)})}catch(e){(0,f.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,i.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}var H=r(2843),z=r(782);class Y extends U{static featureName=z.T;constructor(e){super(e,z.T),h.RI&&((0,H.u)(()=>(0,S.p)("docHidden",[(0,j.t)()],void 0,z.T,this.ee),!0),(0,H.G)(()=>(0,S.p)("winPagehide",[(0,j.t)()],void 0,z.T,this.ee)),this.importAggregator(e,()=>r.e(296).then(r.bind(r,9981))))}}var Z=r(3969);class q extends U{static featureName=Z.TZ;constructor(e){super(e,Z.TZ),this.importAggregator(e,()=>r.e(296).then(r.bind(r,9623)))}}new G({features:[F,Y,q],loaderType:"lite"})})()})();</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v28.5 (Yoast SEO v28.7) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
+	<title>Department of Computer Science | New York Tech</title>
+	<meta name="description" content="Prepare to leverage your problem-solving skills and the latest technologies for a career that capitalizes on the efficient processing of information." />
+	<link rel="canonical" href="https://www.nyit.edu/academics/engineering-and-computing-sciences/computer-science/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Department of Computer Science" />
+	<meta property="og:description" content="Prepare to leverage your problem-solving skills and the latest technologies for a career that capitalizes on the efficient processing of information." />
+	<meta property="og:url" content="https://www.nyit.edu/academics/engineering-and-computing-sciences/computer-science/" />
+	<meta property="og:site_name" content="New York Tech" />
+	<meta property="article:publisher" content="https://www.facebook.com/mynyit" />
+	<meta property="article:modified_time" content="2026-08-28T04:04:40+00:00" />
+	<meta property="og:image" content="https://www.nyit.edu/wp-content/uploads/department-of-computer-science-hero.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="500" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@nyit" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="4 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/www.nyit.edu\/academics\/engineering-and-computing-sciences\/computer-science\/","url":"https:\/\/www.nyit.edu\/academics\/engineering-and-computing-sciences\/computer-science\/","name":"Department of Computer Science | New York Tech","isPartOf":{"@id":"https:\/\/www.nyit.edu\/#website"},"primaryImageOfPage":{"@id":"https:\/\/www.nyit.edu\/academics\/engineering-and-computing-sciences\/computer-science\/#primaryimage"},"image":{"@id":"https:\/\/www.nyit.edu\/academics\/engineering-and-computing-sciences\/computer-science\/#primaryimage"},"thumbnailUrl":"https:\/\/www.nyit.edu\/wp-content\/uploads\/department-of-computer-science-hero.jpg","datePublished":"2024-07-24T20:48:06+00:00","dateModified":"2026-08-28T04:04:40+00:00","description":"Prepare to leverage your problem-solving skills and the latest technologies for a career that capitalizes on the efficient processing of information.","breadcrumb":{"@id":"https:\/\/www.nyit.edu\/academics\/engineering-and-computing-sciences\/computer-science\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.nyit.edu\/academics\/engineering-and-computing-sciences\/computer-science\/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/www.nyit.edu\/academics\/engineering-and-computing-sciences\/computer-science\/#primaryimage","url":"https:\/\/www.nyit.edu\/wp-content\/uploads\/department-of-computer-science-hero.jpg","contentUrl":"https:\/\/www.nyit.edu\/wp-content\/uploads\/department-of-computer-science-hero.jpg","width":1200,"height":500},{"@type":"BreadcrumbList","@id":"https:\/\/www.nyit.edu\/academics\/engineering-and-computing-sciences\/computer-science\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/www.nyit.edu\/"},{"@type":"ListItem","position":2,"name":"Academics","item":"https:\/\/www.nyit.edu\/academics\/"},{"@type":"ListItem","position":3,"name":"College of Engineering and Computing Sciences","item":"https:\/\/www.nyit.edu\/academics\/engineering-and-computing-sciences\/"},{"@type":"ListItem","position":4,"name":"Department of Computer Science"}]},{"@type":"WebSite","@id":"https:\/\/www.nyit.edu\/#website","url":"https:\/\/www.nyit.edu\/","name":"New York Tech","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.nyit.edu\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//customer.cludo.com' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.nyit.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.nyit.edu%2Facademics%2Fengineering-and-computing-sciences%2Fcomputer-science%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.nyit.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.nyit.edu%2Facademics%2Fengineering-and-computing-sciences%2Fcomputer-science%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id='wp-block-library-inline-css' type='text/css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id='wp-block-button-inline-css' type='text/css'>
+.wp-block-button__link{align-content:center;box-sizing:border-box;cursor:pointer;display:inline-block;height:100%;text-align:center;word-break:break-word}.wp-block-button__link.aligncenter{text-align:center}.wp-block-button__link.alignright{text-align:right}:where(.wp-block-button__link){border-radius:9999px;box-shadow:none;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}.wp-block-button[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons>.wp-block-button.has-custom-width{max-width:none}.wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link{width:100%}.wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons>.wp-block-button.wp-block-button__width-25{width:calc(25% - var(--wp--style--block-gap, .5em)*.75)}.wp-block-buttons>.wp-block-button.wp-block-button__width-50{width:calc(50% - var(--wp--style--block-gap, .5em)*.5)}.wp-block-buttons>.wp-block-button.wp-block-button__width-75{width:calc(75% - var(--wp--style--block-gap, .5em)*.25)}.wp-block-buttons>.wp-block-button.wp-block-button__width-100{flex-basis:100%;width:100%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-25{width:25%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-50{width:50%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-75{width:75%}.wp-block-button.is-style-squared,.wp-block-button__link.wp-block-button.is-style-squared{border-radius:0}.wp-block-button.no-border-radius,.wp-block-button__link.no-border-radius{border-radius:0!important}:root :where(.wp-block-button .wp-block-button__link.is-style-outline),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link){border:2px solid;padding:.667em 1.333em}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-text-color)){color:currentColor}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background)){background-color:initial;background-image:none}
+/*# sourceURL=https://www.nyit.edu/wp-includes/blocks/button/style.min.css */
+</style>
+<style id='wp-block-heading-inline-css' type='text/css'>
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://www.nyit.edu/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id='wp-block-image-inline-css' type='text/css'>
+.wp-block-image>a,.wp-block-image>figure>a{display:inline-block}.wp-block-image img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}@media not (prefers-reduced-motion){.wp-block-image img.hide{visibility:hidden}.wp-block-image img.show{animation:show-content-image .4s}}.wp-block-image[style*=border-radius] img,.wp-block-image[style*=border-radius]>a{border-radius:inherit}.wp-block-image.has-custom-border img{box-sizing:border-box}.wp-block-image.aligncenter{text-align:center}.wp-block-image.alignfull>a,.wp-block-image.alignwide>a{width:100%}.wp-block-image.alignfull img,.wp-block-image.alignwide img{height:auto;width:100%}.wp-block-image .aligncenter,.wp-block-image .alignleft,.wp-block-image .alignright,.wp-block-image.aligncenter,.wp-block-image.alignleft,.wp-block-image.alignright{display:table}.wp-block-image .aligncenter>figcaption,.wp-block-image .alignleft>figcaption,.wp-block-image .alignright>figcaption,.wp-block-image.aligncenter>figcaption,.wp-block-image.alignleft>figcaption,.wp-block-image.alignright>figcaption{caption-side:bottom;display:table-caption}.wp-block-image .alignleft{float:left;margin:.5em 1em .5em 0}.wp-block-image .alignright{float:right;margin:.5em 0 .5em 1em}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.wp-block-image :where(figcaption){margin-bottom:1em;margin-top:.5em}.wp-block-image.is-style-circle-mask img{border-radius:9999px}@supports ((-webkit-mask-image:none) or (mask-image:none)) or (-webkit-mask-image:none){.wp-block-image.is-style-circle-mask img{border-radius:0;-webkit-mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-mode:alpha;-webkit-mask-position:center;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain}}:root :where(.wp-block-image.is-style-rounded img,.wp-block-image .is-style-rounded img){border-radius:9999px}.wp-block-image figure{margin:0}.wp-lightbox-container{display:flex;flex-direction:column;position:relative}.wp-lightbox-container img{cursor:zoom-in}.wp-lightbox-container img:hover+button{opacity:1}.wp-lightbox-container button{align-items:center;backdrop-filter:blur(16px) saturate(180%);background-color:#5a5a5a40;border:none;border-radius:4px;cursor:zoom-in;display:flex;height:20px;justify-content:center;opacity:0;padding:0;position:absolute;right:16px;text-align:center;top:16px;width:20px;z-index:100}@media not (prefers-reduced-motion){.wp-lightbox-container button{transition:opacity .2s ease}}.wp-lightbox-container button:focus-visible{outline:3px auto #5a5a5a40;outline:3px auto -webkit-focus-ring-color;outline-offset:3px}.wp-lightbox-container button:hover{cursor:pointer;opacity:1}.wp-lightbox-container button:focus{opacity:1}.wp-lightbox-container button:focus,.wp-lightbox-container button:hover,.wp-lightbox-container button:not(:hover):not(:active):not(.has-background){background-color:#5a5a5a40;border:none}.wp-lightbox-overlay{box-sizing:border-box;cursor:zoom-out;height:100vh;left:0;overflow:hidden;position:fixed;top:0;visibility:hidden;width:100%;z-index:100000}.wp-lightbox-overlay .close-button{align-items:center;cursor:pointer;display:flex;justify-content:center;min-height:40px;min-width:40px;padding:0;position:absolute;right:calc(env(safe-area-inset-right) + 16px);top:calc(env(safe-area-inset-top) + 16px);z-index:5000000}.wp-lightbox-overlay .close-button:focus,.wp-lightbox-overlay .close-button:hover,.wp-lightbox-overlay .close-button:not(:hover):not(:active):not(.has-background){background:none;border:none}.wp-lightbox-overlay .lightbox-image-container{height:var(--wp--lightbox-container-height);left:50%;overflow:hidden;position:absolute;top:50%;transform:translate(-50%,-50%);transform-origin:top left;width:var(--wp--lightbox-container-width);z-index:9999999999}.wp-lightbox-overlay .wp-block-image{align-items:center;box-sizing:border-box;display:flex;height:100%;justify-content:center;margin:0;position:relative;transform-origin:0 0;width:100%;z-index:3000000}.wp-lightbox-overlay .wp-block-image img{height:var(--wp--lightbox-image-height);min-height:var(--wp--lightbox-image-height);min-width:var(--wp--lightbox-image-width);width:var(--wp--lightbox-image-width)}.wp-lightbox-overlay .wp-block-image figcaption{display:none}.wp-lightbox-overlay button{background:none;border:none}.wp-lightbox-overlay .scrim{background-color:#fff;height:100%;opacity:.9;position:absolute;width:100%;z-index:2000000}.wp-lightbox-overlay.active{visibility:visible}@media not (prefers-reduced-motion){.wp-lightbox-overlay.active{animation:turn-on-visibility .25s both}.wp-lightbox-overlay.active img{animation:turn-on-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active){animation:turn-off-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active) img{animation:turn-off-visibility .25s both}.wp-lightbox-overlay.zoom.active{animation:none;opacity:1;visibility:visible}.wp-lightbox-overlay.zoom.active .lightbox-image-container{animation:lightbox-zoom-in .4s}.wp-lightbox-overlay.zoom.active .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.active .scrim{animation:turn-on-visibility .4s forwards}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active){animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container{animation:lightbox-zoom-out .4s}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .scrim{animation:turn-off-visibility .4s forwards}}@keyframes show-content-image{0%{visibility:hidden}99%{visibility:hidden}to{visibility:visible}}@keyframes turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}
+/*# sourceURL=https://www.nyit.edu/wp-includes/blocks/image/style.min.css */
+</style>
+<style id='wp-block-list-inline-css' type='text/css'>
+ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
+/*# sourceURL=https://www.nyit.edu/wp-includes/blocks/list/style.min.css */
+</style>
+<style id='wp-block-paragraph-inline-css' type='text/css'>
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://www.nyit.edu/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){margin-left: auto !important;margin-right: auto !important;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='cookie-notice-front-css' href='https://www.nyit.edu/wp-content/plugins/cookie-notice/css/front.min.css?ver=3.1.17' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-style-css' href='https://www.nyit.edu/wp-content/themes/nyit/public/dist/style.css?ver=26.06.24.01' type='text/css' media='all' />
+<script type="text/javascript" id="cookie-notice-front-js-before">
+/* <![CDATA[ */
+var cnArgs = {"ajaxUrl":"https:\/\/www.nyit.edu\/wp-admin\/admin-ajax.php","nonce":"ccaa2bb533","hideEffect":"slide","position":"bottom","onScroll":false,"onScrollOffset":100,"onClick":false,"cookieName":"cookie_notice_accepted","cookieTime":604800,"cookieTimeRejected":604800,"globalCookie":false,"redirection":false,"cache":false,"revokeCookies":false,"revokeCookiesOpt":"automatic"};
+
+//# sourceURL=cookie-notice-front-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.nyit.edu/wp-content/plugins/cookie-notice/js/front.min.js?ver=3.1.17" id="cookie-notice-front-js"></script>
+<script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js?ver=26.04.20.01" id="cludo-script-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://www.nyit.edu/wp-content/themes/nyit/cludo-search/js/everypage-search-script.js?ver=26.04.20.01" id="search-script1-js" defer="defer" data-wp-strategy="defer"></script>
+<link rel="https://api.w.org/" href="https://www.nyit.edu/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.nyit.edu/wp-json/wp/v2/pages/2256" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.nyit.edu/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.11" />
+<link rel='shortlink' href='https://www.nyit.edu/?p=2256' />
+<link rel="llms-sitemap" href="https://www.nyit.edu/llms.txt" />
+<link rel="icon" href="https://www.nyit.edu/wp-content/uploads/NYIT-logo-384x384-1-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://www.nyit.edu/wp-content/uploads/NYIT-logo-384x384-1-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.nyit.edu/wp-content/uploads/NYIT-logo-384x384-1-300x300.png" />
+<meta name="msapplication-TileImage" content="https://www.nyit.edu/wp-content/uploads/NYIT-logo-384x384-1-300x300.png" />
+      </head>
+  <body class="wp-singular page-template-default page page-id-2256 page-parent page-child parent-pageid-1848 wp-theme-nyit cookies-not-set">
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2ZZ2F9W" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+        
+<header data-stuck class="Header  theme-navy">
+  <div class="Header__interior">
+    <a href="https://www.nyit.edu" class="Header__logo Header__logo--default" aria-label="New York Tech">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 468 171">
+  <path fill="#F2A900" d="M468 0H0v37h468V0Z"/>
+  <path d="M140.705 103.472V75.244c0-4.101 2.97-7.017 7.003-7.017h8.951c4.087 0 7.057 2.916 7.057 7.016v28.229c0 4.1-2.97 7.016-7.057 7.016h-8.951c-4.046 0-7.003-2.916-7.003-7.016Zm13.665 1.13c1.267 0 2.043-.762 2.043-2.043V76.224c0-1.28-.776-2.057-2.043-2.057h-4.36c-1.226 0-2.003.777-2.003 2.057v26.335c0 1.281.777 2.043 2.003 2.043h4.36ZM17.043 85.638V68.541h6.594v41.688h-7.003L6.553 82.669h-.15L6.812 92v18.228H.204V68.541h7.017l10.081 27.397h.15l-.409-10.3Zm21.607.26V74.425h12.29V68.54H31.334v41.688H50.94v-5.94H38.65V91.892h11.158v-5.995H38.65ZM95.802 68.54l-6.09 41.688h-9.21L77.328 87.6l-.572-3.651h-.15l-.504 3.651-3.175 22.629h-9.223l-6.13-41.688h7.316l3.882 30.83h.11l4.14-30.83h7.371l4.196 30.83h.164l3.774-30.83h7.275Zm14.958 0 9.373 28.623v13.065h7.357V97.164l9.428-28.623h-7.629l-5.368 19.304h-.205l-5.326-19.304h-7.63Zm83.173 41.702V96.319c0-3.228-1.594-5.327-4.455-6.103 2.67-.967 4.455-3.379 4.4-6.458l-.041-8.188c-.054-4.1-2.97-7.016-7.111-7.016h-15.763v41.689h7.316V93.036h6.349c1.28 0 1.989.763 1.989 1.989v15.218h7.316Zm-15.667-23.147V74.453h6.253c1.267 0 2.043.763 2.043 1.99v8.664c0 1.226-.763 1.99-2.043 1.99h-6.253Zm39.372 23.133-9.005-19.618v19.618h-7.371V68.541h7.371V87.6l9.005-19.06h7.929L215.39 89.03l10.286 21.198h-8.038Zm33.133 0h-7.316V68.541h7.316v41.688Zm31.13-41.688v41.688h-7.016l-10.082-27.56h-.15l.409 9.332v18.228h-6.594V68.541h7.003l10.081 27.397h.15l-.395-10.3V68.541h6.594Zm7.261 27.506v7.438c0 4.101 2.957 7.016 7.003 7.016h8.951c4.1 0 7.016-2.915 7.016-7.016v-8.406c0-4.4-1.485-6.852-5.627-7.888l-8.392-2.356c-1.226-.355-1.635-.968-1.635-2.153v-6.458c0-1.28.722-2.057 1.948-2.057h4.401c1.267 0 1.989.777 1.989 2.057v6.513h7.316v-7.48c0-4.1-2.929-7.016-7.016-7.016h-8.951c-4.033 0-7.003 2.915-7.003 7.016v7.983c0 3.788 1.73 6.717 4.85 7.534l9.319 2.616c1.076.368 1.485 1.022 1.485 2.153v7.016c0 1.281-.722 2.043-1.989 2.043h-4.401c-1.239 0-1.948-.762-1.948-2.043v-6.512h-7.316Zm50.871-21.621h-7.629v35.803h-7.316V74.426h-7.575v-5.885h22.52v5.885Zm13.923 35.803h-7.37V68.541h7.37v41.688Zm29.06-35.803H375.4v35.803h-7.33V74.426h-7.561v-5.885h22.507v5.885Zm6.403-5.885v34.931h.013c0 4.1 3.025 7.016 7.057 7.016h8.91c4.142 0 7.057-2.916 7.057-7.016v-34.93h-7.316v34.072c0 1.227-.708 1.989-1.989 1.989h-4.359c-1.281 0-2.003-.762-2.003-1.989V68.541h-7.37Zm51.988 5.885h-7.63v35.803h-7.316V74.426h-7.574v-5.885h22.52v5.885Zm13.923 11.471v-11.47h12.288v-5.885h-19.604v41.688h19.604v-5.94H455.33V91.892h11.158v-5.995H455.33ZM0 163.511v-28.078c0-4.455 2.711-7.125 7.166-7.125h5.477c4.51 0 7.111 2.656 7.111 7.125v28.078c0 4.455-2.615 7.125-7.111 7.125H7.166c-4.455 0-7.166-2.67-7.166-7.125Zm11.566 3.529c2.616 0 3.842-1.281 3.842-3.992v-27.152c0-2.711-1.226-3.992-3.841-3.992H8.241c-2.615 0-3.882 1.281-3.882 3.992v27.152c0 2.711 1.28 3.992 3.882 3.992h3.324Zm18.529-19.618v-15.218H42.37v-3.583H25.735v41.702h4.36v-19.264h11.457v-3.637H30.095Zm49.999-12.861h-7.67v35.762h-7.317v-35.762h-7.574v-5.94h22.56v5.94Zm14.127 11.43v-11.43h12.275v-5.94h-19.59v41.702h19.59v-5.94H94.221v-12.397h11.158v-5.995H94.221Zm18.637 17.575v-28.174c0-4.101 3.025-7.071 7.057-7.071h8.91c4.101 0 7.112 2.97 7.112 7.071v8.556h-7.371v-7.63c0-1.28-.722-2.043-2.043-2.043h-4.36c-1.226 0-1.989.763-1.989 2.043v26.335c0 1.28.763 2.043 1.989 2.043h4.36c1.321 0 2.043-.763 2.043-2.043v-8.76h7.371v9.686c0 4.101-3.011 7.071-7.112 7.071h-8.91c-4.046 0-7.057-2.97-7.057-7.071v-.013Zm53.296 6.757v-41.702h-7.329v18.392h-8.284v-18.392h-7.315v41.702h7.315v-17.316h8.284v17.316h7.329Zm31.321-41.702v41.702h-7.016l-10.068-27.561h-.164l.409 9.373v18.188h-6.594v-41.702h7.003l10.095 27.411h.15l-.409-10.245v-17.166h6.594Zm7.439 6.771v28.174c0 4.1 3.024 7.07 7.057 7.07h8.909c4.101 0 7.112-2.97 7.112-7.07v-28.174c0-4.101-3.024-7.071-7.112-7.071h-8.909c-4.033 0-7.057 2.97-7.057 7.071Zm15.708 27.261c0 1.28-.763 2.043-2.044 2.043h-4.346c-1.24 0-2.003-.763-2.003-2.043v-26.335c0-1.28.763-2.043 2.003-2.043h4.346c1.281 0 2.044.763 2.044 2.043v26.335Zm32.764 1.73v5.94h-17.969v-41.702h7.316v35.762h10.653Zm5.382-28.991v28.174c0 4.1 2.97 7.07 7.057 7.07h8.91c4.087 0 7.111-2.97 7.111-7.07v-28.174c0-4.101-3.024-7.071-7.111-7.071h-8.91c-4.087 0-7.057 2.97-7.057 7.071Zm15.708 27.261c0 1.28-.777 2.043-2.044 2.043h-4.359c-1.226 0-1.989-.763-1.989-2.043v-26.335c0-1.28.763-2.043 1.989-2.043h4.359c1.267 0 2.044.763 2.044 2.043v26.335Zm30.054-20.15v-6.198c0-1.281-.777-2.044-2.044-2.044h-4.359c-1.227 0-1.99.763-1.99 2.044v26.334c0 1.281.763 2.044 1.99 2.044h4.659c1.226 0 1.989-.763 1.989-2.044v-9.073h-5.054v-5.94h12.125v22.697h-3.788l-.763-3.079c-.776 2.153-2.411 3.379-5.422 3.379h-6.035c-4.046 0-7.016-2.97-7.016-7.071v-28.174c0-4.1 2.97-7.07 7.016-7.07h8.951c4.1 0 7.057 2.97 7.057 7.07v7.125h-7.316Zm12.493-13.882 9.414 28.637v13.065h7.315v-13.065l9.469-28.637h-7.629l-5.423 19.318h-.149l-5.382-19.318h-7.615Z"/>
+</svg>
+    </a>
+    <a href="https://www.nyit.edu" class="Header__logo-stack" aria-label="New York Tech">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <path fill="#f2a900" d="M0 0h180v180H0z"/>
+  <path fill="#002d72" d="M59.63 25.17v14.38l.34 8.66h-.13l-8.47-23.04h-5.89v35.06h5.54V44.9l-.34-7.85h.13l8.47 23.18h5.9V25.17h-5.55zm18.17 4.95v9.65h9.38v5.04H77.8v10.42h10.33v5H71.64V25.17h16.49v4.95H77.8zm48.05-4.95-5.13 35.06h-7.74l-2.66-19.04-.48-3.06h-.13l-.43 3.06-2.66 19.04h-7.75L93.7 25.17h6.16l3.27 25.93h.08l3.49-25.93h6.2l3.52 25.93h.14l3.18-25.93h6.11zm-46.22 78.54c1.07 0 1.72-.64 1.72-1.72V79.85c0-1.07-.65-1.72-1.72-1.72h-3.66c-1.03 0-1.68.65-1.68 1.72v22.14c0 1.08.65 1.72 1.68 1.72h3.66Zm-11.49-.95V79.03c0-3.45 2.5-5.9 5.89-5.9h7.53c3.44 0 5.94 2.45 5.94 5.9v23.73c0 3.45-2.5 5.9-5.94 5.9h-7.53c-3.4 0-5.89-2.46-5.89-5.9m31.59-24.42v10.63h5.25c1.07 0 1.72-.65 1.72-1.68v-7.28c0-1.03-.65-1.67-1.72-1.67h-5.25Zm13.17 18.39v11.71h-6.16V95.65c0-1.04-.6-1.68-1.67-1.68h-5.34v14.47h-6.15V73.38h13.25c3.49 0 5.94 2.45 5.98 5.9l.04 6.89c.05 2.58-1.46 4.61-3.7 5.43 2.41.65 3.74 2.41 3.74 5.13m-62.05.73-7.87-24.07h6.41l4.47 16.23h.17l4.52-16.23h6.41l-7.92 24.07v10.99h-6.19V97.46zm81.99 10.99-7.58-16.5v16.5h-6.19V73.39h6.19v16.02l7.58-16.02h6.66l-8.55 17.23 8.64 17.83h-6.75zm-69.19 18.37h-6.45v30.06h-6.16v-30.06h-6.37v-5h18.98v5zm11.88 0v9.6h9.38v5.04h-9.38v10.43h10.32v4.99H69.36v-35.06h16.48v5H75.52zm15.67 24.38v-23.69c0-3.45 2.54-5.94 5.94-5.94h7.49c3.45 0 5.98 2.5 5.98 5.94v7.19h-6.2v-6.42c0-1.08-.6-1.72-1.72-1.72h-3.66c-1.03 0-1.67.65-1.67 1.72v22.14c0 1.08.64 1.72 1.67 1.72h3.66c1.12 0 1.72-.65 1.72-1.72v-7.37h6.2v8.14c0 3.45-2.54 5.94-5.98 5.94h-7.49c-3.4 0-5.94-2.5-5.94-5.94m44.8-29.37v35.06h-6.15v-14.55h-6.97v14.55h-6.16v-35.06h6.16v15.47h6.97v-15.47h6.15z"/>
+</svg>
+    </a>
+    <div class="contents">
+      <button class="Header__search-toggle" aria-label="Toggle search" aria-expanded="false"></button>
+      <div class="Header__search">
+        <form class="Header__form" method="get" action="" id="cludo-header-search">
+          <label class="Header__label" for="header-search">Search</label>
+          <input type="search" id="header-search" class="Header__input" placeholder="What can we help you find?" name="s" value="">
+          <button class="Header__submit" aria-label="Submit"></button>
+        </form>
+        <div class="Header__popular">
+                  </div>
+      </div>
+    </div>
+    <div class="contents">
+      <button class="Header__menu-toggle" aria-label="Toggle menu" aria-expanded="false"></button>
+      <nav class="Header__menu underline">
+        <ul id="menu-header-primary" class="Header__primary"><li><button class='Header__mega-toggle' aria-expanded='false'>Admissions &amp; Aid</button>
+      <div class="Header__mega">
+        <div class="Header__collapse">
+          <p class="Header__section">Admissions &amp; Aid</p>
+          <ul class="Header__nested">
+    	<li id="menu-item-22401" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22401"><a href="/admissions/">Admissions &amp; Aid Home</a></li>
+	<li id="menu-item-20959" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20959"><a href="/admissions/first-year">First-Year Students</a></li>
+	<li id="menu-item-20961" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20961"><a href="/admissions/transfer">Transfer Students</a></li>
+	<li id="menu-item-20963" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20963"><a href="/admissions/graduate">Graduate Students</a></li>
+	<li id="menu-item-20964" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20964"><a href="/admissions/veterans">Veteran Students</a></li>
+	<li id="menu-item-20965" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20965"><a href="/admissions/international">International Students</a></li>
+	<li id="menu-item-20966" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20966"><a href="/admissions/costs-and-aid">Tuition &amp; Financial Aid</a></li>
+	<li id="menu-item-20967" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20967"><a href="/admissions/contact">Contact Us</a></li>
+	<li id="menu-item-20968" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20968"><a href="/apply">Apply</a></li>
+
+          </ul>
+          <div class="Header__feature">
+            <img width="900" height="600" src="https://www.nyit.edu/wp-content/uploads/mega-menu-admissions.jpg" class="attachment-3:2-900 size-3:2-900" alt="Students sitting in chairs talking" loading="lazy" decoding="async" srcset="https://www.nyit.edu/wp-content/uploads/mega-menu-admissions.jpg 900w, https://www.nyit.edu/wp-content/uploads/mega-menu-admissions-300x200.jpg 300w, https://www.nyit.edu/wp-content/uploads/mega-menu-admissions-768x512.jpg 768w, https://www.nyit.edu/wp-content/uploads/mega-menu-admissions-600x400.jpg 600w" sizes="auto, (max-width: 900px) 100vw, 900px" />
+            <a href="/apply" class="Button cover">Apply Now</a> 
+          </div>
+        </div>
+      </div>
+    </li><li><button class='Header__mega-toggle' aria-expanded='false'>Academics</button>
+      <div class="Header__mega">
+        <div class="Header__collapse">
+          <p class="Header__section">Academics</p>
+          <ul class="Header__nested">
+    	<li id="menu-item-22402" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22402"><a href="/academics/">Academics Home</a></li>
+	<li id="menu-item-4942" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4942"><a href="https://www.nyit.edu/academics/degrees/">Degrees</a></li>
+	<li id="menu-item-20974" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20974"><a href="/academics/colleges-and-schools">Colleges &amp; Schools</a></li>
+	<li id="menu-item-20989" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20989"><a href="https://www.nyit.edu/course_search">Courses</a></li>
+	<li id="menu-item-20977" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20977"><a href="/academics/academic-success/advising">Advising</a></li>
+	<li id="menu-item-20990" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20990"><a href="/students/classes-schedules-and-transcripts/academic-calendar">Academic Calendar</a></li>
+	<li id="menu-item-20975" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20975"><a href="/academics/academic-success">Academic Success</a></li>
+	<li id="menu-item-20985" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20985"><a href="/academics/honors-college">Honors College</a></li>
+	<li id="menu-item-41081" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41081"><a href="https://www.nyit.edu/academics/innovation-and-entrepreneurship-academy/">Innovation and Entrepreneurship Academy</a></li>
+	<li id="menu-item-25570" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25570"><a href="/library">Libraries</a></li>
+	<li id="menu-item-23921" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23921"><a href="/students/classes-schedules-and-transcripts/">Classes, Schedules &amp; Transcripts (Registrar)</a></li>
+	<li id="menu-item-20983" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20983"><a href="/academics/academic-success/career-success-and-experiential-education/">Career Success &amp; Experiential Education</a></li>
+	<li id="menu-item-20978" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20978"><a href="/academics/experiential-learning">Experiential Learning</a></li>
+	<li id="menu-item-75076" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75076"><a href="https://www.nyit.edu/about/offices/academic-affairs/tech-talks/">Tech Talks: Promoting Civil Discourse</a></li>
+
+          </ul>
+          <div class="Header__feature">
+            <img width="900" height="600" src="https://www.nyit.edu/wp-content/uploads/mega-menu-academics.jpg" class="attachment-3:2-900 size-3:2-900" alt="Students gathered in a quad talking in the fall" loading="lazy" decoding="async" srcset="https://www.nyit.edu/wp-content/uploads/mega-menu-academics.jpg 900w, https://www.nyit.edu/wp-content/uploads/mega-menu-academics-300x200.jpg 300w, https://www.nyit.edu/wp-content/uploads/mega-menu-academics-768x512.jpg 768w, https://www.nyit.edu/wp-content/uploads/mega-menu-academics-600x400.jpg 600w" sizes="auto, (max-width: 900px) 100vw, 900px" />
+            <a href="/academics/degrees/" class="Button cover">All Degrees</a> 
+          </div>
+        </div>
+      </div>
+    </li><li><button class='Header__mega-toggle' aria-expanded='false'>Student Life</button>
+      <div class="Header__mega">
+        <div class="Header__collapse">
+          <p class="Header__section">Student Life</p>
+          <ul class="Header__nested">
+    	<li id="menu-item-22404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22404"><a href="/student-life/">Student Life Home</a></li>
+	<li id="menu-item-20992" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20992"><a href="/student-life/long-island">Long Island Campus</a></li>
+	<li id="menu-item-20996" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20996"><a href="/student-life/nyc">New York City Campus</a></li>
+	<li id="menu-item-20997" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20997"><a href="/student-life/activities-and-organizations">Student Activities &amp; Organizations</a></li>
+	<li id="menu-item-76332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76332"><a href="https://www.nyit.edu/athletics-and-recreation/">Athletics and Recreation</a></li>
+	<li id="menu-item-20998" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20998"><a href="/student-life/support">Student Support</a></li>
+	<li id="menu-item-21000" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21000"><a href="/student-life/counseling-and-wellness">Counseling &amp; Wellness</a></li>
+	<li id="menu-item-21001" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21001"><a href="/events">Events</a></li>
+	<li id="menu-item-21002" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21002"><a href="/student-life/residence-life">Residence Life</a></li>
+	<li id="menu-item-21003" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21003"><a href="/student-life/dining">Dining</a></li>
+	<li id="menu-item-21004" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21004"><a href="/student-life/campus-safety">Campus Safety</a></li>
+
+          </ul>
+          <div class="Header__feature">
+            <img width="900" height="600" src="https://www.nyit.edu/wp-content/uploads/mega-menu-student-life.jpg" class="attachment-3:2-900 size-3:2-900" alt="Students in a spring quad talking in a circle. Two students are sitting on a bench." loading="lazy" decoding="async" srcset="https://www.nyit.edu/wp-content/uploads/mega-menu-student-life.jpg 900w, https://www.nyit.edu/wp-content/uploads/mega-menu-student-life-300x200.jpg 300w, https://www.nyit.edu/wp-content/uploads/mega-menu-student-life-768x512.jpg 768w, https://www.nyit.edu/wp-content/uploads/mega-menu-student-life-600x400.jpg 600w" sizes="auto, (max-width: 900px) 100vw, 900px" />
+            <a href="/student-life/" class="Button cover">Join Us</a> 
+          </div>
+        </div>
+      </div>
+    </li><li><button class='Header__mega-toggle' aria-expanded='false'>Medicine</button>
+      <div class="Header__mega">
+        <div class="Header__collapse">
+          <p class="Header__section">Medicine</p>
+          <ul class="Header__nested">
+    	<li id="menu-item-22405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22405"><a href="/medicine/">Medicine Home</a></li>
+	<li id="menu-item-21091" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21091"><a href="/medicine/college-of-osteopathic-medicine">College of Osteopathic Medicine</a></li>
+	<li id="menu-item-21092" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21092"><a href="/medicine/college-of-osteopathic-medicine/arkansas">NYITCOM-Arkansas</a></li>
+	<li id="menu-item-21093" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21093"><a href="/academics/health-professions">School of Health Professions</a></li>
+	<li id="menu-item-21094" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21094"><a href="/medicine/college-of-osteopathic-medicine/about">About</a></li>
+	<li id="menu-item-21095" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21095"><a href="/medicine/college-of-osteopathic-medicine/about/labs-and-facilities">Labs &amp; Facilities</a></li>
+	<li id="menu-item-21097" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21097"><a href="/medicine/college-of-osteopathic-medicine/healthcare-clinics">Healthcare Clinics</a></li>
+	<li id="menu-item-21098" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21098"><a href="/medicine/college-of-osteopathic-medicine/admissions-and-aid">Admissions &amp; Aid</a></li>
+	<li id="menu-item-21099" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21099"><a href="/medicine/college-of-osteopathic-medicine/contact-us">Contact Us</a></li>
+
+          </ul>
+          <div class="Header__feature">
+            <img width="900" height="600" src="https://www.nyit.edu/wp-content/uploads/mega-menu-medicine.jpg" class="attachment-3:2-900 size-3:2-900" alt="Two medical students in scrubs. One is using a stethoscope to test the others vitals" loading="lazy" decoding="async" srcset="https://www.nyit.edu/wp-content/uploads/mega-menu-medicine.jpg 900w, https://www.nyit.edu/wp-content/uploads/mega-menu-medicine-300x200.jpg 300w, https://www.nyit.edu/wp-content/uploads/mega-menu-medicine-768x512.jpg 768w, https://www.nyit.edu/wp-content/uploads/mega-menu-medicine-600x400.jpg 600w" sizes="auto, (max-width: 900px) 100vw, 900px" />
+            <a href="/medicine/" class="Button cover">Learn More</a> 
+          </div>
+        </div>
+      </div>
+    </li><li><button class='Header__mega-toggle' aria-expanded='false'>About</button>
+      <div class="Header__mega">
+        <div class="Header__collapse">
+          <p class="Header__section">About</p>
+          <ul class="Header__nested">
+    	<li id="menu-item-22406" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22406"><a href="/about/">About Home</a></li>
+	<li id="menu-item-21104" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21104"><a href="/about/at-a-glance">At a Glance</a></li>
+	<li id="menu-item-21105" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21105"><a href="/about/at-a-glance/accreditation">Accreditation</a></li>
+	<li id="menu-item-21106" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21106"><a href="/about/our-campuses">Our Campuses</a></li>
+	<li id="menu-item-21107" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21107"><a href="/academics/colleges-and-schools">Colleges &amp; Schools</a></li>
+	<li id="menu-item-21108" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21108"><a href="/about/leadership">Leadership</a></li>
+	<li id="menu-item-21109" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21109"><a href="/about/rankings-and-recognition/">Rankings &amp; Recognition</a></li>
+	<li id="menu-item-21113" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21113"><a href="/about/offices">Office Directory</a></li>
+	<li id="menu-item-21114" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21114"><a href="https://www.nyit.edu/directory">Faculty &amp; Staff Directory</a></li>
+	<li id="menu-item-42367" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42367"><a href="https://www.nyit.edu/about/artificial-intelligence/">Artificial Intelligence</a></li>
+	<li id="menu-item-21115" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21115"><a href="https://www.nyit.edu/policies">Policies</a></li>
+	<li id="menu-item-21116" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21116"><a href="/contact">Contact Us</a></li>
+
+          </ul>
+          <div class="Header__feature">
+            <img width="900" height="600" src="https://www.nyit.edu/wp-content/uploads/mega-menu-about.jpg" class="attachment-3:2-900 size-3:2-900" alt="Two students talking in Adirondack chairs outside" loading="lazy" decoding="async" srcset="https://www.nyit.edu/wp-content/uploads/mega-menu-about.jpg 900w, https://www.nyit.edu/wp-content/uploads/mega-menu-about-300x200.jpg 300w, https://www.nyit.edu/wp-content/uploads/mega-menu-about-768x512.jpg 768w, https://www.nyit.edu/wp-content/uploads/mega-menu-about-600x400.jpg 600w" sizes="auto, (max-width: 900px) 100vw, 900px" />
+            <a href="/about/at-a-glance/" class="Button cover">Learn More</a> 
+          </div>
+        </div>
+      </div>
+    </li><li><button class='Header__mega-toggle' aria-expanded='false'>Research</button>
+      <div class="Header__mega">
+        <div class="Header__collapse">
+          <p class="Header__section">Research</p>
+          <ul class="Header__nested">
+    	<li id="menu-item-22407" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22407"><a href="/research/">Research Home</a></li>
+	<li id="menu-item-75486" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75486"><a href="https://www.nyit.edu/research/office-of-the-vice-provost-for-research/">Office of the Vice Provost for Research</a></li>
+	<li id="menu-item-21059" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21059"><a href="/research/ospar/">Office of Sponsored Programs &amp; Research (OSPAR)</a></li>
+	<li id="menu-item-21055" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21055"><a href="/research/student-research">Student Research Opportunities</a></li>
+	<li id="menu-item-21057" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21057"><a href="/research/facilities">Research Facilities</a></li>
+	<li id="menu-item-21058" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21058"><a href="/research/academic-centers">Academic Centers</a></li>
+	<li id="menu-item-41433" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41433"><a href="https://www.nyit.edu/research/briic/">Biomedical Research, Innovation &amp; Imaging Center (BRIIC)</a></li>
+	<li id="menu-item-21071" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21071"><a href="/news/articles/?category_name=research">Research News</a></li>
+
+          </ul>
+          <div class="Header__feature">
+            <img width="900" height="600" src="https://www.nyit.edu/wp-content/uploads/mega-menu-research.jpg" class="attachment-3:2-900 size-3:2-900" alt="Two students in a chemistry lab working" loading="lazy" decoding="async" srcset="https://www.nyit.edu/wp-content/uploads/mega-menu-research.jpg 900w, https://www.nyit.edu/wp-content/uploads/mega-menu-research-300x200.jpg 300w, https://www.nyit.edu/wp-content/uploads/mega-menu-research-768x512.jpg 768w, https://www.nyit.edu/wp-content/uploads/mega-menu-research-600x400.jpg 600w" sizes="auto, (max-width: 900px) 100vw, 900px" />
+            <a href="/research/" class="Button cover">What's New</a> 
+          </div>
+        </div>
+      </div>
+    </li></ul>        <ul id="menu-header-audience" class="Header__audience"><li id="menu-item-2662" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2662"><a href="https://www.nyit.edu/students/">Current Students</a></li>
+<li id="menu-item-21362" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21362"><a href="/faculty-and-staff">Faculty &amp; Staff</a></li>
+<li id="menu-item-20052" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20052"><a href="/alumni">Alumni</a></li>
+<li id="menu-item-4808" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4808"><a target="_blank" href="https://vancouver.nyit.edu/">Vancouver</a></li>
+</ul>        <ul id="menu-header-actions" class="Header__actions"><li id="menu-item-2673" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2673"><a href="https://www.nyit.edu/request-information/">Request Info</a></li>
+<li id="menu-item-2674" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2674"><a href="https://www.nyit.edu/visit/">Visit</a></li>
+<li id="menu-item-2672" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2672"><a href="https://www.nyit.edu/apply/">Apply</a></li>
+<li id="menu-item-5734" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5734"><a href="https://alumni.nyit.edu/donate">Give</a></li>
+</ul>      </nav>
+    </div>
+  </div>
+</header>
+      <main class="contents">
+        
+  
+<div class="Hero">
+
+<div class="Hero__background ">
+        <picture class="Hero__image" style="--alignment: center">
+              <source srcset="https://www.nyit.edu/wp-content/uploads/department-of-computer-science-hero.jpg" media="(min-width: 1280px)" />
+                    <source srcset="https://www.nyit.edu/wp-content/uploads/department-of-computer-science-tablet-1.jpg" media="(min-width: 768px)" />
+                    <source srcset="https://www.nyit.edu/wp-content/uploads/department-of-computer-science-mobile.jpg" />
+            <img loading="lazy" decoding="async" width="1200" height="500" src="https://www.nyit.edu/wp-content/uploads/department-of-computer-science-hero.jpg" class="attachment-full size-full" alt="" srcset="https://www.nyit.edu/wp-content/uploads/department-of-computer-science-hero.jpg 1200w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-hero-300x125.jpg 300w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-hero-1024x427.jpg 1024w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-hero-768x320.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" />    </picture>
+  </div>
+
+
+
+
+<div class="Hero__text flush">
+  
+
+<h1 class="wp-block-heading" id="h-department-of-computer-science">Department of Computer Science</h1>
+
+
+  </div>
+
+
+<nav class="Breadcrumbs" aria-label="Breadcrumbs">
+  
+<div class="yoast-breadcrumbs"><span><span><a href="https://www.nyit.edu/">Home</a></span> &gt; <span><a href="https://www.nyit.edu/academics/">Academics</a></span> &gt; <span><a href="https://www.nyit.edu/academics/engineering-and-computing-sciences/">College of Engineering and Computing Sciences</a></span> &gt; <span class="breadcrumb_last" aria-current="page">Department of Computer Science</span></span></div>
+
+</nav>
+
+</div>
+
+
+
+<nav class="Subnav Subnav--alt theme-navy">
+  <h2 class="Subnav__heading">Explore</h2>
+  <button class="Subnav__toggle" aria-expanded="false">Explore</button>
+  <div class="Subnav__menu">
+
+<ul class="wp-block-list">
+<li><a href="/academics/degrees/?_department=computer-science">Degrees</a></li>
+
+
+
+<li><a href="/academics/engineering-and-computing-sciences">College of Engineering &amp; Computing Sciences</a></li>
+
+
+
+<li><a href="/academics/engineering-and-computing-sciences/computer-science/about">Message from the Chairs</a></li>
+
+
+
+<li><a href="https://www.nyit.edu/academics/engineering-and-computing-sciences/about/industry-advisory-boards/">Advisory Board</a></li>
+
+
+
+<li><a href="https://www.nyit.edu/directory?school=College+of+Engineering+%26+Computing+Sciences%7CComputer+Science&amp;emp_type=FulltimeFaculty">Faculty &amp; Staff</a></li>
+</ul>
+
+</div>
+</nav>
+
+
+
+<div class="Common  flush">
+
+<p class="is-style-intro">Today, computers process the data of communication satellites, the images of video games and films, the fuel and ignition systems of automobiles, and more. New York Tech’s Department of Computer Science will prepare you to leverage problem-solving skills for a career that capitalizes on the efficient processing of information.</p>
+
+
+
+<p>Virtually every career field and profession relies upon computer software, from education and entertainment to science, business, and healthcare. The enormous demand for this kind of expertise has made computer science one of the largest and most active disciplines on campus.&nbsp;</p>
+
+
+
+<p>New York Tech’s Department of Computer Science offers traditional courses in the hardware and software aspects of computers, as well as concentrations in network security or big data management and analytics, two of the fastest-growing areas of computer science.&nbsp;</p>
+
+
+
+<p>Access sophisticated computer equipment in up-to-date laboratory facilities and work closely with faculty members who bring a wealth of knowledge and expertise to the classroom.&nbsp;&nbsp;</p>
+
+</div>
+
+
+
+<div class="Media  flush">
+
+<div class="Media__main  flush">
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1920" height="1080" src="https://www.nyit.edu/wp-content/uploads/department-of-computer-science-student-on-computer-1.jpg" alt="A student sitting at a table with a laptop. " class="wp-image-14492" style="aspect-ratio:16/9" srcset="https://www.nyit.edu/wp-content/uploads/department-of-computer-science-student-on-computer-1.jpg 1920w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-student-on-computer-1-300x169.jpg 300w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-student-on-computer-1-1024x576.jpg 1024w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-student-on-computer-1-768x432.jpg 768w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-student-on-computer-1-1536x864.jpg 1536w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-student-on-computer-1-1280x720.jpg 1280w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-student-on-computer-1-960x540.jpg 960w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-student-on-computer-1-640x360.jpg 640w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-student-on-computer-1-320x180.jpg 320w" sizes="auto, (max-width: 1920px) 100vw, 1920px" /><figcaption class="wp-element-caption">Prepare for a career in computer science with our undergraduate, dual, graduate, and doctoral degree options.</figcaption></figure>
+
+
+
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/academics/degrees/?_department=computer-science">All Computer Science Degrees</a></div>
+
+</div>
+
+</div>
+
+
+
+<div class="Section ">
+
+<div class="Section__header Common flush">
+
+<h2 class="wp-block-heading" id="undergraduate-and-dual-degrees">Undergraduate &amp; Dual Degrees&nbsp;</h2>
+
+
+
+<p>A strong foundation in computer science and its related disciplines prepares you for flexible careers in everything from pure theory and design to programming and marketing.</p>
+
+</div>
+
+
+<div class="Section__main flush">
+
+<div class="Router">
+
+<div class="Router__area flush">
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="900" height="600" src="https://www.nyit.edu/wp-content/uploads/department-of-computer-science-undergraduate-students.jpg" alt="Two students in a lab working on electrical equipment and monitoring on a computer. " class="wp-image-14484" style="aspect-ratio:3/2" srcset="https://www.nyit.edu/wp-content/uploads/department-of-computer-science-undergraduate-students.jpg 900w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-undergraduate-students-300x200.jpg 300w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-undergraduate-students-768x512.jpg 768w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-undergraduate-students-600x400.jpg 600w" sizes="auto, (max-width: 900px) 100vw, 900px" /></figure>
+
+</div>
+
+
+
+<div class="Router__area flush">
+
+<ul class="wp-block-list">
+<li><a href="/academics/degrees/computer-science-bs">Computer Science, B.S.</a></li>
+
+
+
+<li><a href="/academics/degrees/information-technology-bs">Information Technology, B.S.</a></li>
+
+
+
+<li><a href="/academics/engineering-and-computing-sciences/student-opportunities/bs-with-accelerated-ms-options">Accelerated Dual Degrees (B.S. to M.S.)</a></li>
+
+
+
+<li><a href="/academics/degrees/artificial-intelligence-minor/">Artificial Intelligence Minor</a></li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="Section ">
+
+<div class="Section__header Common flush">
+
+<h2 class="wp-block-heading" id="h-graduate-and-doctoral-degrees">Graduate and Doctoral Degrees</h2>
+
+
+
+<p>Deepen your knowledge and master additional technologies and applied skills with a graduate degree from New York Tech’s Department of Computer Science.</p>
+
+</div>
+
+
+<div class="Section__main flush">
+
+<div class="Router">
+
+<div class="Router__area flush">
+
+<figure class="wp-block-image alignright size-full"><img loading="lazy" decoding="async" width="900" height="600" src="https://www.nyit.edu/wp-content/uploads/department-of-computer-science-graduate-students-1.jpg" alt="Two students in a computer lab, sitting at a table in front of a laptop. " class="wp-image-14486" style="aspect-ratio:3/2" srcset="https://www.nyit.edu/wp-content/uploads/department-of-computer-science-graduate-students-1.jpg 900w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-graduate-students-1-300x200.jpg 300w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-graduate-students-1-768x512.jpg 768w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-graduate-students-1-600x400.jpg 600w" sizes="auto, (max-width: 900px) 100vw, 900px" /></figure>
+
+</div>
+
+
+
+<div class="Router__area flush">
+
+<ul class="wp-block-list">
+<li><a href="/academics/degrees/artificial-intelligence-ms/">Artificial Intelligence, M.S.</a></li>
+
+
+
+<li><a href="/academics/degrees/computer-science-ms">Computer Science, M.S.</a></li>
+
+
+
+<li><a href="/academics/degrees/computer-science-phd">Computer Science, Ph.D.</a></li>
+
+
+
+<li><a href="/academics/degrees/cybersecurity-ms">Cybersecurity, M.S.</a></li>
+
+
+
+<li><a href="/academics/degrees/data-science-ms">Data Science, M.S.</a></li>
+
+
+
+<li><a href="https://online.nyit.edu/ms-data-science" target="_blank" rel="noreferrer noopener">Data Science, Online M.S.</a></li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<blockquote class="Quote is-style-Quote--gradient theme-navy flush">
+  
+
+<h2 class="wp-block-heading" id="h-student-voices">Student Voices</h2>
+
+
+
+<p>When I was growing up, my father brought home tech for me to tinker with; each time, I was amazed at what technology can do. I always knew this field would become my future.</p>
+
+
+
+<cite>
+  
+
+<span class="wp-block-custom-text"><strong>Joanna Sroka</strong><br />Computer Science – Big Data Management and Analytics</span>
+
+
+</cite>
+
+
+</blockquote>
+
+
+
+<div class="Feature  flush">
+
+<div class="Feature__interior ">
+
+<div class="Common  flush">
+
+<h2 class="wp-block-heading" id="h-faculty">Faculty</h2>
+
+
+
+<p>Our faculty excel as teachers, researchers, and practitioners who mentor students for professional success. Review their bios and read about their areas of research.</p>
+
+</div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="900" height="600" src="https://www.nyit.edu/wp-content/uploads/department-of-computer-science-professor-and-student.jpg" alt="A faculty member interacting with a student in a computer lab. " class="wp-image-14489" style="aspect-ratio:3/2" srcset="https://www.nyit.edu/wp-content/uploads/department-of-computer-science-professor-and-student.jpg 900w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-professor-and-student-300x200.jpg 300w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-professor-and-student-768x512.jpg 768w, https://www.nyit.edu/wp-content/uploads/department-of-computer-science-professor-and-student-600x400.jpg 600w" sizes="auto, (max-width: 900px) 100vw, 900px" /></figure>
+
+
+
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://www.nyit.edu/directory?school=College+of+Engineering+%26+Computing+Sciences%7CComputer+Science&amp;emp_type=FulltimeFaculty">Meet Our Faculty</a></div>
+
+</div>
+
+</div>
+
+
+
+<div class="Section is-style-Section--navy theme-navy">
+
+<div class="Section__header Common flush">
+
+<h2 class="wp-block-heading" id="h-department-news-nbsp">Department News&nbsp;</h2>
+
+</div>
+
+
+<div class="Section__main flush">
+
+
+  
+    <div class="Feed" data-flexscroll tabindex="0">
+      <div data-flexscroll-viewport>
+                  <div data-flexscroll-item class="flush">
+            
+<div class="
+  Card
+    ">
+      <div class="Card__image">
+      <img loading="lazy" decoding="async" width="900" height="600" src="https://www.nyit.edu/wp-content/uploads/2026/10/news-student-profile-rida-rahim-feature.jpg" class="attachment-3:2-900 size-3:2-900 wp-post-image" alt="Portrait of Rida Rahim" srcset="https://www.nyit.edu/wp-content/uploads/2026/10/news-student-profile-rida-rahim-feature.jpg 900w, https://www.nyit.edu/wp-content/uploads/2026/10/news-student-profile-rida-rahim-feature-300x200.jpg 300w, https://www.nyit.edu/wp-content/uploads/2026/10/news-student-profile-rida-rahim-feature-768x512.jpg 768w, https://www.nyit.edu/wp-content/uploads/2026/10/news-student-profile-rida-rahim-feature-600x400.jpg 600w" sizes="auto, (max-width: 900px) 100vw, 900px" />    </div>
+    <div class="Card__main">
+    <div class="Card__content flush">
+      <h3><a href="https://www.nyit.edu/news/articles/first-gen-entrepreneur/">First-Gen Entrepreneur</a></h3>
+        <p>Computer science student Rida Rahim has an impressive résumé of projects, and is only getting started.</p>
+    </div>
+    <div class="Card__footer">
+      <div class="Card__meta underline"><a href='https://www.nyit.edu/news/articles/category/type/profiles/' rel='category tag'>Profiles</a></div>
+      <div class="Card__date">
+        10.21.26      </div>
+    </div>
+  </div>
+</div>
+          </div>
+                  <div data-flexscroll-item class="flush">
+            
+<div class="
+  Card
+    ">
+      <div class="Card__image">
+      <img loading="lazy" decoding="async" width="900" height="600" src="https://www.nyit.edu/wp-content/uploads/2026/09/news-my-co-op-gig-asghar-kazmi-feature.jpg" class="attachment-3:2-900 size-3:2-900 wp-post-image" alt="Portrait of Asghar Kazmi" srcset="https://www.nyit.edu/wp-content/uploads/2026/09/news-my-co-op-gig-asghar-kazmi-feature.jpg 900w, https://www.nyit.edu/wp-content/uploads/2026/09/news-my-co-op-gig-asghar-kazmi-feature-300x200.jpg 300w, https://www.nyit.edu/wp-content/uploads/2026/09/news-my-co-op-gig-asghar-kazmi-feature-768x512.jpg 768w, https://www.nyit.edu/wp-content/uploads/2026/09/news-my-co-op-gig-asghar-kazmi-feature-600x400.jpg 600w" sizes="auto, (max-width: 900px) 100vw, 900px" />    </div>
+    <div class="Card__main">
+    <div class="Card__content flush">
+      <h3><a href="https://www.nyit.edu/news/articles/my-co-op-gig-asghar-kazmi/">My Co-op Gig: Asghar Kazmi</a></h3>
+        <p>Computer science student Asghar Kazmi worked for five months at GE Appliances—an experience he says aligned perfectly with his career goals. </p>
+    </div>
+    <div class="Card__footer">
+      <div class="Card__meta underline"><a href='https://www.nyit.edu/news/articles/category/schools-colleges/college-of-engineering-computing-sciences/' rel='category tag'>College of Engineering &amp; Computing Sciences</a></div>
+      <div class="Card__date">
+        10.06.26      </div>
+    </div>
+  </div>
+</div>
+          </div>
+                  <div data-flexscroll-item class="flush">
+            
+<div class="
+  Card
+    ">
+      <div class="Card__image">
+      <img loading="lazy" decoding="async" width="900" height="600" src="https://www.nyit.edu/wp-content/uploads/2026/07/news-the-problem-solvers-feature.jpg" class="attachment-3:2-900 size-3:2-900 wp-post-image" alt="Collage of alumni portraits" srcset="https://www.nyit.edu/wp-content/uploads/2026/07/news-the-problem-solvers-feature.jpg 900w, https://www.nyit.edu/wp-content/uploads/2026/07/news-the-problem-solvers-feature-300x200.jpg 300w, https://www.nyit.edu/wp-content/uploads/2026/07/news-the-problem-solvers-feature-768x512.jpg 768w, https://www.nyit.edu/wp-content/uploads/2026/07/news-the-problem-solvers-feature-600x400.jpg 600w" sizes="auto, (max-width: 900px) 100vw, 900px" />    </div>
+    <div class="Card__main">
+    <div class="Card__content flush">
+      <h3><a href="https://www.nyit.edu/news/articles/the-problem-solvers/">The Problem Solvers</a></h3>
+        <p>Meet four alumni who use their lived experiences as inspiration for entrepreneurship.</p>
+    </div>
+    <div class="Card__footer">
+      <div class="Card__meta underline"><a href='https://www.nyit.edu/news/articles/category/type/features/' rel='category tag'>Features</a></div>
+      <div class="Card__date">
+        08.10.26      </div>
+    </div>
+  </div>
+</div>
+          </div>
+                  <div data-flexscroll-item class="flush">
+            
+<div class="
+  Card
+    ">
+      <div class="Card__image">
+      <img loading="lazy" decoding="async" width="900" height="600" src="https://www.nyit.edu/wp-content/uploads/2026/07/news-guiliano-fellows-bofan-and-christine-feature.jpg" class="attachment-3:2-900 size-3:2-900 wp-post-image" alt="Photo of ancient ruins in Peru" srcset="https://www.nyit.edu/wp-content/uploads/2026/07/news-guiliano-fellows-bofan-and-christine-feature.jpg 900w, https://www.nyit.edu/wp-content/uploads/2026/07/news-guiliano-fellows-bofan-and-christine-feature-300x200.jpg 300w, https://www.nyit.edu/wp-content/uploads/2026/07/news-guiliano-fellows-bofan-and-christine-feature-768x512.jpg 768w, https://www.nyit.edu/wp-content/uploads/2026/07/news-guiliano-fellows-bofan-and-christine-feature-600x400.jpg 600w" sizes="auto, (max-width: 900px) 100vw, 900px" />    </div>
+    <div class="Card__main">
+    <div class="Card__content flush">
+      <h3><a href="https://www.nyit.edu/news/articles/fellows-field-notes-bofan-he-and-christine-lee/">Fellows’ Field Notes: Bofan He and Christine Lee</a></h3>
+        <p>Edward Guiliano Global Fellowship recipients Bofan He and Christine Lee reflect on their experiences as they traveled to conduct academic research.</p>
+    </div>
+    <div class="Card__footer">
+      <div class="Card__meta underline"><a href='https://www.nyit.edu/news/articles/category/type/features/' rel='category tag'>Features</a></div>
+      <div class="Card__date">
+        07.08.26      </div>
+    </div>
+  </div>
+</div>
+          </div>
+                  <div data-flexscroll-item class="flush">
+            
+<div class="
+  Card
+    ">
+      <div class="Card__image">
+      <img loading="lazy" decoding="async" width="900" height="600" src="https://www.nyit.edu/wp-content/uploads/2026/04/news-alumni-profile-ricardo-cabret-feature-900x600.jpg" class="attachment-3:2-900 size-3:2-900 wp-post-image" alt="Palm trees on a screen" srcset="https://www.nyit.edu/wp-content/uploads/2026/04/news-alumni-profile-ricardo-cabret-feature-900x600.jpg 900w, https://www.nyit.edu/wp-content/uploads/2026/04/news-alumni-profile-ricardo-cabret-feature-300x200.jpg 300w, https://www.nyit.edu/wp-content/uploads/2026/04/news-alumni-profile-ricardo-cabret-feature-1024x683.jpg 1024w, https://www.nyit.edu/wp-content/uploads/2026/04/news-alumni-profile-ricardo-cabret-feature-768x512.jpg 768w, https://www.nyit.edu/wp-content/uploads/2026/04/news-alumni-profile-ricardo-cabret-feature-1536x1024.jpg 1536w, https://www.nyit.edu/wp-content/uploads/2026/04/news-alumni-profile-ricardo-cabret-feature-2048x1365.jpg 2048w, https://www.nyit.edu/wp-content/uploads/2026/04/news-alumni-profile-ricardo-cabret-feature-600x400.jpg 600w" sizes="auto, (max-width: 900px) 100vw, 900px" />    </div>
+    <div class="Card__main">
+    <div class="Card__content flush">
+      <h3><a href="https://www.nyit.edu/news/articles/when-numbers-become-shapes/">When Numbers Become Shapes</a></h3>
+        <p>Ricardo Cabret (M.S. ’14), who studied computer science in the College of Engineering and Computing Sciences, transforms digital code into physical art.</p>
+    </div>
+    <div class="Card__footer">
+      <div class="Card__meta underline"><a href='https://www.nyit.edu/news/articles/category/type/profiles/' rel='category tag'>Profiles</a></div>
+      <div class="Card__date">
+        05.12.26      </div>
+    </div>
+  </div>
+</div>
+          </div>
+                  <div data-flexscroll-item class="flush">
+            
+<div class="
+  Card
+    ">
+      <div class="Card__image">
+      <img loading="lazy" decoding="async" width="900" height="600" src="https://www.nyit.edu/wp-content/uploads/2026/05/image-for-create-2026-competition-feature.jpg" class="attachment-3:2-900 size-3:2-900 wp-post-image" alt="Students holding monetary award" srcset="https://www.nyit.edu/wp-content/uploads/2026/05/image-for-create-2026-competition-feature.jpg 900w, https://www.nyit.edu/wp-content/uploads/2026/05/image-for-create-2026-competition-feature-300x200.jpg 300w, https://www.nyit.edu/wp-content/uploads/2026/05/image-for-create-2026-competition-feature-768x512.jpg 768w, https://www.nyit.edu/wp-content/uploads/2026/05/image-for-create-2026-competition-feature-600x400.jpg 600w" sizes="auto, (max-width: 900px) 100vw, 900px" />    </div>
+    <div class="Card__main">
+    <div class="Card__content flush">
+      <h3><a href="https://www.nyit.edu/news/articles/engineering-students-create-winning-invention/">Engineering Students &#8216;CREATE&#8217; Winning Invention</a></h3>
+        <p>College of Engineering and Computing Sciences students scored a third-place win for their invention designed to help employees with disabilities succeed in their everyday work tasks.</p>
+    </div>
+    <div class="Card__footer">
+      <div class="Card__meta underline"><a href='https://www.nyit.edu/news/articles/category/schools-colleges/college-of-engineering-computing-sciences/' rel='category tag'>College of Engineering &amp; Computing Sciences</a></div>
+      <div class="Card__date">
+        05.11.26      </div>
+    </div>
+  </div>
+</div>
+          </div>
+              </div>
+      <div data-flexscroll-nav>
+        <button data-flexscroll-prev aria-label="Previous" tabindex="0"></button>
+        <button data-flexscroll-next aria-label="Next" tabindex="0"></button>
+        <div data-flexscroll-counter></div>
+      </div>
+    </div>
+
+  
+
+
+</div>
+
+
+
+<div class="Section__footer">
+
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/news/articles/?category_name=college-of-engineering-computing-sciences">All School News</a></div>
+
+</div>
+
+</div>
+
+
+
+<div class="Section">
+
+<div class="Section__header Common flush">
+
+<h2 class="wp-block-heading" id="h-accreditation-nbsp">Accreditation&nbsp;</h2>
+
+</div>
+
+
+<div class="Section__main flush">
+
+<div class="Accordion">
+
+<div class="Accordion__item">
+
+<h3 class="Accordion__heading" >
+  <button class="Accordion__toggle" aria-expanded="false">
+    
+
+<span class="wp-block-custom-text">ABET Accreditation</span>
+
+
+  </button>
+</h3>
+
+
+
+<div class="Accordion__collapse">
+  <div class="Accordion__content">
+    <div class="Accordion__interior flush">
+
+<div class="Common  flush">
+
+<p>Our bachelor’s program in Computer Science on our Long Island and New York City campuses is accredited by the <a href="http://www.abet.org" target="_blank" rel="noreferrer noopener">Computing Accreditation Commission (CAC) of ABET</a>.&nbsp;</p>
+
+</div>
+
+</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="CTA theme-navy">
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1200" height="500" src="https://www.nyit.edu/wp-content/uploads/engineering-cta.jpg" alt="An abstract view of a computer screen in a computer lab." class="wp-image-5242" style="aspect-ratio:16/9" srcset="https://www.nyit.edu/wp-content/uploads/engineering-cta.jpg 1200w, https://www.nyit.edu/wp-content/uploads/engineering-cta-300x125.jpg 300w, https://www.nyit.edu/wp-content/uploads/engineering-cta-1024x427.jpg 1024w, https://www.nyit.edu/wp-content/uploads/engineering-cta-768x320.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
+
+
+
+<div class="Common  flush">
+
+<h2 class="wp-block-heading" id="h-keep-exploring">Keep <span class="script-font">Exploring</span></h2>
+
+
+
+<p>Through programs in computer science, information technology, cybersecurity, and more, New York Tech will prepare you for a flexible and in-demand career in fields from marketing to healthcare to business.</p>
+
+</div>
+
+
+
+<div class="wp-block-buttons">
+
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://apply.nyit.edu/register/inquire">Request Information</a></div>
+
+
+
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/visit">Plan Your Visit</a></div>
+
+
+
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/apply">Apply Today</a></div>
+
+</div>
+
+</div>
+
+      </main>
+    
+<footer class="Footer theme-navy">
+  <div class="Footer__brand">
+    <a href="https://www.nyit.edu" class="Footer__logo" aria-label="New York Tech">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 468 171">
+  <path fill="#F2A900" d="M468 0H0v37h468V0Z"/>
+  <path d="M140.705 103.472V75.244c0-4.101 2.97-7.017 7.003-7.017h8.951c4.087 0 7.057 2.916 7.057 7.016v28.229c0 4.1-2.97 7.016-7.057 7.016h-8.951c-4.046 0-7.003-2.916-7.003-7.016Zm13.665 1.13c1.267 0 2.043-.762 2.043-2.043V76.224c0-1.28-.776-2.057-2.043-2.057h-4.36c-1.226 0-2.003.777-2.003 2.057v26.335c0 1.281.777 2.043 2.003 2.043h4.36ZM17.043 85.638V68.541h6.594v41.688h-7.003L6.553 82.669h-.15L6.812 92v18.228H.204V68.541h7.017l10.081 27.397h.15l-.409-10.3Zm21.607.26V74.425h12.29V68.54H31.334v41.688H50.94v-5.94H38.65V91.892h11.158v-5.995H38.65ZM95.802 68.54l-6.09 41.688h-9.21L77.328 87.6l-.572-3.651h-.15l-.504 3.651-3.175 22.629h-9.223l-6.13-41.688h7.316l3.882 30.83h.11l4.14-30.83h7.371l4.196 30.83h.164l3.774-30.83h7.275Zm14.958 0 9.373 28.623v13.065h7.357V97.164l9.428-28.623h-7.629l-5.368 19.304h-.205l-5.326-19.304h-7.63Zm83.173 41.702V96.319c0-3.228-1.594-5.327-4.455-6.103 2.67-.967 4.455-3.379 4.4-6.458l-.041-8.188c-.054-4.1-2.97-7.016-7.111-7.016h-15.763v41.689h7.316V93.036h6.349c1.28 0 1.989.763 1.989 1.989v15.218h7.316Zm-15.667-23.147V74.453h6.253c1.267 0 2.043.763 2.043 1.99v8.664c0 1.226-.763 1.99-2.043 1.99h-6.253Zm39.372 23.133-9.005-19.618v19.618h-7.371V68.541h7.371V87.6l9.005-19.06h7.929L215.39 89.03l10.286 21.198h-8.038Zm33.133 0h-7.316V68.541h7.316v41.688Zm31.13-41.688v41.688h-7.016l-10.082-27.56h-.15l.409 9.332v18.228h-6.594V68.541h7.003l10.081 27.397h.15l-.395-10.3V68.541h6.594Zm7.261 27.506v7.438c0 4.101 2.957 7.016 7.003 7.016h8.951c4.1 0 7.016-2.915 7.016-7.016v-8.406c0-4.4-1.485-6.852-5.627-7.888l-8.392-2.356c-1.226-.355-1.635-.968-1.635-2.153v-6.458c0-1.28.722-2.057 1.948-2.057h4.401c1.267 0 1.989.777 1.989 2.057v6.513h7.316v-7.48c0-4.1-2.929-7.016-7.016-7.016h-8.951c-4.033 0-7.003 2.915-7.003 7.016v7.983c0 3.788 1.73 6.717 4.85 7.534l9.319 2.616c1.076.368 1.485 1.022 1.485 2.153v7.016c0 1.281-.722 2.043-1.989 2.043h-4.401c-1.239 0-1.948-.762-1.948-2.043v-6.512h-7.316Zm50.871-21.621h-7.629v35.803h-7.316V74.426h-7.575v-5.885h22.52v5.885Zm13.923 35.803h-7.37V68.541h7.37v41.688Zm29.06-35.803H375.4v35.803h-7.33V74.426h-7.561v-5.885h22.507v5.885Zm6.403-5.885v34.931h.013c0 4.1 3.025 7.016 7.057 7.016h8.91c4.142 0 7.057-2.916 7.057-7.016v-34.93h-7.316v34.072c0 1.227-.708 1.989-1.989 1.989h-4.359c-1.281 0-2.003-.762-2.003-1.989V68.541h-7.37Zm51.988 5.885h-7.63v35.803h-7.316V74.426h-7.574v-5.885h22.52v5.885Zm13.923 11.471v-11.47h12.288v-5.885h-19.604v41.688h19.604v-5.94H455.33V91.892h11.158v-5.995H455.33ZM0 163.511v-28.078c0-4.455 2.711-7.125 7.166-7.125h5.477c4.51 0 7.111 2.656 7.111 7.125v28.078c0 4.455-2.615 7.125-7.111 7.125H7.166c-4.455 0-7.166-2.67-7.166-7.125Zm11.566 3.529c2.616 0 3.842-1.281 3.842-3.992v-27.152c0-2.711-1.226-3.992-3.841-3.992H8.241c-2.615 0-3.882 1.281-3.882 3.992v27.152c0 2.711 1.28 3.992 3.882 3.992h3.324Zm18.529-19.618v-15.218H42.37v-3.583H25.735v41.702h4.36v-19.264h11.457v-3.637H30.095Zm49.999-12.861h-7.67v35.762h-7.317v-35.762h-7.574v-5.94h22.56v5.94Zm14.127 11.43v-11.43h12.275v-5.94h-19.59v41.702h19.59v-5.94H94.221v-12.397h11.158v-5.995H94.221Zm18.637 17.575v-28.174c0-4.101 3.025-7.071 7.057-7.071h8.91c4.101 0 7.112 2.97 7.112 7.071v8.556h-7.371v-7.63c0-1.28-.722-2.043-2.043-2.043h-4.36c-1.226 0-1.989.763-1.989 2.043v26.335c0 1.28.763 2.043 1.989 2.043h4.36c1.321 0 2.043-.763 2.043-2.043v-8.76h7.371v9.686c0 4.101-3.011 7.071-7.112 7.071h-8.91c-4.046 0-7.057-2.97-7.057-7.071v-.013Zm53.296 6.757v-41.702h-7.329v18.392h-8.284v-18.392h-7.315v41.702h7.315v-17.316h8.284v17.316h7.329Zm31.321-41.702v41.702h-7.016l-10.068-27.561h-.164l.409 9.373v18.188h-6.594v-41.702h7.003l10.095 27.411h.15l-.409-10.245v-17.166h6.594Zm7.439 6.771v28.174c0 4.1 3.024 7.07 7.057 7.07h8.909c4.101 0 7.112-2.97 7.112-7.07v-28.174c0-4.101-3.024-7.071-7.112-7.071h-8.909c-4.033 0-7.057 2.97-7.057 7.071Zm15.708 27.261c0 1.28-.763 2.043-2.044 2.043h-4.346c-1.24 0-2.003-.763-2.003-2.043v-26.335c0-1.28.763-2.043 2.003-2.043h4.346c1.281 0 2.044.763 2.044 2.043v26.335Zm32.764 1.73v5.94h-17.969v-41.702h7.316v35.762h10.653Zm5.382-28.991v28.174c0 4.1 2.97 7.07 7.057 7.07h8.91c4.087 0 7.111-2.97 7.111-7.07v-28.174c0-4.101-3.024-7.071-7.111-7.071h-8.91c-4.087 0-7.057 2.97-7.057 7.071Zm15.708 27.261c0 1.28-.777 2.043-2.044 2.043h-4.359c-1.226 0-1.989-.763-1.989-2.043v-26.335c0-1.28.763-2.043 1.989-2.043h4.359c1.267 0 2.044.763 2.044 2.043v26.335Zm30.054-20.15v-6.198c0-1.281-.777-2.044-2.044-2.044h-4.359c-1.227 0-1.99.763-1.99 2.044v26.334c0 1.281.763 2.044 1.99 2.044h4.659c1.226 0 1.989-.763 1.989-2.044v-9.073h-5.054v-5.94h12.125v22.697h-3.788l-.763-3.079c-.776 2.153-2.411 3.379-5.422 3.379h-6.035c-4.046 0-7.016-2.97-7.016-7.071v-28.174c0-4.1 2.97-7.07 7.016-7.07h8.951c4.1 0 7.057 2.97 7.057 7.07v7.125h-7.316Zm12.493-13.882 9.414 28.637v13.065h7.315v-13.065l9.469-28.637h-7.629l-5.423 19.318h-.149l-5.382-19.318h-7.615Z"/>
+</svg>
+    </a>
+  </div>
+  <div class="Footer__nav">
+          <div class="Footer__group flush underline">
+        <h2 class="Footer__heading">Connect</h2>
+        <ul id="menu-connect" class="menu"><li id="menu-item-2679" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2679"><a href="https://www.nyit.edu/news/">News</a></li>
+<li id="menu-item-16577" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16577"><a href="/about/our-campuses">Locations</a></li>
+<li id="menu-item-16603" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16603"><a href="https://events.nyit.edu/week">Events</a></li>
+<li id="menu-item-16604" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16604"><a href="https://www.nyit.edu/scea/follow_nyit">Social Media</a></li>
+<li id="menu-item-16605" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16605"><a href="https://www.nyit.edu/about/contact">Contact</a></li>
+<li id="menu-item-16583" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16583"><a href="https://apps.nyit.edu/directory/">Directory</a></li>
+</ul>      </div>
+          <div class="Footer__group flush underline">
+        <h2 class="Footer__heading">Academics</h2>
+        <ul id="menu-academics" class="menu"><li id="menu-item-16587" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16587"><a href="/academics/architecture-and-design">Architecture &amp; Design</a></li>
+<li id="menu-item-16588" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16588"><a href="/academics/arts-and-sciences">Arts &amp; Sciences</a></li>
+<li id="menu-item-16589" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16589"><a href="/academics/engineering-and-computing-sciences">Engineering &amp; Computing Sciences</a></li>
+<li id="menu-item-16591" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16591"><a href="/academics/health-professions">Health Professions</a></li>
+<li id="menu-item-16592" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16592"><a href="/academics/management">Management</a></li>
+<li id="menu-item-16594" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16594"><a href="/medicine/college-of-osteopathic-medicine">Osteopathic Medicine</a></li>
+</ul>      </div>
+          <div class="Footer__group flush underline">
+        <h2 class="Footer__heading">Resources</h2>
+        <ul id="menu-resources" class="menu"><li id="menu-item-16596" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16596"><a href="/student-life/campus-safety">Emergency Info</a></li>
+<li id="menu-item-16597" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16597"><a href="https://my.nyit.edu/">my.NYIT Portal</a></li>
+<li id="menu-item-16598" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16598"><a href="/students/classes-schedules-and-transcripts/academic-calendar">Academic Calendar</a></li>
+<li id="menu-item-16599" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16599"><a href="https://www.nyit.edu/library">Libraries</a></li>
+<li id="menu-item-21052" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21052"><a href="https://www.nyit.edu/student_resources/new_york_tech_bookstore">Bookstore</a></li>
+<li id="menu-item-16600" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16600"><a href="https://www.nyit.edu/human_resources/careers">Jobs</a></li>
+<li id="menu-item-16601" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16601"><a href="https://alumni.nyit.edu/donate">Donate</a></li>
+</ul>      </div>
+      </div>
+  <div class="Footer__social">
+    <ul>
+              <li>
+          <a href="https://www.facebook.com/mynyit" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="64 64.36 384 381.64">
+  <path d="M331 312h-45v134a192 192 0 1 0-60 0V312h-49v-56h49v-45q4-89 116-68v47h-26q-29 1-30 30v36h53.5"/>
+</svg>
+          </a>
+        </li>
+              <li>
+          <a href="https://www.instagram.com/mynyit/" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <path d="M12 0C8.741 0 8.333.014 7.053.072c-1.277.06-2.15.262-2.912.559a5.882 5.882 0 0 0-2.125 1.383A5.882 5.882 0 0 0 .63 4.14c-.297.763-.5 1.635-.559 2.912C.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.058 1.277.262 2.15.559 2.912.307.79.716 1.46 1.383 2.127A5.882 5.882 0 0 0 4.14 23.37c.764.297 1.635.5 2.912.559C8.332 23.986 8.74 24 12 24s3.667-.014 4.947-.072c1.277-.058 2.15-.262 2.912-.559a5.883 5.883 0 0 0 2.127-1.383 5.883 5.883 0 0 0 1.383-2.127c.297-.763.5-1.635.559-2.912.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.058-1.277-.262-2.15-.559-2.912a5.882 5.882 0 0 0-1.383-2.127A5.883 5.883 0 0 0 19.86.63c-.763-.297-1.635-.5-2.912-.559C15.667.014 15.26 0 12 0zm0 2.162c3.204 0 3.585.012 4.85.07 1.17.054 1.803.249 2.226.413.56.218.961.478 1.381.898.42.42.68.82.899 1.38.164.424.359 1.057.412 2.227.058 1.265.07 1.646.07 4.85s-.012 3.585-.07 4.85c-.053 1.17-.248 1.803-.412 2.226-.218.56-.479.961-.899 1.381s-.82.68-1.38.899c-.424.164-1.057.359-2.227.412-1.265.058-1.646.07-4.85.07s-3.585-.012-4.85-.07c-1.17-.053-1.803-.248-2.226-.412a3.718 3.718 0 0 1-1.381-.899c-.42-.42-.68-.82-.899-1.38-.164-.424-.359-1.057-.412-2.227-.058-1.265-.07-1.646-.07-4.85s.012-3.585.07-4.85c.053-1.17.248-1.803.412-2.226a3.73 3.73 0 0 1 .899-1.381c.42-.42.82-.68 1.38-.898.424-.164 1.057-.36 2.227-.413 1.265-.058 1.646-.07 4.85-.07zm6.613 1.285a1.714 1.714 0 0 0-1.47 1.696 1.714 1.714 0 0 0 3.427 0 1.714 1.714 0 0 0-1.957-1.696zM12.43 5.143a6.429 6.429 0 1 0 0 12.857 6.429 6.429 0 0 0 0-12.857zm0 2.256a4.173 4.173 0 0 1 0 8.345 4.173 4.173 0 1 1 0-8.345z"/>
+</svg>
+          </a>
+        </li>
+              <li>
+          <a href="https://www.tiktok.com/@newyorktech" aria-label="TikTok">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 449.45 515.38">
+  <path d="M382.31 103.3c-27.76-18.1-47.79-47.07-54.04-80.82-1.35-7.29-2.1-14.8-2.1-22.48h-88.6l-.15 355.09c-1.48 39.77-34.21 71.68-74.33 71.68-12.47 0-24.21-3.11-34.55-8.56-23.71-12.47-39.94-37.32-39.94-65.91 0-41.07 33.42-74.49 74.48-74.49 7.67 0 15.02 1.27 21.97 3.44V190.8c-7.2-.99-14.51-1.59-21.97-1.59C73.16 189.21 0 262.36 0 352.3c0 55.17 27.56 104 69.63 133.52 26.48 18.61 58.71 29.56 93.46 29.56 89.93 0 163.08-73.16 163.08-163.08V172.23c34.75 24.94 77.33 39.64 123.28 39.64v-88.61c-24.75 0-47.8-7.35-67.14-19.96z"/>
+</svg>
+          </a>
+        </li>
+              <li>
+          <a href="https://twitter.com/nyit" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="12.91 0 1174.2 1200">
+  <path d="M711.71 508.12 1148.83 0h-103.58L665.7 441.19 362.55 0H12.91l458.42 667.16L12.91 1200H116.5l400.82-465.91L837.47 1200h349.64L711.69 508.12zM569.83 673.04l-46.447-66.434-369.56-528.62h159.11l298.24 426.62 46.447 66.434 387.68 554.54H886.19l-316.36-452.5z"/>
+</svg>
+          </a>
+        </li>
+              <li>
+          <a href="https://www.youtube.com/user/nyitview" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 4 28 20">
+  <path d="M27.415 7.123a3.543 3.543 0 0 0-2.475-2.526C22.756 4 14 4 14 4s-8.756 0-10.94.597A3.543 3.543 0 0 0 .585 7.123C0 9.351 0 14 0 14s0 4.65.585 6.877a3.543 3.543 0 0 0 2.475 2.526C5.244 24 14 24 14 24s8.756 0 10.94-.597a3.543 3.543 0 0 0 2.475-2.526C28 18.649 28 14 28 14s0-4.649-.585-6.877ZM11.2 18.286V9.714L18.474 14Z"/>
+</svg>
+          </a>
+        </li>
+              <li>
+          <a href="https://www.linkedin.com/edu/school?id=18987" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.01 39.67 1791.96 1712.7">
+  <path d="M407.17 596.17v1156.2h-385V596.17zm24.5-357q1.167 85.167-58.917 142.33-60.083 57.167-158.08 57.167h-2.333q-95.667 0-154-57.167T.007 239.17q0-86.333 60.083-142.92 60.083-56.583 156.92-56.583T372.18 96.25q58.333 56.583 59.5 142.92zm1360.3 850.5v662.67h-383.83v-618.33q0-122.5-47.25-191.92-47.25-69.417-147.58-69.417-73.5 0-123.08 40.25t-74.083 99.75q-12.833 35-12.833 94.5v645.17h-383.83q2.333-465.5 2.333-754.83 0-289.33-1.166-345.33l-1.167-56h383.83v168h-2.333q23.333-37.333 47.833-65.333t65.917-60.667 101.5-50.75 133.58-18.083q199.5 0 320.83 132.42 121.33 132.42 121.33 387.92z"/>
+</svg>
+          </a>
+        </li>
+          </ul>
+  </div>
+  <div class="Footer__legal">
+    <div class="Footer__copyright">&copy; 2026 New York Tech</div>
+    <div class="Footer__links underline underline-invert">
+      <ul id="menu-footer-legal" class="menu"><li id="menu-item-69" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69"><a href="https://www.nyit.edu/about/statement_on_non_discrimination">Statement of Non-Discrimination</a></li>
+<li id="menu-item-70" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70"><a href="https://www.nyit.edu/policies/privacy_statement">Privacy Statement</a></li>
+<li id="menu-item-71" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-71"><a href="https://www.nyit.edu/about/terms_and_conditions">Terms &amp; Conditions</a></li>
+<li id="menu-item-72" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-72"><a href="https://www.nyit.edu/about/consumer_information">Consumer Information</a></li>
+<li id="menu-item-20076" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20076"><a href="https://www.nyit.edu/policies">Policies</a></li>
+</ul>    </div>
+  </div>
+</footer>
+    <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/nyit/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.tiktok-embed').forEach(function(bq){
+      var title = bq.getAttribute('data-title') || bq.getAttribute('data-tt-title') || '';
+      var wrapper = bq.closest('.tiktok-embed-wrapper') || bq.parentElement;
+      setTimeout(function(){
+        var iframe = wrapper.querySelector('iframe');
+        if(iframe){
+          iframe.setAttribute('title', title);
+          iframe.setAttribute('aria-label', title);
+        }
+      }, 600);
+    });
+  });
+  </script>
+    
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T2ZZ2F9W');</script>
+<!-- End Google Tag Manager -->
+  
+<script type="text/javascript" src="https://www.nyit.edu/wp-content/themes/nyit/public/dist/script.js?ver=26.04.20.01" id="theme-script-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.nyit.edu/wp-includes/js/wp-emoji-release.min.js?ver=6.9.11"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://www.nyit.edu/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+
+		<!-- Cookie Compliance for WordPress (formerly Compliance by Hu-manity.co) plugin v3.1.17 https://cookie-compliance.co/ -->
+		<div id="cookie-notice" role="dialog" class="cookie-notice-hidden cookie-revoke-hidden cn-position-bottom" aria-label="Cookie Compliance" style="background-color: rgba(10,10,10,1);"><div class="cookie-notice-container" style="color: #fbfbfb"><span id="cn-notice-text" class="cn-text-container">By continuing to use the website, you consent to analytics tracking per New York Tech&apos;s <a href="https://apps.nyit.edu/policies/privacy_statement" target="_blank" id="cn-more-info" class="cn-privacy-policy-link cn-link" data-link-url="https://apps.nyit.edu/policies/privacy_statement" data-link-target="_blank">Privacy Statement</a></span><span id="cn-notice-buttons" class="cn-buttons-container"><button id="cn-accept-cookie" data-cookie-set="accept" class="cn-set-cookie cn-button" aria-label="Accept Cookies" style="background-color: #0060c7">Accept Cookies</button></span><button type="button" id="cn-close-notice" data-cookie-set="accept" class="cn-close-icon" aria-label="No"></button></div>
+			
+		</div>
+		<!-- / Cookie Compliance for WordPress plugin -->  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-fa0742831156875b2b5","applicationID":"1083057993","transactionName":"YVVQZUtQXEFRVEBdDVgfc1JNWF1cH0RdWgVDXFND","queueTime":0,"applicationTime":550,"atts":"TRJTEwNKT08=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

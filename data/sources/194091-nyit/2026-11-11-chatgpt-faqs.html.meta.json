@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.nyit.edu/?p=31019",
+ "final_url": "https://www.nyit.edu/students/classes-schedules-and-transcripts/forms/chatgpt-faq/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:27:49-05:00",
+ "sha256": "6af4c5a73276800b56a49c8d2ec40c6b5bd2e17cb7402395cdae72f69a396919",
+ "bytes": 107252
+}

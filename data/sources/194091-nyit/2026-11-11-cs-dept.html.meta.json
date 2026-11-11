@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.nyit.edu/academics/engineering-and-computing-sciences/computer-science/",
+ "final_url": "https://www.nyit.edu/academics/engineering-and-computing-sciences/computer-science/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:29:03-05:00",
+ "sha256": "a1fbfc5682a423c7044ac394dbda5c7e6d46cf25994d65f910eff51bcbbe1058",
+ "bytes": 135451
+}

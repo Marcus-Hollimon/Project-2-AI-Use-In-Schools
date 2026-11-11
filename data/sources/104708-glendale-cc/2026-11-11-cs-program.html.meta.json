@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.gccaz.edu/degrees-certificates/computer-science",
+ "final_url": "https://www.gccaz.edu/degrees-certificates/computer-science",
+ "http_status": 403,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:33:32-05:00",
+ "sha256": "db6dc365a3c71aba769e6ff5a13b61860a749612f4b1122b524742eaf92f6b71",
+ "bytes": 6080
+}

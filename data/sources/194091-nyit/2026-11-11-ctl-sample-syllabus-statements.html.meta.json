@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://site.nyit.edu/ctl/blog/to_permit_or_to_prohibit_sample_syllabus_statements_for_generative_ai",
+ "final_url": "https://blogs.nyit.edu/cfe-weekly-teaching-notes/to_permit_or_to_prohibit_sample_syllabus_statements_for_generative_ai",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:27:53-05:00",
+ "sha256": "e6ed86d878fef270f30e3aa2197808df12b268800ec473de3ea40cee3a514a64",
+ "bytes": 63037
+}

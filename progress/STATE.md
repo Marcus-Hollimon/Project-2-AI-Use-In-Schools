@@ -2,14 +2,23 @@
 
 Current phase: 5 More schools (15 to 36; spec `specs/phase-5-more-schools.md`, approved by Marcus 15:15:40 with one extra Ohio school, so 21 new, 36 in all). Evaluation moves to Phase 6. Phase 4 Validation is done.
 
-Last updated: 2026-11-11T15:24:14-05:00 by Claude (session a9056776), 2 of 21 schools coded, /compact prepared.
+Last updated: 2026-11-11T15:36:21-05:00 by Claude (session a9056776), 5 of 21 schools coded, /compact prepared.
 
 ## FIRST, right after the /compact
 1. Take a usage reading marked "after /compact" (full 7-column row in `progress/usage.md`, phase 5).
-2. Continue coding with school 3, NYIT (order below). Iowa State and Stanford are done and pass every check
-   (rows in `progress/pilot-cost.md`): about 1 five-hour point and 25k to 30k context per school.
-3. Prepare the next /compact after about 4 to 5 more schools (context near 200k).
-- Expected failures while coding, not bugs: `check_study.py` with no `--only` shows 17 PASS and 19 FAIL ("school
+2. Continue coding with school 6, Arizona State 104151 (order below). Done and passing: Iowa State, Stanford,
+   NYIT, West Virginia Wesleyan, Glendale CC (rows in `progress/pilot-cost.md`): about 2 to 3 five-hour points
+   and 30k to 35k context per school. Cost rows: scratchpad `costrow.py "<School unitid>" <start> <5h> <weekly>
+   <context> <searches> "<pages>"` (takes the time from `date -Iseconds` itself).
+3. Prepare the next /compact after about 3 to 4 more schools (context near 190k).
+4. Judgment calls to list for Marcus at the end: West Virginia Wesleyan univ_stance restrict (the 2025-26
+   handbook and May 2026 tech FAQ give a no-use default; the July 2026 AI policy leaves it to instructors);
+   Glendale CC coded from Maricopa district regulation 2.3.11 (domain_reason), the first value saved as
+   browser-pane text (`--rendered`, section 2.3.11 only, with fetch_reason; S3 passes).
+- Maricopa sites (gccaz.edu, maricopa.edu) answer curl with 403: read them in the browser pane, as done.
+- Small colleges: run the `allowed_domains` searches right after the fixed four, and ALWAYS run the two
+  second searches with their exact query text (15:35: I almost logged them as run when they were not).
+- Expected failures while coding, not bugs: `check_study.py` with no `--only` shows one PASS per coded school and a FAIL ("school
   not coded yet"); `build.py` exits 1 on C5 only, because the newest web run failed the Ohio-count test (6 Ohio in
   sample.csv, 5 coded). Both clear once all 21 are coded and a web run passes. Check every other build line is PASS.
 - Helpers in the scratchpad (not in the repo; folder

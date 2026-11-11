@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.gccaz.edu/academics/syllabus-elements",
+ "final_url": "https://www.gccaz.edu/academics/syllabus-elements",
+ "http_status": 403,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:33:30-05:00",
+ "sha256": "9b0288d0e5a2efdb9e248fa4125bae7972f0ade6ace452dd3c755af380759fe9",
+ "bytes": 5730
+}

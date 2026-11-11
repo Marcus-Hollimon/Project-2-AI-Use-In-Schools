@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.gccaz.edu/sites/default/files/documents/pb-fft-file/2024-2024-academic-catalogfinal13_0.pdf",
+ "final_url": "https://www.gccaz.edu/sites/default/files/documents/pb-fft-file/2024-2024-academic-catalogfinal13_0.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T15:34:00-05:00",
+ "sha256": "47231afee4b6bace7d05b137e7ba74ee28c05e94bdd2458c22a54cf9ffc82820",
+ "bytes": 5398238
+}

@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://site.nyit.edu/semester-map/computer-science-bs",
+ "final_url": "https://catalog.nyit.edu/semester-map/computer-science-bs",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:29:04-05:00",
+ "sha256": "093b5a40bc3074a2b27ffc41cf8cdbc05bb450d9fca2fa84e2a8be5df10ae554",
+ "bytes": 129507
+}

@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.wvwc.edu/wp-content/uploads/2025/08/Student-Handbook-Fall-2025.pdf",
+ "final_url": "https://www.wvwc.edu/wp-content/uploads/2025/08/Student-Handbook-Fall-2025.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T15:30:48-05:00",
+ "sha256": "9bd46fac2118c57a1c142f057bd41c21368db458a528e4fb7eb072b3b6d33053",
+ "bytes": 1139862
+}

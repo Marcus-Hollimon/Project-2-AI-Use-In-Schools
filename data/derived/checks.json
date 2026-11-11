@@ -373,6 +373,39 @@
    "responseTime": "2026-11-11T20:06:06.488Z",
    "nearestDifference": 0,
    "pass": true
+  },
+  {
+   "reading": "2026-11-11T20:24:14Z",
+   "app": 211489,
+   "between": [
+    211442,
+    212336
+   ],
+   "responseTime": "2026-11-11T20:23:39.665Z",
+   "nearestDifference": 47,
+   "pass": true
+  },
+  {
+   "reading": "2026-11-11T20:27:12Z",
+   "app": 96807,
+   "between": [
+    84974,
+    96807
+   ],
+   "responseTime": "2026-11-11T20:27:01.849Z",
+   "nearestDifference": 0,
+   "pass": true
+  },
+  {
+   "reading": "2026-11-11T20:36:21Z",
+   "app": 190298,
+   "between": [
+    190250,
+    191092
+   ],
+   "responseTime": "2026-11-11T20:35:58.092Z",
+   "nearestDifference": 48,
+   "pass": true
   }
  ],
  "C2_completeness": [
@@ -391,8 +424,8 @@
   {
    "session": "a9056776-4951-4636-a9ad-acb1dbccb955",
    "subagent": false,
-   "apiRequests": 671,
-   "uniqueResponses": 669,
+   "apiRequests": 731,
+   "uniqueResponses": 729,
    "unansweredRequests": [
     "2026-11-11T16:53:13.167Z",
     "2026-11-11T17:22:15.570Z"
@@ -472,6 +505,12 @@
    "time": "2026-11-11T20:05:24.342Z",
    "preTokens": 161915,
    "computed": 161915,
+   "pass": true
+  },
+  {
+   "time": "2026-11-11T20:26:44.062Z",
+   "preTokens": 218916,
+   "computed": 218916,
    "pass": true
   }
  ],
@@ -1030,19 +1069,19 @@
   "rule": "shell commands Claude ran whose program is uv, python, pytest, npx, npm or vitest and that name pytest, vitest, npm test or a recorder; recorded = through record_tests.py or test:record"
  },
  "C4_inflation": {
-  "usageRows": 2127,
-  "uniqueResponses": 827,
+  "usageRows": 2269,
+  "uniqueResponses": 887,
   "naive": {
-   "input": 4342,
-   "cacheWrite": 7079740,
-   "cacheRead": 318134091,
-   "output": 2846021
+   "input": 4626,
+   "cacheWrite": 7473003,
+   "cacheRead": 339166731,
+   "output": 2944474
   },
   "deduplicated": {
-   "input": 1686,
-   "cacheWrite": 2185133,
-   "cacheRead": 123749808,
-   "output": 815001
+   "input": 1806,
+   "cacheWrite": 2329006,
+   "cacheRead": 132893236,
+   "output": 856962
   }
  },
  "privacy": [

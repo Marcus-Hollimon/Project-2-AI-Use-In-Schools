@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://mcli.maricopa.edu/resources/artificial-intelligence/syllabus-statements-regarding-generative-artificial-intelligence",
+ "final_url": "https://mcli.maricopa.edu/resources/artificial-intelligence/syllabus-statements-regarding-generative-artificial-intelligence",
+ "http_status": 403,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:33:31-05:00",
+ "sha256": "6571aebb54de5bb3b726b1812dc52d2cda51bd71d8baaef39a7fd8fb75a031d5",
+ "bytes": 6054
+}

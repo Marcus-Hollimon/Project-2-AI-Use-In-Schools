@@ -1,0 +1,66 @@
+Technology at WV Wesleyan
+
+Communications
+Q: How does the College communicate with students?
+A: Gmail & 2 Factor Authorization for security. From the web, log in & click on “Enroll” when prompted. Include your cell phone number in the phone section. Also, download the Gmail app, or add your email account to your phone.
+EMO’s are important emails from the College, and the Bobcat Buzz is a daily reminder of campus events. READ THESE.
+
+Microsoft Office
+Q: What programs will I need?
+A: WVWC provides Microsoft Office licensing to install on 5 devices. Go to portal.office.com and sign in with your WVWC account. Look for the installation link (top right). WVWC does not recommend OneDrive, Microsoft provides 5GB of storage.
+***We recommend the AI Designer in Office.com for slides and Rehearse with Coach for presentations.
+
+Google Apps
+
+Digital Notebook
+
+Q: What tools/apps do you recommend?
+A: Google Calendar and Google Keep (todo list software) are critical for time management. Download the apps to sync with your browser.
+We recommend Google Chrome for your main web browser.
+
+Q: What tools can I use for note taking?
+A: Many students use Google Docs for notes because they sync to the cloud. Some use Microsoft Word, so it’s a matter of preference.
+If you want digital organization, use the online Notebook at portal.office.com called “OneNote.” There are premade templates for lecture notes, and you can also upload slides and PDF documents.
+
+Translation Tools
+Q: What if I need a translation tool as I’m learning the language?
+A: If you upload a Word or PDF document to Google, choose Tools>Translate Document.
+
+Speech to Text
+Q: If I have an injury and can’t type, what tool could I use?
+A: From docs.google.com, choose Tool>voice typing.
+
+Technology at WV Wesleyan
+
+Course Schedule
+Q: Where will I find my course schedule. grades, and payment information?
+A: WVWC uses a website called Self-Service for schedules and transactions. Your username should be all lowercase characters. Log in to selfservice.wvwc.edu
+***When logged in, from the top right, choose “User Profile” and confirm your cell phone number there as well as under “Emergency Information.”
+
+Course Access
+Q: Where will I find my courses and assignments?
+A: You’ll use Blackboard for your courses: make sure to use our site at blackboard.wvwc.edu
+Download the Blackboard app and set up notifications for due dates. From the Blackboard website, go to the “Activity” link from the left menu, then the settings cog to set up.
+
+Campus Events
+Q: Is there an app for campus events?
+A: Yes, download the CORQ app and sign in using your @WVWC account. You’ll need this app for event attendance for credit.
+You can also see campus events from our Bobcat Connect website at
+bobcatconnect.wvwc.edu
+
+Printing
+Q: Do I need a wireless printer?
+A: Personal printers are not added to the WVWC network.
+WVWC provides a 500-page print quota for you to print documents. Use the website printserver.wvwc.edu
+Upload your document or PDF to that website, then go to any printer in your residential hall, the Campus Center, Reemsnyder Research Center, or the WVWC AMP Library, log into the laptop, select the doc name and print.
+
+Artifical Intelligence
+Q: Am I allowed to use AI in College?
+A: Each instructor will share an AI policy. Read the syllabus carefully and check Blackboard to see if AI can be used. Assume that you cannot use it for assignments, exams, or quizzes unless the directions include AI parameters.
+
+Need Help?
+Contact the WVWC Helpdesk Email: helpdesk@wvwc.edu
+Phone: 304.473.8877
+When you check in for orientation, you’ll receive a technology handbook with directions to connect other devices.
+
+

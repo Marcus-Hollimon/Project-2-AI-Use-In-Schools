@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T15:24:00-05:00",
+ "generatedAt": "2026-11-11T15:36:05-05:00",
  "codebookVersion": 2,
  "schools": [
   {
@@ -4749,16 +4749,319 @@
   {
    "unitid": "194091",
    "name": "New York Institute of Technology",
-   "pass": false,
+   "pass": true,
    "checks": {
-    "C1": false
+    "S1": true,
+    "S2": true,
+    "S3": true,
+    "S4": true,
+    "S5": true,
+    "C1": true,
+    "C2": true,
+    "C3": true,
+    "C4": true,
+    "N1": true
    },
    "findings": [
     {
-     "check": "C1",
+     "check": "C4",
      "variable": null,
-     "ok": false,
-     "message": "school not coded yet"
+     "ok": true,
+     "message": "search logged with results: nyit.edu generative AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: nyit.edu computer science AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: nyit.edu software engineering syllabus AI"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: nyit.edu ChatGPT academic integrity"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "value 'restrict' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote has 34 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote found in data/sources/194091-nyit/2026-11-11-academic-integrity-policy.html"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "apps.nyit.edu is on nyit.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "cue words absent; reason: 'should not be used ... unless an instructor ... authorizes' sets a default of no use; the policy section holding this sentence is titled 'Unauthorized use of Generative AI', and codebook v2 codes 'unauthorized' use as restrict."
+    },
+    {
+     "check": "C1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "absence backed by 1 reviewed pages"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "value 'cautionary' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote has 11 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote found in data/sources/194091-nyit/2026-11-11-academic-integrity-policy.html"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "apps.nyit.edu is on nyit.edu"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "value 'in passing' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote has 11 words"
+    },
+    {
+     "check": "S1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote found in data/sources/194091-nyit/2026-11-11-student-ai-guide.pdf"
+    },
+    {
+     "check": "S2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "www.nyit.edu is on nyit.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "value 'required' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote has 15 words"
+    },
+    {
+     "check": "S1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote found in data/sources/194091-nyit/2026-11-11-academic-integrity-policy.html"
+    },
+    {
+     "check": "S2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "apps.nyit.edu is on nyit.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "cue words absent; reason: 'attribution' is the disclosure cue; the sentence is in the policy's list of 'Examples of unauthorized use of Generative AI', so using AI without attribution is an integrity violation: a rule, coded required although it has no 'must' word."
+    },
+    {
+     "check": "C1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "value 'no public syllabus found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "absence backed by 2 reviewed pages"
+    },
+    {
+     "check": "N1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "univ_stance='restrict' and univ_tone='cautionary' agree on none found"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "dept_stance='none found' and dept_tone='none found' agree on none found"
     }
    ]
   },
@@ -4813,16 +5116,319 @@
   {
    "unitid": "237969",
    "name": "West Virginia Wesleyan College",
-   "pass": false,
+   "pass": true,
    "checks": {
-    "C1": false
+    "S1": true,
+    "S2": true,
+    "S3": true,
+    "S4": true,
+    "S5": true,
+    "C1": true,
+    "C2": true,
+    "C3": true,
+    "C4": true,
+    "N1": true
    },
    "findings": [
     {
-     "check": "C1",
+     "check": "C4",
      "variable": null,
-     "ok": false,
-     "message": "school not coded yet"
+     "ok": true,
+     "message": "search logged with results: wvwc.edu generative AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: wvwc.edu computer science AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: wvwc.edu software engineering syllabus AI"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: wvwc.edu ChatGPT academic integrity"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "value 'restrict' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "source_type 'handbook' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote has 26 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote found in data/sources/237969-wv-wesleyan/2026-11-11-student-handbook-2025-26.pdf"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "www.wvwc.edu is on wvwc.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "cue words absent; reason: The sentence is an item in the handbook's list headed 'Violations of Academic Integrity include but are not limited to the following': AI use without the instructor's consent is a violation, so the default is no use. 'without the instructor's consent' has the meaning of the cue 'without permission'."
+    },
+    {
+     "check": "C1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "absence backed by 2 reviewed pages"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "value 'neutral' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote has 13 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote found in data/sources/237969-wv-wesleyan/2026-11-11-ai-policy.pdf"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "www.wvwc.edu is on wvwc.edu"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "value 'explicit' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote has 18 words"
+    },
+    {
+     "check": "S1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote found in data/sources/237969-wv-wesleyan/2026-11-11-ai-policy.pdf"
+    },
+    {
+     "check": "S2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "www.wvwc.edu is on wvwc.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "value 'required' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote has 12 words"
+    },
+    {
+     "check": "S1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote found in data/sources/237969-wv-wesleyan/2026-11-11-ai-policy.pdf"
+    },
+    {
+     "check": "S2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "www.wvwc.edu is on wvwc.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "value 'no public syllabus found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "absence backed by 1 reviewed pages"
+    },
+    {
+     "check": "N1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "univ_stance='restrict' and univ_tone='neutral' agree on none found"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "dept_stance='none found' and dept_tone='none found' agree on none found"
     }
    ]
   },
@@ -4877,16 +5483,277 @@
   {
    "unitid": "104708",
    "name": "Glendale Community College",
-   "pass": false,
+   "pass": true,
    "checks": {
-    "C1": false
+    "S1": true,
+    "S2": true,
+    "S3": true,
+    "S4": true,
+    "S5": true,
+    "C1": true,
+    "C2": true,
+    "C3": true,
+    "C4": true,
+    "N1": true
    },
    "findings": [
     {
-     "check": "C1",
+     "check": "C4",
      "variable": null,
-     "ok": false,
-     "message": "school not coded yet"
+     "ok": true,
+     "message": "search logged with results: gccaz.edu generative AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: gccaz.edu computer science AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: gccaz.edu software engineering syllabus AI"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: gccaz.edu ChatGPT academic integrity"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "value 'restrict' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote has 26 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote found in data/sources/104708-glendale-cc/2026-11-11-district-ar-2-3.rendered.txt"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "rendered text; raw curl copy got HTTP 403; reason: district.maricopa.edu answers curl with HTTP 403 (a bot check; the raw 403 copy is saved as 2026-11-11-district-ar-2-3.html). Read in Claude's browser pane; section 2.3.11 of the page text is saved as rendered text."
+    },
+    {
+     "check": "S4",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "district.maricopa.edu is OFF gccaz.edu; reason: Glendale Community College is one of the Maricopa County Community Colleges; district Administrative Regulation 2.3.11 is the academic misconduct rule for all of them, and the college's Syllabus Common Elements page points students to Student Handbook section 2.3.11 for it."
+    },
+    {
+     "check": "C3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "value 'cautionary' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote has 26 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote found in data/sources/104708-glendale-cc/2026-11-11-district-ar-2-3.rendered.txt"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "rendered text; raw curl copy got HTTP 403; reason: district.maricopa.edu answers curl with HTTP 403; read in Claude's browser pane and saved as rendered text."
+    },
+    {
+     "check": "S4",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "district.maricopa.edu is OFF gccaz.edu; reason: Same district regulation as univ_stance; it binds Glendale Community College."
+    },
+    {
+     "check": "C1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "value 'in passing' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote has 3 words"
+    },
+    {
+     "check": "S1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote found in data/sources/104708-glendale-cc/2026-11-11-library-ai-chat-notes.html"
+    },
+    {
+     "check": "S2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "guides.gccaz.edu is on gccaz.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "value 'not stated' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "absence backed by 3 reviewed pages"
+    },
+    {
+     "check": "C1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "value 'no public syllabus found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "absence backed by 1 reviewed pages"
+    },
+    {
+     "check": "N1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "univ_stance='restrict' and univ_tone='cautionary' agree on none found"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "dept_stance='none found' and dept_tone='none found' agree on none found"
     }
    ]
   },

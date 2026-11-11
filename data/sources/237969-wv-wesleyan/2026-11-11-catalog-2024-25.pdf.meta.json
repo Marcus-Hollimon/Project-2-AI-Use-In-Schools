@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.wvwc.edu/wp-content/uploads/2024/08/2024-2025-Undergraduate-Catalog_FINAL.pdf",
+ "final_url": "https://www.wvwc.edu/wp-content/uploads/2024/08/2024-2025-Undergraduate-Catalog_FINAL.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T15:32:00-05:00",
+ "sha256": "3a1caebba2d8d3808d60fc0002c751a0907f9b2e4c36080a2fcd2e4aa9efc72b",
+ "bytes": 1776799
+}
