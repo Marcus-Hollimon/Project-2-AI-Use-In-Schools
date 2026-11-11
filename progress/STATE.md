@@ -77,7 +77,10 @@ Last updated: 2026-11-11T11:33:07-05:00 by Claude (session a9056776), just befor
    findings from `data/coded/values.json` and `checks.json`; Validation from `validation/runs/` and
    the study checks; Contributions from `progress/` and `data/derived/`; Token usage from
    `progress/usage.md` and `data/derived/`), what it shows, the data file it reads, its tests, and a
-   non-programmer checklist. Findings must be labeled descriptive (2 schools per stratum; Ohio 5
+   non-programmer checklist. Marcus could not find an MIT quote with Ctrl+F (the checklist sent him to
+   search-log.md; checklist step now fixed): in the Research findings tab, show each quote next to
+   its value with a one-click link to the live page (consider a text-fragment link that highlights
+   the quote; verify browser support before relying on it). Findings must be labeled descriptive (2 schools per stratum; Ohio 5
    separate, never pooled). Then build, test (`npm run test:record` in `web/`), push (Pages deploys).
 3. Budget: 5-hour was 71% at Phase 2 end and resets 14:40 EST. Keep chunks small; prepare a
    `/compact` after each tab or each ~100k tokens.

@@ -181,10 +181,14 @@ lives, and the site shows them.
 - [x] Web and pipeline tests still pass, recorded (web 17/17 `2026-11-11T16-32-19-757Z_web.json`; pipeline 12/12 `2026-11-11T16-32-23-272Z_pipeline.json`).
 
 ## Marcus's checklist (end of Phase 2; no code reading needed)
-- [ ] On GitHub, open `data/frame/sample.csv`: 15 rows, Ohio State and Cincinnati marked
-      "fixed by Marcus".
-- [ ] Pick any school folder in `data/sources/`. Open its `search-log.md` and one saved page. Find
-      in that page the quote that `data/coded/values.json` gives for it (Ctrl+F).
+- [x] On GitHub, open `data/frame/sample.csv`: 15 rows, Ohio State and Cincinnati marked
+      "fixed by Marcus". (Marcus, screenshot, 2026-11-11.)
+- [ ] Open `data/coded/values.json` and pick any value that has a `quote`. Copy its `url` into
+      your browser and press Ctrl+F with a few words of the quote: they are on the live page. (The
+      saved copy in `data/sources/` is the same page, but GitHub shows HTML files as code, where tags
+      such as `<em>` can sit inside a sentence and stop Ctrl+F from matching; PDFs are searched
+      through the `.pdf.txt` file beside them. `search-log.md` lists searches and URLs, not quotes.)
+      Rewritten 2026-11-11: the first wording sent Marcus to `search-log.md`, which has no quotes.
 - [ ] Open `data/coded/checks.json` (or the summary Claude gives) and confirm every school shows
       all checks passed.
 
