@@ -1,8 +1,28 @@
 # State: read this first
 
-Current phase: 5 More schools (15 to 35; spec `specs/phase-5-more-schools.md`, approved by Marcus 15:15:40 with one extra Ohio school, so 21 new, 36 in all). Evaluation moves to Phase 6. Phase 4 Validation is done.
+Current phase: 5 More schools (15 to 36; spec `specs/phase-5-more-schools.md`, approved by Marcus 15:15:40 with one extra Ohio school, so 21 new, 36 in all). Evaluation moves to Phase 6. Phase 4 Validation is done.
 
-Last updated: 2026-11-11T15:12:05-05:00 by Claude (session a9056776), Phase 5 spec drafted.
+Last updated: 2026-11-11T15:24:14-05:00 by Claude (session a9056776), 2 of 21 schools coded, /compact prepared.
+
+## FIRST, right after the /compact
+1. Take a usage reading marked "after /compact" (full 7-column row in `progress/usage.md`, phase 5).
+2. Continue coding with school 3, NYIT (order below). Iowa State and Stanford are done and pass every check
+   (rows in `progress/pilot-cost.md`): about 1 five-hour point and 25k to 30k context per school.
+3. Prepare the next /compact after about 4 to 5 more schools (context near 200k).
+- Expected failures while coding, not bugs: `check_study.py` with no `--only` shows 17 PASS and 19 FAIL ("school
+  not coded yet"); `build.py` exits 1 on C5 only, because the newest web run failed the Ohio-count test (6 Ohio in
+  sample.csv, 5 coded). Both clear once all 21 are coded and a web run passes. Check every other build line is PASS.
+- Helpers in the scratchpad (not in the repo; folder
+  `C:/Users/junni/AppData/Local/Temp/claude/3662653f92cacdd2/a9056776-4951-4636-a9ad-acb1dbccb955/scratchpad`):
+  `grab.py [--pat REGEX] [--max N] <archives>` prints AI sentences using the checker's own text extraction;
+  `add_school.py <school.json>` puts one school into values.json (ensure_ascii, indent 1, as the file already is)
+  and runs the checker on it; school drafts are `s_<unitid>.json`.
+- Per school: 4 required searches in parallel; save pages with save_page.py; grab.py for quotes; write
+  search-log.md; run the 2 second searches whenever a value is "none found" or "no public syllabus found"
+  (nearly always, departments are silent); write s_<unitid>.json; add_school.py; cost row in pilot-cost.md.
+  Department stance comes from department-level pages only; course pages feed se_courses only.
+- Mistake to avoid (15:23): a Python heredoc with Windows backslashes in an f-string failed, and the commit after
+  it ran anyway. Check each step's exit code before committing.
 
 ## NOW: Phase 5 coding (21 schools, round robin)
 - Draw done 15:17:54 (seed pushed 15:17:25 in 1cd06c0). sample.csv has 36 rows; round 1 unchanged byte for byte;
