@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T14:59:11.440289Z",
+ "generatedAt": "2026-11-11T15:01:40.897098Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -609,14 +609,6 @@
    "text": "Ehh. Lets try and make it more stratified, to really reach that goal of US CS departments, I'll leave it up to you, but I would like Ohio schools, simply because I live in ohio. Definitely include OSU and University of Cincinnati at least. After this step I'll follow those clear instructions."
   },
   {
-   "time": "2026-11-11T14:58:26.850000Z",
-   "actor": "Claude",
-   "kind": "reply",
-   "turn": 11,
-   "text": "Stratified it is, with Ohio included. Before writing it down, one plain fact: **15 schools can't produce statistics about all US CS departments**, however they're chosen. What stratifying does buy you is coverage, meaning every major *kind* of department is represented. Choosing schools at random within each kind, instead of by hand, means the findings aren't shaped by my picks. That's as close to \"US CS departments\" as 15 schools can honestly get, so that's the design I'll write into the plan.",
-   "toolCalls": 9
-  },
-  {
    "time": "2026-11-11T14:58:31Z",
    "actor": "Marcus",
    "kind": "decision",
@@ -631,6 +623,37 @@
    "phase": "1",
    "text": "Sample redesigned per Marcus: stratified national draw from IPEDS plus an Ohio oversample (Ohio State and Cincinnati fixed). Plan written into STATE.md for the session after the /clear. Reading just before /clear: 248,054 tokens.",
    "evidence": "`progress/STATE.md`"
+  },
+  {
+   "time": "2026-11-11T14:59:21Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Sample redesign: stratified IPEDS draw plus Ohio oversample; reading before /clear",
+   "commit": "7acabfc",
+   "note": "written by Claude, pushed from Marcus's account"
+  },
+  {
+   "time": "2026-11-11T14:59:38.332000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 11,
+   "text": "The new sample design is saved and pushed (commit `7acabfc`). The checks still pass, and nothing is left uncommitted.\n\n**The design, in plain terms:**\n- **5 kinds of CS department:** big public research universities, big private research universities, other universities, liberal arts colleges, and community colleges.\n- **National part (10 schools):** 2 of each kind, chosen at random from the federal government's official list of colleges that award CS degrees (IPEDS). The random draw is saved, so anyone can repeat it and get the same schools. Ohio schools are left out of this part.\n- **Ohio part (5 schools):** Ohio State and Cincinnati (your picks), plus 3 Ohio schools drawn at random: one regular university, one liberal arts college and one community college.\n- **Reporting:** the national 10 are reported by kind, and Ohio separately. With 2 schools per kind, the site will call the findings illustrative examples, not percentages for the whole country.\n- **Harvard is in only if the draw picks it.** Adding it by hand would turn that slot back into a hand-picked choice. If you want it anyway, say so when you review the Phase 2 plan.\n- **Backup plan:** if the federal data takes more than about 30 minutes to get working, I'll hand-pick schools within the same 5 kinds and label them as hand-picked.\n\nThe fresh session will show you the actual 15 schools in the Phase 2 plan before any research starts.\n\n**Now the clear:**\n1. Type `/clear` and press Enter.\n2. Then send exactly this, and nothing else: `Read progress/STATE.md and continue.`\n\n---\n\n**Coaching**\n\n1. **This was a good correction to make.** You noticed that hand-picked schools couldn't support the goal you'd stated, and you fixed it before any research was done, when the fix was nearly free. \"Ehh, let's make it stratified\" a day into the research would have meant starting over.\n2. **\"I'll leave it up to you\" plus two firm rules (Ohio, Ohio State and Cincinnati) works well.** I can decide the details and you keep what matters to you. Do the same for the codebook in the Phase 2 plan: name the one or two questions you care most about, and leave the rest to me.\n\n**Claude Code feature for this task:** the `/clear` you're about to run. Afterwards, the session's first step tells us whether STATE.md alone was enough to pick up the work.",
+   "toolCalls": 11
+  },
+  {
+   "time": "2026-11-11T15:00:07.318000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 12,
+   "text": "Read progress/STATE.md and continue"
+  },
+  {
+   "time": "2026-11-11T15:00:42.411000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 12,
+   "text": "Context cleared successfully (78,618 tokens now, down from 248,054). Recording the after-/clear usage reading, then checking how the /clear shows up in the transcripts.",
+   "toolCalls": 21
   }
  ]
 }

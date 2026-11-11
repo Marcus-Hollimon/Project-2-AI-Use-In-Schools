@@ -19,6 +19,7 @@ percentages as the app reports them, so a change of "1 point" means anywhere fro
 | 2026-11-11T09:52-05:00 | 1 | Phase 1 closed | 5 | 8 | 224,386 | none |
 | 2026-11-11T09:54:22-05:00 | 1 | before the sample redesign | 8 | 8 | 237,728 | none |
 | 2026-11-11T09:59:10-05:00 | 1 | just before /clear | 9 | 9 | 248,054 | none (next row is after /clear) |
+| 2026-11-11T10:00:44-05:00 | 2 | after /clear (phase start) | 10 | 9 | 78,618 | /clear by Marcus (manual; 248,054 tokens before) |
 
 ## Cost per phase
 | Phase | 5-hour points | Weekly points | Context growth (tokens) |

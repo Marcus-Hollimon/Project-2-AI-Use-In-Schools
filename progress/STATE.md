@@ -1,8 +1,8 @@
 # State: read this first
 
-Current phase: 1 Instrumentation (complete; the deliberate `/clear` that ends it is next or just happened)
+Current phase: 2 Study (spec being written; not yet approved)
 
-Last updated: 2026-11-11T09:52-05:00 by Claude, just before the `/clear`.
+Last updated: 2026-11-11T10:02:48-05:00 by Claude (session a9056776, after the /clear).
 
 ## Deadline and pace
 - Everything is due **2 PM EST, Thu Nov 12 2026** (Marcus, 2026-11-11).
@@ -18,18 +18,13 @@ Last updated: 2026-11-11T09:52-05:00 by Claude, just before the `/clear`.
 - Tests: web 17/17, pipeline 12/12, all recorded in `validation/runs/` (4 mutation runs total).
 - Work paused Nov 8 01:30 to Nov 11 09:46 (Marcus away). Not a context reset: same session.
 
-## FIRST, right after the /clear (end of Phase 1, spec section "End of phase")
-1. Usage reading marked "after /clear" in `progress/usage.md` (tool: get_usage).
-2. Find how the `/clear` shows up. Look in `~/.claude/projects/C--Claude-Folder/` for `.jsonl`
-   files changed after 09:52 EST Nov 11. Do not open any file without first checking, from its
-   first few records only, that its `cwd` is this project or `C:\Claude Folder` and its time is
-   after the clear. Expect either a new session file or a marker inside
-   `0cf9c9ad-b66c-4406-998d-e6e34b8c2e47.jsonl`. Record what you find in the log and the spec.
-3. If there is a new session id, add it to `pipeline/sessions.json` as the last (live) entry, then
-   run `uv run --project pipeline python pipeline/build.py`. All checks must still pass.
-4. Unknown file: `ddc7d76a-46ca-4bba-a89a-f901ccc7b9a7.jsonl` in the same folder, last written
-   Nov 8 18:00. Not opened (privacy). Ask Marcus whether it belongs to this project.
-5. Commit, push, then write `specs/phase-2-study.md` (below) and get Marcus's approval.
+## After the /clear (done 2026-11-11 10:02, session a9056776)
+- Reading "after /clear" taken (78,618 tokens; C1 passes, 15 apart).
+- The `/clear` started a new session and file; neither file records the clear (spec 1, item 8).
+- `a9056776` added to `pipeline/sessions.json`; build all PASS; tests 12/12 recorded.
+- Still open: `ddc7d76a-46ca-4bba-a89a-f901ccc7b9a7.jsonl` (same folder, last written Nov 8 18:00,
+  while Marcus was away). Not opened (privacy). Asked Marcus whether it belongs to this project.
+- Next: write `specs/phase-2-study.md` (below) and get Marcus's approval.
 
 ## Next: Phase 2 Study (15 schools)
 Marcus's decision (Nov 11, 09:58, replacing his 09:51 hand-picked list): stratified, to reach "US
@@ -63,6 +58,7 @@ courses handle it; source type). Save the raw page behind every coded value with
 | Session | Started in | Model | Covers |
 |---|---|---|---|
 | 0cf9c9ad-b66c-4406-998d-e6e34b8c2e47 | `C:\Claude Folder` (transcript under `~/.claude/projects/C--Claude-Folder/`) | claude-opus-5 until 00:14:38 Nov 8, then claude-opus-5-5 | planning, audit, Phase 0, first /compact (Nov 8 00:57), Phase 1, ends with the /clear |
+| a9056776-4951-4636-a9ad-acb1dbccb955 | `C:\Claude Folder` (same folder) | claude-opus-5-5 | starts after the /clear (Nov 11 10:00:07); Phase 2 |
 
 ## Open decisions (Marcus)
 - Approve the sampling design and the drawn list (in the Phase 2 spec).

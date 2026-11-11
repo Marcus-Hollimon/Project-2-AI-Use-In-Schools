@@ -25,7 +25,13 @@ Script and output: `evidence/phase1-recon/`. Transcript timestamps are UTC; EST 
 7. About 78k of the 81.5k tokens left after the compact are fixed overhead sent on every turn
    (tool definitions 37.5k, MCP tools 20.4k, system prompt 9.9k, skills 5.8k, MCP instructions
    2.4k), as the app reported at 00:57:55.
-8. Unknown until the end of this phase: how a `/clear` appears.
+8. How a `/clear` appears (found 2026-11-11, after Marcus's `/clear` between 09:59:41 and
+   10:00:07 EST): it starts a new session with a new id and a new transcript file
+   (`a9056776-4951-4636-a9ad-acb1dbccb955.jsonl`, same folder, same cwd). Neither file records
+   the `/clear` itself: the old file just stops after its last turn (no marker record), and the
+   new file's first message has no parent. So from transcripts alone a `/clear` cannot be told
+   apart from opening a new session; the pipeline labels it "new session or /clear", and the
+   `usage.md` row names which one it was.
 
 ## Definitions
 - **Response**: one model call, identified by `message.id`. Counted once across all files.

@@ -1,6 +1,7 @@
 {
   "note": "Explicit list of this project's sessions. build.py reads only these transcripts (and their subagent files). The last one is the live session.",
   "sessions": [
-    {"id": "0cf9c9ad-b66c-4406-998d-e6e34b8c2e47", "projectDir": "C--Claude-Folder"}
+    {"id": "0cf9c9ad-b66c-4406-998d-e6e34b8c2e47", "projectDir": "C--Claude-Folder"},
+    {"id": "a9056776-4951-4636-a9ad-acb1dbccb955", "projectDir": "C--Claude-Folder"}
   ]
 }
