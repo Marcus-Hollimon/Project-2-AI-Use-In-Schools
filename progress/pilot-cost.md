@@ -71,3 +71,7 @@ Recode (spec R2): one value changed, Johns Hopkins `se_courses` "not addressed" 
 | Baldwin Wallace 201195 | 11:19:11 | 2026-11-11T11:21:29-05:00 (written late; usage read a few minutes earlier) | 63 | 16 | 147,380 | 11 | 4 (all absences) |
 | Defiance 202514 | 11:21:29 | 2026-11-11T11:22:08-05:00 | 65 | 16 | 168,535 | 8 | 3 |
 | Columbus State 202222 | 11:22:08 | 2026-11-11T11:24:02-05:00 | 66 | 16 | 195,190 | 8 | 5 (syllabus is a Word file) |
+
+## Phase 5 (21 more schools, codebook v2)
+| School | Start (reading before) | End (school passes checks) | 5-hour % | Weekly % | Context tokens | Searches | Pages saved |
+|---|---|---|---|---|---|---|---|

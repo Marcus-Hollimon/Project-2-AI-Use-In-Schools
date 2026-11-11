@@ -4,7 +4,20 @@ Current phase: 5 More schools (15 to 35; spec `specs/phase-5-more-schools.md`, a
 
 Last updated: 2026-11-11T15:12:05-05:00 by Claude (session a9056776), Phase 5 spec drafted.
 
-## NOW: Phase 5 approved; draw next
+## NOW: Phase 5 coding (21 schools, round robin)
+- Draw done 15:17:54 (seed pushed 15:17:25 in 1cd06c0). sample.csv has 36 rows; round 1 unchanged byte for byte;
+  second run identical. Study tests: mutation `validation/runs/2026-11-11T20-18-06-773Z_study.json` (1 failed),
+  clean `2026-11-11T20-18-09-258Z_study.json` (38/38). Web run `2026-11-11T20-18-19-940Z_web.json` fails 1
+  test (Research note counts 6 Ohio in sample.csv, 5 coded): expected until Case Western is coded.
+- Commit locally while coding; push only when web tests pass again (a red CI run blocks the deploy).
+- `check_study.py --only X` overwrites checks.json with only X: run the full checker before any commit of checks.json.
+- Coding order (done ones get ticked in `progress/pilot-cost.md`, "Phase 5" table): 1 Iowa State 153603,
+  2 Stanford 243744, 3 NYIT 194091, 4 West Virginia Wesleyan 237969, 5 Glendale CC 104708, 6 Arizona State
+  104151, 7 Rice 227757, 8 Eastern Kentucky 156620, 9 Nevada State 441900, 10 UDC 131399, 11 UMKC 178402,
+  12 Penn 215062, 13 College of Charleston 217819, 14 Westminster 216807, 15 Niagara CC 193946, 16 Temple
+  216339, 17 Nova Southeastern 136215, 18 Maine Fort Kent 161235, 19 Berry 139144, 20 Tidewater 233772,
+  21 Case Western 201645 (Ohio).
+
 - Marcus asked to add schools before the evaluation (15:08:57) and chose 20 more, 6 per type (15:10:24).
 - Spec `specs/phase-5-more-schools.md`: round-2 seed 20261115 named in the spec and pushed before any draw; approved 15:15:40 with one more Ohio school (random from Ohio S2: Case Western or Dayton).
 
