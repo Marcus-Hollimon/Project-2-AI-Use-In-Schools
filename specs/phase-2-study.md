@@ -45,7 +45,10 @@ or 11.0101 (first major), 2023 to 2024. Excluded: 28 for-profit, 24 in outlying 
 ## The drawn sample (seed 20261111, committed in `405f8dd` before the first run)
 National: 2 per stratum at random, Ohio excluded. Ohio: the two fixed schools, plus 1 at random
 from each of S3, S4, S5 (branch campuses of Ohio State and Cincinnati excluded). A second run
-reproduced both output files byte for byte.
+reproduced both output files byte for byte. Limit of the evidence: `405f8dd` was committed at
+10:06:07 and the draw ran at 10:06:13, but the commit reached GitHub only with the next push, so
+"seed fixed first" rests on the local commit time, not on anything GitHub witnessed. Next time,
+push the seed commit before running.
 
 | # | Group | Stratum | School | State | How chosen |
 |---|---|---|---|---|---|
