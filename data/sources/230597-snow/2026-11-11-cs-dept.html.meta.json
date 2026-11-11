@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://snow.edu/academics/science_math/engineering/cs/",
+ "final_url": "https://snow.edu/academics/science_math/engineering/cs/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T10:50:35-05:00",
+ "sha256": "4a0309af5eb277db28c6c99e0ba6d2679af08147c619a09341fc4d545dfde862",
+ "bytes": 27981
+}

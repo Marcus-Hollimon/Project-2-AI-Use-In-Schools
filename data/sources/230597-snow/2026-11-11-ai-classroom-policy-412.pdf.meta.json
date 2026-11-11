@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://snow.edu/general/policies/download/412%20AI%20Classroom%20Policy.pdf",
+ "final_url": "https://snow.edu/general/policies/download/412%20AI%20Classroom%20Policy.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T10:50:31-05:00",
+ "sha256": "3d0d981a572ecf56d170cef70f0c02ed9be84a33eb40a3b6ee55b46fdf227c5a",
+ "bytes": 245263
+}

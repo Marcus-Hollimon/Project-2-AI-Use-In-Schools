@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.coppin.edu/sites/default/files/pdf-library/2025-10/Coppin-State-University-Student-Handbook.pdf",
+ "final_url": "https://www.coppin.edu/sites/default/files/pdf-library/2025-10/Coppin-State-University-Student-Handbook.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T10:49:03-05:00",
+ "sha256": "b0e0115bb34a135042b51f158251b2d713cf7693e52a2ca25e2ea34c8d9a467a",
+ "bytes": 2349199
+}

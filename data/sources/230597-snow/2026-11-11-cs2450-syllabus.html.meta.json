@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://snow.edu/academics/science_math/engineering/cs/syllabus.html?q=5761",
+ "final_url": "https://snow.edu/academics/science_math/engineering/cs/syllabus.html?q=5761",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T10:50:34-05:00",
+ "sha256": "54172cb8812f31513a1afca6e247b2294c48ab1f6895dfbdb1b90f920a40834a",
+ "bytes": 31984
+}

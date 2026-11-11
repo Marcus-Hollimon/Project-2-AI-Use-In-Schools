@@ -1,0 +1,114 @@
+{
+ "note": "Pilot schools recoded under codebook v2 (spec R2). Lists every value that changed; all other values are the same under both versions. Reasons and wording changes are in study/codebook.md, 'Changes in version 2'.",
+ "recoded_at": "2026-11-11",
+ "schools_recoded": [
+  "University of Minnesota-Twin Cities",
+  "Johns Hopkins University",
+  "Valparaiso University",
+  "Coppin State University",
+  "Snow College"
+ ],
+ "changed_values": [
+  {
+   "unitid": "162928",
+   "name": "Johns Hopkins University",
+   "variable": "se_courses",
+   "v1": "not addressed",
+   "v2": "no public syllabus found"
+  }
+ ],
+ "v1_values": {
+  "174066": {
+   "univ_stance": "restrict",
+   "univ_tone": "cautionary",
+   "dept_stance": "encourage",
+   "dept_tone": "positive",
+   "collaboration": "in passing",
+   "disclosure": "required",
+   "se_courses": "not addressed"
+  },
+  "162928": {
+   "univ_stance": "instructor decides",
+   "univ_tone": "cautionary",
+   "dept_stance": "none found",
+   "dept_tone": "none found",
+   "collaboration": "not discussed",
+   "disclosure": "encouraged",
+   "se_courses": "not addressed"
+  },
+  "152600": {
+   "univ_stance": "instructor decides",
+   "univ_tone": "cautionary",
+   "dept_stance": "none found",
+   "dept_tone": "none found",
+   "collaboration": "not discussed",
+   "disclosure": "encouraged",
+   "se_courses": "no public syllabus found"
+  },
+  "162283": {
+   "univ_stance": "permit with conditions",
+   "univ_tone": "cautionary",
+   "dept_stance": "none found",
+   "dept_tone": "none found",
+   "collaboration": "not discussed",
+   "disclosure": "not stated",
+   "se_courses": "no public syllabus found"
+  },
+  "230597": {
+   "univ_stance": "permit with conditions",
+   "univ_tone": "positive",
+   "dept_stance": "none found",
+   "dept_tone": "none found",
+   "collaboration": "in passing",
+   "disclosure": "required",
+   "se_courses": "not addressed"
+  }
+ },
+ "v2_values": {
+  "174066": {
+   "univ_stance": "restrict",
+   "univ_tone": "cautionary",
+   "dept_stance": "encourage",
+   "dept_tone": "positive",
+   "collaboration": "in passing",
+   "disclosure": "required",
+   "se_courses": "not addressed"
+  },
+  "162928": {
+   "univ_stance": "instructor decides",
+   "univ_tone": "cautionary",
+   "dept_stance": "none found",
+   "dept_tone": "none found",
+   "collaboration": "not discussed",
+   "disclosure": "encouraged",
+   "se_courses": "no public syllabus found"
+  },
+  "152600": {
+   "univ_stance": "instructor decides",
+   "univ_tone": "cautionary",
+   "dept_stance": "none found",
+   "dept_tone": "none found",
+   "collaboration": "not discussed",
+   "disclosure": "encouraged",
+   "se_courses": "no public syllabus found"
+  },
+  "162283": {
+   "univ_stance": "permit with conditions",
+   "univ_tone": "cautionary",
+   "dept_stance": "none found",
+   "dept_tone": "none found",
+   "collaboration": "not discussed",
+   "disclosure": "not stated",
+   "se_courses": "no public syllabus found"
+  },
+  "230597": {
+   "univ_stance": "permit with conditions",
+   "univ_tone": "positive",
+   "dept_stance": "none found",
+   "dept_tone": "none found",
+   "collaboration": "in passing",
+   "disclosure": "required",
+   "se_courses": "not addressed"
+  }
+ }
+}

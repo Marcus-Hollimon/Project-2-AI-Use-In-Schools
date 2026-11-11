@@ -1,0 +1,119 @@
+Policy # 231 Date Approved: February 11, 2026 Date Amended: Responsible Office: Information Technology
+SUBJECT: AI Collegewide Policy
+1.0 PURPOSE 1.1. This policy establishes a college-wide framework for responsible, ethical, and secure use of Artificial Intelligence at Snow College in support of teaching, learning, research, service, and operations. It promotes clarity of expectations for faculty, staff, students, administrators, contractors, and affiliates. 1.2. All proposed uses of Artificial Intelligence must be evaluated against the College’s mission and a clearly defined set of institutional safeguards. These safeguards reflect the College’s commitment to ethical, secure, and studentcentered practices. Any AI-related adoption, and thus use, must comply with these safeguards and mission prior to approval or implementation. Examples of safeguards may include but are not limited to: protection of student and employee data, accessibility, academic integrity, transparency of use, security and risk management, and alignment with pedagogical and institutional goals. These safeguards establish the baseline for responsible AI adoption and provide a clear standard for evaluation and accountability. AI use must also be consistent with state and federal law, including intellectual property, privacy, discrimination, and accessibility standards. 1.3. This policy encourages thoughtful innovation while protecting privacy, accuracy, academic integrity, and institutional trust. It is a companion to the AI in the Classroom policy (***). For classroom-specific guidelines, see the AI in the Classroom Policy. 1.4. This policy applies to all AI tools and services used for Snow College purposes, whether under institutional licenses or accessed independently. Covered uses include, but are not limited to, text generation, summarization, translation, data analysis, visualization (e.g., charts, dashboards), image creation and editing, video or audio generation, presentation and slide-deck creation, coding assistance, workflow support, research assistance, instructional design, communication, creative work, student support, and administrative tasks. 1.5. This policy does not alter legal or policy requirements in areas such as information security, research compliance, academic integrity, records management, or acceptable use of technology. It works together with those requirements. 1.6. The Office of Information Technology (OIT) shall serve as the Responsible Office for this Policy and will ensure campus-wide compliance, training, and
+1|Page
+
+Policy # 231 Date Approved: February 11, 2026 Date Amended: Responsible Office: Information Technology
+periodic policy evaluation. The Office of Information Technology will convene the AI Task Force annually (or as warranted) to review and update this policy in light of technological advancements, ethical considerations, and accreditation standards. Snow College shall also require annual faculty and staff training on responsible AI use to maintain awareness of evolving standards and compliance expectations.
+2.0 DEFINITIONS This section clarifies the key terms used throughout the College’s Policy on the use of Artificial Intelligence. Examples are illustrative, not exhaustive, and product names (e.g., “ChatGPT,” “Copilot”) are cited only as representative examples, not endorsements.
+2.1. Artificial Intelligence (AI): Computational methods that perform tasks typically requiring human intelligence (e.g., pattern recognition, classification, prediction, recommendation, natural language processing). AI includes both non-generative uses (such as spam filters, plagiarism detectors, predictive analytics) and generative uses (such as ChatGPT, Claude, Copilot, Gemini, and DALL·E that create new content such as text, code, images, audio, or video).
+2.2. AI Literacy: The knowledge, skills, and dispositions needed to evaluate, use, and supervise AI responsibly and effectively. This includes understanding capabilities and limits, prompt design, verification strategies, bias and privacy risks, citation and attribution norms, and when to defer to human expertise.
+2.3. Automated Decision-Making (ADM): Processes in which an AI system makes or substantially shapes a decision affecting an individual or group with little or no human involvement (e.g., automated flagging that determines access, eligibility, scoring, or discipline). College policy requires meaningful human oversight for high-impact decisions; fully automated decisions that affect rights, opportunities, or academic standing must include human review and an appeal pathway.
+2.4. Bias: Systematic or unfair skew in AI outputs arising from training data, model design, or deployment context (e.g., differing error rates across demographic groups, stereotyping in text or images). All users must monitor for, mitigate, and report potential bias when using AI in academic or administrative contexts.
+2|Page
+
+Policy # 231 Date Approved: February 11, 2026 Date Amended: Responsible Office: Information Technology
+2.5. Human Oversight: Active human monitoring, guidance, and intervention to ensure AI use remains accurate, fair, safe, and aligned with policy. Oversight includes reviewing inputs and outputs, validating results, documenting decisions, and providing avenues for correction or appeal.
+2.6. Restricted Data: Information protected by law, contract, or policy, including FERPA-protected student records; HIPAA-protected health information; confidential personnel or donor records; proprietary research; exportcontrolled data; General Data Protection Regulation (GDPR); Personally Identifiable Information (PII); and any data classified as Restricted by College policy. Such data must not be entered into external AI tools unless an approved, compliant agreement is in place, and use is authorized. For more information on these definitions, see Snow College Policy #226.
+3.0 ROLES AND RESPONSIBILITIES 3.1. Faculty: Model responsible AI use in teaching, scholarship, and communication. Follow course and departmental guidance and the AI in the Classroom policy. 3.2. Staff: Use AI to improve workflows and services with appropriate privacy, security, and disclosure practices. 3.3. Students: Use AI responsibly according to course, program, and institutional policies. Maintain academic integrity and follow syllabus guidance about AI. 3.4. Supervisors and Administrators: Support appropriate AI use within their units; ensure local practices align with this policy; safeguard academic integrity in instructional and operational use; and consult the Office of Information Technology (OIT) and other relevant offices (e.g., Legal, Institutional Review Board (IRB), Accessibility) on tool selection, risk assessment, data protections, and training needs. Supervisors should also ensure that AI-related decisions about students or employees are made with appropriate human oversight and in consultation with the College’s Legal Counsel when necessary. 3.5. President’s Cabinet: Provide strategic direction for campus AI adoption; set expectations for policy compliance and academic integrity; allocate resources for infrastructure, training, and support; approve use of high-risk or enterprise AI tools in consultation with OIT and other relevant offices; and encourage responsible and accessible AI use across the college. 3.6. Office of Information Technology: Vet and maintain approved AI tools, provide onboarding, and enforce security protocols.
+3|Page
+
+Policy # 231 Date Approved: February 11, 2026 Date Amended: Responsible Office: Information Technology
+3.7. The AI Collegewide Integration Task Force: Recommend updates, provide guidance, and coordinate training and evaluation.
+4.0 RESPONSIBLE HANDLING AND STORAGE OF DATA IN AI MODELS FOR RESEARCH 4.1. Snow College requires careful consideration of privacy, research ethics, and scholarly integrity when AI tools are used. Faculty, students, and researchers must follow established policies to ensure compliance, protect restricted data, and maintain trust in academic processes. 4.2. Entering restricted data into AI tools is prohibited unless prior written approval has been granted by the Office of Information Technology (OIT). 4.2.1 Approval may be assumed for approved tools (i.e. Word, Banner, Canvas) that have added, or will add, AI components that cannot be separated from the main program. 4.2.2 Use of third-party AI platforms for research purposes must include a data protection assessment by OIT before implementation. 4.3. Human Subjects Research (HSR) 4.3.1. Human subjects research must always be reviewed and approved by the Institutional Review Board (IRB). 4.3.2. All IRB policies and procedures must be followed whenever data is collected from human participants. 4.3.3. The use of real human subject data to train AI models may qualify as human subjects research and must follow established IRB procedures. 4.3.4. Before using de-identified data, individuals working with human subjects should consult with Snow College IRB to confirm compliance with HSR guidelines. 4.4. Data Collection and Retention 4.4.1. Researchers should collect and retain only the minimum amount of data necessary for the intended project. 4.4.2. Avoid unnecessary or excessive data collection to reduce privacy risks. 4.5. Data Security Protocols 4.5.1. Strong encryption protocols must be implemented for both data in transit and data at rest. 4.5.2. These measures help ensure that, even in the event of unauthorized access, the data remains secure and unreadable. 4.6. Collaboration with IT Security
+4|Page
+
+Policy # 231 Date Approved: February 11, 2026 Date Amended: Responsible Office: Information Technology
+4.6.1. Faculty, staff, and students should collaborate closely with Snow College’s Information Technology security teams to align data handling protocols with broader cybersecurity measures.
+4.6.2. Data security must remain an integral part of the College’s overall cybersecurity strategy.
+4.7. AI and Peer Review 4.7.1. Faculty may encounter AI software that claims to assist with peer review of research, identifying gaps or errors in scholarship, or suggesting relevant research. While such tools may provide supplemental insights, they remain imperfect, often producing false or incomplete results, showing bias against certain groups, and struggling to keep pace with rapid developments in AI. 4.7.2. Faculty, faculty committees, and academic units (departments, divisions, or colleges) must continue to rely on traditional peer review processes and use AI tools only as supplementary aids, with all results independently verified. 4.7.3. Use of AI tools for faculty evaluation or peer review purposes without independently confirming its findings is a violation of this policy.
+5.0 PROHIBITED USES FOR ALL SNOW COLLEGE COMMUNITY MEMBERS 5.1. Snow College prohibits the use of AI tools and services in ways that cause harm, violate laws or policies, or compromise data security. These restrictions protect individuals, programs, and the institution while supporting responsible innovation. Violations of this section may result in disciplinary action under applicable employee or student conduct policies and, when warranted, referral to law enforcement authorities. Sanctions of the students will be applied through established due process under the Student Code of Conduct and Academic Integrity Policy. Moreover, any alleged faculty misconduct will be referred to the Provost’s Office and reviewed consistent with current College policies. Any alleged staff misconduct should be referred to a supervisor or vice president. See 6.0 for further details regarding disciplinary actions for the Snow College Community. 5.2. Discrimination and Harassment 5.2.1. Using AI tools or services to intentionally generate content that constitutes discrimination, harassment, stalking, or sexual exploitation is strictly prohibited. 5.2.2. Such conduct will be addressed under the applicable Snow College policies, including but not limited to Title IX, the Non-Discrimination and Anti-Harassment Policy, and the Student Code of Conduct.
+5|Page
+
+Policy # 231 Date Approved: February 11, 2026 Date Amended: Responsible Office: Information Technology
+5.3. Fraudulent or Harmful Activities 5.3.1. The use of AI to create fake academic credentials, fraudulent research, or any other activities that may cause harm to individuals, programs, or institutions is prohibited. 5.3.2. Exception: Limited use of AI in these contexts may occur as part of an approved educational or research exercise under close faculty supervision, provided that such use does not cause harm to individuals, programs, or the institution.
+5.4. Restricted Data 5.4.1. Entering restricted data into any AI tool or service is prohibited unless prior written approval has been granted by the Provost or an appropriate administrative office. 5.4.2. Restricted data includes, but is not limited to: 5.4.2.1. Information protected under FERPA, GDPR, or HIPAA 5.4.2.2. Private client data or employee records 5.4.2.3. Materials under confidential review not authored by the AI user (e.g., manuscripts, grant applications, funding proposals) 5.4.2.4. Intellectual property not yet publicly available 5.4.3. Users must also remain mindful of requirements set by programmatic governing bodies and accreditation standards.
+5.5. Violations of Laws or Policies 5.5.1. The use of AI tools or services to generate content that facilitates or encourages the violation of federal, state, or local laws, institutional policies or rules, or licensing agreements or contracts is prohibited.
+6.0 REPORTING INAPPROPRIATE USES OF AI 6.1. Snow College encourages open communication and good faith reporting to ensure that AI use across the institution remains ethical, responsible, and aligned with college policies. Concerns about the inappropriate or prohibited use of AI should be reported through the appropriate college channels. 6.1.1. Reports for faculty should be directed to a supervisor, department chair, dean, or the Office of Academic Affairs. 6.1.2. Reports for staff should be directed to the supervisor or corresponding vice president. 6.1.3. Reports for students should be directed to the instructor, then department chair, then division dean. 6.1.4. Reports involving possible illegal use, FERPA noncompliance, or cybersecurity violations should also be directed to the Office of the
+6|Page
+
+Policy # 231 Date Approved: February 11, 2026 Date Amended: Responsible Office: Information Technology
+
+Utah Attorney General and Snow College’s Information Security Officer. 6.1.5. Reports will be investigated according to College policy and procedures. Appeals will also follow established procedures.
+
+7.0 COLLEGE RESPONSIBILITIES TO EMPLOYEES AND OPERATIONS
+
+7.1. Snow College recognizes the increasing integration of AI technologies across
+
+higher education, including administrative functions, research support, and
+
+teaching practices. While AI can provide efficiency gains and innovative
+
+solutions, its implementation must be approached with care, ethical
+
+responsibility, and transparency. A particular area of consideration is the
+
+potential impact of AI adoption on existing employee roles.
+
+7.2. Ethical Considerations
+
+7.2.1. Any decision to reduce or replace work performed by employees with
+
+AI systems will be guided by ethical principles and Snow College’s
+
+commitment to fairness.
+
+7.2.2. The College will prioritize the well-being of its employees, seeking to
+
+minimize adverse impacts on livelihoods and to ensure that any AI
+
+adoption enhances, rather than undermines, the human-centered
+
+mission of the institution.
+
+7.3. Assessment and Justification
+
+7.3.1. Prior to considering any replacement of employee functions with AI
+
+systems, departments or units must conduct a thorough assessment.
+
+Human Resources and Legal Counsel must review such assessments
+
+to ensure compliance with employment law, contract terms, and fair
+
+labor standards. Such assessment(s) should include:
+
+7.3.1.1.
+
+An analysis of the tasks under review
+
+7.3.1.2.
+
+The anticipated benefits and risks of AI integration
+
+7.3.1.3.
+
+The potential impact on affected employees
+
+7.3.2. Findings must be documented and shared with the appropriate
+
+administrative offices before implementation proceeds.
+
+7.4. Transparency
+
+7.4.1. Snow College will provide opportunities for open discussion and
+
+feedback as part of the decision-making process.
+
+7.4.2. Input from staff, faculty, and other stakeholders will be actively
+
+sought to ensure diverse perspectives are considered.
+
+7|Page
+
+Policy # 231 Date Approved: February 11, 2026 Date Amended: Responsible Office: Information Technology
+7.4.3. The College will strive to distribute the benefits of AI adoption fairly across the campus community and avoid disproportionately disadvantaging any group of employees.
+7.5. Reskilling and Professional Development 7.5.1. In recognition of the evolving nature of work, Snow College is committed to supporting employees whose roles may be affected by AI adoption. For the purposes of this policy, “support” refers broadly to resources, training, technical assistance, and institutional efforts to help employees and students adapt to and benefit from AI integration. 7.5.2. Whenever possible, the College will provide professional development, retraining, and reskilling opportunities to help employees transition into new or modified roles that leverage their expertise alongside AI tools. 7.5.3. This approach reflects Snow’s commitment to valuing its workforce and preparing the campus community to adapt productively to technological change.
+8|Page
+
+

@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "frozen_at": "2026-11-11",
   "note": "Single source of truth for allowed values and cue words. check_study.py loads it; codebook.md explains it. Cue matching: case-insensitive, whole words; a cue ending in * matches any word starting with it. A value's cues are groups: the quote must match at least one cue from every group.",
   "absence_values": ["none found", "not discussed", "not stated", "not addressed", "no public syllabus found"],

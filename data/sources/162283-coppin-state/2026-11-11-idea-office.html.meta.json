@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.coppin.edu/innovation-development-education-and-assessment",
+ "final_url": "https://www.coppin.edu/innovation-development-education-and-assessment",
+ "http_status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T10:48:53-05:00",
+ "sha256": "5c7f3f958589ebc9164479509271284d8ad4554a7ec56eea0ad89d1efcb0b175",
+ "bytes": 92954
+}

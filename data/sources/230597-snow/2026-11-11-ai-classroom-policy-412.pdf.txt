@@ -1,0 +1,184 @@
+Policy # 412 Date Approved: February 11, 2026 Date Amended: Responsible Office: Academic Affairs
+SUBJECT: AI CLASSROOM POLICY 1.0 PURPOSE
+1.1. This policy is designed to promote the ethical, educational, and responsible use of Artificial Intelligence (AI) at Snow College. AI has transformative potential in teaching, research, service, and administration. When used intentionally, it can enhance learning outcomes, improve adaptability skills, streamline processes, and prepare students for a workforce that increasingly demands AI literacy while mitigating potential cognitive decline. At the same time, AI tools are not infallible: they may produce inaccurate or biased information, use copyrighted or proprietary content without attribution, and pose risks to privacy, security, and institutional integrity. Employers will expect Snow College graduates to use AI responsibly and ethically.
+1.2. This policy serves as a partner to the Collegewide AI Policy and should be read in conjunction with it. For further information on responsible handling and storage of data in AI models for research, reporting inappropriate uses of AI, college responsibilities to employees and operations, and prohibited uses for all Snow College Community members, see the AI Collegewide Policy.
+1.3. This policy provides the framework for integrating AI into Snow College’s mission while upholding our commitments to academic integrity, fairness, and privacy. This policy is designed to inform faculty and students of ways to engage in learning, scholarship, research, creativity, and service activities given the ongoing development of AI technologies.
+1.4. Ownership of AI-generated intellectual property is governed separately under Snow College Policy #405: Intellectual Property.
+1.5. The Office of Academic Affairs shall serve as the Responsible Office for this Policy and will ensure campus-wide compliance, training, and periodic policy evaluation. The Provost’s Office will convene the AI Task Force annually (or as warranted) to review and update this policy in light of technological advancements, ethical considerations, and accreditation standards. Snow College shall also require annual faculty and staff training on responsible AI use to maintain awareness of evolving standards and compliance expectations.
+2.0 DEFINITIONS This section clarifies the key terms used throughout the College’s Policy on the use of Artificial Intelligence in the classroom. Examples are illustrative, not exhaustive, and product names (e.g., “ChatGPT,” “Copilot”) are cited only as representative examples, not endorsements. 2.1. Artificial Intelligence (AI): Technologies (e.g., ChatGPT, Claude, Copilot, Gemini, DALL-E) that produce text, images, video, code, or other data and other technologies used for prediction, analysis, etc.
+1|Page
+
+Policy # 412 Date Approved: February 11, 2026 Date Amended: Responsible Office: Academic Affairs
+2.2. Large Language Models (LLMs): A subset of AI systems trained to generate natural language responses.
+2.3. Permitted: Limited AI use with guidelines. 2.4. Prohibited: No AI use allowed. 2.5. Required: AI must be used in the course. 2.6. Restricted Data: Information protected by law, contract, or policy, including
+FERPA-protected student records; HIPAA-protected health information; confidential personnel or donor records; proprietary research; exportcontrolled data; General Data Protection Regulation (GDPR); Personally Identifiable Information (PII); and any data classified as Restricted by College policy. Such data must not be entered into external AI tools unless an approved, compliant agreement is in place, and use is authorized. For more information on these definitions, see Snow College Policy #226.
+3.0 POLICY FOR STUDENTS 3.1. AI Use in Coursework 3.1.1. AI can be a powerful academic tool when used responsibly. To ensure fairness, transparency, and alignment with course learning outcomes, the following guidelines apply to all student use of AI in coursework at Snow College. 3.1.2. AI may be used as a tool in a variety of ways unless prohibited by the instructor or college or in violation of academic integrity or other policy or laws. 3.1.3. Students must follow the stated AI statements provided in each course syllabus and course materials (Prohibited, Limited, or Required use). 3.1.4. Students are expected to check their course syllabus or with their instructor about the use of AI in specific courses. If a student can't locate the course AI policy or has questions about it, they should contact the instructor. 3.1.5. AI use in coursework shall be acknowledged in accordance with the expectations outlined by the instructor. Faculty may determine when formal attribution is required and when AI use is considered part of normal academic practice. 3.1.6. When courses require approved AI resources, Snow College will strive to ensure adequate student access so that financial barriers do not disadvantage learners.
+2|Page
+
+Policy # 412 Date Approved: February 11, 2026 Date Amended: Responsible Office: Academic Affairs
+3.1.7. Students should understand that anything entered into AI software may become part of the tool’s training set and could be reused later without attribution.
+3.2. AI Use for Research 3.2.1. Snow College is committed to quality academic achievement and equipping our graduates with the intelligence and skills necessary for workplace, community, and personal success. Snow College fosters innovation and recognizes AI’s potential as a professional and creative tool. When not explicitly used within a course, AI policies fall under faculty discretion. Students may consult with their instructor, advisor, supervisor, or department chair for guidance. 3.2.2. Students conducting research involving AI should work closely with their faculty advisor or relevant supervisor to ensure that best practices in their particular field are followed. Methodology, data sources, algorithms, and the role of AI in the project should be clearly documented. 3.2.3. Students conducting human subjects research that involves AI must follow the requirements of the Institutional Review Board (IRB). 3.2.4. Students should additionally be aware of and comply with the data falsification and integrity provisions of the Snow College Academic Integrity Policy.
+3.3. Prohibited AI Use for Students 3.3.1. In alignment with Snow College’s commitment to academic integrity, students are strictly prohibited from using AI tools to engage in academically dishonest practices. This includes, but is not limited to, submitting AI-generated work as their own without appropriate acknowledgment or citation according to instructor policy and coursework instructions. 3.3.2. Students who engage in unauthorized or prohibited use of AI are subject to Snow College’s Academic Integrity Policy, including sanctions for violations ranging from assignment penalties to failing the course to suspension. Sanctions will be applied through established due process under the Student Code of Conduct and Academic Integrity Policy.
+3|Page
+
+Policy # 412 Date Approved: February 11, 2026 Date Amended: Responsible Office: Academic Affairs
+
+3.3.3. Students have academic responsibility for submitted work and are
+
+accountable for their work product. By default, students will be
+
+considered in violation of academic integrity if they:
+
+3.3.3.1.
+
+Use AI without proper acknowledgment according to
+
+instructor policy, coursework instructions, and
+
+Academic Policy.
+
+3.3.3.2.
+
+Use AI without explicit instructor permission where
+
+such use is prohibited.
+
+3.3.3.3.
+
+Fail to verify accuracy of references, citations, and
+
+other relevant information submitted as student work.
+
+3.3.4. Because AI tools are imperfect, students remain responsible for the
+
+accuracy, originality, and integrity of all submitted work. Faculty
+
+discretion governs course-level policies on AI use, and students are
+
+expected to consult their course syllabus and instructor for specific
+
+expectations. Faculty are to consult departmental or college
+
+guidelines for specific expectations.
+
+4.0 GUIDANCE FOR FACULTY 4.1. Faculty play a central role in assuring that significant use of AI in courses is both ethical and effective. Clear expectations, transparency, and an emphasis on academic integrity are essential to ensuring that AI supports learning without compromising core values. 4.2. Faculty Use of AI in Courses 4.2.1. Faculty have discretion to determine whether, when, and how AI may be used, based on the learning outcomes of the course and objectives of the course materials. While Snow College affirms faculty discretion, instructors are encouraged to consider thoughtful AI integration that enriches teaching and learning rather than relying solely on prohibition. 4.2.2. Faculty are encouraged to thoughtfully consider their stance on AI, share their reasoning with students, and remain transparent about their own AI usage in teaching and assessment. 4.2.3. Faculty should define how AI may be used in each course and state those expectations clearly in the syllabus (and, as needed, in announcements and assignment instructions). This includes specifying whether AI is prohibited, allowed with limits, or required for tasks.
+
+4|Page
+
+Policy # 412 Date Approved: February 11, 2026 Date Amended: Responsible Office: Academic Affairs
+
+4.2.4. Faculty should review the course AI policy with students early in the
+
+term and are encouraged to revisit it regularly. Clear guidance
+
+supports student understanding, academic integrity, and consistency
+
+across courses. Sample syllabus statements are available for
+
+instructors on the Snow College AI website.
+
+4.2.5. Cautions and Prohibited AI Use for Faculty
+
+4.2.5.1.
+
+Faculty should understand that anything entered into AI
+
+software may become part of the tool’s training set and
+
+could be reused later without attribution.
+
+4.2.5.2.
+
+In alignment with Snow College’s commitment to
+
+academic integrity, faculty are strictly prohibited
+
+from using AI tools to engage in academically dishonest
+
+practices (see Snow College policies).
+
+4.2.5.3.
+
+Faculty who engage in unauthorized or prohibited use
+
+of AI are subject to departmental or
+
+collegewide
+
+reprimand according to current Advancement and Tenure
+
+or Professional Track policy.
+
+4.2.5.4.
+
+Under no circumstances should restricted student
+
+information [such as personally identifiable information
+
+(PII) or information protected by FERPA] be uploaded
+
+into AI systems without prior authorization of Provost’s
+
+office. Please see Snow’s Data Classification & Handling
+
+Policy and Information Security Policy.
+
+4.2.6. Use of AI Detection Tools
+
+4.2.6.1.
+
+AI detection tools can be useful, but they also come with
+
+limitations. At Snow College, these tools should be used
+
+carefully and always in combination with clear
+
+expectations, strong relationships with students, and
+
+authentic assessments. Faculty are advised to notify
+
+students when AI-detection tools are used and to
+
+corroborate any findings through dialogue or additional
+
+evidence prior to formal action.
+
+4.2.6.2.
+
+Detection results are not a final verdict but a starting
+
+point for a thoughtful review process.
+
+4.2.7. Faculty Who Prohibit AI
+
+4.2.7.1.
+
+Faculty who choose to prohibit AI use in their courses
+
+are encouraged to design assignments that are less
+
+susceptible to AI-generated responses. Such approaches
+
+5|Page
+
+Policy # 412 Date Approved: February 11, 2026 Date Amended: Responsible Office: Academic Affairs
+not only reinforce academic integrity but also support deeper student engagement and skill development. Some ideas for such assignment design include: 4.2.7.1.1. Incorporate more application-based writing that
+requires original thought and personal connection. 4.2.7.1.2. Assign tasks that require proper citation and evaluation of sources. 4.2.7.1.3. Include oral or in-class components to ensure authentic student demonstration of knowledge. 4.2.7.1.4. Design extended projects that move beyond the typical parameters of AI systems.
+6|Page
+
+Policy # 412 Date Approved: February 11, 2026 Date Amended: Responsible Office: Academic Affairs
+Appendix A: Rationale and Commentary
+1. Why Snow College Needs an AI Policy AI is becoming embedded in daily life, higher education, and the workforce. As a rural Utah college, Snow has both challenges (resource constraints, bandwidth gaps, etc.) and opportunities (close-knit community, flexible teaching models). A clear policy ensures we:
+• Safeguard academic integrity while embracing innovation. • Provide faculty flexibility across diverse disciplines. • Protect student and employee privacy in an era of data risk. • Align Snow with peer institutions and national best practices.
+2. Why Faculty Discretion Matters We recognize that AI use is not “one size fits all.” A computer science assignment may welcome coding support from AI, while a writing assignment may prohibit AI except for grammar checking. Allowing course-level discretion ensures AI is applied appropriately within each discipline, while the policy provides consistent guardrails.
+3. Why AI Detection Alone Is Not Reliable AI detection tools are not always consistent. Over-reliance on AI detection tools alone can unfairly penalize students. Snow encourages the use of AI detection tools in tandem with authentic assessments and assignments, disclosure, and citation. Detection tools may be used as one data point but should not serve as the sole basis for misconduct allegations.
+4. Why Transparency & Citation Are Essential Disclosure builds trust and models academic integrity. Just as faculty and students cite sources, they should cite AI assistance. This practice:
+• Reinforces honesty. • Encourages students to reflect on their own contributions. • Normalizes ethical use of emerging tools.
+5. Why Privacy & Security Are Non-Negotiable Consumer AI tools (e.g., ChatGPT free version, Gemini, MidJourney, etc.) often store user inputs. Entering student records, donor data, financials, or proprietary research into these platforms may be equivalent to posting them publicly. Protecting FERPA data and institutional integrity is a legal and ethical obligation.
+7|Page
+
+Policy # 412 Date Approved: February 11, 2026 Date Amended: Responsible Office: Academic Affairs
+6. Why Human Oversight Remains Central AI can summarize, draft, or brainstorm, but it cannot replace human judgment, empathy, or contextual knowledge. Faculty and staff should remain primary graders, advisors, and decision-makers. Faculty and staff should verify AI outputs before use in official communications. Students should use AI to support learning, not replace it. 7. Why Fairness & Access Matter at Snow As a rural, access-oriented institution, Snow serves first-generation, working, and geographically dispersed students. If AI is framed as a “shortcut,” it risks widening learning gaps. If AI is framed as a tool for accessibility, brainstorming, and scaffolding, it can narrow those gaps. Faculty and staff should consider how AI use supports teaching and student success. 8. Why Ongoing Review Is Built In AI continuously evolves. What is cutting-edge today may be outdated tomorrow. By mandating annual review, Snow ensures the policy remains relevant, balanced, and reflective of new risks and opportunities. Updates will be informed by faculty, staff, students, and national best practices.
+8|Page
+
+

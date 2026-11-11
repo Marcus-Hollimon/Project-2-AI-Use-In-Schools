@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://snow.edu/ai/syllabus.html",
+ "final_url": "https://snow.edu/ai/syllabus.html",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T10:50:33-05:00",
+ "sha256": "26ac171289e5487b61146d0cd072dbc92263b12e51e88c9989241d045b03a4fb",
+ "bytes": 28577
+}

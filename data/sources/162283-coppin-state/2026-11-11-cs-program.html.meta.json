@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.coppin.edu/academics/computer-science",
+ "final_url": "https://www.coppin.edu/academics/computer-science",
+ "http_status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T10:48:52-05:00",
+ "sha256": "78f5385702a2a7a80d0ee49fb5373986b9b2a735b6608d02949ba7d7bf418056",
+ "bytes": 95061
+}

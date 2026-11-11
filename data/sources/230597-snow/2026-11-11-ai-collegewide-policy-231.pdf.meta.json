@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://snow.edu/general/policies/download/231%20AI%20Collegewide%20Policy.pdf",
+ "final_url": "https://snow.edu/general/policies/download/231%20AI%20Collegewide%20Policy.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T10:50:32-05:00",
+ "sha256": "660342303e4f71a1d7c42dcc2bd81234b92ae5a84257131722eb9fd050681882",
+ "bytes": 254250
+}

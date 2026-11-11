@@ -1,8 +1,8 @@
 # State: read this first
 
-Current phase: 2 Study (pilot: 3 of 5 schools coded and passing; Coppin State and Snow are next)
+Current phase: 2 Study (pilot done: 5 of 15 coded and passing under codebook v2; 10 schools next)
 
-Last updated: 2026-11-11T10:42:58-05:00 by Claude (session a9056776), just before the second `/compact`.
+Last updated: 2026-11-11T10:54:17-05:00 by Claude (session a9056776), just before the third `/compact`.
 
 ## Deadline and pace
 - Everything is due **2 PM EST, Thu Nov 12 2026** (Marcus, 2026-11-11).
@@ -15,28 +15,55 @@ Last updated: 2026-11-11T10:42:58-05:00 by Claude (session a9056776), just befor
 ## FIRST, right after the /compact
 1. Take a usage reading marked "after /compact" in `progress/usage.md` (tool: get_usage), with the
    time from `date -Iseconds`. Run `uv run --project pipeline python pipeline/build.py`; C1 to C3 must pass.
-2. Continue the pilot: Coppin State 162283 (coppin.edu), then Snow 230597 (snow.edu). Same procedure
-   as below. Then do the "After the 5" step.
+2. Code the remaining 10 schools in this order (same procedure as below, codebook **v2**; `{domain}`
+   is the last two parts of the sample's website, which is what the checker uses):
+   | unitid | slug | domain |
+   |---|---|---|
+   | 234076 | 234076-virginia | virginia.edu |
+   | 166683 | 166683-mit | mit.edu |
+   | 218539 | 218539-presbyterian | presby.edu |
+   | 220604 | 220604-le-moyne-owen | loc.edu |
+   | 213659 | 213659-luzerne | luzerne.edu |
+   | 201885 | 201885-cincinnati | uc.edu |
+   | 204796 | 204796-ohio-state | osu.edu |
+   | 201195 | 201195-baldwin-wallace | bw.edu |
+   | 202514 | 202514-defiance | defiance.edu |
+   | 202222 | 202222-columbus-state | cscc.edu |
+   Prepare a /compact after every 3 schools (STATE.md, commit, reading "just before /compact").
+   Record a get_usage reading per school in `progress/pilot-cost.md` under a new "Main coding" table.
+3. After all 15 pass: run `check_study.py` with no `--only` (must say "All checks pass: True"),
+   record the study tests, then the R1 re-fetch report, the acceptance checks and Marcus's
+   checklist in `specs/phase-2-study.md`, then Phase 3.
 
-## Pilot so far (details and costs in `progress/pilot-cost.md`)
-- Minnesota 174066, Johns Hopkins 162928, Valparaiso 152600: coded, all pass `check_study.py`;
-  committed and pushed (116489e has the first two). Average 3.3 five-hour points and about 41,500
-  tokens of context per school; 5-hour was 34% at 10:42, resets 14:40 EST.
+## Pilot result (details and costs in `progress/pilot-cost.md`)
+- Minnesota 174066, Johns Hopkins 162928, Valparaiso 152600, Coppin State 162283, Snow 230597:
+  coded and all pass `check_study.py`. Average 2.6 five-hour points and about 35,800 tokens of
+  context per school, falling as the procedure settled. Projection: the 10 left take about 35
+  points with compacts; 5-hour was 40% at 10:52 and resets 14:40 EST.
+- **Codebook v2 adopted** (all four pilot candidates; reasons in `study/codebook.md`, "Changes in
+  version 2"): pre-2023 course pages count as "no public syllabus found"; example syllabus language
+  telling students to disclose is "encouraged"; news on the department site is department text;
+  a rule against only "inappropriate or excessive" use is "permit with conditions" ("unauthorized"
+  use is "restrict"). Recoded the pilot (spec R2): one value changed (Johns Hopkins `se_courses`),
+  saved in `data/coded/codebook-v2-recode.json`. `values.json` and `codebook.json` say version 2.
 - Check S3 changed during the pilot: browser text (`--rendered`) passes with a raw curl copy at
   HTTP 200, or at HTTP 403 plus a written `fetch_reason` on the value (spec and test updated; sabotage
   run failed exactly the new test). Not yet needed by any coded value.
-- `.gitattributes` now stores `data/sources/**` byte-for-byte (`-text`); without it git rewrote line
+- `.gitattributes` stores `data/sources/**` byte-for-byte (`-text`); without it git rewrote line
   endings in archives, which would break S2 hashes on a fresh checkout.
-- Codebook v2 candidates (pre-2023 course pages; example syllabus language for disclosure; department
-  news as department text) are listed in `pilot-cost.md`. Decide after school 5; if adopted, recode the
-  pilot schools (spec R2).
-- Helpers that worked: a scratch text viewer (`showtext.py` in the session scratchpad: prints a saved
-  page's visible text, filtered by a regex) and `pdftotext -enc UTF-8 <pdf> <pdf>.txt` for the PDF
-  sidecar. Filter page text by regex rather than printing whole pages; it keeps context growth down.
+- Helpers: a scratch text viewer (`showtext.py` in the session scratchpad
+  `C:/Users/junni/AppData/Local/Temp/claude/3662653f92cacdd2/a9056776-4951-4636-a9ad-acb1dbccb955/scratchpad/`:
+  `python -I showtext.py <file> [regex] [maxchars]` prints a saved page's visible text filtered by
+  a regex) and `pdftotext -enc UTF-8 <pdf> <pdf>.txt` for the PDF sidecar. For PDFs, `grep -o -iE
+  ".{0,120}(pattern).{0,120}"` on the .txt; never print whole sections (one 45-line print cost 8k tokens).
+- `save_page.py` adds the file extension itself: name a PDF `student-handbook`, not `student-handbook.pdf`.
 - Do NOT retry curl with extra browser headers when a site returns 403: the permission system refused
   it as bot-check circumvention. Read such pages in the browser pane instead.
 - ddc7d76a: checked with Marcus's permission (metadata only); it is the retired canon-keeper project
   (Sep 9), not this one. Closed.
+- Prompts: Marcus reaffirmed at 10:47 that all his prompts are published in full (public repo,
+  `data/derived/contributions.json`); he may ask to hide some later. Hiding later does not remove
+  them from git history.
 
 ## Where things stand
 - Phases 0 and 1: done. Live site still a skeleton:
@@ -52,12 +79,10 @@ Last updated: 2026-11-11T10:42:58-05:00 by Claude (session a9056776), just befor
 - Tools: `study/save_page.py` (curl archive plus `.meta.json` with status, final URL, SHA-256;
   `--rendered` for JavaScript pages, needs a raw curl copy of the same URL too),
   `study/check_study.py` (writes `data/coded/checks.json`). Commands in the project CLAUDE.md.
-- Tests: study 31/31 (mutation run with S2 disabled failed exactly the S2 test; restored), pipeline
+- Tests: study 32/32 (latest `validation/runs/2026-11-11T15-53-30-496Z_study.json`); earlier study 31/31 (mutation run with S2 disabled failed exactly the S2 test; restored), pipeline
   12/12, web 17/17; all recorded. CI runs all three suites before deploy (pushed 5ccc209).
 
-## Pilot: how to code one school (spec task 4)
-Schools, one per stratum: Minnesota 174066 (umn.edu), Johns Hopkins 162928 (jhu.edu), Valparaiso
-152600 (valpo.edu), Coppin State 162283 (coppin.edu), Snow 230597 (snow.edu).
+## How to code one school (spec task 4; same for the pilot and the 10 left)
 For each school, slug `<unitid>-<short name>` (e.g. `174066-minnesota`):
 1. Run the 4 required searches from `codebook.json` with WebSearch, `{domain}` = the domain above.
    Write `data/sources/<slug>/search-log.md`: one `## Search: <exact query>` heading per search, then
@@ -68,15 +93,15 @@ For each school, slug `<unitid>-<short name>` (e.g. `174066-minnesota`):
    exactly (quotes at most 40 words). If curl gets a 403 or an empty JavaScript shell, save the
    browser pane's text with `--rendered` (the raw curl copy must also exist with HTTP 200).
 4. Add the school to `data/coded/values.json`:
-   `{"codebook_version": 1, "schools": [{"unitid", "slug", "name", "values": {var: entry}}]}`.
+   `{"codebook_version": 2, "schools": [{"unitid", "slug", "name", "values": {var: entry}}]}`.
    Entry with evidence: value, quote, url, archive (repo-relative path), source_type, optional
    cue_reason, optional domain_reason. Absence entry: value plus `reviewed` (list of archive paths)
    or `search_log` (path). For every "none found" or "no public syllabus found", also run and log
    the 2 `second_searches`.
 5. Run `check_study.py --only <unitid>`; fix until it passes. Note time and a get_usage reading per
    school in `progress/pilot-cost.md` (time taken, 5-hour points, context growth).
-After the 5: report cost per school and the projection for 15 against the deadline and the
-5-hour window; change the codebook only as version 2 with reasons (spec R2); prepare a /compact.
+Codebook is frozen at version 2 for the 10 remaining schools. A further change would be version 3,
+with reasons in `codebook.md`, and every coded school recoded (spec R2); avoid it unless a rule is wrong.
 
 ## Still open
 - Nothing waiting on Marcus.

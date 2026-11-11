@@ -1,5 +1,5 @@
 {
- "codebook_version": 1,
+ "codebook_version": 2,
  "schools": [
   {
    "unitid": "174066",
@@ -29,7 +29,7 @@
      "url": "https://cse.umn.edu/cs/news/cse-prepares-umn-students-ai-powered-workplace",
      "archive": "data/sources/174066-minnesota/2026-11-11-cse-news-ai-workplace.html",
      "source_type": "news or announcement",
-     "note": "Only department text on AI found; the department's academic conduct policy does not mention AI. The same paragraph says some introductory courses ban AI and many others allow it with conditions."
+     "note": "Only department text on AI found; the department's academic conduct policy does not mention AI. The same paragraph says some introductory courses ban AI and many others allow it with conditions. Codebook v2 states that news on the department's site counts as department text."
     },
     "dept_tone": {
      "value": "positive",
@@ -113,14 +113,15 @@
      "url": "https://teaching.jhu.edu/university-teaching-policies/generative-ai/guidelines/",
      "archive": "data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-guidelines.html",
      "source_type": "guidance page",
-     "cue_reason": "Listed under example guidelines that faculty can share with students, so it is advice for courses to adopt, not a rule; that makes it encouraged even though the sentence is an imperative."
+     "cue_reason": "Listed under example guidelines that faculty can share with students, so it is advice for courses to adopt, not a rule; codebook v2 codes such example language 'encouraged'. The quote has a disclosure cue but no 'should' cue, hence this reason."
     },
     "se_courses": {
-     "value": "not addressed",
+     "value": "no public syllabus found",
+     "search_log": "data/sources/162928-johns-hopkins/search-log.md",
      "reviewed": [
       "data/sources/162928-johns-hopkins/2026-11-11-oose-course-page.html"
      ],
-     "note": "The only page for EN.601.421 on jhu.edu is from Fall 2018, before ChatGPT; codebook v1 codes it 'not addressed'. Flagged for codebook v2: course pages from before 2023 should not count. The Spring 2024 syllabus on Notion did not load."
+     "note": "EN.601.421 Object-Oriented Software Engineering: the only page on jhu.edu is from Fall 2018, before ChatGPT, so under codebook v2 it does not count. The Spring 2024 syllabus on Notion (off domain) did not load."
     }
    }
   },
@@ -173,12 +174,126 @@
      "url": "https://intra.valpo.edu/cital/wp-content/uploads/sites/13/2025/08/Syllabus-Elements_revised-_2025.pdf",
      "archive": "data/sources/152600-valparaiso/2026-11-11-cital-syllabus-elements-2025.pdf",
      "source_type": "policy page",
-     "cue_reason": "Part of the suggested syllabus language that instructors may adopt, not a rule on its own; saying how AI contributed is a disclosure."
+     "cue_reason": "Part of the suggested syllabus language that instructors may adopt, not a rule on its own; codebook v2 codes such example language 'encouraged'. Saying how AI contributed is a disclosure."
     },
     "se_courses": {
      "value": "no public syllabus found",
      "search_log": "data/sources/152600-valparaiso/search-log.md",
      "note": "CS 358 Software Design and Development: the only syllabus found (Spring 2010) now returns HTTP 403."
+    }
+   }
+  },
+  {
+   "unitid": "162283",
+   "slug": "162283-coppin-state",
+   "name": "Coppin State University",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "permit with conditions",
+     "quote": "Inappropriate or excessive use of any Artificial Intelligence (AI ) tool or resource for course work or student dependent graded assignments.",
+     "url": "https://www.coppin.edu/sites/default/files/pdf-library/2025-10/Coppin-State-University-Student-Handbook.pdf",
+     "archive": "data/sources/162283-coppin-state/2026-11-11-student-handbook-2025.pdf",
+     "source_type": "handbook",
+     "cue_reason": "The clause bans only inappropriate or excessive use, so ordinary use is not banned by default; codebook v2 codes such a limit 'permit with conditions'. The quote has no permission cue word, hence this reason.",
+     "note": "The only university text on student AI use is this one Code of Conduct clause (Article IV 1.b) in the 2025-26 Student Handbook."
+    },
+    "univ_tone": {
+     "value": "cautionary",
+     "quote": "Inappropriate or excessive use of any Artificial Intelligence (AI ) tool or resource for course work or student dependent graded assignments.",
+     "url": "https://www.coppin.edu/sites/default/files/pdf-library/2025-10/Coppin-State-University-Student-Handbook.pdf",
+     "archive": "data/sources/162283-coppin-state/2026-11-11-student-handbook-2025.pdf",
+     "source_type": "handbook",
+     "note": "AI appears in university rules only as a form of misconduct. The AI certificate training page (not a rule) is upbeat, but the handbook is the more authoritative source (decision rule 1)."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/162283-coppin-state/search-log.md",
+     "reviewed": [
+      "data/sources/162283-coppin-state/2026-11-11-cs-program.html"
+     ]
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/162283-coppin-state/search-log.md"
+    },
+    "collaboration": {
+     "value": "not discussed",
+     "reviewed": [
+      "data/sources/162283-coppin-state/2026-11-11-student-handbook-2025.pdf",
+      "data/sources/162283-coppin-state/2026-11-11-cs-program.html",
+      "data/sources/162283-coppin-state/2026-11-11-idea-office.html"
+     ]
+    },
+    "disclosure": {
+     "value": "not stated",
+     "reviewed": [
+      "data/sources/162283-coppin-state/2026-11-11-student-handbook-2025.pdf"
+     ]
+    },
+    "se_courses": {
+     "value": "no public syllabus found",
+     "search_log": "data/sources/162283-coppin-state/search-log.md",
+     "note": "COSC 409 Software Engineering is listed in the curriculum; no syllabus is public."
+    }
+   }
+  },
+  {
+   "unitid": "230597",
+   "slug": "230597-snow",
+   "name": "Snow College",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "permit with conditions",
+     "quote": "AI may be used as a tool in a variety of ways unless prohibited by the instructor or college or in violation of academic integrity or other policy or laws.",
+     "url": "https://snow.edu/general/policies/download/412%20AI%20Classroom%20Policy.pdf",
+     "archive": "data/sources/230597-snow/2026-11-11-ai-classroom-policy-412.pdf",
+     "source_type": "policy page",
+     "cue_reason": "States a default of allowed use; the conditions are instructor or college prohibition and integrity rules. 'may be used' is the permission cue, phrased passively.",
+     "note": "Faculty may set Prohibited, Limited or Required use for each course, but the policy states a default, so the default is coded (codebook: code the default)."
+    },
+    "univ_tone": {
+     "value": "positive",
+     "quote": "AI has transformative potential in teaching, research, service, and administration.",
+     "url": "https://snow.edu/general/policies/download/412%20AI%20Classroom%20Policy.pdf",
+     "archive": "data/sources/230597-snow/2026-11-11-ai-classroom-policy-412.pdf",
+     "source_type": "policy page",
+     "note": "Mixed: the opening section names risks (inaccuracy, bias, privacy) right after the benefits, but the policy leads with opportunity, workforce preparation and 'embracing innovation', and plans student access when courses require AI."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/230597-snow/search-log.md",
+     "reviewed": [
+      "data/sources/230597-snow/2026-11-11-cs-dept.html",
+      "data/sources/230597-snow/2026-11-11-cs2450-syllabus.html"
+     ]
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/230597-snow/search-log.md"
+    },
+    "collaboration": {
+     "value": "in passing",
+     "quote": "If AI is framed as a tool for accessibility, brainstorming, and scaffolding, it can narrow those gaps.",
+     "url": "https://snow.edu/general/policies/download/412%20AI%20Classroom%20Policy.pdf",
+     "archive": "data/sources/230597-snow/2026-11-11-ai-classroom-policy-412.pdf",
+     "source_type": "policy page",
+     "note": "One sentence in the policy's rationale, addressed to faculty; no page reviewed develops AI as a partner further."
+    },
+    "disclosure": {
+     "value": "required",
+     "quote": "AI use in coursework shall be acknowledged in accordance with the expectations outlined by the instructor.",
+     "url": "https://snow.edu/general/policies/download/412%20AI%20Classroom%20Policy.pdf",
+     "archive": "data/sources/230597-snow/2026-11-11-ai-classroom-policy-412.pdf",
+     "source_type": "policy page"
+    },
+    "se_courses": {
+     "value": "not addressed",
+     "reviewed": [
+      "data/sources/230597-snow/2026-11-11-cs2450-syllabus.html"
+     ],
+     "note": "CS 2450 Introduction to Software Engineering: the college's course syllabus (approved Fall 2025) has no AI statement. Section syllabi from instructors are not public."
     }
    }
   }
