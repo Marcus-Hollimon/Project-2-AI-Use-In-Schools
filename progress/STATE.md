@@ -1,8 +1,10 @@
 # State: read this first
 
-Current phase: 3 Interfaces (in progress; spec: specs/phase-3-interfaces.md). Phase 2 Study is done.
+Current phase: 3 Interfaces is DONE (Marcus's checklist ticked). Next: Phase 4 Validation, spec first.
 
-Last updated: 2026-11-11T12:11:20-05:00 by Claude (session a9056776), just before the eighth `/compact` (Phase 3 tabs built).
+Last updated: 2026-11-11T12:22:58-05:00 by Claude (session a9056776), just before the eighth `/compact` (Phase 3 end).
+
+## Phase 3 done: Marcus's checklist ticked 2026-11-11T12:22:58-05:00 from his screenshots
 
 ## Phase 3 tabs built (11:58 to 2026-11-11T12:11:20-05:00 Nov 11; 5-hour 74% to 85%)
 - Spec: `specs/phase-3-interfaces.md`. All four tabs read repository files at build time through
@@ -84,20 +86,20 @@ Last updated: 2026-11-11T12:11:20-05:00 by Claude (session a9056776), just befor
   rule and the per-turn hook; and no plan mode. "Let's just try and get this done properly."
 
 ## FIRST, right after the /compact
-1. Take a usage reading marked "after /compact" in `progress/usage.md` (tool: get_usage) as a full
-   7-column row in the main table (Phase 3), with the time from `date -Iseconds`. build.py now stops
-   on a malformed row. Run `uv run --project pipeline python pipeline/build.py`.
-2. Check the live site in the browser pane (https://marcus-hollimon.github.io/Project-2-AI-Use-In-Schools/):
-   DONE 12:13 (commit 862b16f live; acceptance boxes ticked). If a later deploy fails, read
-   the run log with `gh run view --log-failed`. Then tick the first three acceptance boxes in
-   `specs/phase-3-interfaces.md` with the run file names above.
-3. Hand Marcus the Phase 3 checklist (4 steps, in the spec). When he confirms: Phase 3 end (usage
-   reading, STATE.md, log, commit, `/compact`).
-4. Then Phase 4 Validation (`specs/00-project.md`: "Any claim on the site traces to a test or a
-   source"): spec first. Idea: a list of every claim the site makes, each with the test or file that
-   backs it, checked by a test.
-5. Budget: 5-hour was 85% at 12:12 and resets 14:40 EST. A chunk like Phase 3's build costs about
-   11 points, so Phase 4's build likely has to wait for the reset; the Phase 3 wrap-up fits before it.
+1. Take a usage reading marked "after /compact (phase start)" in `progress/usage.md` (tool:
+   get_usage), as a full 7-column row inserted in the main table (Phase 4), with the time from
+   `date -Iseconds`. Never append at the end of the file: that lands below "Cost per phase".
+   Then update the header line here to "Current phase: 4" BEFORE recording any test run (the
+   recorders read the phase from it). Run `uv run --project pipeline python pipeline/build.py`.
+2. Phase 4 Validation (`specs/00-project.md`: "Validation tab complete, evidence review"; exit check:
+   "Any claim on the site traces to a test or a source"). Write `specs/phase-4-validation.md`
+   FIRST. Idea: a list of every claim the site makes (each number and sentence that states a fact),
+   each linked to the test or file that backs it, shown on the Validation tab and checked by a test
+   that fails when a claim has no backing. Also consider real errors caught outside test runs (the
+   usage.md rows, the CIP frame, the guessed times, the text-fragment highlight), today only in
+   log.md and the specs.
+3. Budget: 5-hour was 87% at 12:23 and resets 14:40 EST. Phase 3's build cost about 11 points.
+   Write the Phase 4 spec before the reset if it fits; build after.
 
 ## Pilot result (details and costs in `progress/pilot-cost.md`)
 - Minnesota 174066, Johns Hopkins 162928, Valparaiso 152600, Coppin State 162283, Snow 230597:

@@ -307,6 +307,17 @@
    "responseTime": "2026-11-11T17:11:40.131Z",
    "nearestDifference": 664,
    "pass": true
+  },
+  {
+   "reading": "2026-11-11T17:22:58Z",
+   "app": 219395,
+   "between": [
+    217858,
+    220696
+   ],
+   "responseTime": "2026-11-11T17:22:32.890Z",
+   "nearestDifference": 1301,
+   "pass": true
   }
  ],
  "C2_completeness": [
@@ -325,10 +336,11 @@
   {
    "session": "a9056776-4951-4636-a9ad-acb1dbccb955",
    "subagent": false,
-   "apiRequests": 470,
-   "uniqueResponses": 469,
+   "apiRequests": 476,
+   "uniqueResponses": 474,
    "unansweredRequests": [
-    "2026-11-11T16:53:13.167Z"
+    "2026-11-11T16:53:13.167Z",
+    "2026-11-11T17:22:15.570Z"
    ],
    "newestRecordIsUnansweredRequest": false,
    "extra": 0,
@@ -386,19 +398,19 @@
   }
  ],
  "C4_inflation": {
-  "usageRows": 1660,
-  "uniqueResponses": 627,
+  "usageRows": 1670,
+  "uniqueResponses": 632,
   "naive": {
-   "input": 3398,
-   "cacheWrite": 5976432,
-   "cacheRead": 252139964,
-   "output": 2400393
+   "input": 3418,
+   "cacheWrite": 5998246,
+   "cacheRead": 254287610,
+   "output": 2413183
   },
   "deduplicated": {
-   "input": 1282,
-   "cacheWrite": 1753446,
-   "cacheRead": 95820373,
-   "output": 646466
+   "input": 1292,
+   "cacheWrite": 1762326,
+   "cacheRead": 96891823,
+   "output": 652109
   }
  },
  "privacy": [

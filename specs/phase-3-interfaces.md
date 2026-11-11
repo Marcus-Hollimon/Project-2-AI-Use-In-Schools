@@ -4,7 +4,7 @@ Goal: replace the four "Not built yet" pages on the site with pages built from t
 project already records, so a reader can check every number and quote without opening the
 repository.
 
-Status: written by Claude 2026-11-11 at Phase 3 start. Marcus decided in advance (2026-11-11):
+Status: DONE 2026-11-11T12:22:58-05:00 (acceptance checks and Marcus's checklist ticked). Written by Claude 2026-11-11 at Phase 3 start. Marcus decided in advance (2026-11-11):
 no hand-coding, tests prove quality, finish properly. Phase 4 then reviews the evidence: every
 claim on the site traces to a test or a source.
 
@@ -138,13 +138,17 @@ reading in the file is in the readings table.
 
 ## Marcus's checklist (no code needed)
 Open the live site: https://marcus-hollimon.github.io/Project-2-AI-Use-In-Schools/
-1. [ ] **Research findings.** The page says the findings are descriptive. In any table, the
+1. [x] **Research findings.** The page says the findings are descriptive. In any table, the
    numbers in each national column add up to 2 and the Ohio column adds up to 5. Open MIT and
    click "Open the live page at this quote" for the software engineering course: the page opens
    with the sentence highlighted (or, in an older browser, use Ctrl+F on a few words).
-2. [ ] **Validation.** Set the status filter to "had failures": every run shown has a failed
+   (Marcus, screenshots, 2026-11-11: MIT software engineering link opened with the sentence highlighted.)
+2. [x] **Validation.** Set the status filter to "had failures": every run shown has a failed
    count above 0. Type `test_s2` in the search box: runs from the study suite appear.
-3. [ ] **Contributions.** Filter to Marcus: only your prompts, decisions and commands remain. Open
+   (Marcus, screenshots, 2026-11-11: "had failures" plus search `test_s2` showed 1 run, the S2 mutation, 1 failed.)
+3. [x] **Contributions.** Filter to Marcus: only your prompts, decisions and commands remain. Open
    one of your prompts: Claude's reply is under it.
-4. [ ] **Token usage.** Four separate token totals are shown. The reset table has a /clear row
+   (Marcus, screenshots, 2026-11-11: one of his prompts opened with Claude's reply under it.)
+4. [x] **Token usage.** Four separate token totals are shown. The reset table has a /clear row
    (Nov 11, about 10:00) and several /compact rows.
+   (Marcus, screenshots, 2026-11-11: "Token tables are there".)

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T17:11:54.107771Z",
+ "generatedAt": "2026-11-11T17:22:59.640104Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -1197,13 +1197,55 @@
    "phase": "3"
   },
   {
-   "time": "2026-11-11T17:11:49.251000Z",
+   "time": "2026-11-11T17:11:54Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 3 tabs built: live site checked, acceptance boxes ticked, STATE and usage before the eighth /compact",
+   "commit": "afed3f4",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "3"
+  },
+  {
+   "time": "2026-11-11T17:12:14.834000Z",
    "actor": "Claude",
    "kind": "reply",
    "turn": 23,
-   "text": "The usage reading has to go inside the main table, not at the end of the file where my earlier rows went wrong:",
-   "toolCalls": 99,
+   "text": "The four tabs on the site now show real data, and the live site is running this version (commit 862b16f). Every page reads the project's own files when the site is built, so nothing on it is typed in by hand.\n\n**What each tab shows:**\n- **Research findings:**\n  - A \"descriptive only\" label at the top.\n  - One count table per question, with a column for each national stratum and a separate Ohio column. Ohio is never added into the national numbers.\n  - All 15 schools. Opening a school shows each quote with two links: one opens the live page scrolled to that sentence and highlighted, the other opens the saved copy.\n- **Validation:**\n  - All 28 recorded test runs, filterable by phase, suite and status, with a search box.\n  - An \"Errors caught\" list.\n  - The study checks for every school.\n- **Contributions:**\n  - All 141 timeline entries. Each of your prompts has Claude's reply folded under it.\n  - Filters by person, kind and phase.\n- **Token usage:**\n  - The four token classes shown separately, and a note on how double-counting was removed.\n  - Totals by phase and every plan-limit reading.\n  - A table comparing your one /clear with the 8 /compacts.\n\n**Three of my own bugs, found and fixed on the way:**\n1. **Seven usage readings were misread.** Since 11:08 I had been writing them with two columns missing. The token data read \"66\" as a description and \"195,190\" as the weekly percent, and nothing flagged it. The rows are repaired, and the build now stops if a row is malformed.\n2. **The quote links highlighted the wrong passage on MIT's page.** They matched only a quote's first and last few words, and an earlier sentence also starts \"You may not use\". The links now match the whole quote. I opened the MIT link and it now highlights exactly that sentence, including the part your Ctrl+F couldn't find.\n3. **The study-check table showed \"FAIL\" for checks that didn't apply.** For example, a school with no quotes has nothing for the quote checks to look at. Those cells now say \"n/a\".\n\nThree test runs were recorded while my status file still said Phase 2. I changed their phase to 3, and each file now says so in a \"correction\" note that appears on the Validation page.\n\n**Tests:** Web tests passed 37 of 37 and pipeline tests passed 13 of 13, both recorded. I also planted a bug that adds Ohio into the national counts, and 2 tests failed on it, as they should.\n\n**Your checklist** is in [specs/phase-3-interfaces.md](specs/phase-3-interfaces.md). Open https://marcus-hollimon.github.io/Project-2-AI-Use-In-Schools/ and:\n1. **Research findings:** in any table, each national column adds up to 2 and the Ohio column to 5. Open MIT and click \"Open the live page at this quote\" on the software engineering course: the sentence should be highlighted.\n2. **Validation:** set Status to \"had failures\": every run shown has a failed count above 0. Then type `test_s2` in the search box: study runs appear.\n3. **Contributions:** set Who to Marcus: only your entries remain. Open one of your prompts and check that Claude's reply is under it.\n4. **Token usage:** four separate token totals are shown, and the reset table has one /clear row (Nov 11, about 10:00) and several /compact rows.\n\n**Budget:** the 5-hour window is at 86% and resets at 14:40. Building Phase 3 cost about 11 points. Closing Phase 3 fits before the reset, but building Phase 4 probably has to wait for it.\n\nThe state file is updated, committed and pushed (afed3f4). Type this to compact:\n\n```\n/compact Phase 3 tabs built and live (862b16f; web 37/37, pipeline 13/13 recorded; acceptance boxes ticked). Next per progress/STATE.md \"FIRST, right after the /compact\": usage reading as a full 7-column row, build.py, then Marcus's 4-step Phase 3 checklist, then Phase 4 spec. Keep: Marcus's decisions (no hand-coding, tests prove quality; no Coaching sections; no plan mode; publish all prompts), deadline 2 PM Nov 12, 5-hour window is the constraint (86% at 12:12, resets 14:40 EST), timestamps only from date -Iseconds, no retrying blocked downloads with browser-like headers.\n```",
+   "toolCalls": 100,
    "phase": "3"
+  },
+  {
+   "time": "2026-11-11T17:22:15.265000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 24,
+   "text": "Token tables are there.\n[3 image(s) attached, not published]",
+   "phase": "3"
+  },
+  {
+   "time": "2026-11-11T17:22:15.265000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 24,
+   "text": "",
+   "toolCalls": 5,
+   "phase": "3"
+  },
+  {
+   "time": "2026-11-11T17:22:58Z",
+   "actor": "Marcus",
+   "kind": "milestone",
+   "phase": "3",
+   "text": "Phase 3 checklist done from the live site: MIT quote link highlights the sentence, failure filter plus search finds the S2 mutation run, replies sit under prompts, token tables present.",
+   "evidence": "specs/phase-3-interfaces.md"
+  },
+  {
+   "time": "2026-11-11T17:22:58Z",
+   "actor": "Claude",
+   "kind": "milestone",
+   "phase": "3",
+   "text": "Phase 3 done: all acceptance checks and Marcus's checklist ticked. Prepared the eighth /compact (phase end).",
+   "evidence": "specs/phase-3-interfaces.md; progress/STATE.md"
   }
  ]
 }
