@@ -1,8 +1,23 @@
 # State: read this first
 
-Current phase: 2 Study (all 15 schools coded and passing under codebook v2; Phase 2 wrap-up next: R1 re-fetch, acceptance checks)
+Current phase: 2 Study is DONE (all acceptance checks ticked). Next: Phase 3 Interfaces, spec first.
 
-Last updated: 2026-11-11T11:24:12-05:00 by Claude (session a9056776), just before the sixth `/compact`.
+Last updated: 2026-11-11T11:33:07-05:00 by Claude (session a9056776), just before the seventh `/compact` (Phase 2 end).
+
+## Phase 2 done (wrap-up 11:28 to 2026-11-11T11:33:07-05:00 Nov 11; 5-hour 69% to 71%)
+- R1 re-fetch: `study/refetch.py` fetches every archived URL again with save_page.py's exact curl
+  command into a temp folder, compares SHA-256, and for changed pages looks for every coded quote in
+  the new copy. Report: `data/coded/refetch-report.md` and `.json`. Final run: 69 pages, 41
+  unchanged, 26 changed (HTML that changes bytes per load), 2 refused (HTTP 403, no coded quotes),
+  **0 coded quotes missing**. Some sites (Johns Hopkins teaching pages) answer 403 on one run and 200
+  on the next; a 403 is reported as "refused", not "gone". Follow-up notes, including a browser-pane
+  check of the Johns Hopkins guidelines page, live in `data/coded/refetch-notes.md` and are copied
+  into the report on every run.
+- Recorded at Phase 2 end: web 17/17 (`validation/runs/2026-11-11T16-32-19-757Z_web.json`), pipeline
+  12/12 (`2026-11-11T16-32-23-272Z_pipeline.json`), study 33/33 (`2026-11-11T16-32-24-131Z_study.json`);
+  the mutation run (S2 disabled, 1 failed) is `2026-11-11T15-20-17-071Z_study.json`. check_study: all
+  15 PASS. All four acceptance boxes in `specs/phase-2-study.md` are ticked.
+- Marcus's 3-step checklist (in the spec) was handed to him at Phase 2 end; not yet confirmed done.
 
 ## Main coding done (11:16 to 11:24 Nov 11; 5-hour 59% to 66%)
 - `check_study.py` with no `--only`: all 15 PASS, "All checks pass: True" (11:24:02). Study tests
@@ -57,18 +72,15 @@ Last updated: 2026-11-11T11:24:12-05:00 by Claude (session a9056776), just befor
 ## FIRST, right after the /compact
 1. Take a usage reading marked "after /compact" in `progress/usage.md` (tool: get_usage), with the
    time from `date -Iseconds`. Run `uv run --project pipeline python pipeline/build.py`; C1 to C3 must pass.
-2. Coding is done (all 15 pass). Finish Phase 2 per `specs/phase-2-study.md` "Acceptance checks":
-   a. **R1 re-fetch**: write a small script (e.g. `study/refetch.py`) that fetches every source URL
-      in `data/sources/*/*.meta.json` again (curl, no extra headers), compares the SHA-256 with the
-      saved one, and writes a report (`data/coded/refetch-report.json` plus a short Markdown
-      summary): unchanged, changed, gone. A report, not a failure. Rendered-text records have no
-      byte hash to compare; list them separately.
-   b. Mutation run for the study tests is already recorded (earlier, S2 disabled); confirm in
-      `validation/runs/` and tick it.
-   c. Run and record web tests (`npm run test:record` in `web/`) and pipeline tests
-      (`uv run --project pipeline python pipeline/record_tests.py "label"`).
-   d. Tick the acceptance boxes in the spec, write the phase-end log row and usage reading, tell
-      Marcus his 3-step checklist, and prepare the phase-end /compact. Then Phase 3 (write its spec first).
+2. Start **Phase 3 Interfaces** (`specs/00-project.md`: "The four tabs filled with real data"; exit
+   check: Marcus's checklist per tab). Write `specs/phase-3-interfaces.md` FIRST: per tab (Research
+   findings from `data/coded/values.json` and `checks.json`; Validation from `validation/runs/` and
+   the study checks; Contributions from `progress/` and `data/derived/`; Token usage from
+   `progress/usage.md` and `data/derived/`), what it shows, the data file it reads, its tests, and a
+   non-programmer checklist. Findings must be labeled descriptive (2 schools per stratum; Ohio 5
+   separate, never pooled). Then build, test (`npm run test:record` in `web/`), push (Pages deploys).
+3. Budget: 5-hour was 71% at Phase 2 end and resets 14:40 EST. Keep chunks small; prepare a
+   `/compact` after each tab or each ~100k tokens.
 
 ## Pilot result (details and costs in `progress/pilot-cost.md`)
 - Minnesota 174066, Johns Hopkins 162928, Valparaiso 152600, Coppin State 162283, Snow 230597:

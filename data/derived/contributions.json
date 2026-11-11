@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T16:24:43.833005Z",
+ "generatedAt": "2026-11-11T16:33:08.233538Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -982,20 +982,57 @@
    "text": "continue"
   },
   {
-   "time": "2026-11-11T16:24:08.477000Z",
-   "actor": "Claude",
-   "kind": "reply",
-   "turn": 20,
-   "text": "All 15 schools pass every check and the study tests pass 33/33. Now recording costs, updating STATE.md and committing before the compact.",
-   "toolCalls": 95
-  },
-  {
    "time": "2026-11-11T16:24:12Z",
    "actor": "Claude",
    "kind": "milestone",
    "phase": "2",
    "text": "Main coding done: Ohio State, Baldwin Wallace, Defiance, Columbus State coded; all 15 schools pass check_study.py (All checks pass: True); study tests 33/33",
    "evidence": "data/coded/checks.json; validation/runs/2026-11-11T16-24-02-902Z_study.json"
+  },
+  {
+   "time": "2026-11-11T16:24:50Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 2: all 15 schools coded and passing (Ohio State, Baldwin Wallace, Defiance, Columbus State)",
+   "commit": "5ebd799",
+   "note": "written by Claude, pushed from Marcus's account"
+  },
+  {
+   "time": "2026-11-11T16:25:12.238000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 20,
+   "text": "All 15 schools are coded. The full check passes for every school (\"All checks pass: True\"), and the study tests pass 33/33. The last four took about 8 minutes and 7 points of the 5-hour limit (59% to 66%), well inside what's left before the 2:40 PM reset.\n\n**What the last four say:**\n- **Ohio State:** **restrict**. Students may use AI tools for coursework \"only with the explicit permission of each instructor\". A 2023 Academic Affairs page says the same. The tone is positive: the university's AI Fluency initiative wants every graduate able to apply AI in their field.\n  - The CSE department's site blocks automated downloads. I read it in the browser pane and found no AI rule, so the department is coded \"none found\".\n  - The official software engineering syllabus site is blocked to both my download tool and the browser, so that answer is \"no public syllabus found\".\n- **Baldwin Wallace:** I found nothing about AI. The student handbook (revised August 2026), the 2026-27 catalog's honesty policy and the CS and software engineering major pages never mention it.\n- **Defiance:** The only AI rule I found is in the library's AI guide: \"Unauthorized use of Generative AI tools... is considered cheating and/or plagiarism.\" That makes the stance restrict and the tone cautionary. Disclosure is coded **required**, because the guide says \"it is necessary to cite\" anything taken from AI. The catalog and handbook say nothing about AI, and the college has no software engineering course.\n- **Columbus State:** The college's standard syllabus statement says students \"may not use\" AI \"unless explicitly permitted by the instructor\" (restrict) and must use it \"transparently and with appropriate citations\" (disclosure required). The tone is neutral: it says AI can help students learn but can also get in the way.\n\n**Two judgment calls to look at:**\n- **Columbus State's software engineering course is coded \"prohibited\", and this is the call worth checking.** The Spring 2026 CSCI 2221 syllabus has no AI rule of its own. It lists the college's AI statement among its required statements and grants no permission, so AI is banned in that course by default. Someone could reasonably argue for \"not addressed\" instead. The reasoning is written next to the value and will show on the site.\n- **Defiance's only AI rule comes from a library guide, not an official policy.** I coded it because it's the college's own published guidance to students. The value's note says where it comes from.\n\n**A slip I fixed:** I typed one time into the Baldwin Wallace cost row from memory, against the project rule. I replaced it with a real clock reading, marked \"written late\".\n\n**Left for Phase 2:**\n- Re-fetch every saved source page and report which ones changed or disappeared.\n- Re-run and record the web and pipeline tests.\n- Tick the acceptance checks and go through your checklist.\n\nSteps for all three are in STATE.md. Everything is committed and pushed (5ebd799).\n\nI prepared this compact after four schools instead of three, because only one was left. Context grew about 100k since the last compact. Type this:\n\n```\n/compact Phase 2: all 15 schools coded and passing (check_study.py: All checks pass: True; study tests 33/33). Next: Phase 2 wrap-up per progress/STATE.md \"FIRST, right after the /compact\" (R1 re-fetch report script, web and pipeline test runs, acceptance checks, Marcus's checklist, phase-end /compact), then Phase 3 (spec first). Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, timestamps only from date -Iseconds, and the rule not to retry blocked downloads with browser-like headers.\n```",
+   "toolCalls": 97
+  },
+  {
+   "time": "2026-11-11T16:26:59.926000Z",
+   "actor": "Marcus",
+   "kind": "command",
+   "text": "/compact Phase 2: all 15 schools coded and passing (check_study.py: All checks pass: True; study tests 33/33). Next: Phase 2 wrap-up per progress/STATE.md \"FIRST, right after the /compact\" (R1 re-fetch report script, web and pipeline test runs, acceptance checks, Marcus's checklist, phase-end /compact), then Phase 3 (spec first). Keep: Marcus's decisions (no hand-coding, testing proves quality; no Coaching sections; no plan mode; publish all prompts), the deadline 2 PM Nov 12, the 5-hour window as the real constraint, timestamps only from date -Iseconds, and the rule not to retry blocked downloads with browser-like headers."
+  },
+  {
+   "time": "2026-11-11T16:28:17.045000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 21,
+   "text": "continue"
+  },
+  {
+   "time": "2026-11-11T16:32:29.085000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 21,
+   "text": "Everything passes: web 17/17, pipeline 12/12, study 33/33, and every school passes every check. Now I'll tick the acceptance boxes and update the log, usage and STATE.",
+   "toolCalls": 41
+  },
+  {
+   "time": "2026-11-11T16:33:07Z",
+   "actor": "Claude",
+   "kind": "milestone",
+   "phase": "2",
+   "text": "Phase 2 done: R1 re-fetch report (69 pages, 0 coded quotes missing; study/refetch.py), web 17/17, pipeline 12/12, study 33/33 recorded, all 15 schools pass check_study; acceptance checks ticked. Prepared the seventh /compact (phase end).",
+   "evidence": "data/coded/refetch-report.md; specs/phase-2-study.md; validation/runs/2026-11-11T16-32-19-757Z_web.json"
   }
  ]
 }

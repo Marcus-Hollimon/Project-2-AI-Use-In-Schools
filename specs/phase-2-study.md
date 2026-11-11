@@ -174,11 +174,11 @@ would read an ambiguous sentence the same way. C3's written reasons are where th
 lives, and the site shows them.
 
 ## Acceptance checks (Claude runs and records)
-- [ ] Study tests pass, recorded; the mutation run fails, recorded.
-- [ ] `check_study.py` passes S1 to S5, C1 to C4, and N1 on all 15 schools; results in
+- [x] Study tests pass, recorded; the mutation run fails, recorded. (33/33 in `validation/runs/2026-11-11T16-32-24-131Z_study.json`; mutation, S2 disabled, 1 failed in `2026-11-11T15-20-17-071Z_study.json`)
+- [x] `check_study.py` passes S1 to S5, C1 to C4, and N1 on all 15 schools; results in
       `data/coded/checks.json`.
-- [ ] R1 re-fetch report saved.
-- [ ] Web and pipeline tests still pass, recorded.
+- [x] R1 re-fetch report saved (`data/coded/refetch-report.md` and `.json`, by `study/refetch.py`: 69 pages, 0 coded quotes missing).
+- [x] Web and pipeline tests still pass, recorded (web 17/17 `2026-11-11T16-32-19-757Z_web.json`; pipeline 12/12 `2026-11-11T16-32-23-272Z_pipeline.json`).
 
 ## Marcus's checklist (end of Phase 2; no code reading needed)
 - [ ] On GitHub, open `data/frame/sample.csv`: 15 rows, Ohio State and Cincinnati marked
