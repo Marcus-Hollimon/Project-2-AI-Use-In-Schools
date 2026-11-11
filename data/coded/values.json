@@ -1291,6 +1291,122 @@
      "note": "COMP 410 Software Engineering Methodology: the 2026 syllabi sit behind the Esther login; the only public one is from 2015 (pre-2023)."
     }
    }
+  },
+  {
+   "unitid": "156620",
+   "slug": "156620-eastern-kentucky",
+   "name": "Eastern Kentucky University",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "restrict",
+     "quote": "Unapproved or undisclosed AI use is a violation of the Academic Integrity Regulation.",
+     "url": "https://www.eku.edu/in/guides/syllabus-statements/",
+     "archive": "data/sources/156620-eastern-kentucky/2026-11-11-syllabus-statements.html",
+     "source_type": "guidance page",
+     "note": "From the current required syllabus statements (headed 'Fall 2027' on the page, above the archived sets): each instructor marks AI use Prohibited, Conditional/Controlled or Minimally Restricted, but use the instructor has not approved is a violation, so the default is a ban (codebook v2: 'unauthorized' use is restrict). Academic Regulation 4.1.3ACR likewise counts AI assistance 'not authorized by the faculty/staff member' as cheating."
+    },
+    "univ_tone": {
+     "value": "cautionary",
+     "quote": "Information entered into an AI tool may be stored or reused outside the University’s control.",
+     "url": "https://www.eku.edu/in/guides/ai-guidance/",
+     "archive": "data/sources/156620-eastern-kentucky/2026-11-11-ai-guidance.html",
+     "source_type": "guidance page",
+     "note": "The page is mostly data-safety rules (contracted tools, a prohibited tool, review before use) and says AI detection results are not credible evidence on their own; one sentence notes benefits."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/156620-eastern-kentucky/search-log.md"
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/156620-eastern-kentucky/search-log.md"
+    },
+    "collaboration": {
+     "value": "in passing",
+     "quote": "AI tools may support learning, studying, brainstorming, drafting, feedback, and organization, but students remain responsible for the accuracy, quality and integrity of the work they submit.",
+     "url": "https://www.eku.edu/in/guides/ai-guidance/",
+     "archive": "data/sources/156620-eastern-kentucky/2026-11-11-ai-guidance.html",
+     "source_type": "guidance page",
+     "note": "One sentence in the student section; not developed elsewhere on the pages reviewed."
+    },
+    "disclosure": {
+     "value": "required",
+     "quote": "Using content produced by artificial intelligence tools without providing a disclosure statement.",
+     "url": "https://files.eku.edu/UniversityCounsel/Volume4_Academic_Affairs/Chapter-1-Academic-Practices/4.1.3acr_academic_integrity.pdf",
+     "archive": "data/sources/156620-eastern-kentucky/2026-11-11-acr-4-1-3-academic-integrity.pdf",
+     "source_type": "policy page",
+     "cue_reason": "Academic Regulation 4.1.3ACR (effective Nov. 18, 2025) lists this among the forms of plagiarism, so using AI content without a disclosure statement breaks a binding rule; the requirement follows from the definition rather than a cue word such as 'must'.",
+     "note": "The same regulation defines 'Disclosure of Artificial Intelligence Use': students must follow the instructor's requirements for AI disclosure."
+    },
+    "se_courses": {
+     "value": "no public syllabus found",
+     "search_log": "data/sources/156620-eastern-kentucky/search-log.md",
+     "note": "CSC 340 Ethics & Software Engineering and CSC 440 Applied Software Engineering: catalog descriptions only, no public syllabus found."
+    }
+   }
+  },
+  {
+   "unitid": "441900",
+   "slug": "441900-nevada-state",
+   "name": "Nevada State University",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "instructor decides",
+     "quote": "The allowed use or prohibition of artificial intelligence tools in coursework is subject to the expectations established by the instructor.",
+     "url": "https://nevadastate.edu/policy/current/student-code-of-conduct/",
+     "archive": "data/sources/441900-nevada-state/2026-11-11-student-code-of-conduct.html",
+     "source_type": "policy page",
+     "note": "Student Code of Conduct (SA 5.2), section 5.2 Artificial Intelligence (AI) Misconduct: instructors specify permitted and prohibited uses, and use inconsistent with the syllabus is misconduct. No university default was found; the AI page says it is 'difficult to encode formal policy around AI'."
+    },
+    "univ_tone": {
+     "value": "positive",
+     "quote": "When AI is used to supplement learning rather than replace it, AI can be a very effective tool.",
+     "url": "https://nevadastate.edu/ai/",
+     "archive": "data/sources/441900-nevada-state/2026-11-11-ai-hub.html",
+     "source_type": "guidance page",
+     "note": "The university AI page presents a table of potential classroom uses with tips and pitfalls and suggests instructors model AI use in class; it also warns that misuse is plagiarism and that overreliance can undermine learning."
+    },
+    "dept_stance": {
+     "value": "instructor decides",
+     "quote": "Please see the course syllabus in each and every class for the instructor’s stance on use of AI.",
+     "url": "https://nevadastate.edu/academics/lasb/lasb-course-policies-guidelines/",
+     "archive": "data/sources/441900-nevada-state/2026-11-11-lasb-course-policies.html",
+     "source_type": "guidance page",
+     "note": "Nevada State has no computer science department; its computing degree is Data Science, run by the School of Liberal Arts, Sciences, & Business (LASB), so the school's course policies page is the department-level text. The next sentence says each course and each instructor may have their own policy on AI."
+    },
+    "dept_tone": {
+     "value": "neutral",
+     "quote": "Please see the course syllabus in each and every class for the instructor’s stance on use of AI.",
+     "url": "https://nevadastate.edu/academics/lasb/lasb-course-policies-guidelines/",
+     "archive": "data/sources/441900-nevada-state/2026-11-11-lasb-course-policies.html",
+     "source_type": "guidance page",
+     "note": "Three procedural sentences with no evaluative language."
+    },
+    "collaboration": {
+     "value": "explicit",
+     "quote": "AI can provide feedback on your work and step-by-step solutions.",
+     "url": "https://nevadastate.edu/ai/",
+     "archive": "data/sources/441900-nevada-state/2026-11-11-ai-hub.html",
+     "source_type": "guidance page",
+     "cue_reason": "The sentence casts AI as a tutor that gives feedback and worked solutions, under the row heading 'Homework Help and Tutoring'; the page develops such uses over a whole table, so it is 'explicit' although the sentence itself has no cue word.",
+     "note": "First row ('Homework Help and Tutoring') of the page's table of potential uses of AI in the classroom, which goes on to summarizing lectures and other uses, each with tips and pitfalls."
+    },
+    "disclosure": {
+     "value": "encouraged",
+     "quote": "While AI tools can help you be a better learner and speed up tasks, you should take care to acknowledge when and how you use it as required by your instructor.",
+     "url": "https://nevadastate.edu/ai/",
+     "archive": "data/sources/441900-nevada-state/2026-11-11-ai-hub.html",
+     "source_type": "guidance page",
+     "note": "No university rule requires disclosure: the Code of Conduct counts only AI content that 'does not comply with course policies on AI citation' as misconduct, and the AI Statements page offers sample syllabus statements with attribution rules for instructors to adopt (codebook v2: encouraged)."
+    },
+    "se_courses": {
+     "value": "no public syllabus found",
+     "search_log": "data/sources/441900-nevada-state/search-log.md",
+     "note": "The Data Science program lists no software engineering course or near equivalent (its core is CS 138, CS 238 and DATA courses), and no public syllabus for any of its courses was found."
+    }
+   }
   }
  ]
 }

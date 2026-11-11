@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.eku.edu/in/guides/ai-guidance/",
+ "final_url": "https://www.eku.edu/in/guides/ai-guidance/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:50:48-05:00",
+ "sha256": "374d5e9b6bb1f6a2e6b7eb5a87de7da158c0f8db804b87ae989e89aad4567aca",
+ "bytes": 368311
+}

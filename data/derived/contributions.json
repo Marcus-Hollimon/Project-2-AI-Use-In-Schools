@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T20:47:34.312492Z",
+ "generatedAt": "2026-11-11T20:55:54.805649Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -1627,12 +1627,45 @@
    "phase": "5"
   },
   {
-   "time": "2026-11-11T20:47:28.682000Z",
+   "time": "2026-11-11T20:48:15Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 5: Arizona State and Rice coded (7 of 21); /compact prepared",
+   "commit": "7d1f313",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-11T20:48:29.184000Z",
    "actor": "Claude",
    "kind": "reply",
    "turn": 35,
-   "text": "Rice passes too, and context is at 188k, so I'm stopping here to prepare a compact rather than starting Eastern Kentucky.",
-   "toolCalls": 76,
+   "text": "Arizona State and Rice are coded, so 7 of the 21 new schools are done. Both pass every automated check.\n\n**What the two new schools say:**\n- **Arizona State:**\n  - The university sets no AI rule of its own. The Provost's FAQ tells students to ask each instructor, so the university is coded as \"instructor decides\", in a positive tone.\n  - The CS department's 2026-27 handbook bans AI unless the instructor allows it, so the department is coded as restrict.\n  - No public syllabus turned up for the software engineering course (CSE 360).\n- **Rice:**\n  - The Honor Council's general rule counts passing off AI-generated ideas as your own as plagiarism. Using AI is fine if you credit it, so the university is coded as \"permit with conditions\", with disclosure required.\n  - The CS department has no AI rule. Its August 2026 news story promotes a new course where students write programs with AI chatbots, so the department is coded as \"encourage\". That matches the codebook's example of AI built into courses.\n  - The 2026 syllabi for the software engineering course (COMP 410) need a Rice login, so they count as not public.\n\n**Three judgment calls for your list:**\n- Arizona State's department value comes from the CS handbook for master's students. The department publishes no undergraduate handbook.\n- Rice's university stance and disclosure both rest on that single plagiarism sentence.\n- Rice's department stance is \"encourage\". I first coded it \"none found\", but a consistency check refused that because the department's tone was already coded from the same news story. I recoded the stance rather than drop the tone. It's the call most worth checking.\n\n**Still as expected:** the data build fails one check (C5) until Case Western, the Ohio school, is coded. Every other check passes. The full checker shows 22 schools passing and 14 marked \"not coded yet\". Nothing is pushed, so the live site still shows 15 schools.\n\n**Cost is rising:** large universities take more searches, about 3 to 4 points of the 5-hour limit each. Arizona State used 4 points and 53k of context. At that rate only 2 schools fit between compacts. The limit is at 39% and resets at 7:40 PM Eastern.\n\nType this:\n\n```\n/compact Phase 5 coding: 7 of 21 new schools done (Iowa State, Stanford, NYIT, West Virginia Wesleyan, Glendale CC, Arizona State, Rice), committed locally as 7d1f313, not pushed. Next: take an \"after /compact\" usage reading, then code school 8 (Eastern Kentucky 156620, eku.edu) onward in the order in progress/STATE.md, using the scratchpad helpers it names. Read progress/STATE.md first; its \"FIRST\" section lists the expected failures and the judgment calls to report. Deadline 2 PM EST Thu Nov 12.\n```",
+   "toolCalls": 83,
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-11T20:48:43.489000Z",
+   "actor": "Marcus",
+   "kind": "command",
+   "text": "/compact Phase 5 coding: 7 of 21 new schools done (Iowa State, Stanford, NYIT, West Virginia Wesleyan, Glendale CC, Arizona State, Rice), committed locally as 7d1f313, not pushed. Next: take an \"after /compact\" usage reading, then code school 8 (Eastern Kentucky 156620, eku.edu) onward in the order in progress/STATE.md, using the scratchpad helpers it names. Read progress/STATE.md first; its \"FIRST\" section lists the expected failures and the judgment calls to report. Deadline 2 PM EST Thu Nov 12.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-11T20:49:36.727000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 36,
+   "text": "continue",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-11T20:55:43.860000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 36,
+   "text": "Nevada State passes. Next: its cost row, the full checker and the build, then the compact.",
+   "toolCalls": 57,
    "phase": "5"
   }
  ]

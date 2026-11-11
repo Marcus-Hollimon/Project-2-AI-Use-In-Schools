@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T15:47:33-05:00",
+ "generatedAt": "2026-11-11T15:55:53-05:00",
  "codebookVersion": 2,
  "schools": [
   {
@@ -5806,16 +5806,319 @@
   {
    "unitid": "156620",
    "name": "Eastern Kentucky University",
-   "pass": false,
+   "pass": true,
    "checks": {
-    "C1": false
+    "S1": true,
+    "S2": true,
+    "S3": true,
+    "S4": true,
+    "S5": true,
+    "C1": true,
+    "C2": true,
+    "C3": true,
+    "C4": true,
+    "N1": true
    },
    "findings": [
     {
-     "check": "C1",
+     "check": "C4",
      "variable": null,
-     "ok": false,
-     "message": "school not coded yet"
+     "ok": true,
+     "message": "search logged with results: eku.edu generative AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: eku.edu computer science AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: eku.edu software engineering syllabus AI"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: eku.edu ChatGPT academic integrity"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "value 'restrict' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote has 13 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote found in data/sources/156620-eastern-kentucky/2026-11-11-syllabus-statements.html"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "www.eku.edu is on eku.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "value 'cautionary' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote has 15 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote found in data/sources/156620-eastern-kentucky/2026-11-11-ai-guidance.html"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "www.eku.edu is on eku.edu"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "value 'in passing' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote has 26 words"
+    },
+    {
+     "check": "S1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote found in data/sources/156620-eastern-kentucky/2026-11-11-ai-guidance.html"
+    },
+    {
+     "check": "S2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "www.eku.edu is on eku.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "value 'required' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote has 12 words"
+    },
+    {
+     "check": "S1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote found in data/sources/156620-eastern-kentucky/2026-11-11-acr-4-1-3-academic-integrity.pdf"
+    },
+    {
+     "check": "S2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "files.eku.edu is on eku.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "cue words absent; reason: Academic Regulation 4.1.3ACR (effective Nov. 18, 2025) lists this among the forms of plagiarism, so using AI content without a disclosure statement breaks a binding rule; the requirement follows from the definition rather than a cue word such as 'must'."
+    },
+    {
+     "check": "C1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "value 'no public syllabus found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "univ_stance='restrict' and univ_tone='cautionary' agree on none found"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "dept_stance='none found' and dept_tone='none found' agree on none found"
     }
    ]
   },
@@ -6173,16 +6476,385 @@
   {
    "unitid": "441900",
    "name": "Nevada State University",
-   "pass": false,
+   "pass": true,
    "checks": {
-    "C1": false
+    "S1": true,
+    "S2": true,
+    "S3": true,
+    "S4": true,
+    "S5": true,
+    "C1": true,
+    "C2": true,
+    "C3": true,
+    "C4": true,
+    "N1": true
    },
    "findings": [
     {
-     "check": "C1",
+     "check": "C4",
      "variable": null,
-     "ok": false,
-     "message": "school not coded yet"
+     "ok": true,
+     "message": "search logged with results: nevadastate.edu generative AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: nevadastate.edu computer science AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: nevadastate.edu software engineering syllabus AI"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: nevadastate.edu ChatGPT academic integrity"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "value 'instructor decides' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote has 20 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote found in data/sources/441900-nevada-state/2026-11-11-student-code-of-conduct.html"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "nevadastate.edu is on nevadastate.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "value 'instructor decides' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "quote has 18 words"
+    },
+    {
+     "check": "S1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "quote found in data/sources/441900-nevada-state/2026-11-11-lasb-course-policies.html"
+    },
+    {
+     "check": "S2",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "nevadastate.edu is on nevadastate.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "value 'positive' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote has 18 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote found in data/sources/441900-nevada-state/2026-11-11-ai-hub.html"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "nevadastate.edu is on nevadastate.edu"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "value 'neutral' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "quote has 18 words"
+    },
+    {
+     "check": "S1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "quote found in data/sources/441900-nevada-state/2026-11-11-lasb-course-policies.html"
+    },
+    {
+     "check": "S2",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "nevadastate.edu is on nevadastate.edu"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "value 'explicit' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote has 10 words"
+    },
+    {
+     "check": "S1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote found in data/sources/441900-nevada-state/2026-11-11-ai-hub.html"
+    },
+    {
+     "check": "S2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "nevadastate.edu is on nevadastate.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "cue words absent; reason: The sentence casts AI as a tutor that gives feedback and worked solutions, under the row heading 'Homework Help and Tutoring'; the page develops such uses over a whole table, so it is 'explicit' although the sentence itself has no cue word."
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "value 'encouraged' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote has 31 words"
+    },
+    {
+     "check": "S1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote found in data/sources/441900-nevada-state/2026-11-11-ai-hub.html"
+    },
+    {
+     "check": "S2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "nevadastate.edu is on nevadastate.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "value 'no public syllabus found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "univ_stance='instructor decides' and univ_tone='positive' agree on none found"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "dept_stance='instructor decides' and dept_tone='neutral' agree on none found"
     }
    ]
   },

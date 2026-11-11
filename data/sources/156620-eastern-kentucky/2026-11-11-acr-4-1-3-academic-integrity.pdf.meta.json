@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://files.eku.edu/UniversityCounsel/Volume4_Academic_Affairs/Chapter-1-Academic-Practices/4.1.3acr_academic_integrity.pdf",
+ "final_url": "https://files.eku.edu/UniversityCounsel/Volume4_Academic_Affairs/Chapter-1-Academic-Practices/4.1.3acr_academic_integrity.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T15:50:49-05:00",
+ "sha256": "ebeb929684fe2ab02eb34d8bea488028fb5cdf98345b3a36fbc4e616b6c083f5",
+ "bytes": 265336
+}

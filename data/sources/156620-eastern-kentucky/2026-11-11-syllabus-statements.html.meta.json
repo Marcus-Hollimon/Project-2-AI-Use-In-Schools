@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.eku.edu/in/guides/syllabus-statements/",
+ "final_url": "https://www.eku.edu/in/guides/syllabus-statements/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:50:49-05:00",
+ "sha256": "42e5b907fddd129a7b6be7503649134c41d20a18f34e9ecdc1f0bdf402156486",
+ "bytes": 430699
+}

@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://nevadastate.edu/academics/lasb/lasb-course-policies-guidelines/",
+ "final_url": "https://nevadastate.edu/academics/lasb/lasb-course-policies-guidelines/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:53:46-05:00",
+ "sha256": "c0e6808cb692e7d269d083dff8a0ed01fa09963a13c61e0252c9fd5b4ec3b71d",
+ "bytes": 166062
+}

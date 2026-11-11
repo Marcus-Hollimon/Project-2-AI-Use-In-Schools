@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://nevadastate.edu/policy/current/student-code-of-conduct/",
+ "final_url": "https://nevadastate.edu/policy/current/student-code-of-conduct/",
+ "http_status": 200,
+ "content_type": "text/markdown; charset=utf-8",
+ "fetched_at": "2026-11-11T15:53:57-05:00",
+ "sha256": "c9f5adada461e34475c02158b14f03a8107fa558f45472be48edcd951c8a403d",
+ "bytes": 78505
+}

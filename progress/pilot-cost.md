@@ -83,3 +83,5 @@ Recode (spec R2): one value changed, Johns Hopkins `se_courses` "not addressed" 
 | Glendale CC 104708 | 15:33:00 | 2026-11-11T15:36:04-05:00 | 29 | 24 | 190,298 | 9 | 8 (5 are HTTP 403 records; 1 browser-pane text) |
 | Arizona State 104151 | 15:38:46 | 2026-11-11T15:43:49-05:00 | 36 | 25 | 153,796 | 13 | 8 |
 | Rice 227757 | 15:43:49 | 2026-11-11T15:47:32-05:00 | 39 | 26 | 188,198 | 8 | 2 |
+| Eastern Kentucky 156620 | 15:50:01 | 2026-11-11T15:53:17-05:00 | 44 | 26 | 139,395 | 9 | 5 |
+| Nevada State 441900 | 15:53:17 | 2026-11-11T15:55:53-05:00 | 46 | 27 | 167,067 | 9 | 4 |

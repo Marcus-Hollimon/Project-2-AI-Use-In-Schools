@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://nevadastate.edu/ai/",
+ "final_url": "https://nevadastate.edu/ai/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:53:42-05:00",
+ "sha256": "60930010b00eb0894b2c5e988f5fbdb30cd7516e1960ff764ae42e00fbf0cbc4",
+ "bytes": 179097
+}

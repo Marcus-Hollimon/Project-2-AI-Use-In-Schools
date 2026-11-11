@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://nevadastate.edu/ai/statements/",
+ "final_url": "https://nevadastate.edu/ai/statements/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T15:53:57-05:00",
+ "sha256": "eeb7a6d3e7f19c0ae7566854b31172dcf6b94782626bfa8707a4ed6a08bde1fb",
+ "bytes": 187828
+}

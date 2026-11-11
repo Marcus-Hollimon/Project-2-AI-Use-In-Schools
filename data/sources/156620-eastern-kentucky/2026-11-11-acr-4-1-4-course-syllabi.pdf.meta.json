@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://files.eku.edu/UniversityCounsel/Volume4_Academic_Affairs/Chapter-1-Academic-Practices/4.1.4acr_course_syllabi.pdf",
+ "final_url": "https://files.eku.edu/UniversityCounsel/Volume4_Academic_Affairs/Chapter-1-Academic-Practices/4.1.4acr_course_syllabi.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T15:50:48-05:00",
+ "sha256": "25fed7b23fe8be34fec8bd1095a592a78d305b31282b2e61d4983cf631ceb298",
+ "bytes": 220703
+}
