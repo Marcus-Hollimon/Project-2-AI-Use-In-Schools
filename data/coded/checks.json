@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T16:07:00-05:00",
+ "generatedAt": "2026-11-11T16:17:38-05:00",
  "codebookVersion": 2,
  "schools": [
   {
@@ -5758,16 +5758,355 @@
   {
    "unitid": "215062",
    "name": "University of Pennsylvania",
-   "pass": false,
+   "pass": true,
    "checks": {
-    "C1": false
+    "S1": true,
+    "S2": true,
+    "S3": true,
+    "S4": true,
+    "S5": true,
+    "C1": true,
+    "C2": true,
+    "C3": true,
+    "C4": true,
+    "N1": true
    },
    "findings": [
     {
-     "check": "C1",
+     "check": "C4",
      "variable": null,
-     "ok": false,
-     "message": "school not coded yet"
+     "ok": true,
+     "message": "search logged with results: upenn.edu generative AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: upenn.edu computer science AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: upenn.edu software engineering syllabus AI"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: upenn.edu ChatGPT academic integrity"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "value 'instructor decides' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote has 14 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote found in data/sources/215062-penn/2026-11-11-cetli-creating-ai-policies.html"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "cetli.upenn.edu is on upenn.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "value 'neutral' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote has 19 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote found in data/sources/215062-penn/2026-11-11-cetli-creating-ai-policies.html"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "cetli.upenn.edu is on upenn.edu"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "value 'in passing' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote has 13 words"
+    },
+    {
+     "check": "S1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote found in data/sources/215062-penn/2026-11-11-cetli-academic-integrity-ai.html"
+    },
+    {
+     "check": "S2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "cetli.upenn.edu is on upenn.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "value 'encouraged' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote has 26 words"
+    },
+    {
+     "check": "S1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote found in data/sources/215062-penn/2026-11-11-isc-ai-guidance.html"
+    },
+    {
+     "check": "S2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "isc.upenn.edu is on upenn.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "cue words absent; reason: An instruction in the university's general guidance for everyone at Penn, students included; the statement says it 'should not be viewed as a final policy' and leaves coursework rules to instructors, so disclosure is recommended, not required, although the sentence is an imperative."
+    },
+    {
+     "check": "C1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "value 'AI built into the course' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "source_type 'syllabus' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "quote has 26 words"
+    },
+    {
+     "check": "S1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "quote found in data/sources/215062-penn/2026-11-11-catalog-cis-courses.html"
+    },
+    {
+     "check": "S2",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "catalog.upenn.edu is on upenn.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "univ_stance='instructor decides' and univ_tone='neutral' agree on none found"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "dept_stance='none found' and dept_tone='none found' agree on none found"
     }
    ]
   },
@@ -6428,16 +6767,319 @@
   {
    "unitid": "217819",
    "name": "College of Charleston",
-   "pass": false,
+   "pass": true,
    "checks": {
-    "C1": false
+    "S1": true,
+    "S2": true,
+    "S3": true,
+    "S4": true,
+    "S5": true,
+    "C1": true,
+    "C2": true,
+    "C3": true,
+    "C4": true,
+    "N1": true
    },
    "findings": [
     {
-     "check": "C1",
+     "check": "C4",
      "variable": null,
-     "ok": false,
-     "message": "school not coded yet"
+     "ok": true,
+     "message": "search logged with results: charleston.edu generative AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: charleston.edu computer science AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: charleston.edu software engineering syllabus AI"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: charleston.edu ChatGPT academic integrity"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "value 'restrict' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "source_type 'handbook' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote has 28 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote found in data/sources/217819-charleston/2026-11-11-student-handbook-honor-code.html"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "charleston.edu is on charleston.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "value 'positive' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote has 18 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote found in data/sources/217819-charleston/2026-11-11-academic-integrity-ai.html"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "charleston.edu is on charleston.edu"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "value 'explicit' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote has 19 words"
+    },
+    {
+     "check": "S1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "quote found in data/sources/217819-charleston/2026-11-11-academic-integrity-ai.html"
+    },
+    {
+     "check": "S2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "charleston.edu is on charleston.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "value 'encouraged' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "source_type 'guidance page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote has 23 words"
+    },
+    {
+     "check": "S1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote found in data/sources/217819-charleston/2026-11-11-academic-integrity-ai.html"
+    },
+    {
+     "check": "S2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "charleston.edu is on charleston.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "cue words present"
+    },
+    {
+     "check": "C1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "value 'no public syllabus found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "univ_stance='restrict' and univ_tone='positive' agree on none found"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "dept_stance='none found' and dept_tone='none found' agree on none found"
     }
    ]
   },

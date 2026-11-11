@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://cetli.upenn.edu/resources/generative-ai/creating-ai-policies/",
+ "final_url": "https://cetli.upenn.edu/resources/generative-ai/creating-ai-policies/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:13:57-05:00",
+ "sha256": "393baffc93b2d9e77cbe67a345845a6394f0f1a2a2992fcf7dd7764a4ec8695f",
+ "bytes": 333075
+}

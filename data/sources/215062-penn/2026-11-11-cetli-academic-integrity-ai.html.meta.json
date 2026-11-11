@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://cetli.upenn.edu/academic-integrity-ai",
+ "final_url": "https://cetli.upenn.edu/resources/syllabus/generative-ai-policies/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:13:59-05:00",
+ "sha256": "40144ed17e0497c5e71e89aed46971a04e59fd71ce4aa2503f24ac438fe498d5",
+ "bytes": 325837
+}

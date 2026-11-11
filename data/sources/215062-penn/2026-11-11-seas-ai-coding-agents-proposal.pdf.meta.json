@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.seas.upenn.edu/wp-content/uploads/2025/10/Software-Development-in-the-Era-of-AI-Coding-Agents.pdf",
+ "final_url": "https://www.engineering.upenn.edu/wp-content/uploads/2025/10/Software-Development-in-the-Era-of-AI-Coding-Agents.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T16:14:06-05:00",
+ "sha256": "f34efc87dabe2a203bd490ae49f87b353210c6d9f05de20c90830212433dfecb",
+ "bytes": 192058
+}

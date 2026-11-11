@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://charleston.edu/compsci/programs/undergraduate-programs/ai-at-cofc.php",
+ "final_url": "https://charleston.edu/compsci/programs/undergraduate-programs/ai-at-cofc.php",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:16:03-05:00",
+ "sha256": "d114b7548d377d964178d209d34d97555f441e9df41cdf9808ebadccaf968d3f",
+ "bytes": 172137
+}

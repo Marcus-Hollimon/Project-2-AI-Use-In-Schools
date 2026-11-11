@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T21:07:01.978378Z",
+ "generatedAt": "2026-11-11T21:17:39.490456Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -1693,12 +1693,62 @@
    "phase": "5"
   },
   {
-   "time": "2026-11-11T21:06:53.401000Z",
+   "time": "2026-11-11T21:08:37Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 5: code UDC and UMKC (11 of 21 new schools)",
+   "commit": "6c4cc0c",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-11T21:08:55.527000Z",
    "actor": "Claude",
    "kind": "reply",
    "turn": 37,
-   "text": "UMKC passes too. Next I'm recording its cost row, running the full checker and the build, then committing and preparing the compact.",
-   "toolCalls": 56,
+   "text": "UDC and UMKC are coded and pass every automated check, so 11 of the 21 new schools are done. They're committed locally as 6c4cc0c, not pushed.\n\n**What the two new schools say:**\n- **UDC** has no AI policy of its own. The only university-level text is the library's AI help guide, plus the president's AI initiative page.\n  - The guide tells students to check with their instructor before using AI, so the university is coded as \"instructor decides\".\n  - It says using AI content without acknowledging it is plagiarism, so disclosure is coded as required.\n  - Its software engineering course (CSCI 341) has an official description that says students learn to use AI coding tools. That's coded as \"AI built into the course\".\n- **UMKC** follows the University of Missouri System's rule: if the instructor doesn't clearly allow AI, it's forbidden. That makes the university restrict. UMKC's own Provost page is upbeat about teaching students to use AI well, so the tone is positive.\n\n**Judgment calls for your list:**\n- **UDC rests almost entirely on a library guide.** It's hosted on libguides.com, not udc.edu, and the record gives a written reason for using it. \"Required\" disclosure follows the same reading we used for Defiance and Eastern Kentucky.\n- **UMKC's restrict comes from the Missouri System site, not umkc.edu.** The rule binds all four campuses, so I treated it as UMKC's.\n- **A UMKC news story wasn't used for the department.** It describes a federally funded project putting AI into core CS courses, but it's university news, not a department page.\n- **An inconsistency we need to settle:** when a catalog course description mentions AI (Stanford, UDC), I coded it as the course page. When it doesn't (Eastern Kentucky, UMKC, one earlier school), I coded \"no public syllabus found\" instead of \"not addressed\". Those two readings don't match. We should pick one rule and apply it to every school.\n\n**A new problem: the data build now fails a second check (C3).** It checks that each /compact's recorded size matches the transcript. Your last /compact is off by 721 tokens: the app recorded more than my last response accounts for. The four compacts before it look identical in the transcript and match exactly, and I couldn't find what caused the difference. I haven't loosened the check to make it pass. Since the build has to pass before we push, we'll need to decide what to do about it then. It's written up in STATE.md.\n\n**Where things stand:**\n- The full checker shows 26 schools passing and 10 marked \"not coded yet\", as expected.\n- The build fails C3 (above) and C5. C5 is expected until Case Western is coded.\n- The 5-hour limit is at 55%, about 3 to 4 points per school, with 3.5 hours until it resets.\n\nType this:\n\n```\n/compact Phase 5 coding: 11 of 21 new schools done (Iowa State, Stanford, NYIT, West Virginia Wesleyan, Glendale CC, Arizona State, Rice, Eastern Kentucky, Nevada State, UDC, UMKC), committed locally as 6c4cc0c, not pushed. Next: take an \"after /compact\" usage reading, then code school 12 (Penn 215062) onward in the order in progress/STATE.md, using the scratchpad helpers it names. Read progress/STATE.md first; its \"FIRST\" section lists the expected failures, the new C3_compact failure, and the judgment calls to report. Deadline 2 PM EST Thu Nov 12.\n```",
+   "toolCalls": 71,
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-11T21:11:37.339000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 38,
+   "text": "have you been saving our back and fourth prompts?",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-11T21:12:01.482000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 38,
+   "text": "Yes, automatically. The data build saves our conversation into [data/derived/contributions.json](data/derived/contributions.json), and that file goes into every commit. You don't need to do anything.\n\n**What I checked just now:** the file holds 202 entries from both of this project's sessions.\n\n| Kind | Entries |\n|---|---|\n| Your prompts | 37 |\n| My replies, one per turn | 37 |\n| Your slash commands, such as each /compact | 16 |\n| Your decisions | 19 |\n| Your answers to questions | 1 |\n| Milestones | 47 |\n| Commits | 45 |\n\n**How current it is:**\n- It was last rebuilt at 16:07 EST. That included your \"continue\" and your /compact line, word for word, judgment-call sentence and all.\n- It's in the latest local commit, 6c4cc0c.\n- One gap: the rebuild ran a moment before I finished my last answer. So the entry for that turn is a mid-turn status line (\"UMKC passes too...\") instead of my full summary. The next build will replace it with the full text.\n\n**Three things worth knowing:**\n- **Only a summary of each turn, not the full transcript.** Each turn keeps your prompt in full and my last message. My working steps (searches, file reads, tool output) aren't kept, only a count of tool calls. Raw transcripts are never committed, under the project's privacy rule.\n- **Public once pushed.** You chose to publish all prompts. The newest ones are only committed locally for now, but they'll be on the public repo at the next push. Hiding one later wouldn't remove it from git history.\n- **Only this project's sessions are read.** The build reads the two sessions listed in [pipeline/sessions.json](pipeline/sessions.json) and nothing from other projects.",
+   "toolCalls": 2,
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-11T21:12:14.398000Z",
+   "actor": "Marcus",
+   "kind": "command",
+   "text": "/compact Phase 5 coding: 11 of 21 new schools done (Iowa State, Stanford, NYIT, West Virginia Wesleyan, Glendale CC, Arizona State, Rice, Eastern Kentucky, Nevada State, UDC, UMKC), committed locally as 6c4cc0c, not pushed. Next: take an \"after /compact\" usage reading, then code school 12 (Penn 215062) onward in the order in progress/STATE.md, using the scratchpad helpers it names. Read progress/STATE.md first; its \"FIRST\" section lists the expected failures, the new C3_compact failure, and the judgment calls to report. Deadline 2 PM EST Thu Nov 12.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-11T21:13:02.152000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 39,
+   "text": "continue",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-11T21:17:26.518000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 39,
+   "text": "Both schools pass. Taking the cost reading, then the full checker and build before committing.",
+   "toolCalls": 47,
    "phase": "5"
   }
  ]

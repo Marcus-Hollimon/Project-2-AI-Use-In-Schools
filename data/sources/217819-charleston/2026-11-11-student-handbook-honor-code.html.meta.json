@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://charleston.edu/student-handbook/handbook/honor-code.php",
+ "final_url": "https://charleston.edu/student-handbook/handbook/honor-code.php",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:16:36-05:00",
+ "sha256": "2d62fc0b32bbe1833f2dc6d7f3d6506d2e29a3602dfd466479bc7a030ebd6056",
+ "bytes": 182342
+}

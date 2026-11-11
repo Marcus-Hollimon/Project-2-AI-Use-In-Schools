@@ -1,0 +1,14 @@
+Software Development in the Era of AI Coding Agents
+Investigators: Zachary G. Ives, Sebastian Angel, Swapneel Sheth, Harry Smith
+Background
+In just two years, AI coding agents, such as GitHub Copilot and Cursor, have transformed software engineering and provided a preview of how AI will reshape the entire field of engineering. These tools boost productivity for new graduates, though their value for senior engineers remains debated. AI speeds code creation, but it may introduce “technical debt” through a lack of overarching design and unnecessary changes. Employers are already embracing the new dynamic: many companies are recruiting experienced engineers while slowing junior hiring, assuming productivity gains will come from AI. At the same time, universities report falling interest in computer science majors, with enrollments down by as much as 35%, fueled by fears that AI is making software engineers obsolete. We argue it is not engineering but “simple coding” that is becoming obsolete, with the market moving toward higher-level design and integration skills.
+The Big Idea
+Prepare students to design, manage and collaborate with AI in software development, ensuring they remain competitive in a rapidly evolving field.
+Why does this matter? Students with a deep understanding of AI-enhanced software engineering, and how to manage and use it, will be more marketable and capable of tackling more complex problems. Graduates who master design patterns, modularity and rigorous testing, augmented by AI tools, will shape the next generation of software systems. Their preparation will also inform how AI can enhance other areas of engineering.
+What will you do? We propose a new sophomore-level Computer Science course, eventually part of the undergraduate core, focused on AI-driven software development. This course will integrate knowledge of AI tool operation with best practices in software engineering, including delegation of coding tasks, modular design, scalable testing, risk management, reproducibility and ethics.
+How will you do it? Faculty in Computer and Information Science, already engaged in AI and open-source development, will design and deliver this course, leveraging alumni networks in leading tech companies. The curriculum will balance theory and practice, emphasize collaboration with AI systems and incorporate real-world case studies. We also envision producing e-textbooks and teaching materials that extend Penn’s leadership to other institutions.
+Impact
+This initiative positions Penn Engineering at the forefront of computer science education in the AI era. It will make our graduates highly sought after, redefine how software engineering is taught and provide a national model for integrating AI into engineering curricula. By seizing this opportunity, Penn can lead in shaping the workforce and scholarship of the coming decades.
+Learn More
+
+

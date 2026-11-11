@@ -2,13 +2,13 @@
 
 Current phase: 5 More schools (15 to 36; spec `specs/phase-5-more-schools.md`, approved by Marcus 15:15:40 with one extra Ohio school, so 21 new, 36 in all). Evaluation moves to Phase 6. Phase 4 Validation is done.
 
-Last updated: 2026-11-11T16:08:05-05:00 by Claude (session a9056776), 11 of 21 schools coded, /compact prepared.
+Last updated: 2026-11-11T16:17:52-05:00 by Claude (session a9056776), 13 of 21 schools coded, /compact prepared.
 
 ## FIRST, right after the /compact
 1. Take a usage reading marked "after /compact" (full 7-column row in `progress/usage.md`, phase 5).
-2. Continue coding with school 12, Penn 215062 (order below). Done and passing: Iowa State,
+2. Continue coding with school 14, Westminster 216807 (order below). Done and passing: Iowa State,
    Stanford, NYIT, West Virginia Wesleyan, Glendale CC, Arizona State, Rice, Eastern Kentucky, Nevada State,
-   UDC, UMKC (rows in `progress/pilot-cost.md`): about 2 to 4 five-hour points and 30k to 50k context per school.
+   UDC, UMKC, Penn, College of Charleston (rows in `progress/pilot-cost.md`): about 2 to 4 five-hour points and 30k to 50k context per school.
    Only 2 schools fit between compacts at that rate (context starts near 100k after a compact). Cost rows: scratchpad `costrow.py "<School unitid>" <start> <5h> <weekly>
    <context> <searches> "<pages>"` (takes the time from `date -Iseconds` itself).
 3. Prepare the next /compact after about 3 to 4 more schools (context near 190k).
@@ -38,6 +38,15 @@ Last updated: 2026-11-11T16:08:05-05:00 by Claude (session a9056776), 11 of 21 s
    Conservatory's sample statement ("must properly cite", but it is example language); an October 2026
    university news story on an NSF project putting LLMs into core CS courses was NOT used for the
    department because it is university news, not department text.
+   Penn: university "instructor decides" (CETLI), disclosure "encouraged" from the ISC guidance imperative
+   "Disclose when..." (the statement says it is not a final policy; cue_reason); se_courses "AI built into the
+   course" from the catalog description of CIS 2500 Software Development with AI Coding Agents (same rule as
+   Stanford and UDC); a SEAS PDF proposal by four named CIS faculty for that course was NOT used for the
+   department (named investigators, not a department statement). College of Charleston: university
+   **restrict** from the Honor Code (GAI "when not authorized by the instructor(s)" is cheating); tone
+   positive, collaboration explicit ("feedback tool, tutor, or creative partner") and disclosure "encouraged"
+   from Academic Affairs' integrity and AI page; the CS department's AI page is about AI as a field of study,
+   so not coded; se_courses "no public syllabus found" (CSCI 362 syllabi are 2010 to 2020).
    **Inconsistency to raise with Marcus:** Stanford and UDC code an official catalog course description
    that mentions AI as the course page ("AI built into the course"), while EKU, UMKC and an earlier school
    (values.json "CSC 310") treat a description with no AI text as "no public syllabus found", not "not

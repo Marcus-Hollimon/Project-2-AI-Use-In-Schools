@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://charleston.edu/qep/index.php",
+ "final_url": "https://charleston.edu/qep/index.php",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:16:03-05:00",
+ "sha256": "57f36d644c46e59192e4dfbf906470d9bf5b5e2389adb59292c539436580e3e0",
+ "bytes": 177051
+}

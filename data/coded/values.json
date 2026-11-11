@@ -1523,6 +1523,116 @@
      "note": "COMP-SCI 449 Foundations of Software Engineering: the current catalog description (saved as 2026-11-11-catalog-compsci-courses.html) says nothing on AI, and no public syllabus was found."
     }
    }
+  },
+  {
+   "unitid": "215062",
+   "slug": "215062-penn",
+   "name": "University of Pennsylvania",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "instructor decides",
+     "quote": "It is Penn’s policy that each instructor is responsible for setting their own guidelines.",
+     "url": "https://cetli.upenn.edu/resources/generative-ai/creating-ai-policies/",
+     "archive": "data/sources/215062-penn/2026-11-11-cetli-creating-ai-policies.html",
+     "source_type": "guidance page",
+     "note": "Penn's teaching center (CETLI); the same page opens with 'Penn does not have a standardized policy on student AI use'. The ISC statement also leaves coursework rules to instructors."
+    },
+    "univ_tone": {
+     "value": "neutral",
+     "quote": "Consider that the impact of AI use will vary by task, enhancing some activities while hindering learning in others.",
+     "url": "https://cetli.upenn.edu/resources/generative-ai/creating-ai-policies/",
+     "archive": "data/sources/215062-penn/2026-11-11-cetli-creating-ai-policies.html",
+     "source_type": "guidance page",
+     "note": "CETLI weighs benefits and risks evenly; its sample policies run from a full ban to open use. The ISC statement is practical (transparency, accuracy, privacy, security)."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/215062-penn/search-log.md"
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/215062-penn/search-log.md"
+    },
+    "collaboration": {
+     "value": "in passing",
+     "quote": "You may use AI programs, e.g., ChatGPT, to help generate ideas and brainstorm.",
+     "url": "https://cetli.upenn.edu/academic-integrity-ai",
+     "archive": "data/sources/215062-penn/2026-11-11-cetli-academic-integrity-ai.html",
+     "source_type": "guidance page",
+     "note": "From one of the Penn professors' course policies CETLI shows as examples; brainstorming is mentioned, not developed as a way to learn."
+    },
+    "disclosure": {
+     "value": "encouraged",
+     "quote": "Disclose when a work product was created wholly or partially using an AI tool and, if appropriate, how AI was used to create the work product.",
+     "url": "https://isc.upenn.edu/security/AI-guidance",
+     "archive": "data/sources/215062-penn/2026-11-11-isc-ai-guidance.html",
+     "source_type": "guidance page",
+     "cue_reason": "An instruction in the university's general guidance for everyone at Penn, students included; the statement says it 'should not be viewed as a final policy' and leaves coursework rules to instructors, so disclosure is recommended, not required, although the sentence is an imperative.",
+     "note": "CETLI also suggests instructors define how students should acknowledge AI contributions."
+    },
+    "se_courses": {
+     "value": "AI built into the course",
+     "quote": "Through hands-on projects, students develop skills in navigating unfamiliar codebases, writing robust test suites, reviewing AI-generated code, refactoring, and managing technical debt in rapidly evolving systems.",
+     "url": "https://catalog.upenn.edu/courses/cis/",
+     "archive": "data/sources/215062-penn/2026-11-11-catalog-cis-courses.html",
+     "source_type": "syllabus",
+     "note": "CIS 2500 Software Development with AI Coding Agents, official catalog description (the course the CIS faculty proposal describes as 'eventually part of the undergraduate core'). As with Stanford and UDC, the official course description is the course page coded; the CIS 3500 Software Design/Engineering site answered 404 and no public syllabus was found."
+    }
+   }
+  },
+  {
+   "unitid": "217819",
+   "slug": "217819-charleston",
+   "name": "College of Charleston",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "restrict",
+     "quote": "unauthorized use or possession of study aids, memoranda, books, data, or other information, including the use of generative artificial intelligence (GAI) tools when not authorized by the instructor(s)",
+     "url": "https://charleston.edu/student-handbook/handbook/honor-code.php",
+     "archive": "data/sources/217819-charleston/2026-11-11-student-handbook-honor-code.html",
+     "source_type": "handbook",
+     "note": "The Honor Code's definition of cheating: generative AI use counts as cheating unless the instructor authorizes it, so the default is a ban (codebook v2: 'unauthorized' use is 'restrict'). Its plagiarism list also names letting Generative AI prepare work one submits as one's own."
+    },
+    "univ_tone": {
+     "value": "positive",
+     "quote": "The College of Charleston acknowledges the transformative potential of generative AI and similar tools for teaching and learning.",
+     "url": "https://charleston.edu/academic-affairs/academic-integrity-ai.php",
+     "archive": "data/sources/217819-charleston/2026-11-11-academic-integrity-ai.html",
+     "source_type": "guidance page",
+     "note": "Academic Affairs' statement on integrity and AI; the college's Quality Enhancement Plan is titled Intentional AI and leans the same way."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/217819-charleston/search-log.md"
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/217819-charleston/search-log.md"
+    },
+    "collaboration": {
+     "value": "explicit",
+     "quote": "AI can be a meaningful part of the learning process, serving as a feedback tool, tutor, or creative partner.",
+     "url": "https://charleston.edu/academic-affairs/academic-integrity-ai.php",
+     "archive": "data/sources/217819-charleston/2026-11-11-academic-integrity-ai.html",
+     "source_type": "guidance page",
+     "note": "The page develops the idea: it repeats AI as 'a feedback mechanism, a tutor, or a brainstorming assistant' and calls AI tools 'valuable study aids'."
+    },
+    "disclosure": {
+     "value": "encouraged",
+     "quote": "Encourage transparency: Not because transparency makes AI use “acceptable,” but because it fosters accountability, supports deeper learning, and aligns with our academic values.",
+     "url": "https://charleston.edu/academic-affairs/academic-integrity-ai.php",
+     "archive": "data/sources/217819-charleston/2026-11-11-academic-integrity-ai.html",
+     "source_type": "guidance page",
+     "note": "A principle in a values statement, not a rule; the Honor Code requires acknowledging sources in general but its AI wording bans unauthorized use rather than requiring disclosure."
+    },
+    "se_courses": {
+     "value": "no public syllabus found",
+     "search_log": "data/sources/217819-charleston/search-log.md",
+     "note": "Public CSCI 362 Software Engineering and CSCI 462 syllabi are from 2010 to 2020, before 2023, so they count as no public syllabus (codebook v2)."
+    }
+   }
   }
  ]
 }

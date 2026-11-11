@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://charleston.edu/compsci/",
+ "final_url": "https://charleston.edu/compsci/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:16:03-05:00",
+ "sha256": "88ac09ad422e16a45b4271f42efb8394f7f72b9982e03de6046df7b3069cd3cf",
+ "bytes": 186696
+}
