@@ -69,7 +69,7 @@ function parseCsv(text) {
   return rows.map((line) => Object.fromEntries(line.split(',').map((c, i) => [keys[i], c])))
 }
 
-// The 15 schools: coded values joined to their group and stratum, and whether they passed the checks.
+// Every school in the sample: coded values joined to their group and stratum, and whether they passed the checks.
 export const SCHOOLS = (() => {
   const frame = Object.fromEntries(parseCsv(sampleCsv).map((r) => [r.unitid, r]))
   const passed = Object.fromEntries(studyChecks.schools.map((s) => [s.unitid, s.pass]))
@@ -95,6 +95,41 @@ export function countTable(variable, schools = SCHOOLS) {
     }
   }
   return counts
+}
+
+// "What the data shows": short sentences computed from values.json and sample.csv. Counts only, never
+// percentages (the groups are small), and the Ohio sample is always counted apart from the national one.
+export function findings(schools = SCHOOLS) {
+  const size = (group) => schools.filter((s) => s.group === group).length
+  const n = (group, variable, value) =>
+    schools.filter((s) => s.group === group && s.values[variable].value === value).length
+  const stances = (group) => {
+    const key = group === 'Ohio' ? 'ohio' : 'national'
+    return Object.entries(countTable('univ_stance', schools))
+      .filter(([, row]) => row[key] > 0)
+      .sort((a, b) => b[1][key] - a[1][key])
+      .map(([value, row]) => `${value} ${row[key]}`)
+      .join(', ')
+  }
+  const [N, O] = [size('National'), size('Ohio')]
+  return [
+    {
+      id: 'research-finding-dept',
+      text: `${n('National', 'dept_stance', 'none found')} of ${N} national computer science departments and ${n('Ohio', 'dept_stance', 'none found')} of ${O} in Ohio had no AI statement of their own that could be found.`,
+    },
+    {
+      id: 'research-finding-stance',
+      text: `University stances, national (of ${N}): ${stances('National')}. Ohio (of ${O}): ${stances('Ohio')}.`,
+    },
+    {
+      id: 'research-finding-disclosure',
+      text: `Official text requires students to disclose their AI use at ${n('National', 'disclosure', 'required')} of ${N} national schools and ${n('Ohio', 'disclosure', 'required')} of ${O} in Ohio.`,
+    },
+    {
+      id: 'research-finding-syllabus',
+      text: `No public software engineering syllabus could be found for ${n('National', 'se_courses', 'no public syllabus found')} of ${N} national schools and ${n('Ohio', 'se_courses', 'no public syllabus found')} of ${O} in Ohio.`,
+    },
+  ]
 }
 
 const FILE_ARCHIVE = /\.(pdf|docx?)$/i

@@ -4,6 +4,7 @@ import {
   STRATA,
   VARIABLES,
   countTable,
+  findings,
   isAbsence,
   quoteLink,
   refetch,
@@ -135,6 +136,15 @@ export default function Research() {
         national counts. Groups this small support counts, not percentages or claims about all US
         departments. Coded on {SCHOOLS[0].coded_at} from public web pages only.
       </p>
+
+      <h2>What the data shows</h2>
+      <ul className="findings" data-from="data/coded/values.json data/frame/sample.csv">
+        {findings().map((f) => (
+          <li key={f.id} data-claim={f.id}>
+            {f.text}
+          </li>
+        ))}
+      </ul>
 
       <h2>Answers by question</h2>
       <dl className="strata" data-claim="research-strata">

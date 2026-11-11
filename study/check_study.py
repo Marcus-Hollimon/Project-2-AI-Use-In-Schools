@@ -1,7 +1,7 @@
 """Check the coded study data against its archived sources and the codebook.
 
 Run from the repo root:
-  uv run --no-project python -I study/check_study.py              (all 15 schools)
+  uv run --no-project python -I study/check_study.py              (every school in values.json)
   uv run --no-project python -I study/check_study.py --only 174066,163286
 
 Writes data/coded/checks.json and prints one line per school. Exit code 1 if any check fails.

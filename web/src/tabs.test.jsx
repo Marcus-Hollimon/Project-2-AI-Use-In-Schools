@@ -29,13 +29,44 @@ afterEach(() => {
 })
 
 describe('Research findings', () => {
-  test('every question adds up to 10 national schools (2 per stratum) and 5 Ohio schools', () => {
+  test('every question adds up to 30 national schools (6 per stratum) and 6 Ohio schools', () => {
     for (const v of VARIABLES) {
       const rows = Object.values(countTable(v.id))
       const sum = (key) => rows.reduce((n, r) => n + (r[key] ?? 0), 0)
-      expect([sum('national'), sum('ohio')]).toEqual([10, 5])
-      for (const s of ['S1', 'S2', 'S3', 'S4', 'S5']) expect(sum(s)).toBe(2)
+      expect([sum('national'), sum('ohio')]).toEqual([30, 6])
+      for (const s of ['S1', 'S2', 'S3', 'S4', 'S5']) expect(sum(s)).toBe(6)
     }
+  })
+
+  test('each "What the data shows" number equals a count taken directly from values.json and sample.csv', () => {
+    open('research')
+    const inOhio = (s) => groupOf[s.unitid].ohio
+    const count = (ohio, variable, value) =>
+      values.schools.filter((s) => inOhio(s) === ohio && s.values[variable].value === value).length
+    const N = values.schools.filter((s) => !inOhio(s)).length
+    const O = values.schools.length - N
+    const text = (id) => document.querySelector(`[data-claim="${id}"]`).textContent
+    const pairs = (id) => text(id).match(/\d+ of \d+/g).map((p) => p.split(' of ').map(Number))
+    expect(pairs('research-finding-dept')).toEqual([[count(false, 'dept_stance', 'none found'), N], [count(true, 'dept_stance', 'none found'), O]])
+    expect(pairs('research-finding-disclosure')).toEqual([[count(false, 'disclosure', 'required'), N], [count(true, 'disclosure', 'required'), O]])
+    expect(pairs('research-finding-syllabus')).toEqual([
+      [count(false, 'se_courses', 'no public syllabus found'), N],
+      [count(true, 'se_courses', 'no public syllabus found'), O],
+    ])
+    // Stance sentence: "national (of N): value n, value n. Ohio (of O): value n, ...", largest first.
+    const [nat, ohio] = text('research-finding-stance').split('Ohio (of')
+    for (const [part, isOhio] of [[nat, false], [ohio, true]]) {
+      const listed = [...part.split(':')[1].matchAll(/([a-z ]+?) (\d+)/g)].map((m) => [m[1].trim(), Number(m[2])])
+      const expected = allowedValues('univ_stance')
+        .map((v) => [v, count(isOhio, 'univ_stance', v)])
+        .filter(([, c]) => c > 0)
+      expect(Object.fromEntries(listed)).toEqual(Object.fromEntries(expected))
+      expect(listed.map(([, c]) => c)).toEqual([...listed.map(([, c]) => c)].sort((a, b) => b - a))
+    }
+    expect(text('research-finding-stance')).toContain(`national (of ${N})`)
+    expect(text('research-finding-stance')).toContain(`Ohio (of ${O})`)
+    // Counts only: no percentages anywhere in the list.
+    expect(document.querySelector('.findings').textContent).not.toMatch(/%|percent/)
   })
 
   test('each count equals a count taken directly from values.json and sample.csv', () => {
@@ -138,11 +169,12 @@ describe('Validation', () => {
     for (const r of shown) expect(r.textContent).toMatch(/study/)
   })
 
-  test('the study check table has all 15 schools, each cell matching checks.json', () => {
+  test('the study check table has all 36 schools, each cell matching checks.json', () => {
     open('validation')
     const studyChecks = readJson('data/coded/checks.json')
+    expect(studyChecks.schools).toHaveLength(36)
     const rows = within(screen.getByRole('table', { name: 'Study checks per school' })).getAllByRole('row')
-    expect(rows).toHaveLength(16)
+    expect(rows).toHaveLength(37)
     const ids = [...rows[0].querySelectorAll('th')].slice(1).map((th) => th.textContent)
     expect(ids).toEqual(['S1', 'S2', 'S3', 'S4', 'S5', 'C1', 'C2', 'C3', 'C4', 'N1'])
     studyChecks.schools.forEach((s, i) => {
