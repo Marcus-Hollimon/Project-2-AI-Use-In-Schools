@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://bulletin.case.edu/undergraduate-academics/academic-integrity/",
+ "final_url": "https://bulletin.case.edu/undergraduate-academics/academic-integrity/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:57:38-05:00",
+ "sha256": "fd2ce1e9f3c106c7363bc8be270e8562e550543b8f2c1d5a5ba7a1f47eb51a66",
+ "bytes": 190385
+}

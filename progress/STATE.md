@@ -2,13 +2,18 @@
 
 Current phase: 5 More schools (15 to 36; spec `specs/phase-5-more-schools.md`, approved by Marcus 15:15:40 with one extra Ohio school, so 21 new, 36 in all). Evaluation moves to Phase 6. Phase 4 Validation is done.
 
-Last updated: 2026-11-11T16:41:39-05:00 by Claude (session a9056776), 18 of 21 schools coded; PAUSED for the
-5-hour window (83% at 16:41; the spec's stop line is 85%; it resets 7:40 PM EST). Resume after the reset.
+Last updated: 2026-11-11T16:59:31-05:00 by Claude (session a9056776). ALL 21 new schools coded; full checker
+36 PASS, 0 FAIL; study tests 40/40 recorded (validation/runs/2026-11-11T21-59-21-021Z_study.json). Marcus chose
+to push past the 85% stop line at 16:53 (progress/decisions.md); the 5-hour window was 90% at 16:59 (resets
+7:40 PM EST). /compact prepared. Coding is DONE; the site update is next.
 
 ## FIRST, right after the /compact
 1. Take a usage reading marked "after /compact" (full 7-column row in `progress/usage.md`, phase 5).
-2. Continue coding with school 19, Berry 139144 (order below), then Tidewater 233772 and Case Western 201645.
-   Done and passing: Iowa State,
+2. Coding is finished: all 36 schools pass. Next is the rest of the Phase 5 spec: the site's "What the data
+   shows" claims and their tests, a web mutation run, texts that still say "15", the R1 re-fetch, recorded
+   study/web/pipeline runs, C3_compact with Marcus (build must exit 0), push, deploy check, spec checkboxes, and
+   Marcus's checklist with every judgment call below. Watch the 5-hour window: at 100% all work stops.
+   Done and passing: Berry, Tidewater, Case Western, Iowa State,
    Stanford, NYIT, West Virginia Wesleyan, Glendale CC, Arizona State, Rice, Eastern Kentucky, Nevada State,
    UDC, UMKC, Penn, College of Charleston, Westminster, Niagara CC, Temple, Nova Southeastern, Maine Fort Kent (rows in `progress/pilot-cost.md`).
    About 2 to 6 five-hour points and 30k to 50k context per school (Maine Fort Kent cost 4).
@@ -82,6 +87,24 @@ Last updated: 2026-11-11T16:41:39-05:00 by Claude (session a9056776), 18 of 21 s
    statement the guide borrowed from another school (brainstorming, same reading as Temple); se_courses "no public
    syllabus found" (no software engineering course; COS 333 Systems Analysis & Design is the closest). The UMS
    Student Conduct Code treats unattributed AI work as plagiarism; noted, not coded.
+   Berry: no college-wide AI policy; every value but se_courses comes from the library's guides on
+   libguides.berry.edu (on domain). University "instructor decides" from "Berry's syllabus statement" quoted in the
+   faculty guide; tone neutral; collaboration "in passing" (brainstorm; "Copilot" there is a product name);
+   disclosure "encouraged" ("highly recommended ... be completely transparent"). The catalog's Academic Standards
+   page gave curl HTTP 202 with an empty body; deleted, not read in the browser (the search result showed no AI text).
+   Tidewater: university **restrict** from the 2024 Code of Student Rights & Responsibilities (unauthorized AI is
+   cheating, same reading as Niagara); disclosure **required** from its plagiarism rule (AI without acknowledgment;
+   cue_reason); tone **positive** from the library student guide ("a valuable tool, but..."; balanced page, same
+   reading as Nova); se_courses "no public syllabus found" (no software engineering course). **The newer Student
+   Code of Conduct, Policy 2214 (July 2025), was NOT read:** curl got 403 and the browser pane turned it into a
+   download prompt for Marcus (not taken). If it changed the AI rule, the stance could differ.
+   Case Western: university **restrict** from the 2026-27 Academic Integrity Policy (AI "without instructor
+   permission" is a violation; cue_reason), although the October 2026 UTech AI policy leaves uses to each
+   syllabus; tone positive (Provost: CWRU "embraces AI in education"); collaboration "not discussed"; disclosure
+   required (UTech policy: students "must ... disclose and cite permitted AI assistance"); se_courses **"allowed
+   with conditions"** from the CSDS 293 Software Craftsmanship statement in the university's published survey of
+   faculty syllabus statements (the instructor's text, not a full syllabus; CSDS 293 is a software development
+   course, not CSDS 393 Software Engineering, which had nothing public).
    **Inconsistency to raise with Marcus:** Stanford and UDC code an official catalog course description
    that mentions AI as the course page ("AI built into the course"), while EKU, UMKC and an earlier school
    (values.json "CSC 310") treat a description with no AI text as "no public syllabus found", not "not

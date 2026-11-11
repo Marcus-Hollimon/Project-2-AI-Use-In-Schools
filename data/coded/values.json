@@ -2022,6 +2022,65 @@
      "note": "The Computer Science A.S. has no software engineering course; the closest, ITP 100 Software Design, has only a catalog description (no AI text in the result), and no syllabus was found."
     }
    }
+  },
+  {
+   "unitid": "201645",
+   "slug": "201645-case-western",
+   "name": "Case Western Reserve University",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "restrict",
+     "quote": "All forms of academic dishonesty including cheating, plagiarism, misrepresentation, obstruction, use of generative artificial intelligence (AI) without instructor permission, and submitting without permission work to one course that was completed for another course are violations of academic integrity standards.",
+     "url": "https://bulletin.case.edu/undergraduate-academics/academic-integrity/",
+     "archive": "data/sources/201645-case-western/2026-11-11-bulletin-academic-integrity.html",
+     "source_type": "policy page",
+     "cue_reason": "The phrase 'without permission' in the sentence is about reused coursework; the AI part says 'without instructor permission', so AI use is a violation unless the instructor allows it, and the default is restrict. The same policy also lists 'unauthorized use of generative artificial intelligence' under misrepresentation.",
+     "note": "Academic Integrity Policy in the 2026-27 General Bulletin. The UTech AI policy (October 2026) strongly recommends that instructors state permitted and prohibited uses in each syllabus; the default stays restrict (same reading as West Virginia Wesleyan and Niagara)."
+    },
+    "univ_tone": {
+     "value": "positive",
+     "quote": "Case Western Reserve University embraces AI in education to prepare students for the workforce.",
+     "url": "https://case.edu/provost/example-ai-policies-suitable-course-syllabi",
+     "archive": "data/sources/201645-case-western/2026-11-11-provost-example-ai-policies.html",
+     "source_type": "guidance page",
+     "note": "Opening of the Provost's Example AI Policies page (dated 21 August 2024, from the AI Task Force). The UTech AI policy (October 2026) likewise opens by saying CWRU 'supports the responsible, innovative, and ethical use' of AI."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/201645-case-western/search-log.md"
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/201645-case-western/search-log.md"
+    },
+    "collaboration": {
+     "value": "not discussed",
+     "reviewed": [
+      "data/sources/201645-case-western/2026-11-11-bulletin-academic-integrity.html",
+      "data/sources/201645-case-western/2026-11-11-institutional-ai-policy.pdf",
+      "data/sources/201645-case-western/2026-11-11-provost-example-ai-policies.html",
+      "data/sources/201645-case-western/2026-11-11-provost-ai-policies.html"
+     ],
+     "note": "The UTech policy says users are responsible for work 'co-created with AI' and should keep 'the human in the loop'; nothing presents AI as a partner, tutor or collaborator for students."
+    },
+    "disclosure": {
+     "value": "required",
+     "quote": "Correspondingly, students must adhere to these course-specific guidelines, and appropriately disclose and cite permitted AI assistance.",
+     "url": "https://case.edu/ai/sites/default/files/2026-10/Institutional%20Policy%20and%20Guidelines%20on%20Generative%20and%20Agentic%20Artificial%20Intelligence%20%281%29.pdf",
+     "archive": "data/sources/201645-case-western/2026-11-11-institutional-ai-policy.pdf",
+     "source_type": "policy page",
+     "note": "Section 6, Instructional Transparency, of the 'Reference Guide to UTech Policies Governing AI Use and Data Security' (October 2026). The Academic Integrity Policy also counts AI content presented without proper attribution as plagiarism."
+    },
+    "se_courses": {
+     "value": "allowed with conditions",
+     "quote": "They should disclose their use of generative AI and must take responsibility for the resulting code.",
+     "url": "https://case.edu/ai/sites/default/files/2026-04/gen-ai-syllabus-statement-results.pdf",
+     "archive": "data/sources/201645-case-western/2026-11-11-syllabus-statement-results.pdf",
+     "source_type": "syllabus",
+     "note": "Syllabus text for CSDS 293 Software Craftsmanship (Department of Computer and Data Sciences), as submitted by its instructor to the university's published survey of Gen AI syllabus statements (April 2026 edition). The statement calls generative AI 'a valuable resource in code generation' and requires students to test, understand and refactor generated code. No full syllabus and no CSDS 393 Software Engineering syllabus were found."
+    }
+   }
   }
  ]
 }

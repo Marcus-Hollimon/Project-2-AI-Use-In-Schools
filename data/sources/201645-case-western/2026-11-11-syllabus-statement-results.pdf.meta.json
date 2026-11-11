@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://case.edu/ai/sites/default/files/2026-04/gen-ai-syllabus-statement-results.pdf",
+ "final_url": "https://case.edu/ai/sites/default/files/2026-04/gen-ai-syllabus-statement-results.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T16:57:39-05:00",
+ "sha256": "20390410d150031290101fc3a64576cee57b82b9bfc8d8492906092f41cd1c0a",
+ "bytes": 552798
+}

@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://case.edu/provost/example-ai-policies-suitable-course-syllabi",
+ "final_url": "https://case.edu/provost/example-ai-policies-suitable-course-syllabi",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:57:38-05:00",
+ "sha256": "20085d599fb46929a5d0f68c951c8fb0495291bf92f62dd8b71c521f4b6128d4",
+ "bytes": 48418
+}
