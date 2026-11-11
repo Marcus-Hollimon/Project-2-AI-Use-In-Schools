@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://faculty.valpo.edu/jcaristi/cs358/SyllabusS10.pdf",
+ "final_url": "https://faculty.valpo.edu/jcaristi/cs358/SyllabusS10.pdf",
+ "http_status": 403,
+ "content_type": "text/html; charset=iso-8859-1",
+ "fetched_at": "2026-11-11T10:41:51-05:00",
+ "sha256": "5c8920cffdbc6c08ae590c31854c7965a54526e7078d9712e78e41a187c076d8",
+ "bytes": 232
+}

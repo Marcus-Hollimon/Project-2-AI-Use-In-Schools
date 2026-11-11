@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T15:31:12.103532Z",
+ "generatedAt": "2026-11-11T15:43:13.987275Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -795,12 +795,36 @@
    "text": "You can open that transcript. Continue the phase 2 pilot."
   },
   {
-   "time": "2026-11-11T15:31:01.241000Z",
+   "time": "2026-11-11T15:31:39Z",
+   "actor": "Marcus",
+   "kind": "decision",
+   "text": "Transcript ddc7d76a may be opened",
+   "options": "(Marcus: \"You can open that transcript\")",
+   "notes": "Checked metadata only: messages dated 2026-09-09 17:36 to 18:55 UTC, working folders C:\\Claude Folder and canon-keeper, first prompt about an MCP server for roleplay canon. It is the retired canon-keeper project, not this one; the Nov 8 18:00 file date is not when it was used. Not read further; not added to pipeline/sessions.json."
+  },
+  {
+   "time": "2026-11-11T15:40:03Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Pilot: Minnesota and Johns Hopkins coded; S3 allows browser text for curl-blocked pages",
+   "commit": "116489e",
+   "note": "written by Claude, pushed from Marcus's account"
+  },
+  {
+   "time": "2026-11-11T15:42:39.975000Z",
    "actor": "Claude",
    "kind": "reply",
    "turn": 15,
-   "text": "",
-   "toolCalls": 4
+   "text": "Now the STATE.md update, log row and usage row.",
+   "toolCalls": 103
+  },
+  {
+   "time": "2026-11-11T15:42:58Z",
+   "actor": "Claude",
+   "kind": "milestone",
+   "phase": "2",
+   "text": "Pilot 3 of 5: Minnesota, Johns Hopkins, Valparaiso coded; all pass check_study.py. S3 extended for curl-blocked pages (test plus sabotage run). Archives stored byte-for-byte in git. ddc7d76a closed (canon-keeper). Average 3.3 five-hour points per school. Prepared second /compact.",
+   "evidence": "`progress/pilot-cost.md`, `data/coded/values.json`"
   }
  ]
 }

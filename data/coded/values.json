@@ -123,6 +123,64 @@
      "note": "The only page for EN.601.421 on jhu.edu is from Fall 2018, before ChatGPT; codebook v1 codes it 'not addressed'. Flagged for codebook v2: course pages from before 2023 should not count. The Spring 2024 syllabus on Notion did not load."
     }
    }
+  },
+  {
+   "unitid": "152600",
+   "slug": "152600-valparaiso",
+   "name": "Valparaiso University",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "instructor decides",
+     "quote": "Include a statement that clearly defines the acceptable use of AI for your course.",
+     "url": "https://intra.valpo.edu/cital/wp-content/uploads/sites/13/2025/08/Syllabus-Elements_revised-_2025.pdf",
+     "archive": "data/sources/152600-valparaiso/2026-11-11-cital-syllabus-elements-2025.pdf",
+     "source_type": "policy page",
+     "cue_reason": "The sentence is a required element of every Valpo syllabus, addressed to the instructor, so each course sets its own rule; no university default is stated.",
+     "note": "Required syllabus elements (revised 2025), not a stand-alone policy page; the Honor Council page also tells faculty to address AI in their syllabi."
+    },
+    "univ_tone": {
+     "value": "cautionary",
+     "quote": "Do not mindlessly use AI tools in place of your own thinking, analysis, and general learning",
+     "url": "https://intra.valpo.edu/cital/wp-content/uploads/sites/13/2025/08/Syllabus-Elements_revised-_2025.pdf",
+     "archive": "data/sources/152600-valparaiso/2026-11-11-cital-syllabus-elements-2025.pdf",
+     "source_type": "policy page",
+     "note": "The suggested AI language is a list of warnings (do not, mistakes, verify); the Honor Council and CITAL pages focus on misuse cases and detection."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/152600-valparaiso/search-log.md",
+     "reviewed": [
+      "data/sources/152600-valparaiso/2026-11-11-dept-math-cs.html",
+      "data/sources/152600-valparaiso/2026-11-11-cs-program.html"
+     ]
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/152600-valparaiso/search-log.md"
+    },
+    "collaboration": {
+     "value": "not discussed",
+     "reviewed": [
+      "data/sources/152600-valparaiso/2026-11-11-cital-syllabus-elements-2025.pdf",
+      "data/sources/152600-valparaiso/2026-11-11-honor-council-ai.html",
+      "data/sources/152600-valparaiso/2026-11-11-cital-honor-code-ai.html"
+     ]
+    },
+    "disclosure": {
+     "value": "encouraged",
+     "quote": "If you use AI, always provide evidence of how AI tool contributed to your work.",
+     "url": "https://intra.valpo.edu/cital/wp-content/uploads/sites/13/2025/08/Syllabus-Elements_revised-_2025.pdf",
+     "archive": "data/sources/152600-valparaiso/2026-11-11-cital-syllabus-elements-2025.pdf",
+     "source_type": "policy page",
+     "cue_reason": "Part of the suggested syllabus language that instructors may adopt, not a rule on its own; saying how AI contributed is a disclosure."
+    },
+    "se_courses": {
+     "value": "no public syllabus found",
+     "search_log": "data/sources/152600-valparaiso/search-log.md",
+     "note": "CS 358 Software Design and Development: the only syllabus found (Spring 2010) now returns HTTP 403."
+    }
+   }
   }
  ]
 }

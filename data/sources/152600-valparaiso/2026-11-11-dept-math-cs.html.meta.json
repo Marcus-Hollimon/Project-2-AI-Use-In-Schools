@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.valpo.edu/college-of-arts-and-sciences/mathematics-and-computer-science/",
+ "final_url": "https://www.valpo.edu/college-of-arts-and-sciences/mathematics-and-computer-science/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T10:41:24-05:00",
+ "sha256": "a836bdcef9dc5858aa7faaac36ade92e2fa0f585f9f7bfe39055c0df95ae3446",
+ "bytes": 385027
+}

@@ -153,6 +153,28 @@
    "responseTime": "2026-11-11T15:21:18.140Z",
    "nearestDifference": 113,
    "pass": true
+  },
+  {
+   "reading": "2026-11-11T15:31:23Z",
+   "app": 89035,
+   "between": [
+    87293,
+    89035
+   ],
+   "responseTime": "2026-11-11T15:31:05.993Z",
+   "nearestDifference": 0,
+   "pass": true
+  },
+  {
+   "reading": "2026-11-11T15:43:12Z",
+   "app": 218345,
+   "between": [
+    218334,
+    219059
+   ],
+   "responseTime": "2026-11-11T15:43:03.249Z",
+   "nearestDifference": 11,
+   "pass": true
   }
  ],
  "C2_completeness": [
@@ -171,8 +193,8 @@
   {
    "session": "a9056776-4951-4636-a9ad-acb1dbccb955",
    "subagent": false,
-   "apiRequests": 77,
-   "uniqueResponses": 77,
+   "apiRequests": 149,
+   "uniqueResponses": 149,
    "unansweredRequests": [],
    "newestRecordIsUnansweredRequest": false,
    "extra": 0,
@@ -194,19 +216,19 @@
   }
  ],
  "C4_inflation": {
-  "usageRows": 668,
-  "uniqueResponses": 235,
+  "usageRows": 852,
+  "uniqueResponses": 307,
   "naive": {
-   "input": 1380,
-   "cacheWrite": 3375747,
-   "cacheRead": 111953258,
-   "output": 1658686
+   "input": 1748,
+   "cacheWrite": 3705711,
+   "cacheRead": 140737161,
+   "output": 1793981
   },
   "deduplicated": {
-   "input": 484,
-   "cacheWrite": 875063,
-   "cacheRead": 40001039,
-   "output": 379654
+   "input": 628,
+   "cacheWrite": 1005087,
+   "cacheRead": 51247305,
+   "output": 426158
   }
  },
  "privacy": [

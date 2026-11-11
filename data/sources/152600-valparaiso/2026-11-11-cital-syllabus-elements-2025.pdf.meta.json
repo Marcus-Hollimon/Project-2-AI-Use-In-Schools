@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://intra.valpo.edu/cital/wp-content/uploads/sites/13/2025/08/Syllabus-Elements_revised-_2025.pdf",
+ "final_url": "https://intra.valpo.edu/cital/wp-content/uploads/sites/13/2025/08/Syllabus-Elements_revised-_2025.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T10:40:30-05:00",
+ "sha256": "ca19f9ea78e139be9494e6535307580d0d7f1acd0cddcf1dff2795261750b6ef",
+ "bytes": 172807
+}

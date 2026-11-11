@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://intra.valpo.edu/cital/?p=20618",
+ "final_url": "https://intra.valpo.edu/cital/valpos-honor-code-and-ai/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T10:40:27-05:00",
+ "sha256": "8c8500cd8b6763ea5fdcb0dcf2465faefb2faddea2c6061fed8673f551e68d99",
+ "bytes": 189036
+}

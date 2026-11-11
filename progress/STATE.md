@@ -1,8 +1,8 @@
 # State: read this first
 
-Current phase: 2 Study (spec approved; checks built and tested; pilot of 5 schools is next)
+Current phase: 2 Study (pilot: 3 of 5 schools coded and passing; Coppin State and Snow are next)
 
-Last updated: 2026-11-11T10:22:14-05:00 by Claude (session a9056776), just before a `/compact`.
+Last updated: 2026-11-11T10:42:58-05:00 by Claude (session a9056776), just before the second `/compact`.
 
 ## Deadline and pace
 - Everything is due **2 PM EST, Thu Nov 12 2026** (Marcus, 2026-11-11).
@@ -15,7 +15,28 @@ Last updated: 2026-11-11T10:22:14-05:00 by Claude (session a9056776), just befor
 ## FIRST, right after the /compact
 1. Take a usage reading marked "after /compact" in `progress/usage.md` (tool: get_usage), with the
    time from `date -Iseconds`. Run `uv run --project pipeline python pipeline/build.py`; C1 to C3 must pass.
-2. Start the pilot (spec task 4).
+2. Continue the pilot: Coppin State 162283 (coppin.edu), then Snow 230597 (snow.edu). Same procedure
+   as below. Then do the "After the 5" step.
+
+## Pilot so far (details and costs in `progress/pilot-cost.md`)
+- Minnesota 174066, Johns Hopkins 162928, Valparaiso 152600: coded, all pass `check_study.py`;
+  committed and pushed (116489e has the first two). Average 3.3 five-hour points and about 41,500
+  tokens of context per school; 5-hour was 34% at 10:42, resets 14:40 EST.
+- Check S3 changed during the pilot: browser text (`--rendered`) passes with a raw curl copy at
+  HTTP 200, or at HTTP 403 plus a written `fetch_reason` on the value (spec and test updated; sabotage
+  run failed exactly the new test). Not yet needed by any coded value.
+- `.gitattributes` now stores `data/sources/**` byte-for-byte (`-text`); without it git rewrote line
+  endings in archives, which would break S2 hashes on a fresh checkout.
+- Codebook v2 candidates (pre-2023 course pages; example syllabus language for disclosure; department
+  news as department text) are listed in `pilot-cost.md`. Decide after school 5; if adopted, recode the
+  pilot schools (spec R2).
+- Helpers that worked: a scratch text viewer (`showtext.py` in the session scratchpad: prints a saved
+  page's visible text, filtered by a regex) and `pdftotext -enc UTF-8 <pdf> <pdf>.txt` for the PDF
+  sidecar. Filter page text by regex rather than printing whole pages; it keeps context growth down.
+- Do NOT retry curl with extra browser headers when a site returns 403: the permission system refused
+  it as bot-check circumvention. Read such pages in the browser pane instead.
+- ddc7d76a: checked with Marcus's permission (metadata only); it is the retired canon-keeper project
+  (Sep 9), not this one. Closed.
 
 ## Where things stand
 - Phases 0 and 1: done. Live site still a skeleton:
@@ -58,8 +79,7 @@ After the 5: report cost per school and the projection for 15 against the deadli
 5-hour window; change the codebook only as version 2 with reasons (spec R2); prepare a /compact.
 
 ## Still open
-- `ddc7d76a-46ca-4bba-a89a-f901ccc7b9a7.jsonl` (same transcript folder, last written Nov 8 18:00,
-  while Marcus was away). Not opened (privacy). Asked Marcus once; no answer yet. Do not open.
+- Nothing waiting on Marcus.
 
 ## Sessions in this project
 | Session | Started in | Model | Covers |

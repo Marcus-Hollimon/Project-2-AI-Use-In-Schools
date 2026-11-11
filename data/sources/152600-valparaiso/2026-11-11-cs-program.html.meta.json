@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.valpo.edu/programs/computer-science/",
+ "final_url": "https://www.valpo.edu/programs/computer-science/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T10:41:25-05:00",
+ "sha256": "5e2629cd51e596abaa287d0be41af0f398a5b62030f246f71bd51c195d9e901e",
+ "bytes": 408240
+}

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T10:39:23-05:00",
+ "generatedAt": "2026-11-11T10:43:15-05:00",
  "codebookVersion": 1,
  "schools": [
   {
@@ -381,6 +381,22 @@
    ]
   },
   {
+   "unitid": "234076",
+   "name": "University of Virginia-Main Campus",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
    "unitid": "162928",
    "name": "Johns Hopkins University",
    "pass": true,
@@ -650,7 +666,460 @@
      "message": "dept_stance='none found' and dept_tone='none found' agree on none found"
     }
    ]
+  },
+  {
+   "unitid": "166683",
+   "name": "Massachusetts Institute of Technology",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "152600",
+   "name": "Valparaiso University",
+   "pass": true,
+   "checks": {
+    "S1": true,
+    "S2": true,
+    "S3": true,
+    "S4": true,
+    "S5": true,
+    "C1": true,
+    "C2": true,
+    "C3": true,
+    "C4": true,
+    "N1": true
+   },
+   "findings": [
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: valpo.edu generative AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: valpo.edu computer science AI policy"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: valpo.edu software engineering syllabus AI"
+    },
+    {
+     "check": "C4",
+     "variable": null,
+     "ok": true,
+     "message": "search logged with results: valpo.edu ChatGPT academic integrity"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "value 'instructor decides' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote has 14 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "quote found in data/sources/152600-valparaiso/2026-11-11-cital-syllabus-elements-2025.pdf"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "intra.valpo.edu is on valpo.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "univ_stance",
+     "ok": true,
+     "message": "cue words absent; reason: The sentence is a required element of every Valpo syllabus, addressed to the instructor, so each course sets its own rule; no university default is stated."
+    },
+    {
+     "check": "C1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "absence backed by 2 reviewed pages"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_stance",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "value 'cautionary' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote has 16 words"
+    },
+    {
+     "check": "S1",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "quote found in data/sources/152600-valparaiso/2026-11-11-cital-syllabus-elements-2025.pdf"
+    },
+    {
+     "check": "S2",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "univ_tone",
+     "ok": true,
+     "message": "intra.valpo.edu is on valpo.edu"
+    },
+    {
+     "check": "C1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "value 'not discussed' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "absence backed by 3 reviewed pages"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "value 'encouraged' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote, url and archive present"
+    },
+    {
+     "check": "C1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "source_type 'policy page' allowed"
+    },
+    {
+     "check": "S5",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote has 15 words"
+    },
+    {
+     "check": "S1",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "quote found in data/sources/152600-valparaiso/2026-11-11-cital-syllabus-elements-2025.pdf"
+    },
+    {
+     "check": "S2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "hash matches"
+    },
+    {
+     "check": "S3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "HTTP status 200"
+    },
+    {
+     "check": "S4",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "intra.valpo.edu is on valpo.edu"
+    },
+    {
+     "check": "C3",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "cue words absent; reason: Part of the suggested syllabus language that instructors may adopt, not a rule on its own; saying how AI contributed is a disclosure."
+    },
+    {
+     "check": "C1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "value 'no public syllabus found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "se_courses",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "univ_stance='instructor decides' and univ_tone='cautionary' agree on none found"
+    },
+    {
+     "check": "C2",
+     "variable": null,
+     "ok": true,
+     "message": "dept_stance='none found' and dept_tone='none found' agree on none found"
+    }
+   ]
+  },
+  {
+   "unitid": "218539",
+   "name": "Presbyterian College",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "162283",
+   "name": "Coppin State University",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "220604",
+   "name": "Le Moyne-Owen College",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "230597",
+   "name": "Snow College",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "213659",
+   "name": "Luzerne County Community College",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "201885",
+   "name": "University of Cincinnati-Main Campus",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "204796",
+   "name": "Ohio State University-Main Campus",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "201195",
+   "name": "Baldwin Wallace University",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "202514",
+   "name": "Defiance College",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
+  },
+  {
+   "unitid": "202222",
+   "name": "Columbus State Community College",
+   "pass": false,
+   "checks": {
+    "C1": false
+   },
+   "findings": [
+    {
+     "check": "C1",
+     "variable": null,
+     "ok": false,
+     "message": "school not coded yet"
+    }
+   ]
   }
  ],
- "pass": true
+ "pass": false
 }

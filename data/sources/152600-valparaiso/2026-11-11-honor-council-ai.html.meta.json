@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://valpo.edu/honor-council/?p=127",
+ "final_url": "https://www.valpo.edu/about/mission-values/honor-council/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T10:40:25-05:00",
+ "sha256": "25e959dc9cf722d23b7b04fc4ed9641984851fb5c7bf69e2fd59058f9b12a2ad",
+ "bytes": 359900
+}
