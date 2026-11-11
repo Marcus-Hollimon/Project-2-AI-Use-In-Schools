@@ -1692,6 +1692,64 @@
      "note": "CS 351 Software Engineering has only a catalog description with no AI text (offered Spring, odd years); no syllabus was found."
     }
    }
+  },
+  {
+   "unitid": "193946",
+   "slug": "193946-niagara-cc",
+   "name": "Niagara County Community College",
+   "coded_at": "2026-11-11",
+   "values": {
+    "univ_stance": {
+     "value": "restrict",
+     "quote": "The term “cheating” includes, but is not limited to, using or providing unauthorized assistance, including the use of Artificial Intelligence (AI) tools, in taking quizzes, tests, examinations, or assignments",
+     "url": "https://sunyniagara.edu/wp-content/uploads/2026/05/StudentCodeofConduct202526edit526.pdf",
+     "archive": "data/sources/193946-niagara-cc/2026-11-11-student-code-of-conduct.pdf",
+     "source_type": "handbook",
+     "domain_reason": "sunyniagara.edu is the college's own site since it renamed itself SUNY Niagara; niagaracc.suny.edu is the older name.",
+     "note": "Academic Integrity Policy in the Student Conduct Code (edited May 2026): unauthorized AI help is cheating, so use needs permission (codebook v2). The college AI Policy says faculty pick one of the approved syllabus AI statements and speaks of 'When AI use is permitted within a course', which fits the same default."
+    },
+    "univ_tone": {
+     "value": "neutral",
+     "quote": "The policy is not intended to restrict legal and ethical use of AI where confidential information is not at risk.",
+     "url": "https://niacc.teamdynamix.com/TDClient/2830/Portal/KB/ArticleDet?ID=167417",
+     "archive": "data/sources/193946-niagara-cc/2026-11-11-tdx-ai-article.html",
+     "source_type": "policy page",
+     "domain_reason": "The college's AI Policy is published in its own IT Policies and Procedures knowledge base, hosted on TeamDynamix (niacc = Niagara County Community College).",
+     "note": "Procedural rules on integrity, data privacy and tool approval, with little evaluative language either way."
+    },
+    "dept_stance": {
+     "value": "none found",
+     "search_log": "data/sources/193946-niagara-cc/search-log.md"
+    },
+    "dept_tone": {
+     "value": "none found",
+     "search_log": "data/sources/193946-niagara-cc/search-log.md"
+    },
+    "collaboration": {
+     "value": "not discussed",
+     "reviewed": [
+      "data/sources/193946-niagara-cc/2026-11-11-tdx-ai-article.html",
+      "data/sources/193946-niagara-cc/2026-11-11-student-code-of-conduct.pdf",
+      "data/sources/193946-niagara-cc/2026-11-11-ai-task-force-post.html",
+      "data/sources/193946-niagara-cc/2026-11-11-libguide-ai.html"
+     ],
+     "note": "The AI Policy allows AI to 'augment productivity in administrative tasks' for staff; nothing presents AI as a partner or tutor for students."
+    },
+    "disclosure": {
+     "value": "required",
+     "quote": "The use of generative AI in academic submissions must be transparent and properly acknowledged.",
+     "url": "https://niacc.teamdynamix.com/TDClient/2830/Portal/KB/ArticleDet?ID=167417",
+     "archive": "data/sources/193946-niagara-cc/2026-11-11-tdx-ai-article.html",
+     "source_type": "policy page",
+     "domain_reason": "The college's AI Policy is published in its own IT Policies and Procedures knowledge base, hosted on TeamDynamix (niacc = Niagara County Community College).",
+     "note": "The Student Guidelines add that presenting AI work without acknowledgment or citation is plagiarism."
+    },
+    "se_courses": {
+     "value": "no public syllabus found",
+     "search_log": "data/sources/193946-niagara-cc/search-log.md",
+     "note": "The Computer Science A.S. has no software engineering course (CPS 250 Data Structures touches team development but is not software engineering), as at Nevada State."
+    }
+   }
   }
  ]
 }

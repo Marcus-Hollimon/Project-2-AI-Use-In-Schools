@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://sunyniagara.edu/wp-content/uploads/2026/05/StudentCodeofConduct202526edit526.pdf",
+ "final_url": "https://sunyniagara.edu/wp-content/uploads/2026/05/StudentCodeofConduct202526edit526.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T16:25:56-05:00",
+ "sha256": "bd730ad0d9f0bb5812b2c4fb9ab27342162a40c72939290eab8bda0865195e70",
+ "bytes": 1476241
+}

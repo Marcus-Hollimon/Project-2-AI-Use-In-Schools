@@ -63,6 +63,15 @@ new phase row and deliverable 1's "Done when" says 36 schools.
   study tests 39/39 (`validation/runs/2026-11-11T21-24-25-844Z_study.json`). This is a check change, not
   a codebook change; it is on Marcus's list of judgment calls, and reverting it would leave Westminster's
   university values without an archive the checker accepts.
+- **Checker bug fixed while coding (2026-11-11, 16:26 EST, Niagara CC):** the checker took a school's
+  domain as the last two parts of its IPEDS web address, so Niagara CC (www.niagaracc.suny.edu) became
+  `suny.edu`, which would accept any SUNY campus's page under S4 and expected searches for "suny.edu ...".
+  Maine Fort Kent (umfk.maine.edu, the University of Maine System) had the same fault. The checker now keeps
+  the campus subdomain for six system domains shared by separate colleges (suny.edu, cuny.edu, kctcs.edu,
+  maine.edu, mass.edu, losrios.edu); single universities with campus subdomains (umn.edu, psu.edu, iu.edu,
+  mit.edu) keep the two-part domain. No school coded earlier is affected. New test
+  `test_registrable_domain_keeps_campus_of_college_systems`; study tests 40/40
+  (`validation/runs/2026-11-11T21-27-37-461Z_study.json`).
 - **Order: round robin by type** (S1, S2, S3, S4, S5, then again; the Ohio school last), so if the budget runs out early,
   every type still has the same number of schools.
 - A school counts as done only when `check_study.py` passes every check (S1 to S5, C1 to C4, N1)

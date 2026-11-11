@@ -2,13 +2,14 @@
 
 Current phase: 5 More schools (15 to 36; spec `specs/phase-5-more-schools.md`, approved by Marcus 15:15:40 with one extra Ohio school, so 21 new, 36 in all). Evaluation moves to Phase 6. Phase 4 Validation is done.
 
-Last updated: 2026-11-11T16:17:52-05:00 by Claude (session a9056776), 13 of 21 schools coded, /compact prepared.
+Last updated: 2026-11-11T16:28:03-05:00 by Claude (session a9056776), 15 of 21 schools coded, /compact prepared.
 
 ## FIRST, right after the /compact
 1. Take a usage reading marked "after /compact" (full 7-column row in `progress/usage.md`, phase 5).
-2. Continue coding with school 14, Westminster 216807 (order below). Done and passing: Iowa State,
+2. Continue coding with school 16, Temple 216339 (order below). Done and passing: Iowa State,
    Stanford, NYIT, West Virginia Wesleyan, Glendale CC, Arizona State, Rice, Eastern Kentucky, Nevada State,
-   UDC, UMKC, Penn, College of Charleston (rows in `progress/pilot-cost.md`): about 2 to 4 five-hour points and 30k to 50k context per school.
+   UDC, UMKC, Penn, College of Charleston, Westminster, Niagara CC (rows in `progress/pilot-cost.md`).
+   Maine Fort Kent's search queries now use `umfk.maine.edu` (checker fix below): about 2 to 4 five-hour points and 30k to 50k context per school.
    Only 2 schools fit between compacts at that rate (context starts near 100k after a compact). Cost rows: scratchpad `costrow.py "<School unitid>" <start> <5h> <weekly>
    <context> <searches> "<pages>"` (takes the time from `date -Iseconds` itself).
 3. Prepare the next /compact after about 3 to 4 more schools (context near 190k).
@@ -47,6 +48,18 @@ Last updated: 2026-11-11T16:17:52-05:00 by Claude (session a9056776), 13 of 21 s
    positive, collaboration explicit ("feedback tool, tutor, or creative partner") and disclosure "encouraged"
    from Academic Affairs' integrity and AI page; the CS department's AI page is about AI as a field of study,
    so not coded; se_courses "no public syllabus found" (CSCI 362 syllabi are 2010 to 2020).
+   Westminster (PA): university "permit with conditions" and disclosure "required" from the Academic
+   Integrity Policy's cheating and plagiarism lists (handing in AI work "as your own"; same reading as Rice;
+   cue_reason); tone neutral; the policy page is in catalog.westminster.edu, which answers curl with HTTP
+   202 and an empty body, so it was read in the browser pane and **check S3 was changed** to treat an empty
+   202 like a 403 (needs fetch_reason; new test; spec notes it). That check change is itself a judgment call
+   for Marcus. Niagara CC (now SUNY Niagara, sunyniagara.edu): university **restrict** from the Student
+   Conduct Code (unauthorized AI help is cheating), although the college AI Policy (on its TeamDynamix IT
+   knowledge base, domain_reason) says faculty pick one of the approved syllabus statements (same pattern as
+   WV Wesleyan); disclosure required from the AI Policy; se_courses "no public syllabus found" (the CS A.S.
+   has no software engineering course, as at Nevada State). **Checker bug fixed:** the domain was the last
+   two parts of the web address, so Niagara became `suny.edu` and Maine Fort Kent `maine.edu`; now kept as
+   the campus subdomain for six college-system domains (spec notes it; new test).
    **Inconsistency to raise with Marcus:** Stanford and UDC code an official catalog course description
    that mentions AI as the course page ("AI built into the course"), while EKU, UMKC and an earlier school
    (values.json "CSC 310") treat a description with no AI text as "no public syllabus found", not "not

@@ -1,0 +1,928 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WR9V5K73');</script>
+<!-- End Google Tag Manager --><script>
+  window.TdxGtmContext = {"User":{"Id":0,"UID":"00000000-0000-0000-0000-000000000000","UserName":"","FullName":"Public User","AlertEmail":"publicuser@noreply.com","Role":"Experience User","HasTDNext":false,"StandardApplicationNames":null,"TicketApplicationNames":[],"AssetApplicationNames":[],"ClientPortalApplicationNames":[],"Type":"Technician","Analytics":{"Title":null,"Organization":null}},"Partition":{"Id":1003,"Name":"Multi-Tenant 03 Production"},"BillableEntity":{"Id":487,"Name":"North Iowa Area Community College","SalesForceIdentifier":"0013600000EM4fYAAT","GWMIID":"ab340d5b-955a-4609-93a3-0bf2f06f9a84"},"Environment":{"ShortName":"PRD"}};
+</script><script src="/TDPortal/Content/Scripts/jquery/2.2.4/jquery.min.js?v=20261110222146"></script><script src="/TDPortal/Content/Scripts/jquery-migrate/1.4.1/jquery-migrate.min.js?v=20261110222146"></script><script src="/TDPortal/Content/Scripts/jquery-ui/1.13.2/jquery-ui-1.13.2.custom.timepicker.min.js?v=20261110222432"></script><link href="/TDPortal/Content/Styles/jquery-ui/1.13.2/jquery-ui.compiled.min.css?v=20261110222434" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20261110222146" rel="stylesheet" type="text/css" id="lnkBootstrapCSS" /><script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20261110222146"></script><link href="/TDPortal/Content/FontAwesome/css/fontawesome.min.css?v=20261110222144" rel="stylesheet" type="text/css" id="lnkFontAwesome" /><link href="/TDPortal/Content/FontAwesome/css/solid.css?v=20261110222144" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/regular.css?v=20261110222144" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/brands.css?v=20261110222144" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/v4-shims.css?v=20261110222144" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/bootstrap_custom.min.css?v=20261110222434" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/TDStyles.min.css?v=20261110222434" rel="stylesheet" type="text/css"  /><link href="https://niacc.teamdynamix.com/TDPortal/BE/Style/487/TDClient/2830?v=20231101195138" rel="stylesheet" type="text/css" /><link href="/TDClient/Styles/TDStyles-TDX12.min.css?v=20261110222434" rel="stylesheet" type="text/css"  /><script type='text/javascript'>window.isTDClient = true;</script><script src="/TDClient/Scripts/TDClientModals.min.js?v=20261110222426"></script><script src="/TDPortal/Content/Scripts/tdx/dist/TDJSFramework.compiled.min.js?v=20261110222432"></script><script type='text/javascript'>if (window.TeamDynamix && window.TeamDynamix.DateUtils) { window.TeamDynamix.DateUtils.setFormats({"shortDate":"M/D/YYYY","shortDateLenientVariants":["M/D/YY","MM/D/YY","M/DD/YY","MM/DD/YY","MM/D/YYYY","M/DD/YYYY","MM/DD/YYYY"],"longDate":"ddd M/D/YY","time":"h:mm A","timeLenientVariants":["hh:mm A"],"chartYear":"YYYY","chartMonthYear":"MMM YYYY","chartMonthDayYear":"MMM D, YYYY","jqDatePicker":"m/d/yy","jqDatePickerLenientVariants":["m/d/y"],"jqTimePicker":"h:mm TT","jqTimePickerLenientVariants":[],"shortDateHint":"mm/dd/yyyy","timeHint":"hh:mm AM/PM","dateTimeHint":"mm/dd/yyyy hh:mm AM/PM","monthDayHint":"mm/dd","dotNetShortDate":"M/d/yyyy","dotNetTime":"h:mm tt","dotNetShortDateTime":"M/d/yyyy h:mm tt"}); }</script><script src="/TDPortal/Content/Scripts/tdx/dist/modalFocusTrap.min.js?v=20261110222430"></script><script src="/TDPortal/Content/Scripts/underscore/1.12.1/underscore-min.js?v=20261110222146"></script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Client Portal",
+  "url": "https://niacc.teamdynamix.com/TDClient/2830/Portal",
+  "description": "The Client Portal is an application that allows clients to access self-service offerings and track requests.",
+  "sourceOrganization": {
+    "@type": "Organization",
+    "name": "North Iowa Area Community College",
+    "url": "https://www.niacc.edu",
+    "logo": "0.png"
+  }
+}
+</script><script src="/TDClient/Scripts/clientOS.min.js?v=20261110222426"></script>
+<script src="/TDClient/Scripts/collapseMe.min.js?v=20261110222426"></script>
+<script src="/TDPortal/Content/Scripts/tdx/dist/tdsearchfilter.min.js?v=20261110222430"></script>
+<script src="/TDClient/Scripts/SiteSearch.min.js?v=20261110222426"></script>
+<script src="/TDPortal/Content/Scripts/tdx/dist/elasticsearchAutocomplete.min.js?v=20261110222430"></script>
+
+
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+          baseUrl: '/TDClient/',
+          isTdGoogleAnalyticsEnabled: true,
+          isAuthenticated: false
+          });
+
+        $('#collapseMe').collapseMe({
+          toggleVisibilitySelector: '.navbar-toggle'
+        });
+
+        TeamDynamix.addRequiredFieldHelp();
+      });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script>
+
+  
+  
+  
+  <script src="/TDPortal/Content/select2/v3/select2.min.js?v=20261110223736"></script><link href="/TDPortal/Content/select2/v3/select2.compiled.min.css?v=20261110223736" rel="stylesheet" type="text/css" id="lnkSelect2" />
+  <script src="/TDPortal/Content/Scripts/tdx/dist/attachmentHandler.min.js?v=20261110222430"></script>
+
+  <style type="text/css">
+    .honey-pot-div {
+      display: none;
+    }
+  </style>
+
+  <script>
+    
+
+    function shareArticle() {
+      if ($('#ctl00_ctl00_cpContent_cpContent_shareRecipients').val().trim() === "") {
+        alert('You must first enter a valid email.');
+        $('#btnShare').progressButton('reset');
+      }
+      else {
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnSendShare', '');
+      }
+    }
+
+    function closeShareModal() {
+      $('#divShareModal').modal('hide');
+      $('#btnShare').progressButton('reset');
+    }
+
+    function toggleFeedback(isHelpful) {
+      // Firefox restores form field values across page reloads, so clear any prior value before showing the textarea.
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').val('');
+      $('#divHelpfulComments').show();
+      $('#divHelpfulYesNo').hide();
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsHelpful').val(isHelpful);
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').focus();
+    }
+
+    function toggleFeedbackResult() {
+      $('#divWasHelpful, #divFeedbackRecorded, #divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    // The following two functions were added as a result of ticket ID: 1392522. We are generating these buttons dynamically to
+    // prevent bots from clicking them and posting feedback on an article. Additionally, we have an input that is hidden from
+    // the user. If a bot enters text in that input, which it likely will (bots love filling out forms), then we don't accept the
+    // form submission
+    function generateFeedbackButtons() {
+      var $btnHelpfulYes = $('<button id="btnHelpfulYes" type="button" class="btn btn-primary gutter-left" onclick="toggleFeedback(1);">Yes</button>');
+      var $btnHelpfulNo = $('<button id="btnHelpfulNo" type="button" class="btn btn-primary gutter-left-sm" onclick="toggleFeedback(0);">No</button>');
+
+      $('#divWasHelpful').append($btnHelpfulYes);
+      $('#divWasHelpful').append($btnHelpfulNo);
+    }
+    function attemptAddFeedback(e) {
+      if ($('#honeyPot').val() !== '') {
+        e.preventDefault();
+        window.location.reload();
+      }
+    }
+
+    function cancelFeedback() {
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').val('');
+      $('#divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    function confirmDeleteFeedback(id) {
+      if (confirm('Are you sure you want to delete this feedback? This cannot be undone.')) {
+        $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback', '');
+      }
+    }
+
+    function toggleAddressed(id, isAddressed) {
+      $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsAddressed').val(isAddressed);
+      __doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleAddressed', '');
+    }
+
+    $(function () {
+      
+
+      generateFeedbackButtons();
+      $('[data-toggle="popover"]').popover();
+
+      var attachmentHandler = new TeamDynamix.AttachmentHandler({
+        containerSelector: '.js-article-attachments',
+        resultLabelSelector: '#ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label',
+        baseControllerUrl: '/TDClient/2830/Portal/Shared/Attachments',
+        antiForgeryToken: 'ngIjxxGEu70qgx4qqCDELYWOO_vGEobzMCMNWjiRd4re7Llkb4-jrBmD8SJcDncVSgmb-LdsHG1Mk0bZqxx3TihxOMY1:LPVm3gLJUOjyRblxa3af9SLK-HD5C43h0XSrmSXgWnWzHuGBTSNUUATV9--n2bsDOrOR2m9htLXDEOQt88EwdTg3toQ1',
+        itemId: 167417,
+        componentId: 26,
+        feedId: 'articleFeed',
+        readOnly: false
+      });
+
+      $('#btnShare').on('click', function () {
+        shareArticle();
+      });
+
+      // Don't try and update the table styles if the user wanted to opt out.
+      $('#ctl00_ctl00_cpContent_cpContent_divBody table:not(.SkipTableFixup)').each(function () {
+        var padding = $(this).attr('cellpadding');
+        var spacing = $(this).attr('cellspacing');
+
+        $(this).css("border-collapse", "separate");
+
+        if (spacing) {
+          $(this).css("border-spacing", spacing + "px");
+        }
+
+        $(this).find('td').each(function () { $(this).css('padding', padding + 'px') });
+      });
+
+      
+    });
+
+    
+  </script>
+
+
+
+<meta property="og:title" content="AI Policy" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://niacc.teamdynamix.com/TDClient/2830/Portal/KB/Article/167417/AI-Policy" />
+<meta property="og:image" content="https://niacc.teamdynamix.com/TDPortal/BE/Logo/487/2830" />
+<meta property="og:description" content="The purpose of this policy is to provide clear guidelines for the use of generative artificial intelligence (AI) tools within the NIACC community." />
+  <meta property="og:site_name" content="North Iowa Area Community College - Knowledge Base" />
+  <meta property="article:section" content="IT Policies and Procedures" />
+  <meta property="article:published_time" content="2025-05-30T18:40Z" />
+  <meta property="article:modified_time" content="2026-05-16T13:00Z" /><title>
+	Article - AI Policy
+</title></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR9V5K73"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<form method="post" action="/TDClient/2830/Portal/KB/Article/167417/AI-Policy" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=639284669071545168" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+window.TeamDynamix = window.TeamDynamix || {};TeamDynamix.LocaleFormat = {groupSeparator:',',decimalSeparator:'.',currencySymbol:'$',percentSymbol:'%',numberDecimalDigits:2,currencyDecimalDigits:2,currencySymbolPlacement:0,percentSymbolPlacement:2,percentDecimalDigits:2};//]]>
+</script>
+
+<script src="/TDClient/ScriptResource.axd?d=1HpV3OVB0CaEXoaafcqmhhToA3UYAg0n5GkD1fLwN7In4apCXsFgpAsBvHJXX45hdMlrpL_urTZ0bx6NohJyhoH0s8X6v--4J5KUQ_G2TrTp9yzfnRAWP48IVw6PV7qBCgbSww2&amp;t=2ddfb07d" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=uHIkleVeDJf4xS50Krz-yArHVu97Uhbr7lONLdlK8nM4hDm6eoCZL2ERm6CtQHpj0CFhj4gKB63PbU5MchdrYzCrvWcqKHfZ22AL6w6WAtiv7CEAlAymwJmkI1Qtw0TEMJ-slq_CRHIG4Ui-Rx1fciBsC1g1&amp;t=ffffffffa1bf0f7b" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=Jw6tUGWnA15YEa3ai3FadFjGkzgoY6ZU4-ppjgDJsxnkOcw7mw7zcSvXUEE0Hk6CWSjHJumr1Wxw2cK1DVvIf1SlrE0DUJ8tMy2Ow7bc52aomV451Lt2SegKlk2pQmP0mPHiEM23PvgSWdLcKSm6ZD3lLyI1&amp;t=ffffffffa1bf0f7b" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=xtfVMqdF1exC2MBVkOJwMveStDR5kg3dbZWgIXMXZmB1xXom6CcIrWFgHa7jsp4qJuFW2L5XShudyzlBsIO3JhCfiU5HmL2BDz__mCv9dznmBlEMS7LvcYg6wTdPTrAXIXI2CvtjwlnpZd-j4Zpsx2wG_uA1&amp;t=639299283920000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=sp7vCoAo-SSYfpsQ1sYBBeEDnwCGxDYEwZCM0ler88yoVZIPDXMk1C3XF2L2L0xrbB8Rvhli51TswRlmPIOCZgaY58lKhPr-Pv1jTFJ1oUAu7x6RDtNFZUxbtxs3KYQGLK6FpPD5bKuB0e0NmS9HkAqRVks1&amp;t=639299283920000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=icMURy63hv40LPPfq4rTvmm-RfB_YkC6rEEF_2QOO68q3TseXYNBetRKKgBXJ8mn2e8UIgCPiV23HaQUZbjySMHqSgmYZgLcYltBqwD2_EK8aQ08zBuqc3ZBVZITQrbtn6w46dRxFLibMIQg0Aho73rn8Rpxrzg5YMG_JR0UOrUR0wlZ0&amp;t=639299283920000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=1HpFfNpwNihNfEP1lyJHvdPVqbv8KRoFH4-_ZORUgPOP-bqmmtIJRvFQc7828Vf59O_-fdBXcnwdv-hYp5RptPuHmMR0kGQM0_3rS4Z7sKfC7jy9Cc_8fyfcUWa8psszacEQlAXHPXmNwyRymbGSywEmhrE1&amp;t=639299283920000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+CKEditor_TextBoxEncode('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody', 0); if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="784CA02E" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$UpdatePanel1','','tctl00$ctl00$cpContent$cpContent$upFeedbackGrid','','tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], ['ctl00$ctl00$cpContent$cpContent$btnSubmitComments','','ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe','','ctl00$ctl00$cpContent$cpContent$btnToggleFavorite','','ctl00$ctl00$cpContent$cpContent$btnSendShare',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+<div id="ctl00_ctl00_upMain" style="display:none;">
+	
+    <div id="ctl00_ctl00_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Updating...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-label="Updating..." aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+  
+</div>
+
+<header id="ctl00_ctl00_navHeader" role="banner">
+
+  <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;">
+
+  
+
+  <div class="logo-header-full hidden-xs">
+
+    
+    <div class="pull-left">
+      <a href="#mainContent" class="sr-only sr-only-focusable skip-nav-link">Skip to main content</a>
+    </div>
+
+
+    <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;">
+
+      <div id="divLogo" class="pull-left logo-container">
+
+        <a href="https://www.niacc.edu/"
+           target="_blank">
+          <img src="/TDPortal/BE/Logo/487/2830" alt="North Iowa Area Community College Home Page" class="js-logo img-responsive" />
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+
+      </div>
+
+      <div class="master-header-right pull-right padding-top padding-bottom">
+
+        
+
+          <div class="pull-left topLevelSearch input-group">
+            <div id="SiteSearch-ca732c87bcc64b3cb9f4c4cbec9ec440" class="input-group site-search" style="max-width: 400px;">
+  <div id="SiteSearch-dropdown-ca732c87bcc64b3cb9f4c4cbec9ec440" class="input-group-btn">
+    <button type="button" id="SiteSearch-filter-ca732c87bcc64b3cb9f4c4cbec9ec440" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" title="Filter your search by category" data-component="all">
+      <span class="fa-solid fa-solid fa-earth-americas"></span><span class="fa-solid fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span>
+      <span class="sr-only">
+        Filter your search by category. Current category:
+        <span class="js-current-component">All</span>
+      </span>
+    </button>
+    <ul tabindex="-1" aria-label="Filter your search by category" role="menu" class="dropdown-menu" >
+      <li>
+        <a role="menuitem" href="javascript:void(0);" data-component-text="All" data-component="all" data-component-icon="fa-solid fa-earth-americas" title="Search all areas">
+          <span class="fa-solid fa-fw fa-nopad fa-earth-americas" aria-hidden="true"></span>
+          All
+        </a>
+      </li>
+
+      <li aria-hidden="true" class="divider"></li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Knowledge Base" data-component="kb" data-component-icon="fa-lightbulb" title="Search Knowledge Base">
+            <span class="fa-regular fa-fw fa-nopad fa-lightbulb" aria-hidden="true"></span>
+            Knowledge Base
+          </a>
+        </li>
+
+
+    </ul>
+  </div>
+
+  <label class="sr-only" for="SiteSearch-text-ca732c87bcc64b3cb9f4c4cbec9ec440">Search the client portal</label>
+
+  <input id="SiteSearch-text-ca732c87bcc64b3cb9f4c4cbec9ec440" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag.
+To search for items using exact match, place double quotes around your text." />
+
+  <span class="input-group-btn">
+    <button id="SiteSearch-button-ca732c87bcc64b3cb9f4c4cbec9ec440" class="btn btn-default" type="button" title="Search">
+      <span class="fa-solid fa-fw fa-nopad fa-search blue" aria-hidden="true"></span>
+      <span class="sr-only">Search</span>
+    </button>
+  </span>
+</div>
+
+<script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/2830/Portal/Shared/Search",
+      autocompleteSearchUrl: '/TDClient/2830/Portal/Shared/AutocompleteSearch',
+      autocompleteResultsPosition: 'fixed',
+      autocompleteResultsZIndex: 1000,
+      searchTextBoxSelector: '#SiteSearch-text-ca732c87bcc64b3cb9f4c4cbec9ec440',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-ca732c87bcc64b3cb9f4c4cbec9ec440',
+      searchButtonSelector: '#SiteSearch-button-ca732c87bcc64b3cb9f4c4cbec9ec440',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-ca732c87bcc64b3cb9f4c4cbec9ec440',
+      showKnowledgeBaseOption: true,
+      showServicesOption: false,
+      showForumsOption: false,
+      autoFocusSearch: false
+    });
+  });
+</script>
+          </div>
+
+        
+          <div title="Sign In" class="pull-right gutter-top-sm">
+            <a href="/TDClient/2830/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f2830%2fPortal%2fKB%2fArticle%2f167417%2fAI-Policy">
+              Sign In
+            </a>
+          </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary">
+    <div id="navContainer" class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="sr-only">Show Applications Menu</span>
+        </button>
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#">
+
+          Client Portal
+        </a>
+      </div>
+
+      <div id="td-navbar-collapse" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe">
+
+          
+            <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/2830/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f2830%2fPortal%2fKB%2fArticle%2f167417%2fAI-Policy">Sign In</a>
+            </li>
+          
+            <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/2830/Portal/Shared/Search" title="search">Search</a>
+            </li>
+          
+              <li id="divDesktop8003a43a-a167-4bdd-83c0-ce2fed92d427" class="themed tdbar-button-anchored">
+                <a href="/TDClient/2830/Portal/53951/Home-1">Home</a>
+              </li>
+            
+
+          
+            <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/2830/Portal/KB/">Knowledge Base</a>
+            </li>
+          
+
+          <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu">
+            <a data-toggle="dropdown" title="More Applications" href="javascript:;">
+              <span class="sr-only">More Applications</span>
+              <span class="fa-solid fa-ellipsis-h" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  </div>
+
+  </header>
+
+
+
+<script>
+(function() {
+  var header = document.getElementById('divMstrHeader');
+  if (header) {
+    var h = header.offsetHeight;
+    var style = document.createElement('style');
+    style.textContent = '#navShim{padding-top:' + h + 'px}#content{padding-top:' + h + 'px;margin-top:-' + h + 'px}';
+    document.head.appendChild(style);
+  }
+})();
+</script>
+<div id="navShim" class="hidden-xs hidden-sm"></div>
+<main role="main">
+  <div id="content">
+    <div id="mainContent" tabindex="-1"></div>
+    
+
+  <nav id="ctl00_ctl00_cpContent_divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Knowledge Base">
+      <a href="#kbContent" class="sr-only sr-only-focusable">Skip to Knowledge Base content</a>
+      <div class="container clearfix">
+        <ul class="nav navbar-nav js-submenu" id="kbSubMenu" style="margin-left: -15px;">
+          
+          <li>
+            <a href="/TDClient/2830/Portal/KB/Search">Search <span class="sr-only">Articles</span></a>
+          </li>
+
+          
+          
+        </ul>
+      </div>
+    </nav>
+  
+
+  <div id="kbContent" class="container gutter-top gutter-bottom" tabindex="-1" style="outline:none;">
+    
+
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnFeedbackID" id="ctl00_ctl00_cpContent_cpContent_hdnFeedbackID" />
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnIsAddressed" id="ctl00_ctl00_cpContent_cpContent_hdnIsAddressed" />
+
+<span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red tdx-error-text"></span></span>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnSendShare" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnSendShare&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<div class="clearfix">
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb pull-left">
+      <li><a href="/TDClient/2830/Portal/KB/">Knowledge Base</a></li><li class="active"><a href="/TDClient/2830/Portal/KB/Category/23766/IT-Policies-and-Procedures">IT Policies and Procedures</a></li><li class="active">AI Policy</li>
+    </ol>
+  </nav>
+  <span class="js-open-monitor" style="display: none;"></span>
+</div>
+
+
+
+<div class="row gutter-top">
+
+<div id="divMainContent" class="col-md-8">
+
+<h1 class="gutter-top" style="-ms-word-wrap: break-word; word-wrap: break-word;">
+  AI Policy
+</h1>
+
+
+
+
+
+<div id="ctl00_ctl00_cpContent_cpContent_divBody" class="gutter-top break-word ckeShim clearfix"><p><strong>Purpose</strong></p>
+
+<p>The purpose of this policy is to provide clear guidelines for the use of generative artificial intelligence (AI) tools within the NIACC community. This policy aligns with NIACC’s commitment to academic integrity, data privacy, and ethical AI use. It applies to faculty, staff, students, and affiliates who engage with generative AI tools in their academic and administrative activities.&nbsp; The policy is not intended to restrict legal and ethical use of AI where confidential information is not at risk.</p>
+
+<p>Generative AI refers to tools that can produce new content or ideas, including text, code, images, and other digital outputs, often based on user input.&nbsp; Examples include OpenAI’s ChatGPT, Google Gemini and Microsoft Co-pilot.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Guiding Principles</strong></p>
+
+<p>Ethical Use of AI: All members of the NIACC community are expected to use AI technologies responsibly, ensuring that AI-generated content is used ethically and does not violate academic, legal, or professional standards.</p>
+
+<p>Commitment to Academic Integrity: The use of generative AI in academic submissions must be transparent and properly acknowledged. Misuse of AI tools, such as presenting AI-generated content as one's own work, will be considered a violation of academic integrity.</p>
+
+<p>Privacy and Data Security Considerations: The use of confidential or sensitive data in generative AI tools, especially publicly available ones, is strictly prohibited unless there has been a prior security and privacy review. This includes FERPA-protected student information, HIPAA-protected health data, and unreleased institutional data.</p>
+
+<p>Compliance with Institutional Policies and External Regulations: All AI use must comply with NIACC policies, as well as state, federal, and international laws, including data privacy laws (e.g., FERPA, HIPAA), intellectual property rights, and export controls.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Administrative Use of Generative AI Tools</strong></p>
+
+<p>NIACC permits the administrative use of specific AI tools that have undergone security and privacy reviews.&nbsp;</p>
+
+<p>- Approved Tools: Tools such as Zoom AI Companion and Microsoft Co-pilot, which have been vetted for compliance with NIACC data security policies, are approved for use. Additional tools may be approved by the IT department following review.</p>
+
+<p>- Authorized Use Cases: AI may be used to augment productivity in administrative tasks provided that the content generated is verified for accuracy.</p>
+
+<p>- Security and Privacy Reviews: Any new generative AI tool acquired or used by NIACC employees must undergo a security and privacy review when personal or confidential information is accessible by the tool.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Prohibited and Restricted Use of Generative AI</strong></p>
+
+<p>Prohibited Data: Generative AI tools must not be used to process or store sensitive information such as:</p>
+
+<ul>
+	<li>FERPA-protected student data</li>
+	<li>HIPAA-protected health information</li>
+	<li>Confidential employee data</li>
+	<li>Intellectual property that has not been released for public use</li>
+</ul>
+
+<p>Copyright and Intellectual Property Concerns: AI tools may inadvertently generate content that violates copyright. Users must ensure that AI-generated content does not infringe on others' intellectual property rights. Use of copyrighted material in AI tools without proper permissions is prohibited.</p>
+
+<p>Prohibited Actions: Users must not engage AI tools in activities that violate NIACC policies or legal standards, including:</p>
+
+<ul>
+	<li>Plagiarism or academic dishonesty</li>
+	<li>Generating or distributing misinformation</li>
+	<li>Enabling harassment, threats, or defamation</li>
+	<li>Facilitating illegal activities or violating data use agreements</li>
+	<li>Recording, transcribing, summarizing and/or distributing meeting notes where you are not the meeting host or host designee.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><strong>Academic Integrity and Generative AI</strong></p>
+
+<p>Faculty Guidelines: Faculty members will choose one of the approved academic affairs AI statements for syllabi which provides guidance on the acceptable use of AI in coursework, including citation expectations.</p>
+
+<p>Student Guidelines: When AI use is permitted within a course (refer to course syllabi), students may not present AI-generated work as their own without proper acknowledgment or citation. Failure to do so will be considered plagiarism, subject to the NIACC's Student Code of Conduct.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Procurement and Acquisition of Generative AI Tools</strong></p>
+
+<p>Approval Process: Before acquiring or using generative AI tools, <u>specifically</u> those that process confidential data, a formal request must be submitted for review. This process ensures that the tool meets security, privacy, and compliance standards.</p>
+
+<p>Security and Privacy Review: Technology Services must conduct a security review of any AI software before it is implemented. This includes both paid and free tools that will be used in conjunction with NIACC data.</p>
+
+<p align="right"><strong>Generative AI Tool Request Form:</strong>&nbsp; <a href="https://niacc.teamdynamix.com/TDClient/2830/Portal/Requests/ServiceDet?ID=55523">https://niacc.teamdynamix.com/TDClient/2830/Portal/Requests/ServiceDet?ID=55523</a></p>
+
+<p><strong>Incident Reporting and Accountability</strong></p>
+
+<p>Breach of Data Security: Any suspected breach of data security must be reported immediately to the Technology Services department.</p>
+
+<p>Plagiarism and Academic Misconduct: Plagiarism related to the misuse of AI tools must be reported to the appropriate academic office.</p>
+
+<p>Reporting Mechanisms: NIACC provides online reporting forms for data breaches and improper use of AI tools. All reports will be handled according to NIACC policies on data security and academic integrity.</p>
+
+<p align="right"><strong>Security Incident Response and Investigation Form:</strong>&nbsp; <a href="https://niacc.teamdynamix.com/TDClient/2830/Portal/Requests/ServiceDet?ID=49326">https://niacc.teamdynamix.com/TDClient/2830/Portal/Requests/ServiceDet?ID=49326</a></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Enforcement and Sanctions</strong></p>
+
+<p>Violations of this policy may result in disciplinary actions, including suspension or termination for employees, and academic sanctions, up to and including expulsion, for students.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Resources and Contacts</strong></p>
+
+<p>Training and Educational Resources:</p>
+
+<p>Faculty, staff, and students are encouraged to complete self-paced training on the ethical and secure use of AI tools.</p>
+
+<p>&nbsp;</p>
+
+<p>Contact Information: For questions or concerns related to this policy, please contact the following:</p>
+
+<ul>
+	<li>Chief Information Officer: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CIO@niacc.edu</li>
+	<li>Chief Security Officer: &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ITSecurity@niacc.edu</li>
+</ul>
+
+<p style="margin-left: 40.5pt">&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>Version History</p>
+
+<table border="1" cellpadding="0" cellspacing="0" width="616">
+	<tbody>
+		<tr>
+			<td style="width: 64px; height: 29px">
+			<p>Version</p>
+			</td>
+			<td style="width: 102px; height: 29px">
+			<p>Modified Date</p>
+			</td>
+			<td style="width: 120px; height: 29px">
+			<p>Approved Date</p>
+			</td>
+			<td style="width: 120px; height: 29px">
+			<p>Approved By</p>
+			</td>
+			<td style="width: 210px; height: 29px">
+			<p>Reason/Comments</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 64px; height: 29px">
+			<p>1.0.1</p>
+			</td>
+			<td style="width: 102px; height: 29px">
+			<p>February 2025</p>
+			</td>
+			<td style="width: 120px; height: 29px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="width: 120px; height: 29px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="width: 210px; height: 29px">
+			<p>Reviewed by AI Advisory Group</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 64px; height: 29px">
+			<p>1.0.2</p>
+			</td>
+			<td style="width: 102px; height: 29px">
+			<p>April 2025</p>
+			</td>
+			<td style="width: 120px; height: 29px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="width: 120px; height: 29px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="width: 210px; height: 29px">
+			<p>Reviewed by President’s Council</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 64px; height: 29px">
+			<p>1.0.3</p>
+			</td>
+			<td style="width: 102px; height: 29px">
+			<p>April 2025</p>
+			</td>
+			<td style="width: 120px; height: 29px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="width: 120px; height: 29px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="width: 210px; height: 29px">
+			<p>Reviewed by PAC</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 64px; height: 29px">
+			<p>1.0.3</p>
+			</td>
+			<td style="width: 102px; height: 29px">
+			<p>May 2025</p>
+			</td>
+			<td style="width: 120px; height: 29px">
+			<p>05/06/2025</p>
+			</td>
+			<td style="width: 120px; height: 29px">
+			<p>College Senate</p>
+			</td>
+			<td style="width: 210px; height: 29px">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table></div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divFeedback2" class="well gutter-top-lg">
+
+  <div class="row" id="divHelpfulYesNo">
+    <div class="col-sm-7">
+      
+        <div>
+          <a href="/TDClient/2830/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f2830%2fPortal%2fKB%2fArticle%2f167417%2fAI-Policy">Sign in to leave feedback</a>
+        </div>
+      
+    </div>
+    <div class="col-sm-5 text-right">
+      <div id="ctl00_ctl00_cpContent_cpContent_UpdatePanel1" aria-live="polite" aria-atomic="true">
+	
+          0 reviews
+        
+</div>
+    </div>
+  </div>
+
+  </div>
+
+
+
+<div class="tab-content gutter-top gutter-bottom">
+  
+  <div id="ctl00_ctl00_cpContent_cpContent_upFeedbackGrid">
+	
+        <a id="ctl00_ctl00_cpContent_cpContent_btnToggleAddressed" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleAddressed&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        <a id="ctl00_ctl00_cpContent_cpContent_btnDeleteFeedback" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        
+      
+</div>
+    
+    
+
+    
+</div>
+</div>
+
+<div class="col-md-4">
+
+
+
+    <a id="ctl00_ctl00_cpContent_cpContent_btnToggleSubscribe" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnToggleFavorite" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleFavorite&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a class="DetailAction print-article" href="/TDClient/2830/Portal/KB/PrintArticle?ID=167417" rel="nofollow" target="_blank">  <span class="fa-solid fa-print fa-fw" aria-hidden="true"></span>
+Print Article</a>
+
+
+
+
+
+<div id="divAttachments" class="js-article-attachments"></div>
+
+</div>
+
+</div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divProgress" style="display: none; z-index: 60;">
+  <div id="ctl00_ctl00_cpContent_cpContent_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Deleting...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-label="Deleting..." aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+</div>
+
+
+
+  </div>
+
+
+  </div>
+</main>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDKnowledgeBase');window.CKEDITOR_BASEPATH = 'https://niacc.teamdynamix.com/TDPortal/Content/ckeditor/';
+//]]>
+</script>
+<script src="https://niacc.teamdynamix.com/TDPortal/Content/ckeditor/ckeditor.js?t=C6HH5UF" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var CKEditor_Controls=[],CKEditor_Init=[];function CKEditor_TextBoxEncode(d,e){var f;if(typeof CKEDITOR=='undefined'||typeof CKEDITOR.instances[d]=='undefined'){f=document.getElementById(d);if(f)f.value=f.value.replace(/</g,'&lt;').replace(/>/g,'&gt;');}else{var g=CKEDITOR.instances[d];if(e&&(typeof Page_BlockSubmit=='undefined'||!Page_BlockSubmit)){g.destroy();f=document.getElementById(d);if(f)f.style.visibility='hidden';}else g.updateElement();}};(function(){if(typeof CKEDITOR!='undefined'){var d=document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');if(d)d.style.visibility='hidden';}var e=function(){var f=CKEditor_Controls,g=CKEditor_Init,h=window.pageLoad,i=function(){for(var j=f.length;j--;){var k=document.getElementById(f[j]);if(k&&k.value&&(k.value.indexOf('<')==-1||k.value.indexOf('>')==-1))k.value=k.value.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');}if(typeof CKEDITOR!='undefined')for(var j=0;j<g.length;j++)g[j].call(this);};window.pageLoad=function(j,k){if(k.get_isPartialLoad())setTimeout(i,0);if(h&&typeof h=='function')h.call(this,j,k);};if(typeof Page_ClientValidate=='function'&&typeof CKEDITOR!='undefined')Page_ClientValidate=CKEDITOR.tools.override(Page_ClientValidate,function(j){return function(){for(var k in CKEDITOR.instances){if(document.getElementById(k))CKEDITOR.instances[k].updateElement();}return j.apply(this,arguments);};});setTimeout(i,0);};if(typeof Sys!='undefined'&&typeof Sys.Application!='undefined')Sys.Application.add_load(e);if(window.addEventListener)window.addEventListener('load',e,false);else if(window.attachEvent)window.attachEvent('onload',e);})();CKEditor_Controls.push('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');
+CKEditor_Init.push(function(){if(typeof CKEDITOR.instances['ctl00_ctl00_cpContent_cpContent_shareBody_txtBody']!='undefined' || !document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody')) return;CKEDITOR.replace('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody',{"autoGrow_maxHeight" : 175, "autoGrow_minHeight" : 175, "contentsCss" : ['https://niacc.teamdynamix.com/TDPortal/Content/ckeditor/contents.css', '/TDPortal/Content/FontAwesome/css/fontawesome.min.css', '/TDPortal/Content/FontAwesome/css/brands.min.css', '/TDPortal/Content/FontAwesome/css/regular.min.css', '/TDPortal/Content/FontAwesome/css/solid.min.css', '/TDPortal/Content/FontAwesome/css/v4-shims.min.css'], "height" : "175", "htmlEncodeOutput" : true, "image_previewText" : " ", "removePlugins" : "magicline,devtools,templates,elementspath,fontawesome,youtube,uploadimage,simpleimage,remoteimageblocker", "title" : "Message", "toolbar" : "TDSimple"}); });
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script>
+</form>
+
+
+
+
+
+  <footer role="contentinfo">
+
+    <div class="master-footer">
+      <div class="default-footer">
+<strong>North Iowa Area Community College</strong><br><br>
+Powered by <a href="https://www.teamdynamix.com" target="_blank">TeamDynamix</a>
+</div>
+      
+    </div>
+
+  </footer>
+
+
+
+<script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        }).blur(function () {
+          $beLogo.removeClass('accessibility-focus-on-logo');
+        });
+
+        
+        
+          const queryParams = new URLSearchParams(window.location.search);
+          let showChatbot = true;
+          if (queryParams.has('nobot')) {
+            const nobotFlag = queryParams.get('nobot');
+            if (nobotFlag === '1' || nobotFlag === 'true') {
+              showChatbot = false;
+            }
+          }
+
+          if(showChatbot) {
+            $.ajax({
+              url: "/TDClient/2830/Portal/Chatbots/GetScript",
+              type: "GET",
+              dataType: 'text',
+              success: function (data) {
+                
+                var jQueryAjaxSettingsCache = jQuery.ajaxSettings.cache;
+                jQuery.ajaxSettings.cache = true;
+                $(document.body).append(data);
+                jQuery.ajaxSettings.cache = jQueryAjaxSettingsCache;
+              }
+            });
+          }
+        
+
+        window.addEventListener("message", (event) => {
+
+          // Only accept events that come from the same origin
+          if (event.origin != window.location.origin) {
+            return;
+          }
+
+          switch (event.data.type) {
+
+            case "authenticate-using-popup":
+              handleAuthenticateUsingPopup(event.data.payload);
+              break;
+
+            case "authenticated-successfully":
+              handleAuthenticatedSuccessfully(event.data.payload);
+              break;
+
+            default:
+              break;
+          }
+
+        });
+
+        function handleAuthenticateUsingPopup(payload) {
+          let loginUrl = '/TDClient/2830/Portal/Login.aspx';
+
+          if (payload.successCallbackUrl) {
+            loginUrl += '?SuccessCallbackUrl=' + payload.successCallbackUrl;
+          }
+
+          window.open(loginUrl, "_blank", "popup=1");
+        }
+
+        function handleAuthenticatedSuccessfully() {
+          event.source.close();
+          window.location.href = window.location.href;
+        }
+    })(jQuery);
+
+</script>
+
+</body>
+</html>

@@ -81,9 +81,20 @@ def load_codebook(path=None):
     return cb
 
 
+# System domains shared by separate colleges, each on its own subdomain (niagaracc.suny.edu,
+# umfk.maine.edu). For these the school's domain keeps three labels; otherwise suny.edu would make
+# every SUNY campus count as the same school. A university whose campuses share one brand
+# (twin-cities.umn.edu, behrend.psu.edu) keeps the two-label domain. Found 2026-11-11 (Phase 5).
+SYSTEM_DOMAINS = {"suny.edu", "cuny.edu", "kctcs.edu", "maine.edu", "mass.edu", "losrios.edu"}
+
+
 def registrable_domain(webaddr):
     host = urlparse(webaddr if "//" in webaddr else "//" + webaddr).hostname or ""
-    return ".".join(host.lower().split(".")[-2:])
+    labels = host.lower().split(".")
+    if labels[0] == "www":
+        labels = labels[1:]
+    keep = 3 if ".".join(labels[-2:]) in SYSTEM_DOMAINS and len(labels) >= 3 else 2
+    return ".".join(labels[-keep:])
 
 
 def on_domain(url, domain):

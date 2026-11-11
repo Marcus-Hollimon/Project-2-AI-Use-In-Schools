@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://niacc.teamdynamix.com/TDClient/2830/Portal/KB/ArticleDet?ID=167417",
+ "final_url": "https://niacc.teamdynamix.com/TDClient/2830/Portal/KB/Article/167417/AI-Policy",
+ "http_status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "fetched_at": "2026-11-11T16:25:22-05:00",
+ "sha256": "0b96edb117e8ba0b34e48f1eb4711402031a3e78ea110d17eb607ba4506b01a2",
+ "bytes": 59691
+}

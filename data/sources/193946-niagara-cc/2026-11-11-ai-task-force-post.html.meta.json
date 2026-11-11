@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://today.sunyniagara.edu/?p=5125",
+ "final_url": "https://today.sunyniagara.edu/ai-task-force-lunch-learn-from-policing-and-detection-to-authorship/",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:25:21-05:00",
+ "sha256": "ad424ea954f92091b2fdca39feeec701d733d93682e94a1c195c7a80b968c8cb",
+ "bytes": 61639
+}

@@ -214,6 +214,14 @@ def test_s3_missing_fetch_record_fails(world):
     assert failed(findings(world), "S1")
 
 
+def test_registrable_domain_keeps_campus_of_college_systems():
+    assert cs.registrable_domain("www.niagaracc.suny.edu/") == "niagaracc.suny.edu"
+    assert cs.registrable_domain("www.umfk.maine.edu/") == "umfk.maine.edu"
+    assert cs.registrable_domain("https://twin-cities.umn.edu/") == "umn.edu"
+    assert cs.registrable_domain("web.mit.edu/") == "mit.edu"
+    assert cs.registrable_domain("www.westminster.edu/") == "westminster.edu"
+
+
 # S4 right school
 def test_s4_other_domain_fails(world):
     archive = write_archive(world["root"], "2026-11-11-other.html", PAGE, final_url="https://www.other.edu/ai")

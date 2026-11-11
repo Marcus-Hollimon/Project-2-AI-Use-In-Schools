@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://libguides.niagaracc.suny.edu/c.php?g=1417422",
+ "final_url": "https://libguides.niagaracc.suny.edu/c.php?g=1417422",
+ "http_status": 200,
+ "content_type": "text/html; charset=UTF-8",
+ "fetched_at": "2026-11-11T16:25:23-05:00",
+ "sha256": "06d5dce4d83e4d60c64ba25f2d85ec030e9d86269f57f87bde6bbce868b21fd2",
+ "bytes": 33499
+}
