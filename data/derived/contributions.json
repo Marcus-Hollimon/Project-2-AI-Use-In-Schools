@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T14:54:22.612264Z",
+ "generatedAt": "2026-11-11T14:59:11.440289Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -570,20 +570,67 @@
    "note": "written by Claude, pushed from Marcus's account"
   },
   {
-   "time": "2026-11-11T14:54:12.603000Z",
-   "actor": "Claude",
-   "kind": "reply",
-   "turn": 10,
-   "text": "All tests and checks pass. I also caught myself a third time: the amendment says \"10:00\", but the clock said 09:54. Fixing that, then taking a fresh reading, since the context has grown since 09:52:",
-   "toolCalls": 27
-  },
-  {
    "time": "2026-11-11T14:54:22Z",
    "actor": "Claude",
    "kind": "milestone",
    "phase": "1",
    "text": "C1 failed on the 09:52 reading twice: first from a wrong time Claude typed (09:55), then because the reading fell between two responses. C1 amended to a between-two-responses rule; all 10 readings pass; tests 12/12 recorded; reported to Marcus. Reading just before /clear: 237,728 tokens.",
    "evidence": "`specs/phase-1-instrumentation.md`"
+  },
+  {
+   "time": "2026-11-11T14:54:36Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "C1 amended to a between-two-responses rule; fix wrong timestamps; reading before /clear",
+   "commit": "69ffb99",
+   "note": "written by Claude, pushed from Marcus's account"
+  },
+  {
+   "time": "2026-11-11T14:55:17Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Rule: timestamps come from the clock, never typed",
+   "commit": "88e7849",
+   "note": "written by Claude, pushed from Marcus's account"
+  },
+  {
+   "time": "2026-11-11T14:55:41.209000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 10,
+   "text": "Your decisions are recorded: everything is due at 2 PM tomorrow, the study uses 15 schools, and we compact at good points. Phase 1 is closed and pushed (commit `88e7849`), and GitHub's automatic checks passed.\n\n**About the sample:** 15 schools you pick (Ohio plus some big names) is fine for this assignment, but it changes what the findings can say. They describe *these 15 schools*, not \"US CS departments\" in general. The site and your write-up will say that plainly. Here's my proposed list, which you'll confirm or change in the next step:\n- **Ohio (10):** Ohio State, Cincinnati, Case Western Reserve, Miami University, Ohio University, Kent State, Dayton, Bowling Green State, Toledo, Wright State\n- **National (5):** Harvard, MIT, Stanford, Carnegie Mellon, UC Berkeley\n\n**Three mistakes of mine this turn, all fixed:**\n1. **I committed data while a check was failing.** My command saved to GitHub straight after running the checks, without stopping when one failed. The next commit replaced that data, and from then on I only committed after reading the result.\n2. **I typed guessed times three times** (09:55 when the clock said 09:52, and 10:00 when it said 09:54). One of them made the context check fail, which is how I noticed. The project rules now say every time must come from the clock.\n3. **The context check needed a better rule.** After the time was fixed, it still failed once: the app took its reading while I was writing a large file, so the number landed partway between two steps. My guess at the app's exact formula matched 0 of 10 readings, so I dropped it. The new rule, \"the reading falls between the step before and the step after\", holds for all 10 readings. It's written into the spec with the evidence, like the earlier change to the request-count check.\n\n**Now the `/clear`:**\n1. Type `/clear` and press Enter.\n2. Then send: `Read progress/STATE.md and continue.`\n\nThe fresh session will take a reading first, find how the clear shows up in the history files, and then write the Phase 2 spec with the school list for your approval. It will also ask you about the other session file from Nov 8, which I haven't opened.\n\n---\n\n**Coaching**\n\n1. **\"We can do 15 schools, Ohio plus big names\" was a clear decision.** One sentence settled the sample and the deadline. To make your write-up stronger, add a reason for the choice, such as \"Ohio because that's where I study, big names for contrast\". Your evaluation will need that reasoning, and right now only you know it.\n2. **This clear is the experiment, so don't add anything to the message after it.** Send only \"Read progress/STATE.md and continue.\" That way the comparison measures what the files alone can carry over, not what you remind the new session of.\n\n**Claude Code feature for this task:** `/clear`. It starts a fresh conversation in the same folder, so everything carries over only through the project files (CLAUDE.md and STATE.md). That's why I wrote them before asking you to clear.",
+   "toolCalls": 31
+  },
+  {
+   "time": "2026-11-11T14:57:59.311000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 11,
+   "text": "Ehh. Lets try and make it more stratified, to really reach that goal of US CS departments, I'll leave it up to you, but I would like Ohio schools, simply because I live in ohio. Definitely include OSU and University of Cincinnati at least. After this step I'll follow those clear instructions."
+  },
+  {
+   "time": "2026-11-11T14:58:26.850000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 11,
+   "text": "Stratified it is, with Ohio included. Before writing it down, one plain fact: **15 schools can't produce statistics about all US CS departments**, however they're chosen. What stratifying does buy you is coverage, meaning every major *kind* of department is represented. Choosing schools at random within each kind, instead of by hand, means the findings aren't shaped by my picks. That's as close to \"US CS departments\" as 15 schools can honestly get, so that's the design I'll write into the plan.",
+   "toolCalls": 9
+  },
+  {
+   "time": "2026-11-11T14:58:31Z",
+   "actor": "Marcus",
+   "kind": "decision",
+   "text": "Study sample: stratified, so it covers every kind of US CS department; Ohio included; Ohio State and Cincinnati must be in it; design left to Claude",
+   "options": "15 chosen by Marcus (09:51 decision, replaced) · stratified",
+   "notes": "Claude's design: national schools drawn at random within strata from the official federal list (IPEDS), plus an Ohio oversample reported separately. 15 schools cannot give statistics for all US departments; the strata give coverage, not estimates."
+  },
+  {
+   "time": "2026-11-11T14:59:10Z",
+   "actor": "Claude",
+   "kind": "milestone",
+   "phase": "1",
+   "text": "Sample redesigned per Marcus: stratified national draw from IPEDS plus an Ohio oversample (Ohio State and Cincinnati fixed). Plan written into STATE.md for the session after the /clear. Reading just before /clear: 248,054 tokens.",
+   "evidence": "`progress/STATE.md`"
   }
  ]
 }

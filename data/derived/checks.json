@@ -120,14 +120,25 @@
    "responseTime": "2026-11-11T14:54:12.600Z",
    "nearestDifference": 302,
    "pass": true
+  },
+  {
+   "reading": "2026-11-11T14:59:10Z",
+   "app": 248054,
+   "between": [
+    248018,
+    248881
+   ],
+   "responseTime": "2026-11-11T14:59:03.658Z",
+   "nearestDifference": 36,
+   "pass": true
   }
  ],
  "C2_completeness": [
   {
    "session": "0cf9c9ad-b66c-4406-998d-e6e34b8c2e47",
    "subagent": false,
-   "apiRequests": 147,
-   "uniqueResponses": 146,
+   "apiRequests": 156,
+   "uniqueResponses": 155,
    "unansweredRequests": [
     "2026-11-08T05:13:13.165Z"
    ],
@@ -145,19 +156,19 @@
   }
  ],
  "C4_inflation": {
-  "usageRows": 426,
-  "uniqueResponses": 146,
+  "usageRows": 446,
+  "uniqueResponses": 155,
   "naive": {
-   "input": 876,
-   "cacheWrite": 2768175,
-   "cacheRead": 76884329,
-   "output": 1374702
+   "input": 916,
+   "cacheWrite": 2790586,
+   "cacheRead": 81724423,
+   "output": 1394717
   },
   "deduplicated": {
-   "input": 300,
-   "cacheWrite": 666471,
-   "cacheRead": 26589068,
-   "output": 286069
+   "input": 318,
+   "cacheWrite": 676348,
+   "cacheRead": 28773726,
+   "output": 293232
   }
  },
  "privacy": [
