@@ -79,7 +79,7 @@ Plain-language checklist, done on the live site and in PowerPoint:
 - [x] The section says plainly what the tests cannot prove.
 - [x] Every number in the deck matches the site (spot-check three).
 - [x] The deck opens in PowerPoint, the charts are readable, and every slide has speaker notes.
-- [ ] My evaluation and reflection slides are mine.
+- [x] My evaluation and reflection slides are mine.
 - [x] All tests pass, recorded, and the site shows the new commit.
 
 ## Status (2026-11-11T21:28:42-05:00, Claude)
@@ -93,3 +93,4 @@ Plain-language checklist, done on the live site and in PowerPoint:
   with collaboration (slide 8), so all three questions are covered; slide 14 is limits, next steps and links.
 - The checklist below is Marcus's.
 - 2026-11-11T23:37:18-05:00: Marcus reported every checklist item passed. Five boxes ticked; "My evaluation and reflection slides are mine" stays open until slide 12 holds his evaluation (slide 13 now holds his reflection, from his own words).
+- 2026-11-11T23:46:53-05:00: slide 12 holds Marcus's verdicts (goal 1 mostly met, goal 2 100% met) and his reasons; Claude added only the computed supporting numbers. Last box ticked: every Phase 6 checklist item is done.

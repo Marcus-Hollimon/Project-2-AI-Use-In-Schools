@@ -480,12 +480,47 @@ pres.addSection({ title: 'Process' })
   )
 }
 
-// 12 and 13. Marcus's own slides: his headings only, no text from Claude.
+// 12 and 13. Marcus's own slides: his verdicts, reasons and reflection, from his own words in chat
+// (2026-11-11 evening). Claude supplied only the supporting numbers, computed here like every other slide.
 pres.addSection({ title: 'Evaluation and reflection' })
 {
   const s = slideOf('MARCUS', 'Evaluation and reflection')
   s.addText('Evaluation against goals', { placeholder: 'title' })
-  s.addNotes('For Marcus to write.')
+  const noSyllabus = count('National', 'se_courses', 'no public syllabus found')
+  check(noSyllabus * 2 > N, '"rarely answered": most national schools now have a public syllabus')
+  const goals = [
+    {
+      name: 'Goal 1: the research study', verdict: 'Mostly met',
+      reason: 'The syllabus question could rarely be answered.',
+      evidence: [
+        `${noSyllabus} of ${N} national schools had no public software engineering syllabus`,
+        `The stance and tone questions coded at all ${schools.length} schools, from the same searches`,
+        `${schoolsPassing} of ${studyChecks.schools.length} schools pass all ${CHECK_COUNT} checks; ${quotes} quotes, ${savedCopies} saved pages`,
+      ],
+    },
+    {
+      name: 'Goal 2: agentic development', verdict: '100% met',
+      reason: 'Claude wrote all the code and proved itself after being told to make sure the tests were exhaustive.',
+      evidence: [
+        `${fmt(by('commit', 'Claude'))} commits by Claude; ${by('decision', 'Marcus')} decisions and ${by('prompt', 'Marcus')} prompts from me`,
+        `${lastMutation.killed} of ${lastMutation.total} planted bugs caught (${firstMutation.killed} before the push for exhaustive tests)`,
+        `Every phase: a spec I approved, the work, my checklist`,
+      ],
+    },
+  ]
+  goals.forEach((g, i) => {
+    const x = 0.5 + i * 4.65
+    card(s, x, 1.25, 4.35, 3.75, P.paper, `goal ${i + 1}`)
+    text(s, [{ text: g.name, options: { bold: true } }], { x: x + 0.25, y: 1.4, w: 3.85, h: 0.4, fontSize: 15, fontFace: HEAD })
+    text(s, [marked(` ${g.verdict} `, { fontSize: 28, fontFace: HEAD })], { x: x + 0.25, y: 1.85, w: 3.85, h: 0.6, valign: 'middle' })
+    text(s, g.reason, { x: x + 0.25, y: 2.55, w: 3.85, h: 0.8, fontSize: 15, italic: true })
+    text(s, g.evidence.map((t, k) => ({ text: t, options: { bullet: { indent: 12 }, breakLine: k < g.evidence.length - 1 } })),
+      { x: x + 0.25, y: 3.4, w: 3.85, h: 1.5, fontSize: 12, color: P.muted, paraSpaceAfter: 3 })
+  })
+  s.addNotes(
+    `Goal 1, the research study: I'd say it is mostly met, because the syllabus question could rarely be answered. At ${noSyllabus} of ${N} national schools no software engineering syllabus was public. The stance and tone questions were coded at all ${schools.length} schools from the same searches, and every answer found is backed by a quote on a saved page.\n\n` +
+      `Goal 2, agentic development: 100% met, because Claude wrote all the code and proved itself after being told to make sure the tests were exhaustive. When I pushed on that, the planted-bug test went from ${firstMutation.killed} of ${firstMutation.total} caught to ${lastMutation.killed} of ${lastMutation.total}. I made ${by('decision', 'Marcus')} logged decisions and approved a spec for every phase.`,
+  )
 }
 {
   const s = slideOf('MARCUS', 'Evaluation and reflection')

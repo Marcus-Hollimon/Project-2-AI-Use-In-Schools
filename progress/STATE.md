@@ -2,7 +2,9 @@
 
 Current phase: 6 Evaluation (spec `specs/phase-6-evaluation.md`, approved by Marcus 2026-11-11T20:59:41-05:00). Phase 5 is done.
 
-Last updated: 2026-11-11T21:28:42-05:00 by Claude (session a9056776). Phase 6 Parts A and B DONE; WAITING ON MARCUS.
+Last updated: 2026-11-11T23:46:53-05:00 by Claude (session a9056776). Phase 6 checklist COMPLETE: Marcus's evaluation (slide 12) and reflection (slide 13) are in the deck, from his own words. Only open item: whether to drop "Work in progress" from the site footer (web/src/App.jsx).
+
+Parts A and B notes, last updated: 2026-11-11T21:28:42-05:00 by Claude (session a9056776). Phase 6 Parts A and B DONE; WAITING ON MARCUS.
 - Part A (commit 1f6c920, deployed, live site checked): Validation tab section "How the tests work" (three
   layers, planted bugs, edge cases by check, what no test can prove). New study/mutation_score.py: first run
   caught 120 of 162 planted bugs in check_study.py; 16 study test cases added for the gaps (main() now takes a
