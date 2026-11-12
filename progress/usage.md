@@ -59,7 +59,8 @@ percentages as the app reports them, so a change of "1 point" means anywhere fro
 | 2026-11-11T16:37:38-05:00 | 5 | after /compact (17 of 21 new schools coded) | 79 | 31 | 87,017 | /compact by Marcus (manual, big chunk; 166,709 tokens before it); window now reported as 1,000,000 tokens |
 | 2026-11-11T16:59:53-05:00 | 5 | 21 of 21 new schools coded (coding done), just before /compact | 90 | 33 | 234,363 | none (next row is after /compact) |
 | 2026-11-11T19:42:15-05:00 | 5 | after /compact (site update done through a694ce8) | 1 | 33 | 91,243 | /compact by Marcus (manual, after the 5-hour reset at 7:40 PM; the last reading before it is the 16:59:53 row, and context grew after it during the site update) |
-| 2026-11-11T19:55:44-05:00 | 5 | Phase 5 deployed, acceptance boxes ticked, just before /compact | 11 | 35 | 196,895 | none (next row is after /compact) |
+| 2026-11-11T19:55:44-05:00 | 5 | Phase 5 deployed, acceptance boxes ticked (a /compact was offered; Marcus continued without one) | 11 | 35 | 196,895 | none |
+| 2026-11-11T20:20:41-05:00 | 5 | 11 judgment calls decided (not yet applied), just before /compact | 21 | 36 | 300,492 | none (next row is after /compact) |
 
 ## Cost per phase
 | Phase | 5-hour points | Weekly points | Context growth (tokens) |
