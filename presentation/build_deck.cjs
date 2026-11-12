@@ -12,7 +12,8 @@ const PptxGenJS = require('pptxgenjs')
 const JSZip = require('jszip') // installed with pptxgenjs
 
 const ROOT = path.resolve(__dirname, '..')
-const OUT = path.join(__dirname, 'AI-in-CS-departments.pptx')
+// DECK_OUT writes elsewhere, for a preview while PowerPoint has the deck open (it locks the file).
+const OUT = process.env.DECK_OUT || path.join(__dirname, 'AI-in-CS-departments.pptx')
 const SITE = 'https://marcus-hollimon.github.io/Project-2-AI-Use-In-Schools/'
 const REPO = 'https://github.com/Marcus-Hollimon/Project-2-AI-Use-In-Schools' // web/src/routes.js
 
@@ -489,7 +490,28 @@ pres.addSection({ title: 'Evaluation and reflection' })
 {
   const s = slideOf('MARCUS', 'Evaluation and reflection')
   s.addText('Reflection: agentic vs AI-assisted', { placeholder: 'title' })
-  s.addNotes('For Marcus to write.')
+  // Marcus's words (chat, 2026-11-11 evening): spelling and grammar smoothed only, no ideas added.
+  const points = [
+    ['Trust', 'The extensive testing, with the mutations as well, running things in the actual browser, and clicking through it myself.'],
+    ['My role', 'Not technical: being very specific about what I want. I express intent and functions; Claude turns those words into code.'],
+    ['When things went wrong', 'Technical problems: Claude caught and fixed them with verification loops and mutations. Higher-level ones: we worked them out together from my intent.'],
+    ['Cost', 'I liked compacting: it kept the work self-directed and less likely to miss something. It may take more tokens, but I prefer that.'],
+    ['Verdict', 'Agentic is the way to go: trust the model after forcing it to prove its work, then use the feature yourself and give feedback.'],
+  ]
+  s.addText(
+    points.flatMap(([label, line], i) => [
+      { text: label + ': ', options: { bold: true, bullet: { indent: 14 } } },
+      { text: line, options: { breakLine: i < points.length - 1 } },
+    ]),
+    { placeholder: 'body', fontSize: 16, paraSpaceAfter: 8 },
+  )
+  s.addNotes([
+    'Trust: What made me trust Claude was the extensive testing it did, with the mutations as well. Running things in the actual browser made me more confident too. I also clicked through it a good bit myself and everything was functional, which improved my confidence.',
+    "My role: It wasn't anything technical, admittedly. It was more about being very specific about what I want this to do exactly. I express intent and functions, and Claude figures out how to turn those words into code. I read through the phases and specs and gave my opinion when Claude laid out options.",
+    "When things went wrong: Claude caught it and fixed it. If the problem was technical, Claude ran the verification loops and mutations. If it was something higher level, it referred back to my intent for which schools and things should actually be done and tracked, and that is when we worked together to find what I'd actually like to do.",
+    'Cost: I liked compacting. I finished everything using fewer tokens than expected. It kept the work self-directed and less likely to miss something, because it re-read the spec and project files. It maybe takes more tokens, but I prefer that. I even had Claude write its own compact instructions, which was a very nice touch.',
+    "Comparison: Agentic is the way to go in this day and age. I believe it's how a lot of companies work now: at a lot of places they don't even read the code; they trust it after setting up the AI, its context and its harness properly, and people use another AI to review AI-written code. Imagine several years from now, when AI is even better. This is the way: you trust the model after forcing it to prove that what it wrote actually works, and then you go in and actually run and test the feature. You can basically be a user of the feature, give feedback to Claude, and it will figure out what it needs to fix.",
+  ].join('\n\n'))
 }
 
 // 14. Limits, next steps, links

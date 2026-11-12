@@ -75,12 +75,12 @@ them one slide each with his headings and no text from Claude; Claude supplies n
 
 ## Exit check (Marcus)
 Plain-language checklist, done on the live site and in PowerPoint:
-- [ ] The Validation tab opens with "How the tests work", and I can explain the three layers from it.
-- [ ] The section says plainly what the tests cannot prove.
-- [ ] Every number in the deck matches the site (spot-check three).
-- [ ] The deck opens in PowerPoint, the charts are readable, and every slide has speaker notes.
+- [x] The Validation tab opens with "How the tests work", and I can explain the three layers from it.
+- [x] The section says plainly what the tests cannot prove.
+- [x] Every number in the deck matches the site (spot-check three).
+- [x] The deck opens in PowerPoint, the charts are readable, and every slide has speaker notes.
 - [ ] My evaluation and reflection slides are mine.
-- [ ] All tests pass, recorded, and the site shows the new commit.
+- [x] All tests pass, recorded, and the site shows the new commit.
 
 ## Status (2026-11-11T21:28:42-05:00, Claude)
 - Part A built and live (commit 1f6c920): the Validation tab opens with "How the tests work". The optional
@@ -92,3 +92,4 @@ Plain-language checklist, done on the live site and in PowerPoint:
   inspected. Two changes from the plan: the findings slides pair departments with syllabi (slide 5) and tone
   with collaboration (slide 8), so all three questions are covered; slide 14 is limits, next steps and links.
 - The checklist below is Marcus's.
+- 2026-11-11T23:37:18-05:00: Marcus reported every checklist item passed. Five boxes ticked; "My evaluation and reflection slides are mine" stays open until slide 12 holds his evaluation (slide 13 now holds his reflection, from his own words).

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-12T02:28:50.564134Z",
+ "generatedAt": "2026-11-12T04:37:49.382379Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -2407,12 +2407,70 @@
    "evidence": "presentation/build_deck.cjs"
   },
   {
-   "time": "2026-11-12T02:28:47.266000Z",
+   "time": "2026-11-12T02:29:10Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 6 Part B: presentation deck built from the data files",
+   "commit": "932e6e9",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "6"
+  },
+  {
+   "time": "2026-11-12T02:29:38.731000Z",
    "actor": "Claude",
    "kind": "reply",
    "turn": 49,
-   "text": "Records written. Rebuilding the derived data (the usage file feeds the Token usage tab), re-recording the web tests, and rebuilding the deck so its figures match the committed data:",
-   "toolCalls": 174,
+   "text": "Phase 6 is built and pushed. The new \"How the tests work\" section is live on the site, and the 14-slide deck is attached above and saved as [presentation/AI-in-CS-departments.pptx](presentation/AI-in-CS-departments.pptx).\n\n**Your question about \"fully exhaustive\" tests:** I can't claim that. No set of tests can be proven to catch every edge case, so the site and deck say what was actually measured instead. To measure it, I built a tool that plants small bugs in the checker one at a time and runs the tests against each.\n\n- **First run:** the tests caught only **120 of 162** planted bugs. That's a hard truth about the earlier tests: they had real gaps. For example, nobody had tested a quote of exactly 40 words, which is the limit. Nobody had tested the per-school pass/fail summary that the Validation tab's table shows.\n- **After 16 new tests:** they now catch **158 of 162**. The 4 left can only change spacing or printout wording, never a result, and each has a written reason on the site.\n- **It stays honest:** a test now fails if the checker changes without the score being re-measured.\n\n**On the site,** the Validation tab now opens with \"How the tests work\". It covers the three layers of checks, the planted bugs, every edge case grouped by check, and a plain list of what no test can prove. The biggest item on that list is that no second person checked the readings. It looks right on desktop and on a phone.\n\n**The deck:**\n- **Slides:** title, the three questions, who was studied, how answers were coded, four findings, two on how it was proven, the process, then limits and links.\n- **Notes:** every slide has speaker notes in plain words.\n- **Numbers:** they come straight from the repo, and the build stops if a finding title no longer matches the data.\n- **Checks:** I opened every slide in your installed PowerPoint and fixed what I found, including a title printed on top of the bullets on the last slide.\n- **One wording change:** the title slide says \"November 2026\" because I don't know your presentation date.\n\nAll checks and tests pass, and each was recorded. I installed one library (pptxgenjs) inside the `presentation/` folder; it stays out of git.\n\n**What's left is yours:**\n1. Run the checklist at the end of [specs/phase-6-evaluation.md](specs/phase-6-evaluation.md).\n2. Write slides 12 (evaluation) and 13 (reflection). They have your headings and nothing else.\n3. Decide whether the site footer should stop saying \"Work in progress\" once those are done. It's a one-line change I can make.\n\nContext is at 380k tokens, past your 250k to 300k guideline, and your checklist is a different kind of task. So I recommend a compact now. STATE.md, the log and the usage reading are updated, committed and pushed. Paste this:\n\n```\n/compact Phase 6 Parts A and B DONE (932e6e9 pushed; \"How the tests work\" live; deck at presentation/AI-in-CS-departments.pptx). Waiting on Marcus: Phase 6 checklist, slides 12 and 13, footer \"Work in progress\" decision. Take an \"after /compact\" usage reading first. Deadline 2 PM EST Thu Nov 12.\n```",
+   "toolCalls": 180,
+   "phase": "6"
+  },
+  {
+   "time": "2026-11-12T02:30:02.854000Z",
+   "actor": "Marcus",
+   "kind": "command",
+   "text": "/compact Phase 6 Parts A and B DONE (932e6e9 pushed; \"How the tests work\" live; deck at presentation/AI-in-CS-departments.pptx). Waiting on Marcus: Phase 6 checklist, slides 12 and 13, footer \"Work in progress\" decision. Take an \"after /compact\" usage reading first. Deadline 2 PM EST Thu Nov 12.",
+   "phase": "6"
+  },
+  {
+   "time": "2026-11-12T02:55:50.154000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 50,
+   "text": "Alright. I've done the checklist. I need a bit more assistance with slides 12 and 13, what is the intention behind what I must write for them?",
+   "phase": "6"
+  },
+  {
+   "time": "2026-11-12T02:57:11.117000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 50,
+   "text": "Slide 12 is your scorecard: did the project meet the goals it set out with, and how do you know? Slide 13 is your judgment on the method: what it was like to supervise an AI that did the work, compared with doing the work yourself with an AI helping. The grader is looking for your judgment, so the opinions have to be yours. I can supply every fact.\n\nI don't have your assignment's exact wording, only the two goals written into the project spec. If your instructor gave a rubric for these two parts, follow it over anything below.\n\n## Slide 12: Evaluation against goals\n\nThe project spec sets two goals. A simple layout works well: for each goal, say whether it was met, what proves it, and where it fell short. The \"met / partly met\" verdict is yours to make. These are the deck's own numbers:\n\n**Goal 1: a small research study**\n- **Delivered:**\n  - 36 schools: 30 drawn at random nationally, plus 6 in Ohio.\n  - All three questions answered with counts.\n  - Every answer is backed by a quote and a saved copy of the page: 118 quotes, 186 saved pages.\n- **Short of it:**\n  - The third question (software engineering courses) could only be answered at a few schools: 24 of 30 had no public syllabus.\n  - No second person checked the readings.\n  - The groups are small, so the findings are counts, not claims about all US departments.\n\n**Goal 2: show agentic, spec-driven development**\n- **Delivered:**\n  - Claude wrote all the code; you wrote none.\n  - 7 phases, each with a spec you approved and a checklist you ran.\n  - Your part: 49 prompts and 34 logged decisions. Claude's: 71 commits.\n  - Proof by tests: 36 of 36 schools pass all checks, plus 81 code tests and 53 site tests.\n- **Short of it:**\n  - The first planted-bug run caught only 120 of 162, so the early tests had real gaps; it's 158 of 162 now.\n  - 16 problems were found outside test runs.\n  - Claude repeated some mistakes, such as typing times from memory, which broke a check once.\n  - The cost: 260 million tokens.\n\nBeing honest about the shortfalls makes the evaluation more convincing, not less.\n\n## Slide 13: Reflection, agentic vs AI-assisted\n\n- **Agentic:** you set the goals and check the results; the AI does the work.\n- **AI-assisted:** you do the work; the AI helps, for example by answering questions or suggesting code.\n\nSome questions you could answer:\n1. **Trust:** you couldn't read the code, so what made you believe the results? Tests, your checklists, the saved pages?\n2. **Your role:** what did supervising actually involve? Writing specs, approving phases, and judgment calls such as splitting disclosure into two shades, codebook version 3, and growing from 15 to 36 schools.\n3. **Surprises and failures:** what went wrong, and who caught it? Possible examples are the test gaps, Claude's repeated mistakes, and wording in the deck that the data didn't support until it was checked.\n4. **Cost:** time, tokens, managing context with /compact, and the 5-hour limit.\n5. **The comparison:** would AI-assisted have worked better or worse for this project? When would you pick each one?\n\n## How I can help\n\n- Put 3 or 4 short points on each slide and say the rest out loud. Speaker notes hold the full version, at about 1.5 to 2 minutes per slide.\n- Rough notes in your own words are fine. Send them and I'll lay them out on the slides and in the notes without changing what you say.\n- I can pull any other number you want.\n\nI can't write the opinions themselves: the spec makes these two slides yours.",
+   "toolCalls": 10,
+   "phase": "6"
+  },
+  {
+   "time": "2026-11-12T04:35:18.251000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 51,
+   "text": "All items on the checklist passed. Trust: What made me trust Claude was the extensive testing it made with the mutations as well. Running things in the actual browser as well made me more confident. I also clicked through it a good bit myself and everything was functional, which improved my confidence. My role: Wasn't anything technical admittedly. It was more so about being very specific intention of what I want this to do exactly. I express intent and functions, and Claude figures out how to turn those words into code. I read through phases and specs and gave my opinon when Claude laid out options. Surpises and failures. When things went wrong, Claude caught it and fixed it. If the thing that went wrong was technical, Claude ran the verification loops and mutations, etc. If it was something higher level, it referred to my intent for what schools and things should be actually done and tracked, which is when we worked together to find what I'd actually like to do. Cost: I liked compacting. I finished everything using less tokens than expected. It kept it self directed and less likely to miss something when re reading the spec or project files. It MAYBE takes more tokens, but I prefer that. I even had it write it's own compacts and that was a very nice touch as well. Comparision: Agentic is the way to go in this day and age. I believe it's how a lot of these companies work now, honestly at a lot of places they don't even read the code, they simply trust it after having set up the A.I. and it's context and harness properly enough. People just use another A.I. to review A.I. written code at this point. Just imagine several years from now, when A.I. is even better. This is definitely the way, where you trust the model after having forced it to prove that what it's written actually works, and you go in and actually run and test the feature. You can basically be a user of the feature and give back feedback to Claude and it'll figure out what it needs to fix in a way...?",
+   "phase": "6"
+  },
+  {
+   "time": "2026-11-12T04:37:18Z",
+   "actor": "Marcus",
+   "kind": "milestone",
+   "phase": "6",
+   "text": "Ran the Phase 6 checklist: every item passed. Wrote his reflection (trust, role, failures, cost, verdict); Claude put it on slide 13 with spelling and grammar smoothed only, his full wording in the speaker notes. Slide 12 (evaluation) still to come.",
+   "evidence": "specs/phase-6-evaluation.md"
+  },
+  {
+   "time": "2026-11-12T04:37:34.504000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 51,
+   "text": "The build passes every check. It also picked up this session's new compact and prompts, so slide 11's numbers will update when I write the final deck. Running the web tests now.",
+   "toolCalls": 17,
    "phase": "6"
   }
  ]

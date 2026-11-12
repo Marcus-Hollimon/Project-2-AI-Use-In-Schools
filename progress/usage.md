@@ -65,6 +65,7 @@ percentages as the app reports them, so a change of "1 point" means anywhere fro
 | 2026-11-11T20:36:37-05:00 | 5 | phase end (codebook v3 applied, dd54c15 deployed), just before /compact | 35 | 38 | 231,513 | none (next row is after /compact) |
 | 2026-11-11T20:53:42-05:00 | 6 | after /compact (Phase 5 done; Phase 6 spec next) | 37 | 38 | 89,600 | /compact by Marcus (manual; last reading before it is the 20:36:37 row) |
 | 2026-11-11T21:28:42-05:00 | 6 | Parts A and B done (deck built), just before /compact | 63 | 42 | 379,876 | none (next row is after /compact) |
+| 2026-11-11T21:56:16-05:00 | 6 | after /compact (Phase 6 Parts A and B done; Marcus did his checklist, asked about slides 12 and 13) | 67 | 42 | 95,391 | /compact by Marcus (manual; last reading before it is the 21:28:42 row) |
 
 ## Cost per phase
 | Phase | 5-hour points | Weekly points | Context growth (tokens) |
