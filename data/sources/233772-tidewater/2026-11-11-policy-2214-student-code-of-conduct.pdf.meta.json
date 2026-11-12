@@ -1,0 +1,11 @@
+{
+ "kind": "raw bytes from Claude's browser pane (fetch() on www.tcc.edu, then saved as a download)",
+ "url": "https://www.tcc.edu/wp-content/uploads/2025/07/Policy-2214-Student-Code-of-Conduct-Policy-New.pdf",
+ "final_url": "https://www.tcc.edu/wp-content/uploads/2025/07/Policy-2214-Student-Code-of-Conduct-Policy-New.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T20:15:22-05:00",
+ "sha256": "606bed8135d45bbdf014986a538cf3c76bdf425c5f5fbf8a03bd7d56e53ef5c5",
+ "bytes": 378697,
+ "fetch_note": "curl got HTTP 403 for this URL at 16:55 the same day; downloaded through the browser with Marcus's permission (progress/decisions.md, 20:14:59). Last-Modified header: Tue, 22 Jul 2025 19:44:15 GMT."
+}

@@ -18,8 +18,63 @@ scroll at 375 px. (b) R1 re-fetch rerun: 184 pages, 0 coded quotes missing (refe
 over-count compacts followed a reply with a thinking block; Marcus chose "Allow, list the gap" (decisions.md,
 phase-1 spec amendment). build.py now exits 0, all checks PASS. (f) Acceptance boxes ticked except deploy.
 Pushed 01a3e56; deploy run 43130741613 succeeded; live site checked 2026-11-11T19:55:17-05:00; all six acceptance boxes ticked.
-LEFT: (g) Marcus's checklist and every judgment call below.
+Update 2026-11-11T20:20:01-05:00: Marcus's checklist passed; judgment calls decided; see "NOW: apply" below.
 Minor, not fixed: 10 of the original 15 schools have no coded_at field (all were coded 2026-11-11 per git).
+
+## NOW: apply Marcus's judgment-call decisions (times and wording in progress/decisions.md)
+Marcus ran his Phase 5 checklist: all 4 passed (spec ticked). Then he decided 11 judgment calls. Nothing below
+is applied yet except the Tidewater archives. Do these, then codebook v3, tests, recorded runs, build, push.
+
+Recodes in `data/coded/values.json` (write a scratchpad script; record every before/after in a new
+`data/coded/codebook-v3-recode.json`, like `codebook-v2-recode.json`):
+1. Penn se_courses -> "no public syllabus found" (CIS 3500 Software Design/Engineering is the named course; its
+   catalog description in 2026-11-11-catalog-cis-courses.html has no AI text; CIS 2500 goes in the note).
+2. Case Western se_courses -> "no public syllabus found" (CSDS 393 Software Engineering has nothing public;
+   CSDS 293 statement goes in the note).
+3. UDC: univ_stance -> "none found", collaboration -> "not discussed", disclosure -> "not stated" (library's own
+   words no longer count). univ_tone stays positive (president's AI Initiative page) WITH a new field
+   `stance_tone_reason`; change check C2 in study/check_study.py to accept stance "none found" + a tone only
+   when the tone entry has stance_tone_reason; add a study test. UDC se_courses unchanged.
+4. Defiance: univ_stance -> "none found", univ_tone -> "none found", disclosure -> "not stated" (all came from
+   library.defiance.edu). Check its search log has the second searches (N1) for none found.
+5. Tidewater: univ_stance stays restrict, re-sourced to the CURRENT Policy 2214 Rev 1 (Jan 26 2026), archive
+   data/sources/233772-tidewater/2026-11-11-policy-2214-student-code-of-conduct-2026.pdf (saved with
+   save_page.py, HTTP 200; text .txt beside it), quote "This may include unauthorized use of AI tools." (4.25),
+   source_type policy page. disclosure -> "not stated" (Marcus). collaboration -> "not discussed".
+   univ_tone re-read from official text only (the policy is procedural: likely neutral).
+   The Rev 0 (July 2025) copy downloaded through the browser with Marcus's permission is kept as evidence
+   (2026-11-11-policy-2214-student-code-of-conduct.pdf, meta kind "raw bytes from Claude's browser pane").
+   The college's official policies page (tcc.edu/about-tcc/statements-policies/college-policies/) links only
+   the Rev 1 file and says those are the only official college-wide policies. Update the search log.
+6. Maine Fort Kent collaboration -> "not discussed" (the brainstorming line was a sample statement borrowed from
+   another school on a library page; the official AIatUMFK guidance page has no collaboration text).
+7. Berry: values stay, but re-source univ_tone (neutral), collaboration (in passing: "You can choose to use
+   generative AI tools to help brainstorm assignments...") and disclosure (encouraged, example wording: "students
+   must cite any AI-generated material that informed their work", cue_reason: example language, codebook v2
+   rule 2) to the official "Berry Syllabus Statement on AI" in 2026-11-11-libguide-faculty-considerations.html.
+8. Tone: codebook v3 adds "mixed" (opportunities and risks both get real weight; neither dominates). Re-read
+   EVERY univ_tone and dept_tone that is not "none found" (about 30 + 4) from its archived page and recode to
+   positive / neutral / cautionary / mixed, with a short note of the basis. The 4 already flagged as balanced:
+   Maine Fort Kent, Tidewater, Nova Southeastern, Temple. Tone has no cue words (null), so C3 is unaffected.
+
+Codebook v3 (`study/codebook.json` version 3 + `study/codebook.md` "Changes in version 3"; a test checks they
+agree): add tone value "mixed"; write the rules Marcus chose: (a) se_courses: code the course NAMED Software
+Engineering first, the nearest equivalent only when none is named so, never switch to another course because it
+has text; (b) a catalog description counts as a course page only when it says the course teaches or uses AI;
+(c) a university library's AI guide counts as university text only where it reproduces official university
+text or is itself the official guidance (as at UMFK); (d) disclosure read from a plagiarism or cheating rule
+that names missing credit is allowed and is counted separately on the site; (e) stance "none found" with a tone
+needs stance_tone_reason. Nevada State stays (school page stands in for the missing department; write it down).
+Checker changes S3 (empty 202) and campus subdomains: approved by Marcus, note in the spec.
+
+Site: the disclosure finding sentence must show the split: how many "required" were stated outright and how many
+were read from a plagiarism or cheating rule (cue_reason present). Update web/src/data.js findings(), its test in
+web/src/tabs.test.jsx (count independently from values.json), and claims.json if needed. Then: full check_study,
+study tests (+ a mutation run for the new C2 rule), web tests (+ mutation run for the split), pipeline tests,
+build.py exit 0, browser check, push, deploy check, and a summary for Marcus of every number that moved.
+Expected moves: syllabus finding 24/30 national (Penn), 5/6 Ohio (Case Western); stance national none found
+2->3 (UDC), instructor decides 10->9; Ohio restrict 4->3, none found 1->2 (Defiance); disclosure required
+national 12->10 (UDC, Tidewater), Ohio 3->2 (Defiance). Recount from the data after recoding; do not trust these.
 
 ## FIRST, right after the /compact
 1. Take a usage reading marked "after /compact" (full 7-column row in `progress/usage.md`, phase 5).

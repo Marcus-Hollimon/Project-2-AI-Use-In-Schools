@@ -120,13 +120,15 @@ new phase row and deliverable 1's "Done when" says 36 schools.
       Actions run 43130741613 succeeded; live site checked 2026-11-11T19:55:17-05:00 (36 schools, 4 findings, Validation 36 of 36).
 
 ## Marcus's checklist (no code reading needed)
-- [ ] On GitHub, open `data/frame/sample.csv`: 36 rows; the last 21 say "random round 2" (20 national,
+- [x] On GitHub, open `data/frame/sample.csv`: 36 rows; the last 21 say "random round 2" (20 national,
       1 Ohio); Ohio State and Cincinnati still say "fixed by Marcus".
-- [ ] On the live site's Research findings tab, the table header says "National (of 30)" and "Ohio (of 6)", and
+- [x] On the live site's Research findings tab, the table header says "National (of 30)" and "Ohio (of 6)", and
       the note says 6 in each of 5 strata.
-- [ ] Pick one new school in the Research tab, open one of its source links, and Ctrl+F a few words
+- [x] Pick one new school in the Research tab, open one of its source links, and Ctrl+F a few words
       of its quote on the page.
-- [ ] On the Validation tab, the study check table lists 36 schools, all passing.
+- [x] On the Validation tab, the study check table lists 36 schools, all passing.
+
+All four confirmed by Marcus in chat at 2026-11-11T20:04:57-05:00 ("I have run my checklist and they all genuinely passed").
 
 ## Out of scope
 - More than one extra Ohio school.

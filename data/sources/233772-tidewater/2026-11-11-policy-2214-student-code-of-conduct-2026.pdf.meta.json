@@ -1,0 +1,10 @@
+{
+ "kind": "raw bytes from curl",
+ "url": "https://www.tcc.edu/wp-content/uploads/2026/07/12.4_Policy_2214_Student_Code_of_Conduct.pdf",
+ "final_url": "https://www.tcc.edu/wp-content/uploads/2026/07/12.4_Policy_2214_Student_Code_of_Conduct.pdf",
+ "http_status": 200,
+ "content_type": "application/pdf",
+ "fetched_at": "2026-11-11T20:16:44-05:00",
+ "sha256": "8bfe20a680c75f6ef83d134b3a438d12bd69aec9b7738b8d8b974946911f103c",
+ "bytes": 1315975
+}

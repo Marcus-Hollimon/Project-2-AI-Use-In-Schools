@@ -56,5 +56,23 @@ the current phase spec in `specs/`, and write a phase's spec before starting tha
 - At each good boundary (phase end, or a big chunk done): update `STATE.md`, commit, record a usage
   reading marked "just before /compact", then give Marcus the exact `/compact <focus text>` line.
 - First thing after a compact: take a usage reading marked "after /compact".
-- Frequency (Marcus, 2026-11-11): prepare a `/compact` at every phase end and after each big chunk
-  of work (roughly every 100k to 150k tokens of context growth), not only at phase ends.
+- When (Marcus, 2026-11-11 evening, replaces "every 100k to 150k"): compact when the work switches
+  to a different kind of task (for example coding to judgment calls, or one phase to the next), not
+  at a fixed token count. While the work stays on the same task, let context reach about 250k to
+  300k before preparing one. Claude judges the moment and says why.
+
+## Mistakes Claude repeats in this project (and the fix)
+General ones are in `~/.claude/CLAUDE.md` ("Mistakes I repeat"). These are specific to this repo:
+- `check_study.py --only X` overwrites `data/coded/checks.json` with only X. Run the full checker
+  before committing checks.json.
+- `save_page.py` adds the date prefix itself: name pages `ai-guidance`, not `2026-11-11-ai-guidance`.
+- Never log a search as run until its output is in front of you; run the two second searches with
+  their exact query text whenever a value is "none found".
+- On a 403, 406 or empty 202, do not retry curl with other headers; read the page in the browser
+  pane. A PDF opened in the pane becomes a download, which needs Marcus's permission first.
+- The browser preview for this repo is the `project2-web` entry in `C:\Claude Folder\.claude\launch.json`
+  (the preview tool reads that folder), at `http://localhost:5173/Project-2-AI-Use-In-Schools/`.
+- After a /compact the app may write a placeholder reply (model `<synthetic>`); the pipeline now
+  ignores those. If C2 or C3 fails right after a compact, look for records like that first.
+- Before reporting a check's result to Marcus, re-run it and copy the numbers from its output; the
+  summary of a previous context can be wrong (it said one C3 failure when there were two).
