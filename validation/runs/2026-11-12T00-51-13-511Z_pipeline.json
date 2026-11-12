@@ -1,0 +1,220 @@
+{
+ "suite": "pipeline",
+ "runner": "pytest",
+ "command": "uv run --project pipeline python pipeline/record_tests.py",
+ "label": "MUTATION: C3 excuses any compact after a thinking reply, even with fewer tokens",
+ "startedAt": "2026-11-12T00:51:13.511Z",
+ "finishedAt": "2026-11-12T00:51:14.209Z",
+ "phase": 5,
+ "gitCommit": "c977115",
+ "uncommittedChanges": true,
+ "exitCode": 1,
+ "summary": {
+  "total": 19,
+  "passed": 18,
+  "failed": 1,
+  "skipped": 0
+ },
+ "report": {
+  "testResults": [
+   {
+    "name": "pipeline/tests/test_transcripts.py",
+    "status": "failed",
+    "assertionResults": [
+     {
+      "ancestorTitles": [
+       "tests.test_transcripts"
+      ],
+      "fullName": "tests.test_transcripts test_repeated_rows_of_one_response_count_once",
+      "title": "test_repeated_rows_of_one_response_count_once",
+      "status": "passed",
+      "duration": 1.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "tests.test_transcripts"
+      ],
+      "fullName": "tests.test_transcripts test_response_copied_into_a_resumed_file_counts_once",
+      "title": "test_response_copied_into_a_resumed_file_counts_once",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "tests.test_transcripts"
+      ],
+      "fullName": "tests.test_transcripts test_compact_boundary_starts_a_segment_and_matches_tokens_before",
+      "title": "test_compact_boundary_starts_a_segment_and_matches_tokens_before",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "tests.test_transcripts"
+      ],
+      "fullName": "tests.test_transcripts test_compact_check_fails_when_tokens_disagree",
+      "title": "test_compact_check_fails_when_tokens_disagree",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "tests.test_transcripts"
+      ],
+      "fullName": "tests.test_transcripts test_request_in_flight_is_allowed_only_for_the_live_session",
+      "title": "test_request_in_flight_is_allowed_only_for_the_live_session",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "tests.test_transcripts"
+      ],
+      "fullName": "tests.test_transcripts test_unanswered_retry_is_listed_and_unexplained_gaps_fail",
+      "title": "test_unanswered_retry_is_listed_and_unexplained_gaps_fail",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "tests.test_transcripts"
+      ],
+      "fullName": "tests.test_transcripts test_synthetic_placeholder_reply_is_not_a_response",
+      "title": "test_synthetic_placeholder_reply_is_not_a_response",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "tests.test_transcripts"
+      ],
+      "fullName": "tests.test_transcripts test_user_records_that_are_not_prompts",
+      "title": "test_user_records_that_are_not_prompts",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "tests.test_transcripts"
+      ],
+      "fullName": "tests.test_transcripts test_reply_is_the_last_text_response_of_the_turn_and_images_are_counted",
+      "title": "test_reply_is_the_last_text_response_of_the_turn_and_images_are_counted",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "tests.test_transcripts"
+      ],
+      "fullName": "tests.test_transcripts test_subagent_files_add_tokens_but_never_prompts",
+      "title": "test_subagent_files_add_tokens_but_never_prompts",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "tests.test_transcripts"
+      ],
+      "fullName": "tests.test_transcripts test_phase_is_the_latest_reading_at_or_before_the_response",
+      "title": "test_phase_is_the_latest_reading_at_or_before_the_response",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "tests.test_transcripts"
+      ],
+      "fullName": "tests.test_transcripts test_context_check_needs_the_reading_between_two_consecutive_responses_in_time",
+      "title": "test_context_check_needs_the_reading_between_two_consecutive_responses_in_time",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "tests.test_transcripts"
+      ],
+      "fullName": "tests.test_transcripts test_scrubber_removes_home_folder_in_every_spelling_and_the_email",
+      "title": "test_scrubber_removes_home_folder_in_every_spelling_and_the_email",
+      "status": "passed",
+      "duration": 1.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "tests.test_transcripts"
+      ],
+      "fullName": "tests.test_transcripts test_usage_row_with_missing_columns_stops_the_build",
+      "title": "test_usage_row_with_missing_columns_stops_the_build",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "tests.test_transcripts"
+      ],
+      "fullName": "tests.test_transcripts test_test_commands_are_counted_once_and_split_recorded_from_unrecorded",
+      "title": "test_test_commands_are_counted_once_and_split_recorded_from_unrecorded",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "tests.test_transcripts"
+      ],
+      "fullName": "tests.test_transcripts test_claim_check_needs_each_backing_test_to_pass_in_the_newest_run_of_its_suite",
+      "title": "test_claim_check_needs_each_backing_test_to_pass_in_the_newest_run_of_its_suite",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "tests.test_transcripts"
+      ],
+      "fullName": "tests.test_transcripts test_each_mutation_needs_to_fail_and_a_later_passing_run_of_its_suite",
+      "title": "test_each_mutation_needs_to_fail_and_a_later_passing_run_of_its_suite",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "tests.test_transcripts"
+      ],
+      "fullName": "tests.test_transcripts test_compact_after_a_stopped_turn_passes_only_with_unanswered_records_and_more_tokens",
+      "title": "test_compact_after_a_stopped_turn_passes_only_with_unanswered_records_and_more_tokens",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "tests.test_transcripts"
+      ],
+      "fullName": "tests.test_transcripts test_compact_after_a_thinking_reply_passes_only_with_more_tokens",
+      "title": "test_compact_after_a_thinking_reply_passes_only_with_more_tokens",
+      "status": "failed",
+      "duration": 0.0,
+      "failureMessages": [
+       "assert not True"
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

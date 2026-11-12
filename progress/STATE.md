@@ -10,9 +10,15 @@ Update 2026-11-11T17:18:05-05:00: site update mostly done (commit 0e9db80): Rese
 shows" list (4 sentences, web/src/data.js findings(), claims research-finding-*); web tests 49/49 recorded
 (22-17-33Z) after a recorded mutation run that failed as it should (22-17-20Z); stale "15" fixed. build.py
 rebuilt data/derived and exits 1 ONLY on C3_compact (C5 now passes). STOPPED at 95% of the 5-hour window.
-LEFT: (a) look at the Research tab in the browser (no .claude/launch.json yet; Vite dev server in web/);
-(b) R1 re-fetch rerun (`study/refetch.py`); (c) pipeline tests recorded; (d) C3_compact decision with Marcus;
-(e) push and deploy check; (f) spec checkboxes; (g) Marcus's checklist and every judgment call below.
+Update 2026-11-11T19:53:03-05:00 (after Marcus's /compact and the 7:40 PM reset): (a) Research tab checked in the
+browser pane (.claude/launch.json "web"): 36 schools, 0 failing, 7 tables, no console errors, no sideways
+scroll at 375 px. (b) R1 re-fetch rerun: 184 pages, 0 coded quotes missing (refetch-notes.md). (c) Pipeline
+19/19 recorded after two recorded mutation runs. (d) C2 had begun failing on an app placeholder reply
+(model <synthetic>): fixed as a counting bug. C3 was failing on TWO compacts (15:59, 16:12), not one; all 3
+over-count compacts followed a reply with a thinking block; Marcus chose "Allow, list the gap" (decisions.md,
+phase-1 spec amendment). build.py now exits 0, all checks PASS. (f) Acceptance boxes ticked except deploy.
+LEFT: (e) push and deploy check, then tick the last box; (g) Marcus's checklist and every judgment call below.
+Minor, not fixed: 10 of the original 15 schools have no coded_at field (all were coded 2026-11-11 per git).
 
 ## FIRST, right after the /compact
 1. Take a usage reading marked "after /compact" (full 7-column row in `progress/usage.md`, phase 5).

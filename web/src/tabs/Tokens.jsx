@@ -183,7 +183,8 @@ export default function Tokens() {
                     'Each context figure read from the app lies between two consecutive responses in the transcript, the first within two minutes of the reading: an independent check on the transcript numbers.',
                   C2_completeness:
                     'Every API request in the transcripts has its response counted, apart from listed unanswered retries.',
-                  C3_compact: 'Each /compact’s “tokens before” equals the last response’s context.',
+                  C3_compact:
+                    'Each /compact’s “tokens before” equals the last response’s context plus its output, or is larger only after a stopped turn or a reply with hidden thinking (whose size the transcript does not keep); each gap is listed in checks.json.',
                   privacy:
                     'The published files contain no home-folder path, not Marcus’s email address, and no raw tool records.',
                 }[id]

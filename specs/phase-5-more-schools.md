@@ -105,15 +105,21 @@ new phase row and deliverable 1's "Done when" says 36 schools.
 - Web tests for the new findings sentences, including a mutation run (a wrong count must fail).
 
 ## Acceptance checks (Claude runs and records)
-- [ ] This spec pushed to GitHub before the draw ran (commit time on GitHub earlier than the draw).
-- [ ] `sample.csv`: 36 rows; first 15 unchanged; second run identical.
-- [ ] `check_study.py` passes every check on all 36 schools; results in `data/coded/checks.json`.
-- [ ] R1 re-fetch report rerun over every archived page.
-- [ ] Study, web and pipeline tests pass, recorded; each mutation run fails, recorded.
+- [x] This spec pushed to GitHub before the draw ran (commit time on GitHub earlier than the draw).
+      The approved spec (1cd06c0) reached GitHub at 15:17:25 EST (its GitHub Actions push run); the
+      draw commit (4fd94dc) is 15:19:12 EST.
+- [x] `sample.csv`: 36 rows; first 15 unchanged; second run identical. Checked 19:52 EST: the first 16
+      lines (header and 15 rows) are byte for byte the round-1 copy (6cfc04c), and rerunning
+      `study/draw_sample.py` left the file unchanged (`git diff --exit-code` returned 0).
+- [x] `check_study.py` passes every check on all 36 schools; results in `data/coded/checks.json`.
+- [x] R1 re-fetch report rerun over every archived page (184 pages; 0 coded quotes missing from a
+      changed page; follow-up checks in `data/coded/refetch-notes.md`).
+- [x] Study, web and pipeline tests pass, recorded; each mutation run fails, recorded (pipeline check
+      C6 passes: study 20-18-06Z, web 22-17-20Z, pipeline 00-45-02Z and 00-51-13Z).
 - [ ] `build.py` exits 0 with all checks passing; the live site deploys.
 
 ## Marcus's checklist (no code reading needed)
-- [ ] On GitHub, open `data/frame/sample.csv`: 36 rows; the last 21 say "random, round 2" (20 national,
+- [ ] On GitHub, open `data/frame/sample.csv`: 36 rows; the last 21 say "random round 2" (20 national,
       1 Ohio); Ohio State and Cincinnati still say "fixed by Marcus".
 - [ ] On the live site's Research findings tab, the table header says "National (of 30)" and "Ohio (of 6)", and
       the note says 6 in each of 5 strata.

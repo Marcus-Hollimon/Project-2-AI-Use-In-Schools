@@ -106,6 +106,16 @@ Script and output: `evidence/phase1-recon/`. Transcript timestamps are UTC; EST 
   nearest single-response difference is still reported in `checks.json`. Same day, a first run
   had also failed because Claude wrote the reading time as 09:55 instead of 09:52; the check
   caught that, and the time was corrected.
+- **Amendment to C3 (2026-11-11 evening, decided by Marcus; see `progress/decisions.md`)**: two
+  compacts (15:59 and 16:12 EST) reported 721 and 415 more tokens than the last response's context
+  plus output. Of all 20 real compacts, the 3 that missed the exact rule (including the 12:45 one
+  already excused as a stopped turn) are exactly the 3 that followed a response with a thinking
+  block, which the transcript keeps only as a signature; all 17 others matched exactly. The gap
+  does not track the signature's length (1.4 to 4.1 characters per token), so it cannot be computed.
+  New rule: a compact also passes when tokens-before is larger and the last response had a
+  thinking block; the difference is listed in `checks.json`. Same evening, C2 began failing on an
+  app placeholder reply ("No response requested.", model `<synthetic>`, zero usage, no request);
+  such records are no longer counted as responses (a counting fix, not a rule change).
 
 ## Acceptance checks
 Claude runs these and records the results:

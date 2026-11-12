@@ -290,3 +290,22 @@ def test_compact_after_a_stopped_turn_passes_only_with_unanswered_records_and_mo
     assert not tx.check_compacts(tx.walk([one_file(rows + [fewer])])["boundaries"])[0]["pass"]
     completed = rows[:-1] + [dict(boundary, uuid=uid())]  # no unanswered record: must match exactly
     assert not tx.check_compacts(tx.walk([one_file(completed)])["boundaries"])[0]["pass"]
+
+
+def test_compact_after_a_thinking_reply_passes_only_with_more_tokens():
+    # Real data 2026-11-11: the 3 compacts that missed the exact rule all followed a reply with a
+    # thinking block (only its signature is saved); the 17 after replies without one matched exactly.
+    u = usage(inp=2, cw=100, cr=1000, out=50)
+    thinking = {"type": "thinking", "thinking": "", "signature": "abc"}
+    rows = [prompt("2026-11-08T05:00:00Z", "hi"), request("2026-11-08T05:00:01Z")]
+    rows += assistant_rows("m1", "2026-11-08T05:00:02Z", [thinking, text("done")], u)
+
+    def compact(pre):
+        return {"type": "system", "subtype": "compact_boundary", "uuid": uid(), "timestamp": "2026-11-08T05:05:00Z",
+                "compactMetadata": {"trigger": "manual", "preTokens": pre, "postTokens": 100, "durationMs": 1}}
+    [r] = tx.check_compacts(tx.walk([one_file(rows + [compact(1600)])])["boundaries"])
+    assert r["pass"] and r["difference"] == 448 and r["lastResponseHadThinking"]
+    assert not tx.check_compacts(tx.walk([one_file(rows + [compact(1100)])])["boundaries"])[0]["pass"]
+    # A thinking block in an earlier response does not excuse the compact after a plain reply.
+    later = rows + [request("2026-11-08T05:00:03Z")] + assistant_rows("m2", "2026-11-08T05:00:04Z", [text("x")], u)
+    assert not tx.check_compacts(tx.walk([one_file(later + [compact(1600)])])["boundaries"])[0]["pass"]

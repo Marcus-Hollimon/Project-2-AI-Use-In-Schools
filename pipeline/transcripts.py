@@ -138,6 +138,9 @@ def walk(files):
         unanswered = [rows[a].get("timestamp") for a, b in zip(request_indexes, request_indexes[1:])
                       if not any(a < i < b for i in assistant_indexes)]
         last_response = None
+        # Whether the last main-session response had a thinking block. The transcript keeps only its
+        # signature, not its text, so a compact right after it can report more tokens than we can count.
+        last_mid, last_thinking = None, False
         after_last_response = []  # user records (tool results, prompts) the model never answered
         first_new = True
         for index, record in enumerate(rows):
@@ -177,6 +180,7 @@ def walk(files):
                     "durationMs": meta.get("durationMs"),
                     "lastResponseContextPlusOutput": expected,
                     "unansweredAfter": list(after_last_response),
+                    "lastResponseHadThinking": last_thinking,
                 })
                 segment["endReason"] = "/compact"
                 segment = new_segment(record.get("timestamp"), "/compact", session)
@@ -197,6 +201,9 @@ def walk(files):
                     responses.append(entry)
                 if not f.get("subagent"):
                     last_response = classes
+                    if mid != last_mid:
+                        last_mid, last_thinking = mid, False
+                    last_thinking = last_thinking or any(b.get("type") == "thinking" for b in _blocks(message))
                     after_last_response = []
                 for block in _blocks(message):
                     if block.get("type") == "tool_use":
@@ -318,20 +325,29 @@ def check_completeness(file_stats, live_session):
 def check_compacts(boundaries):
     """C3: a boundary's tokens-before equals the last response's context plus its output, exactly.
 
-    One exception, seen on 2026-11-11 at 12:45 EST: when the turn was stopped, the tool result and the
-    interrupt note sit after the last response and were never sent to the model, so tokens-before is
-    larger. That passes only when such records exist and tokens-before is larger; the difference and
-    the records' times are listed."""
+    Two exceptions, each passing only when tokens-before is larger, with the difference listed:
+    - the turn was stopped (seen 2026-11-11 12:45 EST): the tool result and the interrupt note sit
+      after the last response and were never sent to the model; their times are listed.
+    - the last response had a thinking block (Marcus, 2026-11-11 evening): the transcript keeps only
+      the block's signature, so its size cannot be counted. All 3 of 20 real compacts that missed the
+      exact rule (12:45, 15:59, 16:12 EST; 415 to 721 tokens over) followed such a response, and all
+      17 that followed a response without one matched exactly."""
     results = []
     for b in boundaries:
         pre, computed = b["preTokens"], b["lastResponseContextPlusOutput"]
         unanswered = b.get("unansweredAfter") or []
+        thinking = bool(b.get("lastResponseHadThinking"))
         exact = pre is not None and pre == computed
-        stopped = pre is not None and computed is not None and bool(unanswered) and pre > computed
-        r = {"time": b["time"], "preTokens": pre, "computed": computed, "pass": exact or stopped}
-        if stopped and not exact:
-            r["unansweredAfter"] = unanswered
+        larger = pre is not None and computed is not None and pre > computed
+        stopped = larger and bool(unanswered)
+        hidden = larger and thinking
+        r = {"time": b["time"], "preTokens": pre, "computed": computed, "pass": exact or stopped or hidden}
+        if (stopped or hidden) and not exact:
             r["difference"] = pre - computed
+            if stopped:
+                r["unansweredAfter"] = unanswered
+            if hidden:
+                r["lastResponseHadThinking"] = True
         results.append(r)
     return results
 
