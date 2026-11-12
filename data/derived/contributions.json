@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-12T02:16:38.778437Z",
+ "generatedAt": "2026-11-12T02:28:50.564134Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -2382,12 +2382,37 @@
    "phase": "6"
   },
   {
-   "time": "2026-11-12T02:16:16.434000Z",
+   "time": "2026-11-12T02:16:46Z",
+   "actor": "Claude",
+   "kind": "milestone",
+   "phase": "6",
+   "text": "Part A done: Validation tab section \"How the tests work\" (three layers, planted bugs, edge cases by check, limits). New mutation tool study/mutation_score.py: first run caught 120 of 162 planted bugs in check_study.py; 16 study test cases added for the gaps (checker's main() now takes a root, no other change); newest run 158 of 162, the 4 left each with a written verdict. Study 62/62, web 53/53 (after 2 recorded mutation runs), build exit 0, lint 0, checked at 375 px and desktop.",
+   "evidence": "validation/mutation-runs/"
+  },
+  {
+   "time": "2026-11-12T02:16:53Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 6 Part A: \"How the tests work\" section and a mutation score for the study checker",
+   "commit": "1f6c920",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "6"
+  },
+  {
+   "time": "2026-11-12T02:28:42Z",
+   "actor": "Claude",
+   "kind": "milestone",
+   "phase": "6",
+   "text": "Part B done: presentation/AI-in-CS-departments.pptx, 14 slides with speaker notes, built from the data files by presentation/build_deck.cjs; validator PASS; every slide rendered in PowerPoint and inspected (fixed: title overlap on the closing slide, wrapped figures, slide-edge margins). Phase 6 waits on Marcus's checklist and his evaluation and reflection slides.",
+   "evidence": "presentation/build_deck.cjs"
+  },
+  {
+   "time": "2026-11-12T02:28:47.266000Z",
    "actor": "Claude",
    "kind": "reply",
    "turn": 49,
-   "text": "Fits at 343 px. Back to desktop width, a check for console errors, and a look at the edge-case table:",
-   "toolCalls": 82,
+   "text": "Records written. Rebuilding the derived data (the usage file feeds the Token usage tab), re-recording the web tests, and rebuilding the deck so its figures match the committed data:",
+   "toolCalls": 174,
    "phase": "6"
   }
  ]

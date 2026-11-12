@@ -1,0 +1,7 @@
+{
+  "name": "project2-presentation",
+  "private": true,
+  "description": "Builds the final presentation deck from the repository data files (Phase 6).",
+  "scripts": { "build": "node build_deck.cjs" },
+  "devDependencies": { "pptxgenjs": "4.0.1" }
+}

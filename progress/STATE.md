@@ -2,7 +2,24 @@
 
 Current phase: 6 Evaluation (spec `specs/phase-6-evaluation.md`, approved by Marcus 2026-11-11T20:59:41-05:00). Phase 5 is done.
 
-Last updated: 2026-11-11T16:59:31-05:00 by Claude (session a9056776). ALL 21 new schools coded; full checker
+Last updated: 2026-11-11T21:28:42-05:00 by Claude (session a9056776). Phase 6 Parts A and B DONE; WAITING ON MARCUS.
+- Part A (commit 1f6c920, deployed, live site checked): Validation tab section "How the tests work" (three
+  layers, planted bugs, edge cases by check, what no test can prove). New study/mutation_score.py: first run
+  caught 120 of 162 planted bugs in check_study.py; 16 study test cases added for the gaps (main() now takes a
+  root, no other checker change); newest run 158 of 162, the 4 left each with a verdict in
+  validation/mutation-triage.json. Study 62/62, web 53/53 (after 2 recorded mutation runs), build exit 0.
+- Part B: presentation/AI-in-CS-departments.pptx, 14 slides with speaker notes, built by
+  presentation/build_deck.cjs (npm run build in presentation/, pptxgenjs 4.0.1) from the data files; a finding
+  title that the data stops supporting stops the build. Slides 12 and 13 (evaluation, reflection) carry
+  Marcus's headings only. Checked: skill validator PASS, every slide rendered with the installed PowerPoint
+  (COM export, scratchpad render_slides.ps1) and looked at. Rebuild the deck after any data change.
+- NEXT: Marcus runs the Phase 6 checklist (specs/phase-6-evaluation.md) and writes slides 12 and 13 (and
+  deliverables E and R). Open question for him: drop "Work in progress" from the site footer
+  (web/src/App.jsx) once his evaluation is in.
+- Rule added to CLAUDE.md: re-run study/mutation_score.py after any change to check_study.py or its tests.
+- Weekly stop rule removed by Marcus (decisions.md 20:59:41); 5-hour window and extra usage off remain.
+
+Phase 5 notes, last updated: 2026-11-11T16:59:31-05:00 by Claude (session a9056776). ALL 21 new schools coded; full checker
 36 PASS, 0 FAIL; study tests 40/40 recorded (validation/runs/2026-11-11T21-59-21-021Z_study.json). Marcus chose
 to push past the 85% stop line at 16:53 (progress/decisions.md); the 5-hour window was 90% at 16:59 (resets
 7:40 PM EST). Coding is DONE.

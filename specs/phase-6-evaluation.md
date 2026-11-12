@@ -81,3 +81,14 @@ Plain-language checklist, done on the live site and in PowerPoint:
 - [ ] The deck opens in PowerPoint, the charts are readable, and every slide has speaker notes.
 - [ ] My evaluation and reflection slides are mine.
 - [ ] All tests pass, recorded, and the site shows the new commit.
+
+## Status (2026-11-11T21:28:42-05:00, Claude)
+- Part A built and live (commit 1f6c920): the Validation tab opens with "How the tests work". The optional
+  mutation score was run (in scope once the weekly rule was removed): 120 of 162 planted bugs caught at first,
+  16 study test cases added, 158 of 162 now; the 4 left have written verdicts. Claims register entries
+  validation-how-*; web tests "How the tests work (Phase 6)".
+- Part B built: `presentation/AI-in-CS-departments.pptx` (14 slides: the 12 planned plus Marcus's two). Built
+  by `presentation/build_deck.cjs` from the data files; validated and rendered in PowerPoint, every slide
+  inspected. Two changes from the plan: the findings slides pair departments with syllabi (slide 5) and tone
+  with collaboration (slide 8), so all three questions are covered; slide 14 is limits, next steps and links.
+- The checklist below is Marcus's.
