@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-12T00:53:14.301431Z",
+ "generatedAt": "2026-11-12T01:35:02.936387Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -2034,12 +2034,275 @@
    "evidence": "specs/phase-5-more-schools.md, specs/phase-1-instrumentation.md, data/coded/refetch-report.md"
   },
   {
-   "time": "2026-11-12T00:53:09.132000Z",
+   "time": "2026-11-12T00:53:14Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 5: C3 amended (hidden-thinking compacts pass with the gap listed); build exits 0",
+   "commit": "01a3e56",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T00:55:17Z",
+   "actor": "Claude",
+   "kind": "milestone",
+   "phase": "5",
+   "text": "Pushed and deployed (01a3e56, Actions run 43130741613 success). Live site shows 36 schools, the four findings and the 184-page re-check; Validation lists 36 of 36 passing. All Phase 5 acceptance boxes ticked; Marcus's checklist and judgment calls handed to him.",
+   "evidence": "specs/phase-5-more-schools.md"
+  },
+  {
+   "time": "2026-11-12T00:55:18Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 5: deployed and checked live; acceptance boxes ticked",
+   "commit": "056f62f",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T00:55:31Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 5: acceptance boxes ticked, STATE and log after the deploy",
+   "commit": "a36cb1f",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T00:55:44Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Usage reading before /compact (Phase 5 deployed)",
+   "commit": "6b4c505",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T00:56:12.558000Z",
    "actor": "Claude",
    "kind": "reply",
    "turn": 45,
-   "text": "Rebuilding once more so the derived data includes the latest runs, then committing and pushing.",
-   "toolCalls": 93,
+   "text": "Phase 5 is finished on my side and live: https://marcus-hollimon.github.io/Project-2-AI-Use-In-Schools/\n\n**What I did after the reset:**\n- **Usage reading:** after your /compact: 1% of the 5-hour window, 33% weekly.\n- **Browser check:** on the Research tab, 36 schools show, none failing. All 7 tables are there, there are no errors, and it reads fine at phone width.\n- **Re-download check:** all 184 saved pages were fetched again. No coded quote has disappeared from any page that changed.\n  - Four pages now return \"not found\", but they already did when first saved, and no coded answer uses them.\n  - Two refused pages carry quotes. I opened the Johns Hopkins one in the browser and all 3 quotes are still there.\n  - I did not open the Tidewater code PDF, because a PDF in the browser turns into a download, which needs your OK.\n- **Tests:** study 40/40, web 49/49 and pipeline 19/19, all recorded. Each new fix also got a planted-bug run that failed as it should.\n- **Draw reproduced:** a fresh run of the round-2 draw gives a byte-for-byte identical file. The original 15 rows are untouched.\n- **Published:** pushed and deployed successfully. On the live site, the Research tab shows 36 schools with \"National (of 30)\" and \"Ohio (of 6)\". The Validation tab shows 36 of 36 passing.\n\n**Hard truths:**\n- **I under-reported C3 before the break.** It was failing on two of your compacts (3:59 PM and 4:12 PM), not one.\n  - The real pattern: all 3 compacts that came out \"too big\" followed a reply with hidden thinking, and all 17 others matched exactly.\n  - You chose \"Allow, list the gap\". It's logged and written into the spec.\n- **A second check broke after your /compact.** The app wrote a placeholder reply (\"No response requested.\") into the record, and the pipeline counted it as a real reply. I fixed that counting bug and added a test.\n- **I repeated a known mistake.** One commit ran after a failed `git add`, so it went up holding only a cleanup with a wrong message (056f62f). The next commit (a36cb1f) carries the real files. STATE.md warns about exactly this slip, and I did it anyway.\n- **Your checklist had a typo, now fixed.** It said the new rows read \"random, round 2\". They actually read \"random round 2\", with no comma, on purpose.\n- **Small gap, not fixed:** 10 of the original 15 schools are missing their \"coded on\" date in the data file. The site's \"coded on 2026-11-11\" is still true for all 36; the git history confirms it.\n\n**Your checklist (live site, no code):**\n1. On GitHub, open `data/frame/sample.csv`. It has 36 rows, and the last 21 say \"random round 2\" (20 national, 1 Ohio). Ohio State and Cincinnati still say \"fixed by Marcus\".\n2. On the Research findings tab, the table headers say \"National (of 30)\" and \"Ohio (of 6)\", and the note says 6 in each of 5 strata.\n3. Open one new school, click a source link, and Ctrl+F a few words of its quote.\n4. On the Validation tab, the study check table lists 36 schools, all passing.\n\n**Judgment calls for you:** STATE.md lists one or more per school. These five matter most:\n- **Catalog descriptions are coded two ways.** At Stanford, UDC and Penn, a catalog course description that mentions AI counts as \"AI built into the course\". At EKU and UMKC, a description with no AI text counts as \"no public syllabus found\". One rule should apply to all.\n- **Two checker rules I changed myself:**\n  - An empty \"202\" reply from a site is now treated like a refusal. This came up at Westminster.\n  - College-system web addresses now keep the campus name, so Niagara is no longer read as suny.edu.\n- **Tidewater** may be coded from an outdated code of conduct. The July 2025 version refused automated downloads, and I didn't take the browser download.\n- **Default ban versus instructor's choice:** at four schools (West Virginia Wesleyan, Niagara, Case Western, College of Charleston), I coded \"restrict\" because the handbook's default ban outranks a newer \"instructor decides\" policy.\n- **Hidden-inference calls:** at Rice and Westminster, \"AI work as your own is plagiarism\" was read as both \"permit with conditions\" and \"disclosure required\".\n\n**Context:** 197k used, about 106k more than after your compact, so this is a good time for the next one. STATE.md is updated, and the reading is recorded and pushed. Paste this:\n\n```\n/compact Phase 5 done and deployed (a36cb1f + usage row): 36 schools live, build exits 0, all acceptance boxes ticked, C3 amended per Marcus. Left: Marcus's 4-step checklist and his review of every judgment call in progress/STATE.md (catalog-description rule, S3 empty-202 rule, college-system domains, Tidewater Policy 2214, default-ban readings). Then Phase 6 evaluation spec. Deadline 2 PM EST Thu Nov 12.\n```\n\n**Coaching**\n- Sending \"resume the rest\" with screenshots of my last message worked well, because it handed me the exact list. One improvement: say up front which decisions you're ready to make that session (for example, \"I can decide C3 now\"). Then I can line those questions up early instead of mid-run.\n- **Feature that would have helped:** a hook that blocks `git commit` when the previous command in the same line failed. The `update-config` skill can set one up. It would have stopped my bad commit, and that slip has now happened twice in this project.",
+   "toolCalls": 113,
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:03:06.921000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 46,
+   "text": "Update that Claude.md with mistakes you repeatedly make, so you know how to fix them later. Remove the coaching from the claude.md as well. Let's just focus on getting this completed properly. Let's compact at around 250-300k tokens, IF we will still be focused on the similar task. Compact not at necessarily a strict token limit but more so when we switch between different things. Use you best judgement to decide when to do the compact. I have run my checklist and they all genuinely passed. Alright. Lets have this turn fully focused on judgement calls. Also you can think (in the background) no need for me to see it at all times, if something would be nice in a skill then feel free to make it and use it yourself, or anything else that would be useful to you.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:04:57Z",
+   "actor": "Marcus",
+   "kind": "milestone",
+   "phase": "5",
+   "text": "Phase 5 checklist: all four steps passed (Marcus: \"I have run my checklist and they all genuinely passed\"). Phase 5 done apart from his review of the judgment calls.",
+   "evidence": "specs/phase-5-more-schools.md"
+  },
+  {
+   "time": "2026-11-12T01:12:41.076000Z",
+   "actor": "Marcus",
+   "kind": "answer",
+   "text": "Your questions have been answered: \"Software engineering course, Penn and Case Western: the codebook says to code the course actually named \"Software Engineering\" first. Both schools have one (Penn CIS 3500, Case Western CSDS 393), but neither has a public syllabus, so I coded a different, related course that did have AI text (Penn's AI coding-agents course; Case Western's Software Craftsmanship statement). That breaks the written rule. What should happen?\"=\"Follow the rule (Recommended)\", \"Catalog descriptions: at Stanford and UDC the only course text is the short official catalog description, and it says the course teaches AI tools, so I coded \"AI built into the course\". At 8 other schools the description says nothing about AI, and I coded \"no public syllabus found\" instead of \"says nothing about AI\", because a 3-sentence blurb staying silent is not evidence the real syllabus is silent. Which rule should hold?\"=\"Count only if it names AI (Recommended)\", \"Disclosure: 15 schools are coded \"disclosure required\". 8 say it outright (\"must disclose/cite\"). 7 only say that using AI content without credit is plagiarism or cheating, which I read as \"credit is required\" (NYIT, EKU, UDC, Tidewater, Defiance name the missing credit; Rice and Westminster only say \"passing AI work off as your own\"). How should these count?\"=\"Keep all, show the split (Recommended)\", \"Library guides as the university's voice: at 4 schools with no AI policy, university-level values come from the library's AI guide. Maine Fort Kent's guide hosts the official \"UMFK AI Use Guidance\" and Berry's quotes \"Berry's syllabus statement\", so those reproduce official text. UDC's (\"check with your instructor\") and Defiance's (\"unauthorized use is cheating\") are the library's own words. The codebook's list of university sources doesn't name the library. What counts?\"=\"Only official text (Recommended)\". You can now continue with these answers in mind.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:14:28.501000Z",
+   "actor": "Marcus",
+   "kind": "answer",
+   "text": "Your questions have been answered: \"Tone of \"balanced\" pages: the codebook has positive (mainly opportunity), neutral (dry procedure) and cautionary (mainly risks), but no value for a page that weighs both, like Tidewater's \"ChatGPT can be a valuable tool, but...\". At 4 schools (Maine Fort Kent, Tidewater, Nova Southeastern, Temple) I coded such pages positive because they open on the opportunity. How should balanced pages be coded?\"=\"Add a \"mixed\" value\", \"Nevada State has no computer science department: its computing degree (Data Science) sits in the School of Liberal Arts, Sciences, & Business, so I treated that school's course-policy page (\"see the course syllabus in each class\") as the department and coded \"instructor decides\". Should that stand?\"=\"Keep it (Recommended)\", \"Two checker rules I changed myself during coding, each with a new test: (1) a site that answers with an empty \"202\" page is treated like a refusal, so a page read in the browser instead is accepted with a written reason (needed for Westminster); (2) for college-system web addresses (suny.edu, maine.edu and four others), the checker keeps the campus name, so SUNY Niagara is no longer seen as \"suny.edu\". Approve them?\"=\"Approve both (Recommended)\", \"Tidewater may be coded from an outdated rulebook: its newer Student Code of Conduct (Policy 2214, July 2025) refused automated downloads, and the browser offered it only as a file download, which I didn't take. File: Policy-2214-Student-Code-of-Conduct-Policy-New.pdf from tcc.edu (the college's own site); size unknown because the site refused the request. May I download it through the browser so I can read it, save it as evidence, and recode Tidewater if its AI rule differs?\"=\"Yes, download it (Recommended)\". You can now continue with these answers in mind.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:14:59Z",
+   "actor": "Marcus",
+   "kind": "decision",
+   "text": "Software engineering course at Penn and Case Western",
+   "options": "follow the rule (named course) · keep related courses with an exception",
+   "notes": "Chose \"Follow the rule\". Penn (CIS 3500) and Case Western (CSDS 393) have courses named Software Engineering with no public syllabus, so both become \"no public syllabus found\"; the related courses stay in the notes. Claude had broken the written rule.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:14:59Z",
+   "actor": "Marcus",
+   "kind": "decision",
+   "text": "Catalog course descriptions for se_courses",
+   "options": "count only if it names AI · never count · count both ways",
+   "notes": "Chose \"Count only if it names AI\". Stanford and UDC stay \"AI built into the course\"; a description silent on AI is not a course page for \"not addressed\". Written into codebook v3.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:14:59Z",
+   "actor": "Marcus",
+   "kind": "decision",
+   "text": "Disclosure read from plagiarism rules (7 schools)",
+   "options": "keep all and show the split · drop Rice and Westminster · only outright statements",
+   "notes": "Chose \"Keep all, show the split\". The site sentence states how many were stated outright and how many were read from a plagiarism or cheating rule.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:14:59Z",
+   "actor": "Marcus",
+   "kind": "decision",
+   "text": "Library AI guides as university text (UDC, Defiance, Maine Fort Kent, Berry)",
+   "options": "only official text · keep all four · drop all four",
+   "notes": "Chose \"Only official text\". Maine Fort Kent and Berry stay (their guides reproduce official university text); UDC and Defiance values that came from the library's own words become absence values.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:14:59Z",
+   "actor": "Marcus",
+   "kind": "decision",
+   "text": "Tone of balanced pages",
+   "options": "keep and write the rule · add a mixed value",
+   "notes": "Chose \"Add a mixed value\" (Claude estimated 1 to 2 hours: every tone value at all 36 schools re-read). Codebook v3.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:14:59Z",
+   "actor": "Marcus",
+   "kind": "decision",
+   "text": "Nevada State: school page as the department",
+   "options": "keep · none found",
+   "notes": "Chose \"Keep it\". The School of Liberal Arts, Sciences, & Business runs the computing degree, so its page stands in for the missing CS department.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:14:59Z",
+   "actor": "Marcus",
+   "kind": "decision",
+   "text": "Two checker changes made during coding (S3 empty HTTP 202; campus subdomains for college-system domains)",
+   "options": "approve both · review first",
+   "notes": "Chose \"Approve both\".",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:14:59Z",
+   "actor": "Marcus",
+   "kind": "decision",
+   "text": "Download Tidewater Policy 2214 (Policy-2214-Student-Code-of-Conduct-Policy-New.pdf from tcc.edu, size unknown)",
+   "options": "download it · leave a note",
+   "notes": "Chose \"Yes, download it\": one PDF from tcc.edu through the browser, saved under data/sources, Tidewater recoded if its AI rule differs.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:19:13.281000Z",
+   "actor": "Marcus",
+   "kind": "answer",
+   "text": "Your questions have been answered: \"UDC after removing its library guide: the only official university AI text left is the president's AI Initiative page, which is clearly positive about AI but sets no rule for students. So stance becomes \"none found\" while tone is \"positive\". A built-in check currently insists stance and tone are either both \"none found\" or both found. Which way?\"=\"Allow it with a reason (Recommended)\", \"Tidewater's current official rulebook (Policy 2214, revised January 26, 2026, confirmed on the college's official policies page) still treats unauthorized AI use as dishonesty, so the stance stays \"restrict\". But it no longer says AI content needs acknowledgment, which the replaced 2024 code did. Disclosure for Tidewater?\"=\"Not stated (Recommended)\", \"Applying your library rule to every value, not just the two schools I named: Berry's values all survive (the official syllabus statement covers them). But at Maine Fort Kent and Tidewater, the \"brainstorming\" line behind collaboration and Tidewater's tone come from the library's own pages, not official text. Apply the rule to those too?\"=\"Yes, apply everywhere (Recommended)\". You can now continue with these answers in mind.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:19:28Z",
+   "actor": "Marcus",
+   "kind": "decision",
+   "text": "UDC: stance none found with a positive tone from the president's AI page",
+   "options": "allow with a written reason · tone none found too",
+   "notes": "Chose \"Allow it with a reason\": check C2 accepts the pair only with a written, published reason; new test.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:19:28Z",
+   "actor": "Marcus",
+   "kind": "decision",
+   "text": "Tidewater disclosure under the current Policy 2214 (Rev 1, January 26, 2026)",
+   "options": "not stated · keep required from the 2024 code",
+   "notes": "Chose \"Not stated\": the current official policy no longer says AI content needs acknowledgment.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:19:28Z",
+   "actor": "Marcus",
+   "kind": "decision",
+   "text": "Apply the library rule to every value (Maine Fort Kent and Tidewater collaboration, Tidewater tone)",
+   "options": "apply everywhere · only UDC and Defiance",
+   "notes": "Chose \"Yes, apply everywhere\". Berry keeps its values, re-sourced to its official syllabus statement.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:20:01Z",
+   "actor": "Marcus",
+   "kind": "milestone",
+   "phase": "5",
+   "text": "Decided 11 judgment calls (progress/decisions.md): Penn and Case Western follow the named-course rule; catalog descriptions count only if they name AI; disclosure split shown on the site; library guides count only as official text; tone gets a \"mixed\" value; Nevada State kept; checker changes approved; Tidewater Policy 2214 downloaded and read; UDC tone kept with a reason; Tidewater disclosure not stated. Not yet applied.",
+   "evidence": "progress/decisions.md"
+  },
+  {
+   "time": "2026-11-12T01:20:12Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 5: Marcus's checklist passed; 11 judgment calls decided (not yet applied)",
+   "commit": "488ce1a",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:20:41Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Usage reading before /compact (judgment calls decided); correct the 19:55 row",
+   "commit": "a64407e",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:21:06.828000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 46,
+   "text": "All 11 judgment calls are decided and logged, but none of the recoding is applied yet. Your Phase 5 checklist pass is recorded too.\n\n**CLAUDE.md changes:**\n- **Coaching is gone** from your global CLAUDE.md and from the hook that repeats the rules every turn. Backups of both are in `~/.claude/backups/`.\n- **New \"Mistakes I repeat\" section** in the global file. Each entry has a date and its fix:\n  - running the next step after one failed\n  - typing times from memory\n  - reporting from a summary instead of the output\n  - assuming which config a tool used\n  - guessing web addresses\n  - long text in one shell command\n  - logging a step before it ran\n- **The project CLAUDE.md** gets the mistakes specific to this repo, plus your new compact rule: compact when the task changes, or at about 250k to 300k tokens on one task.\n\n**Your decisions, and what they change:**\n- **Penn and Case Western:** both now follow the written rule and become \"no public syllabus found\". I had broken that rule: both schools have a course actually named Software Engineering, and I coded a different course instead.\n- **Catalog descriptions** count only when they name AI. Stanford and UDC stay as coded.\n- **Disclosure:** all readings are kept, and the site will show how many schools stated it outright versus how many I read from a plagiarism rule.\n- **Library guides** count only where they reproduce official text, applied to every value:\n  - UDC and Defiance lose the values that came from the library's own words.\n  - Maine Fort Kent and Tidewater lose their \"brainstorming\" collaboration value.\n  - Berry keeps everything, re-sourced to its official syllabus statement.\n- **UDC tone:** stays positive, with a written reason. The consistency check will be changed to allow that pairing only when a reason is given.\n- **Tone:** gains a \"mixed\" value, so every tone value gets re-read.\n- **Nevada State** stays as coded, and both checker changes are approved.\n- **Tidewater:** I downloaded the July 2025 file you approved. The college's official policies page links a newer copy, revised January 26, 2026, so I saved that one with the project's normal tool. Both copies say \"This may include unauthorized use of AI tools\", and that is the only AI line. So:\n  - Stance stays \"restrict\".\n  - Disclosure becomes \"not stated\", as you chose, because the 2024 code's line about acknowledging AI is gone from the current policy.\n\n**Numbers that will move** (I'll recount them from the data after recoding):\n- **No public syllabus:** 24 of 30 national schools (up from 23) and 5 of 6 in Ohio (up from 4).\n- **Disclosure required:** 10 of 30 national (down from 12) and 2 of 6 in Ohio (down from 3).\n- **University stances:** UDC moves to \"none found\" and Defiance moves out of \"restrict\".\n\nContext is at 300k, and the work now switches from deciding to applying, so this is the moment your rule calls for. STATE.md has the step-by-step plan, the reading is recorded, and everything is committed and pushed. Paste this:\n\n```\n/compact Phase 5 judgment calls: Marcus decided all 11 (progress/decisions.md); NONE applied yet. Next: follow STATE.md \"NOW: apply Marcus's judgment-call decisions\" exactly: recode Penn, Case Western, UDC, Defiance, Tidewater, Maine Fort Kent, re-source Berry; codebook v3 with a \"mixed\" tone value and the written rules; re-read every tone value; C2 stance_tone_reason; disclosure split on the site; tests with mutation runs; build exit 0; push; report every number that moved. Take an \"after /compact\" usage reading first. Deadline 2 PM EST Thu Nov 12.\n```\n\nSources: [TCC college policies page](https://www.tcc.edu/about-tcc/statements-policies/college-policies/), [Policy 2214, current revision](https://www.tcc.edu/wp-content/uploads/2026/07/12.4_Policy_2214_Student_Code_of_Conduct.pdf), [Policy 2214, July 2025](https://www.tcc.edu/wp-content/uploads/2025/07/Policy-2214-Student-Code-of-Conduct-Policy-New.pdf)",
+   "toolCalls": 61,
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:21:20.624000Z",
+   "actor": "Marcus",
+   "kind": "command",
+   "text": "/compact Phase 5 judgment calls: Marcus decided all 11 (progress/decisions.md); NONE applied yet. Next: follow STATE.md \"NOW: apply Marcus's judgment-call decisions\" exactly: recode Penn, Case Western, UDC, Defiance, Tidewater, Maine Fort Kent, re-source Berry; codebook v3 with a \"mixed\" tone value and the written rules; re-read every tone value; C2 stance_tone_reason; disclosure split on the site; tests with mutation runs; build exit 0; push; report every number that moved. Take an \"after /compact\" usage reading first. Deadline 2 PM EST Thu Nov 12.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:23:05.379000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 47,
+   "text": "continue",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:27:23.661000Z",
+   "actor": "Marcus",
+   "kind": "answer",
+   "text": "Your questions have been answered: \"Tone for rules that name AI only as misconduct: I coded Westminster's rule list \"neutral\" but the same kind of list \"cautionary\" at Coppin State, Luzerne, Glendale, NYIT and ASU's CS handbook. The codebook defines neutral as procedural rules with little evaluative language. Which reading should all six (plus Tidewater's current policy) get?\"=\"Neutral for all (Recommended)\". You can now continue with these answers in mind.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:34:20Z",
+   "actor": "Claude",
+   "kind": "milestone",
+   "phase": "5",
+   "text": "Codebook v3 applied (Marcus's 12 judgment calls): 23 values changed at 16 schools (Berry re-sourced only), all 37 tone values re-read. check_study 36/36 PASS; study 42/42, web 49/49, pipeline 19/19, with mutation runs for the new C2 rule and the disclosure split; build exit 0.",
+   "evidence": "data/coded/codebook-v3-recode.json"
+  },
+  {
+   "time": "2026-11-12T01:34:20Z",
+   "actor": "Marcus",
+   "kind": "decision",
+   "text": "Tone of rules that name AI only as misconduct (Westminster coded neutral; Coppin State, Luzerne, Glendale, NYIT, ASU CS handbook coded cautionary)",
+   "options": "neutral for all · cautionary for all",
+   "notes": "Chose \"Neutral for all\": matches the codebook's definition of neutral. Coppin State, Luzerne, Glendale, NYIT, ASU dept and Tidewater's current policy become neutral; pages with real warnings (Iowa State, Rice, Eastern Kentucky) stay cautionary. Codebook v3 rule (f).",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:34:32.262000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 47,
+   "text": "Updating STATE.md so it no longer says the decisions are unapplied, then committing.",
+   "toolCalls": 88,
    "phase": "5"
   }
  ]

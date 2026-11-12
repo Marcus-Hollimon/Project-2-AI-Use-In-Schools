@@ -34,7 +34,7 @@
    "tests": [{"suite": "web", "test": "each \"What the data shows\" number equals a count taken directly from values.json and sample.csv"}],
    "files": ["data/coded/values.json", "data/frame/sample.csv"]},
   {"id": "research-finding-disclosure", "tab": "research", "kind": "computed",
-   "claim": "How many national and Ohio schools have official text requiring students to disclose AI use (disclosure \"required\").",
+   "claim": "How many national and Ohio schools have official text requiring students to disclose AI use (disclosure \"required\"), and of those how many state it outright and how many were read from a plagiarism or cheating rule (codebook v3 rule d: the value carries a cue_reason).",
    "tests": [{"suite": "web", "test": "each \"What the data shows\" number equals a count taken directly from values.json and sample.csv"}],
    "files": ["data/coded/values.json", "data/frame/sample.csv"]},
   {"id": "research-finding-syllabus", "tab": "research", "kind": "computed",

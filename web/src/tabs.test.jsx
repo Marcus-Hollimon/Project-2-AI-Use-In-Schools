@@ -49,6 +49,12 @@ describe('Research findings', () => {
     const pairs = (id) => text(id).match(/\d+ of \d+/g).map((p) => p.split(' of ').map(Number))
     expect(pairs('research-finding-dept')).toEqual([[count(false, 'dept_stance', 'none found'), N], [count(true, 'dept_stance', 'none found'), O]])
     expect(pairs('research-finding-disclosure')).toEqual([[count(false, 'disclosure', 'required'), N], [count(true, 'disclosure', 'required'), O]])
+    // The split (codebook v3 rule d): outright = "required" with no cue_reason; read from a rule = with one.
+    const required = (ohio, fromRule) =>
+      values.schools.filter((s) => inOhio(s) === ohio && s.values.disclosure.value === 'required' && ('cue_reason' in s.values.disclosure) === fromRule).length
+    const splits = [...text('research-finding-disclosure').matchAll(/(\d+) stated outright, (\d+) read from a plagiarism or cheating rule/g)]
+      .map((m) => [Number(m[1]), Number(m[2])])
+    expect(splits).toEqual([[required(false, false), required(false, true)], [required(true, false), required(true, true)]])
     expect(pairs('research-finding-syllabus')).toEqual([
       [count(false, 'se_courses', 'no public syllabus found'), N],
       [count(true, 'se_courses', 'no public syllabus found'), O],

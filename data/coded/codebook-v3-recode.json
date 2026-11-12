@@ -1,0 +1,584 @@
+{
+ "note": "Values recoded under codebook v3 (Marcus's judgment calls of 2026-11-11, progress/decisions.md). 'changed_values' lists every value whose entry changed (value, source or reason fields); 'tone_reread' lists every tone value that was not 'none found' under v2, re-read from its archived page, with the basis for the v3 value. Rules are in study/codebook.md, 'Changes in version 3'.",
+ "recoded_at": "2026-11-11T20:30:01-05:00",
+ "changed_values": [
+  {
+   "unitid": "162283",
+   "name": "Coppin State University",
+   "variable": "univ_tone",
+   "v2": "cautionary",
+   "v3": "neutral",
+   "v2_source": "data/sources/162283-coppin-state/2026-11-11-student-handbook-2025.pdf",
+   "v3_source": "data/sources/162283-coppin-state/2026-11-11-student-handbook-2025.pdf",
+   "reason": "tone re-read under codebook v3 (rule f)"
+  },
+  {
+   "unitid": "230597",
+   "name": "Snow College",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "mixed",
+   "v2_source": "data/sources/230597-snow/2026-11-11-ai-classroom-policy-412.pdf",
+   "v3_source": "data/sources/230597-snow/2026-11-11-ai-classroom-policy-412.pdf",
+   "reason": "tone re-read under codebook v3 ('mixed' added)"
+  },
+  {
+   "unitid": "234076",
+   "name": "University of Virginia-Main Campus",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "mixed",
+   "v2_source": "data/sources/234076-virginia/2026-11-11-guidance.html",
+   "v3_source": "data/sources/234076-virginia/2026-11-11-guidance.html",
+   "reason": "tone re-read under codebook v3 ('mixed' added)"
+  },
+  {
+   "unitid": "213659",
+   "name": "Luzerne County Community College",
+   "variable": "univ_tone",
+   "v2": "cautionary",
+   "v3": "neutral",
+   "v2_source": "data/sources/213659-luzerne/2026-11-11-academic-honesty-policy.docx",
+   "v3_source": "data/sources/213659-luzerne/2026-11-11-academic-honesty-policy.docx",
+   "reason": "tone re-read under codebook v3 (rule f)"
+  },
+  {
+   "unitid": "202514",
+   "name": "Defiance College",
+   "variable": "univ_stance",
+   "v2": "restrict",
+   "v3": "none found",
+   "v2_source": "data/sources/202514-defiance/2026-11-11-library-ai-integrity.html",
+   "v3_source": null,
+   "reason": "codebook v3 rule (c)"
+  },
+  {
+   "unitid": "202514",
+   "name": "Defiance College",
+   "variable": "univ_tone",
+   "v2": "cautionary",
+   "v3": "none found",
+   "v2_source": "data/sources/202514-defiance/2026-11-11-library-ai-integrity.html",
+   "v3_source": null,
+   "reason": "codebook v3 rule (c)"
+  },
+  {
+   "unitid": "202514",
+   "name": "Defiance College",
+   "variable": "disclosure",
+   "v2": "required",
+   "v3": "not stated",
+   "v2_source": "data/sources/202514-defiance/2026-11-11-library-ai-integrity.html",
+   "v3_source": null,
+   "reason": "codebook v3 rule (c)"
+  },
+  {
+   "unitid": "194091",
+   "name": "New York Institute of Technology",
+   "variable": "univ_tone",
+   "v2": "cautionary",
+   "v3": "neutral",
+   "v2_source": "data/sources/194091-nyit/2026-11-11-academic-integrity-policy.html",
+   "v3_source": "data/sources/194091-nyit/2026-11-11-academic-integrity-policy.html",
+   "reason": "tone re-read under codebook v3 (rule f)"
+  },
+  {
+   "unitid": "104708",
+   "name": "Glendale Community College",
+   "variable": "univ_tone",
+   "v2": "cautionary",
+   "v3": "neutral",
+   "v2_source": "data/sources/104708-glendale-cc/2026-11-11-district-ar-2-3.rendered.txt",
+   "v3_source": "data/sources/104708-glendale-cc/2026-11-11-district-ar-2-3.rendered.txt",
+   "reason": "tone re-read under codebook v3 (rule f)"
+  },
+  {
+   "unitid": "104151",
+   "name": "Arizona State University Campus Immersion",
+   "variable": "dept_tone",
+   "v2": "cautionary",
+   "v3": "neutral",
+   "v2_source": "data/sources/104151-arizona-state/2026-11-11-ms-cs-handbook-2026-27.pdf",
+   "v3_source": "data/sources/104151-arizona-state/2026-11-11-ms-cs-handbook-2026-27.pdf",
+   "reason": "tone re-read under codebook v3 (rule f)"
+  },
+  {
+   "unitid": "441900",
+   "name": "Nevada State University",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "mixed",
+   "v2_source": "data/sources/441900-nevada-state/2026-11-11-ai-hub.html",
+   "v3_source": "data/sources/441900-nevada-state/2026-11-11-ai-hub.html",
+   "reason": "tone re-read under codebook v3 ('mixed' added)"
+  },
+  {
+   "unitid": "131399",
+   "name": "University of the District of Columbia",
+   "variable": "univ_stance",
+   "v2": "instructor decides",
+   "v3": "none found",
+   "v2_source": "data/sources/131399-udc/2026-11-11-library-ai-guide.html",
+   "v3_source": null,
+   "reason": "codebook v3 rule (c): library guide counts only as official text (Marcus, 'Only official text')"
+  },
+  {
+   "unitid": "131399",
+   "name": "University of the District of Columbia",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "positive",
+   "v2_source": "data/sources/131399-udc/2026-11-11-ai-initiative.html",
+   "v3_source": "data/sources/131399-udc/2026-11-11-ai-initiative.html",
+   "reason": "unchanged value; stance_tone_reason added (codebook v3 rule e; Marcus, 'Allow it with a reason')"
+  },
+  {
+   "unitid": "131399",
+   "name": "University of the District of Columbia",
+   "variable": "collaboration",
+   "v2": "explicit",
+   "v3": "not discussed",
+   "v2_source": "data/sources/131399-udc/2026-11-11-library-ai-uses.html",
+   "v3_source": null,
+   "reason": "codebook v3 rule (c)"
+  },
+  {
+   "unitid": "131399",
+   "name": "University of the District of Columbia",
+   "variable": "disclosure",
+   "v2": "required",
+   "v3": "not stated",
+   "v2_source": "data/sources/131399-udc/2026-11-11-library-ai-citing.html",
+   "v3_source": null,
+   "reason": "codebook v3 rule (c)"
+  },
+  {
+   "unitid": "215062",
+   "name": "University of Pennsylvania",
+   "variable": "se_courses",
+   "v2": "AI built into the course",
+   "v3": "no public syllabus found",
+   "v2_source": "data/sources/215062-penn/2026-11-11-catalog-cis-courses.html",
+   "v3_source": null,
+   "reason": "codebook v3 rule (a): code the course named Software Engineering (CIS 3500), never another course because it has text (Marcus, 'Follow the rule')"
+  },
+  {
+   "unitid": "216339",
+   "name": "Temple University",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "mixed",
+   "v2_source": "data/sources/216339-temple/2026-11-11-student-success-resources.html",
+   "v3_source": "data/sources/216339-temple/2026-11-11-student-success-resources.html",
+   "reason": "tone re-read under codebook v3 ('mixed' added)"
+  },
+  {
+   "unitid": "136215",
+   "name": "Nova Southeastern University",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "mixed",
+   "v2_source": "data/sources/136215-nova-southeastern/2026-11-11-lec-genai.html",
+   "v3_source": "data/sources/136215-nova-southeastern/2026-11-11-lec-genai.html",
+   "reason": "tone re-read under codebook v3 ('mixed' added)"
+  },
+  {
+   "unitid": "161235",
+   "name": "University of Maine at Fort Kent",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "mixed",
+   "v2_source": "data/sources/161235-maine-fort-kent/2026-11-11-libguide-ai-at-umfk.html",
+   "v3_source": "data/sources/161235-maine-fort-kent/2026-11-11-libguide-ai-at-umfk.html",
+   "reason": "tone re-read under codebook v3 ('mixed' added)"
+  },
+  {
+   "unitid": "161235",
+   "name": "University of Maine at Fort Kent",
+   "variable": "collaboration",
+   "v2": "in passing",
+   "v3": "not discussed",
+   "v2_source": "data/sources/161235-maine-fort-kent/2026-11-11-libguide-syllabus-help.html",
+   "v3_source": null,
+   "reason": "codebook v3 rule (c)"
+  },
+  {
+   "unitid": "139144",
+   "name": "Berry College",
+   "variable": "univ_tone",
+   "v2": "neutral",
+   "v3": "neutral",
+   "v2_source": "data/sources/139144-berry/2026-11-11-libguide-students-ai-use-policy.html",
+   "v3_source": "data/sources/139144-berry/2026-11-11-libguide-faculty-considerations.html",
+   "reason": "re-sourced to official text (rule c); value unchanged"
+  },
+  {
+   "unitid": "139144",
+   "name": "Berry College",
+   "variable": "collaboration",
+   "v2": "in passing",
+   "v3": "in passing",
+   "v2_source": "data/sources/139144-berry/2026-11-11-libguide-students-ai-use-policy.html",
+   "v3_source": "data/sources/139144-berry/2026-11-11-libguide-faculty-considerations.html",
+   "reason": "re-sourced to official text (rule c); value unchanged"
+  },
+  {
+   "unitid": "139144",
+   "name": "Berry College",
+   "variable": "disclosure",
+   "v2": "encouraged",
+   "v3": "encouraged",
+   "v2_source": "data/sources/139144-berry/2026-11-11-libguide-students-ai-use-policy.html",
+   "v3_source": "data/sources/139144-berry/2026-11-11-libguide-faculty-considerations.html",
+   "reason": "re-sourced to official text (rule c); value unchanged"
+  },
+  {
+   "unitid": "233772",
+   "name": "Tidewater Community College",
+   "variable": "univ_stance",
+   "v2": "restrict",
+   "v3": "restrict",
+   "v2_source": "data/sources/233772-tidewater/2026-11-11-code-student-rights-2024.pdf",
+   "v3_source": "data/sources/233772-tidewater/2026-11-11-policy-2214-student-code-of-conduct-2026.pdf",
+   "reason": "re-sourced to the current official policy (decision rule 1: most recent policy); value unchanged"
+  },
+  {
+   "unitid": "233772",
+   "name": "Tidewater Community College",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "neutral",
+   "v2_source": "data/sources/233772-tidewater/2026-11-11-libguide-student-use-of-ai.html",
+   "v3_source": "data/sources/233772-tidewater/2026-11-11-policy-2214-student-code-of-conduct-2026.pdf",
+   "reason": "codebook v3 rules (c) and (f): library guide no longer counts; a rule that names AI only as misconduct is neutral"
+  },
+  {
+   "unitid": "233772",
+   "name": "Tidewater Community College",
+   "variable": "collaboration",
+   "v2": "in passing",
+   "v3": "not discussed",
+   "v2_source": "data/sources/233772-tidewater/2026-11-11-libguide-student-use-of-ai.html",
+   "v3_source": null,
+   "reason": "codebook v3 rule (c)"
+  },
+  {
+   "unitid": "233772",
+   "name": "Tidewater Community College",
+   "variable": "disclosure",
+   "v2": "required",
+   "v3": "not stated",
+   "v2_source": "data/sources/233772-tidewater/2026-11-11-code-student-rights-2024.pdf",
+   "v3_source": null,
+   "reason": "Marcus, 'Not stated': the current policy drops the 2024 code's acknowledgement line"
+  },
+  {
+   "unitid": "201645",
+   "name": "Case Western Reserve University",
+   "variable": "se_courses",
+   "v2": "allowed with conditions",
+   "v3": "no public syllabus found",
+   "v2_source": "data/sources/201645-case-western/2026-11-11-syllabus-statement-results.pdf",
+   "v3_source": null,
+   "reason": "codebook v3 rule (a): code the course named Software Engineering (CSDS 393) (Marcus, 'Follow the rule')"
+  }
+ ],
+ "tone_reread": [
+  {
+   "unitid": "174066",
+   "name": "University of Minnesota-Twin Cities",
+   "variable": "univ_tone",
+   "v2": "cautionary",
+   "v3": "cautionary",
+   "basis": "Mostly procedure; its required statements are framed around dishonesty, copyright and data security, and it ends on a warning."
+  },
+  {
+   "unitid": "174066",
+   "name": "University of Minnesota-Twin Cities",
+   "variable": "dept_tone",
+   "v2": "positive",
+   "v3": "positive",
+   "basis": "News story on new AI courses and an AI minor; opportunity throughout."
+  },
+  {
+   "unitid": "162928",
+   "name": "Johns Hopkins University",
+   "variable": "univ_tone",
+   "v2": "cautionary",
+   "v3": "cautionary",
+   "basis": "FERPA, HIPAA, copyright and privacy risks make up most of the page."
+  },
+  {
+   "unitid": "152600",
+   "name": "Valparaiso University",
+   "variable": "univ_tone",
+   "v2": "cautionary",
+   "v3": "cautionary",
+   "basis": "The suggested statement warns against 'mindless' use and says AI 'is known to make a lot of mistakes'."
+  },
+  {
+   "unitid": "162283",
+   "name": "Coppin State University",
+   "variable": "univ_tone",
+   "v2": "cautionary",
+   "v3": "neutral",
+   "basis": "AI appears in university rules only as one item in a list of misconduct, with no evaluative language (codebook v3 rule f). The upbeat AI certificate page is not a rule."
+  },
+  {
+   "unitid": "230597",
+   "name": "Snow College",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "mixed",
+   "basis": "The purpose section gives AI's 'transformative potential' and a full list of risks (inaccuracy, bias, copyright, privacy) equal weight, and long sections cover prohibited use and cautions."
+  },
+  {
+   "unitid": "234076",
+   "name": "University of Virginia-Main Campus",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "mixed",
+   "basis": "The faculty guidance encourages appropriate use as an aid to learning, and gives as much space to cheating, privacy, intellectual property and the limits of AI grading and detection."
+  },
+  {
+   "unitid": "166683",
+   "name": "Massachusetts Institute of Technology",
+   "variable": "univ_tone",
+   "v2": "neutral",
+   "v3": "neutral",
+   "basis": "Procedural memo about class AI policies; no evaluative language."
+  },
+  {
+   "unitid": "213659",
+   "name": "Luzerne County Community College",
+   "variable": "univ_tone",
+   "v2": "cautionary",
+   "v3": "neutral",
+   "basis": "AI appears only as items in the list of violations, with no evaluative language (codebook v3 rule f)."
+  },
+  {
+   "unitid": "201885",
+   "name": "University of Cincinnati",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "positive",
+   "basis": "'AI is a powerful partner'; the page says it is 'not intended as a list of restrictions'; its data cautions are practical."
+  },
+  {
+   "unitid": "204796",
+   "name": "The Ohio State University",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "positive",
+   "basis": "The AI Fluency initiative; opportunity throughout."
+  },
+  {
+   "unitid": "202514",
+   "name": "Defiance College",
+   "variable": "univ_tone",
+   "v2": "cautionary",
+   "v3": "none found",
+   "basis": "The only AI text found is the Pilgrim Library's AI guide, in the library's own words, so under codebook v3 rule (c) it does not count. The catalog's Academic Integrity Policy and the Student Handbook do not mention AI."
+  },
+  {
+   "unitid": "202222",
+   "name": "Columbus State Community College",
+   "variable": "univ_tone",
+   "v2": "neutral",
+   "v3": "neutral",
+   "basis": "Standard syllabus statement: a default rule with one balanced sentence."
+  },
+  {
+   "unitid": "153603",
+   "name": "Iowa State University",
+   "variable": "univ_tone",
+   "v2": "cautionary",
+   "v3": "cautionary",
+   "basis": "The conduct office warns that AI use 'regularly results' in misconduct findings: a warning, not only a list item."
+  },
+  {
+   "unitid": "243744",
+   "name": "Stanford University",
+   "variable": "univ_tone",
+   "v2": "neutral",
+   "v3": "neutral",
+   "basis": "A default course policy, mostly procedural, with one balanced framing sentence."
+  },
+  {
+   "unitid": "194091",
+   "name": "New York Institute of Technology",
+   "variable": "univ_tone",
+   "v2": "cautionary",
+   "v3": "neutral",
+   "basis": "The policy's AI text is a list of unauthorized uses followed by sanctions, with no evaluative language (codebook v3 rule f). The November 2025 student guide is more upbeat, but the policy is the page coded."
+  },
+  {
+   "unitid": "237969",
+   "name": "West Virginia Wesleyan College",
+   "variable": "univ_tone",
+   "v2": "neutral",
+   "v3": "neutral",
+   "basis": "A long procedural policy (definitions, data security, integrity) with brief balanced framing."
+  },
+  {
+   "unitid": "104708",
+   "name": "Glendale Community College",
+   "variable": "univ_tone",
+   "v2": "cautionary",
+   "v3": "neutral",
+   "basis": "AI appears only in the misconduct definitions, followed by the regulation's standard consequences, with no evaluative language (codebook v3 rule f)."
+  },
+  {
+   "unitid": "104151",
+   "name": "Arizona State University Campus Immersion",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "positive",
+   "basis": "'Principled innovation', tools offered to faculty, 'the positive potential of generative AI'."
+  },
+  {
+   "unitid": "104151",
+   "name": "Arizona State University Campus Immersion",
+   "variable": "dept_tone",
+   "v2": "cautionary",
+   "v3": "neutral",
+   "basis": "One handbook rule that calls unallowed AI use academic dishonesty, followed by its sanction, with no evaluative language (codebook v3 rule f)."
+  },
+  {
+   "unitid": "227757",
+   "name": "Rice University",
+   "variable": "univ_tone",
+   "v2": "cautionary",
+   "v3": "cautionary",
+   "basis": "Honor Council page on accusations and detectors; it tells professors to 'highlight the downsides of using AI'."
+  },
+  {
+   "unitid": "227757",
+   "name": "Rice University",
+   "variable": "dept_tone",
+   "v2": "positive",
+   "v3": "positive",
+   "basis": "News story on two new AI courses; opportunity throughout."
+  },
+  {
+   "unitid": "156620",
+   "name": "Eastern Kentucky University",
+   "variable": "univ_tone",
+   "v2": "cautionary",
+   "v3": "cautionary",
+   "basis": "One sentence on efficiency, then data privacy and security risks fill the page."
+  },
+  {
+   "unitid": "441900",
+   "name": "Nevada State University",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "mixed",
+   "basis": "Every classroom use in the page's table comes with pitfalls ('catastrophic outcomes', 'bland and trite'), next to calling AI 'a very effective tool' and 'a great way' to start."
+  },
+  {
+   "unitid": "441900",
+   "name": "Nevada State University",
+   "variable": "dept_tone",
+   "v2": "neutral",
+   "v3": "neutral",
+   "basis": "One procedural line pointing students to each syllabus."
+  },
+  {
+   "unitid": "131399",
+   "name": "University of the District of Columbia",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "positive",
+   "basis": "The president's AI Initiative; opportunity throughout, with human oversight as a principle."
+  },
+  {
+   "unitid": "178402",
+   "name": "University of Missouri-Kansas City",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "positive",
+   "basis": "The Provost encourages teaching ethical use 'rather than banning'; the detector warning is about detectors, not AI."
+  },
+  {
+   "unitid": "215062",
+   "name": "University of Pennsylvania",
+   "variable": "univ_tone",
+   "v2": "neutral",
+   "v3": "neutral",
+   "basis": "Mostly instructions for writing course policies; its few evaluative lines are balanced but brief."
+  },
+  {
+   "unitid": "217819",
+   "name": "College of Charleston",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "positive",
+   "basis": "'Transformative potential', tutor and creative partner; limits are named but opportunity leads."
+  },
+  {
+   "unitid": "216807",
+   "name": "Westminster College",
+   "variable": "univ_tone",
+   "v2": "neutral",
+   "v3": "neutral",
+   "basis": "AI appears only as an item in procedural lists of violations (codebook v3 rule f)."
+  },
+  {
+   "unitid": "193946",
+   "name": "Niagara County Community College",
+   "variable": "univ_tone",
+   "v2": "neutral",
+   "v3": "neutral",
+   "basis": "Procedural rules on integrity, data privacy and tool approval."
+  },
+  {
+   "unitid": "216339",
+   "name": "Temple University",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "mixed",
+   "basis": "The policy's stated goal weighs exploring AI against protecting chances to learn; the page says the value of a tool 'depends on your purpose'."
+  },
+  {
+   "unitid": "136215",
+   "name": "Nova Southeastern University",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "mixed",
+   "basis": "The page calls generative AI 'transforming' and a faculty partner and lists research advantages, and gives a long section to cheating, detector false positives and output pitfalls."
+  },
+  {
+   "unitid": "161235",
+   "name": "University of Maine at Fort Kent",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "mixed",
+   "basis": "The official guidance aims 'to promote innovation while ensuring integrity': AI tools are 'wonderful' and 'transformative' but 'should never replace' critical thinking, with privacy cautions."
+  },
+  {
+   "unitid": "139144",
+   "name": "Berry College",
+   "variable": "univ_tone",
+   "v2": "neutral",
+   "v3": "neutral",
+   "basis": "Official syllabus statement; procedural (see the re-sourced value)."
+  },
+  {
+   "unitid": "233772",
+   "name": "Tidewater Community College",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "neutral",
+   "basis": "See the re-sourced value."
+  },
+  {
+   "unitid": "201645",
+   "name": "Case Western Reserve University",
+   "variable": "univ_tone",
+   "v2": "positive",
+   "v3": "positive",
+   "basis": "'Embraces AI in education to prepare students for the workforce'; the sample statements range from a ban to open use."
+  }
+ ]
+}

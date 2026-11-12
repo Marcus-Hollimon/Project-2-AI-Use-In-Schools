@@ -99,6 +99,9 @@ function ValueDetail({ school, variable }) {
         </p>
       ) : null}
       {v.note ? <p className="muted note-text">Coder’s note: {v.note}</p> : null}
+      {v.stance_tone_reason ? (
+        <p className="muted note-text">Why there is a tone but no stance: {v.stance_tone_reason}</p>
+      ) : null}
     </li>
   )
 }

@@ -51,3 +51,16 @@ were skipped. Computer science at Tidewater is the Computer Science A.S. (CSC co
 - https://catalog.tcc.edu/preview_course_nopop.php?catoid=23&coid=40522 (ITP 100 Software Design catalog description, 2026-27; no AI text in the result; not opened)
 - Other catalog and program pages; not opened
 - No CS department AI rule and no software engineering syllabus were found.
+
+## Policy 2214, Student Code of Conduct (2026-11-11 evening, after Marcus's decisions)
+- Rev 0 (21 July 2025): with Marcus's permission, downloaded through Claude's browser pane from the
+  address above and saved as 2026-11-11-policy-2214-student-code-of-conduct.pdf (fetch record kind
+  "raw bytes from Claude's browser pane"), text beside it. Section 4.25 Plagiarism: "This may include
+  unauthorized use of AI tools."
+- The college's official policies page (https://www.tcc.edu/about-tcc/statements-policies/college-policies/)
+  links only Rev 1 (26 January 2026), at
+  https://www.tcc.edu/wp-content/uploads/2026/07/12.4_Policy_2214_Student_Code_of_Conduct.pdf; curl got
+  HTTP 200; saved with save_page.py as 2026-11-11-policy-2214-student-code-of-conduct-2026.pdf, text beside
+  it. Its only AI text is the same 4.25 sentence. It has no line saying AI content needs acknowledgement.
+- Codebook v3: univ_stance (restrict) and univ_tone (neutral) now come from Rev 1; disclosure is
+  "not stated" and collaboration "not discussed" (the library guide's own words no longer count).

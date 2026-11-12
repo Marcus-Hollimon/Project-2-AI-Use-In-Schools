@@ -61,6 +61,7 @@ percentages as the app reports them, so a change of "1 point" means anywhere fro
 | 2026-11-11T19:42:15-05:00 | 5 | after /compact (site update done through a694ce8) | 1 | 33 | 91,243 | /compact by Marcus (manual, after the 5-hour reset at 7:40 PM; the last reading before it is the 16:59:53 row, and context grew after it during the site update) |
 | 2026-11-11T19:55:44-05:00 | 5 | Phase 5 deployed, acceptance boxes ticked (a /compact was offered; Marcus continued without one) | 11 | 35 | 196,895 | none |
 | 2026-11-11T20:20:41-05:00 | 5 | 11 judgment calls decided (not yet applied), just before /compact | 21 | 36 | 300,492 | none (next row is after /compact) |
+| 2026-11-11T20:23:29-05:00 | 5 | after /compact (judgment calls decided, none applied) | 24 | 36 | 88,463 | /compact by Marcus (manual; last reading before it is the 20:20:41 row) |
 
 ## Cost per phase
 | Phase | 5-hour points | Weekly points | Context growth (tokens) |

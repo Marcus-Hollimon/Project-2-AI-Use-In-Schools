@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-11-11T19:52:22-05:00",
- "codebookVersion": 2,
+ "generatedAt": "2026-11-11T20:35:01-05:00",
+ "codebookVersion": 3,
  "schools": [
   {
    "unitid": "174066",
@@ -497,7 +497,7 @@
      "check": "C1",
      "variable": "univ_tone",
      "ok": true,
-     "message": "value 'positive' allowed"
+     "message": "value 'mixed' allowed"
     },
     {
      "check": "C2",
@@ -725,7 +725,7 @@
      "check": "C2",
      "variable": null,
      "ok": true,
-     "message": "univ_stance='instructor decides' and univ_tone='positive' agree on none found"
+     "message": "univ_stance='instructor decides' and univ_tone='mixed' agree on none found"
     },
     {
      "check": "C2",
@@ -1924,7 +1924,7 @@
      "check": "C1",
      "variable": "univ_tone",
      "ok": true,
-     "message": "value 'cautionary' allowed"
+     "message": "value 'neutral' allowed"
     },
     {
      "check": "C2",
@@ -2032,7 +2032,7 @@
      "check": "C2",
      "variable": null,
      "ok": true,
-     "message": "univ_stance='permit with conditions' and univ_tone='cautionary' agree on none found"
+     "message": "univ_stance='permit with conditions' and univ_tone='neutral' agree on none found"
     },
     {
      "check": "C2",
@@ -2322,7 +2322,7 @@
      "check": "C1",
      "variable": "univ_tone",
      "ok": true,
-     "message": "value 'positive' allowed"
+     "message": "value 'mixed' allowed"
     },
     {
      "check": "C2",
@@ -2508,7 +2508,7 @@
      "check": "C2",
      "variable": null,
      "ok": true,
-     "message": "univ_stance='permit with conditions' and univ_tone='positive' agree on none found"
+     "message": "univ_stance='permit with conditions' and univ_tone='mixed' agree on none found"
     },
     {
      "check": "C2",
@@ -2635,7 +2635,7 @@
      "check": "C1",
      "variable": "univ_tone",
      "ok": true,
-     "message": "value 'cautionary' allowed"
+     "message": "value 'neutral' allowed"
     },
     {
      "check": "C2",
@@ -2743,7 +2743,7 @@
      "check": "C2",
      "variable": null,
      "ok": true,
-     "message": "univ_stance='restrict' and univ_tone='cautionary' agree on none found"
+     "message": "univ_stance='restrict' and univ_tone='neutral' agree on none found"
     },
     {
      "check": "C2",
@@ -3433,14 +3433,8 @@
    "name": "Defiance College",
    "pass": true,
    "checks": {
-    "S1": true,
-    "S2": true,
-    "S3": true,
-    "S4": true,
-    "S5": true,
     "C1": true,
     "C2": true,
-    "C3": true,
     "C4": true,
     "N1": true
    },
@@ -3473,55 +3467,19 @@
      "check": "C1",
      "variable": "univ_stance",
      "ok": true,
-     "message": "value 'restrict' allowed"
+     "message": "value 'none found' allowed"
     },
     {
      "check": "C2",
      "variable": "univ_stance",
      "ok": true,
-     "message": "quote, url and archive present"
+     "message": "absence backed by 3 reviewed pages"
     },
     {
-     "check": "C1",
+     "check": "N1",
      "variable": "univ_stance",
      "ok": true,
-     "message": "source_type 'guidance page' allowed"
-    },
-    {
-     "check": "S5",
-     "variable": "univ_stance",
-     "ok": true,
-     "message": "quote has 16 words"
-    },
-    {
-     "check": "S1",
-     "variable": "univ_stance",
-     "ok": true,
-     "message": "quote found in data/sources/202514-defiance/2026-11-11-library-ai-integrity.html"
-    },
-    {
-     "check": "S2",
-     "variable": "univ_stance",
-     "ok": true,
-     "message": "hash matches"
-    },
-    {
-     "check": "S3",
-     "variable": "univ_stance",
-     "ok": true,
-     "message": "HTTP status 200"
-    },
-    {
-     "check": "S4",
-     "variable": "univ_stance",
-     "ok": true,
-     "message": "library.defiance.edu is on defiance.edu"
-    },
-    {
-     "check": "C3",
-     "variable": "univ_stance",
-     "ok": true,
-     "message": "cue words present"
+     "message": "second searches logged"
     },
     {
      "check": "C1",
@@ -3545,49 +3503,19 @@
      "check": "C1",
      "variable": "univ_tone",
      "ok": true,
-     "message": "value 'cautionary' allowed"
+     "message": "value 'none found' allowed"
     },
     {
      "check": "C2",
      "variable": "univ_tone",
      "ok": true,
-     "message": "quote, url and archive present"
+     "message": "absence backed by 3 reviewed pages"
     },
     {
-     "check": "C1",
+     "check": "N1",
      "variable": "univ_tone",
      "ok": true,
-     "message": "source_type 'guidance page' allowed"
-    },
-    {
-     "check": "S5",
-     "variable": "univ_tone",
-     "ok": true,
-     "message": "quote has 9 words"
-    },
-    {
-     "check": "S1",
-     "variable": "univ_tone",
-     "ok": true,
-     "message": "quote found in data/sources/202514-defiance/2026-11-11-library-ai-integrity.html"
-    },
-    {
-     "check": "S2",
-     "variable": "univ_tone",
-     "ok": true,
-     "message": "hash matches"
-    },
-    {
-     "check": "S3",
-     "variable": "univ_tone",
-     "ok": true,
-     "message": "HTTP status 200"
-    },
-    {
-     "check": "S4",
-     "variable": "univ_tone",
-     "ok": true,
-     "message": "library.defiance.edu is on defiance.edu"
+     "message": "second searches logged"
     },
     {
      "check": "C1",
@@ -3623,55 +3551,13 @@
      "check": "C1",
      "variable": "disclosure",
      "ok": true,
-     "message": "value 'required' allowed"
+     "message": "value 'not stated' allowed"
     },
     {
      "check": "C2",
      "variable": "disclosure",
      "ok": true,
-     "message": "quote, url and archive present"
-    },
-    {
-     "check": "C1",
-     "variable": "disclosure",
-     "ok": true,
-     "message": "source_type 'guidance page' allowed"
-    },
-    {
-     "check": "S5",
-     "variable": "disclosure",
-     "ok": true,
-     "message": "quote has 24 words"
-    },
-    {
-     "check": "S1",
-     "variable": "disclosure",
-     "ok": true,
-     "message": "quote found in data/sources/202514-defiance/2026-11-11-library-ai-integrity.html"
-    },
-    {
-     "check": "S2",
-     "variable": "disclosure",
-     "ok": true,
-     "message": "hash matches"
-    },
-    {
-     "check": "S3",
-     "variable": "disclosure",
-     "ok": true,
-     "message": "HTTP status 200"
-    },
-    {
-     "check": "S4",
-     "variable": "disclosure",
-     "ok": true,
-     "message": "library.defiance.edu is on defiance.edu"
-    },
-    {
-     "check": "C3",
-     "variable": "disclosure",
-     "ok": true,
-     "message": "cue words absent; reason: 'it is necessary to cite' states an obligation; 'necessary' is not in the group-2 cue list but means the same as 'required'."
+     "message": "absence backed by 3 reviewed pages"
     },
     {
      "check": "C1",
@@ -3695,7 +3581,7 @@
      "check": "C2",
      "variable": null,
      "ok": true,
-     "message": "univ_stance='restrict' and univ_tone='cautionary' agree on none found"
+     "message": "univ_stance='none found' and univ_tone='none found' agree on none found"
     },
     {
      "check": "C2",
@@ -4496,7 +4382,7 @@
      "check": "C1",
      "variable": "dept_tone",
      "ok": true,
-     "message": "value 'cautionary' allowed"
+     "message": "value 'neutral' allowed"
     },
     {
      "check": "C2",
@@ -4676,7 +4562,7 @@
      "check": "C2",
      "variable": null,
      "ok": true,
-     "message": "dept_stance='restrict' and dept_tone='cautionary' agree on none found"
+     "message": "dept_stance='restrict' and dept_tone='neutral' agree on none found"
     }
    ]
   },
@@ -5116,7 +5002,7 @@
      "check": "C1",
      "variable": "univ_tone",
      "ok": true,
-     "message": "value 'positive' allowed"
+     "message": "value 'mixed' allowed"
     },
     {
      "check": "C2",
@@ -5308,7 +5194,7 @@
      "check": "C2",
      "variable": null,
      "ok": true,
-     "message": "univ_stance='restrict' and univ_tone='positive' agree on none found"
+     "message": "univ_stance='restrict' and univ_tone='mixed' agree on none found"
     },
     {
      "check": "C2",
@@ -6349,55 +6235,19 @@
      "check": "C1",
      "variable": "se_courses",
      "ok": true,
-     "message": "value 'AI built into the course' allowed"
+     "message": "value 'no public syllabus found' allowed"
     },
     {
      "check": "C2",
      "variable": "se_courses",
      "ok": true,
-     "message": "quote, url and archive present"
+     "message": "absence backed by 1 reviewed pages"
     },
     {
-     "check": "C1",
+     "check": "N1",
      "variable": "se_courses",
      "ok": true,
-     "message": "source_type 'syllabus' allowed"
-    },
-    {
-     "check": "S5",
-     "variable": "se_courses",
-     "ok": true,
-     "message": "quote has 26 words"
-    },
-    {
-     "check": "S1",
-     "variable": "se_courses",
-     "ok": true,
-     "message": "quote found in data/sources/215062-penn/2026-11-11-catalog-cis-courses.html"
-    },
-    {
-     "check": "S2",
-     "variable": "se_courses",
-     "ok": true,
-     "message": "hash matches"
-    },
-    {
-     "check": "S3",
-     "variable": "se_courses",
-     "ok": true,
-     "message": "HTTP status 200"
-    },
-    {
-     "check": "S4",
-     "variable": "se_courses",
-     "ok": true,
-     "message": "catalog.upenn.edu is on upenn.edu"
-    },
-    {
-     "check": "C3",
-     "variable": "se_courses",
-     "ok": true,
-     "message": "cue words present"
+     "message": "second searches logged"
     },
     {
      "check": "C2",
@@ -6530,7 +6380,7 @@
      "check": "C1",
      "variable": "univ_tone",
      "ok": true,
-     "message": "value 'positive' allowed"
+     "message": "value 'mixed' allowed"
     },
     {
      "check": "C2",
@@ -6638,7 +6488,7 @@
      "check": "C2",
      "variable": null,
      "ok": true,
-     "message": "univ_stance='restrict' and univ_tone='positive' agree on none found"
+     "message": "univ_stance='restrict' and univ_tone='mixed' agree on none found"
     },
     {
      "check": "C2",
@@ -6765,7 +6615,7 @@
      "check": "C1",
      "variable": "univ_tone",
      "ok": true,
-     "message": "value 'cautionary' allowed"
+     "message": "value 'neutral' allowed"
     },
     {
      "check": "C2",
@@ -6957,7 +6807,7 @@
      "check": "C2",
      "variable": null,
      "ok": true,
-     "message": "univ_stance='restrict' and univ_tone='cautionary' agree on none found"
+     "message": "univ_stance='restrict' and univ_tone='neutral' agree on none found"
     },
     {
      "check": "C2",
@@ -7722,7 +7572,7 @@
      "check": "C1",
      "variable": "univ_tone",
      "ok": true,
-     "message": "value 'positive' allowed"
+     "message": "value 'mixed' allowed"
     },
     {
      "check": "C2",
@@ -7740,7 +7590,7 @@
      "check": "S5",
      "variable": "univ_tone",
      "ok": true,
-     "message": "quote has 17 words"
+     "message": "quote has 26 words"
     },
     {
      "check": "S1",
@@ -7788,55 +7638,13 @@
      "check": "C1",
      "variable": "collaboration",
      "ok": true,
-     "message": "value 'in passing' allowed"
+     "message": "value 'not discussed' allowed"
     },
     {
      "check": "C2",
      "variable": "collaboration",
      "ok": true,
-     "message": "quote, url and archive present"
-    },
-    {
-     "check": "C1",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "source_type 'guidance page' allowed"
-    },
-    {
-     "check": "S5",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "quote has 33 words"
-    },
-    {
-     "check": "S1",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "quote found in data/sources/161235-maine-fort-kent/2026-11-11-libguide-syllabus-help.html"
-    },
-    {
-     "check": "S2",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "hash matches"
-    },
-    {
-     "check": "S3",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "HTTP status 200"
-    },
-    {
-     "check": "S4",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "umfk-umm.libguides.com is OFF umfk.maine.edu; reason: Syllabus Help tab of the 'AI at UMFK' library guide on the UMFK and UMM library guide site."
-    },
-    {
-     "check": "C3",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "cue words present"
+     "message": "absence backed by 2 reviewed pages"
     },
     {
      "check": "C1",
@@ -7914,7 +7722,7 @@
      "check": "C2",
      "variable": null,
      "ok": true,
-     "message": "univ_stance='instructor decides' and univ_tone='positive' agree on none found"
+     "message": "univ_stance='instructor decides' and univ_tone='mixed' agree on none found"
     },
     {
      "check": "C2",
@@ -8396,7 +8204,7 @@
      "check": "C1",
      "variable": "univ_tone",
      "ok": true,
-     "message": "value 'positive' allowed"
+     "message": "value 'mixed' allowed"
     },
     {
      "check": "C2",
@@ -8414,7 +8222,7 @@
      "check": "S5",
      "variable": "univ_tone",
      "ok": true,
-     "message": "quote has 18 words"
+     "message": "quote has 19 words"
     },
     {
      "check": "S1",
@@ -8618,7 +8426,7 @@
      "check": "C2",
      "variable": null,
      "ok": true,
-     "message": "univ_stance='instructor decides' and univ_tone='positive' agree on none found"
+     "message": "univ_stance='instructor decides' and univ_tone='mixed' agree on none found"
     },
     {
      "check": "C2",
@@ -9046,7 +8854,7 @@
      "check": "S1",
      "variable": "univ_tone",
      "ok": true,
-     "message": "quote found in data/sources/139144-berry/2026-11-11-libguide-students-ai-use-policy.html"
+     "message": "quote found in data/sources/139144-berry/2026-11-11-libguide-faculty-considerations.html"
     },
     {
      "check": "S2",
@@ -9106,13 +8914,13 @@
      "check": "S5",
      "variable": "collaboration",
      "ok": true,
-     "message": "quote has 21 words"
+     "message": "quote has 22 words"
     },
     {
      "check": "S1",
      "variable": "collaboration",
      "ok": true,
-     "message": "quote found in data/sources/139144-berry/2026-11-11-libguide-students-ai-use-policy.html"
+     "message": "quote found in data/sources/139144-berry/2026-11-11-libguide-faculty-considerations.html"
     },
     {
      "check": "S2",
@@ -9160,13 +8968,13 @@
      "check": "S5",
      "variable": "disclosure",
      "ok": true,
-     "message": "quote has 27 words"
+     "message": "quote has 16 words"
     },
     {
      "check": "S1",
      "variable": "disclosure",
      "ok": true,
-     "message": "quote found in data/sources/139144-berry/2026-11-11-libguide-students-ai-use-policy.html"
+     "message": "quote found in data/sources/139144-berry/2026-11-11-libguide-faculty-considerations.html"
     },
     {
      "check": "S2",
@@ -9190,7 +8998,7 @@
      "check": "C3",
      "variable": "disclosure",
      "ok": true,
-     "message": "cue words present"
+     "message": "cue words absent; reason: Example syllabus language: 'must' binds students only if an instructor adopts the example, so it is 'encouraged' (codebook v2 rule 2)."
     },
     {
      "check": "C1",
@@ -9341,7 +9149,7 @@
      "check": "C1",
      "variable": "univ_tone",
      "ok": true,
-     "message": "value 'cautionary' allowed"
+     "message": "value 'neutral' allowed"
     },
     {
      "check": "C2",
@@ -9491,7 +9299,7 @@
      "check": "C2",
      "variable": null,
      "ok": true,
-     "message": "univ_stance='restrict' and univ_tone='cautionary' agree on none found"
+     "message": "univ_stance='restrict' and univ_tone='neutral' agree on none found"
     },
     {
      "check": "C2",
@@ -9546,55 +9354,19 @@
      "check": "C1",
      "variable": "univ_stance",
      "ok": true,
-     "message": "value 'instructor decides' allowed"
+     "message": "value 'none found' allowed"
     },
     {
      "check": "C2",
      "variable": "univ_stance",
      "ok": true,
-     "message": "quote, url and archive present"
+     "message": "absence backed by 6 reviewed pages"
     },
     {
-     "check": "C1",
+     "check": "N1",
      "variable": "univ_stance",
      "ok": true,
-     "message": "source_type 'guidance page' allowed"
-    },
-    {
-     "check": "S5",
-     "variable": "univ_stance",
-     "ok": true,
-     "message": "quote has 15 words"
-    },
-    {
-     "check": "S1",
-     "variable": "univ_stance",
-     "ok": true,
-     "message": "quote found in data/sources/131399-udc/2026-11-11-library-ai-guide.html"
-    },
-    {
-     "check": "S2",
-     "variable": "univ_stance",
-     "ok": true,
-     "message": "hash matches"
-    },
-    {
-     "check": "S3",
-     "variable": "univ_stance",
-     "ok": true,
-     "message": "HTTP status 200"
-    },
-    {
-     "check": "S4",
-     "variable": "univ_stance",
-     "ok": true,
-     "message": "udc.libguides.com is OFF udc.edu; reason: The UDC Learning Resources Division (the university library) hosts its official AI Help Guide on Springshare LibGuides at udc.libguides.com, linked from the library site; it is the university's own text."
-    },
-    {
-     "check": "C3",
-     "variable": "univ_stance",
-     "ok": true,
-     "message": "cue words present"
+     "message": "second searches logged"
     },
     {
      "check": "C1",
@@ -9684,109 +9456,25 @@
      "check": "C1",
      "variable": "collaboration",
      "ok": true,
-     "message": "value 'explicit' allowed"
+     "message": "value 'not discussed' allowed"
     },
     {
      "check": "C2",
      "variable": "collaboration",
      "ok": true,
-     "message": "quote, url and archive present"
-    },
-    {
-     "check": "C1",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "source_type 'guidance page' allowed"
-    },
-    {
-     "check": "S5",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "quote has 14 words"
-    },
-    {
-     "check": "S1",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "quote found in data/sources/131399-udc/2026-11-11-library-ai-uses.html"
-    },
-    {
-     "check": "S2",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "hash matches"
-    },
-    {
-     "check": "S3",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "HTTP status 200"
-    },
-    {
-     "check": "S4",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "udc.libguides.com is OFF udc.edu; reason: The UDC Learning Resources Division (the university library) hosts its official AI Help Guide on Springshare LibGuides at udc.libguides.com, linked from the library site; it is the university's own text."
-    },
-    {
-     "check": "C3",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "cue words absent; reason: The library guide recommends AI as a way to learn (study tools, practice quizzes) within a developed list of uses (brainstorm, study, revise and proofread, research, practice interviews), so it is 'explicit' although this sentence has no cue word."
+     "message": "absence backed by 6 reviewed pages"
     },
     {
      "check": "C1",
      "variable": "disclosure",
      "ok": true,
-     "message": "value 'required' allowed"
+     "message": "value 'not stated' allowed"
     },
     {
      "check": "C2",
      "variable": "disclosure",
      "ok": true,
-     "message": "quote, url and archive present"
-    },
-    {
-     "check": "C1",
-     "variable": "disclosure",
-     "ok": true,
-     "message": "source_type 'guidance page' allowed"
-    },
-    {
-     "check": "S5",
-     "variable": "disclosure",
-     "ok": true,
-     "message": "quote has 12 words"
-    },
-    {
-     "check": "S1",
-     "variable": "disclosure",
-     "ok": true,
-     "message": "quote found in data/sources/131399-udc/2026-11-11-library-ai-citing.html"
-    },
-    {
-     "check": "S2",
-     "variable": "disclosure",
-     "ok": true,
-     "message": "hash matches"
-    },
-    {
-     "check": "S3",
-     "variable": "disclosure",
-     "ok": true,
-     "message": "HTTP status 200"
-    },
-    {
-     "check": "S4",
-     "variable": "disclosure",
-     "ok": true,
-     "message": "udc.libguides.com is OFF udc.edu; reason: The UDC Learning Resources Division (the university library) hosts its official AI Help Guide on Springshare LibGuides at udc.libguides.com, linked from the library site; it is the university's own text."
-    },
-    {
-     "check": "C3",
-     "variable": "disclosure",
-     "ok": true,
-     "message": "cue words absent; reason: The guide defines unacknowledged AI content as plagiarism, so acknowledgement is required rather than merely recommended; the requirement follows from the definition rather than a cue word such as 'must' (same reading as Defiance's library guide and Eastern Kentucky's 4.1.3ACR)."
+     "message": "absence backed by 6 reviewed pages"
     },
     {
      "check": "C1",
@@ -9846,7 +9534,7 @@
      "check": "C2",
      "variable": null,
      "ok": true,
-     "message": "univ_stance='instructor decides' and univ_tone='positive' agree on none found"
+     "message": "univ_stance='none found' and univ_tone='positive' differ; stance_tone_reason: The president's AI Initiative talks about AI at length and positively but sets no rule for coursework, so the university has a tone without a stance (codebook v3 rule e)."
     },
     {
      "check": "C2",
@@ -10196,13 +9884,13 @@
      "check": "S5",
      "variable": "univ_stance",
      "ok": true,
-     "message": "quote has 21 words"
+     "message": "quote has 8 words"
     },
     {
      "check": "S1",
      "variable": "univ_stance",
      "ok": true,
-     "message": "quote found in data/sources/233772-tidewater/2026-11-11-code-student-rights-2024.pdf"
+     "message": "quote found in data/sources/233772-tidewater/2026-11-11-policy-2214-student-code-of-conduct-2026.pdf"
     },
     {
      "check": "S2",
@@ -10250,7 +9938,7 @@
      "check": "C1",
      "variable": "univ_tone",
      "ok": true,
-     "message": "value 'positive' allowed"
+     "message": "value 'neutral' allowed"
     },
     {
      "check": "C2",
@@ -10261,164 +9949,80 @@
     {
      "check": "C1",
      "variable": "univ_tone",
-     "ok": true,
-     "message": "source_type 'guidance page' allowed"
-    },
-    {
-     "check": "S5",
-     "variable": "univ_tone",
-     "ok": true,
-     "message": "quote has 21 words"
-    },
-    {
-     "check": "S1",
-     "variable": "univ_tone",
-     "ok": true,
-     "message": "quote found in data/sources/233772-tidewater/2026-11-11-libguide-student-use-of-ai.html"
-    },
-    {
-     "check": "S2",
-     "variable": "univ_tone",
-     "ok": true,
-     "message": "hash matches"
-    },
-    {
-     "check": "S3",
-     "variable": "univ_tone",
-     "ok": true,
-     "message": "HTTP status 200"
-    },
-    {
-     "check": "S4",
-     "variable": "univ_tone",
-     "ok": true,
-     "message": "libguides.tcc.edu is on tcc.edu"
-    },
-    {
-     "check": "C1",
-     "variable": "dept_tone",
-     "ok": true,
-     "message": "value 'none found' allowed"
-    },
-    {
-     "check": "C2",
-     "variable": "dept_tone",
-     "ok": true,
-     "message": "absence backed by search log"
-    },
-    {
-     "check": "N1",
-     "variable": "dept_tone",
-     "ok": true,
-     "message": "second searches logged"
-    },
-    {
-     "check": "C1",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "value 'in passing' allowed"
-    },
-    {
-     "check": "C2",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "quote, url and archive present"
-    },
-    {
-     "check": "C1",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "source_type 'guidance page' allowed"
-    },
-    {
-     "check": "S5",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "quote has 2 words"
-    },
-    {
-     "check": "S1",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "quote found in data/sources/233772-tidewater/2026-11-11-libguide-student-use-of-ai.html"
-    },
-    {
-     "check": "S2",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "hash matches"
-    },
-    {
-     "check": "S3",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "HTTP status 200"
-    },
-    {
-     "check": "S4",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "libguides.tcc.edu is on tcc.edu"
-    },
-    {
-     "check": "C3",
-     "variable": "collaboration",
-     "ok": true,
-     "message": "cue words present"
-    },
-    {
-     "check": "C1",
-     "variable": "disclosure",
-     "ok": true,
-     "message": "value 'required' allowed"
-    },
-    {
-     "check": "C2",
-     "variable": "disclosure",
-     "ok": true,
-     "message": "quote, url and archive present"
-    },
-    {
-     "check": "C1",
-     "variable": "disclosure",
      "ok": true,
      "message": "source_type 'policy page' allowed"
     },
     {
      "check": "S5",
-     "variable": "disclosure",
+     "variable": "univ_tone",
      "ok": true,
-     "message": "quote has 30 words"
+     "message": "quote has 8 words"
     },
     {
      "check": "S1",
-     "variable": "disclosure",
+     "variable": "univ_tone",
      "ok": true,
-     "message": "quote found in data/sources/233772-tidewater/2026-11-11-code-student-rights-2024.pdf"
+     "message": "quote found in data/sources/233772-tidewater/2026-11-11-policy-2214-student-code-of-conduct-2026.pdf"
     },
     {
      "check": "S2",
-     "variable": "disclosure",
+     "variable": "univ_tone",
      "ok": true,
      "message": "hash matches"
     },
     {
      "check": "S3",
-     "variable": "disclosure",
+     "variable": "univ_tone",
      "ok": true,
      "message": "HTTP status 200"
     },
     {
      "check": "S4",
-     "variable": "disclosure",
+     "variable": "univ_tone",
      "ok": true,
      "message": "www.tcc.edu is on tcc.edu"
     },
     {
-     "check": "C3",
+     "check": "C1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "value 'none found' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "absence backed by search log"
+    },
+    {
+     "check": "N1",
+     "variable": "dept_tone",
+     "ok": true,
+     "message": "second searches logged"
+    },
+    {
+     "check": "C1",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "value 'not discussed' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "collaboration",
+     "ok": true,
+     "message": "absence backed by 2 reviewed pages"
+    },
+    {
+     "check": "C1",
      "variable": "disclosure",
      "ok": true,
-     "message": "cue words absent; reason: No 'must' or 'required' word, but the code makes unacknowledged AI content plagiarism, so acknowledging AI is required (same reading as Defiance, EKU and UDC)."
+     "message": "value 'not stated' allowed"
+    },
+    {
+     "check": "C2",
+     "variable": "disclosure",
+     "ok": true,
+     "message": "absence backed by 2 reviewed pages"
     },
     {
      "check": "C1",
@@ -10442,7 +10046,7 @@
      "check": "C2",
      "variable": null,
      "ok": true,
-     "message": "univ_stance='restrict' and univ_tone='positive' agree on none found"
+     "message": "univ_stance='restrict' and univ_tone='neutral' agree on none found"
     },
     {
      "check": "C2",
@@ -10701,55 +10305,19 @@
      "check": "C1",
      "variable": "se_courses",
      "ok": true,
-     "message": "value 'allowed with conditions' allowed"
+     "message": "value 'no public syllabus found' allowed"
     },
     {
      "check": "C2",
      "variable": "se_courses",
      "ok": true,
-     "message": "quote, url and archive present"
+     "message": "absence backed by 1 reviewed pages"
     },
     {
-     "check": "C1",
+     "check": "N1",
      "variable": "se_courses",
      "ok": true,
-     "message": "source_type 'syllabus' allowed"
-    },
-    {
-     "check": "S5",
-     "variable": "se_courses",
-     "ok": true,
-     "message": "quote has 16 words"
-    },
-    {
-     "check": "S1",
-     "variable": "se_courses",
-     "ok": true,
-     "message": "quote found in data/sources/201645-case-western/2026-11-11-syllabus-statement-results.pdf"
-    },
-    {
-     "check": "S2",
-     "variable": "se_courses",
-     "ok": true,
-     "message": "hash matches"
-    },
-    {
-     "check": "S3",
-     "variable": "se_courses",
-     "ok": true,
-     "message": "HTTP status 200"
-    },
-    {
-     "check": "S4",
-     "variable": "se_courses",
-     "ok": true,
-     "message": "case.edu is on case.edu"
-    },
-    {
-     "check": "C3",
-     "variable": "se_courses",
-     "ok": true,
-     "message": "cue words present"
+     "message": "second searches logged"
     },
     {
      "check": "C2",

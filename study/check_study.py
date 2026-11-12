@@ -236,7 +236,13 @@ def check_school(school, sample_row, codebook, root=ROOT):
     for stance, tone in STANCE_TONE_PAIRS:
         s, t = (values.get(stance) or {}).get("value"), (values.get(tone) or {}).get("value")
         if s is not None and t is not None:
-            add("C2", (s == "none found") == (t == "none found"), "%s='%s' and %s='%s' agree on none found" % (stance, s, tone, t))
+            # Codebook v3 rule (e): a stance of "none found" may sit beside a tone when the tone entry says why
+            # (text that talks about AI but sets no rule, as UDC's AI Initiative does). Not the other way round.
+            reason = (values.get(tone) or {}).get("stance_tone_reason")
+            agree = (s == "none found") == (t == "none found")
+            ok = agree or (s == "none found" and bool(reason))
+            add("C2", ok, "%s='%s' and %s='%s' %s" % (stance, s, tone, t, "agree on none found" if agree else
+                                                         "differ; stance_tone_reason: %s" % reason))
     return findings
 
 

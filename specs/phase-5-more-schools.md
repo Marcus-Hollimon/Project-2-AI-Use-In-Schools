@@ -133,3 +133,10 @@ All four confirmed by Marcus in chat at 2026-11-11T20:04:57-05:00 ("I have run m
 ## Out of scope
 - More than one extra Ohio school.
 - Codebook changes, statistical tests, pages behind logins.
+
+- **Both checker changes above approved by Marcus (2026-11-11, judgment calls; "Approve both").**
+  Codebook v3 followed from his other decisions (`study/codebook.md`, "Changes in version 3"), with one
+  more checker change: C2 accepts a stance of "none found" beside a tone only when the tone entry has a
+  written `stance_tone_reason` (UDC). New tests `test_c2_stance_none_found_with_a_tone_passes_only_with_stance_tone_reason`
+  and `test_c2_tone_none_found_with_a_stance_fails_even_with_stance_tone_reason`; a recorded mutation run
+  shows the first fails when the reason is ignored.

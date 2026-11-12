@@ -280,6 +280,24 @@ def test_c2_stance_none_found_with_a_tone_fails(world):
     assert only_failures(findings(world, school)) == ["C2"]
 
 
+def test_c2_stance_none_found_with_a_tone_passes_only_with_stance_tone_reason(world):
+    tone = dict(value="positive", quote="Students may use generative AI tools when the instructor allows it",
+                url="https://www.example.edu/ai", archive=world["archive"], source_type="policy page")
+    school = mutate(world, "dept_tone", stance_tone_reason="The page talks about AI but sets no rule.", **tone)
+    assert only_failures(findings(world, school)) == []
+    school["values"]["dept_tone"]["stance_tone_reason"] = ""
+    assert only_failures(findings(world, school)) == ["C2"]
+
+
+def test_c2_tone_none_found_with_a_stance_fails_even_with_stance_tone_reason(world):
+    school = copy.deepcopy(world["school"])
+    stance = school["values"]["univ_stance"]
+    assert stance["value"] != "none found"
+    school["values"]["univ_tone"] = {"value": "none found", "search_log": world["school"]["values"]["dept_tone"].get("search_log"),
+                                     "reviewed": [world["archive"]], "stance_tone_reason": "should not help"}
+    assert "C2" in only_failures(findings(world, school))
+
+
 def test_c2_absence_with_no_backing_fails(world):
     school = copy.deepcopy(world["school"])
     school["values"]["dept_stance"] = {"value": "none found"}

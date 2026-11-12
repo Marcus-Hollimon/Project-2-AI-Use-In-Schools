@@ -111,6 +111,11 @@ export function findings(schools = SCHOOLS) {
       .map(([value, row]) => `${value} ${row[key]}`)
       .join(', ')
   }
+  // Codebook v3 rule (d): a "required" disclosure read from a plagiarism or cheating rule carries a
+  // cue_reason (no disclosure-plus-obligation cue words); one stated outright does not.
+  const required = (group, fromRule) =>
+    schools.filter((s) => s.group === group && s.values.disclosure.value === 'required' && Boolean(s.values.disclosure.cue_reason) === fromRule).length
+  const split = (group) => `${required(group, false)} stated outright, ${required(group, true)} read from a plagiarism or cheating rule`
   const [N, O] = [size('National'), size('Ohio')]
   return [
     {
@@ -123,7 +128,7 @@ export function findings(schools = SCHOOLS) {
     },
     {
       id: 'research-finding-disclosure',
-      text: `Official text requires students to disclose their AI use at ${n('National', 'disclosure', 'required')} of ${N} national schools and ${n('Ohio', 'disclosure', 'required')} of ${O} in Ohio.`,
+      text: `Official text requires students to disclose their AI use at ${n('National', 'disclosure', 'required')} of ${N} national schools (${split('National')}) and ${n('Ohio', 'disclosure', 'required')} of ${O} in Ohio (${split('Ohio')}).`,
     },
     {
       id: 'research-finding-syllabus',

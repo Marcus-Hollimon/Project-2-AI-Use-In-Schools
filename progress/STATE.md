@@ -18,12 +18,18 @@ scroll at 375 px. (b) R1 re-fetch rerun: 184 pages, 0 coded quotes missing (refe
 over-count compacts followed a reply with a thinking block; Marcus chose "Allow, list the gap" (decisions.md,
 phase-1 spec amendment). build.py now exits 0, all checks PASS. (f) Acceptance boxes ticked except deploy.
 Pushed 01a3e56; deploy run 43130741613 succeeded; live site checked 2026-11-11T19:55:17-05:00; all six acceptance boxes ticked.
-Update 2026-11-11T20:20:01-05:00: Marcus's checklist passed; judgment calls decided; see "NOW: apply" below.
+Update 2026-11-11T20:20:01-05:00: Marcus's checklist passed; judgment calls decided.
+Update 2026-11-11T20:34:55-05:00: ALL judgment-call decisions APPLIED as codebook v3 (plus a 12th call, rule-list tone = neutral,
+decided after the /compact). 23 values changed at 16 schools; all 37 tone values re-read; before/after and the basis
+for every tone value in data/coded/codebook-v3-recode.json. check_study 36/36 PASS; study 42/42, web 49/49,
+pipeline 19/19 recorded, with mutation runs for the new C2 rule and the disclosure split; build exit 0; browser
+checked. NEXT: commit, push, deploy check, then report every moved number to Marcus. After that: Phase 6
+(evaluation) needs its spec written and approved first.
 Minor, not fixed: 10 of the original 15 schools have no coded_at field (all were coded 2026-11-11 per git).
 
-## NOW: apply Marcus's judgment-call decisions (times and wording in progress/decisions.md)
-Marcus ran his Phase 5 checklist: all 4 passed (spec ticked). Then he decided 11 judgment calls. Nothing below
-is applied yet except the Tidewater archives. Do these, then codebook v3, tests, recorded runs, build, push.
+## DONE: Marcus's judgment-call decisions, applied as codebook v3 (the plan as it was written)
+Marcus ran his Phase 5 checklist: all 4 passed (spec ticked). Then he decided 11 judgment calls. Everything
+below was applied on 2026-11-11 evening (see the update line at the top).
 
 Recodes in `data/coded/values.json` (write a scratchpad script; record every before/after in a new
 `data/coded/codebook-v3-recode.json`, like `codebook-v2-recode.json`):
@@ -76,7 +82,7 @@ Expected moves: syllabus finding 24/30 national (Penn), 5/6 Ohio (Case Western);
 2->3 (UDC), instructor decides 10->9; Ohio restrict 4->3, none found 1->2 (Defiance); disclosure required
 national 12->10 (UDC, Tidewater), Ohio 3->2 (Defiance). Recount from the data after recoding; do not trust these.
 
-## FIRST, right after the /compact
+## Earlier notes (all done; kept for the record)
 1. Take a usage reading marked "after /compact" (full 7-column row in `progress/usage.md`, phase 5).
 2. Coding is finished: all 36 schools pass. Next is the rest of the Phase 5 spec: the site's "What the data
    shows" claims and their tests, a web mutation run, texts that still say "15", the R1 re-fetch, recorded
@@ -203,7 +209,7 @@ national 12->10 (UDC, Tidewater), Ohio 3->2 (Defiance). Recount from the data af
 - Mistake to avoid (15:23): a Python heredoc with Windows backslashes in an f-string failed, and the commit after
   it ran anyway. Check each step's exit code before committing.
 
-## NOW: Phase 5 coding (21 schools, round robin)
+## Phase 5 coding (21 schools, round robin; done)
 - Draw done 15:17:54 (seed pushed 15:17:25 in 1cd06c0). sample.csv has 36 rows; round 1 unchanged byte for byte;
   second run identical. Study tests: mutation `validation/runs/2026-11-11T20-18-06-773Z_study.json` (1 failed),
   clean `2026-11-11T20-18-09-258Z_study.json` (38/38). Web run `2026-11-11T20-18-19-940Z_web.json` fails 1
@@ -301,7 +307,7 @@ national 12->10 (UDC, Tidewater), Ohio 3->2 (Defiance). Recount from the data af
 - Marcus asked (10:15 Nov 11): **no Coaching sections** any more, despite the global CLAUDE.md
   rule and the per-turn hook; and no plan mode. "Let's just try and get this done properly."
 
-## FIRST, right after the /compact
+## Earlier notes (all done; kept for the record)
 Phase 4 is done: Marcus confirmed all four checklist steps at 2026-11-11T15:03:10-05:00. Phase-end reading at 2026-11-11T15:02:53-05:00
 (5-hour 8%, weekly 22%, context 157,588), marked "just before /compact".
 1. Take a usage reading marked "after /compact" (full 7-column row in the main table of
