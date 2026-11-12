@@ -11,13 +11,14 @@ shows" list (4 sentences, web/src/data.js findings(), claims research-finding-*)
 (22-17-33Z) after a recorded mutation run that failed as it should (22-17-20Z); stale "15" fixed. build.py
 rebuilt data/derived and exits 1 ONLY on C3_compact (C5 now passes). STOPPED at 95% of the 5-hour window.
 Update 2026-11-11T19:53:03-05:00 (after Marcus's /compact and the 7:40 PM reset): (a) Research tab checked in the
-browser pane (.claude/launch.json "web"): 36 schools, 0 failing, 7 tables, no console errors, no sideways
+browser pane (the project2-web entry in C:\Claude Folder\.claude\launch.json): 36 schools, 0 failing, 7 tables, no console errors, no sideways
 scroll at 375 px. (b) R1 re-fetch rerun: 184 pages, 0 coded quotes missing (refetch-notes.md). (c) Pipeline
 19/19 recorded after two recorded mutation runs. (d) C2 had begun failing on an app placeholder reply
 (model <synthetic>): fixed as a counting bug. C3 was failing on TWO compacts (15:59, 16:12), not one; all 3
 over-count compacts followed a reply with a thinking block; Marcus chose "Allow, list the gap" (decisions.md,
 phase-1 spec amendment). build.py now exits 0, all checks PASS. (f) Acceptance boxes ticked except deploy.
-LEFT: (e) push and deploy check, then tick the last box; (g) Marcus's checklist and every judgment call below.
+Pushed 01a3e56; deploy run 43130741613 succeeded; live site checked 2026-11-11T19:55:17-05:00; all six acceptance boxes ticked.
+LEFT: (g) Marcus's checklist and every judgment call below.
 Minor, not fixed: 10 of the original 15 schools have no coded_at field (all were coded 2026-11-11 per git).
 
 ## FIRST, right after the /compact
@@ -122,10 +123,8 @@ Minor, not fixed: 10 of the original 15 schools have no coded_at field (all were
    that mentions AI as the course page ("AI built into the course"), while EKU, UMKC and an earlier school
    (values.json "CSC 310") treat a description with no AI text as "no public syllabus found", not "not
    addressed". The two readings do not match; one rule should be chosen and applied to all.
-- **Build C3_compact now FAILS** for Marcus's 15:59 EST /compact (20:59:34Z): preTokens 174,696 vs last
-  response 173,975 (721 more). The four compacts before it have the same records after the last response
-  (stop hook summary, queue enqueue/dequeue) and match exactly; no cause found in the transcript. Not
-  loosened. Decide with Marcus before push (build must exit 0).
+- C3_compact: RESOLVED 2026-11-11 evening. Two compacts (15:59, 16:12) over-counted; all 3 over-count compacts
+  followed a reply with a thinking block. Marcus chose "Allow, list the gap" (decisions.md; phase-1 spec amendment).
 - `save_page.py` adds the date prefix itself: name pages `ai-guidance`, not `2026-11-11-ai-guidance` (15:52 slip,
   copies deleted and saved again). grab.py and showtext.py need `python -I -X utf8` (`-I` ignores PYTHONIOENCODING).
 - Rice: news.rice.edu and tss.rice.edu answer curl with HTTP 406; esther.rice.edu syllabi need a login.

@@ -116,7 +116,8 @@ new phase row and deliverable 1's "Done when" says 36 schools.
       changed page; follow-up checks in `data/coded/refetch-notes.md`).
 - [x] Study, web and pipeline tests pass, recorded; each mutation run fails, recorded (pipeline check
       C6 passes: study 20-18-06Z, web 22-17-20Z, pipeline 00-45-02Z and 00-51-13Z).
-- [ ] `build.py` exits 0 with all checks passing; the live site deploys.
+- [x] `build.py` exits 0 with all checks passing; the live site deploys. Build exit 0 at 01a3e56; GitHub
+      Actions run 43130741613 succeeded; live site checked 2026-11-11T19:55:17-05:00 (36 schools, 4 findings, Validation 36 of 36).
 
 ## Marcus's checklist (no code reading needed)
 - [ ] On GitHub, open `data/frame/sample.csv`: 36 rows; the last 21 say "random round 2" (20 national,
