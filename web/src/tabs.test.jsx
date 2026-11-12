@@ -1,6 +1,7 @@
 // Phase 3 tests: each tab is rendered from the real data files, and its numbers are compared with
 // figures taken straight from those files here, independently of the page code.
 import { cleanup, fireEvent, render, screen, within } from '@testing-library/react'
+import { createHash } from 'node:crypto'
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { afterEach, describe, expect, test } from 'vitest'
@@ -187,6 +188,88 @@ describe('Validation', () => {
       const cells = [...rows[i + 1].querySelectorAll('td')].map((td) => td.textContent)
       expect(cells).toEqual(ids.map((id) => (s.checks[id] === undefined ? 'n/a' : s.checks[id] ? 'pass' : 'FAIL')))
     })
+  })
+})
+
+describe('How the tests work (Phase 6)', () => {
+  const runFiles = readdirSync(ROOT + 'validation/runs').filter((f) => f.endsWith('.json')).sort()
+  const newest = (suite) => readJson('validation/runs/' + runFiles.filter((f) => f.endsWith(`_${suite}.json`)).at(-1))
+  const names = (run) => run.report.testResults.flatMap((f) => f.assertionResults.map((a) => a.fullName))
+  const mutationFiles = readdirSync(ROOT + 'validation/mutation-runs').filter((f) => f.endsWith('.json')).sort()
+  const firstMutation = readJson('validation/mutation-runs/' + mutationFiles[0])
+  const lastMutation = readJson('validation/mutation-runs/' + mutationFiles.at(-1))
+
+  test('the three layers state the newest recorded run of each suite, the study checks and the claim count', () => {
+    open('validation')
+    const text = document.querySelector('[data-claim="validation-how-layers"]').textContent
+    const study = newest('study')
+    const tool = names(study).filter((n) => n.includes('test_mutation_score ')).length
+    const draw = names(study).filter((n) => n.includes('test_draw_sample ')).length
+    expect(text).toContain(`The newest study run has ${study.summary.total} tests: ${study.summary.total - tool - draw} test the checker`)
+    expect(text).toContain(`${tool} test the mutation tool and ${draw} the random draw of the sample`)
+    expect(text).toContain(`The newest pipeline run has ${newest('pipeline').summary.total} tests`)
+    expect(text).toContain(`The newest web run has ${newest('web').summary.total} tests`)
+    const checks = readJson('data/coded/checks.json').schools
+    expect(text).toContain(`${checks.filter((s) => s.pass).length} of ${checks.length} schools pass`)
+    expect(text).toContain(`all ${readJson('validation/claims.json').claims.length} factual sentences`)
+  })
+
+  test('the mutation numbers come from the first and newest mutation runs, and every survivor has a written verdict', () => {
+    for (const r of [firstMutation, lastMutation]) {
+      expect(r.baseline).toBe('passed')
+      expect(r.mutants).toHaveLength(r.total)
+      expect(r.killed + r.survived).toBe(r.total)
+      expect(r.mutants.filter((m) => m.result !== 'survived')).toHaveLength(r.killed)
+    }
+    open('validation')
+    const items = [...document.querySelectorAll('ul.mutation li')].map((li) => li.textContent)
+    expect(items[0]).toContain(`${firstMutation.killed} of ${firstMutation.total} caught in the first run`)
+    expect(items[2]).toContain(`${lastMutation.killed} of ${lastMutation.total} caught in the newest run`)
+    // Tests added: the newest study run, less the newest study run before the first mutation run, less
+    // the tests of the mutation tool itself.
+    const studyRuns = runFiles.filter((f) => f.endsWith('_study.json')).map((f) => readJson('validation/runs/' + f))
+    const before = studyRuns.filter((r) => new Date(r.startedAt) < new Date(firstMutation.startedAt)).at(-1)
+    const study = newest('study')
+    const tool = names(study).filter((n) => n.includes('test_mutation_score ')).length
+    expect(items[1]).toContain(`${study.summary.total - before.summary.total - tool} study tests then added`)
+
+    const key = (m) => [m.function, m.line, m.column, m.before, m.after].join('|')
+    const left = lastMutation.mutants.filter((m) => m.result === 'survived')
+    const triage = readJson('validation/mutation-triage.json').entries
+    expect(triage.map(key).sort()).toEqual(left.map(key).sort())
+    for (const t of triage) expect(t.why.length, key(t)).toBeGreaterThan(20)
+    const rows = screen.getAllByTestId('survivor')
+    expect(rows).toHaveLength(left.length)
+    for (const r of rows) expect(r.textContent).not.toContain('NO VERDICT WRITTEN')
+  })
+
+  test('the newest mutation run was measured on the current checker and its current tests', () => {
+    // Same fingerprint as study/mutation_score.py: SHA-256 with line endings made "\n" first.
+    const fingerprint = (p) => createHash('sha256').update(readFileSync(ROOT + p, 'utf-8').replaceAll('\r\n', '\n')).digest('hex')
+    expect(lastMutation.targetSha256, `${lastMutation.target} changed: run study/mutation_score.py again`).toBe(
+      fingerprint(lastMutation.target),
+    )
+    expect(lastMutation.testsSha256, `${lastMutation.tests} changed: run study/mutation_score.py again`).toBe(
+      fingerprint(lastMutation.tests),
+    )
+  })
+
+  test('the edge-case table lists every test in the newest study run exactly once, each named check in its own row', () => {
+    open('validation')
+    const all = names(newest('study')).map((n) => n.slice(n.indexOf(' ') + 1))
+    const plain = (name) => name.replace(/^test_/, '').replace(/^[scn]\d_/i, '').replaceAll('_', ' ')
+    const table = screen.getByRole('table', { name: 'Edge cases tested, by check' })
+    const listed = within(table).getAllByRole('listitem').map((li) => li.textContent)
+    expect(listed.toSorted()).toEqual(all.map(plain).toSorted())
+    const rowOf = Object.fromEntries(
+      screen.getAllByTestId('edge-row').map((row) => [row.querySelector('th').textContent, row]),
+    )
+    for (const name of all) {
+      const check = name.match(/^test_([scn]\d)_/i)?.[1].toUpperCase()
+      if (!check) continue
+      const items = [...rowOf[check].querySelectorAll('li')].map((li) => li.textContent)
+      expect(items, name).toContain(plain(name))
+    }
   })
 })
 

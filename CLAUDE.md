@@ -43,6 +43,11 @@ the current phase spec in `specs/`, and write a phase's spec before starting tha
   archives a page with its fetch record; `uv run --no-project python -I study/check_study.py` runs checks
   S1 to S5, C1 to C4, N1 on `data/coded/values.json`; `uv run --project pipeline python pipeline/record_tests.py
   --suite study "label"` records the study test run. Codebook: `study/codebook.json` (values, cues) and `.md`.
+- Mutation score (Phase 6): after ANY change to `study/check_study.py` or `study/tests/test_check_study.py`,
+  run `uv run --project pipeline python study/mutation_score.py` (about 35 s; writes
+  `validation/mutation-runs/`), and give every surviving planted bug a verdict in
+  `validation/mutation-triage.json`. A web test fails if the newest run's fingerprints do not match the
+  current files or a survivor has no verdict.
 - Third-party APIs: read `reference/` at the installed version before writing code against them.
 - Commands handed to Marcus must work in Windows PowerShell 5.1.
 - Bash tool quirk seen 2026-11-08: several heredocs in one command failed to parse. Write one

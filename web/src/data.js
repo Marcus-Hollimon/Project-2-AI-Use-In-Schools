@@ -10,6 +10,7 @@ import tokens from '../../data/derived/tokens.json'
 import pipelineChecks from '../../data/derived/checks.json'
 import claimsFile from '../../validation/claims.json'
 import caughtFile from '../../validation/caught.json'
+import mutationTriageFile from '../../validation/mutation-triage.json'
 import { REPO_URL } from './routes.js'
 
 export { codebook, values, studyChecks, refetch, contributions, tokens, pipelineChecks }
@@ -188,6 +189,57 @@ export function filterRuns(runs, { phase = 'all', suite = 'all', status = 'all',
       (status === 'all' || (status === 'failed') === r.summary.failed > 0) &&
       (!q || r.label.toLowerCase().includes(q) || r.tests.some((t) => t.name.toLowerCase().includes(q))),
   )
+}
+
+// The newest recorded run of a suite (RUNS is sorted newest first).
+export const newestRun = (suite) => RUNS.find((r) => r.suite === suite)
+
+// ---------- Mutation score (Phase 6) ----------
+// Every run of study/mutation_score.py, oldest first. Each planted one small bug in study/check_study.py
+// at a time and ran the study tests against it.
+const mutationModules = import.meta.glob('../../validation/mutation-runs/*.json', { eager: true, import: 'default' })
+export const MUTATION_RUNS = Object.entries(mutationModules)
+  .map(([path, r]) => ({ ...r, file: path.split('/').pop() }))
+  .sort((a, b) => a.startedAt.localeCompare(b.startedAt))
+export const MUTATION_TRIAGE = mutationTriageFile.entries
+const mutantKey = (m) => `${m.function}|${m.line}|${m.column}|${m.before}|${m.after}`
+// The surviving mutants of a run, each with its written verdict (null if none was written).
+export function survivors(run) {
+  const verdicts = Object.fromEntries(MUTATION_TRIAGE.map((t) => [mutantKey(t), t]))
+  return run.mutants.filter((m) => m.result === 'survived').map((m) => ({ ...m, triage: verdicts[mutantKey(m)] ?? null }))
+}
+
+// The study tests of a run grouped by the check they test, for the edge-case table. A test's name says
+// which check it is for (test_s1_..., test_c2_...); the rest are listed by what they cover.
+const NAMED_FOR = [
+  [/^test_registrable_domain/, 'S4'],
+  [/^test_cue_/, 'C3'],
+  [/^test_(codebook_md|load_codebook)/, 'C1'],
+  [/^test_stance_tone_pair/, 'C2'],
+]
+export const TEST_GROUPS = [
+  ['all', 'All', 'Every check at once'],
+  ['run', 'Run', 'The whole run: every school, the per-check summary, the report file, the printout, the command line'],
+  ['tool', 'Tool', 'The mutation tool itself'],
+  ['sample', 'Sample', 'Drawing the random sample'],
+]
+export function groupStudyTests(run) {
+  const groups = {}
+  for (const t of run.tests) {
+    // "study.tests.test_check_study test_x[case with spaces]": the file, then the test name.
+    const cut = t.name.indexOf(' ')
+    const [file, name] = [t.name.slice(0, cut), t.name.slice(cut + 1)]
+    const check = name.match(/^test_([scn]\d)_/i)?.[1].toUpperCase()
+    const id = file.endsWith('test_mutation_score')
+      ? 'tool'
+      : file.endsWith('test_draw_sample')
+        ? 'sample'
+        : (check ?? NAMED_FOR.find(([re]) => re.test(name))?.[1] ??
+          (/^test_(run|main|command_line)_/.test(name) ? 'run' : 'all'))
+    const text = name.replace(/^test_/, '').replace(/^[scn]\d_/i, '').replaceAll('_', ' ')
+    ;(groups[id] ??= []).push({ name: t.name, text, status: t.status })
+  }
+  return groups
 }
 
 export const STUDY_CHECKS = [

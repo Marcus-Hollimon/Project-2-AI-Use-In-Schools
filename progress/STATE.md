@@ -1,6 +1,6 @@
 # State: read this first
 
-Current phase: 5 More schools (15 to 36; spec `specs/phase-5-more-schools.md`, approved by Marcus 15:15:40 with one extra Ohio school, so 21 new, 36 in all). Evaluation moves to Phase 6. Phase 4 Validation is done.
+Current phase: 6 Evaluation (spec `specs/phase-6-evaluation.md`, approved by Marcus 2026-11-11T20:59:41-05:00). Phase 5 is done.
 
 Last updated: 2026-11-11T16:59:31-05:00 by Claude (session a9056776). ALL 21 new schools coded; full checker
 36 PASS, 0 FAIL; study tests 40/40 recorded (validation/runs/2026-11-11T21-59-21-021Z_study.json). Marcus chose

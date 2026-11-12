@@ -272,12 +272,13 @@ def run(only=None, root=ROOT):
     return report
 
 
-def main(argv):
+def main(argv, root=ROOT):
+    # root is a parameter so tests can run the whole command on a made-up repository.
     only = None
     if argv[:1] == ["--only"]:
         only = argv[1].split(",")
-    report = run(only)
-    out = ROOT / "data" / "coded" / "checks.json"
+    report = run(only, root)
+    out = root / "data" / "coded" / "checks.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(report, indent=1) + "\n", encoding="utf-8")
     for s in report["schools"]:

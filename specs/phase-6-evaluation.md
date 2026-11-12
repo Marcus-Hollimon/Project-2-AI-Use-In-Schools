@@ -1,7 +1,7 @@
 # Phase 6 spec: evaluation, "how the tests work", presentation
 
-Status: DRAFT for Marcus's approval (written 2026-11-11 after the Phase 5 /compact). No Phase 6 work
-starts until Marcus approves.
+Status: APPROVED by Marcus at 2026-11-11T20:59:41-05:00 ("I approve of the plan looks good! Continue on."), with the weekly
+stop rule removed ("Don't worry about weekly at all."), so the optional mutation score is in scope.
 
 ## The idea in one paragraph
 Tests cannot prove that they cover every edge case: no test suite anywhere can, because "every

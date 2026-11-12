@@ -90,6 +90,7 @@
    "how": "The first build after the /compact.",
    "fix": "C3 now allows a larger count only when unanswered records follow the last response, and lists the difference and their times; every other /compact must still match exactly.",
    "guard": "Pipeline test test_compact_after_a_stopped_turn_passes_only_with_unanswered_records_and_more_tokens.",
-   "evidence": ["pipeline/transcripts.py", "data/derived/checks.json"]}
+   "evidence": ["pipeline/transcripts.py", "data/derived/checks.json"]},
+  {"time": "2026-11-11T21:02:17-05:00", "phase": "6", "foundBy": "Claude (mutation tool)", "what": "The study tests missed 42 of 162 small bugs planted one at a time in study/check_study.py. Among the gaps: no test of a quote of exactly 40 words, of the per-check summary that the Validation tab's table shows, of text after a hidden <template> block, of a SUNY campus address one level deeper, or of the command line and its exit code.", "how": "The first run of study/mutation_score.py, which plants one bug per copy of the checker and runs the study tests on each.", "fix": "16 study test cases added, one or more per gap, and the checker's main() can now be pointed at a test folder (no other change to the checker). The newest run catches all but 4 planted bugs, each with a written reason it cannot change a result.", "guard": "Web test: the newest mutation run must be of the current checker and tests (fingerprints match), and every surviving planted bug must have a written verdict in validation/mutation-triage.json.", "evidence": ["validation/mutation-runs/2026-11-11T21-02-17.json", "study/tests/test_check_study.py", "validation/mutation-triage.json"]}
  ]
 }

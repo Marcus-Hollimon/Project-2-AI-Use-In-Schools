@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-12T01:54:45.749289Z",
+ "generatedAt": "2026-11-12T02:16:38.778437Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -2339,12 +2339,55 @@
    "phase": "5"
   },
   {
-   "time": "2026-11-12T01:54:41.690000Z",
+   "time": "2026-11-12T01:54:56Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Phase 6 spec draft (for Marcus's approval); after /compact usage reading",
+   "commit": "c1ef16c",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "6"
+  },
+  {
+   "time": "2026-11-12T01:55:19.088000Z",
    "actor": "Claude",
    "kind": "reply",
    "turn": 48,
-   "text": "The build's own check rejected my phase label \"5→6\" (only single phase names are allowed). That is the check working; I'll label the row \"6\" and rebuild.",
-   "toolCalls": 13,
+   "text": "I wrote the plan for the final phase as [specs/phase-6-evaluation.md](specs/phase-6-evaluation.md). It's committed and pushed, and nothing in it starts until you approve it.\n\n**One hard truth first.** No set of tests can be proven to cover every edge case, ours included. \"Every edge case\" isn't a list anyone can write down. If the presentation says the tests are \"fully exhaustive\", a grader who knows testing will catch it, and it would be false. What we can honestly show is stronger, and the evidence is already in the repo:\n\n- **Every sentence on the site is backed.** All 26 statements on the site are each tied to a test or a saved source page.\n- **We proved the tests catch errors.** I deliberately broke the rules the tests guard, and the tests failed every time. That answers \"how do you know the tests work?\"\n- **They caught real mistakes.** The tests caught 15 errors during the project, and the site lists them.\n- **The limits are named.** The tests prove each quote is real, word for word, and fits the coding rules. They can't prove another person would read the tone the same way. They also can't say anything about schools outside our 36.\n\n**The ideas in the spec:**\n\n1. **A \"How the tests work\" section on the Validation tab.** It shows the three layers of checks:\n   - the data checks;\n   - the tests of the code;\n   - the tests of what the site says.\n\n   It also shows the deliberate-breakage runs, the errors caught, a table of which edge cases each rule is tested against, and a plain box listing what the tests can't prove.\n2. **Optional: a \"mutation score\".** A tool makes hundreds of tiny automatic bugs in the checker and reports what share the tests catch, plus every one they miss. This is the closest thing to a measured answer to \"how complete are the tests?\", but any misses it finds need fixing or listing. It's only worth doing if there's usage to spare.\n3. **A 12-slide PowerPoint deck.** It covers:\n   - the question;\n   - how schools were chosen;\n   - how answers were coded;\n   - four findings slides;\n   - two slides on how we proved it;\n   - your process and the token usage;\n   - limits.\n\n   Every number is pulled from the repo by a script, and every slide has speaker notes. The evaluation and reflection slides are left for you to write, as the project spec says.\n\n**The budget problem:** weekly usage is at **38%**, and your stop rule is **40%**. The last task alone used 2 points, so the section plus the deck will almost certainly go past 40%. That's why the question below is about the stop line. If we keep 40%, I'd build only the deck and fold a short version of \"how the tests work\" into it.\n\nThe build check rejected one usage row I'd labelled \"5→6\" (only single phase names are allowed). I relabelled it \"6\"; after that the build passed all its checks, and the web tests passed 49 of 49 (recorded).",
+   "toolCalls": 17,
+   "phase": "6"
+  },
+  {
+   "time": "2026-11-12T01:59:17.954000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 49,
+   "text": "Don't worry about weekly at all. I approve of the plan looks good! Continue on.",
+   "phase": "6"
+  },
+  {
+   "time": "2026-11-12T01:59:41Z",
+   "actor": "Marcus",
+   "kind": "milestone",
+   "phase": "6",
+   "text": "Approved the Phase 6 spec; weekly stop rule removed. Phase 6 starts.",
+   "evidence": "specs/phase-6-evaluation.md"
+  },
+  {
+   "time": "2026-11-12T01:59:41Z",
+   "actor": "Marcus",
+   "kind": "decision",
+   "text": "Phase 6 spec (specs/phase-6-evaluation.md) and the weekly stop rule",
+   "options": "approve, raise weekly line to 50% · keep 40%, deck only",
+   "notes": "Approved the plan (\"I approve of the plan looks good! Continue on.\") and removed the weekly stop rule (\"Don't worry about weekly at all.\"). The 5-hour window and extra usage being off remain the only hard stops. Read as including the optional mutation score, since budget no longer limits it.",
+   "phase": "6"
+  },
+  {
+   "time": "2026-11-12T02:16:16.434000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 49,
+   "text": "Fits at 343 px. Back to desktop width, a check for console errors, and a look at the edge-case table:",
+   "toolCalls": 82,
    "phase": "6"
   }
  ]

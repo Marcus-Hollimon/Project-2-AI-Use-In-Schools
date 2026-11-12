@@ -1,0 +1,41 @@
+{
+ "about": "A written verdict for every planted bug (mutant) that survived the newest mutation run of study/check_study.py (validation/mutation-runs/). Matched by function, line, column and the change. A web test fails if a survivor has no entry here or an entry matches no survivor.",
+ "entries": [
+  {
+   "function": "main",
+   "line": 282,
+   "column": 30,
+   "before": "True",
+   "after": "False",
+   "verdict": "cannot change a result",
+   "why": "Stops creating missing parent folders for checks.json. The parent folder (data/) always exists by then, because run() has already read data/frame/sample.csv inside it."
+  },
+  {
+   "function": "main",
+   "line": 283,
+   "column": 46,
+   "before": "1",
+   "after": "2",
+   "verdict": "spacing only",
+   "why": "Indents checks.json by two spaces instead of one. Every value in the file stays the same."
+  },
+  {
+   "function": "search_log_queries",
+   "line": 119,
+   "column": 46,
+   "before": "2",
+   "after": "3",
+   "verdict": "cannot change a result",
+   "why": "Cuts one more character off the start of each search result line. The checks count result lines and never read their text, and a line is still counted when it ends up empty."
+  },
+  {
+   "function": "main",
+   "line": 286,
+   "column": 78,
+   "before": "45",
+   "after": "46",
+   "verdict": "printout only",
+   "why": "Shows one more letter of a long school name in the checker's printout. checks.json and every pass or fail stay the same."
+  }
+ ]
+}

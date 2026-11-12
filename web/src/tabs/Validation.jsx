@@ -4,13 +4,19 @@ import {
   CLAIMS,
   CLAIM_RESULTS,
   MUTATION_RESULTS,
+  MUTATION_RUNS,
   RUNS,
+  SCHOOLS,
   STUDY_CHECKS,
   TEST_COMMANDS,
+  TEST_GROUPS,
   eastern,
   filterRuns,
+  groupStudyTests,
+  newestRun,
   repoFile,
   studyChecks,
+  survivors,
 } from '../data.js'
 import { REPO_URL, TABS } from '../routes.js'
 
@@ -20,6 +26,177 @@ const failedRuns = RUNS.filter((r) => r.summary.failed > 0)
 // A mutation run's label starts with "mutation" ("clean run after restoring mutations" is not one).
 const isMutation = (r) => /^mutation/i.test(r.label)
 const tabLabel = Object.fromEntries(TABS.map((t) => [t.id, t.label]))
+
+// Phase 6: what the tests check, how we know they catch errors, and what they cannot check.
+function HowTestsWork() {
+  const study = newestRun('study')
+  const pipeline = newestRun('pipeline')
+  const web = newestRun('web')
+  const groups = groupStudyTests(study)
+  const toolTests = (groups.tool ?? []).length
+  const sampleTests = (groups.sample ?? []).length
+  const first = MUTATION_RUNS[0]
+  const last = MUTATION_RUNS.at(-1)
+  // The newest study run before the first mutation run: the test count the mutation tool started from.
+  const studyBefore = RUNS.find((r) => r.suite === 'study' && new Date(r.startedAt) < new Date(first.startedAt))
+  const added = study.summary.total - studyBefore.summary.total - toolTests
+  const left = survivors(last)
+  const rows = [
+    ...STUDY_CHECKS.map(([id, text]) => [id, id, text]),
+    ...TEST_GROUPS,
+  ].filter(([id]) => groups[id])
+  return (
+    <section className="how" aria-labelledby="how-tests-work">
+      <h2 id="how-tests-work">How the tests work</h2>
+      <p data-claim="validation-how-intro">
+        No set of tests can be proven to catch every possible mistake, because nobody can list every
+        possible mistake. What this section shows is narrower, and every part of it can be checked: what
+        each test checks, that the tests were seen to fail when the thing they guard was broken on
+        purpose, and what no test here can check.
+      </p>
+
+      <h3>Three layers</h3>
+      <ol className="layers" data-claim="validation-how-layers">
+        <li>
+          <strong>The data.</strong> <code>study/check_study.py</code> checks every coded value at every
+          school against its saved page and the codebook (checks S1 to N1, defined at the bottom of this
+          page): {studyChecks.schools.filter((s) => s.pass).length} of {studyChecks.schools.length} schools
+          pass.
+        </li>
+        <li>
+          <strong>The code that checks and counts.</strong> The newest study run has {study.summary.total}{' '}
+          tests: {study.summary.total - toolTests - sampleTests} test the checker, most by building a small
+          made-up school that breaks exactly one rule and confirming the checker catches it; {toolTests}{' '}
+          test the mutation tool and {sampleTests} the random draw of the sample. The newest pipeline run
+          has {pipeline.summary.total} tests of the code that counts tokens and builds the timeline.
+        </li>
+        <li>
+          <strong>The pages.</strong> The newest web run has {web.summary.total} tests of what the pages
+          show: they recompute the numbers on this site from the data files and compare them with the
+          page, and check that links, filters and menus work.
+        </li>
+        <li>
+          <strong>What ties them together.</strong> The claims register below lists all {CLAIMS.length}{' '}
+          factual sentences on the site, each with the test, file or outside page that backs it.
+        </li>
+      </ol>
+
+      <h3>How we know the tests catch errors</h3>
+      <p data-claim="validation-how-mutations">
+        A test that never fails proves nothing, so the tests were broken on purpose, in two ways. By hand:{' '}
+        {failedRuns.filter(isMutation).length} recorded runs had a bug planted to see a particular test
+        notice it, and each did (listed under “Errors caught” below). Automatically:{' '}
+        <a href={repoFile('study/mutation_score.py')}>a mutation tool</a> made {last.total} copies of the
+        study checker, each with one small planted bug (a comparison turned around, “and” swapped for “or”,
+        a “not” dropped, True swapped for False, a number made one larger, a function returning nothing,
+        “break” swapped for “continue”), and ran the study tests on each copy. A bug counts as caught when
+        at least one test fails.
+      </p>
+      <ul className="stats mutation" data-claim="validation-how-mutations">
+        <li>
+          <strong>
+            {first.killed} of {first.total}
+          </strong>{' '}
+          caught in the first run ({eastern(first.startedAt)})
+        </li>
+        <li>
+          <strong>{added}</strong> study tests then added to close the gaps it found
+        </li>
+        <li>
+          <strong>
+            {last.killed} of {last.total}
+          </strong>{' '}
+          caught in the newest run ({eastern(last.startedAt)})
+        </li>
+      </ul>
+      <p data-claim="validation-how-mutations">
+        The {left.length} planted bugs the newest run did not catch, each with what it would change:
+      </p>
+      <table
+        className="data survivors"
+        aria-label="Planted bugs not caught"
+        data-from="validation/mutation-runs validation/mutation-triage.json"
+      >
+        <thead>
+          <tr>
+            <th scope="col">Planted bug</th>
+            <th scope="col">Verdict</th>
+            <th scope="col">Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          {left.map((m) => (
+            <tr key={m.id} data-testid="survivor">
+              <th scope="row">
+                {m.function}, line {m.line}: <code>{m.before}</code> to <code>{m.after}</code>
+              </th>
+              <td>{m.triage?.verdict ?? 'NO VERDICT WRITTEN'}</td>
+              <td>{m.triage?.why ?? ''}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p data-claim="validation-how-mutations">
+        The tool does not try {last.notTried.join('; ')}. Its score says how well the tests catch the kinds
+        of bug it plants, not every kind.{' '}
+        <a href={repoFile(`validation/mutation-runs/${last.file}`)}>Every planted bug in the newest run</a>.
+      </p>
+
+      <h3>Edge cases, check by check</h3>
+      <p data-claim="validation-how-edge">
+        Every test in the newest study run, under the check it tests. This shows which unusual cases are
+        covered, instead of claiming that all of them are.
+      </p>
+      <table className="data edge" aria-label="Edge cases tested, by check" data-from="validation/runs">
+        <thead>
+          <tr>
+            <th scope="col">Check</th>
+            <th scope="col">What it checks</th>
+            <th scope="col">Cases tested</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map(([id, label, text]) => (
+            <tr key={id} data-testid="edge-row">
+              <th scope="row">{label}</th>
+              <td>{text}</td>
+              <td>
+                <ul>
+                  {groups[id].map((t) => (
+                    <li key={t.name} className={t.status}>
+                      {t.text}
+                    </li>
+                  ))}
+                </ul>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <h3>What no test here can prove</h3>
+      <ul className="limits" data-claim="validation-how-limits">
+        <li>
+          That a stance or tone is the right reading of a page. The tests prove that each quote is on the
+          saved page word for word and contains a cue word the codebook lists for its value; they cannot
+          prove that a second person would read the page the same way. No second coder was used (Marcus’s
+          decision).
+        </li>
+        <li>
+          Anything about schools outside the {SCHOOLS.length} studied. The groups are too small to stand for
+          all US departments.
+        </li>
+        <li>What is behind a login, such as course sites and private syllabi, which the study could not see.</li>
+        <li>
+          That a page still says the same thing today. Each value is checked against the copy saved on the
+          day it was coded; the re-check on the Research page fetched every page again and counts the
+          quotes no longer there.
+        </li>
+        <li>Bugs of kinds nobody thought to test for. The mutation score measures only the kinds it plants.</li>
+      </ul>
+    </section>
+  )
+}
 
 function ClaimEvidence({ claim }) {
   const results = CLAIM_RESULTS.filter((r) => r.claim === claim.id)
@@ -190,6 +367,8 @@ export default function Validation() {
           schools pass the study checks
         </li>
       </ul>
+
+      <HowTestsWork />
 
       <Claims />
 

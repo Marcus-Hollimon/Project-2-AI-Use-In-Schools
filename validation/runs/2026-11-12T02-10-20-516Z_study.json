@@ -1,0 +1,660 @@
+{
+ "suite": "study",
+ "runner": "pytest",
+ "command": "uv run --project pipeline python pipeline/record_tests.py --suite study",
+ "label": "Phase 6: mutation tool tests and 16 test cases closing gaps the first mutation score found",
+ "startedAt": "2026-11-12T02:10:20.516Z",
+ "finishedAt": "2026-11-12T02:10:25.383Z",
+ "phase": 6,
+ "gitCommit": "c1ef16c",
+ "uncommittedChanges": true,
+ "exitCode": 0,
+ "summary": {
+  "total": 62,
+  "passed": 62,
+  "failed": 0,
+  "skipped": 0
+ },
+ "report": {
+  "testResults": [
+   {
+    "name": "study/tests/test_check_study.py",
+    "status": "passed",
+    "assertionResults": [
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_valid_school_passes_every_check",
+      "title": "test_valid_school_passes_every_check",
+      "status": "passed",
+      "duration": 11.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_s1_altered_quote_fails",
+      "title": "test_s1_altered_quote_fails",
+      "status": "passed",
+      "duration": 7.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_s1_normalizes_tags_entities_and_curly_quotes",
+      "title": "test_s1_normalizes_tags_entities_and_curly_quotes",
+      "status": "passed",
+      "duration": 7.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_s1_ignores_text_inside_scripts",
+      "title": "test_s1_ignores_text_inside_scripts",
+      "status": "passed",
+      "duration": 7.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_s1_pdf_without_extracted_text_fails",
+      "title": "test_s1_pdf_without_extracted_text_fails",
+      "status": "passed",
+      "duration": 7.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_s1_word_file_reads_extracted_text_beside_it",
+      "title": "test_s1_word_file_reads_extracted_text_beside_it",
+      "status": "passed",
+      "duration": 10.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_s2_archive_edited_after_saving_fails",
+      "title": "test_s2_archive_edited_after_saving_fails",
+      "status": "passed",
+      "duration": 6.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_s3_non_200_status_fails",
+      "title": "test_s3_non_200_status_fails",
+      "status": "passed",
+      "duration": 7.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_s3_rendered_text_needs_raw_copy_of_same_url",
+      "title": "test_s3_rendered_text_needs_raw_copy_of_same_url",
+      "status": "passed",
+      "duration": 11.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_s3_rendered_text_with_blocked_raw_copy_needs_fetch_reason",
+      "title": "test_s3_rendered_text_with_blocked_raw_copy_needs_fetch_reason",
+      "status": "passed",
+      "duration": 16.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_s3_rendered_text_with_empty_202_raw_copy_needs_fetch_reason",
+      "title": "test_s3_rendered_text_with_empty_202_raw_copy_needs_fetch_reason",
+      "status": "passed",
+      "duration": 16.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_s3_missing_fetch_record_fails",
+      "title": "test_s3_missing_fetch_record_fails",
+      "status": "passed",
+      "duration": 5.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_registrable_domain_keeps_campus_of_college_systems",
+      "title": "test_registrable_domain_keeps_campus_of_college_systems",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_s4_other_domain_fails",
+      "title": "test_s4_other_domain_fails",
+      "status": "passed",
+      "duration": 7.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_s4_lookalike_domain_fails",
+      "title": "test_s4_lookalike_domain_fails",
+      "status": "passed",
+      "duration": 7.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_s4_subdomain_passes_and_reason_overrides",
+      "title": "test_s4_subdomain_passes_and_reason_overrides",
+      "status": "passed",
+      "duration": 11.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_s5_quote_over_40_words_fails",
+      "title": "test_s5_quote_over_40_words_fails",
+      "status": "passed",
+      "duration": 7.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_c1_value_outside_codebook_fails",
+      "title": "test_c1_value_outside_codebook_fails",
+      "status": "passed",
+      "duration": 6.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_c1_missing_variable_fails",
+      "title": "test_c1_missing_variable_fails",
+      "status": "passed",
+      "duration": 6.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_c1_bad_source_type_fails",
+      "title": "test_c1_bad_source_type_fails",
+      "status": "passed",
+      "duration": 6.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_c1_uncoded_school_fails_in_run",
+      "title": "test_c1_uncoded_school_fails_in_run",
+      "status": "passed",
+      "duration": 4.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_c2_stance_none_found_with_a_tone_fails",
+      "title": "test_c2_stance_none_found_with_a_tone_fails",
+      "status": "passed",
+      "duration": 7.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_c2_stance_none_found_with_a_tone_passes_only_with_stance_tone_reason",
+      "title": "test_c2_stance_none_found_with_a_tone_passes_only_with_stance_tone_reason",
+      "status": "passed",
+      "duration": 10.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_c2_tone_none_found_with_a_stance_fails_even_with_stance_tone_reason",
+      "title": "test_c2_tone_none_found_with_a_stance_fails_even_with_stance_tone_reason",
+      "status": "passed",
+      "duration": 6.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_c2_absence_with_no_backing_fails",
+      "title": "test_c2_absence_with_no_backing_fails",
+      "status": "passed",
+      "duration": 6.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_c2_absence_citing_missing_reviewed_page_fails",
+      "title": "test_c2_absence_citing_missing_reviewed_page_fails",
+      "status": "passed",
+      "duration": 6.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_c2_value_without_quote_fails",
+      "title": "test_c2_value_without_quote_fails",
+      "status": "passed",
+      "duration": 7.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_c3_restrict_without_cue_fails_and_reason_overrides",
+      "title": "test_c3_restrict_without_cue_fails_and_reason_overrides",
+      "status": "passed",
+      "duration": 10.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_c3_prohibited_quote_satisfies_restrict",
+      "title": "test_c3_prohibited_quote_satisfies_restrict",
+      "status": "passed",
+      "duration": 7.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_c3_required_disclosure_needs_both_groups",
+      "title": "test_c3_required_disclosure_needs_both_groups",
+      "status": "passed",
+      "duration": 7.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_cue_whole_word_and_prefix_matching",
+      "title": "test_cue_whole_word_and_prefix_matching",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_c4_missing_search_log_fails",
+      "title": "test_c4_missing_search_log_fails",
+      "status": "passed",
+      "duration": 6.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_c4_missing_one_required_search_fails",
+      "title": "test_c4_missing_one_required_search_fails",
+      "status": "passed",
+      "duration": 7.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_c4_search_with_no_results_logged_fails",
+      "title": "test_c4_search_with_no_results_logged_fails",
+      "status": "passed",
+      "duration": 7.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_n1_none_found_without_second_searches_fails",
+      "title": "test_n1_none_found_without_second_searches_fails",
+      "status": "passed",
+      "duration": 7.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_n1_not_required_when_nothing_is_none_found",
+      "title": "test_n1_not_required_when_nothing_is_none_found",
+      "status": "passed",
+      "duration": 8.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_codebook_md_lists_every_allowed_value",
+      "title": "test_codebook_md_lists_every_allowed_value",
+      "status": "passed",
+      "duration": 2.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_load_codebook_reads_the_repository_codebook_by_default",
+      "title": "test_load_codebook_reads_the_repository_codebook_by_default",
+      "status": "passed",
+      "duration": 1.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_s1_text_inside_template_is_hidden_and_text_after_it_is_read",
+      "title": "test_s1_text_inside_template_is_hidden_and_text_after_it_is_read",
+      "status": "passed",
+      "duration": 10.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_s1_text_beside_a_pdf_is_read_as_plain_text",
+      "title": "test_s1_text_beside_a_pdf_is_read_as_plain_text",
+      "status": "passed",
+      "duration": 7.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_registrable_domain_without_www_and_for_a_bare_system_domain",
+      "title": "test_registrable_domain_without_www_and_for_a_bare_system_domain",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_s5_quote_of_exactly_the_limit_passes",
+      "title": "test_s5_quote_of_exactly_the_limit_passes",
+      "status": "passed",
+      "duration": 7.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_c4_prose_under_a_search_heading_is_not_a_result",
+      "title": "test_c4_prose_under_a_search_heading_is_not_a_result",
+      "status": "passed",
+      "duration": 7.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_cue_prefix_is_everything_before_the_star",
+      "title": "test_cue_prefix_is_everything_before_the_star",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_one_bad_variable_never_stops_the_checks_on_the_others[not coded-checked_on_it0]",
+      "title": "test_one_bad_variable_never_stops_the_checks_on_the_others[not coded-checked_on_it0]",
+      "status": "passed",
+      "duration": 6.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_one_bad_variable_never_stops_the_checks_on_the_others[value outside the codebook-checked_on_it1]",
+      "title": "test_one_bad_variable_never_stops_the_checks_on_the_others[value outside the codebook-checked_on_it1]",
+      "status": "passed",
+      "duration": 6.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_one_bad_variable_never_stops_the_checks_on_the_others[empty quote-checked_on_it2]",
+      "title": "test_one_bad_variable_never_stops_the_checks_on_the_others[empty quote-checked_on_it2]",
+      "status": "passed",
+      "duration": 6.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_one_bad_variable_never_stops_the_checks_on_the_others[saved copy missing-checked_on_it3]",
+      "title": "test_one_bad_variable_never_stops_the_checks_on_the_others[saved copy missing-checked_on_it3]",
+      "status": "passed",
+      "duration": 6.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_stance_tone_pair_is_not_compared_when_one_is_uncoded",
+      "title": "test_stance_tone_pair_is_not_compared_when_one_is_uncoded",
+      "status": "passed",
+      "duration": 5.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_messages_say_what_each_check_found",
+      "title": "test_messages_say_what_each_check_found",
+      "status": "passed",
+      "duration": 20.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_run_covers_the_sample_and_summarizes_each_check",
+      "title": "test_run_covers_the_sample_and_summarizes_each_check",
+      "status": "passed",
+      "duration": 17.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_main_writes_the_report_prints_failures_and_sets_the_exit_code",
+      "title": "test_main_writes_the_report_prints_failures_and_sets_the_exit_code",
+      "status": "passed",
+      "duration": 12.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_check_study"
+      ],
+      "fullName": "study.tests.test_check_study test_command_line_checks_only_the_named_schools",
+      "title": "test_command_line_checks_only_the_named_schools",
+      "status": "passed",
+      "duration": 157.0,
+      "failureMessages": []
+     }
+    ]
+   },
+   {
+    "name": "study/tests/test_draw_sample.py",
+    "status": "passed",
+    "assertionResults": [
+     {
+      "ancestorTitles": [
+       "study.tests.test_draw_sample"
+      ],
+      "fullName": "study.tests.test_draw_sample test_round1_rows_are_unchanged",
+      "title": "test_round1_rows_are_unchanged",
+      "status": "passed",
+      "duration": 1.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_draw_sample"
+      ],
+      "fullName": "study.tests.test_draw_sample test_drawing_again_from_the_committed_frame_gives_the_committed_sample",
+      "title": "test_drawing_again_from_the_committed_frame_gives_the_committed_sample",
+      "status": "passed",
+      "duration": 5.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_draw_sample"
+      ],
+      "fullName": "study.tests.test_draw_sample test_round2_has_four_per_national_stratum_and_one_ohio_s2_school",
+      "title": "test_round2_has_four_per_national_stratum_and_one_ohio_s2_school",
+      "status": "passed",
+      "duration": 1.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_draw_sample"
+      ],
+      "fullName": "study.tests.test_draw_sample test_no_school_is_drawn_twice",
+      "title": "test_no_school_is_drawn_twice",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_draw_sample"
+      ],
+      "fullName": "study.tests.test_draw_sample test_how_values_contain_no_comma",
+      "title": "test_how_values_contain_no_comma",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     }
+    ]
+   },
+   {
+    "name": "study/tests/test_mutation_score.py",
+    "status": "passed",
+    "assertionResults": [
+     {
+      "ancestorTitles": [
+       "study.tests.test_mutation_score"
+      ],
+      "fullName": "study.tests.test_mutation_score test_every_kind_of_change_is_found_once_per_place",
+      "title": "test_every_kind_of_change_is_found_once_per_place",
+      "status": "passed",
+      "duration": 0.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_mutation_score"
+      ],
+      "fullName": "study.tests.test_mutation_score test_each_mutant_is_valid_python_that_differs_from_the_original_in_one_place",
+      "title": "test_each_mutant_is_valid_python_that_differs_from_the_original_in_one_place",
+      "status": "passed",
+      "duration": 5.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_mutation_score"
+      ],
+      "fullName": "study.tests.test_mutation_score test_a_test_that_misses_the_boundary_lets_boundary_bugs_survive",
+      "title": "test_a_test_that_misses_the_boundary_lets_boundary_bugs_survive",
+      "status": "passed",
+      "duration": 1681.0,
+      "failureMessages": []
+     },
+     {
+      "ancestorTitles": [
+       "study.tests.test_mutation_score"
+      ],
+      "fullName": "study.tests.test_mutation_score test_a_test_at_the_boundary_kills_every_mutant",
+      "title": "test_a_test_at_the_boundary_kills_every_mutant",
+      "status": "passed",
+      "duration": 1828.0,
+      "failureMessages": []
+     }
+    ]
+   }
+  ]
+ }
+}

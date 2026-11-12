@@ -194,3 +194,8 @@ blockquote { margin: 6px 0; padding: 4px 12px; border-left: 3px solid var(--bord
 details.reply { margin: 4px 0 0; padding: 6px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
 details.reply summary { font-size: 0.88rem; color: var(--accent); }
 .data td.na { color: var(--muted); }
+/* Phase 6, "How the tests work". */
+.survivors th { overflow-wrap: break-word; font-weight: 400; }
+.survivors td { overflow-wrap: anywhere; }
+.edge ul { margin: 0; padding-left: 1.1em; }
+.how h3 { margin-top: 1.4em; }
