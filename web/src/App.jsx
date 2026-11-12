@@ -88,7 +88,7 @@ export default function App() {
       </header>
       <main>{tab.deliverable ? <Deliverable tab={tab} /> : <Overview tab={tab} />}</main>
       <footer>
-        Work in progress. Built from commit{' '}
+        Built from commit{' '}
         <a href={commitUrl}>
           <code>{__BUILD_COMMIT__}</code>
         </a>{' '}

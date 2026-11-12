@@ -666,8 +666,8 @@
   {
    "session": "a9056776-4951-4636-a9ad-acb1dbccb955",
    "subagent": false,
-   "apiRequests": 1480,
-   "uniqueResponses": 1477,
+   "apiRequests": 1489,
+   "uniqueResponses": 1486,
    "unansweredRequests": [
     "2026-11-11T16:53:13.167Z",
     "2026-11-11T17:22:15.570Z",
@@ -835,7 +835,7 @@
    "claim": "overview-cards",
    "suite": "web",
    "test": "each count equals a count taken directly from values.json and sample.csv",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -843,7 +843,7 @@
    "claim": "overview-cards",
    "suite": "web",
    "test": "lists exactly one entry per file in validation/runs",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -851,7 +851,7 @@
    "claim": "overview-cards",
    "suite": "web",
    "test": "with no filters, every entry is shown (replies under their prompts)",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -859,7 +859,7 @@
    "claim": "overview-cards",
    "suite": "web",
    "test": "the four totals equal the sum of the per-response rows and are shown separately",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -867,7 +867,7 @@
    "claim": "research-descriptive",
    "suite": "web",
    "test": "every question adds up to 30 national schools (6 per stratum) and 6 Ohio schools",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -875,7 +875,7 @@
    "claim": "research-descriptive",
    "suite": "web",
    "test": "the page shows the counts and says the findings are descriptive",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -883,7 +883,7 @@
    "claim": "research-descriptive",
    "suite": "web",
    "test": "the Research note counts the Ohio schools Marcus chose from sample.csv",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -899,7 +899,7 @@
    "claim": "research-finding-dept",
    "suite": "web",
    "test": "each \"What the data shows\" number equals a count taken directly from values.json and sample.csv",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -907,7 +907,7 @@
    "claim": "research-finding-stance",
    "suite": "web",
    "test": "each \"What the data shows\" number equals a count taken directly from values.json and sample.csv",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -915,7 +915,7 @@
    "claim": "research-finding-disclosure",
    "suite": "web",
    "test": "each \"What the data shows\" number equals a count taken directly from values.json and sample.csv",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -923,7 +923,7 @@
    "claim": "research-finding-syllabus",
    "suite": "web",
    "test": "each \"What the data shows\" number equals a count taken directly from values.json and sample.csv",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -931,7 +931,7 @@
    "claim": "research-links",
    "suite": "web",
    "test": "every quote has a live link (with a text fragment for web pages) and a saved copy that exists",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -939,7 +939,7 @@
    "claim": "research-links",
    "suite": "web",
    "test": "a text fragment matches the whole quote (never first,last words), escapes dashes, skips PDFs",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -955,7 +955,7 @@
    "claim": "research-refetch",
    "suite": "web",
    "test": "the re-check line matches refetch-report.json",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -963,7 +963,7 @@
    "claim": "validation-lede",
    "suite": "web",
    "test": "lists exactly one entry per file in validation/runs",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -971,7 +971,7 @@
    "claim": "validation-lede",
    "suite": "web",
    "test": "searching a test name finds the runs that contain it",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -979,7 +979,7 @@
    "claim": "validation-lede",
    "suite": "web",
    "test": "the study check table has all 36 schools, each cell matching checks.json",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -995,7 +995,7 @@
    "claim": "validation-scope",
    "suite": "web",
    "test": "the run list states the unrecorded test commands counted by the pipeline",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1011,7 +1011,7 @@
    "claim": "validation-mutations",
    "suite": "web",
    "test": "\"had failures\" shows only runs with failed tests, and each is under Errors caught",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1019,7 +1019,7 @@
    "claim": "validation-claims",
    "suite": "web",
    "test": "every marked claim on the pages is in the register, and every register entry is on its tab",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1027,7 +1027,7 @@
    "claim": "validation-claims",
    "suite": "web",
    "test": "every paragraph, list item and definition on every page is a registered claim or drawn from a named file",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1035,7 +1035,7 @@
    "claim": "validation-claims",
    "suite": "web",
    "test": "every claim names evidence that exists: files, test names in their suite, outside sources with a date",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1043,7 +1043,7 @@
    "claim": "validation-claims",
    "suite": "web",
    "test": "the claims table lists every register entry with its C5 result",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1059,7 +1059,7 @@
    "claim": "validation-caught-outside",
    "suite": "web",
    "test": "every entry in caught.json is complete and its evidence exists",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1155,7 +1155,7 @@
    "claim": "validation-study",
    "suite": "web",
    "test": "the study check table has all 36 schools, each cell matching checks.json",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1163,7 +1163,7 @@
    "claim": "contributions-lede",
    "suite": "web",
    "test": "filtering by person shows only that person",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1171,7 +1171,7 @@
    "claim": "contributions-lede",
    "suite": "web",
    "test": "every entry has a phase",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1179,7 +1179,7 @@
    "claim": "contributions-source",
    "suite": "web",
    "test": "every prompt has its reply reachable from it",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1187,7 +1187,7 @@
    "claim": "contributions-source",
    "suite": "web",
    "test": "every prompt is published: the hide list is empty",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1211,7 +1211,7 @@
    "claim": "tokens-lede",
    "suite": "web",
    "test": "the phase rows add up to the totals",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1219,7 +1219,7 @@
    "claim": "tokens-lede",
    "suite": "web",
    "test": "the reset table has at least one /clear and one /compact row",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1235,7 +1235,7 @@
    "claim": "tokens-thinking-cache",
    "suite": "web",
    "test": "the four totals equal the sum of the per-response rows and are shown separately",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1243,7 +1243,7 @@
    "claim": "tokens-thinking-cache",
    "suite": "web",
    "test": "cache reads are the largest token class",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1267,7 +1267,7 @@
    "claim": "tokens-resets",
    "suite": "web",
    "test": "the reset table has at least one /clear and one /compact row",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1283,7 +1283,7 @@
    "claim": "tokens-readings",
    "suite": "web",
    "test": "every usage reading is in the readings table",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1291,7 +1291,7 @@
    "claim": "tokens-readings",
    "suite": "web",
    "test": "every phase has a first reading, and every reset with no reading just before it is named on the page",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1339,7 +1339,7 @@
    "claim": "validation-how-intro",
    "suite": "web",
    "test": "the edge-case table lists every test in the newest study run exactly once, each named check in its own row",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1347,7 +1347,7 @@
    "claim": "validation-how-layers",
    "suite": "web",
    "test": "the three layers state the newest recorded run of each suite, the study checks and the claim count",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1355,7 +1355,7 @@
    "claim": "validation-how-mutations",
    "suite": "web",
    "test": "the mutation numbers come from the first and newest mutation runs, and every survivor has a written verdict",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1363,7 +1363,7 @@
    "claim": "validation-how-mutations",
    "suite": "web",
    "test": "the newest mutation run was measured on the current checker and its current tests",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   },
@@ -1395,7 +1395,7 @@
    "claim": "validation-how-edge",
    "suite": "web",
    "test": "the edge-case table lists every test in the newest study run exactly once, each named check in its own row",
-   "run": "2026-11-12T04-47-06-696Z_web.json",
+   "run": "2026-11-12T04-48-34-261Z_web.json",
    "status": "passed",
    "pass": true
   }
@@ -1531,25 +1531,25 @@
   }
  ],
  "testCommands": {
-  "recorded": 57,
+  "recorded": 58,
   "unrecorded": 28,
   "first": "2026-11-08T05:38:06.464Z",
   "rule": "shell commands Claude ran whose program is uv, python, pytest, npx, npm or vitest and that name pytest, vitest, npm test or a recorder; recorded = through record_tests.py or test:record"
  },
  "C4_inflation": {
-  "usageRows": 4193,
-  "uniqueResponses": 1635,
+  "usageRows": 4211,
+  "uniqueResponses": 1644,
   "naive": {
-   "input": 8510,
-   "cacheWrite": 13052953,
-   "cacheRead": 678520305,
-   "output": 4879669
+   "input": 8546,
+   "cacheWrite": 13064030,
+   "cacheRead": 681384811,
+   "output": 4887040
   },
   "deduplicated": {
-   "input": 3320,
-   "cacheWrite": 4215622,
-   "cacheRead": 261560383,
-   "output": 1460164
+   "input": 3338,
+   "cacheWrite": 4220987,
+   "cacheRead": 262991048,
+   "output": 1463816
   }
  },
  "privacy": [

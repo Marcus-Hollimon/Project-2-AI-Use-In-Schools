@@ -81,4 +81,9 @@ describe('App: what a visitor sees', () => {
     render(<App />)
     expect(screen.getByRole('contentinfo').textContent).toMatch(/Built from commit \S+/)
   })
+
+  test('the footer no longer calls the site a work in progress (Marcus, end of Phase 6)', () => {
+    render(<App />)
+    expect(screen.getByRole('contentinfo').textContent).not.toMatch(/work in progress/i)
+  })
 })
