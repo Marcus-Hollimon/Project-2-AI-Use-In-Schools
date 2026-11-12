@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-12T01:35:02.936387Z",
+ "generatedAt": "2026-11-12T01:54:45.749289Z",
  "entries": [
   {
    "time": "2026-11-08T05:00:55.083000Z",
@@ -2297,13 +2297,55 @@
    "phase": "5"
   },
   {
-   "time": "2026-11-12T01:34:32.262000Z",
+   "time": "2026-11-12T01:35:13Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Codebook v3: apply Marcus's judgment calls, re-read every tone value",
+   "commit": "dd54c15",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:36:37Z",
+   "actor": "Claude",
+   "kind": "commit",
+   "text": "Usage reading at Phase 5 end, before /compact",
+   "commit": "8b8e714",
+   "note": "written by Claude, pushed from Marcus's account",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:36:55.128000Z",
    "actor": "Claude",
    "kind": "reply",
    "turn": 47,
-   "text": "Updating STATE.md so it no longer says the decisions are unapplied, then committing.",
-   "toolCalls": 88,
+   "text": "All your decisions are now applied and live. Phase 5 is finished: all 36 schools pass every check, and the deploy went through.\n\n**What changed:** 23 values at 16 schools. Berry kept its values but now cites its official syllabus statement. Every before-and-after value is listed in `data/coded/codebook-v3-recode.json`.\n\n**The site's four findings, before and after (recounted from the data):**\n\n| Finding | Before | Now |\n|---|---|---|\n| No public software engineering syllabus | 23 of 30 national, 4 of 6 Ohio | **24 of 30, 5 of 6** (Penn, Case Western) |\n| University stance \"none found\" | national 2, Ohio 1 | **national 3, Ohio 2** (UDC, Defiance) |\n| University stance \"instructor decides\", national | 10 | **9** |\n| University stance \"restrict\", Ohio | 4 | **3** |\n| Disclosure required | 12 of 30 national, 3 of 6 Ohio | **10 of 30, 2 of 6** |\n\nThe disclosure sentence now shows the split you asked for. Nationally, 6 schools state the rule outright and 4 were read from a plagiarism or cheating rule. In Ohio, both schools state it outright.\n\n**Tone of university pages (national):**\n\n| Tone | Before | Now |\n|---|---|---|\n| positive | 11 | 4 |\n| neutral | 7 | 12 |\n| cautionary | 10 | 6 |\n| mixed | (new) | 6 |\n\n- **Mixed:** six balanced pages moved here (Snow, Virginia, Nevada State, Temple, Nova Southeastern, Maine Fort Kent).\n- **Neutral:** five rule lists moved here after your last answer. That question exposed a mistake of mine: I had coded the same kind of text differently at different schools.\n- **Ohio:** Defiance's university tone is now \"none found\", so Ohio has no cautionary university page.\n- **CS department pages:** ASU's moved from cautionary to neutral.\n\n**Collaboration** moved too: \"explicit\" 6 to 5 and \"in passing\" 14 to 12. This comes from the library-guide rule.\n\n**Tests:** study 42/42, web 49/49 and pipeline 19/19, all recorded. I also recorded a deliberately broken run for each new piece (UDC's reason rule and the disclosure split); both failed, which shows the tests catch those errors. The build exits 0, and the live page shows the new numbers.\n\nThe next job is Phase 6 (evaluation), which is a different kind of work, so your rule calls for a compact now. STATE.md is updated, the usage reading is recorded, and everything is committed and pushed. Paste this:\n\n```\n/compact Phase 5 DONE (codebook v3 applied, dd54c15 deployed, all checks pass). Next: write the Phase 6 (evaluation) spec for Marcus to approve before any Phase 6 work. Take an \"after /compact\" usage reading first. Deadline 2 PM EST Thu Nov 12.\n```",
+   "toolCalls": 97,
    "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:37:25.858000Z",
+   "actor": "Marcus",
+   "kind": "command",
+   "text": "/compact Phase 5 DONE (codebook v3 applied, dd54c15 deployed, all checks pass). Next: write the Phase 6 (evaluation) spec for Marcus to approve before any Phase 6 work. Take an \"after /compact\" usage reading first. Deadline 2 PM EST Thu Nov 12.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:53:05.834000Z",
+   "actor": "Marcus",
+   "kind": "prompt",
+   "turn": 48,
+   "text": "alright... evaluation. I'm not the most technical guy. So the only way to prove this works is tests. Which you seem to have already done. There is also a final presentation where I show my findings and my process, with a mention about how I proved this whole thing actually works. Hmmm. What do you think? Could you make a specific part under validation to explain how the tests function, and why you know for certain they are fully exhaustive of edge cases? Lets throw some ideas out here to wrap this up and then make a pptx of what we've found.",
+   "phase": "5"
+  },
+  {
+   "time": "2026-11-12T01:54:41.690000Z",
+   "actor": "Claude",
+   "kind": "reply",
+   "turn": 48,
+   "text": "The build's own check rejected my phase label \"5→6\" (only single phase names are allowed). That is the check working; I'll label the row \"6\" and rebuild.",
+   "toolCalls": 13,
+   "phase": "6"
   }
  ]
 }

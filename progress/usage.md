@@ -63,6 +63,7 @@ percentages as the app reports them, so a change of "1 point" means anywhere fro
 | 2026-11-11T20:20:41-05:00 | 5 | 11 judgment calls decided (not yet applied), just before /compact | 21 | 36 | 300,492 | none (next row is after /compact) |
 | 2026-11-11T20:23:29-05:00 | 5 | after /compact (judgment calls decided, none applied) | 24 | 36 | 88,463 | /compact by Marcus (manual; last reading before it is the 20:20:41 row) |
 | 2026-11-11T20:36:37-05:00 | 5 | phase end (codebook v3 applied, dd54c15 deployed), just before /compact | 35 | 38 | 231,513 | none (next row is after /compact) |
+| 2026-11-11T20:53:42-05:00 | 6 | after /compact (Phase 5 done; Phase 6 spec next) | 37 | 38 | 89,600 | /compact by Marcus (manual; last reading before it is the 20:36:37 row) |
 
 ## Cost per phase
 | Phase | 5-hour points | Weekly points | Context growth (tokens) |
