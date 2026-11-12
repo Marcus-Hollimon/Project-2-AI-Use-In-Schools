@@ -1,12 +1,14 @@
 # R1 re-fetch report
 
-Generated 2026-11-11T11:32:06-05:00 by `study/refetch.py`. Every archived source URL was fetched again with the same curl command used to save it. A report, not a failure: policies change.
+Generated 2026-11-11T19:47:52-05:00 by `study/refetch.py`. Every archived source URL was fetched again with the same curl command used to save it. A report, not a failure: policies change.
 
 | Result | Pages |
 |---|---|
-| changed | 26 |
-| refused | 2 |
-| unchanged | 41 |
+| changed | 57 |
+| gone | 4 |
+| refused | 12 |
+| rendered text (no byte hash to compare) | 2 |
+| unchanged | 109 |
 
 Coded quotes no longer found in the new copy of a changed page: 0.
 
@@ -14,39 +16,94 @@ Coded quotes no longer found in the new copy of a changed page: 0.
 
 | Archive | Coded quotes | Detail |
 |---|---|---|
+| `data/sources/104151-arizona-state/2026-11-11-scai-handbooks.html` | 0 | no quotes coded from this page |
+| `data/sources/131399-udc/2026-11-11-ai-initiative.html` | 1 | all 1 still present |
+| `data/sources/136215-nova-southeastern/2026-11-11-lec-genai.html` | 1 | all 1 still present |
+| `data/sources/152600-valparaiso/2026-11-11-cital-honor-code-ai.html` | 0 | no quotes coded from this page |
+| `data/sources/152600-valparaiso/2026-11-11-dept-math-cs.html` | 0 | no quotes coded from this page |
+| `data/sources/153603-iowa-state/2026-11-11-celt-ai-in-teaching.html` | 0 | no quotes coded from this page |
+| `data/sources/153603-iowa-state/2026-11-11-celt-syllabus-statements.html` | 0 | no quotes coded from this page |
+| `data/sources/153603-iowa-state/2026-11-11-cs-dept.html` | 0 | no quotes coded from this page |
+| `data/sources/153603-iowa-state/2026-11-11-se-program.html` | 0 | no quotes coded from this page |
+| `data/sources/161235-maine-fort-kent/2026-11-11-libguide-ai-at-umfk.html` | 3 | all 3 still present |
+| `data/sources/161235-maine-fort-kent/2026-11-11-libguide-students-tools.html` | 0 | no quotes coded from this page |
+| `data/sources/161235-maine-fort-kent/2026-11-11-libguide-syllabus-help.html` | 1 | all 1 still present |
 | `data/sources/162928-johns-hopkins/2026-11-11-cs-home.html` | 0 | no quotes coded from this page |
 | `data/sources/162928-johns-hopkins/2026-11-11-cs-integrity-code.html` | 0 | no quotes coded from this page |
 | `data/sources/162928-johns-hopkins/2026-11-11-cs-support-ai-wiki.html` | 0 | no quotes coded from this page |
-| `data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-guidelines.html` | 3 | all 3 still present |
-| `data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-main.html` | 0 | no quotes coded from this page |
-| `data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-policy.html` | 0 | no quotes coded from this page |
-| `data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-syllabus.html` | 0 | no quotes coded from this page |
+| `data/sources/162928-johns-hopkins/2026-11-11-cs-undergrad-current.html` | 0 | no quotes coded from this page |
+| `data/sources/162928-johns-hopkins/2026-11-11-oose-syllabus-spring2024.html` | 0 | no quotes coded from this page |
 | `data/sources/166683-mit/2026-11-11-eecs-undergrad.html` | 0 | no quotes coded from this page |
+| `data/sources/166683-mit/2026-11-11-integrity-writing-code.html` | 0 | no quotes coded from this page |
 | `data/sources/174066-minnesota/2026-11-11-cs-academic-conduct.html` | 0 | no quotes coded from this page |
 | `data/sources/174066-minnesota/2026-11-11-cs-home.html` | 0 | no quotes coded from this page |
 | `data/sources/174066-minnesota/2026-11-11-cse-news-ai-literacy.html` | 0 | no quotes coded from this page |
 | `data/sources/174066-minnesota/2026-11-11-cse-news-ai-workplace.html` | 3 | all 3 still present |
 | `data/sources/174066-minnesota/2026-11-11-provost-ai-in-classes.html` | 0 | no quotes coded from this page |
 | `data/sources/174066-minnesota/2026-11-11-provost-genai-syllabus.html` | 3 | all 3 still present |
+| `data/sources/193946-niagara-cc/2026-11-11-tdx-ai-article.html` | 2 | all 2 still present |
+| `data/sources/194091-nyit/2026-11-11-academic-integrity-policy.html` | 3 | all 3 still present |
+| `data/sources/194091-nyit/2026-11-11-ai-systems-usage-policy.html` | 0 | no quotes coded from this page |
 | `data/sources/201195-baldwin-wallace/2026-11-11-cs-major.html` | 0 | no quotes coded from this page |
 | `data/sources/201195-baldwin-wallace/2026-11-11-csc310-catalog.html` | 0 | no quotes coded from this page |
 | `data/sources/201195-baldwin-wallace/2026-11-11-se-major.html` | 0 | no quotes coded from this page |
+| `data/sources/201645-case-western/2026-11-11-provost-ai-policies.html` | 0 | no quotes coded from this page |
 | `data/sources/201885-cincinnati/2026-11-11-ai-guidelines.html` | 2 | all 2 still present |
 | `data/sources/201885-cincinnati/2026-11-11-ai-students.html` | 0 | no quotes coded from this page |
 | `data/sources/201885-cincinnati/2026-11-11-ai-teaching-rftl.html` | 0 | no quotes coded from this page |
 | `data/sources/201885-cincinnati/2026-11-11-chatgpt-guide-blog.html` | 1 | all 1 still present |
 | `data/sources/201885-cincinnati/2026-11-11-cs-department.html` | 0 | no quotes coded from this page |
+| `data/sources/202222-columbus-state/2026-11-11-syllabi-index.html` | 0 | no quotes coded from this page |
+| `data/sources/204796-ohio-state/2026-11-11-oaa-ai-integrity-2023.html` | 0 | no quotes coded from this page |
 | `data/sources/213659-luzerne/2026-11-11-cs-program.html` | 0 | no quotes coded from this page |
 | `data/sources/213659-luzerne/2026-11-11-student-forms.html` | 0 | no quotes coded from this page |
+| `data/sources/215062-penn/2026-11-11-cetli-academic-integrity-ai.html` | 1 | all 1 still present |
+| `data/sources/215062-penn/2026-11-11-cetli-creating-ai-policies.html` | 2 | all 2 still present |
+| `data/sources/217819-charleston/2026-11-11-academic-integrity-ai.html` | 3 | all 3 still present |
+| `data/sources/217819-charleston/2026-11-11-compsci-ai-at-cofc.html` | 0 | no quotes coded from this page |
+| `data/sources/217819-charleston/2026-11-11-compsci-home.html` | 0 | no quotes coded from this page |
+| `data/sources/217819-charleston/2026-11-11-qep-intentional-ai.html` | 0 | no quotes coded from this page |
+| `data/sources/217819-charleston/2026-11-11-student-handbook-honor-code.html` | 1 | all 1 still present |
 | `data/sources/218539-presbyterian/2026-11-11-cs-program.html` | 0 | no quotes coded from this page |
 | `data/sources/220604-le-moyne-owen/2026-11-11-cs-program.html` | 0 | no quotes coded from this page |
+| `data/sources/227757-rice/2026-11-11-honor-ai-policy.html` | 3 | all 3 still present |
+| `data/sources/237969-wv-wesleyan/2026-11-11-cs-major.html` | 0 | no quotes coded from this page |
+| `data/sources/243744-stanford/2026-11-11-bulletin-cs146s.html` | 1 | all 1 still present |
+| `data/sources/441900-nevada-state/2026-11-11-ai-hub.html` | 3 | all 3 still present |
+| `data/sources/441900-nevada-state/2026-11-11-ai-statements.html` | 0 | no quotes coded from this page |
+| `data/sources/441900-nevada-state/2026-11-11-lasb-course-policies.html` | 2 | all 2 still present |
+| `data/sources/441900-nevada-state/2026-11-11-student-code-of-conduct.html` | 1 | all 1 still present |
 
 ## Refused
 
 | Archive | Coded quotes | Detail |
 |---|---|---|
+| `data/sources/104708-glendale-cc/2026-11-11-cs-program.html` | 0 | HTTP 403 (site refused the request; the page may still exist) |
+| `data/sources/104708-glendale-cc/2026-11-11-district-ar-2-3.html` | 0 | HTTP 403 (site refused the request; the page may still exist) |
+| `data/sources/104708-glendale-cc/2026-11-11-maricopa-student-ai-tools.html` | 0 | HTTP 403 (site refused the request; the page may still exist) |
+| `data/sources/104708-glendale-cc/2026-11-11-mcli-syllabus-statements.html` | 0 | HTTP 403 (site refused the request; the page may still exist) |
+| `data/sources/104708-glendale-cc/2026-11-11-syllabus-elements.html` | 0 | HTTP 403 (site refused the request; the page may still exist) |
 | `data/sources/152600-valparaiso/2026-11-11-cs358-syllabus-spring2010.html` | 0 | HTTP 403 (site refused the request; the page may still exist) |
+| `data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-guidelines.html` | 3 | HTTP 403 (site refused the request; the page may still exist) |
+| `data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-main.html` | 0 | HTTP 403 (site refused the request; the page may still exist) |
+| `data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-policy.html` | 0 | HTTP 403 (site refused the request; the page may still exist) |
+| `data/sources/162928-johns-hopkins/2026-11-11-teaching-genai-syllabus.html` | 0 | HTTP 403 (site refused the request; the page may still exist) |
+| `data/sources/233772-tidewater/2026-11-11-code-student-rights-2024.pdf` | 2 | HTTP 403 (site refused the request; the page may still exist) |
 | `data/sources/234076-virginia/2026-11-11-cs-undergrad.html` | 0 | HTTP 403 (site refused the request; the page may still exist) |
+
+## Gone
+
+| Archive | Coded quotes | Detail |
+|---|---|---|
+| `data/sources/153603-iowa-state/2026-11-11-ai-current-students.html` | 0 | HTTP 404 |
+| `data/sources/153603-iowa-state/2026-11-11-celt-ai-teaching.html` | 0 | HTTP 404 |
+| `data/sources/153603-iowa-state/2026-11-11-cs-academic-integrity.html` | 0 | HTTP 404 |
+| `data/sources/243744-stanford/2026-11-11-cs-honor-code.html` | 0 | HTTP 404 |
+
+## Rendered text (not compared)
+
+- `data/sources/104708-glendale-cc/2026-11-11-district-ar-2-3.rendered.txt`
+- `data/sources/216807-westminster/2026-11-11-catalog-academic-integrity.rendered.txt`
 
 ## Follow-up checks
 
@@ -62,3 +119,12 @@ not retried with other headers (project rule). Runs on 2026-11-11:
   quotes in the new copy itself. Valparaiso and Virginia still refused; neither carries a coded quote.
 
 So a "refused" row means the site blocked that request, not that the page was removed.
+
+- Third run (Phase 5, all 36 schools, 184 pages; finished before 2026-11-11T19:48:36-05:00): 109 unchanged, 57 changed,
+  12 refused, 4 gone, 2 rendered text. No coded quote is missing from any changed page. The 4 gone
+  pages (3 Iowa State, 1 Stanford) already answered HTTP 404 when they were first saved and no coded
+  value uses them; they are kept as evidence of what the search returned. Of the 12 refused pages,
+  two carry coded quotes. The Johns Hopkins guidelines page was opened again in the browser pane
+  shortly before this note was written (2026-11-11T19:48:36-05:00): it loads ("Last update 2/19/26") and all 3 coded quotes are on it word for word. The
+  Tidewater code PDF (2 quotes; HTTP 200 when saved at 16:55 the same day) was not opened, because a
+  PDF in the browser pane becomes a download, which needs Marcus's permission.

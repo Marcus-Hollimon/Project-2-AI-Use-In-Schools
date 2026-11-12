@@ -113,6 +113,25 @@ def test_unanswered_retry_is_listed_and_unexplained_gaps_fail():
     assert not tx.check_completeness([broken], "live")[0]["pass"]
 
 
+def test_synthetic_placeholder_reply_is_not_a_response():
+    # Seen 2026-11-11 19:40 EST: after a /compact the app wrote "No response requested." as an
+    # assistant record with model "<synthetic>", zero usage and no api-request before it.
+    rows = [prompt("2026-11-08T05:00:00Z", "hi"), request("2026-11-08T05:00:01Z")]
+    rows += assistant_rows("m1", "2026-11-08T05:00:02Z", [text("a")])
+    rows += [{"type": "assistant", "uuid": uid(), "timestamp": "2026-11-08T05:00:05Z",
+              "message": {"id": "syn1", "model": "<synthetic>", "content": [text("No response requested.")],
+                          "usage": usage(0, 0, 0, 0, 0)}}]
+    w = tx.walk([one_file(rows, "old")])
+    assert [r["id"] for r in w["responses"]] == ["m1"]
+    assert w["fileStats"][0]["uniqueResponses"] == 1
+    assert tx.check_completeness(w["fileStats"], "live")[0]["pass"]
+    # A placeholder between two requests does not hide that the first was never answered.
+    rows2 = [prompt("2026-11-08T05:00:00Z", "hi"), request("2026-11-08T05:00:01Z")] + rows[-1:]
+    rows2 += [request("2026-11-08T05:00:06Z")] + assistant_rows("m2", "2026-11-08T05:00:07Z", [text("b")])
+    w2 = tx.walk([one_file(rows2, "old")])
+    assert w2["fileStats"][0]["unansweredRequests"] == ["2026-11-08T05:00:01Z"]
+
+
 def test_user_records_that_are_not_prompts():
     ask = tool("AskUserQuestion", "ask1")
     rows = [prompt("2026-11-08T05:00:00Z", "real question"), request("2026-11-08T05:00:01Z")]

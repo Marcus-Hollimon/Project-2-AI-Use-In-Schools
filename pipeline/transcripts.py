@@ -61,8 +61,13 @@ def context_size(classes):
 
 
 def _message(record):
+    """The record's message. An assistant record with model "<synthetic>" is a placeholder the app
+    writes itself (seen 2026-11-11 at 19:40 EST: "No response requested." after a /compact, all usage
+    zero, no api-request before it). It is not a model response, so it is returned as no message."""
     message = record.get("message")
-    return message if isinstance(message, dict) else {}
+    if not isinstance(message, dict) or message.get("model") == "<synthetic>":
+        return {}
+    return message
 
 
 def _blocks(message):
@@ -125,7 +130,7 @@ def walk(files):
         api_requests = sum(1 for r in rows if r.get("type") == "api-request")
         ids_in_file = []
         request_indexes = [i for i, r in enumerate(rows) if r.get("type") == "api-request"]
-        assistant_indexes = [i for i, r in enumerate(rows) if r.get("type") == "assistant"]
+        assistant_indexes = [i for i, r in enumerate(rows) if r.get("type") == "assistant" and _message(r)]
         last_request_index = request_indexes[-1] if request_indexes else -1
         last_assistant_index = assistant_indexes[-1] if assistant_indexes else -1
         # A request followed by another request with no response in between was never answered
