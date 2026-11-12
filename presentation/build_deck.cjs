@@ -575,7 +575,7 @@ pres.addSection({ title: 'Close' })
     { text: 'Code and data: ', options: { bold: true } }, { text: REPO, options: { hyperlink: { url: REPO }, color: P.white } },
   ], { x: 0.6, y: 4.35, w: 8.8, h: 0.7, fontSize: 13, color: P.onInk })
   s.addNotes(
-    `To close, the limits. The groups are small, so these are counts for these schools, not national percentages. I was the only person deciding the readings, so agreement between two coders was not measured; that would be the first thing to add. Only public pages were used. And pages change, so the study saved a copy of every page; when all ${refetch.pages} were fetched again on ${refetchDay}, ${refetch.coded_quotes_missing_from_new_copy} of the ${refetchQuotes} quotes on changed pages had disappeared. Everything is on the website and in the repository, so anyone can check any answer.`,
+    `To close, the limits. The groups are small, so these are counts for these schools, not national percentages. Claude read and coded every page, and I decided the judgment calls it raised, but no second coder read the pages independently, so agreement between two coders was not measured; that would be the first thing to add. Only public pages were used. And pages change, so the study saved a copy of every page; when all ${refetch.pages} were fetched again on ${refetchDay}, ${refetch.coded_quotes_missing_from_new_copy} of the ${refetchQuotes} quotes on changed pages had disappeared. Everything is on the website and in the repository, so anyone can check any answer.`,
   )
 }
 
