@@ -4,6 +4,8 @@
 // Every number on a slide is read from a file here, never typed in. A title that states a finding is
 // checked against the data first, and the build stops with an error if the data no longer supports it.
 // The two slides for Marcus's evaluation and reflection carry his headings only.
+// Each content slide ends with an "On the site" pointer (onSite) for the walk-through in class, and its
+// speaker notes end with plain-language terms and an "ON THE SITE" click path.
 //
 // Run from presentation/:  npm install   (once)   then   npm run build
 const fs = require('fs')
@@ -138,12 +140,12 @@ pres.defineSlideMaster({
     { placeholder: { options: { name: 'title', type: 'title', x: 0.6, y: 0.3, w: 8.8, h: 0.75, fontFace: HEAD, fontSize: 32, bold: true, color: P.white, align: 'left', valign: 'middle', margin: 0 }, text: '' } },
   ],
 })
+// The footer line holds an "On the site" pointer on each slide (onSite below), so the layout has none.
 pres.defineSlideMaster({
   title: 'CONTENT',
   background: { color: P.paper },
   slideNumber: { x: 9.0, y: 5.2, w: 0.5, h: 0.25, fontFace: BODY, fontSize: 10, color: P.muted, align: 'right' },
   objects: [
-    { text: { text: 'How US CS departments talk about generative AI · Marcus Hollimon', options: { x: 0.5, y: 5.2, w: 6.5, h: 0.25, fontFace: BODY, fontSize: 10, color: P.muted, margin: 0 } } },
     { placeholder: { options: { name: 'title', type: 'title', x: 0.5, y: 0.3, w: 9.0, h: 0.75, fontFace: HEAD, fontSize: 32, bold: true, color: P.ink, align: 'left', valign: 'middle', margin: 0 }, text: '' } },
   ],
 })
@@ -195,6 +197,29 @@ function barChart(slide, x, y, w, h, title, pairs, color) {
 function slideOf(master, section) {
   return pres.addSlide({ masterName: master, sectionTitle: section })
 }
+// The site's tab names, exactly as its top bar shows them (web/src/routes.js).
+const TAB = {
+  research: '1. Research findings', validation: '2. Validation', contributions: '3. Contributions', tokens: '4. Token usage',
+}
+// Where each tab's slides are, filled in as slides are made, for the site map slide.
+const slidesFor = { research: [], validation: [], contributions: [], tokens: [] }
+// The footer pointer: where on the site to go for this slide. steps: the tab, then headings on that page
+// (exactly as written on the site), then what to click. Tab names are bold.
+function onSite(slide, steps, tabs = []) {
+  const n = pres.slides.length
+  for (const t of tabs) slidesFor[t].push(n)
+  slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.5, y: 5.14, w: 0.98, h: 0.28, rectRadius: 0.06, fill: { color: P.teal }, line: { color: P.teal }, objectName: 'on the site' })
+  text(slide, 'On the site', { x: 0.5, y: 5.14, w: 0.98, h: 0.28, fontSize: 10, bold: true, color: P.white, align: 'center', valign: 'middle' })
+  // Two places on one slide: pass an array of paths; they are joined with a bar.
+  const paths = Array.isArray(steps[0]) ? steps : [steps]
+  text(slide, paths.flatMap((path, k) => [
+    ...(k ? [{ text: '     |     ', options: { color: P.muted } }] : []),
+    ...path.flatMap((st, i) => [
+      ...(i ? [{ text: '  ›  ', options: { color: P.teal, bold: true } }] : []),
+      { text: st, options: { bold: Object.values(TAB).includes(st) } },
+    ]),
+  ]), { x: 1.6, y: 5.14, w: 7.3, h: 0.28, fontSize: 11, valign: 'middle' })
+}
 
 // ---------- Slides ----------
 // 1. Title
@@ -235,12 +260,38 @@ pres.addSection({ title: 'Opening' })
     { text: 'And a second goal: ', options: { bold: true } },
     { text: 'show agentic, spec-driven development. Claude Code wrote all the code; I set the rules through specs, tests and reviews, and made every judgment call.' },
   ], { x: 0.5, y: 4.0, w: 9.0, h: 0.9, fontSize: 15, valign: 'middle' })
+  onSite(s, [TAB.research, 'Answers by question', 'one table per question'], ['research'])
   s.addNotes(
-    `These are the assignment's three questions. Stance asks what students are allowed to do. Tone asks whether the pages sound positive, neutral or cautious, and whether they describe working with AI as a partner. Courses asks what software engineering syllabi say. The second goal is about the process: I did not write code. I wrote and approved specs, decided every judgment call, and the work was checked by tests.`,
+    `These are the assignment's three questions. Stance asks what students are allowed to do. Tone asks whether the pages sound positive, neutral or cautious, and whether they describe working with AI as a partner. Courses asks what software engineering syllabi say. The second goal is about the process: I did not write code. I wrote and approved specs, decided every judgment call, and the work was checked by tests.\n\n` +
+      `ON THE SITE: click "${TAB.research}" in the top bar and scroll to "Answers by question". Each table is one question; the columns are the five school types (S1 to S5), the national total, and Ohio.`,
   )
 }
 
-// 3. The sample
+// 3. The website, tab by tab (a map for the walk-through; the slide numbers are filled in at the end)
+const mapSlide = slideOf('CONTENT', 'Opening')
+{
+  const s = mapSlide
+  s.addText('The website, tab by tab', { placeholder: 'title' })
+  // A copy of the site's top bar, so the audience can match it to the screen.
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.5, y: 1.2, w: 9.0, h: 0.5, rectRadius: 0.08, fill: { color: P.white }, line: { color: P.line, width: 1 }, objectName: 'site top bar outline' })
+  text(s, 'AI in CS Departments', { x: 0.7, y: 1.2, w: 2.0, h: 0.5, fontSize: 12, bold: true, valign: 'middle' })
+  const navTabs = ['Overview', ...Object.values(TAB)]
+  const navW = [0.85, 1.5, 1.05, 1.2, 1.2]
+  let nx = 9.35 - navW.reduce((a, b) => a + b, 0) - 0.08 * (navTabs.length - 1)
+  navTabs.forEach((t, i) => {
+    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: nx, y: 1.3, w: navW[i], h: 0.3, rectRadius: 0.06, fill: { color: P.panel }, line: { color: P.panel }, objectName: `tab ${t}` })
+    text(s, t, { x: nx, y: 1.3, w: navW[i], h: 0.3, fontSize: 11, align: 'center', valign: 'middle', bold: i > 0 })
+    nx += navW[i] + 0.08
+  })
+  text(s, 'Overview is the home page. Each numbered tab is one deliverable, built straight from the project\'s data files.', { x: 0.5, y: 1.8, w: 9.0, h: 0.3, fontSize: 13, color: P.muted })
+  onSite(s, [SITE.replace(/^https:\/\//, '').replace(/\/$/, '')])
+  s.addNotes(
+    `Before the findings, here is the website, because everything on these slides can be checked there. The top bar has five tabs. Overview is the home page. Research findings has the answers. Validation has the proof: every test run and the checks on every school. Contributions is the timeline of who did what. Token usage is what the AI work cost. The bar at the bottom of each slide that follows says where on the site to go for that slide.\n\n` +
+      `ON THE SITE: open ${SITE} and point at the top bar. Click each tab once so the audience sees it.`,
+  )
+}
+
+// 4. The sample
 pres.addSection({ title: 'Method' })
 {
   const s = slideOf('CONTENT', 'Method')
@@ -248,49 +299,64 @@ pres.addSection({ title: 'Method' })
   check(perStratum.every((n) => n === perStratum[0]), 'strata of unequal size')
   text(s, [{ text: `${N} schools drawn at random, ${perStratum[0]} from each of ${STRATA.length} types`, options: { bold: true } }], { x: 0.5, y: 1.2, w: 5.6, h: 0.35, fontSize: 15 })
   STRATA.forEach(([id, label], i) => {
-    const y = 1.7 + i * 0.6
+    const y = 1.65 + i * 0.56
     text(s, id, { x: 0.5, y, w: 0.45, h: 0.3, fontSize: 13, bold: true, color: P.teal, valign: 'middle' })
     dots(s, 0.95, y + 0.03, [{ n: perStratum[i], color: P.teal }], { size: 0.24, gap: 0.07, perRow: 6, name: `${id} school` })
     text(s, label, { x: 2.85, y, w: 3.3, h: 0.3, fontSize: 12, color: P.muted, valign: 'middle' })
   })
-  card(s, 6.5, 1.2, 3.0, 3.2, P.panel, 'Ohio sample')
+  card(s, 6.5, 1.2, 3.0, 3.05, P.panel, 'Ohio sample')
   text(s, [{ text: `${O} Ohio schools`, options: { bold: true } }], { x: 6.75, y: 1.4, w: 2.6, h: 0.35, fontSize: 15, color: P.ohio })
   dots(s, 6.75, 1.9, [{ n: chosenOhio, color: P.ohio }, { n: O - chosenOhio, color: P.ohioSoft }], { size: 0.3, gap: 0.1, perRow: 6, name: 'Ohio school' })
   text(s, `${chosenOhio} chosen by me (Ohio State and Cincinnati), ${O - chosenOhio} at random. Reported on their own, never added into the national counts.`, { x: 6.75, y: 2.45, w: 2.55, h: 1.8, fontSize: 13 })
-  text(s, 'Groups this small support counts, not percentages or claims about every US department.', { x: 0.5, y: 4.75, w: 9.0, h: 0.35, fontSize: 13, italic: true, color: P.muted })
+  text(s, [
+    { text: 'R1 = the top tier of US research universities. Schools were drawn from IPEDS, the federal list of colleges that award CS degrees. ' },
+    { text: 'Groups this small support counts, not percentages or claims about every US department.', options: { italic: true } },
+  ], { x: 0.5, y: 4.45, w: 9.0, h: 0.5, fontSize: 12, color: P.muted })
+  onSite(s, [TAB.research, '"Descriptive only" box at the top', 'S1 to S5 key under "Answers by question"'], ['research'])
   s.addNotes(
-    `The national sample is ${N} schools drawn at random from the federal IPEDS list of colleges that awarded computer science degrees in 2024, ${perStratum[0]} from each of five types, from big public research universities to community colleges. Ohio is a separate sample of ${O}: two I chose, Ohio State and Cincinnati, and ${O - chosenOhio} at random. Ohio is always reported separately. Because the groups are small, every finding is a count, such as 10 of 30, never a percentage, and none of it claims to describe all US departments.`,
+    `The national sample is ${N} schools drawn at random from the federal IPEDS list of colleges that awarded computer science degrees in 2024, ${perStratum[0]} from each of five types, from big public research universities to community colleges. Ohio is a separate sample of ${O}: two I chose, Ohio State and Cincinnati, and ${O - chosenOhio} at random. Ohio is always reported separately. Because the groups are small, every finding is a count, such as 10 of 30, never a percentage, and none of it claims to describe all US departments.\n\n` +
+      `Terms: R1 is the Carnegie label for universities with the highest research activity. A "stratum" (S1 to S5) is just one of the five school types; drawing the same number from each type keeps community colleges from being outnumbered by big universities.\n\n` +
+      `ON THE SITE: on "${TAB.research}", the blue "Descriptive only" box at the top says the same thing as this slide. The S1 to S5 key is just under "Answers by question". At the bottom, "Every school, with its sources" can be switched to show only the national or only the Ohio sample.`,
   )
 }
 
-// 4. The coding process
+// 5. The coding process
 {
   const s = slideOf('CONTENT', 'Method')
   s.addText('How every answer was coded', { placeholder: 'title' })
+  text(s, [
+    { text: 'Coding', options: { bold: true } },
+    { text: ' = sorting what a page says into one of a fixed list of answers, the ' },
+    { text: 'codebook', options: { bold: true } },
+    { text: '.' },
+  ], { x: 0.5, y: 1.15, w: 9.0, h: 0.35, fontSize: 14, valign: 'middle' })
   const steps = [
-    ['Search', `The same ${codebook.required_searches.length} searches at every school, each logged with what it found.`],
-    ['Save', `Every page saved the day it was read, with a fingerprint: ${fmt(savedCopies)} saved copies.`],
-    ['Quote', `Each of ${Object.keys(codebook.variables).length} questions answered from the codebook, backed by a quote of ${codebook.max_quote_words} words or fewer: ${quotes} quotes.`],
-    ['Check', `${CHECK_COUNT} automated checks on every answer: is the quote really on the saved page, is the source the school's own site, does the quote fit the answer?`],
+    ['Search', `The same ${codebook.required_searches.length} web searches at every school, each logged with what it found, so "none found" means we really looked.`],
+    ['Save', `Every page saved the day it was read: ${fmt(savedCopies)} saved copies, each with a fingerprint that changes if a single letter is edited.`],
+    ['Quote', `${Object.keys(codebook.variables).length} questions, each answered with one option from the codebook and backed by a quote of ${codebook.max_quote_words} words or fewer: ${quotes} quotes.`],
+    ['Check', `${CHECK_COUNT} automated "study checks" on every answer: is the quote really on the saved page, from the school's own site, and does it fit the answer?`],
   ]
   steps.forEach(([label, body], i) => {
     const x = 0.5 + i * 2.32
-    card(s, x, 1.35, 2.12, 2.75, i === 3 ? P.amberSoft : P.panel, `step ${label}`)
-    text(s, `${i + 1}`, { x: x + 0.2, y: 1.5, w: 0.5, h: 0.5, fontSize: 26, bold: true, color: P.teal, fontFace: HEAD })
-    text(s, label, { x: x + 0.7, y: 1.55, w: 1.3, h: 0.45, fontSize: 18, bold: true, fontFace: HEAD, valign: 'middle' })
-    text(s, body, { x: x + 0.2, y: 2.15, w: 1.75, h: 1.85, fontSize: 13 })
+    card(s, x, 1.65, 2.12, 2.55, i === 3 ? P.amberSoft : P.panel, `step ${label}`)
+    text(s, `${i + 1}`, { x: x + 0.2, y: 1.78, w: 0.5, h: 0.5, fontSize: 26, bold: true, color: P.teal, fontFace: HEAD })
+    text(s, label, { x: x + 0.7, y: 1.83, w: 1.3, h: 0.45, fontSize: 18, bold: true, fontFace: HEAD, valign: 'middle' })
+    text(s, body, { x: x + 0.2, y: 2.38, w: 1.78, h: 1.75, fontSize: 13 })
   })
   text(s, [
     { text: 'On the website, every answer links to ' },
     marked('the live page, scrolled to the exact sentence'),
     { text: ', and to the saved copy.' },
-  ], { x: 0.5, y: 4.35, w: 9.0, h: 0.5, fontSize: 15, valign: 'middle' })
+  ], { x: 0.5, y: 4.38, w: 9.0, h: 0.5, fontSize: 15, valign: 'middle' })
+  onSite(s, [TAB.research, 'Every school, with its sources', 'click a school name'], ['research'])
   s.addNotes(
-    `Each school went through the same four steps. First, the same searches, written down with their results, so "none found" means we really looked. Second, every page was saved on the day it was read, with a digital fingerprint that shows it has not been edited since. Third, each of the seven questions got an answer from a fixed list in the codebook, backed by a short quote. Fourth, automated checks run on every answer. On the website, any answer can be opened at the exact sentence on the school's live page.`,
+    `Each school went through the same four steps. First, the same searches, written down with their results, so "none found" means we really looked. Second, every page was saved on the day it was read, with a digital fingerprint that shows it has not been edited since. Third, each of the seven questions got an answer from a fixed list in the codebook, backed by a short quote. Fourth, automated checks run on every answer. On the website, any answer can be opened at the exact sentence on the school's live page.\n\n` +
+      `Terms: "Coding" is the research word for sorting what a page says into fixed answer options; it has nothing to do with programming. The codebook is the rulebook: the ${Object.keys(codebook.variables).length} questions, the allowed answers for each, and the cue words that signal each answer (version ${codebook.version}, after my judgment calls). The fingerprint is a SHA-256 hash: a long code computed from the file, which comes out completely different if even one letter changes. The "study checks" are the ${CHECK_COUNT} automated checks the research data must pass; they are named S1 to S5, C1 to C4 and N1 on the site.\n\n` +
+      `ON THE SITE: on "${TAB.research}", scroll to "Every school, with its sources" and click a school name, for example ${schools[0].name}. Each answer shows its quote and a coder's note. "Open the live page at this quote" opens the school's real page scrolled to that sentence and highlighted; "Saved copy" opens the page as it was on the day it was coded.`,
   )
 }
 
-// 5. Findings: departments and syllabi
+// 6. Findings: departments and syllabi
 pres.addSection({ title: 'Findings' })
 {
   const s = slideOf('CONTENT', 'Findings')
@@ -307,12 +373,15 @@ pres.addSection({ title: 'Findings' })
   }
   panel(0.5, dept[0], N, dept[1], O, 'national CS departments had no AI statement of their own that could be found', 'departments')
   panel(5.15, syll[0], N, syll[1], O, 'national schools had no public software engineering syllabus that could be found', 'syllabi')
+  onSite(s, [TAB.research, 'What the data shows (first and last bullets)', 'Answers by question'], ['research'])
   s.addNotes(
-    `The clearest finding is how little is public below the university level. At ${dept[0]} of ${N} national schools, and ${dept[1]} of ${O} in Ohio, the computer science department had no AI statement of its own that we could find, so the university's policy was the only official word. And at ${syll[0]} of ${N} national schools and ${syll[1]} of ${O} in Ohio, no software engineering syllabus was public at all, so the third question could only be answered at a handful of schools. Syllabi behind course logins could not be seen by this study.`,
+    `The clearest finding is how little is public below the university level. At ${dept[0]} of ${N} national schools, and ${dept[1]} of ${O} in Ohio, the computer science department had no AI statement of its own that we could find, so the university's policy was the only official word. And at ${syll[0]} of ${N} national schools and ${syll[1]} of ${O} in Ohio, no software engineering syllabus was public at all, so the third question could only be answered at a handful of schools. Syllabi behind course logins could not be seen by this study.\n\n` +
+      `How to read the dots: one dot per national school; teal dots are the schools where nothing was found.\n\n` +
+      `ON THE SITE: on "${TAB.research}", the first and last bullets under "What the data shows" are these two numbers. Under "Answers by question", the tables "${'CS department stance on student AI use'}" and "${'Software engineering course policy'}" show the "none found" and "no public syllabus found" rows, split by school type.`,
   )
 }
 
-// 6. Findings: university stance
+// 7. Findings: university stance
 {
   const s = slideOf('CONTENT', 'Findings')
   const nat = tally('National', 'univ_stance')
@@ -321,13 +390,16 @@ pres.addSection({ title: 'Findings' })
   s.addText('Restrict is the most common stance', { placeholder: 'title' })
   barChart(s, 0.4, 1.2, 5.4, 3.0, `University stance, national (of ${N})`, nat, P.teal)
   barChart(s, 6.0, 1.2, 3.6, 3.0, `Ohio (of ${O})`, ohio, P.ohio)
-  text(s, '"Restrict" is often an integrity rule that forbids AI use without the instructor\'s permission. "Instructor decides" leaves it to each course.', { x: 0.5, y: 4.4, w: 9.0, h: 0.6, fontSize: 14, color: P.muted })
+  text(s, '"Restrict" is often an integrity rule that forbids AI use without the instructor\'s permission. "Instructor decides" leaves it to each course.', { x: 0.5, y: 4.3, w: 9.0, h: 0.6, fontSize: 14, color: P.muted })
+  onSite(s, [TAB.research, 'Answers by question', 'table "University stance on student AI use"'], ['research'])
   s.addNotes(
-    `This is the university-wide stance on student AI use. Nationally, the most common answer is restrict, at ${nat[0][1]} of ${N} schools, then ${nat.slice(1).map(([v, n]) => `${v} at ${n}`).join(', ')}. "Restrict" is often a line in the academic integrity code saying that AI use without the instructor's permission counts as misconduct, rather than an outright ban. In Ohio: ${ohio.map(([v, n]) => `${v} ${n}`).join(', ')}, of ${O}.`,
+    `This is the university-wide stance on student AI use. Nationally, the most common answer is restrict, at ${nat[0][1]} of ${N} schools, then ${nat.slice(1).map(([v, n]) => `${v} at ${n}`).join(', ')}. "Restrict" is often a line in the academic integrity code saying that AI use without the instructor's permission counts as misconduct, rather than an outright ban. In Ohio: ${ohio.map(([v, n]) => `${v} ${n}`).join(', ')}, of ${O}.\n\n` +
+      `The answer options, from the codebook: encourage (actively promotes AI in learning, beyond allowing it), permit with conditions (allowed by default, with conditions such as disclosure or limits), restrict (banned by default; needs explicit permission), instructor decides (left to each course, with no default), none found (nothing found after the fixed searches).\n\n` +
+      `ON THE SITE: on "${TAB.research}", "Answers by question", the first table, "University stance on student AI use", has these counts by school type. To show a real example, open a school under "Every school, with its sources": its first answer is the university stance, with the quote it came from.`,
   )
 }
 
-// 7. Findings: disclosure
+// 8. Findings: disclosure
 {
   const s = slideOf('CONTENT', 'Findings')
   const req = [count('National', 'disclosure', 'required'), count('Ohio', 'disclosure', 'required')]
@@ -352,12 +424,15 @@ pres.addSection({ title: 'Findings' })
     { text: 'Why two shades? ', options: { bold: true } },
     { text: 'A plagiarism rule that treats undisclosed AI text as copying implies disclosure without saying it. I asked for those schools to be counted apart from the ones that say it outright.' },
   ], { x: 5.8, y: 2.95, w: 3.5, h: 1.65, fontSize: 13, valign: 'middle' })
+  onSite(s, [TAB.research, 'What the data shows (third bullet)', 'table "Disclosure of AI use"'], ['research'])
   s.addNotes(
-    `Disclosure means students must say when and how they used AI. ${req[0]} of ${N} national schools and ${req[1]} of ${O} Ohio schools require it in official text. I asked for this split on the site: at ${outright[0]} national schools the rule is stated outright; at ${fromRule[0]} it comes from a plagiarism or cheating rule that treats undisclosed AI text like copying, which is a reading of the rule rather than its exact words. Both Ohio schools state it outright.`,
+    `Disclosure means students must say when and how they used AI. ${req[0]} of ${N} national schools and ${req[1]} of ${O} Ohio schools require it in official text. I asked for this split on the site: at ${outright[0]} national schools the rule is stated outright; at ${fromRule[0]} it comes from a plagiarism or cheating rule that treats undisclosed AI text like copying, which is a reading of the rule rather than its exact words. Both Ohio schools state it outright.\n\n` +
+      `How to read the dots: one dot per school. Dark dots say it outright, light dots come from a plagiarism or cheating rule, grey dots do not require it.\n\n` +
+      `ON THE SITE: on "${TAB.research}", the third bullet under "What the data shows" gives the same split. The "Disclosure of AI use" table under "Answers by question" has the counts by school type.`,
   )
 }
 
-// 8. Findings: tone and collaboration
+// 9. Findings: tone and collaboration
 {
   const s = slideOf('CONTENT', 'Findings')
   const tone = tally('National', 'univ_tone')
@@ -379,40 +454,51 @@ pres.addSection({ title: 'Findings' })
   ], { x: 6.25, y: 1.95, w: 3.1, h: 1.5 })
   text(s, `Ohio tone: ${toneOhio.map(([v, n]) => `${v} ${n}`).join(', ')} (of ${O}).`, { x: 6.25, y: 3.5, w: 3.1, h: 0.7, fontSize: 13, color: P.ohio })
   text(s, '"Mixed" pages weigh benefits against risks; a rule that names AI only in a list of misconduct reads as neutral.', { x: 0.5, y: 4.45, w: 9.0, h: 0.55, fontSize: 13, color: P.muted })
+  onSite(s, [TAB.research, 'Answers by question', 'the tone and "collaborating with AI" tables'], ['research'])
   s.addNotes(
-    `Tone is the overall attitude of the university's pages. Nationally the most common tone is neutral, at ${tone[0][1]} of ${N}: procedural rules with little evaluative language. Then ${tone.slice(1).map(([v, n]) => `${v} ${n}`).join(', ')}. Mixed means a page that weighs benefits against risks. On collaboration, only ${collab.explicit ?? 0} of ${N} national schools explicitly describe students working with AI. ${partner.name}, for example: "${partnerWords}" Another ${collab['in passing'] ?? 0} mention it in passing.`,
+    `Tone is the overall attitude of the university's pages. Nationally the most common tone is neutral, at ${tone[0][1]} of ${N}: procedural rules with little evaluative language. Then ${tone.slice(1).map(([v, n]) => `${v} ${n}`).join(', ')}. Mixed means a page that weighs benefits against risks. On collaboration, only ${collab.explicit ?? 0} of ${N} national schools explicitly describe students working with AI. ${partner.name}, for example: "${partnerWords}" Another ${collab['in passing'] ?? 0} mention it in passing.\n\n` +
+      `The tone options, from the codebook: positive (AI mainly an opportunity), neutral (procedural rules, little opinion), cautionary (risks such as cheating, accuracy, privacy dominate), mixed (both get real weight). Collaboration is "explicit" when AI is described as a partner, tutor, assistant or pair programmer in more than one sentence, and "in passing" when it is mentioned once.\n\n` +
+      `ON THE SITE: on "${TAB.research}", "Answers by question", see the tables "Tone of university publications" and "Discusses collaborating with AI". To show the quote above, open ${partner.name} under "Every school, with its sources" and click "Open the live page at this quote" under its collaboration answer.`,
   )
 }
 
-// 9. Proof: three layers
+// 10. Proof: three layers
 pres.addSection({ title: 'How we proved it' })
 {
   const s = slideOf('CONTENT', 'How we proved it')
   s.addText('Three layers of automated checks', { placeholder: 'title' })
   const study = newest('study')
+  const pipe = newest('pipeline')
   const layers = [
-    ['The data', `${schoolsPassing} of ${studyChecks.schools.length}`, `schools pass every one of the ${CHECK_COUNT} checks, on every answer`],
-    ['The code', `${study.summary.total + newest('pipeline').summary.total}`, `tests of the code that checks and counts (${study.summary.total} study, ${newest('pipeline').summary.total} pipeline)`],
-    ['The pages', `${newest('web').summary.total}`, 'tests of what the site shows, recomputing its numbers from the data'],
+    ['The data', 'Is every answer backed up?', `${schoolsPassing} of ${studyChecks.schools.length}`,
+      `schools pass all ${CHECK_COUNT} study checks: each quote is word for word on the saved page, from the school's own site, and fits its answer`],
+    ['The code', 'Does the checking code work?', `${study.summary.total + pipe.summary.total}`,
+      `tests of the code itself, most using a made-up case with one planted mistake that must be caught (${study.summary.total} study code, ${pipe.summary.total} pipeline)`],
+    ['The pages', "Are the site's numbers right?", `${newest('web').summary.total}`,
+      'tests that recompute every number on the website from the data files and compare it with the page'],
   ]
-  layers.forEach(([label, big, body], i) => {
+  layers.forEach(([label, question, big, body], i) => {
     const x = 0.5 + i * 3.08
-    card(s, x, 1.3, 2.86, 2.4, P.panel, `layer ${label}`)
-    text(s, label, { x: x + 0.25, y: 1.45, w: 2.4, h: 0.4, fontSize: 17, bold: true, fontFace: HEAD })
-    text(s, [marked(` ${big} `, { fontSize: 36, fontFace: HEAD })], { x: x + 0.25, y: 1.95, w: 2.4, h: 0.75, valign: 'middle' })
-    text(s, body, { x: x + 0.25, y: 2.8, w: 2.4, h: 0.85, fontSize: 14 })
+    card(s, x, 1.2, 2.86, 2.7, P.panel, `layer ${label}`)
+    text(s, label, { x: x + 0.25, y: 1.32, w: 2.4, h: 0.35, fontSize: 17, bold: true, fontFace: HEAD })
+    text(s, question, { x: x + 0.25, y: 1.67, w: 2.4, h: 0.28, fontSize: 12, italic: true, color: P.muted })
+    text(s, [marked(` ${big} `, { fontSize: 32, fontFace: HEAD })], { x: x + 0.25, y: 2.0, w: 2.4, h: 0.65, valign: 'middle' })
+    text(s, body, { x: x + 0.25, y: 2.75, w: 2.4, h: 1.1, fontSize: 12 })
   })
-  card(s, 0.5, 3.95, 9.0, 0.95, P.amberSoft, 'claims register')
+  card(s, 0.5, 4.05, 9.0, 0.88, P.amberSoft, 'claims register')
   text(s, [
     { text: `The claims register ties them together: `, options: { bold: true } },
-    { text: `all ${claims} factual sentences on the site are listed with the test, file or outside page behind them. A test fails if a sentence is missing from the list.` },
-  ], { x: 0.75, y: 4.0, w: 8.5, h: 0.85, fontSize: 14, valign: 'middle' })
+    { text: `a list of all ${claims} factual sentences on the site, each linked to the test, file or outside page that proves it. A test fails if a sentence is missing from the list.` },
+  ], { x: 0.75, y: 4.09, w: 8.5, h: 0.8, fontSize: 13, valign: 'middle' })
+  onSite(s, [TAB.validation, 'How the tests work', 'Claims and their evidence', 'Study checks, per school (bottom)'], ['validation'])
   s.addNotes(
-    `I am not a programmer, so I could not check the code by reading it. Instead, everything is checked by automated tests in three layers. The data: a checker confirms every quote is word for word on the saved page, the page is the school's own, and the answer fits the codebook; all ${schoolsPassing} schools pass. The code: ${study.summary.total + newest('pipeline').summary.total} tests check the code, most by building a small made-up case that breaks one rule and confirming it is caught. The pages: ${newest('web').summary.total} tests recompute the website's numbers from the data files and compare them with the page. Every test run is saved and searchable on the Validation page.`,
+    `I am not a programmer, so I could not check the code by reading it. Instead, everything is checked by automated tests in three layers. The data: a checker confirms every quote is word for word on the saved page, the page is the school's own, and the answer fits the codebook; all ${schoolsPassing} schools pass. The code: ${study.summary.total + pipe.summary.total} tests check the code, most by building a small made-up case that breaks one rule and confirming it is caught. The pages: ${newest('web').summary.total} tests recompute the website's numbers from the data files and compare them with the page. Every test run is saved and searchable on the Validation page.\n\n` +
+      `Terms: A "check" runs on the real research data; a "test" runs on the code, usually with made-up data. The "study checks" are the ${CHECK_COUNT} checks on the research data: S1 to S5 are about sources and quotes (is the quote on the saved page, is the copy unedited, is there a record of when and where it was downloaded, is the site the school's own, is the quote short), C1 to C4 are about the codebook (allowed answers, consistent answers, a cue word in each quote, the searches logged), and N1 says a "none found" needs a second round of searches. The "pipeline" is the code that reads the Claude Code chat records and builds the Contributions and Token usage pages. A "test run" is one run of a whole set of tests; each is saved with its date, its result and the code version it ran on.\n\n` +
+      `ON THE SITE: click "${TAB.validation}". The four boxes at the top are the totals. "How the tests work", then "Three layers", says the same as this slide. "Claims and their evidence" is the claims register; the Page filter shows one tab's sentences. "Every recorded test run" lists every run; click one to see each test in it. At the very bottom, "Study checks, per school" defines S1 to N1 and has one row per school with pass in every cell ("n/a" means there was nothing of that kind to check).`,
   )
 }
 
-// 10. Proof: the tests catch errors
+// 11. Proof: the tests catch errors
 {
   const s = slideOf('CONTENT', 'How we proved it')
   s.addText('We broke things on purpose', { placeholder: 'title' })
@@ -423,64 +509,79 @@ pres.addSection({ title: 'How we proved it' })
   const studyBefore = runs.filter((r) => r.suite === 'study' && new Date(r.startedAt) < new Date(firstMutation.startedAt)).at(-1)
   const toolTests = study.report.testResults.flatMap((f) => f.assertionResults).filter((a) => a.fullName.includes('test_mutation_score ')).length
   const added = study.summary.total - studyBefore.summary.total - toolTests
-  card(s, 0.5, 1.3, 5.0, 3.6, P.panel, 'mutation score')
-  text(s, [{ text: 'A tool planted small bugs in the checker, one at a time', options: { bold: true } }], { x: 0.75, y: 1.45, w: 4.5, h: 0.6, fontSize: 15, fontFace: HEAD })
+  card(s, 0.5, 1.2, 5.0, 3.75, P.panel, 'mutation score')
+  text(s, [{ text: 'A tool planted small bugs in the checker, one at a time', options: { bold: true } }], { x: 0.75, y: 1.3, w: 4.5, h: 0.55, fontSize: 15, fontFace: HEAD })
+  text(s, 'Each copy of the checker gets one tiny mistake, like > turned into <. If no test fails, the tests have a blind spot.', { x: 0.75, y: 1.85, w: 4.5, h: 0.5, fontSize: 12, color: P.muted })
   // Each figure in its own box with its label beside it, so labels never wrap around a number.
-  const row = (x, y, big, label, { wBig, wLabel, size, color, mark }) => {
+  const row = (x, y, big, label, { wBig, wLabel, size, color, mark, h = 0.6, labelSize = 14 }) => {
     const run = mark ? marked(` ${big} `, { fontSize: size, fontFace: HEAD }) : { text: big, options: { fontSize: size, bold: true, fontFace: HEAD, color } }
-    text(s, [run], { x, y, w: wBig, h: 0.6, valign: 'middle' })
-    text(s, label, { x: x + wBig + 0.1, y, w: wLabel, h: 0.6, fontSize: 14, valign: 'middle', color: color ?? P.text })
+    text(s, [run], { x, y, w: wBig, h, valign: 'middle' })
+    text(s, label, { x: x + wBig + 0.1, y, w: wLabel, h, fontSize: labelSize, valign: 'middle', color: color ?? P.text })
   }
-  row(0.75, 2.15, `${firstMutation.killed} of ${firstMutation.total}`, 'caught at first', { wBig: 2.55, wLabel: 1.85, size: 30, color: P.muted })
-  row(0.75, 2.85, `${lastMutation.killed} of ${lastMutation.total}`, `caught after ${added} tests were added`, { wBig: 2.55, wLabel: 1.85, size: 30, mark: true })
-  text(s, `The ${lastMutation.survived} left can only change spacing or printout text, never a result; each has a written reason.`, { x: 0.75, y: 3.75, w: 4.5, h: 0.9, fontSize: 13, color: P.muted })
-  row(5.8, 1.35, String(handMutations), 'bugs planted by hand, each caught by a test', { wBig: 0.7, wLabel: 2.9, size: 22, mark: true })
-  row(5.8, 2.05, String(caught), 'problems found outside test runs, each with a fix and a guard', { wBig: 0.7, wLabel: 2.9, size: 22, mark: true })
+  row(0.75, 2.45, `${firstMutation.killed} of ${firstMutation.total}`, 'caught at first', { wBig: 2.55, wLabel: 1.85, size: 30, color: P.muted })
+  row(0.75, 3.1, `${lastMutation.killed} of ${lastMutation.total}`, `caught after ${added} tests were added`, { wBig: 2.55, wLabel: 1.85, size: 30, mark: true })
+  text(s, `The ${lastMutation.survived} left can only change spacing or printout text, never a result; each has a written reason.`, { x: 0.75, y: 3.9, w: 4.5, h: 0.8, fontSize: 13, color: P.muted })
+  row(5.8, 1.25, String(handMutations), 'more bugs planted on purpose, one per recorded run; a test caught every one', { wBig: 0.7, wLabel: 2.9, size: 22, mark: true, h: 0.75, labelSize: 13 })
+  row(5.8, 2.1, String(caught), "problems found another way (browser, other checks, or me), each fixed, with a new test or check so it can't recur", { wBig: 0.7, wLabel: 2.9, size: 22, mark: true, h: 0.85, labelSize: 13 })
   text(s, [
     { text: 'What tests cannot prove', options: { bold: true, breakLine: true } },
     { text: 'That a reading of a page is right: no second coder was used.', options: { bullet: { indent: 14 }, breakLine: true } },
     { text: `Anything about schools outside the ${schools.length}.`, options: { bullet: { indent: 14 }, breakLine: true } },
     { text: 'Pages behind a login.', options: { bullet: { indent: 14 } } },
-  ], { x: 5.8, y: 3.15, w: 3.7, h: 1.7, fontSize: 13, paraSpaceAfter: 3 })
+  ], { x: 5.8, y: 3.2, w: 3.7, h: 1.7, fontSize: 13, paraSpaceAfter: 3 })
+  onSite(s, [TAB.validation, 'How we know the tests catch errors', 'Errors caught', 'Errors caught outside test runs'], ['validation'])
   s.addNotes(
-    `A test that never fails proves nothing, so the tests were broken on purpose. A mutation tool made ${lastMutation.total} copies of the checker, each with one small bug, like flipping a comparison, and ran the tests on each. The first run caught ${firstMutation.killed}. The misses showed real gaps, for example nobody had tested a quote of exactly ${codebook.max_quote_words} words, the limit. ${added} tests were added, and now ${lastMutation.killed} of ${lastMutation.total} are caught; the ${lastMutation.survived} left cannot change any result, and each has a written reason on the site. I want to be honest about the limit: no set of tests can prove it catches every possible mistake. What the tests cannot check at all is whether a person would read each page the same way, because there was no second coder.`,
+    `A test that never fails proves nothing, so the tests were broken on purpose. A mutation tool made ${lastMutation.total} copies of the checker, each with one small bug, like flipping a comparison, and ran the tests on each. The first run caught ${firstMutation.killed}. The misses showed real gaps, for example nobody had tested a quote of exactly ${codebook.max_quote_words} words, the limit. ${added} tests were added, and now ${lastMutation.killed} of ${lastMutation.total} are caught; the ${lastMutation.survived} left cannot change any result, and each has a written reason on the site. I want to be honest about the limit: no set of tests can prove it catches every possible mistake. What the tests cannot check at all is whether a person would read each page the same way, because there was no second coder.\n\n` +
+      `Terms: This is called mutation testing. Each planted bug is a "mutation"; a bug is "caught" (or "killed") when at least one test fails on it, and one that no test notices "survives". The ${handMutations} on the right were planted one at a time while building, in a saved test run, to prove a particular new test could fail; each was then removed and the run repeated to show it passes again. The ${caught} "found another way" were problems not caught by a test run (for example, seen in the browser or by me), each written up with how it was found, the fix, and the guard that now prevents it.\n\n` +
+      `ON THE SITE: on "${TAB.validation}", "How we know the tests catch errors" has the ${firstMutation.killed} and ${lastMutation.killed} of ${lastMutation.total} numbers and a table of the ${lastMutation.survived} surviving bugs with the reason each one is harmless. Further down, "Errors caught" lists the runs where a test failed (the deliberate ones are labeled "mutation"), and "Errors caught outside test runs" lists the ${caught} other problems, each with How, Fix and Guard.`,
   )
 }
 
-// 11. Process
+// 12. Process
 pres.addSection({ title: 'Process' })
 {
   const s = slideOf('CONTENT', 'Process')
   s.addText('Built phase by phase from specs', { placeholder: 'title' })
   const phases = ['Foundation', 'Instrumentation', 'Study', 'Interfaces', 'Validation', 'More schools', 'Evaluation']
   check(phases.length === specs, `${specs} phase specs, not ${phases.length}`)
-  s.addShape(pres.shapes.LINE, { x: 1.15, y: 1.72, w: 7.7, h: 0, line: { color: P.grey, width: 2 }, objectName: 'timeline' })
+  s.addShape(pres.shapes.LINE, { x: 1.15, y: 1.97, w: 7.7, h: 0, line: { color: P.grey, width: 2 }, objectName: 'timeline' })
   phases.forEach((name, i) => {
     const x = 1.15 + i * (7.7 / 6)
-    s.addShape(pres.shapes.OVAL, { x: x - 0.17, y: 1.55, w: 0.34, h: 0.34, fill: { color: i === 6 ? P.amber : P.teal }, line: { color: P.white, width: 1.5 }, objectName: `phase ${i}` })
-    text(s, String(i), { x: x - 0.17, y: 1.55, w: 0.34, h: 0.34, align: 'center', valign: 'middle', fontSize: 11, bold: true, color: i === 6 ? P.ink : P.white })
-    text(s, name, { x: x - 0.65, y: 2.0, w: 1.3, h: 0.5, align: 'center', fontSize: 12 })
+    s.addShape(pres.shapes.OVAL, { x: x - 0.17, y: 1.8, w: 0.34, h: 0.34, fill: { color: i === 6 ? P.amber : P.teal }, line: { color: P.white, width: 1.5 }, objectName: `phase ${i}` })
+    text(s, String(i), { x: x - 0.17, y: 1.8, w: 0.34, h: 0.34, align: 'center', valign: 'middle', fontSize: 11, bold: true, color: i === 6 ? P.ink : P.white })
+    text(s, name, { x: x - 0.65, y: 2.22, w: 1.3, h: 0.3, align: 'center', fontSize: 12 })
   })
-  text(s, 'Each phase: a written spec I approved, then the work, then my checklist.', { x: 0.5, y: 1.15, w: 9.0, h: 0.3, fontSize: 14, color: P.muted })
+  text(s, [
+    { text: 'Each phase: a ' },
+    { text: 'spec', options: { bold: true, color: P.text } },
+    { text: ' (a written plan of what to build and how to check it) that I approved, then Claude\'s work, then my checklist.' },
+  ], { x: 0.5, y: 1.1, w: 9.0, h: 0.5, fontSize: 14, color: P.muted })
+  const cachePct = Math.round((tokens.totals.cacheRead / totalTokens) * 100)
   const stats = [
-    [fmt(by('prompt', 'Marcus')), 'prompts from me'],
-    [fmt(by('decision', 'Marcus')), 'decisions I made, each logged'],
-    [fmt(by('commit', 'Claude')), 'commits by Claude'],
-    [`${(totalTokens / 1e6).toFixed(1)}M`, `tokens, ${Math.round((tokens.totals.cacheRead / totalTokens) * 100)}% of them read again from cache`],
+    [fmt(by('prompt', 'Marcus')), 'prompts: messages I typed to Claude'],
+    [fmt(by('decision', 'Marcus')), 'decisions I made, each written in the decision log'],
+    [fmt(by('commit', 'Claude')), 'commits by Claude: saved, labeled versions of the code'],
+    [`${(totalTokens / 1e6).toFixed(1)}M`, `tokens (word pieces) the AI used; ${cachePct}% were cheap cache re-reads`],
   ]
   stats.forEach(([big, label], i) => {
     const x = 0.5 + i * 2.32
-    card(s, x, 2.85, 2.12, 1.55, P.panel, `stat ${label}`)
-    text(s, [marked(` ${big} `, { fontSize: 24, fontFace: HEAD })], { x: x + 0.2, y: 3.0, w: 1.8, h: 0.6, valign: 'middle' })
-    text(s, label, { x: x + 0.2, y: 3.65, w: 1.8, h: 0.65, fontSize: 13 })
+    card(s, x, 2.72, 2.12, 1.6, P.panel, `stat ${label}`)
+    text(s, [marked(` ${big} `, { fontSize: 24, fontFace: HEAD })], { x: x + 0.2, y: 2.82, w: 1.8, h: 0.55, valign: 'middle' })
+    text(s, label, { x: x + 0.2, y: 3.45, w: 1.8, h: 0.8, fontSize: 13 })
   })
-  text(s, `Context was reset ${compacts} times with /compact and ${clears} with /clear; the Token usage page compares them.`, { x: 0.5, y: 4.6, w: 9.0, h: 0.4, fontSize: 13, color: P.muted })
+  text(s, [
+    { text: `Context was reset ${compacts} times with /compact and ${clears} with /clear. `, options: { color: P.text } },
+    { text: '/compact: Claude replaces the conversation with a written summary and carries on. /clear: it starts over with nothing.' },
+  ], { x: 0.5, y: 4.55, w: 9.0, h: 0.5, fontSize: 12, color: P.muted })
+  onSite(s, [[TAB.contributions, 'Who and Kind filters'], [TAB.tokens, 'By phase', '/clear compared with /compact']], ['contributions', 'tokens'])
   s.addNotes(
-    `The work ran in seven phases. Each started with a written spec that I approved, and ended with a checklist I ran myself. Claude asked me whenever a judgment was needed; I made ${by('decision', 'Marcus')} logged decisions, including the judgment calls that became codebook version ${codebook.version}. The Contributions page shows every prompt I wrote and every reply. The Token usage page shows the cost: ${millions(totalTokens)} tokens, most of them the same context re-read from cache on every turn.`,
+    `The work ran in seven phases. Each started with a written spec that I approved, and ended with a checklist I ran myself. Claude asked me whenever a judgment was needed; I made ${by('decision', 'Marcus')} logged decisions, including the judgment calls that became codebook version ${codebook.version}. The Contributions page shows every prompt I wrote and every reply. The Token usage page shows the cost: ${millions(totalTokens)} tokens, most of them the same context re-read from cache on every turn.\n\n` +
+      `Terms: A spec is a written plan for one phase: what must be built, what is out of scope, and a checklist I can run without reading code. A commit is a saved snapshot of the project with a message saying what changed; the git history keeps all of them. Tokens are the small pieces of text (roughly three quarters of a word each) that the AI reads and writes; usage limits and cost are measured in them. Each time Claude answers, it re-reads the whole conversation so far; the cache stores what it has already read so that re-reading is cheaper, which is why ${cachePct}% of tokens are cache reads. "Context" is everything Claude has in front of it at once; /compact and /clear are the two ways to shrink it.\n\n` +
+      `ON THE SITE: click "${TAB.contributions}". Set "Who" to Marcus and "Kind" to decision to show my ${by('decision', 'Marcus')} decisions with the options I was given, or Kind to prompt to show every prompt I wrote; "Claude's reply" under a prompt opens the answer. Then click "${TAB.tokens}": "All tokens, deduplicated" has the total, "By phase" splits it by phase, and "/clear compared with /compact" shows the context size before and after every reset.`,
   )
 }
 
-// 12 and 13. Marcus's own slides: his verdicts, reasons and reflection, from his own words in chat
+// 13 and 14. Marcus's own slides: his verdicts, reasons and reflection, from his own words in chat
 // (2026-11-11 evening). Claude supplied only the supporting numbers, computed here like every other slide.
 pres.addSection({ title: 'Evaluation and reflection' })
 {
@@ -549,7 +650,7 @@ pres.addSection({ title: 'Evaluation and reflection' })
   ].join('\n\n'))
 }
 
-// 14. Limits, next steps, links
+// 15. Limits, next steps, links
 pres.addSection({ title: 'Close' })
 {
   const s = slideOf('DARK_TOP', 'Close')
@@ -561,9 +662,9 @@ pres.addSection({ title: 'Close' })
     ], { x, y: 1.2, w: 4.25, h: 2.85, fontSize: 14, color: P.onInk, paraSpaceAfter: 6 })
   col(0.6, 'Limits', [
     `Small groups: ${N} national and ${O} Ohio schools, so counts only.`,
-    'One coder; no second person checked the readings.',
+    'One coder: no second person read the pages to see if they would give the same answers.',
     'Public pages only; anything behind a login was out of reach.',
-    `Pages change: all ${refetch.pages} were fetched again on ${refetchDay}; ${refetch.coded_quotes_missing_from_new_copy} of the ${refetchQuotes} quotes on changed pages had gone.`,
+    `Pages change: on ${refetchDay} all ${refetch.pages} pages were downloaded again; ${refetch.coded_quotes_missing_from_new_copy} of the ${refetchQuotes} quotes on pages that had changed were gone.`,
   ])
   col(5.2, 'Next steps', [
     'A second coder on a sample, to measure agreement.',
@@ -575,8 +676,40 @@ pres.addSection({ title: 'Close' })
     { text: 'Code and data: ', options: { bold: true } }, { text: REPO, options: { hyperlink: { url: REPO }, color: P.white } },
   ], { x: 0.6, y: 4.35, w: 8.8, h: 0.7, fontSize: 13, color: P.onInk })
   s.addNotes(
-    `To close, the limits. The groups are small, so these are counts for these schools, not national percentages. Claude read and coded every page, and I decided the judgment calls it raised, but no second coder read the pages independently, so agreement between two coders was not measured; that would be the first thing to add. Only public pages were used. And pages change, so the study saved a copy of every page; when all ${refetch.pages} were fetched again on ${refetchDay}, ${refetch.coded_quotes_missing_from_new_copy} of the ${refetchQuotes} quotes on changed pages had disappeared. Everything is on the website and in the repository, so anyone can check any answer.`,
+    `To close, the limits. The groups are small, so these are counts for these schools, not national percentages. Claude read and coded every page, and I decided the judgment calls it raised, but no second coder read the pages independently, so agreement between two coders was not measured; that would be the first thing to add. Only public pages were used. And pages change, so the study saved a copy of every page; when all ${refetch.pages} were fetched again on ${refetchDay}, ${refetch.coded_quotes_missing_from_new_copy} of the ${refetchQuotes} quotes on changed pages had disappeared. Everything is on the website and in the repository, so anyone can check any answer.\n\n` +
+      `Terms: the repository (repo) is the project's folder on GitHub: all the code, data, specs, logs and saved pages, with the full history of changes.\n\n` +
+      `ON THE SITE: the re-check is the note at the very bottom of "${TAB.research}" (with a link to the re-fetch report). The limits are also listed on "${TAB.validation}" under "How the tests work", "What no test here can prove".`,
   )
+}
+
+// The site map's four cards, now that every slide's pointer has said which tab it uses.
+{
+  const s = mapSlide
+  // [2, 4, 5, 6] -> "Slides 2, 4–6"
+  const range = (ns) => {
+    if (ns.length <= 1) return ns.length ? `Slide ${ns[0]}` : ''
+    const runs = []
+    for (const n of ns) {
+      const last = runs.at(-1)
+      if (last && n === last[1] + 1) last[1] = n
+      else runs.push([n, n])
+    }
+    return 'Slides ' + runs.map(([a, b]) => (a === b ? `${a}` : `${a}–${b}`)).join(', ')
+  }
+  const cards = [
+    ['research', `The answers: a short summary, one table per question, and all ${schools.length} schools. Click a school to see the quote behind each answer.`],
+    ['validation', 'The proof: how the tests work, every recorded test run, the errors tests caught, and the study checks for every school.'],
+    ['contributions', "Who did what: my prompts and decisions, Claude's replies and commits, on one timeline you can filter."],
+    ['tokens', 'The cost: how many tokens (word pieces) the AI read and wrote, by phase and around each /compact.'],
+  ]
+  cards.forEach(([id, body], i) => {
+    const x = 0.5 + (i % 2) * 4.6
+    const y = 2.25 + Math.floor(i / 2) * 1.4
+    card(s, x, y, 4.4, 1.25, P.panel, `map ${TAB[id]}`)
+    text(s, TAB[id], { x: x + 0.2, y: y + 0.12, w: 2.6, h: 0.35, fontSize: 15, bold: true, color: P.teal, fontFace: HEAD, valign: 'middle' })
+    text(s, range(slidesFor[id]), { x: x + 2.8, y: y + 0.12, w: 1.4, h: 0.35, fontSize: 12, color: P.muted, align: 'right', valign: 'middle' })
+    text(s, body, { x: x + 0.2, y: y + 0.52, w: 4.0, h: 0.65, fontSize: 13 })
+  })
 }
 
 // ---------- Write, then fix what pptxgenjs gets wrong ----------
