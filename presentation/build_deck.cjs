@@ -250,17 +250,28 @@ pres.addSection({ title: 'Opening' })
   ]
   qs.forEach(([label, q], i) => {
     const x = 0.5 + i * 3.08
-    card(s, x, 1.3, 2.86, 2.45, P.panel, `question ${i + 1}`)
+    card(s, x, 1.3, 2.86, 2.3, P.panel, `question ${i + 1}`)
     s.addShape(pres.shapes.OVAL, { x: x + 0.25, y: 1.55, w: 0.55, h: 0.55, fill: { color: P.teal }, line: { color: P.teal }, objectName: `number ${i + 1}` })
     text(s, String(i + 1), { x: x + 0.25, y: 1.55, w: 0.55, h: 0.55, align: 'center', valign: 'middle', fontSize: 20, bold: true, color: P.white, fontFace: HEAD })
     text(s, label, { x: x + 0.95, y: 1.55, w: 1.75, h: 0.55, valign: 'middle', fontSize: 18, bold: true, fontFace: HEAD })
     text(s, q, { x: x + 0.25, y: 2.3, w: 2.4, h: 1.35, fontSize: 15 })
   })
+  // The three questions were split into the codebook's coded questions; short names in codebook order.
+  const SHORT = {
+    univ_stance: 'university stance', dept_stance: 'CS department stance', univ_tone: 'university tone', dept_tone: 'CS department tone',
+    collaboration: 'working with AI', disclosure: 'disclosure', se_courses: 'software engineering course',
+  }
+  const coded = Object.keys(codebook.variables)
+  check(coded.every((v) => SHORT[v]), 'a codebook question has no short name on slide 2')
+  text(s, [
+    { text: `Split into ${coded.length} coded questions: `, options: { bold: true, color: P.text } },
+    { text: coded.map((v) => SHORT[v]).join(', ') + '.' },
+  ], { x: 0.5, y: 3.72, w: 9.0, h: 0.5, fontSize: 13, color: P.muted, valign: 'middle' })
   text(s, [
     { text: 'And a second goal: ', options: { bold: true } },
     { text: 'show agentic, spec-driven development. Claude Code wrote all the code; I set the rules through specs, tests and reviews, and made every judgment call.' },
-  ], { x: 0.5, y: 4.0, w: 9.0, h: 0.9, fontSize: 15, valign: 'middle' })
-  onSite(s, [TAB.research, 'Answers by question', 'one table per question'], ['research'])
+  ], { x: 0.5, y: 4.3, w: 9.0, h: 0.7, fontSize: 15, valign: 'middle' })
+  onSite(s, [TAB.research, 'Answers by question', `one table per coded question (${coded.length})`], ['research'])
   s.addNotes(
     `These are the assignment's three questions. Stance asks what students are allowed to do. Tone asks whether the pages sound positive, neutral or cautious, and whether they describe working with AI as a partner. Courses asks what software engineering syllabi say. The second goal is about the process: I did not write code. I wrote and approved specs, decided every judgment call, and the work was checked by tests.\n\n` +
       `ON THE SITE: click "${TAB.research}" in the top bar and scroll to "Answers by question". Each table is one question; the columns are the five school types (S1 to S5), the national total, and Ohio.`,
@@ -331,7 +342,7 @@ pres.addSection({ title: 'Method' })
     { text: '.' },
   ], { x: 0.5, y: 1.15, w: 9.0, h: 0.35, fontSize: 14, valign: 'middle' })
   const steps = [
-    ['Search', `The same ${codebook.required_searches.length} web searches at every school, each logged with what it found, so "none found" means we really looked.`],
+    ['Search', `The same ${codebook.required_searches.length} web searches at every school (next slide), each logged with what it found, so "none found" means we really looked.`],
     ['Save', `Every page saved the day it was read: ${fmt(savedCopies)} saved copies, each with a fingerprint that changes if a single letter is edited.`],
     ['Quote', `${Object.keys(codebook.variables).length} questions, each answered with one option from the codebook and backed by a quote of ${codebook.max_quote_words} words or fewer: ${quotes} quotes.`],
     ['Check', `${CHECK_COUNT} automated "study checks" on every answer: is the quote really on the saved page, from the school's own site, and does it fit the answer?`],
@@ -356,7 +367,46 @@ pres.addSection({ title: 'Method' })
   )
 }
 
-// 6. Findings: departments and syllabi
+// 6. The fixed search, the same at every school (study/codebook.md "Fixed search"; searches from codebook.json)
+{
+  const s = slideOf('CONTENT', 'Method')
+  s.addText('The same search at every school', { placeholder: 'title' })
+  // Which school is anonymized here: the searches name the school's own web address.
+  const SITE_WORD = 'school.edu'
+  const searchText = (q) => q.split('{domain}').flatMap((part, i) => [
+    ...(i ? [{ text: SITE_WORD, options: { bold: true, color: P.teal } }] : []),
+    ...(part ? [{ text: part }] : []),
+  ])
+  text(s, 'Claude ran every search and read every page with its web tools; I decided the judgment calls it raised.', { x: 0.5, y: 1.12, w: 9.0, h: 0.35, fontSize: 14, color: P.muted, valign: 'middle' })
+  card(s, 0.5, 1.6, 4.25, 3.3, P.panel, 'the routine')
+  text(s, [{ text: 'The routine', options: { bold: true } }], { x: 0.72, y: 1.72, w: 3.8, h: 0.35, fontSize: 15, fontFace: HEAD })
+  const routine = [
+    "Read the university's main AI guidance page.",
+    "Read the CS department's site: home, undergraduate pages, handbook, integrity page.",
+    `Run the ${codebook.required_searches.length} web searches and write down every result (check C4).`,
+    `For each "none found", run ${codebook.second_searches.length} more searches (check N1).`,
+    'Stop after 25 minutes, or once every question has a source.',
+  ]
+  text(s, routine.map((t, i) => ({ text: t, options: { bullet: { type: 'number' }, breakLine: i < routine.length - 1 } })),
+    { x: 0.72, y: 2.12, w: 3.85, h: 2.7, fontSize: 13, paraSpaceAfter: 5 })
+  const pill = (y, q, i) => {
+    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 5.05, y, w: 4.45, h: 0.32, rectRadius: 0.16, fill: { color: P.white }, line: { color: P.line, width: 1 }, objectName: `search ${i}` })
+    text(s, searchText(q), { x: 5.25, y, w: 4.1, h: 0.32, fontSize: 13, valign: 'middle' })
+  }
+  text(s, [{ text: `The ${codebook.required_searches.length} web searches`, options: { bold: true } }], { x: 5.05, y: 1.6, w: 4.45, h: 0.32, fontSize: 15, fontFace: HEAD, valign: 'middle' })
+  codebook.required_searches.forEach((q, i) => pill(1.97 + i * 0.4, q, i + 1))
+  text(s, [{ text: `If an answer is "none found": ${codebook.second_searches.length} more`, options: { bold: true } }], { x: 5.05, y: 3.62, w: 4.45, h: 0.32, fontSize: 15, fontFace: HEAD, valign: 'middle' })
+  codebook.second_searches.forEach((q, i) => pill(3.99 + i * 0.4, q, codebook.required_searches.length + i + 1))
+  onSite(s, [TAB.research, 'open a school', '"Search log" link under any "none found" answer'], ['research'])
+  const absent = schools.find((x) => x.values.dept_stance.value === 'none found')
+  s.addNotes(
+    `"None found" is only believable if we really looked, so every school got the same routine. Claude read the university's AI guidance page and the CS department's site, then ran the same ${codebook.required_searches.length} web searches, with the school's own web address in front, and wrote down every result, including the ones it skipped and why. Whenever an answer came out "none found", it ran ${codebook.second_searches.length} more searches before accepting it. Study check C4 confirms the ${codebook.required_searches.length} searches are logged for every school, and N1 confirms the extra searches for every "none found".\n\n` +
+      `Terms: "school.edu" stands for the school's own web address, for example umn.edu for the University of Minnesota. A "search log" is the written record of each search: what it returned, which pages were opened and saved, and which were skipped.\n\n` +
+      `ON THE SITE: on "${TAB.research}", open a school under "Every school, with its sources", for example ${absent.name}. Under its "CS department stance" answer, which is "none found", click "Search log": it opens the log on GitHub, with one heading per search and every result listed under it.`,
+  )
+}
+
+// 7. Findings: departments and syllabi
 pres.addSection({ title: 'Findings' })
 {
   const s = slideOf('CONTENT', 'Findings')
@@ -381,7 +431,7 @@ pres.addSection({ title: 'Findings' })
   )
 }
 
-// 7. Findings: university stance
+// 8. Findings: university stance
 {
   const s = slideOf('CONTENT', 'Findings')
   const nat = tally('National', 'univ_stance')
@@ -399,7 +449,7 @@ pres.addSection({ title: 'Findings' })
   )
 }
 
-// 8. Findings: disclosure
+// 9. Findings: disclosure
 {
   const s = slideOf('CONTENT', 'Findings')
   const req = [count('National', 'disclosure', 'required'), count('Ohio', 'disclosure', 'required')]
@@ -432,7 +482,7 @@ pres.addSection({ title: 'Findings' })
   )
 }
 
-// 9. Findings: tone and collaboration
+// 10. Findings: tone and collaboration
 {
   const s = slideOf('CONTENT', 'Findings')
   const tone = tally('National', 'univ_tone')
@@ -462,7 +512,7 @@ pres.addSection({ title: 'Findings' })
   )
 }
 
-// 10. Proof: three layers
+// 11. Proof: three layers
 pres.addSection({ title: 'How we proved it' })
 {
   const s = slideOf('CONTENT', 'How we proved it')
@@ -471,7 +521,7 @@ pres.addSection({ title: 'How we proved it' })
   const pipe = newest('pipeline')
   const layers = [
     ['The data', 'Is every answer backed up?', `${schoolsPassing} of ${studyChecks.schools.length}`,
-      `schools pass all ${CHECK_COUNT} study checks: each quote is word for word on the saved page, from the school's own site, and fits its answer`],
+      `schools pass all ${CHECK_COUNT} study checks: each quote is word for word on the saved page, from the school's own site, and contains a cue word for its answer`],
     ['The code', 'Does the checking code work?', `${study.summary.total + pipe.summary.total}`,
       `tests of the code itself, most using a made-up case with one planted mistake that must be caught (${study.summary.total} study code, ${pipe.summary.total} pipeline)`],
     ['The pages', "Are the site's numbers right?", `${newest('web').summary.total}`,
@@ -498,7 +548,7 @@ pres.addSection({ title: 'How we proved it' })
   )
 }
 
-// 11. Proof: the tests catch errors
+// 12. Proof: the tests catch errors
 {
   const s = slideOf('CONTENT', 'How we proved it')
   s.addText('We broke things on purpose', { placeholder: 'title' })
@@ -537,7 +587,7 @@ pres.addSection({ title: 'How we proved it' })
   )
 }
 
-// 12. Process
+// 13. Process
 pres.addSection({ title: 'Process' })
 {
   const s = slideOf('CONTENT', 'Process')
@@ -581,7 +631,7 @@ pres.addSection({ title: 'Process' })
   )
 }
 
-// 13 and 14. Marcus's own slides: his verdicts, reasons and reflection, from his own words in chat
+// 14 and 15. Marcus's own slides: his verdicts, reasons and reflection, from his own words in chat
 // (2026-11-11 evening). Claude supplied only the supporting numbers, computed here like every other slide.
 pres.addSection({ title: 'Evaluation and reflection' })
 {
@@ -650,7 +700,7 @@ pres.addSection({ title: 'Evaluation and reflection' })
   ].join('\n\n'))
 }
 
-// 15. Limits, next steps, links
+// 16. Limits, next steps, links
 pres.addSection({ title: 'Close' })
 {
   const s = slideOf('DARK_TOP', 'Close')
@@ -659,12 +709,12 @@ pres.addSection({ title: 'Close' })
     text(s, [
       { text: title, options: { bold: true, color: P.amber, fontSize: 16, breakLine: true } },
       ...items.map((t, i) => ({ text: t, options: { bullet: { indent: 14 }, breakLine: i < items.length - 1 } })),
-    ], { x, y: 1.2, w: 4.25, h: 2.85, fontSize: 14, color: P.onInk, paraSpaceAfter: 6 })
+    ], { x, y: 1.2, w: 4.25, h: 3.3, fontSize: 14, color: P.onInk, paraSpaceAfter: 6 })
   col(0.6, 'Limits', [
     `Small groups: ${N} national and ${O} Ohio schools, so counts only.`,
     'One coder: no second person read the pages to see if they would give the same answers.',
     'Public pages only; anything behind a login was out of reach.',
-    `Pages change: on ${refetchDay} all ${refetch.pages} pages were downloaded again; ${refetch.coded_quotes_missing_from_new_copy} of the ${refetchQuotes} quotes on pages that had changed were gone.`,
+    `Pages change: on ${refetchDay} all ${refetch.pages} pages saved by then were downloaded again: ${refetch.counts.unchanged} unchanged, ${refetch.counts.changed} changed, ${refetch.pages - refetch.counts.unchanged - refetch.counts.changed} could not be compared. ${refetch.coded_quotes_missing_from_new_copy} of the ${refetchQuotes} quotes on changed pages had gone.`,
   ])
   col(5.2, 'Next steps', [
     'A second coder on a sample, to measure agreement.',
@@ -674,7 +724,7 @@ pres.addSection({ title: 'Close' })
   text(s, [
     { text: 'Website: ', options: { bold: true } }, { text: SITE, options: { hyperlink: { url: SITE }, color: P.white, breakLine: true } },
     { text: 'Code and data: ', options: { bold: true } }, { text: REPO, options: { hyperlink: { url: REPO }, color: P.white } },
-  ], { x: 0.6, y: 4.35, w: 8.8, h: 0.7, fontSize: 13, color: P.onInk })
+  ], { x: 0.6, y: 4.65, w: 8.8, h: 0.6, fontSize: 13, color: P.onInk })
   s.addNotes(
     `To close, the limits. The groups are small, so these are counts for these schools, not national percentages. Claude read and coded every page, and I decided the judgment calls it raised, but no second coder read the pages independently, so agreement between two coders was not measured; that would be the first thing to add. Only public pages were used. And pages change, so the study saved a copy of every page; when all ${refetch.pages} were fetched again on ${refetchDay}, ${refetch.coded_quotes_missing_from_new_copy} of the ${refetchQuotes} quotes on changed pages had disappeared. Everything is on the website and in the repository, so anyone can check any answer.\n\n` +
       `Terms: the repository (repo) is the project's folder on GitHub: all the code, data, specs, logs and saved pages, with the full history of changes.\n\n` +

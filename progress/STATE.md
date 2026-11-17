@@ -2,7 +2,7 @@
 
 Current phase: 6 Evaluation (spec `specs/phase-6-evaluation.md`, approved by Marcus 2026-11-11T20:59:41-05:00). Phase 5 is done.
 
-Last updated: 2026-11-17T13:21:17-05:00 by Claude (cloud session). Deck clarified for the class walk-through: 15 slides now (site map is slide 3, Marcus's evaluation and reflection are slides 13 and 14); see progress/log.md. Earlier: Phase 6 checklist COMPLETE (evaluation and reflection from Marcus's own words).
+Last updated: 2026-11-17T13:31:19-05:00 by Claude (cloud session). Deck clarified for the class walk-through: 16 slides now (site map is slide 3, the fixed search is slide 6, Marcus's evaluation and reflection are slides 14 and 15); see progress/log.md. Earlier: Phase 6 checklist COMPLETE (evaluation and reflection from Marcus's own words).
 
 Parts A and B notes, last updated: 2026-11-11T21:28:42-05:00 by Claude (session a9056776). Phase 6 Parts A and B DONE; WAITING ON MARCUS.
 - Part A (commit 1f6c920, deployed, live site checked): Validation tab section "How the tests work" (three
